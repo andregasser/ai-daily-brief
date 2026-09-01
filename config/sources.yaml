@@ -1,4 +1,4 @@
-version: 2
+version: 3
 
 # Mandatory sources are a daily coverage floor, never a whitelist.
 # No mandatory source receives editorial priority merely because it is on this list.
@@ -90,6 +90,26 @@ discovery:
     prefer_primary_sources: true
     verify_material_claims: true
     independent_secondary_source_when_material_or_contested: true
+
+source_catalog_growth:
+  enabled: true
+  principle: "promote_repeatedly_useful_sources"
+  evaluate_new_sources_during_every_run: true
+  add_to_mandatory_when:
+    - "The source repeatedly surfaces high-signal AI developments early or reliably."
+    - "The source is a new primary source from an important lab, company, project, regulator, standards body, repository or research organization."
+    - "The source provides unique technical depth or evidence that materially improves the brief."
+    - "The source has demonstrated sufficient reliability to justify daily checking."
+  do_not_add_when:
+    - "The source was useful only once with no indication of recurring value."
+    - "The source mainly republishes or lightly rewrites material already covered by stronger sources."
+    - "The source has weak provenance, poor reliability or unclear authorship."
+    - "The source is primarily promotional noise without recurring editorial value."
+  maintenance:
+    allow_reclassification: true
+    allow_removal: true
+    remove_or_demote_when: "A source becomes stale, low-signal, redundant or unreliable over time."
+    record_reason_in_commit_message: true
 
 # Tiers describe evidentiary authority, not how aggressively a source is checked.
 source_tiers:
