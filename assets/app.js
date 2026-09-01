@@ -1,0 +1,7 @@
+let lang=localStorage.getItem('lang')||'de';
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+function translate(){document.documentElement.lang=lang;$$('[data-de]').forEach(el=>el.textContent=el.dataset[lang]);$$('[data-lang]').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));loadBrief();loadArchive()}
+$$('[data-lang]').forEach(b=>b.onclick=()=>{lang=b.dataset.lang;localStorage.setItem('lang',lang);translate()});
+async function loadBrief(){try{const meta=await fetch('data/latest.json?'+Date.now()).then(r=>{if(!r.ok)throw 0;return r.json()});const file=meta[lang];if(!file)return;const html=await fetch(file+'?'+Date.now()).then(r=>r.text());$('#brief-content').innerHTML=html;$('#brief-date').textContent=meta.date;$('#brief-title').textContent=lang==='de'?'AI Daily Brief':'AI Daily Brief'}catch(e){}}
+async function loadArchive(){try{const items=await fetch('data/archive.json?'+Date.now()).then(r=>{if(!r.ok)throw 0;return r.json()});const box=$('#archive-list');if(!items.length)return;box.innerHTML=items.map(x=>`<a href="${x[lang]}"><span>${x.date}</span><span>${lang==='de'?'Briefing lesen →':'Read brief →'}</span></a>`).join('')}catch(e){}}
+translate();
