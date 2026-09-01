@@ -1,0 +1,116 @@
+version: 1
+
+# Mandatory sources are a daily coverage floor, never a whitelist.
+mandatory:
+  newsletters:
+    - name: "Ben's Bites News"
+      url: "https://news.bensbites.com/"
+      priority: highest
+      purpose: discovery
+    - name: "Ben's Bites"
+      url: "https://bensbites.com/"
+      priority: high
+      purpose: discovery
+    - name: "AI Weekly"
+      url: "https://aiweekly.co/"
+      priority: high
+      purpose: discovery
+
+  labs_and_model_builders:
+    - name: OpenAI
+      url: "https://openai.com/news/"
+      tier: 1
+    - name: Anthropic
+      url: "https://www.anthropic.com/news"
+      tier: 1
+    - name: Google DeepMind
+      url: "https://deepmind.google/discover/blog/"
+      tier: 1
+    - name: Google AI
+      url: "https://blog.google/technology/ai/"
+      tier: 1
+    - name: Meta AI
+      url: "https://ai.meta.com/blog/"
+      tier: 1
+    - name: Microsoft AI
+      url: "https://blogs.microsoft.com/ai/"
+      tier: 1
+    - name: AWS Machine Learning
+      url: "https://aws.amazon.com/blogs/machine-learning/"
+      tier: 1
+    - name: NVIDIA AI
+      url: "https://blogs.nvidia.com/blog/category/deep-learning/"
+      tier: 1
+    - name: Hugging Face
+      url: "https://huggingface.co/blog"
+      tier: 1
+    - name: DeepSeek
+      url: "https://api-docs.deepseek.com/news/"
+      tier: 1
+
+  research:
+    - name: arXiv AI
+      url: "https://arxiv.org/list/cs.AI/recent"
+      purpose: discovery
+    - name: arXiv Machine Learning
+      url: "https://arxiv.org/list/cs.LG/recent"
+      purpose: discovery
+
+  regulation:
+    - name: European Commission Digital Strategy
+      url: "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence"
+      tier: 1
+    - name: UK AI Security Institute
+      url: "https://www.aisi.gov.uk/"
+      tier: 1
+
+# Always perform broad discovery in addition to mandatory-source checks.
+discovery:
+  open_web: true
+  mandatory_sources_are_not_whitelist: true
+  lookback: "since_previous_brief"
+  fallback_lookback_hours: 36
+  categories:
+    - business_strategy
+    - product_launches
+    - partnerships
+    - funding_and_acquisitions
+    - regulation
+    - models_llm_vlm_image_video
+    - agents
+    - coding_agents
+    - open_source
+    - inference_and_serving
+    - benchmarks
+    - research
+    - developer_tools
+    - ai_security
+  community_and_social:
+    use_for_discovery: true
+    sufficient_as_sole_evidence: false
+  verification:
+    prefer_primary_sources: true
+    verify_material_claims: true
+    independent_secondary_source_when_material_or_contested: true
+
+source_tiers:
+  1: "Primary source: vendor, paper, repository, regulator, standards body or official documentation"
+  2: "High-quality independent reporting such as Reuters, Bloomberg, FT, Ars Technica or TechCrunch"
+  3: "Curated discovery sources such as Ben's Bites and AI Weekly"
+  4: "Community/social signals; discovery only unless independently verified"
+
+selection:
+  principle: "signal_over_volume"
+  deduplicate_same_event: true
+  cluster_related_reports: true
+  scoring:
+    engineering_relevance: 0.30
+    strategic_impact: 0.25
+    novelty: 0.20
+    evidence_quality: 0.15
+    durability_over_hype: 0.10
+  rules:
+    - "Do not include a story merely because a mandatory source mentioned it."
+    - "Do not exclude a strong story merely because it came from a new or unknown source."
+    - "For important stories, find the primary source whenever available."
+    - "Prefer a small number of well-explained high-signal stories over exhaustive link aggregation."
