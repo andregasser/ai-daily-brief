@@ -22,6 +22,8 @@ Always run broad, current web discovery beyond the mandatory source set. Search 
 
 Search from multiple angles rather than relying on one generic AI-news query. At minimum cover business/strategy, models/agents, engineering/infrastructure, research/open source, developer tools/security and regulation.
 
+During open discovery, also evaluate whether newly encountered sources deserve promotion into the permanent source catalog. The catalog is intentionally self-maintaining rather than fixed.
+
 ### Phase C — Expand and verify
 
 For each potentially important event:
@@ -34,7 +36,19 @@ For each potentially important event:
 
 Source authority and source-checking priority are different concepts. A primary source is normally stronger evidence for its own announcement than a newsletter summarizing it, but that does not mean stories from that organization are intrinsically more important. Story selection is based on merit.
 
-## 3. Ranking
+## 3. Source catalog maintenance
+
+At the end of every research run, review any previously unknown source that materially helped discovery or verification.
+
+Promote a source into `config/sources.yaml` when it has credible recurring value: for example, it repeatedly surfaces high-signal developments early, is a newly important primary source, provides unique technical depth, or has demonstrated enough reliability to justify daily checking.
+
+Do **not** grow the catalog merely because a source produced one useful link. Avoid redundant aggregators, low-quality rewrites, unclear provenance and promotional sources with little recurring signal.
+
+The catalog may also shrink. Reclassify, demote or remove sources that become stale, redundant, low-signal or unreliable. Source additions and removals should be committed with a short reason so the evolution of the catalog remains auditable.
+
+A newly promoted source becomes part of the mandatory sweep starting with subsequent daily runs. Promotion never gives its stories an editorial ranking bonus.
+
+## 4. Ranking
 
 Rank candidate stories using the scoring weights in `sources.yaml`: practical engineering relevance, strategic impact, novelty, evidence quality and durability versus hype.
 
@@ -42,7 +56,7 @@ Never boost a candidate merely because it was found in Ben's Bites, AI Weekly, a
 
 The goal is not exhaustive coverage. Select the developments a technically sophisticated reader should genuinely know about today.
 
-## 4. Editorial format
+## 5. Editorial format
 
 Every edition is built from one canonical research set and then rendered in German and English. The two editions must contain the same facts, prioritization and sources; English is not researched independently.
 
@@ -60,7 +74,7 @@ The full report should normally contain:
 
 The concept section is a required daily component. Avoid repeating recent concepts unless there is a strong reason to revisit them from a materially different angle.
 
-## 5. Publishing contract
+## 6. Publishing contract
 
 For date `YYYY-MM-DD`, publish:
 
@@ -74,6 +88,6 @@ Then update:
 
 The website must remain readable even if one language file fails; do not replace a valid previous edition with incomplete or unverified output.
 
-## 6. Quality bar
+## 7. Quality bar
 
-Signal over volume. Explain rather than aggregate. Prefer primary evidence for factual verification. Label uncertainty. Never turn a vendor benchmark into an independent fact. A new source can become important immediately; the fixed source list must never prevent discovery of it. Editorial importance belongs to the story, not the source that first surfaced it.
+Signal over volume. Explain rather than aggregate. Prefer primary evidence for factual verification. Label uncertainty. Never turn a vendor benchmark into an independent fact. A new source can become important immediately; the source catalog should evolve when that source proves recurring value. Editorial importance belongs to the story, not the source that first surfaced it.
