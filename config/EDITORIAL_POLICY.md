@@ -60,19 +60,28 @@ The goal is not exhaustive coverage. Select the developments a technically sophi
 
 Every edition is built from one canonical research set and then rendered in German and English. The two editions must contain the same facts, prioritization and sources; English is not researched independently.
 
-The full report should normally contain:
+### Fixed editorial pillars — required in every edition
+
+These are permanent structural elements of the AI Daily Brief and must not be omitted, merged away or replaced by a generic news list:
+
+1. **Business & Strategie / Business & Strategy** — business model shifts, major product moves, partnerships, funding/M&A, regulation, company strategy, compute/infrastructure commitments and market developments.
+2. **Modelle, Agents & Engineering / Models, Agents & Engineering** — models, agents, coding agents, VLM/image/video systems, open source, serving/inference, infrastructure, developer tools, security and technically relevant research.
+3. **🔬 Konzept des Tages / Concept of the Day** — one substantial AI/ML/software-engineering concept explained intuitively, technically, with a concrete architecture/code/product example and practical relevance. This is a learning pillar, not a short glossary box.
+4. **Was als Nächstes wichtig wird / What comes next** — 3–5 concrete forward-looking developments, unresolved questions, upcoming tests, expected releases, regulatory deadlines or signals worth watching after today's news. This section should synthesize the implications of the day's reporting rather than merely repeat headlines.
+
+The Business and Engineering sections are separate editorial groupings even when one story spans both. Place each story where its primary implication belongs and cross-reference the other dimension in the analysis if useful.
+
+The full report must also contain:
 
 - A strong editorial headline and opening synthesis
 - **In 60 Sekunden / In 60 Seconds** with the 3 strongest signals
-- **Business & Strategie / Business & Strategy**
-- **Modelle, Agents & Engineering / Models, Agents & Engineering**
 - For important stories: context, **Warum relevant? / Why it matters**, and when useful an **Engineering Takeaway**
 - **Signal vs. Hype**
-- **Konzept des Tages / Concept of the Day**: one substantial AI/ML/software-engineering concept, explained intuitively and technically, ideally connected to current news but not forced
-- **Heute im Auge behalten / Watch today** with 3–5 concrete developments to follow
 - Links to the most useful primary/original sources
 
 The concept section is a required daily component. Avoid repeating recent concepts unless there is a strong reason to revisit them from a materially different angle.
+
+The forward-looking section is also required daily, including on quiet news days. It should answer: **What should a technically sophisticated reader watch next because of today's developments?** Prefer specific, testable items over generic predictions.
 
 ## 6. Publishing contract
 
