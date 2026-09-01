@@ -10,7 +10,9 @@ Cover meaningful developments since the previous published brief. If the previou
 
 ### Phase A — Mandatory source sweep
 
-Explicitly inspect every source configured under `mandatory` in `sources.yaml`. Ben's Bites News has the highest discovery priority and must be checked carefully enough to identify relevant new items in the coverage window.
+Explicitly inspect every source configured under `mandatory` in `sources.yaml` carefully enough to identify relevant new items in the coverage window.
+
+All mandatory sources are equal in terms of required checking. Being a mandatory source gives a source **no editorial priority, ranking bonus or presumption of importance**. Ben's Bites and AI Weekly are checked every day because they are useful discovery sources, not because stories appearing there deserve more weight.
 
 Mandatory sources are a coverage floor, not a whitelist. Their inclusion in the configuration does not make their stories automatically newsworthy.
 
@@ -30,9 +32,13 @@ For each potentially important event:
 4. Treat newsletters, aggregators, Reddit and social posts primarily as discovery signals, not as sufficient evidence for important factual claims.
 5. Clearly distinguish vendor claims and benchmarks from independently verified results.
 
+Source authority and source-checking priority are different concepts. A primary source is normally stronger evidence for its own announcement than a newsletter summarizing it, but that does not mean stories from that organization are intrinsically more important. Story selection is based on merit.
+
 ## 3. Ranking
 
 Rank candidate stories using the scoring weights in `sources.yaml`: practical engineering relevance, strategic impact, novelty, evidence quality and durability versus hype.
+
+Never boost a candidate merely because it was found in Ben's Bites, AI Weekly, a major vendor blog or any other mandatory source. Conversely, a major story discovered through an unfamiliar source should rank highly when its significance and evidence justify it.
 
 The goal is not exhaustive coverage. Select the developments a technically sophisticated reader should genuinely know about today.
 
@@ -70,4 +76,4 @@ The website must remain readable even if one language file fails; do not replace
 
 ## 6. Quality bar
 
-Signal over volume. Explain rather than aggregate. Prefer primary evidence. Label uncertainty. Never turn a vendor benchmark into an independent fact. A new source can become important immediately; the fixed source list must never prevent discovery of it.
+Signal over volume. Explain rather than aggregate. Prefer primary evidence for factual verification. Label uncertainty. Never turn a vendor benchmark into an independent fact. A new source can become important immediately; the fixed source list must never prevent discovery of it. Editorial importance belongs to the story, not the source that first surfaced it.
