@@ -1,19 +1,17 @@
-version: 1
+version: 2
 
 # Mandatory sources are a daily coverage floor, never a whitelist.
+# No mandatory source receives editorial priority merely because it is on this list.
 mandatory:
   newsletters:
     - name: "Ben's Bites News"
       url: "https://news.bensbites.com/"
-      priority: highest
       purpose: discovery
     - name: "Ben's Bites"
       url: "https://bensbites.com/"
-      priority: high
       purpose: discovery
     - name: "AI Weekly"
       url: "https://aiweekly.co/"
-      priority: high
       purpose: discovery
 
   labs_and_model_builders:
@@ -64,10 +62,10 @@ mandatory:
       url: "https://www.aisi.gov.uk/"
       tier: 1
 
-# Always perform broad discovery in addition to mandatory-source checks.
 discovery:
   open_web: true
   mandatory_sources_are_not_whitelist: true
+  mandatory_sources_have_no_editorial_priority: true
   lookback: "since_previous_brief"
   fallback_lookback_hours: 36
   categories:
@@ -93,14 +91,15 @@ discovery:
     verify_material_claims: true
     independent_secondary_source_when_material_or_contested: true
 
+# Tiers describe evidentiary authority, not how aggressively a source is checked.
 source_tiers:
-  1: "Primary source: vendor, paper, repository, regulator, standards body or official documentation"
+  1: "Primary evidence: vendor announcement/docs, paper, repository, regulator, standards body or other authoritative original source"
   2: "High-quality independent reporting such as Reuters, Bloomberg, FT, Ars Technica or TechCrunch"
-  3: "Curated discovery sources such as Ben's Bites and AI Weekly"
+  3: "Curated discovery/secondary sources such as Ben's Bites and AI Weekly"
   4: "Community/social signals; discovery only unless independently verified"
 
 selection:
-  principle: "signal_over_volume"
+  principle: "story_merit_over_source_prominence"
   deduplicate_same_event: true
   cluster_related_reports: true
   scoring:
@@ -110,6 +109,8 @@ selection:
     evidence_quality: 0.15
     durability_over_hype: 0.10
   rules:
+    - "Evaluate stories by significance and evidence, not by which mandatory source surfaced them."
+    - "Ben's Bites and AI Weekly receive no ranking bonus and no editorial priority."
     - "Do not include a story merely because a mandatory source mentioned it."
     - "Do not exclude a strong story merely because it came from a new or unknown source."
     - "For important stories, find the primary source whenever available."
