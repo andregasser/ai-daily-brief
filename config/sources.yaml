@@ -45,6 +45,9 @@ mandatory:
     - name: DeepSeek
       url: "https://api-docs.deepseek.com/news/"
       tier: 1
+    - name: World Labs
+      url: "https://www.worldlabs.ai/blog"
+      tier: 1
 
   research:
     - name: arXiv AI
