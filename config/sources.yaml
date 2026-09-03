@@ -1,4 +1,4 @@
-version: 3
+version: 4
 
 # Mandatory sources are a daily coverage floor, never a whitelist.
 # No mandatory source receives editorial priority merely because it is on this list.
@@ -30,6 +30,9 @@ mandatory:
     - name: Meta AI
       url: "https://ai.meta.com/blog/"
       tier: 1
+    - name: Meta AI Research
+      url: "https://research.meta.ai/"
+      tier: 1
     - name: Microsoft AI
       url: "https://blogs.microsoft.com/ai/"
       tier: 1
@@ -48,6 +51,11 @@ mandatory:
     - name: World Labs
       url: "https://www.worldlabs.ai/blog"
       tier: 1
+
+  independent_benchmarks:
+    - name: Artificial Analysis
+      url: "https://artificialanalysis.ai/"
+      purpose: independent_benchmarking
 
   research:
     - name: arXiv AI
