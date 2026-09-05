@@ -52,6 +52,12 @@ mandatory:
       url: "https://www.worldlabs.ai/blog"
       tier: 1
 
+  independent_reporting:
+    - name: Reuters AI
+      url: "https://www.reuters.com/technology/artificial-intelligence/"
+      tier: 2
+      purpose: verification_and_discovery
+
   independent_benchmarks:
     - name: Artificial Analysis
       url: "https://artificialanalysis.ai/"
