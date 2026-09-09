@@ -45,6 +45,9 @@ mandatory:
     - name: Hugging Face
       url: "https://huggingface.co/blog"
       tier: 1
+    - name: Mistral AI
+      url: "https://mistral.ai/news/"
+      tier: 1
     - name: DeepSeek
       url: "https://api-docs.deepseek.com/news/"
       tier: 1
