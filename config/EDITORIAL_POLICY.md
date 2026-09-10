@@ -1,6 +1,6 @@
 # AI Daily Brief — Editorial & Research Policy
 
-This file defines the canonical process for every daily edition. `config/sources.yaml` defines the configurable mandatory source set.
+This file defines the canonical process for every daily edition. `config/sources.yaml` defines the configurable source catalog and mandatory coverage floor.
 
 ## 1. Coverage window and continuity
 Cover meaningful developments since the previous published brief. If the previous timestamp cannot be established, use the fallback lookback configured in `sources.yaml`. Older developments may be included only when there is a meaningful new development today.
@@ -13,10 +13,15 @@ Before research, inspect recent archive metadata and `data/storylines.json` when
 ### Phase A — Mandatory source sweep
 Explicitly inspect every source configured under `mandatory` in `sources.yaml` carefully enough to identify relevant new items in the coverage window. All mandatory sources are equal in terms of required checking. Being mandatory gives no editorial priority or ranking bonus. Mandatory sources are a coverage floor, not a whitelist.
 
-### Phase B — Open-web discovery
-Always run broad, current web discovery beyond the mandatory source set across the configured categories. Discover new labs, startups, repositories, papers, tools and sources. During discovery, evaluate whether newly encountered sources deserve promotion into the permanent source catalog.
+### Phase B — Structured catalog discovery
+Inspect the broader role-based source catalog in `sources.yaml` according to each source's role and cadence. Use discovery/newsletter feeds for breadth, engineering/analysis sources for technical interpretation, research sources for forward-looking work, journalism for independent verification/context, security sources for adversarial evidence, community feeds for weak-signal discovery, and tooling/platform feeds for practical builder relevance.
 
-### Phase C — Expand, verify and triangulate
+Do not treat all catalog sources as mandatory or equally authoritative. The catalog exists to increase recall and perspective diversity without creating a volume bias.
+
+### Phase C — Open-web discovery
+Always run broad, current web discovery beyond the configured source set across all configured categories. Discover new labs, startups, repositories, papers, tools and sources. During discovery, evaluate whether newly encountered sources deserve promotion into the permanent source catalog.
+
+### Phase D — Expand, verify and triangulate
 Cluster duplicate coverage. Locate primary sources whenever available. Use reputable independent reporting for context and material/contested claims. Treat newsletters, aggregators, Reddit and social posts primarily as discovery signals. Clearly distinguish vendor claims and benchmarks from independently verified results.
 
 For each material story assign an internal evidence state and expose it in the article when useful:
@@ -28,15 +33,67 @@ For each material story assign an internal evidence state and expose it in the a
 
 Do not convert a weakly evidenced story into certainty through confident prose.
 
+### Phase E — Intelligence passes
+Every run performs three explicit intelligence passes after initial story clustering:
+
+#### 1. Emerging Signals
+Look for multiple individually small but directionally consistent developments that may indicate an architectural, economic, regulatory or workflow shift before it becomes a headline story.
+
+A valid Emerging Signal should normally combine at least two independent evidence types, for example:
+- a model/serving release plus a hardware/platform change,
+- a paper plus a production engineering change,
+- multiple labs independently converging on the same architecture,
+- repeated enterprise behavior plus new tooling/infrastructure,
+- regulatory movement plus product or market response.
+
+Do not manufacture trends from coincidental keywords. Prefer 2–4 concrete observations with dates and explain why they jointly matter. When confidence is still limited, label the conclusion as analysis or `Early signal`.
+
+When an Emerging Signal persists across days, track it in `data/storylines.json` rather than rediscovering it from scratch.
+
+#### 2. Contrarian Evidence
+For every strong market narrative or major vendor claim, actively search for credible disconfirming or complicating evidence before publication.
+
+Examples:
+- claimed productivity gains vs. incident rates, rework, review burden or failed deployments,
+- benchmark leadership vs. cost, latency, context limits, reliability or task success,
+- agent autonomy vs. human intervention rate, failure modes or security cost,
+- adoption claims vs. actual paid usage, retention or deployment scope,
+- infrastructure efficiency claims vs. system-level power, memory, networking or utilization constraints.
+
+Contrarian evidence is not contrarianism for its own sake. Prefer empirical measurements, postmortems, independent benchmarks, production reports, regulatory filings, reproducible experiments and credible reporting. Do not elevate weak criticism merely to create artificial balance.
+
+Material stories should include a **Signal vs. Hype** judgment informed by both supporting and disconfirming evidence.
+
+#### 3. Builder Radar
+Maintain a practical builder-facing watch for tools, releases, techniques and papers worth trying now or in the coming week. Candidates may include inference mechanisms, agent-eval frameworks, MCP/tooling, open-weight models, observability/security tools, coding-agent workflows or reproducible research.
+
+Builder Radar is not a generic links section. Include an item only when a competent AI/software engineer can take a concrete next step. Each item should answer:
+- **What is it?**
+- **Why now?**
+- **What should I try?**
+- **What would success/failure look like?**
+- **Maturity/risk:** experimental, promising, production-ready, or wait.
+
+Prefer releases with active maintainers, credible docs, reproducibility, real adoption signals and clear deployment paths. Do not reward GitHub stars alone.
+
 ## 3. Source catalog maintenance
-Review previously unknown sources that materially helped discovery or verification. Promote sources with credible recurring value: repeated early high-signal discovery, newly important primary sources, unique technical depth or demonstrated reliability. Do not grow the catalog because of one incidental useful link. Reclassify or remove stale, redundant, low-signal or unreliable sources. Commit catalog changes with a short reason. Promotion never gives stories a ranking bonus.
+Review previously unknown sources that materially helped discovery or verification. Promote sources with credible recurring value: repeated early high-signal discovery, newly important primary sources, unique technical depth, useful contrarian evidence or demonstrated reliability. Do not grow the catalog because of one incidental useful link. Reclassify or remove stale, redundant, low-signal or unreliable sources. Commit catalog changes with a short reason. Promotion never gives stories a ranking bonus.
+
+Where possible, treat sources as having roles rather than a single global rank: primary evidence, independent journalism, engineering analysis, research, contrarian/critical analysis, builder/tooling discovery, community discovery, regional coverage or regulation.
 
 ## 4. Ranking and editorial selection
 Rank stories using `sources.yaml`: engineering relevance, strategic impact, novelty, evidence quality and durability versus hype. Editorial importance belongs to the story, not the source that surfaced it. Prefer a small number of deeply explained high-signal stories over exhaustive aggregation.
 
 Also evaluate whether a story materially changes one of these dimensions: architecture, developer workflow, deployment options, unit economics, security posture, market structure, regulation or strategic control of the AI stack. A model/version launch with no meaningful change should normally not receive prominent coverage.
 
-Perform a **source-diversity sanity check** before publication. Do not manufacture geographic or company balance, but detect accidental overreliance on one company, newsletter or region when equally important developments exist elsewhere.
+Perform a **source-diversity sanity check** before publication. Do not manufacture geographic or company balance, but detect accidental overreliance on one company, newsletter, source class or region when equally important developments exist elsewhere.
+
+Before final ranking, explicitly ask:
+1. What is the strongest new evidence today?
+2. What changed since yesterday?
+3. Is there credible evidence against the dominant interpretation?
+4. Are several small developments pointing to the same emerging trend?
+5. Is there something builders should actually test this week?
 
 ## 5. Editorial format
 Every edition is built from one canonical research set and then rendered in German and English. Both editions contain the same facts, prioritization, visuals and sources.
@@ -55,6 +112,8 @@ For material stories, add these elements when applicable:
 - **Was ist neu? / What changed?** for continuing stories, describing the delta since prior coverage.
 - **Builder Action** with one of: **Jetzt testen / Test now**, **Beobachten / Watch**, **Abwarten / Wait**. The recommendation must say what a software engineer or AI-product team should concretely do and why.
 - **Quantitative context** where meaningful: price, latency, throughput, context, memory/VRAM, hardware requirements, deployment mode, adoption, revenue or other verified metrics. Prefer relative comparison to isolated numbers.
+- **Contrarian evidence** where a strong claim or dominant narrative would otherwise be presented one-sidedly.
+- **Emerging signal** where several weak-to-medium developments jointly support a structural interpretation.
 
 ### Benchmark hygiene
 For important model/inference releases, distinguish vendor benchmarks from independent tests. When available, compare practical dimensions: quality, task success, latency, cost, context length, memory/VRAM, hardware, deployment/local availability and licensing. End-to-end task results are more valuable than isolated benchmark scores for agents.
@@ -64,6 +123,12 @@ Include a compact **Research Digest** when 1–2 new papers/research results hav
 
 ### Open Source Radar
 Include a compact **Open Source Radar** when projects/releases have meaningful momentum or practical value. Evaluate more than stars: release activity, maintainer quality, adoption signals, documentation, reproducibility and production readiness. Do not include projects merely because they are trending.
+
+### Builder Radar
+Include **Builder Radar** when at least one item clears the practical-action threshold. This may be a compact standalone section or integrated callout. Prefer 1–3 high-value actions over a long list. Do not fill it on quiet days.
+
+### Emerging Signals
+Include an **Emerging Signal** callout/section when multiple current observations support a credible early trend. State the evidence chain, confidence and what future evidence would strengthen or falsify the signal.
 
 ### Original analysis
 At least one major edition theme should synthesize multiple developments into an original, evidence-grounded conclusion rather than merely summarizing sources. Clearly distinguish analysis from reported fact.
@@ -75,6 +140,8 @@ Avoid repeating recent concepts unless revisiting them from a materially differe
 
 ## 6. Story memory and follow-up tracking
 Maintain `data/storylines.json` as lightweight editorial memory. Track only recurring high-value themes (for example agent security, frontier compute commitments, AI regulation, inference economics, coding agents, Chinese model ecosystem). Each storyline should have a stable id, title, status, last_updated, short current_state and notable dated developments.
+
+Emerging Signals that recur across multiple editions should be promoted into storylines with a stable ID, current confidence and dated supporting/contradicting evidence.
 
 Maintain continuity without bloating the brief: storyline memory informs research and analysis but does not need to be printed verbatim.
 
@@ -90,23 +157,25 @@ The AI Daily Brief should look like a high-quality technology publication, not a
 - Keep secondary stories quieter; not every story needs an image.
 
 ### Media target
-Aim for roughly **2–4 useful visuals per full edition**, including diagrams/charts. Prefer fewer strong visuals over decorative filler.
+Visuals are optional and must earn their place. Prefer fewer strong visuals over decorative filler; zero visuals is acceptable on a day without suitable material.
 
 Media preference order: suitable official media; technical original graphics with appropriate reuse; clearly reusable/licensed editorial media; a new original diagram/chart from verified facts; otherwise no image. Never scrape/hotlink arbitrary search images or use unclear copyrighted news photography. Avoid generic AI stock imagery.
 
-The Concept of the Day should normally include an accurate visual explanation. Quantitative charts require sufficiently verified underlying values and a nearby source/credit. Store publication-owned/reusable media under `assets/media/YYYY-MM-DD/` when practical, with descriptive filenames, alt text and captions. DE/EN normally share the same asset.
+Every third-party visual must include a visible source/credit with organization/author and link to the original source; include license/reuse status where relevant. Do not publish a visual when provenance, meaning, currency or reuse suitability is unclear. Publication-created charts/diagrams must be clearly labeled as original and cite their underlying data sources.
+
+The Concept of the Day may include an accurate visual explanation when it materially improves understanding. Quantitative charts require sufficiently verified underlying values and a nearby source/credit. Store publication-owned/reusable media under `assets/media/YYYY-MM-DD/` when practical, with descriptive filenames, alt text and captions. DE/EN normally share the same asset.
 
 ## 8. Archive as knowledge library
-Archive metadata should expose editorial headline, topic tags and Concept of the Day when available. Preserve backward compatibility. Over time, the archive should allow readers to follow recurring storylines and concepts, not merely dates.
+Archive metadata should expose editorial headline, topic tags and Concept of the Day when available. Preserve backward compatibility. Over time, the archive should allow readers to follow recurring storylines, emerging signals and concepts, not merely dates.
 
 ## 9. Publishing and structured intelligence contract
 For date `YYYY-MM-DD`, publish `briefings/YYYY-MM-DD-de.html` and `briefings/YYYY-MM-DD-en.html`, then update `data/latest.json` and `data/archive.json`.
 
 Also maintain when applicable:
-- `data/storylines.json` — recurring editorial story memory.
+- `data/storylines.json` — recurring editorial story memory and persistent emerging signals.
 - `data/theses.json` — active structural predictions and later evaluations.
 
 The website must remain readable if one language file fails; do not replace a valid previous edition with incomplete or unverified output.
 
 ## 10. Quality bar
-Signal over volume. Explain rather than aggregate. Prefer primary evidence. Label uncertainty. Track what changed. Close loops on prior predictions/questions. Give builders concrete actions. Prefer end-to-end evidence over benchmark theater. Let the source catalog evolve. Prefer an accurate original diagram or no image over visually impressive but misleading media.
+Signal over volume. Explain rather than aggregate. Prefer primary evidence. Label uncertainty. Track what changed. Close loops on prior predictions/questions. Give builders concrete actions. Actively look for credible disconfirming evidence. Detect emerging trends before they become obvious without manufacturing them. Prefer end-to-end evidence over benchmark theater. Let the source catalog evolve. Prefer an accurate original diagram or no image over visually impressive but misleading media.
