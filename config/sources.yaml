@@ -1,4 +1,4 @@
-version: 4
+version: 5
 
 # Mandatory sources are a daily coverage floor, never a whitelist.
 # No mandatory source receives editorial priority merely because it is on this list.
@@ -7,25 +7,33 @@ mandatory:
     - name: "Ben's Bites News"
       url: "https://news.bensbites.com/"
       purpose: discovery
+      tier: 3
     - name: "Ben's Bites"
       url: "https://bensbites.com/"
       purpose: discovery
+      tier: 3
     - name: "AI Weekly"
       url: "https://aiweekly.co/"
       purpose: discovery
+      tier: 3
 
   labs_and_model_builders:
     - name: OpenAI
       url: "https://openai.com/news/"
+      feed: "https://openai.com/news/rss.xml"
       tier: 1
     - name: Anthropic
       url: "https://www.anthropic.com/news"
+      feed: "https://news.google.com/rss/search?q=Anthropic+OR+%22Claude+AI%22+when:2d&hl=en-US&gl=US&ceid=US:en"
+      feed_note: "Discovery proxy only; verify against Anthropic primary pages."
       tier: 1
     - name: Google DeepMind
       url: "https://deepmind.google/discover/blog/"
+      feed: "https://deepmind.google/blog/rss.xml"
       tier: 1
     - name: Google AI
       url: "https://blog.google/technology/ai/"
+      feed: "https://blog.google/technology/ai/rss/"
       tier: 1
     - name: Meta AI
       url: "https://ai.meta.com/blog/"
@@ -38,15 +46,19 @@ mandatory:
       tier: 1
     - name: AWS Machine Learning
       url: "https://aws.amazon.com/blogs/machine-learning/"
+      feed: "https://aws.amazon.com/blogs/machine-learning/feed/"
       tier: 1
     - name: NVIDIA AI
       url: "https://blogs.nvidia.com/blog/category/deep-learning/"
+      feed: "https://blogs.nvidia.com/feed/"
       tier: 1
     - name: Hugging Face
       url: "https://huggingface.co/blog"
+      feed: "https://huggingface.co/blog/feed.xml"
       tier: 1
     - name: Mistral AI
       url: "https://mistral.ai/news/"
+      feed: "https://mistral.ai/rss.xml"
       tier: 1
     - name: DeepSeek
       url: "https://api-docs.deepseek.com/news/"
@@ -69,9 +81,11 @@ mandatory:
   research:
     - name: arXiv AI
       url: "https://arxiv.org/list/cs.AI/recent"
+      feed: "https://rss.arxiv.org/rss/cs.AI"
       purpose: discovery
     - name: arXiv Machine Learning
       url: "https://arxiv.org/list/cs.LG/recent"
+      feed: "https://rss.arxiv.org/rss/cs.LG"
       purpose: discovery
 
   regulation:
@@ -82,10 +96,240 @@ mandatory:
       url: "https://www.aisi.gov.uk/"
       tier: 1
 
+# Broader source catalog. These sources are checked according to role/cadence and do not
+# become mandatory merely by being listed here. Their purpose is recall, perspective,
+# contrarian evidence, research discovery and builder relevance.
+catalog:
+  labs_primary:
+    role: primary_evidence
+    default_tier: 1
+    cadence: daily
+    sources:
+      - name: Google Research Blog
+        feed: "https://research.google/blog/rss/"
+        url: "https://research.google/blog/"
+      - name: Microsoft Research
+        feed: "https://www.microsoft.com/en-us/research/feed/"
+        url: "https://www.microsoft.com/en-us/research/"
+      - name: Meta Engineering
+        feed: "https://engineering.fb.com/feed/"
+        url: "https://engineering.fb.com/"
+      - name: NVIDIA Blog
+        feed: "https://blogs.nvidia.com/feed/"
+        url: "https://blogs.nvidia.com/"
+      - name: NVIDIA Developer Blog
+        feed: "https://developer.nvidia.com/blog/feed/"
+        url: "https://developer.nvidia.com/blog/"
+
+  journalism:
+    role: independent_reporting_and_context
+    default_tier: 2
+    cadence: daily
+    sources:
+      - name: TechCrunch AI
+        feed: "https://techcrunch.com/category/artificial-intelligence/feed/"
+        url: "https://techcrunch.com/category/artificial-intelligence/"
+      - name: The Verge AI
+        feed: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+        url: "https://www.theverge.com/ai-artificial-intelligence"
+      - name: Ars Technica AI
+        feed: "https://arstechnica.com/ai/feed/"
+        url: "https://arstechnica.com/ai/"
+      - name: MIT Technology Review AI
+        feed: "https://www.technologyreview.com/topic/artificial-intelligence/feed"
+        url: "https://www.technologyreview.com/topic/artificial-intelligence/"
+      - name: IEEE Spectrum AI
+        feed: "https://spectrum.ieee.org/topic/artificial-intelligence/feed"
+        url: "https://spectrum.ieee.org/topic/artificial-intelligence/"
+      - name: Wired AI
+        feed: "https://www.wired.com/feed/tag/ai/latest/rss"
+        url: "https://www.wired.com/tag/artificial-intelligence/"
+      - name: VentureBeat AI
+        feed: "https://feeds.feedburner.com/venturebeat/SZYF"
+        url: "https://venturebeat.com/category/ai/"
+      - name: The Guardian AI
+        feed: "https://www.theguardian.com/technology/artificialintelligenceai/rss"
+        url: "https://www.theguardian.com/technology/artificialintelligenceai"
+      - name: Financial Times AI
+        feed: "https://www.ft.com/artificial-intelligence?format=rss"
+        url: "https://www.ft.com/artificial-intelligence"
+      - name: 404 Media
+        feed: "https://www.404media.co/rss/"
+        url: "https://www.404media.co/"
+      - name: Platformer
+        feed: "https://www.platformer.news/feed"
+        url: "https://www.platformer.news/"
+      - name: CNBC Technology
+        feed: "https://www.cnbc.com/id/19854910/device/rss/rss.html"
+        url: "https://www.cnbc.com/technology/"
+      - name: BBC Technology
+        feed: "https://feeds.bbci.co.uk/news/technology/rss.xml"
+        url: "https://www.bbc.com/news/technology"
+      - name: NYT Technology
+        feed: "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/technology/rss.xml"
+        url: "https://www.nytimes.com/section/technology"
+
+  analysis_and_newsletters:
+    role: engineering_analysis_strategy_and_contrarian_evidence
+    default_tier: 3
+    cadence: daily_or_when_new
+    sources:
+      - name: Simon Willison
+        feed: "https://simonwillison.net/atom/everything/"
+        url: "https://simonwillison.net/"
+        strengths: [agent_security, developer_tools, llm_engineering]
+      - name: Interconnects
+        feed: "https://www.interconnects.ai/feed"
+        url: "https://www.interconnects.ai/"
+        strengths: [models, training, open_models, policy]
+      - name: SemiAnalysis
+        feed: "https://newsletter.semianalysis.com/feed"
+        url: "https://newsletter.semianalysis.com/"
+        strengths: [compute, semiconductors, inference_economics]
+      - name: Latent Space
+        feed: "https://www.latent.space/feed"
+        url: "https://www.latent.space/"
+        strengths: [agents, evals, inference, ai_engineering]
+      - name: Import AI
+        feed: "https://jack-clark.net/feed/"
+        url: "https://jack-clark.net/"
+        strengths: [research, strategy, policy]
+      - name: One Useful Thing
+        feed: "https://www.oneusefulthing.org/feed"
+        url: "https://www.oneusefulthing.org/"
+        strengths: [adoption, productivity, work]
+      - name: Understanding AI
+        feed: "https://www.understandingai.org/feed"
+        url: "https://www.understandingai.org/"
+        strengths: [analysis, economics, technology]
+      - name: AI Snake Oil
+        feed: "https://www.aisnakeoil.com/feed"
+        url: "https://www.aisnakeoil.com/"
+        strengths: [contrarian_evidence, evaluation, governance]
+      - name: "Don't Worry About the Vase"
+        feed: "https://thezvi.substack.com/feed"
+        url: "https://thezvi.substack.com/"
+        strengths: [analysis, safety, policy]
+      - name: Marcus on AI
+        feed: "https://garymarcus.substack.com/feed"
+        url: "https://garymarcus.substack.com/"
+        strengths: [critical_lens, contrarian_evidence]
+      - name: ChinaTalk
+        feed: "https://www.chinatalk.media/feed"
+        url: "https://www.chinatalk.media/"
+        strengths: [china, semiconductors, geopolitics]
+      - name: Ahead of AI
+        feed: "https://magazine.sebastianraschka.com/feed"
+        url: "https://magazine.sebastianraschka.com/"
+        strengths: [models, research, engineering]
+      - name: Lil'Log
+        feed: "https://lilianweng.github.io/index.xml"
+        url: "https://lilianweng.github.io/"
+        strengths: [technical_depth, agents, research]
+      - name: Andrej Karpathy
+        feed: "https://karpathy.bearblog.dev/feed/"
+        url: "https://karpathy.bearblog.dev/"
+        strengths: [technical_depth, education, models]
+      - name: LessWrong
+        feed: "https://www.lesswrong.com/feed.xml"
+        url: "https://www.lesswrong.com/"
+        strengths: [safety, research, early_signals]
+        note: "Community/analysis source; verify material claims independently."
+      - name: TLDR AI
+        feed: "https://tldr.tech/api/rss/ai"
+        url: "https://tldr.tech/ai"
+        strengths: [broad_discovery]
+
+  research_and_community:
+    role: research_discovery_and_weak_signals
+    cadence: daily
+    sources:
+      - name: arXiv Computational Linguistics
+        feed: "https://rss.arxiv.org/rss/cs.CL"
+        url: "https://arxiv.org/list/cs.CL/recent"
+        tier: 1
+      - name: HF Daily Papers
+        feed: "https://papers.takara.ai/api/feed"
+        url: "https://huggingface.co/papers"
+        tier: 3
+        note: "Discovery mirror; prefer paper/original repository for evidence."
+      - name: MIT News AI
+        feed: "https://news.mit.edu/rss/topic/artificial-intelligence2"
+        url: "https://news.mit.edu/topic/artificial-intelligence2"
+        tier: 2
+      - name: Synced Review
+        feed: "https://syncedreview.com/feed"
+        url: "https://syncedreview.com/"
+        tier: 3
+      - name: r/LocalLLaMA
+        feed: "https://www.reddit.com/r/LocalLLaMA/.rss"
+        url: "https://www.reddit.com/r/LocalLLaMA/"
+        tier: 4
+        strengths: [open_models, local_inference, community_experience]
+      - name: Hacker News AI 100+ points
+        feed: "https://hnrss.org/newest?q=AI+OR+LLM+OR+GPT&points=100"
+        url: "https://news.ycombinator.com/"
+        tier: 4
+        strengths: [developer_signal, emerging_tools]
+
+  tooling_and_platforms:
+    role: builder_radar_and_platform_changes
+    cadence: daily_or_when_new
+    sources:
+      - name: AWS Machine Learning Blog
+        feed: "https://aws.amazon.com/blogs/machine-learning/feed/"
+        url: "https://aws.amazon.com/blogs/machine-learning/"
+        tier: 1
+      - name: Azure Blog
+        feed: "https://azure.microsoft.com/en-us/blog/feed/"
+        url: "https://azure.microsoft.com/en-us/blog/"
+        tier: 1
+      - name: GitHub Blog AI and ML
+        feed: "https://github.blog/ai-and-ml/feed/"
+        url: "https://github.blog/ai-and-ml/"
+        tier: 1
+      - name: PyTorch Blog
+        feed: "https://pytorch.org/blog/feed.xml"
+        url: "https://pytorch.org/blog/"
+        tier: 1
+      - name: Ollama Blog
+        feed: "https://ollama.com/blog/rss.xml"
+        url: "https://ollama.com/blog"
+        tier: 1
+
+  german_language:
+    role: regional_discovery_and_context
+    cadence: daily
+    sources:
+      - name: THE DECODER DE
+        feed: "https://the-decoder.de/feed/"
+        url: "https://the-decoder.de/"
+        tier: 3
+      - name: THE DECODER EN
+        feed: "https://the-decoder.com/feed/"
+        url: "https://the-decoder.com/"
+        tier: 3
+      - name: heise online
+        feed: "https://www.heise.de/rss/heise-atom.xml"
+        url: "https://www.heise.de/thema/Kuenstliche-Intelligenz"
+        tier: 2
+        filter: ai_client_side
+      - name: t3n
+        feed: "https://t3n.de/rss.xml"
+        url: "https://t3n.de/tag/kuenstliche-intelligenz/"
+        tier: 3
+        filter: ai_client_side
+      - name: Google News DE/CH AI
+        feed: "https://news.google.com/rss/search?q=%22k%C3%BCnstliche+Intelligenz%22+OR+%22KI%22+when:1d&hl=de&gl=CH&ceid=CH:de"
+        url: "https://news.google.com/"
+        tier: 4
+        note: "Discovery only; verify against original sources."
+
 discovery:
   open_web: true
   mandatory_sources_are_not_whitelist: true
   mandatory_sources_have_no_editorial_priority: true
+  catalog_sources_have_no_editorial_priority: true
   lookback: "since_previous_brief"
   fallback_lookback_hours: 36
   categories:
@@ -103,6 +347,10 @@ discovery:
     - research
     - developer_tools
     - ai_security
+    - enterprise_adoption
+    - productivity_and_reliability
+    - compute_and_semiconductors
+    - china_ai
   community_and_social:
     use_for_discovery: true
     sufficient_as_sole_evidence: false
@@ -110,6 +358,35 @@ discovery:
     prefer_primary_sources: true
     verify_material_claims: true
     independent_secondary_source_when_material_or_contested: true
+
+intelligence_passes:
+  emerging_signals:
+    enabled: true
+    minimum_independent_evidence_types: 2
+    require_directional_consistency: true
+    persist_recurring_signals_to_storylines: true
+  contrarian_evidence:
+    enabled: true
+    run_for_major_vendor_claims: true
+    run_for_dominant_market_narratives: true
+    preferred_evidence:
+      - production_metrics
+      - independent_benchmarks
+      - incident_postmortems
+      - regulatory_filings
+      - reproducible_experiments
+      - credible_independent_reporting
+    do_not_force_false_balance: true
+  builder_radar:
+    enabled: true
+    max_items: 3
+    require_concrete_action: true
+    dimensions:
+      - what_is_it
+      - why_now
+      - what_to_try
+      - success_or_failure_signal
+      - maturity_and_risk
 
 source_catalog_growth:
   enabled: true
@@ -135,8 +412,8 @@ source_catalog_growth:
 source_tiers:
   1: "Primary evidence: vendor announcement/docs, paper, repository, regulator, standards body or other authoritative original source"
   2: "High-quality independent reporting such as Reuters, Bloomberg, FT, Ars Technica or TechCrunch"
-  3: "Curated discovery/secondary sources such as Ben's Bites and AI Weekly"
-  4: "Community/social signals; discovery only unless independently verified"
+  3: "Curated discovery/analysis sources such as Ben's Bites, AI Weekly, Latent Space or Interconnects"
+  4: "Community/social/aggregator signals; discovery only unless independently verified"
 
 selection:
   principle: "story_merit_over_source_prominence"
@@ -149,9 +426,11 @@ selection:
     evidence_quality: 0.15
     durability_over_hype: 0.10
   rules:
-    - "Evaluate stories by significance and evidence, not by which mandatory source surfaced them."
-    - "Ben's Bites and AI Weekly receive no ranking bonus and no editorial priority."
-    - "Do not include a story merely because a mandatory source mentioned it."
+    - "Evaluate stories by significance and evidence, not by which source surfaced them."
+    - "Ben's Bites, AI Weekly and catalog sources receive no ranking bonus and no editorial priority."
+    - "Do not include a story merely because a configured source mentioned it."
     - "Do not exclude a strong story merely because it came from a new or unknown source."
     - "For important stories, find the primary source whenever available."
+    - "Actively search for credible disconfirming evidence before accepting dominant narratives or vendor claims."
+    - "Detect cross-source emerging signals when multiple independent developments point in the same direction."
     - "Prefer a small number of well-explained high-signal stories over exhaustive link aggregation."
