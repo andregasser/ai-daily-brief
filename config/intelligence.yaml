@@ -1,0 +1,128 @@
+version: 1
+
+claim_evidence_graph:
+  enabled: true
+  claim_level_evidence: true
+  story_evidence_derived_from_claims: true
+  allowed_states: [confirmed_primary, confirmed_multiple, reported, vendor_claim, early_signal]
+  require_source_url_for_material_claims: true
+  require_primary_source_for_confirmed_primary: true
+  require_multiple_independent_sources_for_confirmed_multiple: true
+  preserve_conflicts: true
+
+intelligence_memory:
+  enabled: true
+  entities_file: data/entities.json
+  claims_file: data/claims.json
+  concepts_file: data/concepts.json
+  storylines_file: data/storylines.json
+  theses_file: data/theses.json
+  keep_stable_ids: true
+  append_dated_updates: true
+
+prediction_scorecard:
+  enabled: true
+  file: data/predictions.json
+  states: [open, progress, confirmed, falsified, expired]
+  score_predictions: true
+  review_open_items_daily: true
+  monthly_accuracy_review: true
+  require_falsification_criteria: true
+
+red_team_pass:
+  enabled: true
+  required_before_publish: true
+  objectives:
+    - challenge factual claims and numbers
+    - detect unsupported confidence
+    - find vendor claims presented as facts
+    - detect missing primary sources
+    - detect contradictions and omitted counterevidence
+    - detect duplicate or unchanged stories from previous edition
+    - check DE/EN factual equivalence
+  block_publish_on_material_unresolved_issue: true
+  store_report_in_research_audit: true
+
+builder_radar_lifecycle:
+  enabled: true
+  states: [experimental, trial, promising, adopt, watch, avoid, retired]
+  follow_up_after_days: [3, 7, 30]
+  require_test_plan: true
+  require_success_criteria: true
+  require_maturity_assessment: true
+  file: data/builder_radar.json
+
+house_benchmarks:
+  enabled: true
+  config_file: config/evals.yaml
+  results_file: data/evals.json
+  run_only_when_materially_useful: true
+  dimensions:
+    - task_success
+    - latency
+    - cost
+    - context_behavior
+    - structured_output
+    - tool_use
+    - coding
+    - long_horizon_agent
+    - multimodal_when_applicable
+  publish_vendor_vs_house_deltas_when_comparable: true
+
+trend_heatmap:
+  enabled: true
+  file: data/trends.json
+  window_days: 30
+  decay_half_life_days: 10
+  score_independent_events_not_article_count: true
+  inputs: [research_watches, storylines, claims, source_metrics, published_stories]
+  states: [rising, stable, falling, emerging]
+
+concept_knowledge_base:
+  enabled: true
+  file: data/concepts.json
+  link_previous_concepts: true
+  avoid_repetition_without_new_angle: true
+  expose_as_archive_dimension: true
+
+weekly_intelligence_review:
+  enabled: true
+  weekday: sunday
+  timezone: Europe/Zurich
+  de_path_pattern: weekly/YYYY-Www-de.html
+  en_path_pattern: weekly/YYYY-Www-en.html
+  focus:
+    - what changed our mind
+    - strongest emerging signals
+    - signals that weakened or disappeared
+    - prediction and thesis updates
+    - builder radar follow-ups
+    - next-week tests
+  forbid_simple_daily_digest: true
+
+research_audit:
+  enabled: true
+  path_pattern: data/research/YYYY-MM-DD.json
+  retain:
+    - candidates
+    - clusters
+    - rejected_stories_with_reason
+    - claims
+    - evidence
+    - source_contributions
+    - ranking
+    - contrarian_evidence
+    - emerging_signals
+    - builder_radar
+    - research_watch_hits
+    - red_team_report
+    - publish_decision
+  public_surface: internal_repo_only
+
+quality_gates:
+  require_claim_graph_for_material_stories: true
+  require_red_team_pass: true
+  require_research_audit: true
+  require_prediction_updates_when_due: true
+  require_source_metrics_update: true
+  require_no_unresolved_material_contradictions: true
