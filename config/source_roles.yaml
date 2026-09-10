@@ -1,0 +1,51 @@
+version: 1
+
+# Editorial role overlay for config/sources.yaml.
+# A source may have multiple roles. Roles describe HOW a source is used, not story importance.
+roles:
+  discovery:
+    purpose: "High-recall detection of new developments; never sufficient alone for material claims."
+    sources: ["Ben's Bites News", "Ben's Bites", "AI Weekly", "TLDR AI", "THE DECODER DE", "THE DECODER EN", "Google News DE/CH AI", "Hacker News AI 100+ points"]
+
+  primary:
+    purpose: "Authoritative original evidence for releases, technical claims, policy and project facts."
+    sources: ["OpenAI", "Anthropic", "Google DeepMind", "Google AI", "Google Research Blog", "Meta AI", "Meta AI Research", "Meta Engineering", "Microsoft AI", "Microsoft Research", "AWS Machine Learning", "AWS Machine Learning Blog", "NVIDIA AI", "NVIDIA Blog", "NVIDIA Developer Blog", "Hugging Face", "Mistral AI", "DeepSeek", "World Labs", "GitHub Blog AI and ML", "PyTorch Blog", "Ollama Blog", "European Commission Digital Strategy", "UK AI Security Institute"]
+
+  journalism:
+    purpose: "Independent reporting, deal/regulatory context, contested-claim triangulation and market facts."
+    sources: ["Reuters AI", "Financial Times AI", "TechCrunch AI", "Ars Technica AI", "MIT Technology Review AI", "IEEE Spectrum AI", "404 Media", "Platformer", "Wired AI", "The Verge AI", "CNBC Technology", "BBC Technology", "NYT Technology", "The Guardian AI", "heise online"]
+
+  engineering:
+    purpose: "Deep technical interpretation, architecture, implementation detail and production lessons."
+    sources: ["Simon Willison", "Latent Space", "Ahead of AI", "Lil'Log", "Andrej Karpathy", "SemiAnalysis", "Interconnects", "NVIDIA Developer Blog", "Hugging Face", "PyTorch Blog", "GitHub Blog AI and ML", "AWS Machine Learning Blog", "Ollama Blog"]
+
+  research:
+    purpose: "Forward-looking research discovery; papers must be checked at the original paper/repository."
+    sources: ["arXiv AI", "arXiv Machine Learning", "arXiv Computational Linguistics", "HF Daily Papers", "Google Research Blog", "Microsoft Research", "Meta AI Research", "MIT News AI", "Import AI", "Synced Review"]
+
+  business_strategy:
+    purpose: "Market structure, economics, compute, geopolitics, adoption and company strategy."
+    sources: ["Reuters AI", "Financial Times AI", "SemiAnalysis", "ChinaTalk", "Understanding AI", "Import AI", "MIT Technology Review AI", "CNBC Technology", "Platformer"]
+
+  contrarian:
+    purpose: "Actively seek credible disconfirming evidence and limitations; never use to manufacture false balance."
+    sources: ["AI Snake Oil", "Marcus on AI", "One Useful Thing", "Understanding AI", "404 Media", "MIT Technology Review AI", "Ars Technica AI", "IEEE Spectrum AI", "Simon Willison", "LessWrong"]
+
+  builder_radar:
+    purpose: "Find concrete tools, releases and techniques that a builder can evaluate now."
+    sources: ["GitHub Blog AI and ML", "PyTorch Blog", "Ollama Blog", "Hugging Face", "NVIDIA Developer Blog", "AWS Machine Learning Blog", "Azure Blog", "Latent Space", "Simon Willison", "r/LocalLLaMA", "Hacker News AI 100+ points"]
+
+  community_signal:
+    purpose: "Weak signals, real-world experience and adoption friction; verify material claims elsewhere."
+    sources: ["r/LocalLLaMA", "Hacker News AI 100+ points", "LessWrong"]
+
+  regional:
+    purpose: "German/Swiss/EU discovery and regional context."
+    sources: ["THE DECODER DE", "heise online", "t3n", "Google News DE/CH AI", "European Commission Digital Strategy"]
+
+rules:
+  - "Roles never create an editorial ranking bonus."
+  - "Primary is preferred for factual confirmation; journalism is preferred for independent context."
+  - "Discovery and community sources cannot alone establish a material claim."
+  - "Contrarian sources trigger verification, not automatic inclusion."
+  - "Builder-radar candidates require a concrete experiment and success criterion."
