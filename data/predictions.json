@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "updated_at": null,
+  "predictions": [],
+  "scorecard": {
+    "confirmed": 0,
+    "falsified": 0,
+    "expired": 0,
+    "open": 0,
+    "progress": 0
+  }
+}
