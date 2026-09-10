@@ -1,5 +1,1 @@
-{
-  "version": 1,
-  "updated_at": null,
-  "entities": []
-}
+{"version":1,"updated_at":"2026-09-10T09:38:33+02:00","entities":[{"id":"visa","name":"Visa","type":"company","aliases":["Visa Inc."],"domains":["visa.com"]},{"id":"mastercard","name":"Mastercard","type":"company","aliases":[],"domains":["mastercard.com"]},{"id":"ant-international","name":"Ant International","type":"company","aliases":[],"domains":["ant-intl.com"]},{"id":"deepseek","name":"DeepSeek","type":"ai_lab","aliases":[],"domains":["deepseek.com"]},{"id":"huawei","name":"Huawei","type":"company","aliases":[],"domains":["huawei.com"]},{"id":"cambricon","name":"Cambricon","type":"company","aliases":["Cambricon Technologies"],"domains":["cambricon.com"]},{"id":"nvidia","name":"NVIDIA","type":"company","aliases":[],"domains":["nvidia.com"]},{"id":"red-hat","name":"Red Hat","type":"company","aliases":[],"domains":["redhat.com"]},{"id":"anthropic","name":"Anthropic","type":"ai_lab","aliases":[],"domains":["anthropic.com"]},{"id":"metr","name":"METR","type":"research_org","aliases":["Model Evaluation & Threat Research"],"domains":["metr.org"]},{"id":"meta","name":"Meta","type":"company","aliases":["Meta AI"],"domains":["meta.com"]},{"id":"pytorch-foundation","name":"PyTorch Foundation","type":"open_source_org","aliases":["PyTorch"],"domains":["pytorch.org"]}]}
