@@ -1,0 +1,39 @@
+version: 1
+
+principle: "Small, reproducible, decision-useful house evals; never benchmark theater."
+
+suites:
+  coding:
+    enabled: true
+    target_tasks: 10
+    dimensions: [task_success, regression_rate, review_required, latency, cost]
+    require_reproducible_fixture: true
+  tool_use:
+    enabled: true
+    target_tasks: 8
+    dimensions: [success_rate, invalid_tool_calls, retries, latency, cost]
+  structured_output:
+    enabled: true
+    target_tasks: 8
+    dimensions: [schema_validity, semantic_correctness, retries, latency, cost]
+  long_context:
+    enabled: true
+    target_tasks: 5
+    dimensions: [retrieval_accuracy, distractor_robustness, latency, cost]
+  long_horizon_agent:
+    enabled: true
+    target_tasks: 5
+    dimensions: [task_success, intervention_count, wall_clock_time, cost, failure_mode]
+  multimodal:
+    enabled: true
+    run_when_applicable: true
+    target_tasks: 5
+    dimensions: [task_success, temporal_reasoning, grounding, latency, cost]
+
+rules:
+  - "Run only when a model/tool release is material enough to justify cost."
+  - "Pin prompts, fixtures, model versions and parameters."
+  - "Record raw outputs and failures where practical."
+  - "Never compare non-equivalent harnesses without saying so."
+  - "Treat results as local house evidence, not universal truth."
+  - "Publish methodology and limitations with any cited result."
