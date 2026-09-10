@@ -1,0 +1,82 @@
+version: 1
+
+# Research Watches are persistent topic lenses, not publication quotas.
+# Each daily run scans these themes across papers, primary labs, engineering sources and open web.
+# Publish only when evidence clears the normal editorial quality bar.
+watches:
+  - id: agent-evaluation
+    title: Agent evaluation & long-horizon reliability
+    queries: ["agent evaluation", "long horizon agents", "agent benchmarks", "task success agents", "agent reliability", "agent failure modes"]
+    signals: [new_eval, end_to_end_task_success, intervention_rate, failure_analysis, reproducible_benchmark]
+
+  - id: coding-agents
+    title: Coding agents & software-engineering productivity
+    queries: ["coding agents", "SWE-bench", "software engineering agents", "AI coding productivity", "coding agent incidents", "agent code review"]
+    signals: [task_success, productivity, rework, incidents, review_burden, enterprise_deployment]
+    contrarian_required: true
+
+  - id: inference-serving
+    title: LLM inference & serving economics
+    queries: ["LLM inference", "vLLM", "SGLang", "speculative decoding", "KV cache", "continuous batching", "prefill decode", "inference economics"]
+    signals: [latency, throughput, cost_per_token, vram, concurrency, energy, production_release]
+
+  - id: model-architecture
+    title: Model architecture & efficient scaling
+    queries: ["mixture of experts", "sparse attention", "linear attention", "state space model", "long context architecture", "efficient transformer"]
+    signals: [architecture_change, efficiency_gain, independent_eval, deployment_implication]
+
+  - id: multimodal-video
+    title: Multimodal & long-video understanding
+    queries: ["video understanding model", "long video VLM", "multimodal video", "active perception", "video agent", "temporal reasoning VLM"]
+    signals: [long_video, temporal_reasoning, token_efficiency, local_deployment, benchmark, production_api]
+
+  - id: agent-memory-context
+    title: Agent memory & context engineering
+    queries: ["agent memory", "context engineering", "long term memory agents", "context compression", "retrieval agents", "memory benchmark"]
+    signals: [memory_architecture, context_cost, retrieval_quality, provenance, invalidation]
+
+  - id: agent-security
+    title: Agent security, sandboxing & prompt injection
+    queries: ["agent security", "prompt injection", "sandbox escape AI agent", "agent permissions", "AI agent cyber", "tool security LLM"]
+    signals: [incident, exploit, mitigation, policy_layer, sandboxing, identity, egress_control]
+    contrarian_required: true
+
+  - id: post-training-rl
+    title: Post-training, RL & reward design
+    queries: ["LLM post training", "reinforcement learning LLM", "reward hacking", "RL environment LLM", "RFT", "verifiable rewards"]
+    signals: [training_method, reward_hacking, environment_quality, capability_gain, alignment_effect]
+
+  - id: open-models-local
+    title: Open-weight models & local inference
+    queries: ["open weight LLM", "local LLM", "GGUF", "MLX", "Ollama", "open model release", "local VLM"]
+    signals: [license, quality, quantization, memory_requirement, mac_support, deployment]
+
+  - id: ai-hardware-compute
+    title: AI hardware, memory & compute infrastructure
+    queries: ["AI accelerator", "GPU inference", "HBM", "AI datacenter", "AI interconnect", "TPU", "Trainium", "AI chip"]
+    signals: [performance_per_watt, memory_bandwidth, capacity, capex, supply, system_architecture]
+
+  - id: enterprise-adoption
+    title: Enterprise adoption & AI economics
+    queries: ["enterprise AI agents", "AI ROI enterprise", "AI productivity study", "AI deployment failure", "AI software engineering enterprise"]
+    signals: [paid_adoption, retention, ROI, deployment_scope, failure, operating_cost]
+    contrarian_required: true
+
+  - id: regulation-governance
+    title: AI regulation, standards & governance
+    queries: ["AI Act", "AI regulation", "GPAI", "AI standards", "AI governance", "AI safety institute"]
+    signals: [new_rule, enforcement, standard, compliance_requirement, platform_response]
+
+  - id: china-ai
+    title: China AI ecosystem
+    queries: ["China AI models", "Chinese LLM", "DeepSeek", "Qwen", "China AI chips", "China AI regulation"]
+    signals: [model_release, open_weights, compute_constraint, export_control, ecosystem_shift]
+
+selection:
+  max_research_digest_items: 2
+  max_builder_radar_items_from_research: 2
+  require_original_paper_or_repo_for_material_research_claim: true
+  prefer_reproducible_code: true
+  prefer_independent_replication: true
+  do_not_publish_on_keyword_match_alone: true
+  promote_recurring_watch_signal_to_storyline: true
