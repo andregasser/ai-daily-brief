@@ -1,5 +1,1 @@
-{
-  "version": 1,
-  "updated_at": null,
-  "concepts": []
-}
+{"version":1,"updated_at":"2026-09-10T09:38:33+02:00","concepts":[{"id":"agent-identity-delegated-authority","first_seen":"2026-09-10","last_seen":"2026-09-10","title":{"de":"Know Your Agent: Agent Identity & Delegated Authority","en":"Know Your Agent: Agent Identity & Delegated Authority"},"summary":{"de":"Produktive Agents benötigen getrennte Identität, delegierte Autorität, beweisbare Nutzerabsicht, Runtime-Attestation und Audit/Revocation; das Modell schlägt Aktionen vor, ein externer Control Plane autorisiert die Wirkung.","en":"Production agents need separate identity, delegated authority, provable user intent, runtime attestation and audit/revocation; the model proposes actions while an external control plane authorizes effects."},"tags":["agent-identity","delegation","authorization","agent-security","agentic-commerce","control-plane"],"storylines":["agent-security","agent-identity-delegation"],"sources":["https://www.mastercard.com/global/en/news-and-trends/stories/2026/verifiable-intent.html","https://corporate.visa.com/en/sites/visa-perspectives/newsroom/akamai-visa-collaborate-to-build-trust-in-agentic-commerce.html","https://www.reuters.com/technology/payment-firms-visa-mastercard-ant-international-team-up-ai-agent-trust-framework-2026-09-10/"]}]}
