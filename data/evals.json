@@ -1,5 +1,1 @@
-{
-  "version": 1,
-  "updated_at": null,
-  "runs": []
-}
+{"version":1,"updated_at":"2026-09-10T09:38:33+02:00","runs":[],"decisions":[{"date":"2026-09-10","executed":false,"reason":"No new model/runtime could be tested with a pinned, reproducible external environment and fair baseline during this run. Skipped under the house-eval policy rather than publishing a weak or non-comparable benchmark.","candidates":["DeepSeek V4.1-Flash","NVIDIA Dynamo EPD"],"revisit_when":["Stable primary model/API documentation is available for DeepSeek V4.1-Flash","A reproducible representative multimodal serving environment is available for EPD comparison"]}]}
