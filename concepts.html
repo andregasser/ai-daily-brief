@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Daily Brief — Concepts</title>
+  <meta name="description" content="Concept of the Day knowledge base from AI Daily Brief." />
+  <style>
+    :root{color-scheme:dark;background:#0b0d10;color:#eef2f6;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}body{margin:0}.wrap{max-width:1040px;margin:auto;padding:48px 24px 80px}a{color:inherit}.top{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:54px}.brand{font-weight:800;text-decoration:none}.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9ea9b5}.hero h1{font-size:clamp(40px,7vw,78px);line-height:.95;margin:10px 0 18px;letter-spacing:-.045em}.hero p{max-width:720px;color:#aeb7c2;font-size:18px;line-height:1.6}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:42px}.card{border:1px solid #252b33;border-radius:18px;padding:22px;background:#11151a}.card h2{font-size:20px;margin:8px 0 10px}.meta{font-size:12px;color:#8994a1}.summary{color:#b8c0ca;line-height:1.55}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:15px}.tag{font-size:11px;border:1px solid #303741;border-radius:999px;padding:5px 8px;color:#9fa9b5}.empty{border:1px dashed #303741;border-radius:18px;padding:28px;color:#929ca8;margin-top:42px}.footer{margin-top:56px;color:#737e8a;font-size:13px}
+  </style>
+</head>
+<body><main class="wrap">
+  <div class="top"><a class="brand" href="./">AI Daily Brief</a><span class="eyebrow">Knowledge Base</span></div>
+  <section class="hero"><div class="eyebrow">🔬 Concepts</div><h1>AI Engineering,<br/>one concept at a time.</h1><p>A growing knowledge base built from the Concept of the Day: intuition, architecture and practical relevance for engineers building AI systems.</p></section>
+  <section id="concepts" class="grid" aria-live="polite"></section>
+  <div class="footer">AI Daily Brief · Evidence-first · No hype</div>
+</main>
+<script>
+const root=document.getElementById('concepts');
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+fetch('data/concepts.json').then(r=>r.json()).then(data=>{
+ const items=[...(data.concepts||[])].sort((a,b)=>String(b.first_seen||b.date||'').localeCompare(String(a.first_seen||a.date||'')));
+ if(!items.length){root.outerHTML='<div class="empty">The knowledge base will populate automatically as new Concepts of the Day are published.</div>';return;}
+ root.innerHTML=items.map(c=>{const title=c.title_en||c.title||c.title_de||c.id;const summary=c.summary_en||c.summary||c.summary_de||'';const date=c.first_seen||c.date||'';const tags=c.tags||[];const href=c.url_en||c.briefing_en||c.url||'';return `<article class="card"><div class="meta">${esc(date)}</div><h2>${href?`<a href="${esc(href)}">${esc(title)}</a>`:esc(title)}</h2><div class="summary">${esc(summary)}</div><div class="tags">${tags.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div></article>`}).join('');
+}).catch(()=>{root.outerHTML='<div class="empty">Concept data is temporarily unavailable.</div>'});
+</script></body></html>
