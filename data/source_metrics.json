@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "window_days": 30,
+  "last_updated": null,
+  "methodology": {
+    "principle": "Measure source contribution, not popularity. Metrics influence catalog maintenance and research effort, never automatic story ranking.",
+    "counters": {
+      "items_seen": "Relevant feed/search items inspected from this source.",
+      "candidates": "Items promoted into normalized story candidates.",
+      "shortlisted": "Candidates surviving initial relevance/evidence filtering.",
+      "published": "Stories where this source materially contributed to a published item.",
+      "unique_discoveries": "Published/shortlisted events first surfaced by this source before other catalog sources in the run.",
+      "primary_confirmations": "Material claims this source confirmed as authoritative primary evidence.",
+      "independent_confirmations": "Material claims this source independently corroborated.",
+      "contrarian_hits": "Useful credible evidence that materially complicated or falsified a dominant claim/narrative.",
+      "builder_hits": "Items that became a concrete Builder Radar action.",
+      "research_hits": "Items that became Research Digest or materially informed a concept/emerging signal.",
+      "false_or_retracted": "Items later found materially false, retracted or misleading.",
+      "duplicate_only": "Items adding no meaningful information beyond stronger/earlier sources."
+    },
+    "derived_metrics": {
+      "candidate_yield": "candidates / max(items_seen,1)",
+      "publication_yield": "published / max(candidates,1)",
+      "unique_signal_rate": "unique_discoveries / max(candidates,1)",
+      "verification_value": "(primary_confirmations + independent_confirmations) / max(candidates,1)",
+      "contrarian_value": "contrarian_hits / max(candidates,1)",
+      "builder_value": "builder_hits / max(candidates,1)",
+      "noise_rate": "duplicate_only / max(items_seen,1)",
+      "reliability_penalty": "false_or_retracted"
+    }
+  },
+  "sources": {},
+  "maintenance_rules": {
+    "minimum_observation_days_before_demote": 21,
+    "minimum_candidates_before_rate_judgment": 10,
+    "promote_when": [
+      "Repeated unique high-signal discoveries",
+      "Repeated primary or independent verification value",
+      "Repeated builder/research/contrarian value in its assigned role"
+    ],
+    "demote_or_reduce_cadence_when": [
+      "Persistently high noise or duplicate-only rate",
+      "No meaningful contribution across a sufficient observation window",
+      "Repeated provenance/reliability problems"
+    ],
+    "never_do": [
+      "Do not rank a story higher because its source has a high historical score",
+      "Do not punish primary sources for low publication volume",
+      "Do not compare sources across incompatible roles without context"
+    ]
+  }
+}
