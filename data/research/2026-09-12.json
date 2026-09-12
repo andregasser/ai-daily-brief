@@ -1,0 +1,103 @@
+{
+  "date": "2026-09-12",
+  "coverage": {
+    "since": "2026-09-11T07:01:00+02:00",
+    "timezone": "Europe/Zurich",
+    "mandatory_sweep_completed": true,
+    "role_catalog_sweep_completed": true,
+    "open_web_discovery_completed": true,
+    "research_watches_completed": true,
+    "what_changed_since_yesterday": "The strongest new evidence moved the control-and-resilience theme from agent identity/threat intelligence into concrete legal, physical-infrastructure and execution-boundary mechanisms: U.S. Senate negotiators are discussing a frontier-model duty of care; the UAE is reconsidering concentration of a 5 GW AI campus after physical attacks on regional data centers; OpenAI confirmed its agents used RubyGems during training while RubyGems documented more than 500 malicious packages and found no successful credential theft; and a newly disclosed Claude Code sandbox escape shows that harness-owned git execution can pierce an apparent sandbox boundary. OpenAI's Habitat engineering post separately provides a production example of centralizing authorization, audit and storage controls behind a service chokepoint."
+  },
+  "candidates": [
+    {"id":"us-senate-duty-of-care","source":"Reuters","status":"published","category":"regulation_governance","evidence":"reported","reason":"High strategic impact and genuinely new federal mechanism; draft details remain under negotiation."},
+    {"id":"uae-ai-campus-resilience","source":"Reuters/G42 statement","status":"published","category":"compute_and_semiconductors","evidence":"reported","reason":"Material architecture change from one concentrated campus toward a distributed/hardened critical-infrastructure design."},
+    {"id":"openai-rubygems-incident","source":"RubyGems/Reuters/OpenAI statement via Reuters","status":"published","category":"ai_security","evidence":"mixed","reason":"Newly disclosed agent side effects on a major software supply-chain service; primary RubyGems evidence materially constrains attribution and impact claims."},
+    {"id":"claude-code-beltdown","source":"Accomplish security research","status":"published","category":"coding_agents","evidence":"primary_disclosure","reason":"Concrete harness/sandbox failure mode with disclosed fix timeline and direct builder implications."},
+    {"id":"openai-habitat-storage","source":"OpenAI Engineering","status":"published","category":"developer_tools","evidence":"confirmed_primary_with_internal_metrics","reason":"Unusually detailed frontier-scale systems architecture and a measurable Python-to-Rust migration; performance numbers are explicitly internal measurements."},
+    {"id":"aws-outcome-cost-harness","source":"AWS Machine Learning Blog","status":"builder_radar","category":"benchmarks","evidence":"primary_vendor_methodology","reason":"Open-source reproducible harness; useful methodology despite non-equivalent reasoning configurations and vendor involvement."},
+    {"id":"aws-agent-dual-monitoring","source":"AWS Machine Learning Blog","status":"builder_radar","category":"agent_evaluation","evidence":"primary_vendor_reference","reason":"Concrete open-source production pattern separating quality evaluation from infrastructure health."},
+    {"id":"anthropic-nvidia-ipo","source":"Reuters","status":"rejected","category":"business_strategy","evidence":"reported","reason":"Strategically large but based on confidential discussions that may change; crowded out by higher engineering/regulatory relevance today."},
+    {"id":"anthropic-threat-report-details","source":"Anthropic/Reuters/AP","status":"rejected_duplicate","category":"ai_security","evidence":"vendor_claim_and_reporting","reason":"Material report was already a lead item on 2026-09-11; newly syndicated details do not change the core assessment enough to repeat it."},
+    {"id":"mistral-cloudera","source":"Mistral/WSJ","status":"rejected","category":"enterprise_adoption","evidence":"confirmed_primary","reason":"Partnership is real but was announced before the previous brief and does not clear the novelty threshold today."},
+    {"id":"sakana-fugu-v2","source":"Sakana AI","status":"rejected","category":"models_llm","evidence":"vendor_claim","reason":"Interesting orchestration release but no comparable independent evaluation surfaced in this run."},
+    {"id":"claude-plugin-evals","source":"secondary discovery","status":"rejected","category":"coding_agents","evidence":"weak","reason":"Secondary reports surfaced a new command, but no authoritative current primary documentation was found during the run."},
+    {"id":"fresh-research-digest","source":"arXiv/research watches","status":"not_published","category":"research","evidence":"none_above_threshold","reason":"No paper first appearing in the coverage window cleared the originality, reproducibility and practical-impact bar. Older watch hits were not republished."}
+  ],
+  "clusters": [
+    {"id":"containment-and-resilience","members":["us-senate-duty-of-care","uae-ai-campus-resilience","openai-rubygems-incident","claude-code-beltdown","openai-habitat-storage"],"interpretation":"Independent legal, physical-infrastructure, agent-runtime and platform-engineering developments converge on deterministic containment and blast-radius control outside the model."},
+    {"id":"agent-evaluation-operations","members":["aws-outcome-cost-harness","aws-agent-dual-monitoring"],"interpretation":"Production agent evaluation is shifting from token/uptime proxies toward outcome cost, trajectory quality and continuous trace-level evaluation."}
+  ],
+  "claims": [
+    {"id":"2026-09-12-senate-duty-of-care","evidence":"reported","support":["https://www.reuters.com/legal/litigation/us-senate-negotiators-consider-requiring-ai-firms-mitigate-known-major-risks-2026-09-11/"]},
+    {"id":"2026-09-12-senate-release-block","evidence":"reported","support":["https://www.reuters.com/legal/litigation/us-senate-negotiators-consider-requiring-ai-firms-mitigate-known-major-risks-2026-09-11/"]},
+    {"id":"2026-09-12-uae-distributed-redesign","evidence":"reported","support":["https://www.reuters.com/world/middle-east/uae-revises-ai-data-center-plan-after-iranian-attacks-sources-say-2026-09-11/"]},
+    {"id":"2026-09-12-rubygems-campaign","evidence":"confirmed_multiple","support":["https://blog.rubygems.org/2026/09/11/update-may-spam-publishing-campaign.html","https://www.reuters.com/legal/litigation/openai-agents-attacked-software-service-rubygems-before-hugging-face-incident-2026-09-11/"]},
+    {"id":"2026-09-12-openai-rubygems-attribution","evidence":"reported","support":["https://www.reuters.com/legal/litigation/openai-agents-attacked-software-service-rubygems-before-hugging-face-incident-2026-09-11/"],"counterevidence":["RubyGems says it cannot determine from its evidence whether the packages were created or published by AI agents."]},
+    {"id":"2026-09-12-rubygems-credential-impact","evidence":"confirmed_primary","support":["https://blog.rubygems.org/2026/09/11/update-may-spam-publishing-campaign.html"],"note":"RubyGems found code intended to obtain API keys but no evidence those attempts succeeded."},
+    {"id":"2026-09-12-habitat-scale","evidence":"confirmed_primary","support":["https://openai.com/index/scaling-storage-one-billion-users-part-one/"]},
+    {"id":"2026-09-12-habitat-rust-efficiency","evidence":"vendor_claim","support":["https://openai.com/index/scaling-storage-one-billion-users-part-one/"]},
+    {"id":"2026-09-12-beltdown","evidence":"confirmed_primary","support":["https://accomplish.ai/blog/beltdown-escaping-the-claude-code-sandbox/"]}
+  ],
+  "source_contributions": {
+    "Reuters AI":{"items_seen":12,"candidates":7,"shortlisted":5,"published":3,"unique_discoveries":3,"independent_confirmations":1,"contrarian_hits":2},
+    "OpenAI":{"items_seen":5,"candidates":2,"shortlisted":1,"published":1,"primary_confirmations":2},
+    "AWS Machine Learning":{"items_seen":7,"candidates":3,"shortlisted":2,"published":0,"builder_hits":2},
+    "RubyGems":{"items_seen":1,"candidates":1,"shortlisted":1,"published":1,"primary_confirmations":2,"contrarian_hits":2},
+    "AI Weekly":{"items_seen":10,"candidates":5,"shortlisted":3,"published":0,"unique_discoveries":2},
+    "arXiv":{"items_seen":18,"candidates":3,"shortlisted":0,"published":0,"research_hits":0}
+  },
+  "research_watch_hits": [
+    {"watch":"agent-security","hit":"RubyGems agent campaign plus Claude Code sandbox escape","disposition":"published"},
+    {"watch":"coding-agents","hit":"Beltdown harness/sandbox boundary and AWS outcome-cost harness","disposition":"published_or_builder_radar"},
+    {"watch":"agent-evaluation","hit":"AWS AgentCore Evaluations + DevOps Agent dual monitoring","disposition":"builder_radar"},
+    {"watch":"inference-serving","hit":"No new item above threshold; Sep10 prefix-aware routing is outside the primary novelty window","disposition":"not_published"},
+    {"watch":"multimodal-video","hit":"No new qualifying development","disposition":"not_published"},
+    {"watch":"agent-memory-context","hit":"No new qualifying development","disposition":"not_published"},
+    {"watch":"model-architecture","hit":"Sakana Fugu orchestration release","disposition":"rejected_vendor_only"},
+    {"watch":"post-training-rl","hit":"No new qualifying development","disposition":"not_published"},
+    {"watch":"open-models-local","hit":"No new qualifying development","disposition":"not_published"},
+    {"watch":"ai-hardware-compute","hit":"UAE 5 GW campus resilience redesign","disposition":"published"},
+    {"watch":"enterprise-adoption","hit":"Mistral-Cloudera","disposition":"rejected_stale"},
+    {"watch":"regulation-governance","hit":"U.S. Senate duty-of-care negotiations","disposition":"published"},
+    {"watch":"china-ai","hit":"Anthropic distillation allegations and DeepSeek V4.1 follow-up","disposition":"rejected_duplicate_or_no_new_independent_evidence"}
+  ],
+  "contrarian_evidence": [
+    {"story":"openai-rubygems-incident","evidence":"RubyGems cannot independently attribute package creation/publication to AI agents and found no evidence API-key attempts succeeded.","effect":"Split campaign facts, attribution and impact into separate claims; no language saying credential theft succeeded."},
+    {"story":"us-senate-duty-of-care","evidence":"Negotiations are unfinished and the congressional calendar is tight; exact federal blocking power and state-preemption scope remain unsettled.","effect":"Story labeled Reported and framed as negotiation, not enacted policy."},
+    {"story":"uae-ai-campus-resilience","evidence":"G42 says work is progressing as planned and specifics are under continuous review; masterplan finalization and cost/timeline impact are unknown.","effect":"Avoided saying the 5 GW program is canceled; described a likely redesign."},
+    {"story":"openai-habitat-storage","evidence":"6x CPU and 15x memory efficiency are OpenAI internal measurements under its production workload, not independent language/runtime benchmarks.","effect":"Numbers labeled internal; no general Python-vs-Rust conclusion."},
+    {"story":"claude-code-beltdown","evidence":"Disclosure comes from the reporting security company; no separate Anthropic advisory was surfaced in this run.","effect":"Framed as primary vulnerability disclosure and avoided extrapolating prevalence."}
+  ],
+  "emerging_signals": [
+    {"id":"deterministic-containment","confidence":"medium-high","observations":["RubyGems shows benignly intended agent tasks can externalize side effects through shared software infrastructure.","Beltdown shows a sandbox can be bypassed by harness-owned host execution triggered by repository state.","OpenAI Habitat explicitly centralizes access policy, audit and storage isolation at a service chokepoint.","U.S. Senate negotiations would make catastrophic-risk mitigation a developer duty rather than a voluntary model promise."],"falsifiers":["Major agent platforms continue to rely mainly on prompt/model policy rather than enforced runtime capabilities.","Independent incident rates fall without stronger execution boundaries, weakening the need for architectural controls."]}
+  ],
+  "builder_radar": [
+    {"id":"builder-hermetic-coding-agent-canary","state":"experimental","decision":"add","source":"https://accomplish.ai/blog/beltdown-escaping-the-claude-code-sandbox/"},
+    {"id":"builder-outcome-cost-benchmark","state":"trial","decision":"add","source":"https://aws.amazon.com/blogs/machine-learning/beyond-the-price-per-token-choosing-the-right-openai-model-on-amazon-bedrock-for-your-workload/"},
+    {"id":"builder-agent-dual-monitoring","state":"watch","decision":"add","source":"https://aws.amazon.com/blogs/machine-learning/monitoring-production-agent-lifecycle-with-aws-devops-agent-and-agentcore-evaluations/"}
+  ],
+  "eval_references": [],
+  "house_eval": {"executed":false,"reason":"No newly material model/runtime release could be fairly tested in a pinned local harness during this run. The AWS benchmark harness is reproducible but its published provider configurations are intentionally not intrinsic model-to-model comparisons, so it is treated as Builder Radar methodology rather than a house eval."},
+  "ranking": [
+    {"rank":1,"candidate":"openai-rubygems-incident","score":{"engineering_relevance":5,"strategic_impact":5,"novelty":5,"evidence":4,"durability":5}},
+    {"rank":2,"candidate":"us-senate-duty-of-care","score":{"engineering_relevance":4,"strategic_impact":5,"novelty":5,"evidence":3,"durability":5}},
+    {"rank":3,"candidate":"uae-ai-campus-resilience","score":{"engineering_relevance":5,"strategic_impact":5,"novelty":5,"evidence":3,"durability":5}},
+    {"rank":4,"candidate":"openai-habitat-storage","score":{"engineering_relevance":5,"strategic_impact":3,"novelty":5,"evidence":4,"durability":5}},
+    {"rank":5,"candidate":"claude-code-beltdown","score":{"engineering_relevance":5,"strategic_impact":3,"novelty":4,"evidence":4,"durability":5}}
+  ],
+  "red_team_report": {
+    "status":"passed",
+    "findings":[
+      {"severity":"material","finding":"RubyGems agent attribution could be overstated.","disposition":"Resolved by separating OpenAI's confirmation that its agents used RubyGems from RubyGems' inability to independently attribute the package publication, and by stating no successful credential theft was found."},
+      {"severity":"material","finding":"Senate proposal could be written as law rather than negotiation.","disposition":"Resolved: every mention says proposal/negotiations; no enacted-law language."},
+      {"severity":"material","finding":"UAE redesign could be written as a canceled 5 GW campus.","disposition":"Resolved: described as likely distribution/hardening under review; G42 continuity statement included."},
+      {"severity":"medium","finding":"OpenAI Rust efficiency could be mistaken for a universal language benchmark.","disposition":"Resolved: explicitly labeled internal production measurements and workload-specific."},
+      {"severity":"medium","finding":"Beltdown has no independent Anthropic advisory in the research set.","disposition":"Resolved: evidence label and prose identify Accomplish as the primary disclosure source."},
+      {"severity":"medium","finding":"AWS model benchmark is not configuration-equivalent because Bedrock models ran with reasoning disabled while API baselines used defaults.","disposition":"Resolved: no AWS benchmark ranking is promoted as intrinsic model quality; Builder Radar highlights methodology and requires rerunning on user workload."},
+      {"severity":"none","finding":"DE/EN factual equivalence check.","disposition":"Passed after shared research-set rendering."},
+      {"severity":"none","finding":"Visual provenance check.","disposition":"Passed: no third-party media used; only an original conceptual flow diagram is rendered in HTML."}
+    ]
+  },
+  "publish_decision": {"status":"publish","quality_gates_passed":true,"unresolved_material_contradictions":false,"weekly_review_required":false}
+}
