@@ -25,11 +25,11 @@ roles:
 
   business_strategy:
     purpose: "Market structure, economics, compute, geopolitics, adoption and company strategy."
-    sources: ["Reuters AI", "Financial Times AI", "SemiAnalysis", "ChinaTalk", "Understanding AI", "Import AI", "MIT Technology Review AI", "CNBC Technology", "Platformer"]
+    sources: ["Reuters AI", "Financial Times AI", "SemiAnalysis", "ChinaTalk", "Understanding AI", "Import AI", "MIT Technology Review AI", "CNBC Technology", "Platformer", "Dario Amodei"]
 
   contrarian:
     purpose: "Actively seek credible disconfirming evidence and limitations; never use to manufacture false balance."
-    sources: ["AI Snake Oil", "Marcus on AI", "One Useful Thing", "Understanding AI", "404 Media", "MIT Technology Review AI", "Ars Technica AI", "IEEE Spectrum AI", "Simon Willison", "LessWrong"]
+    sources: ["AI Snake Oil", "Marcus on AI", "One Useful Thing", "Understanding AI", "404 Media", "MIT Technology Review AI", "Ars Technica AI", "IEEE Spectrum AI", "Simon Willison", "LessWrong", "Dario Amodei"]
 
   builder_radar:
     purpose: "Find concrete tools, releases and techniques that a builder can evaluate now."
@@ -49,3 +49,4 @@ rules:
   - "Discovery and community sources cannot alone establish a material claim."
   - "Contrarian sources trigger verification, not automatic inclusion."
   - "Builder-radar candidates require a concrete experiment and success criterion."
+  - "Dario Amodei's personal blog is primary only for Amodei's own statements and proposals; external factual claims and Anthropic corporate actions require independent or corporate-primary verification."
