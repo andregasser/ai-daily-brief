@@ -174,6 +174,10 @@ catalog:
     default_tier: 3
     cadence: daily_or_when_new
     sources:
+      - name: Dario Amodei
+        url: "https://darioamodei.com/"
+        strengths: [frontier_ai, safety, governance, business_strategy]
+        note: "Primary for Amodei's own statements and proposals. Verify external factual claims and Anthropic corporate actions independently against Anthropic or other authoritative sources."
       - name: Simon Willison
         feed: "https://simonwillison.net/atom/everything/"
         url: "https://simonwillison.net/"
