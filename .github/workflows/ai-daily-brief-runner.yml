@@ -26,5 +26,13 @@ jobs:
             echo "No generated changes"
             exit 0
           fi
-          git commit -m "Publish AI Daily Brief 2026-09-20"
+          RUN_DATE=$(python3 - <<'PY'
+          from pathlib import Path
+          import re
+          text = Path('automation/run_daily.py').read_text(encoding='utf-8')
+          match = re.search(r'^DATE = "([^"]+)"', text, re.MULTILINE)
+          print(match.group(1) if match else 'daily-run')
+          PY
+          )
+          git commit -m "Publish AI Daily Brief ${RUN_DATE}"
           git push
