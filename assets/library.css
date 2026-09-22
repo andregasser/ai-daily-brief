@@ -1,0 +1,23 @@
+/* Companion pages use the same identity as the daily edition. */
+.library-page .wrap{max-width:1240px;padding:28px 24px 70px}
+.library-page .top{margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.library-page .hero{max-width:none;margin-top:35px;padding:32px 38px;background:var(--violet);color:#2c2141}
+.library-page .hero .eyebrow{color:#483366}
+.library-page .hero h1{font:800 clamp(48px,7vw,84px)/.95 var(--display);text-transform:uppercase;letter-spacing:-.025em;max-width:20ch;margin:17px 0 20px;color:inherit}
+.library-page .hero p{font:400 17px/1.7 var(--body);max-width:65ch;color:#392f4b}
+.library-page .toolbar{border-color:var(--line);margin-top:38px}
+.library-page .count{color:var(--muted)}
+.library-page .grid{border:0;background:transparent;gap:18px}
+.library-page .card{background:var(--panel);border-top:2px solid var(--violet);padding:26px;min-width:0}
+.library-page .card:hover{background:#272323}
+.library-page .card h2{font:700 32px/1.05 var(--display);letter-spacing:-.015em}
+.library-page .meta{font:11px/1.5 ui-monospace,monospace;color:var(--brand)}
+.library-page .summary{color:#c6c7bb;font:400 15px/1.7 var(--body)}
+.library-page .tag{border-color:var(--line);color:var(--muted);font-size:11px}
+.library-page .read{color:var(--green);font-size:12px;padding:7px 0}
+.library-page .footer{border-color:var(--line);color:var(--muted)}
+.library-page .empty{border:1px solid var(--line);border-radius:0;background:var(--panel);color:var(--muted)}
+.library-page.weekly-page .hero{background:var(--green);color:#252d13}
+.library-page.weekly-page .hero .eyebrow,.library-page.weekly-page .hero p{color:#34401f}
+@media(max-width:720px){.library-page .wrap{padding:22px 18px 50px}.library-page .hero{padding:26px 24px}.library-page .hero h1{font-size:54px}.library-page .top-right>.eyebrow{display:none}.library-page .top{margin-bottom:24px}.library-page .brand{font-size:24px}.library-page .grid{grid-template-columns:1fr}.library-page .card{padding:23px}.library-page .hero p{font-size:16px}}
+@media(max-width:380px){.library-page .hero h1{font-size:45px}.library-page .hero{padding:23px 20px}.library-page .top{gap:8px}.library-page .brand{font-size:22px}.library-page .top-right{gap:5px}}

@@ -72,3 +72,12 @@ The site intentionally separates presentation from generated briefing content so
 ## Visual editorial system
 
 Daily editions use a small set of information-bearing visual classes: primary-source media, data visualizations, explanatory diagrams and evidence cards. The default budget is three to five visuals per edition, including the Concept of the Day. Trend heatmaps are rendered from `data/trends.json`; Builder Radar cards are hydrated from `data/builder_radar.json`. Every original graphic carries provenance, and external media requires a visible source and reuse status. Generic AI stock imagery is not used.
+
+
+## Editorial presentation
+
+The magazine layout is implemented in `assets/editorial.css` and `assets/editorial.js`, on top of the existing briefing and visual styles. Barlow Condensed and DM Sans are served locally from `assets/fonts/`; their SIL Open Font Licenses are included there. Companion library pages share the identity through `assets/library.css`.
+
+The homepage derives its headline, introductory excerpt, signals and chapter navigation from the selected DE/EN briefing. `data/covers.json` optionally supplies art direction for a specific edition date: translated `title` arrays (three short lines), `kicker`, `deck`, `signals`, and a supported `visual` identifier. The `control-stack` graphic is specific to the Alibaba full-stack story and includes its source and roadmap caveat. Do not reuse it for unrelated stories. Missing cover metadata falls back to that edition's own headline and signal list; future publishing does not require a cover entry. The complete editorial introduction remains in the article.
+
+Preview locally with `python3 -m http.server 8766`, then open `http://localhost:8766/`. Check both languages and archived editions at desktop and 320px widths when changing the shell. Explicit `?lang=de` / `?lang=en` links take precedence over the saved language preference.

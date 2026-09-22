@@ -1,0 +1,15 @@
+{
+  "2026-09-22": {
+    "title": { "de": ["Wer", "hat die", "Kontrolle?"], "en": ["Who", "is in", "control?"] },
+    "kicker": { "de": "Das grosse Thema / Kontrolle", "en": "The big picture / Control" },
+    "deck": {
+      "de": "Modelle. Chips. Datenflüsse. Die nächste Machtfrage der AI entscheidet sich im ganzen Stack.",
+      "en": "Models. Chips. Data flows. AI's next power shift plays out across the entire stack."
+    },
+    "visual": "control-stack",
+    "signals": {
+      "de": ["↑ Agent Security", "↑ Full-Stack AI", "↗ Resource Governance"],
+      "en": ["↑ Agent Security", "↑ Full-Stack AI", "↗ Resource Governance"]
+    }
+  }
+}
