@@ -181,13 +181,49 @@ Every Concept of the Day is registered in `data/concepts.json` with stable ID, t
 The archive should increasingly behave like an AI Engineering knowledge base rather than a date-only list.
 
 ## 9. Visual editorial & media policy
-The AI Daily Brief should look like a high-quality technology publication, not a rendered chat transcript. Visuals must improve comprehension, hierarchy or identity.
+The AI Daily Brief should look like a technical intelligence report, not a rendered chat transcript or a stock-photo news site. The selection question is: **Which information can a reader understand faster visually than in two paragraphs?** A visual that cannot answer that question is omitted.
 
-Give the lead story more visual weight than secondary stories. Use key numbers only when supported by verified quantitative facts. Visuals are optional and must earn their place; zero visuals is acceptable on a quiet day.
+### Allowed visual classes
+Every visual must declare exactly one of these classes in its markup and research audit:
 
-Media preference order: suitable official media; technical original graphics with appropriate reuse; clearly reusable/licensed editorial media; a new original diagram/chart from verified facts; otherwise no image. Never scrape/hotlink arbitrary search images or use unclear copyrighted news photography. Avoid generic AI stock imagery.
+1. `primary-source-media` — an official product/API screenshot, paper figure, repository UI or other original source artifact.
+2. `data-visualization` — a chart, trend heatmap, quantitative comparison or verified data card.
+3. `explanatory-diagram` — an original architecture, lifecycle, flow or system diagram derived from verified facts.
+4. `evidence-card` — a compact `Claim → Evidence → Assessment` comparison that prevents vendor claims from being read as independent proof.
 
-Every third-party visual must include visible source/credit with organization/author and link to the original source; include license/reuse status where relevant. Publication-created charts/diagrams must be labeled as original and cite underlying data sources.
+No decorative fifth class exists. Generic AI illustrations, robot hands, glowing brains, server-room stock photos, portraits without editorial relevance and imagery sourced only because it is available are prohibited.
+
+### Edition budget and hierarchy
+Target **3–5 information-bearing visuals per daily edition**, including the Concept of the Day diagram. Fewer are acceptable on quiet days; exceed five only when every additional visual replaces substantial prose or is necessary to understand a distinct story.
+
+- Give the editorial lead one dominant visual only when it explains the lead thesis.
+- Business & Strategy usually receives at most one timeline, comparison or chart.
+- Models, Agents & Engineering may receive one or two architecture, evidence or data visuals.
+- Emerging Signals may surface the internal trend heatmap when it is informative.
+- Concept of the Day should normally include an original explanatory diagram.
+- Builder Radar may use compact cards for 1–3 items with action, effort and maturity; do not turn the section into a tool-logo gallery.
+
+### Selection and factual rules
+- Use data cards only for decision-relevant, sourced values. Labels must distinguish measured values, reported values, vendor claims and forecasts.
+- Evidence cards must separate `Vendor/Source claim`, `Independent evidence` and `Editorial assessment`; never imply that absence of independent evidence disproves a claim.
+- Timelines must use dated observations and distinguish announcement, availability, test and independent verification.
+- Trend heatmaps are generated from `data/trends.json`, show state and score, and are not popularity rankings.
+- Explanatory diagrams must not invent causal links, component boundaries or sequence. If the source is ambiguous, simplify or omit.
+- Generated illustrations may not be used as factual depictions of products, people, interfaces, facilities or research results.
+
+### Source, provenance and accessibility
+Media preference order: suitable official media; clearly reusable/licensed technical media; an original diagram/chart from verified facts; otherwise no image. Never scrape or hotlink arbitrary search images or use unclear copyrighted news photography.
+
+Every third-party visual must include a visible organization/author credit linked to the original source plus license/reuse status where relevant. Publication-created charts and diagrams must be labeled `AI Daily Brief · Original graphic` and cite the underlying source or dataset. Every image requires meaningful alt text; diagrams need an adjacent text summary or semantic labels. Visual meaning must not rely on color alone.
+
+### Rendering contract
+- Use `<figure class="editorial-visual visual-{class}">` with a `figcaption` containing the visual class, provenance and source.
+- Prefer semantic HTML/CSS/SVG generated in-repository for exact diagrams and charts; do not rasterize text-heavy graphics.
+- Components must remain readable at 320 px, with horizontal flows becoming vertical rather than overflowing.
+- If external media fails to load, the story text and caption must remain complete and the layout must not collapse.
+- DE and EN editions must contain editorially equivalent visuals, numbers, caveats and provenance.
+
+The per-edition research audit records `visual_plan`, including selected class, story, purpose, source/provenance and rejection reason for tempting but non-informative imagery.
 
 ## 10. Daily Research Audit
 For every edition store an internal structured audit at `data/research/YYYY-MM-DD.json`. At minimum retain:

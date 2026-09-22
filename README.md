@@ -68,3 +68,7 @@ For each new edition:
 9. On Sundays, additionally publish the Weekly Intelligence Review under `weekly/`.
 
 The site intentionally separates presentation from generated briefing content so the publisher can evolve the intelligence system without coupling the homepage to the research pipeline.
+
+## Visual editorial system
+
+Daily editions use a small set of information-bearing visual classes: primary-source media, data visualizations, explanatory diagrams and evidence cards. The default budget is three to five visuals per edition, including the Concept of the Day. Trend heatmaps are rendered from `data/trends.json`; Builder Radar cards are hydrated from `data/builder_radar.json`. Every original graphic carries provenance, and external media requires a visible source and reuse status. Generic AI stock imagery is not used.
