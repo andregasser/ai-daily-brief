@@ -1,0 +1,112 @@
+<section class="briefing-intro">
+  <div class="brief-label">AI Daily Brief · 23.09.2026</div>
+  <h1>AI wird zur Routing-Frage: GPT-6 Sol/Luna, Opus 5.5 und der neue Data-Layer</h1>
+  <p class="dek">Gestern lag der Fokus auf Control Planes, Egress und Infrastruktur. Seitdem haben OpenAI und Anthropic neue Modell-Tiers veröffentlicht, während Snorkel AI neues Kapital für Daten- und RL-Umgebungen einsammelt. Der Engpass verschiebt sich: Nicht nur <em>welches</em> Modell ist gut, sondern welches Modell, mit welchem Effort, auf welchem Task und gegen welche Eval darf produktiv geroutet werden?</p>
+  <p><strong>Editorial Lead — Analyse:</strong> Die Frontier wird zum Allokationsproblem. OpenAI spannt mit Astra, Sol und Luna einen Preis-/Leistungsfächer auf; Anthropic drückt Opus 5.5 gleichzeitig bei Preis und Token-Effizienz; unabhängige Evals zeigen aber, dass Harness und Effort die Rangfolge sichtbar verändern können. Parallel wird mit Snorkels Finanzierung auch die Trainings- und Evaluationsumgebung selbst zum strategischen Asset. Der neue Moat liegt damit zunehmend im Routing-, Eval- und Data-Layer zwischen Modell und realem Workload.</p>
+</section>
+
+<section class="executive">
+  <div class="section-kicker">In 60 Sekunden</div>
+  <div class="signal-grid">
+    <div><strong>OpenAI segmentiert GPT-6</strong><br>Sol kostet im Standard-Tier $2/$10 pro 1 Mio. Input-/Output-Token, Luna $0.10/$0.50. Beide haben 1.05 Mio. Kontext und sind explizit für unterschiedliche Workload-Klassen positioniert.</div>
+    <div><strong>Anthropic komprimiert Opus</strong><br>Opus 5.5 kostet $4/$20, 20% weniger pro Token als Opus 5. Anthropic meldet zusätzlich rund 40% niedrigere typische Laufkosten; das ist ein Vendor-Claim über Task-Effizienz, nicht dasselbe wie der Tokenpreis.</div>
+    <div><strong>Unabhängige Evidenz ist wichtiger</strong><br>Artificial Analysis misst Opus 5.5 mit 58 Punkten als bisher höchsten Wert im eigenen Intelligence Index. Auf Terminal-Bench 4.0 weicht der AA-Wert sichtbar von Anthropics eigener Zahl ab — ein Warnsignal gegen Benchmark-Vermischung.</div>
+    <div><strong>Data/Eval wird Geschäftsschicht</strong><br>Snorkel AI nimmt $350 Mio. bei $3.5 Mrd. Bewertung auf. Die Firma verkauft inzwischen fertige Datensätze und RL-Umgebungen; der gemeldete $375-Mio.-Run-Rate-Umsatz bleibt eine Unternehmensangabe.</div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="section-kicker">Business &amp; Strategie</div>
+  <article class="story lead-story">
+    <div class="story-meta"><span class="priority high">HIGH</span><span class="evidence multiple">CONFIRMED MULTIPLE</span></div>
+    <h2>Snorkel AI: $350 Mio. für den Data- und Environment-Layer</h2>
+    <p>Snorkel AI hat eine Series E über <strong>$350 Mio.</strong> zu einer Bewertung von <strong>$3.5 Mrd.</strong> angekündigt. Reuters und TechCrunch bestätigen Runde und Bewertung. Das strategisch Interessante ist weniger die Bewertung als der Produktwechsel: Snorkel verkauft nicht mehr primär Labeling-Software, sondern fertige Datensätze, Benchmarks und <strong>Reinforcement-Learning-Umgebungen</strong> für Frontier- und Enterprise-AI.</p>
+    <div class="concept-visual">
+      <div class="visual-label">Eigene Darstellung · Post-Training Supply Chain</div>
+      <div class="flow"><span class="node">Domain Experts</span><span class="arrow">→</span><span class="node">Tasks + Rubrics</span><span class="arrow">→</span><span class="node">RL / Eval Environment</span><span class="arrow">→</span><span class="node">Model Update</span><span class="arrow">→</span><span class="node">Held-out Eval</span></div>
+      <div class="visual-source">Quelle: Snorkel AI; Reuters; TechCrunch, 22.09.2026</div>
+    </div>
+    <p class="changed"><strong>Was hat sich seit gestern geändert?</strong> Der Data-Layer taucht nicht nur als technische Notwendigkeit, sondern als finanzierter Markt auf. Snorkel sagt, der annualisierte Revenue-Run-Rate liege bei $375 Mio. nach mehr als 18-fachem Wachstum seit dem Start des Data-as-a-Service-Angebots. Diese Umsatzangabe ist nicht unabhängig auditiert und wird deshalb nicht als bestätigter Finanzwert behandelt.</p>
+    <p class="why"><strong>Warum relevant?</strong> Wenn Frontier-Modelle dichter zusammenrücken, werden hochwertige Aufgaben, Verifier, RL-Umgebungen und realistische Evals zu einem Engpass. Das ist dieselbe Verschiebung, die Builder intern sehen: Der Modellname allein entscheidet immer seltener über Produktqualität.</p>
+    <p class="signal-hype"><strong>Signal vs. Hype:</strong> <strong>Signal:</strong> Kapital fliesst in reproduzierbare Trainings- und Evaluationsumgebungen. <strong>Hype-Risiko:</strong> Run-Rate-Umsatz ist kein GAAP-Umsatz, und die Qualität von RL-Umgebungen lässt sich nicht aus Finanzierung oder Umsatz ableiten.</p>
+    <div class="sources"><strong>Originalquellen:</strong> <a href="https://snorkel.ai/blog/data-2-0-and-the-research-era-of-ai-data/">Snorkel AI</a> · <a href="https://www.reuters.com/legal/transactional/snorkel-ai-valued-35-billion-amid-surging-demand-complex-ai-training-data-2026-09-22/">Reuters</a> · <a href="https://techcrunch.com/2026/09/22/snorkel-ai-triples-valuation-to-3-5b-as-demand-for-ai-training-data-booms/">TechCrunch</a></div>
+  </article>
+</section>
+
+<section class="chapter">
+  <div class="section-kicker">Modelle, Agents &amp; Engineering</div>
+  <article class="story">
+    <div class="story-meta"><span class="priority critical">CRITICAL</span><span class="evidence primary">CONFIRMED PRIMARY</span></div>
+    <h2>OpenAI macht das Modell-Portfolio selbst zur Architektur: Astra → Sol → Luna</h2>
+    <p>OpenAI hat <strong>GPT-6 Sol</strong> und <strong>GPT-6 Luna</strong> in Responses API und Chat Completions veröffentlicht. Für Standard-Verarbeitung bis 272k Input-Token nennt OpenAI <strong>$2/$10</strong> pro 1 Mio. Input-/Output-Token für Sol und <strong>$0.10/$0.50</strong> für Luna. Beide Modelle haben 1.05 Mio. Kontext und 128k maximale Ausgabe; Sol ist für komplexe Coding-/Agent-Workflows positioniert, Luna für fokussierte High-Volume-Tasks.</p>
+    <div class="concept-visual">
+      <div class="visual-label">Eigene Darstellung · OpenAI Standard-Tier, kurze Kontexte</div>
+      <div class="signal-grid">
+        <div><strong>Astra</strong><br>$10 in / $50 out<br>härteste End-to-End-Tasks</div>
+        <div><strong>Sol</strong><br>$2 in / $10 out<br>Coding &amp; Agents</div>
+        <div><strong>Luna</strong><br>$0.10 in / $0.50 out<br>High-volume</div>
+      </div>
+      <div class="visual-source">Preise pro 1 Mio. Token; Long-Context/Processing-Tiers können abweichen. Quelle: OpenAI API, 22.09.2026.</div>
+    </div>
+    <p class="why"><strong>Engineering Takeaway:</strong> Ein statischer „Default Model“-Schalter wird teurer als ein Routing-Gate. Für wiederkehrende Tasks sollte die Anwendung Taskklasse, Erfolgskriterium, Effort, Latenz und Cost-per-Pass messen und nur dann auf einen günstigeren Tier routen, wenn der Qualitäts-Gate hält.</p>
+    <p class="signal-hype"><strong>Signal vs. Hype:</strong> Die Preisabstände sind real und primär dokumentiert. Sie beweisen aber <em>nicht</em>, dass Luna 20× oder Sol 5× günstiger pro erledigtem Task ist; Tool-Trajektorien, Reasoning-Tokens, Retries und Review können die Rechnung drehen.</p>
+    <div class="sources"><strong>Originalquellen:</strong> <a href="https://developers.openai.com/api/docs/changelog">OpenAI API Changelog</a> · <a href="https://developers.openai.com/api/docs/models/gpt-6-sol">GPT-6 Sol</a> · <a href="https://developers.openai.com/api/docs/models/gpt-6-luna">GPT-6 Luna</a></div>
+  </article>
+
+  <article class="story">
+    <div class="story-meta"><span class="priority critical">CRITICAL</span><span class="evidence multiple">PRIMARY + INDEPENDENT</span></div>
+    <h2>Claude Opus 5.5: weniger Tokenkosten, mehr Effizienz — aber Benchmarks bleiben Harness-abhängig</h2>
+    <p>Anthropic hat <strong>Claude Opus 5.5</strong> veröffentlicht. Der API-Preis sinkt gegenüber Opus 5 von $5/$25 auf <strong>$4/$20</strong> pro 1 Mio. Input-/Output-Token; Cache Reads fallen von $0.50 auf $0.20. Anthropic sagt, typische Workloads seien durch geringeren Compute- und Tokenbedarf rund <strong>40% günstiger</strong> als mit Opus 5. Diese 40% sind ein Vendor-Claim über typische Taskkosten, nicht eine 40%-Senkung des Listenpreises.</p>
+    <p>Unabhängig davon misst Artificial Analysis Opus 5.5 mit <strong>58</strong> Punkten als aktuell höchsten Wert im eigenen Intelligence Index. Besonders nützlich ist die Abweichung bei Terminal-Bench 4.0: Anthropic berichtet 66.4% in seinem Setup, Artificial Analysis 59.6% in seinem. Beide können korrekt sein, weil Harness, Effort und Ausführungsbedingungen nicht identisch sind.</p>
+    <div class="concept-visual">
+      <div class="visual-label">Eigene Darstellung · Evidence Ladder</div>
+      <div class="flow"><span class="node">Listenpreis<br>$4 / $20</span><span class="arrow">→</span><span class="node">Vendor Task-Cost<br>≈ −40%</span><span class="arrow">→</span><span class="node">Independent Eval<br>AA Index 58</span><span class="arrow">→</span><span class="node">Eigene Tasks<br>noch offen</span></div>
+      <div class="visual-source">Quelle: Anthropic + Artificial Analysis, 22.09.2026. Unterschiedliche Harnesses nicht direkt vergleichen.</div>
+    </div>
+    <p class="why"><strong>Warum relevant?</strong> Das Entscheidungsproblem für Engineers ist nicht „wer gewinnt den Benchmark?“, sondern ob ein Modell auf <em>dem eigenen</em> Harness einen besseren Pareto-Punkt aus Task Success, Latenz und Kosten liefert.</p>
+    <p class="engineering"><strong>Engineering Takeaway:</strong> Nutze vorhandene Outcome-Cost-Evals weiter, pinne Modell-ID, Effort und Harness, und führe neue Modelle zunächst im Shadow Mode gegen dieselben Fixtures. Ein Provider-Score und ein unabhängiger Score mit gleichem Benchmarknamen sind keine austauschbaren Messpunkte.</p>
+    <div class="sources"><strong>Originalquellen:</strong> <a href="https://www.anthropic.com/claude-opus-5-5">Anthropic</a> · <a href="https://artificialanalysis.ai/articles/claude-opus-5-5/">Artificial Analysis</a> · <a href="https://www.reuters.com/business/anthropic-unveils-claude-opus-55-2026-09-22/">Reuters</a></div>
+  </article>
+</section>
+
+<section class="signal-box emerging-callout">
+  <div class="section-kicker">Emerging Signal</div>
+  <h2>Modelle werden Tiers — Routing wird Produktlogik</h2>
+  <p><strong>Confidence: Medium.</strong> Drei unabhängige Entwicklungen zeigen dieselbe Richtung: OpenAI staffelt GPT-6 explizit nach Workload-Klasse, Anthropic drückt Frontier-Qualität in einen günstigeren Opus-Tier, und Snorkel finanziert den Data-/Eval-Layer, der solche Routing-Entscheide überhaupt belastbar macht.</p>
+  <p><strong>Falsifizierbar:</strong> Das Signal schwächt sich, wenn reale Task-Evals zeigen, dass günstigere Tiers kaum Workloads übernehmen können oder Routing-Komplexität/Reviewkosten die Tokenersparnis auffressen.</p>
+</section>
+
+<section class="chapter">
+  <div class="section-kicker">Builder Radar</div>
+  <article class="story">
+    <div class="story-meta"><span class="priority medium">REVIEW</span><span class="evidence reported">LIFECYCLE</span></div>
+    <h2>Heute nichts Neues stapeln — den bestehenden Cost-per-Outcome-Harness benutzen</h2>
+    <p>Die heutigen Releases rechtfertigen keinen neuen Benchmark-Spielplatz. Der bestehende Builder-Radar-Item <strong>Cost-per-successful-outcome model benchmark harness</strong> bleibt <strong>Trial</strong> und ist jetzt der passende Test für GPT-6 Sol/Luna und Opus 5.5: gleiche Fixtures, gleiche Erfolgsschwelle, gepinnter Effort, Turns, Latenz, Tokens, Review/Rework und Kosten pro bestandener Aufgabe.</p>
+    <p>Zwei fällige Lifecycle-Reviews wurden ebenfalls geprüft: SageMaker Instance Preference Lists bleiben nach sieben Tagen <strong>Trial</strong>, weil weiterhin keine unabhängige Produktionsmessung die Kapazitäts-/Kostenwirkung belegt; der Qwen3.8-Omni-Budget-Harness bleibt nach drei Tagen <strong>Trial</strong>, weil neue Artikel überwiegend Qwens eigene Benchmarks und Preisangaben wiederholen statt ein unabhängiges End-to-End-Eval zu liefern.</p>
+  </article>
+</section>
+
+<section class="concept">
+  <div class="section-kicker">🔬 Konzept des Tages</div>
+  <h2 class="concept-heading">Model Portfolio Routing: Shadow Evals vor dem Switch</h2>
+  <p>Ein <strong>Model Portfolio Router</strong> wählt nicht einfach das billigste Modell. Er behandelt jedes Modell-/Effort-Paar als Kandidat auf einer Pareto-Fläche aus <strong>Task Success, Latenz und Kosten</strong>. Ein neuer Tier darf produktiven Traffic erst übernehmen, wenn er auf denselben, versionsgepinnten Fixtures eine definierte Qualitätsgrenze hält.</p>
+  <div class="concept-visual">
+    <div class="visual-label">Eigene Darstellung · Routing Gate</div>
+    <div class="flow"><span class="node">Task Class</span><span class="arrow">→</span><span class="node">Shadow Candidates<br>Astra / Sol / Luna / Opus</span><span class="arrow">→</span><span class="node">Pinned Eval<br>Success + Latency + Cost</span><span class="arrow">→</span><span class="node">Gate</span><span class="arrow">→</span><span class="node">Production Route</span></div>
+    <div class="visual-source">Eigene Darstellung nach OpenAI, Anthropic und Artificial Analysis.</div>
+  </div>
+  <p><strong>Warum Shadow Mode?</strong> Provider-Benchmarks messen Modell + Harness + Effort + Tooling. Shadow Evals halten dagegen den eigenen Workload konstant. Erst damit sieht man, ob der Preisvorteil tatsächlich in niedrigere Kosten pro erfolgreichem Task übersetzt wird.</p>
+  <p><strong>Minimaler Gate-Vertrag:</strong> (1) identische Fixtures und Tool-Schemas, (2) immutable Model-ID/Resolved-Version soweit verfügbar, (3) gepinnter Reasoning-Effort, (4) Task-Success vor Kosten, (5) p50/p95-Latenz, Retries und menschliches Rework mitmessen, (6) Regression-Budget definieren. Ein 50× günstigerer Inputpreis ist wertlos, wenn Erfolgsrate oder Reviewlast kippen.</p>
+  <p><strong>Verwandte Konzepte:</strong> <em>Test-Time Compute / Reasoning Effort</em>, <em>Private Held-out Evals</em> und <em>Model Alias Drift</em>.</p>
+</section>
+
+<section class="next">
+  <div class="section-kicker">Was als Nächstes wichtig wird</div>
+  <ol>
+    <li><strong>Sol/Luna vs. Opus 5.5:</strong> Auf unabhängige, konfigurationsäquivalente Agent-/Coding-Evals warten; keine Provider-Tabellen gegeneinander subtrahieren.</li>
+    <li><strong>DeepSeek V4.1-Flash:</strong> Morgen ist der nächste Review-Punkt für die offene Evidenzfrage — gesucht bleibt stabile Primärdokumentation plus vergleichbares End-to-End-Eval.</li>
+    <li><strong>Agent Egress:</strong> Der am 22.09. angelegte Default-Deny-Canary hat am 25.09. seinen Drei-Tage-Review.</li>
+    <li><strong>AgentCore V2:</strong> Am 26.09. wird erneut geprüft, ob unabhängige Real-Workload-Messungen die AWS-Cold-Start-Claims stützen.</li>
+    <li><strong>Snorkel/Data 2.0:</strong> Entscheidend wird, ob Kunden oder unabhängige Evals zeigen, dass gekaufte RL-/Eval-Umgebungen reproduzierbar bessere Modell- oder Agent-Outcomes erzeugen — nicht nur höhere Data-Budgets.</li>
+  </ol>
+</section>
