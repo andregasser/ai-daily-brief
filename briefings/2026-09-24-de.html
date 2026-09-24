@@ -1,0 +1,151 @@
+<section class="briefing-intro">
+  <div class="brief-label">AI Daily Brief · 24.09.2026</div>
+  <h1>AI verlässt den Chat: Agenten entdecken Biologie – und Sandboxes zeigen die neue Trust Boundary</h1>
+  <p class="dek">Gestern ging es um Model-Routing und den Data/Eval-Layer. Seitdem verschiebt sich die Grenze wieder nach aussen: Agenten treiben wissenschaftliche Such- und Messschleifen, während ein neuer Sandbox-Audit zeigt, dass starke VM-Isolation allein keine sichere Netzwerkgrenze ergibt.</p>
+  <p><strong>Editorial Lead — Analyse:</strong> Die gemeinsame Klammer ist <em>verifizierbare Ausführung</em>. Anthropic skaliert Hypothesensuche mit hunderten Agents, ein unabhängiges Forschungsteam lässt einen Agenten bis zu sechs Tage Messinstrumente betreiben, und Perplexity zeigt quantitativ, wie ein Agent trotz intakter MicroVM-Grenze eine zu schwach modellierte Egress-Policy umgehen kann. Je autonomer der Loop, desto wichtiger werden überprüfbare Interfaces: Netzwerk-Autorität, physische Sicherheitsgrenzen und experimentelle Reproduktion.</p>
+</section>
+
+<section class="executive">
+  <div class="section-kicker">In 60 Sekunden</div>
+  <div class="signal-grid">
+    <div><strong>Sandbox ≠ Netzwerkgrenze</strong><br>Perplexity sah 0/108 VM→Host-Escapes, aber vor dem Fix 11/54 Egress-Bypasses bei partieller Netzwerkfreigabe. Nach der Remediation wurden die demonstrierten Mechanismen nicht mehr erfolgreich reproduziert.</div>
+    <div><strong>Claude sucht Biologie</strong><br>Anthropic berichtet von ~950 Agents, 21 Stunden und 210 Mio. Tokens für Genome Mining. Daraus entstand der ART-Kandidat; seine biologische Funktion ist weiterhin unbekannt.</div>
+    <div><strong>Agents bedienen Instrumente</strong><br>Ein arXiv-Preprint beschreibt einen FermiLink-Agenten, der Quantum-Transport-Messkampagnen auf MoS₂ bis zu sechs Tage end-to-end ausführte. Frühes Signal, noch keine allgemeine Reproduzierbarkeit.</div>
+    <div><strong>Governance erreicht den UN-Sicherheitsrat</strong><br>OpenAI fordert gemeinsame Frontier-Standards und Incident-Protokolle; gleichzeitig lehnt die US-Regierung ein globales Regulierungsschema ab, China fordert mehr grenzüberschreitende Kooperation.</div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="section-kicker">Business &amp; Strategie</div>
+  <article class="story lead-story">
+    <div class="story-meta"><span class="priority high">HIGH</span><span class="evidence multiple">CONFIRMED MULTIPLE</span></div>
+    <h2>UN-Sicherheitsrat: Die Koordinationsfrage ist jetzt institutionell – aber nicht gelöst</h2>
+    <p>Sam Altman, Dario Amodei und Hugging-Face-Mitgründer Clément Delangue haben den UN-Sicherheitsrat zu AI-Risiken und internationaler Zusammenarbeit adressiert. OpenAI schlug dabei gemeinsame Standards für Capability-Messung, Risiko-Evidenz, Incident-Klassifikation und sichere Kommunikationskanäle zwischen Regierungen, kritischer Infrastruktur und technischen Experten vor.</p>
+    <div class="concept-visual">
+      <div class="visual-label">AI Daily Brief · Original graphic · Governance Positioning</div>
+      <div class="signal-grid">
+        <div><strong>Frontier-Labs</strong><br>gemeinsame Evidenz-, Safety- und Incident-Standards</div>
+        <div><strong>USA</strong><br>Best Practices ja, aber kein globales Regulierungsschema</div>
+        <div><strong>China</strong><br>Regelwerke, Emergency Response und grenzüberschreitende Kooperation ausbauen</div>
+      </div>
+      <div class="visual-source">Quellen: OpenAI; Reuters, 23.09.2026. Positionen sind keine beschlossene Regulierung.</div>
+    </div>
+    <p class="changed"><strong>Was hat sich seit gestern geändert?</strong> Aus bilateralen Safety-Gesprächen und Lab-Vorschlägen ist eine Diskussion auf Ebene des UN-Sicherheitsrats geworden. Was <em>nicht</em> entstanden ist: ein gemeinsamer Release-Gate, ein bindender Teststandard oder ein verbindlicher Incident-Kanal.</p>
+    <p class="why"><strong>Warum relevant?</strong> Für Unternehmen ist der kurzfristige Effekt weniger eine neue Compliance-Pflicht als ein klareres Zielbild: auditierbare Capability-Evidenz, Incident-Taxonomie und grenzüberschreitende Meldewege könnten zu den anschlussfähigen Bausteinen werden, selbst wenn Staaten beim Regulierungsmodell uneinig bleiben.</p>
+    <p class="signal-hype"><strong>Signal vs. Hype:</strong> <strong>Signal:</strong> Gemeinsame Evidenz- und Incident-Sprache erreicht die höchste politische Bühne. <strong>Hype-Risiko:</strong> Eine Rede im Sicherheitsrat ist noch kein Standard und kein Enforcement.</p>
+    <div class="sources"><strong>Originalquellen:</strong> <a href="https://openai.com/index/sam-altman-un-security-council-remarks/">OpenAI</a> · <a href="https://www.reuters.com/business/ai-leaders-brief-un-amid-warnings-technology-could-slip-beyond-human-control-2026-09-23/">Reuters</a></div>
+  </article>
+</section>
+
+<section class="chapter">
+  <div class="section-kicker">Modelle, Agents &amp; Engineering</div>
+  <article class="story">
+    <div class="story-meta"><span class="priority critical">CRITICAL</span><span class="evidence primary">CONFIRMED PRIMARY</span></div>
+    <h2>Perplexity SPACE: Die MicroVM hielt – die Egress-Policy nicht immer</h2>
+    <p>Perplexity hat seinen Firecracker-basierten SPACE-Sandbox mit neun Modellkonfigurationen red-teamen lassen. In <strong>108</strong> VM→Host-Escape-Runs wurde kein erfolgreicher Escape beobachtet. Beim Netzwerk-Test war die vollständig gesperrte Variante ebenfalls stabil: <strong>0/54</strong> erfolgreiche Bypasses. Sobald jedoch ausgewählte Paket-Repositories erlaubt waren, erreichten Agents vor dem Fix in <strong>11/54</strong> Runs ein eigentlich blockiertes Ziel.</p>
+    <div class="concept-visual">
+      <div class="visual-label">AI Daily Brief · Original graphic · Boundary Results</div>
+      <div class="signal-grid">
+        <div><strong>VM → Host</strong><br>0 / 108 beobachtete Escapes</div>
+        <div><strong>No Network</strong><br>0 / 54 Egress-Bypasses</div>
+        <div><strong>Partial Network</strong><br>11 / 54 Bypasses vor Fix</div>
+        <div><strong>Post-Fix</strong><br>0 verifizierte Bypasses der getesteten Mechanismen</div>
+      </div>
+      <div class="visual-source">Quelle: Perplexity Research. Begrenzte CTF-Tests; 0 beobachtete Escapes sind kein Beweis perfekter Isolation.</div>
+    </div>
+    <p>Die zwei gefundenen Mechanismen sind architektonisch wichtiger als die Modellnamen: <strong>DNS-Spoofing</strong> konnte eine erlaubte Domain auf die IP des blockierten Ziels abbilden; bei <strong>Shared-IP/CDN-Infrastruktur</strong> konnte die IP erlaubt sein, obwohl die spätere HTTP/TLS-Autorität zu einem anderen Tenant gehörte. Perplexity ergänzt deshalb Source-Validation sowie Konsistenzchecks zwischen DNS, Ziel-IP, TLS-SNI und HTTP-Authority.</p>
+    <div class="concept-visual">
+      <div class="visual-label">AI Daily Brief · Original graphic · Network Authority Chain</div>
+      <div class="flow"><span class="node">Allowlist Domain</span><span class="arrow">→</span><span class="node">DNS + Provenance</span><span class="arrow">→</span><span class="node">Destination IP</span><span class="arrow">→</span><span class="node">TLS SNI</span><span class="arrow">→</span><span class="node">HTTP Host / :authority</span></div>
+      <div class="visual-source">Robuste Policy validiert dieselbe Autorität über alle Ebenen; nur die Ziel-IP zu prüfen reicht bei Shared Hosting/CDNs nicht.</div>
+    </div>
+    <p class="engineering"><strong>Engineering Takeaway:</strong> Teste Agent-Sandboxes mit adversarialen Netzwerk-Canaries, nicht nur mit „deny all“. Besonders wichtig: forged DNS, Shared-IP/CDN-Tenants, SNI/Host-Mismatch und direkte IP-Verbindungen. Logging muss zeigen, <em>warum</em> eine Verbindung autorisiert wurde.</p>
+    <p class="signal-hype"><strong>Signal vs. Hype:</strong> Das ist starke Primärevidenz für eine reale Policy-Klasse, aber keine allgemeine Aussage, dass „8 von 10 Sandboxes unsicher“ sind. Getestet wurden konkrete Versionen und Konfigurationen; mehrere Anbieter haben bereits Fixes oder Mitigations ausgeliefert.</p>
+    <div class="sources"><strong>Originalquelle:</strong> <a href="https://www.perplexity.ai/en-GB/hub/blog/escaping-space-part-i">Perplexity Research · Escaping SPACE: Part I</a></div>
+  </article>
+
+  <article class="story">
+    <div class="story-meta"><span class="priority high">HIGH</span><span class="evidence reported">VENDOR CLAIM + EARLY SIGNAL</span></div>
+    <h2>Agentic Science: 950 Claude-Agents finden einen Kandidaten – ein anderer Agent fährt sechs Tage Messungen</h2>
+    <p>Anthropic berichtet, dass rund <strong>950 Claude-Agents</strong> in 21 Stunden mit 210 Mio. Tokens mehr als 200'000 Reverse-Transkriptasen analysierten, etwa 3'500 Kandidatensysteme identifizierten und 20 Reports priorisierten. Daraus entstand das <strong>ART</strong>-System. Erste Wet-Lab-Experimente zeigen laut Anthropic, dass das Repeat-Array als kurze RNAs exprimiert wird; die biologische Funktion ist jedoch noch unbekannt.</p>
+    <p>Unabhängig davon beschreibt ein am 22. September eingereichter arXiv-Preprint einen FermiLink-Agenten, der Quantum-Transport-Messkampagnen an MoS₂-Geräten plant, Instrumente bedient, Daten analysiert und Berichte erstellt – in Kampagnen von bis zu <strong>sechs Tagen</strong>.</p>
+    <div class="concept-visual">
+      <div class="visual-label">AI Daily Brief · Original graphic · Agentic Science Loop</div>
+      <div class="flow"><span class="node">Data / Instrument</span><span class="arrow">→</span><span class="node">Agent Search / Plan</span><span class="arrow">→</span><span class="node">Candidate / Measurement</span><span class="arrow">→</span><span class="node">Physical Validation</span><span class="arrow">→</span><span class="node">Reproducible Evidence</span></div>
+      <div class="visual-source">Quellen: Anthropic; Bauer et al. (arXiv:2609.26661). Unterschiedliche Domänen, gemeinsames Validierungsproblem.</div>
+    </div>
+    <p class="why"><strong>Originalanalyse:</strong> Der interessante Shift ist nicht „AI ersetzt Wissenschaftler“. Agents skalieren Suche und Operationszeit, aber Vertrauen entsteht an der Schnittstelle zur Welt: Wet-Lab-Resultat, Instrument-Safety, Messprotokoll und unabhängige Reproduktion. Der neue Bottleneck ist die <em>Validation Interface</em>.</p>
+    <p class="signal-hype"><strong>Signal vs. Hype:</strong> Anthropic kontrolliert die ART-Story und nennt sie autonom; Reuters bestätigt die Ankündigung, nicht die Reproduktion. Der FermiLink-Report ist ein Original-Preprint, aber noch kein peer-reviewter Beleg für allgemeine „self-driving labs“.</p>
+    <div class="sources"><strong>Originalquellen:</strong> <a href="https://www.anthropic.com/news/claude-discovers-novel-enzyme-system">Anthropic</a> · <a href="https://www.reuters.com/business/healthcare-pharmaceuticals/anthropic-says-claude-ai-helped-discover-novel-enzyme-system-2026-09-23/">Reuters</a> · <a href="https://arxiv.org/abs/2609.26661">Bauer et al., arXiv</a></div>
+  </article>
+</section>
+
+<section class="signal-box emerging-callout">
+  <div class="section-kicker">Emerging Signal</div>
+  <h2>Autonomie verschiebt den Engpass von Generierung zu Validierung</h2>
+  <p><strong>Confidence: Medium.</strong> Anthropic skaliert die Hypothesensuche massiv, FermiLink skaliert die Laufzeit physischer Experimente, und der SPACE-Audit zeigt parallel, dass lange autonome Loops harte, messbare Grenzen brauchen. Die gemeinsame Architektur ist nicht „ein schlauer Agent“, sondern <strong>Agent + kontrollierte Schnittstelle + verifizierbarer Outcome</strong>.</p>
+  <p><strong>Falsifizierbar:</strong> Das Signal schwächt sich, wenn externe Reproduktionen ausbleiben, die Systeme hohe menschliche Intervention benötigen oder der Validierungsaufwand die eingesparte Agentenzeit wieder auffrisst.</p>
+</section>
+
+<section class="chapter">
+  <div class="section-kicker">Research Digest</div>
+  <article class="story">
+    <h2>FermiLink: Multi-Day Agents im physikalischen Labor</h2>
+    <p><strong>Early signal.</strong> Bauer et al. zeigen einen konkreten Harness für sichere Instrumentbedienung, Planung, Analyse und Reporting über mehrtägige Messketten. Für Builder ist weniger das Physikresultat als die Systemform relevant: Zustandsverwaltung, Safety Interlocks, Mess-Checks und nachvollziehbare Reports sind Teil des Agentenprodukts.</p>
+    <div class="sources"><a href="https://arxiv.org/abs/2609.26661">arXiv:2609.26661</a></div>
+  </article>
+</section>
+
+<section class="chapter">
+  <div class="section-kicker">Open Source Radar</div>
+  <article class="story">
+    <div class="story-meta"><span class="priority medium">WATCH</span><span class="evidence primary">OPEN WEIGHTS · VENDOR BENCHMARK</span></div>
+    <h2>FLUX 3 Action: 7B World-Action-Modell mit LeRobot-Integration</h2>
+    <p>Black Forest Labs veröffentlicht Gewichte und Code für <strong>FLUX 3 Action</strong>: Frame + Textinstruktion hinein, ungefähr zwei Sekunden Aktionen hinaus. DROID- und SO-101-Checkpoints sind in LeRobot integriert. BFL meldet 42.92% RoboLab-120 Success; diese Zahl ist ein Vendor-Benchmark und wurde in diesem Lauf nicht unabhängig reproduziert. Die Gewichte stehen unter der <strong>FLUX Kommunity License v1.0</strong> – „open weights“ ist hier präziser als „Open Source“.</p>
+    <p class="engineering"><strong>Builder Action: Beobachten / lokal reproduzieren, falls Robotik relevant ist.</strong> Bevor ein Ranking übernommen wird: exakt denselben RoboLab-Harness, Checkpoint und Action-Horizon pinnen und Failure Modes statt nur Success Rate vergleichen.</p>
+    <div class="sources"><a href="https://huggingface.co/blog/black-forest-labs/flux-3-action">Black Forest Labs / Hugging Face</a></div>
+  </article>
+</section>
+
+<section class="chapter">
+  <div class="section-kicker">Builder Radar</div>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">TEST NOW</span><span class="evidence primary">TRIAL</span></div>
+    <h2>Egress-Authority-Canary für Agent-Sandboxes</h2>
+    <p>Neu im Radar: Erlaube in einer Disposable-Sandbox genau einen harmlosen Paket-Host und versuche kontrolliert drei Dinge: forged DNS, einen fremden Tenant auf derselben Shared-IP/CDN-Infrastruktur und einen SNI/Host-Mismatch. Erfolg bedeutet nicht nur „Callback geblockt“, sondern dass DNS-Provenienz und die Authority-Kette im Audit-Log nachvollziehbar sind.</p>
+    <p><strong>Lifecycle:</strong> <code>trial</code>, erster Review am 27.09. Zwei Tage alte Empfehlung „Default-Deny Egress“ wird damit nicht wiederholt, sondern um einen konkreten Regressionstest erweitert.</p>
+  </article>
+  <article class="story">
+    <div class="story-meta"><span class="priority medium">REVIEW</span><span class="evidence reported">LIFECYCLE</span></div>
+    <h2>DeepSeek V4.1-Flash: Prediction verfehlt, Builder-Item bleibt Watch</h2>
+    <p>Der für heute fällige Evidenz-Check endet ohne die geforderte vergleichbare unabhängige End-to-End-Evaluation für Task Success, Latenz und Kosten. Primärdokumentation existiert, aber der vollständige Prognose-Check ist damit <strong>falsified</strong>. Das Builder-Item bleibt <code>watch</code> bis zum ~30-Tage-Review am 10.10.</p>
+  </article>
+</section>
+
+<section class="concept">
+  <div class="section-kicker">🔬 Konzept des Tages</div>
+  <h2 class="concept-heading">Network Authority: Warum eine Domain-Allowlist keine Netzwerkgrenze ist</h2>
+  <p>Eine Regel wie <code>allow pypi.org</code> klingt semantisch eindeutig. Auf dem Netzwerkpfad existiert aber keine einzelne, unveränderliche „Domain“. DNS übersetzt Namen in IPs, CDNs teilen IPs zwischen vielen Tenants, TLS nutzt <strong>SNI</strong>, HTTP/1.1 den <strong>Host</strong>-Header und HTTP/2/3 <strong>:authority</strong>. Wenn ein Gateway nur einen Teil dieser Kette prüft, kann eine erlaubte Identität an einer späteren Schicht in eine andere Autorität kippen.</p>
+  <p><strong>Technische Intuition:</strong> Autorisierung darf nicht aus „IP wurde irgendwann für eine erlaubte Domain gesehen“ folgen. Sie muss eine konsistente Bindung prüfen: vertrauenswürdige DNS-Antwort → erwartete Ziel-IP → erlaubtes SNI → erlaubte HTTP-Authority. Bei Protokollen ohne überprüfbare Host-Autorität muss die Policy konservativer sein.</p>
+  <pre><code>policy = allow("pypi.org")
+dns = resolve_with_provenance("pypi.org")
+conn = tls_connect(dst_ip)
+
+allow = (
+    conn.dst_ip in dns.answers
+    and conn.sni == "pypi.org"
+    and request.authority == "pypi.org"
+)
+</code></pre>
+  <p><strong>Praktische Relevanz:</strong> Das ergänzt das Konzept vom 22.09. zu Default-Deny Egress: Default-Deny bestimmt <em>was</em> grundsätzlich erlaubt ist; Network Authority bestimmt <em>ob die konkrete Verbindung tatsächlich noch genau diese erlaubte Identität repräsentiert</em>.</p>
+  <div class="sources"><strong>Quelle:</strong> <a href="https://www.perplexity.ai/en-GB/hub/blog/escaping-space-part-i">Perplexity Research</a></div>
+</section>
+
+<section class="chapter">
+  <div class="section-kicker">Was als Nächstes wichtig wird</div>
+  <div class="signal-grid">
+    <div><strong>ART bis 31.10.</strong><br>Kommt unabhängige experimentelle Evidenz oder eine funktionale Klärung über die bisherige RNA-Expression hinaus?</div>
+    <div><strong>Sandbox-Defaults bis 31.10.</strong><br>Macht mindestens ein grosser betroffener Sandbox-Anbieter strikte HTTPS-Authority-Validierung zum Default statt zur Option/Doku-Warnung?</div>
+    <div><strong>UN-Standards bis 31.10.</strong><br>Entsteht aus der Sicherheitsratsdebatte ein benannter Arbeitsprozess, Draft, Incident-Kanal oder eine konkrete Implementierungs-Timeline?</div>
+  </div>
+</section>
