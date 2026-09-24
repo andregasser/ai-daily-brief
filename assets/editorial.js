@@ -8,6 +8,56 @@ function editorialNode(tag, className, text) {
   return node;
 }
 
+// Daily fragments use both standalone chapter headings and chapter containers.
+// Normalize their roles before styling or building the cover/navigation. Never
+// replace a container's textContent: that would destroy its articles and links.
+function normalizeEditorialMarkup(article) {
+  const retag = (node, tag) => {
+    const replacement = document.createElement(tag);
+    for (const attr of node.attributes) replacement.setAttribute(attr.name, attr.value);
+    replacement.append(...node.childNodes);
+    node.replaceWith(replacement);
+    return replacement;
+  };
+  article.querySelectorAll('.chapter:not(h2):not(h3)').forEach(section => {
+    section.classList.replace('chapter', 'brief-chapter');
+    const label = section.querySelector(':scope > .section-kicker, :scope > h2, :scope > h3');
+    if (!label) return;
+    const heading = label.tagName === 'H2' ? label : retag(label, 'h2');
+    heading.classList.remove('section-kicker');
+    heading.classList.add('chapter');
+  });
+  article.querySelectorAll('.briefing-intro > h1').forEach(h => retag(h, 'h2'));
+  article.querySelectorAll('.story > h2').forEach(h => retag(h, 'h3'));
+  article.querySelectorAll('.signal-grid > div').forEach(card => {
+    if (card.querySelector(':scope > .signal-title')) return;
+    const label = card.querySelector(':scope > strong');
+    const legacyTitle = card.querySelector(':scope > span');
+    const title = legacyTitle || label;
+    if (!title) return;
+    if (legacyTitle && label) label.classList.add('signal-label');
+    const heading = retag(title, 'h3');
+    heading.classList.add('signal-title');
+    // Older editions already have paragraphs; newer ones use strong + br + text.
+    if (!legacyTitle && !card.querySelector(':scope > p')) {
+      const body = editorialNode('p');
+      while (heading.nextSibling) body.append(heading.nextSibling);
+      while (body.firstChild && (body.firstChild.nodeName === 'BR' ||
+        (body.firstChild.nodeType === Node.TEXT_NODE && !body.firstChild.textContent.trim()))) {
+        body.firstChild.remove();
+      }
+      if (body.hasChildNodes()) card.append(body);
+    }
+  });
+}
+
+function cleanEditorialLabel(label) {
+  const walker = document.createTreeWalker(label, NodeFilter.SHOW_TEXT);
+  while (walker.nextNode()) {
+    walker.currentNode.textContent = walker.currentNode.textContent.replace(/[\p{Extended_Pictographic}\uFE0F]/gu, '');
+  }
+}
+
 function controlStackVisual(language) {
   const de = language === 'de';
   const figure = editorialNode('figure', 'cover-diagram editorial-visual visual-explanatory-diagram');
@@ -56,28 +106,26 @@ function renderEditionCover(article, meta, language, covers) {
     (signals.length ? signals : stories).forEach((item, index) => {
       const row = editorialNode('div', 'cover-story-row');
       row.append(editorialNode('span', 'cover-story-number', String(index + 1).padStart(2, '0')));
-      row.append(editorialNode('strong', '', item.querySelector('span')?.textContent || item.textContent));
+      row.append(editorialNode('strong', '', item.querySelector('.signal-title')?.textContent || item.textContent));
       list.append(row);
     });
     if (!signals.length && !stories.length) list.append(editorialNode('p', '', de ? 'Signal statt Hype.' : 'Signal over hype.'));
     visual.append(list);
   }
   const strip = document.getElementById('edition-signals');
-  const signals = cover?.signals?.[language] || [...article.querySelectorAll('.executive .signal-grid > div > strong')].slice(0, 3).map(el => el.textContent.replace(/[\p{Extended_Pictographic}\uFE0F]/gu, '').trim());
+  const signals = cover?.signals?.[language] || [...article.querySelectorAll('.executive .signal-grid > div')].slice(0, 3).map(card => (card.querySelector('.signal-label, .signal-title')?.textContent || '').replace(/[\p{Extended_Pictographic}\uFE0F]/gu, '').trim());
   strip.replaceChildren(...signals.map(signal => editorialNode('span', '', signal)));
   strip.hidden = !signals.length;
   document.querySelector('.edition-cover').setAttribute('aria-busy', 'false');
 
   const navigation = document.getElementById('chapter-links');
   navigation.replaceChildren();
-  article.querySelectorAll('.executive .signal-grid > div > strong').forEach(label => {
-    label.textContent = label.textContent.replace(/[\p{Extended_Pictographic}\uFE0F]/gu, '').trim();
-  });
-  const chapters = [...article.querySelectorAll('.chapter')];
+  article.querySelectorAll('.executive .signal-label').forEach(cleanEditorialLabel);
+  const chapters = [...article.querySelectorAll('h2.chapter, h3.chapter')];
   chapters.forEach((chapter, index) => {
     if (!chapter.id) chapter.id = `chapter-${index + 1}`;
     chapter.dataset.number = String(index + 1).padStart(2, '0');
-    chapter.textContent = chapter.textContent.replace(/[\p{Extended_Pictographic}\uFE0F]/gu, '').trim();
+    cleanEditorialLabel(chapter);
     const link = editorialNode('a', '', `${chapter.dataset.number} / ${chapter.textContent}`);
     link.href = `#${chapter.id}`;
     navigation.append(link);

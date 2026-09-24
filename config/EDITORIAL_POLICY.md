@@ -217,6 +217,9 @@ Media preference order: suitable official media; clearly reusable/licensed techn
 Every third-party visual must include a visible organization/author credit linked to the original source plus license/reuse status where relevant. Publication-created charts and diagrams must be labeled `AI Daily Brief · Original graphic` and cite the underlying source or dataset. Every image requires meaningful alt text; diagrams need an adjacent text summary or semantic labels. Visual meaning must not rely on color alone.
 
 ### Rendering contract
+- Keep chapter headings separate from chapter contents: use `h2.chapter` for the heading and `h3` for story titles. If grouping content in `section.chapter`, supply a direct `.section-kicker` label; the renderer converts it into the chapter heading without flattening the section.
+- Separate signal-card titles from explanation text: use `h3.signal-title` and `p`, with optional `strong.signal-label` metadata. Do not put body text in a heading or rely on line breaks for typographic hierarchy.
+- Display fonts belong to headings; paragraphs, evidence explanations and callouts use the body font. Verify DE and EN at desktop and 320 px, including that story paragraphs, source links and chapter navigation survive rendering.
 - Use `<figure class="editorial-visual visual-{class}">` with a `figcaption` containing the visual class, provenance and source.
 - Prefer semantic HTML/CSS/SVG generated in-repository for exact diagrams and charts; do not rasterize text-heavy graphics.
 - Components must remain readable at 320 px, with horizontal flows becoming vertical rather than overflowing.

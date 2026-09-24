@@ -94,6 +94,7 @@ async function loadBrief() {
     const [html, covers] = await Promise.all([response.text(), editionCovers]);
     if (request !== briefRequest) return;
     article.innerHTML = html;
+    normalizeEditorialMarkup(article);
     $('#brief-date').textContent = meta.date;
     $('#brief-date').dateTime = meta.date;
     $('#hero-date').textContent = new Intl.DateTimeFormat(language === 'de' ? 'de-CH' : 'en-GB', {day:'2-digit',month:'2-digit',year:'numeric',timeZone:'UTC'}).format(new Date(meta.date + 'T12:00:00Z'));
