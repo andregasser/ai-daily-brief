@@ -1,1 +1,719 @@
-{"version":1,"updated_at":"2026-09-24T07:00:00+02:00","predictions":[{"id":"pred-kya-interoperability-2026-10","created":"2026-09-10","status":"open","confidence":"medium","prediction":"By 2026-10-15 the Know-Your-Agent initiative will produce a publicly implementable specification, SDK/reference material, or a concrete cross-network pilot beyond announcement-level coordination.","review_after":"2026-10-15","confirmation_criteria":["Public implementation specification or SDK/reference implementation","Concrete pilot involving at least two participating trust/payment ecosystems"],"falsification_criteria":["No public implementation artifact or cross-network pilot by the review date"],"evidence":[{"date":"2026-09-11","url":"https://www.reuters.com/world/india/india-plans-ai-registry-it-looks-roll-out-agentic-payments-sources-say-2026-09-10/","note":"Adjacent ecosystem evidence: NPCI reportedly plans an agent registry under a Unified Agentic Protocol; this strengthens the broader direction but does not confirm KYA interoperability."},{"date":"2026-09-14","note":"Due Builder Radar review found no new public KYA specification, SDK, reference implementation or cross-network pilot. Prediction remains open."}]},{"id":"pred-deepseek-v41-evidence-2026-09","created":"2026-09-10","status":"falsified","confidence":"medium-high","prediction":"By 2026-09-24 primary technical documentation and independent evaluations will clarify whether DeepSeek V4.1-Flash materially improves task-success/latency/cost economics over the preceding Flash/Pro options.","review_after":"2026-09-24","confirmation_criteria":["Stable primary model/API documentation","At least one credible independent end-to-end evaluation with comparable harness"],"falsification_criteria":["Release remains undocumented or only vendor/community benchmark claims are available by review date"],"evidence":[{"date":"2026-09-13","note":"Three-day Builder Radar review found no new decision-grade primary documentation plus comparable independent end-to-end evaluation; prediction remained open."},{"date":"2026-09-14","url":"https://www.deepseek.com/en/news/deepseek-v4-1-flash/","note":"Primary release documentation and technical-report link were located in today's sweep. The announced 04:00 UTC Sep 14 V4-Pro alias migration is now effective. Independent comparable end-to-end evidence is still insufficient, so status advances only to progress."},{"date":"2026-09-24","note":"Review date reached. Stable primary V4.1-Flash documentation exists, but today's targeted search still found no credible independent end-to-end evaluation with a sufficiently comparable harness covering task success, latency and cost against the preceding Flash/Pro options. The forecast therefore did not satisfy its full confirmation criteria by the deadline."}]},{"id":"pred-china-hbm-pricing-q4","created":"2026-09-10","status":"open","confidence":"medium","prediction":"Chinese AI-accelerator pricing pressure tied to HBM will remain material into Q4 2026 rather than reverting immediately after current supply stress.","review_after":"2026-12-15","confirmation_criteria":["Comparable accelerator/channel quotes remain at least ~20% above July 2026 levels or suppliers continue to cite HBM constraints","Real shipments show HBM availability constraining price or volume"],"falsification_criteria":["Domestic/imported HBM supply normalizes and comparable accelerator pricing broadly returns near July levels"],"evidence":[{"date":"2026-09-10","url":"https://www.reuters.com/world/asia-pacific/chinas-ai-chipmakers-raise-prices-high-bandwidth-memory-shortage-bites-2026-09-10/"}]},{"id":"pred-metr-anthropic-review-2026-10","created":"2026-09-10","status":"open","confidence":"medium","prediction":"By 2026-10-31 METR or another independent reviewer will publish material findings that clarify Anthropic's incident-discovery coverage, causal diagnosis, or proposed controls for the four disclosed cyber incidents.","review_after":"2026-10-31","confirmation_criteria":["Public independent findings with material assessment of incident discovery, root cause or mitigations"],"falsification_criteria":["No substantive external findings by review date"],"evidence":[{"date":"2026-09-10","url":"https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents"}]},{"id":"pred-epd-independent-evidence-2026-10","created":"2026-09-10","status":"open","confidence":"medium","prediction":"By 2026-10-15 at least one credible non-NVIDIA or production-style report will reproduce meaningful benefits from Encode-Prefill-Decode disaggregation on real multimodal serving workloads.","review_after":"2026-10-15","confirmation_criteria":["Independent or customer production measurements with workload description and latency/goodput results"],"falsification_criteria":["No credible reproduction outside vendor-controlled evidence by review date"],"evidence":[{"date":"2026-09-10","url":"https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving/"},{"date":"2026-09-13","note":"Three-day Builder Radar review found no new independent production-style reproduction; prediction remains open."}]},{"id":"pred-us-duty-of-care-draft-2026-09","created":"2026-09-12","status":"open","confidence":"medium","prediction":"By 2026-09-30 U.S. Senate negotiators will either publish or substantively describe a draft/framework that specifies catastrophic-risk scope, external testing and model-release authority, or the proposal will visibly slip beyond the immediate pre-midterm window.","review_after":"2026-09-30","confirmation_criteria":["Public draft text or official bipartisan framework specifying at least risk scope and testing/release authority","Official announcement that negotiations have produced agreed legislative language"],"falsification_criteria":["No public draft/framework or substantive official agreement by the review date and no explicit acknowledgment that timing slipped"],"evidence":[{"date":"2026-09-12","url":"https://www.reuters.com/legal/litigation/us-senate-negotiators-consider-requiring-ai-firms-mitigate-known-major-risks-2026-09-11/","note":"Reuters reports active bipartisan negotiations; terms remain unsettled."},{"date":"2026-09-15","url":"https://www.reuters.com/legal/litigation/germany-says-halting-ai-development-not-viable-calls-us-china-involvement-2026-09-14/","note":"European governments are calling for international risk mechanisms, but no new U.S. legislative text satisfying this prediction's criteria surfaced in today's run. Status remains open."},{"date":"2026-09-16","url":"https://www.reuters.com/technology/openai-is-working-with-anthropic-google-ai-safety-bloomberg-news-reports-2026-09-15/","note":"OpenAI policy chief Chris Lehane reportedly backed bipartisan catastrophic-risk legislation, but no qualifying Senate draft or agreed legislative language was published. Status remains open."}]},{"id":"pred-openai-misalignment-disclosure-2026-10","created":"2026-09-12","status":"confirmed","confidence":"medium-high","prediction":"By 2026-10-10 OpenAI will publish the misalignment-incident disclosure framework it previously promised for the coming weeks, or publicly update/delay that commitment.","review_after":"2026-10-10","confirmation_criteria":["Public OpenAI disclosure framework with scope or reporting criteria","Public OpenAI update explicitly changing the promised timeline or scope"],"falsification_criteria":["No framework and no public timeline/scope update by the review date"],"evidence":[{"date":"2026-09-12","url":"https://www.reuters.com/legal/litigation/openai-agents-attacked-software-service-rubygems-before-hugging-face-incident-2026-09-11/","note":"RubyGems adds another concrete external-side-effect incident against which disclosure scope can be evaluated."},{"date":"2026-09-17","url":"https://openai.com/index/model-misalignment-reporting-framework/","note":"OpenAI published the promised structured model-misalignment disclosure framework on Sep 16, with scope, case-selection process, investigation tracks, escalation path and six initial reports. Confirmation criterion satisfied."}]},{"id":"pred-uae-ai-resilience-plan-2026-10","created":"2026-09-12","status":"open","confidence":"medium","prediction":"By 2026-10-31 G42, UAE authorities or project partners will publicly confirm at least one concrete resilience change to the 5 GW AI infrastructure plan — such as multi-site distribution, physical hardening or additional utility redundancy — or explicitly reaffirm the original concentrated design.","review_after":"2026-10-31","confirmation_criteria":["Public confirmation of multi-site distribution, physical hardening, underground facilities or materially increased utility redundancy","Public reaffirmation that the original concentrated campus design will proceed substantially unchanged"],"falsification_criteria":["No concrete public architecture update or reaffirmation by the review date"],"evidence":[{"date":"2026-09-12","url":"https://www.reuters.com/world/middle-east/uae-revises-ai-data-center-plan-after-iranian-attacks-sources-say-2026-09-11/","note":"Reuters reports redesign discussions; final masterplan has not been announced."}]},{"id":"pred-embedded-evaluator-details-2026-09","created":"2026-09-13","status":"confirmed","confidence":"medium-high","prediction":"By 2026-09-30 Anthropic or OpenAI will publish concrete operational details for permanent embedded independent evaluators, such as reviewer identity, access scope, release-gate role, escalation rights or reporting process.","review_after":"2026-09-30","confirmation_criteria":["Named independent evaluator or defined selection/governance mechanism","Published access scope plus at least one release/escalation/reporting responsibility"],"falsification_criteria":["Only high-level support for independent evaluation remains public with no operational detail by the review date"],"evidence":[{"date":"2026-09-13","url":"https://darioamodei.com/post/we-must-pace-the-frontier","note":"Amodei proposes permanent embedded evaluators with employee-like access."},{"date":"2026-09-13","url":"https://www.reuters.com/business/anthropic-ceo-urges-ai-companies-slow-model-development-2026-09-12/","note":"Reuters reports Altman said OpenAI will do the same and provide more information soon."},{"date":"2026-09-14","url":"https://www.reuters.com/world/europe/trump-says-very-negative-forces-raising-exaggerated-concerns-over-ai-2026-09-13/","note":"Political counterpressure increases the importance of whether embedded evaluators receive enforceable rights rather than advisory access."},{"date":"2026-09-15","url":"https://microsoft.ai/code-of-conduct/","note":"Microsoft's new governance draft is concrete about authority and human control but does not provide the Anthropic/OpenAI embedded-evaluator identity, access scope or stop/escalation rights required by this prediction. Status remains open."},{"date":"2026-09-16","url":"https://www.reuters.com/business/metas-zuckerberg-says-ai-labs-have-enough-incentive-build-safely-2026-09-16/","note":"Zuckerberg says Meta already uses independent evaluators and calls this industry best practice, but no Anthropic/OpenAI evaluator identity, employee-like access scope, release role or escalation rights were disclosed. Prediction remains open."},{"date":"2026-09-18","url":"https://www.anthropic.com/institute/measuring-pace-of-ai-development","note":"Anthropic now says multiple independent third-party evaluators will get access comparable to internal risk teams and will verify safety practices, report incidents and monitor metrics. This materially advances access/responsibility detail, but evaluator identity/selection and stop or release-gate rights remain unpublished."},{"date":"2026-09-19","url":"https://www.anthropic.com/news/accenture-embedded-evaluation","note":"Confirmed: Anthropic named Accenture/Faculty as an embedded evaluator, described employee-like access and concrete evaluation/red-team/alignment/safeguard responsibilities. Identity/access/responsibility criteria are satisfied; release-stop authority remains a separate open question."}]},{"id":"pred-sglang-cve-remediation-2026-09","created":"2026-09-13","status":"falsified","confidence":"high","prediction":"By 2026-09-20 SGLang will publish an official patch, release note or unambiguous project mitigation for CVE-2026-86793, or the advisory ecosystem will document a confirmed patched version.","review_after":"2026-09-20","confirmation_criteria":["Official SGLang patch/release/advisory addressing CVE-2026-86793","GitHub/NVD/CVE record identifies a confirmed patched version backed by project changes"],"falsification_criteria":["No official remediation or confirmed patched version by the review date"],"evidence":[{"date":"2026-09-13","url":"https://github.com/advisories/GHSA-m675-99qc-9233","note":"GitHub Advisory lists affected and patched versions as unknown."},{"date":"2026-09-13","url":"https://vicone.com/blog/cve-2026-86793-sglang-bypass-could-let-attackers-run-code-on-ai-servers/","note":"VicOne says maintainers acknowledged the report but had not provided a patch timeline at publication."},{"date":"2026-09-16","url":"https://github.com/advisories/GHSA-m675-99qc-9233","note":"Due three-day review: the advisory, updated Sep 14, still lists affected and patched versions as unknown. SGLang documentation still exposes update_weights_from_tensor as an administrative endpoint. No unambiguous upstream remediation cleared the evidence bar, so prediction remains open."},{"date":"2026-09-19","url":"https://github.com/advisories/GHSA-m675-99qc-9233","note":"One day before the Sep 20 review date, GitHub Advisory still lists patched versions as Unknown. Prediction remains open until its review date."},{"date":"2026-09-20","url":"https://github.com/advisories/GHSA-m675-99qc-9233","note":"Review date reached: GitHub Advisory still lists patched versions as Unknown and no official remediation cleared the evidence bar. Prediction is falsified without rewriting its original text."}]},{"id":"pred-deepseek-alias-regression-2026-09","created":"2026-09-14","status":"falsified","confidence":"medium-high","prediction":"By 2026-09-18 at least one credible production-style or reproducible evaluation will quantify meaningful behavioral, task-success or latency/cost deltas caused by DeepSeek routing deepseek-v4-pro to V4.1-Flash, or DeepSeek will expose clearer resolved-model/version telemetry for the alias.","review_after":"2026-09-18","confirmation_criteria":["Comparable pre/post task suite with methodology and observed deltas","Provider exposes a resolved immutable model/version identifier or migration telemetry for aliased requests"],"falsification_criteria":["No comparable post-migration evidence or resolved-version mechanism by review date"],"evidence":[{"date":"2026-09-14","url":"https://www.deepseek.com/en/news/deepseek-v4-1-flash/","note":"DeepSeek says all deepseek-v4-pro requests route to V4.1-Flash from 04:00 UTC Sep 14 until V4.1-Pro launches."},{"date":"2026-09-15","note":"No comparable post-migration production-style evaluation or resolved immutable-version telemetry cleared the evidence threshold in today's sweep. Prediction remains open."},{"date":"2026-09-18","url":"https://api-docs.deepseek.com/updates/","note":"Prediction falsified: DeepSeek's current official changelog says V4-Pro service continues after Sep 14 in response to user demand, so the forecast forced alias migration did not remain in effect and no migration-regression boundary existed as predicted."}]},{"id":"pred-frontier-pacing-operationalization-2026-09","created":"2026-09-14","status":"progress","confidence":"medium","prediction":"By 2026-09-30 the frontier-pacing debate will produce at least one concrete operational mechanism — evaluator governance, release threshold, bilateral safety-testing commitment or legislative text — rather than remaining only executive statements, or the coordination thesis will weaken materially.","review_after":"2026-09-30","confirmation_criteria":["Published evaluator stop/escalation rights or release threshold","U.S.-China or U.S. legislative text with a concrete testing/release mechanism"],"falsification_criteria":["No operational mechanism emerges while major political actors continue rejecting slowdown/coordination"],"evidence":[{"date":"2026-09-14","url":"https://www.reuters.com/world/china/china-state-newspaper-blasts-anthropics-calls-slow-ai-cold-war-tactic-2026-09-14/","note":"Global Times editorial frames the proposal as anti-China; Reuters says bilateral frontier-AI safety talks are expected in mid-September."},{"date":"2026-09-14","url":"https://www.reuters.com/world/europe/trump-says-very-negative-forces-raising-exaggerated-concerns-over-ai-2026-09-13/","note":"Trump rejects slowing AI while allowing that guardrails may be considered."},{"date":"2026-09-15","url":"https://www.reuters.com/legal/litigation/how-china-is-preparing-risk-ai-escaping-human-control-2026-09-14/","note":"China's agent-control rules and loss-of-control framework show operational safety mechanisms can advance without endorsing frontier pacing, but they do not satisfy this prediction's evaluator/release/bilateral criteria."},{"date":"2026-09-15","url":"https://www.reuters.com/legal/litigation/germany-says-halting-ai-development-not-viable-calls-us-china-involvement-2026-09-14/","note":"Germany rejects a development halt while calling for international governance. No qualifying bilateral testing commitment or frontier release threshold surfaced today, so status remains open."},{"date":"2026-09-16","url":"https://www.reuters.com/technology/openai-is-working-with-anthropic-google-ai-safety-bloomberg-news-reports-2026-09-15/","note":"OpenAI's policy chief reportedly says OpenAI has been in safety talks with Anthropic and Google DeepMind for several weeks. This advances the prediction from rhetoric to active coordination and moves status to progress, but no release threshold, evaluator stop-right, bilateral testing commitment or legislative text has been published."},{"date":"2026-09-16","url":"https://www.reuters.com/world/ftc-chair-suspicious-calls-ai-antitrust-exemptions-2026-09-15/","note":"FTC Chair Ferguson's skepticism about antitrust exemptions and Meta's separate preference for lab-by-lab safety are material counterevidence to broad industry coordination."},{"date":"2026-09-17","url":"https://openai.com/index/model-misalignment-reporting-framework/","note":"OpenAI operationalized incident disclosure, strengthening the broader safety-governance direction, but this prediction specifically requires evaluator governance/release thresholds/bilateral testing or legislation. Status remains progress."},{"date":"2026-09-18","url":"https://www.anthropic.com/institute/measuring-pace-of-ai-development","note":"Anthropic added a concrete external-evaluator access and reporting plan plus candidate pace metrics, but no evaluator stop-right, release threshold, bilateral testing commitment or binding legislative mechanism has yet met this prediction's confirmation criterion."},{"date":"2026-09-19","url":"https://www.anthropic.com/news/accenture-embedded-evaluation","note":"A named embedded evaluator is now concrete, but confirmation still requires stop/escalation rights, a release threshold, bilateral testing commitment or binding legislative mechanism. Status remains progress."},{"date":"2026-09-19","url":"https://www.reuters.com/business/europes-ai-firms-playing-catch-up-challenge-us-calls-slowdown-2026-09-18/","note":"European competitive and regulatory-capture objections are material contrarian evidence against assuming broad acceptance of frontier-pacing coordination."},{"date":"2026-09-20","url":"https://apnews.com/article/960af4308161eaf4ed13c383b0ce1c1b","note":"A new antitrust complaint alleges unlawful slowdown coordination. This is counter/constraint evidence: embedded evaluation has operationalized part of the pacing debate, while cross-lab coordination now faces explicit legal challenge. Status remains progress, not confirmed."},{"date":"2026-09-21","url":"https://apnews.com/article/2c7f54f07e755f506d9db9b91df282bd","note":"The U.S. proposed a bilateral AI incident notification mechanism to China. This is operational governance progress but does not satisfy the prediction's shared release/testing-gate criteria."},{"date":"2026-09-24","url":"https://openai.com/index/sam-altman-un-security-council-remarks/","note":"The UN Security Council discussion materially raises the coordination venue: OpenAI proposed common frontier standards and incident protocols, while Reuters reports the U.S. rejected a global regulatory scheme and China called for cross-border cooperation. No shared release threshold, evaluator stop-right or binding testing mechanism emerged, so status remains progress."}]},{"id":"pred-anthropic-evaluator-governance-2026-10","created":"2026-09-19","status":"open","confidence":"medium-high","prediction":"By 2026-10-10 Anthropic will either name at least one additional embedded evaluator or publish material governance details covering evaluator selection, reporting, escalation, publication rights or release/stop authority.","review_after":"2026-10-10","confirmation_criteria":["At least one additional named embedded evaluator","Published governance rules materially clarifying selection, reporting, escalation, publication or release/stop authority"],"falsification_criteria":["No additional evaluator and no material governance detail by the review date"],"evidence":[{"date":"2026-09-19","url":"https://www.anthropic.com/news/accenture-embedded-evaluation","note":"Anthropic says embedded-evaluation operating details are still being worked out."}]},{"id":"pred-agentcore-v2-production-repro-2026-10","created":"2026-09-19","status":"open","confidence":"medium","prediction":"By 2026-10-19 at least one credible non-AWS or production-style measurement will quantify whether AgentCore Runtime V2 materially improves cold-start or memory-cost behavior on a real agent workload versus V1 or an equivalent baseline.","review_after":"2026-10-19","confirmation_criteria":["Published real-agent workload with reproducible latency or memory/cost measurements","Comparable V1 or equivalent baseline with workload/configuration detail"],"falsification_criteria":["Only AWS vendor benchmark evidence is available by the review date"],"evidence":[{"date":"2026-09-19","url":"https://aws.amazon.com/blogs/machine-learning/the-new-agentcore-runtime-elastic-optimized-and-consistently-fast-starts/","note":"AWS publishes a concrete V2 benchmark and opt-in boundary, but the benchmark uses an empty echo agent and is vendor-run."}]},{"id":"pred-qwen38-omni-independent-evidence-2026-10","created":"2026-09-20","status":"open","confidence":"medium","prediction":"By 2026-10-04 at least one credible independent or production-style evaluation will quantify qwen3.8-omni-flash on a mixed audio/video/tool-use workload with disclosed sampling/context usage and end-to-end latency or cost, or comparable evidence will remain unavailable.","review_after":"2026-10-04","confirmation_criteria":["Independent or customer production-style mixed-modality evaluation","Method discloses media sampling/context usage and task-success plus latency/cost"],"falsification_criteria":["No comparable independent or production-style evidence by the review date"],"evidence":[{"date":"2026-09-20","url":"https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash","note":"Primary capability documentation is available; decision-grade independent end-to-end evidence was not found in this run."}]},{"id":"pred-us-china-ai-incident-mechanism-2026-10","created":"2026-09-21","status":"open","confidence":"medium","prediction":"By 2026-10-15 the proposed U.S.-China AI incident notification mechanism will either gain at least one public operational element—trigger/severity scope, contact channel, notification timeline or agreed next-step process—or remain proposal-level without such detail.","review_after":"2026-10-15","confirmation_criteria":["Public trigger/severity scope or contact/notification process","Joint or official statement describing an agreed operational next step"],"falsification_criteria":["No operational detail or agreed next-step process by the review date"],"evidence":[{"date":"2026-09-21","url":"https://apnews.com/article/2c7f54f07e755f506d9db9b91df282bd","note":"Initial U.S. proposal reported after Bessent-He talks; implementation details remain absent."}]},{"id":"pred-china-humanoid-commercial-proof-2026-10","created":"2026-09-21","status":"open","confidence":"medium","prediction":"By 2026-10-15 at least one humanoid-robot company affected by the current Chinese IPO scrutiny will publicly clarify state-supported versus commercial revenue, repeat-customer demand, or listing timing in a prospectus/exchange/company update, or no such clarification will surface.","review_after":"2026-10-15","confirmation_criteria":["Public filing or company/exchange update separates demand/revenue quality or listing timing","Concrete repeat-order or recurring-commercial-demand disclosure"],"falsification_criteria":["No material public clarification by the review date"],"evidence":[{"date":"2026-09-21","url":"https://www.reuters.com/business/finance/china-slows-humanoid-robot-ipo-rush-hype-outruns-reality-2026-09-21/","note":"Reuters reports tighter IPO scrutiny focused on revenue sustainability and state-supported demand."}]},{"id":"pred-zcode-control-disclosure-2026-10","created":"2026-09-22","status":"open","confidence":"medium","prediction":"By 2026-10-15 Z.ai will publish at least one materially testable follow-up to the ZCode repository-upload incident: a technical root-cause/audit report, explicit repository-upload consent/default controls, residency controls, or independently inspectable deletion/retention evidence.","review_after":"2026-10-15","confirmation_criteria":["Public technical RCA or audit with data-flow detail","Product controls make repository upload explicit/opt-in or expose residency","Independent or inspectable evidence clarifies retention/deletion"],"falsification_criteria":["No materially testable technical or control-plane follow-up by the review date"],"evidence":[{"date":"2026-09-22","url":"https://zcode.z.ai/en/changelog","note":"Primary changelog acknowledges an abnormal repository-upload fix; Reuters reports company apology and feature disabling, but a full public RCA is not available."}]},{"id":"pred-v900-independent-evidence-2027-q1","created":"2026-09-22","status":"open","confidence":"medium","prediction":"By 2027-03-31 independent or customer production evidence will clarify Zhenwu V900 performance, availability and system economics beyond Alibaba's 3x-performance claim, or the roadmap will remain primarily vendor-evidenced.","review_after":"2027-03-31","confirmation_criteria":["Comparable independent benchmark or production customer measurement with workload/system configuration","Evidence of shipping availability or production deployment"],"falsification_criteria":["No decision-grade external performance/availability evidence by the review date"],"evidence":[{"date":"2026-09-22","url":"https://www.reuters.com/business/retail-consumer/alibaba-plans-ai-model-with-5-trillion-10-trillion-parameters-unveils-new-chip-2026-09-22/","note":"Alibaba announced V900 and an early-2027 mass-production target; 3x performance remains a vendor claim."}]},{"id":"pred-art-independent-validation-2026-10","created":"2026-09-24","status":"open","confidence":"medium","prediction":"By 2026-10-31 an external research group or a public follow-up with new experimental evidence will independently test or materially clarify ART's biological function beyond the initial RNA-expression result.","review_after":"2026-10-31","confirmation_criteria":["Independent experimental replication of a key ART property","New experimental evidence establishes or materially narrows ART's biological function"],"falsification_criteria":["No independent replication or material functional clarification by the review date"],"evidence":[{"date":"2026-09-24","url":"https://www.anthropic.com/news/claude-discovers-novel-enzyme-system","note":"Initial Anthropic report; function explicitly remains unknown."}]},{"id":"pred-sandbox-strict-authority-default-2026-10","created":"2026-09-24","status":"open","confidence":"medium-high","prediction":"By 2026-10-31 at least one major sandbox platform named in the SPACE disclosures will make strict HTTPS hostname-authority validation a default egress behavior rather than only an optional mode or documentation caveat.","review_after":"2026-10-31","confirmation_criteria":["Vendor release/default change enforces SNI/Host/authority consistency for domain-based HTTPS allowlists by default","Public product documentation states strict authority validation is default-on for the affected policy mode"],"falsification_criteria":["Affected major platforms retain only optional strict modes or documented limitations through the review date"],"evidence":[{"date":"2026-09-24","url":"https://www.perplexity.ai/en-GB/hub/blog/escaping-space-part-i","note":"Perplexity reports a mix of shipped fixes, optional strict modes, planned mitigations and documented limitations across affected vendors."}]},{"id":"pred-un-ai-standards-process-2026-10","created":"2026-09-24","status":"open","confidence":"medium","prediction":"By 2026-10-31 the UN Security Council AI discussion or adjacent government diplomacy will produce at least one public operational process for frontier-AI standards or incident coordination—such as a named working process, draft standard, bilateral channel or implementation timetable—or remain primarily rhetorical.","review_after":"2026-10-31","confirmation_criteria":["Named multilateral/bilateral working process with scope and next step","Draft/common standard or incident channel with operational detail","Government implementation timetable tied to the proposed evidence/incident framework"],"falsification_criteria":["No public operational process, draft or implementation timetable by the review date"],"evidence":[{"date":"2026-09-24","url":"https://www.reuters.com/business/ai-leaders-brief-un-amid-warnings-technology-could-slip-beyond-human-control-2026-09-23/","note":"UN discussion exposed both cooperation proposals and governance disagreement."}]}],"scorecard":{"confirmed":2,"falsified":3,"expired":0,"open":16,"progress":1},"last_daily_review":"2026-09-24","last_daily_review_note":"Sep24 review completed. DeepSeek V4.1 evidence prediction reached its deadline and is falsified because primary documentation exists but the required comparable independent end-to-end evaluation did not surface. Frontier-pacing remains progress after the UN Security Council session; three new testable follow-ups were added."}
+{
+  "version": 1,
+  "updated_at": "2026-09-25T07:00:00+02:00",
+  "predictions": [
+    {
+      "id": "pred-kya-interoperability-2026-10",
+      "created": "2026-09-10",
+      "status": "open",
+      "confidence": "medium",
+      "prediction": "By 2026-10-15 the Know-Your-Agent initiative will produce a publicly implementable specification, SDK/reference material, or a concrete cross-network pilot beyond announcement-level coordination.",
+      "review_after": "2026-10-15",
+      "confirmation_criteria": [
+        "Public implementation specification or SDK/reference implementation",
+        "Concrete pilot involving at least two participating trust/payment ecosystems"
+      ],
+      "falsification_criteria": [
+        "No public implementation artifact or cross-network pilot by the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-11",
+          "url": "https://www.reuters.com/world/india/india-plans-ai-registry-it-looks-roll-out-agentic-payments-sources-say-2026-09-10/",
+          "note": "Adjacent ecosystem evidence: NPCI reportedly plans an agent registry under a Unified Agentic Protocol; this strengthens the broader direction but does not confirm KYA interoperability."
+        },
+        {
+          "date": "2026-09-14",
+          "note": "Due Builder Radar review found no new public KYA specification, SDK, reference implementation or cross-network pilot. Prediction remains open."
+        }
+      ]
+    },
+    {
+      "id": "pred-deepseek-v41-evidence-2026-09",
+      "created": "2026-09-10",
+      "status": "falsified",
+      "confidence": "medium-high",
+      "prediction": "By 2026-09-24 primary technical documentation and independent evaluations will clarify whether DeepSeek V4.1-Flash materially improves task-success/latency/cost economics over the preceding Flash/Pro options.",
+      "review_after": "2026-09-24",
+      "confirmation_criteria": [
+        "Stable primary model/API documentation",
+        "At least one credible independent end-to-end evaluation with comparable harness"
+      ],
+      "falsification_criteria": [
+        "Release remains undocumented or only vendor/community benchmark claims are available by review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-13",
+          "note": "Three-day Builder Radar review found no new decision-grade primary documentation plus comparable independent end-to-end evaluation; prediction remained open."
+        },
+        {
+          "date": "2026-09-14",
+          "url": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/",
+          "note": "Primary release documentation and technical-report link were located in today's sweep. The announced 04:00 UTC Sep 14 V4-Pro alias migration is now effective. Independent comparable end-to-end evidence is still insufficient, so status advances only to progress."
+        },
+        {
+          "date": "2026-09-24",
+          "note": "Review date reached. Stable primary V4.1-Flash documentation exists, but today's targeted search still found no credible independent end-to-end evaluation with a sufficiently comparable harness covering task success, latency and cost against the preceding Flash/Pro options. The forecast therefore did not satisfy its full confirmation criteria by the deadline."
+        }
+      ]
+    },
+    {
+      "id": "pred-china-hbm-pricing-q4",
+      "created": "2026-09-10",
+      "status": "open",
+      "confidence": "medium",
+      "prediction": "Chinese AI-accelerator pricing pressure tied to HBM will remain material into Q4 2026 rather than reverting immediately after current supply stress.",
+      "review_after": "2026-12-15",
+      "confirmation_criteria": [
+        "Comparable accelerator/channel quotes remain at least ~20% above July 2026 levels or suppliers continue to cite HBM constraints",
+        "Real shipments show HBM availability constraining price or volume"
+      ],
+      "falsification_criteria": [
+        "Domestic/imported HBM supply normalizes and comparable accelerator pricing broadly returns near July levels"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-10",
+          "url": "https://www.reuters.com/world/asia-pacific/chinas-ai-chipmakers-raise-prices-high-bandwidth-memory-shortage-bites-2026-09-10/"
+        }
+      ]
+    },
+    {
+      "id": "pred-metr-anthropic-review-2026-10",
+      "created": "2026-09-10",
+      "status": "open",
+      "confidence": "medium",
+      "prediction": "By 2026-10-31 METR or another independent reviewer will publish material findings that clarify Anthropic's incident-discovery coverage, causal diagnosis, or proposed controls for the four disclosed cyber incidents.",
+      "review_after": "2026-10-31",
+      "confirmation_criteria": [
+        "Public independent findings with material assessment of incident discovery, root cause or mitigations"
+      ],
+      "falsification_criteria": [
+        "No substantive external findings by review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-10",
+          "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents"
+        }
+      ]
+    },
+    {
+      "id": "pred-epd-independent-evidence-2026-10",
+      "created": "2026-09-10",
+      "status": "open",
+      "confidence": "medium",
+      "prediction": "By 2026-10-15 at least one credible non-NVIDIA or production-style report will reproduce meaningful benefits from Encode-Prefill-Decode disaggregation on real multimodal serving workloads.",
+      "review_after": "2026-10-15",
+      "confirmation_criteria": [
+        "Independent or customer production measurements with workload description and latency/goodput results"
+      ],
+      "falsification_criteria": [
+        "No credible reproduction outside vendor-controlled evidence by review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-10",
+          "url": "https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving/"
+        },
+        {
+          "date": "2026-09-13",
+          "note": "Three-day Builder Radar review found no new independent production-style reproduction; prediction remains open."
+        }
+      ]
+    },
+    {
+      "id": "pred-us-duty-of-care-draft-2026-09",
+      "created": "2026-09-12",
+      "status": "open",
+      "confidence": "medium",
+      "prediction": "By 2026-09-30 U.S. Senate negotiators will either publish or substantively describe a draft/framework that specifies catastrophic-risk scope, external testing and model-release authority, or the proposal will visibly slip beyond the immediate pre-midterm window.",
+      "review_after": "2026-09-30",
+      "confirmation_criteria": [
+        "Public draft text or official bipartisan framework specifying at least risk scope and testing/release authority",
+        "Official announcement that negotiations have produced agreed legislative language"
+      ],
+      "falsification_criteria": [
+        "No public draft/framework or substantive official agreement by the review date and no explicit acknowledgment that timing slipped"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-12",
+          "url": "https://www.reuters.com/legal/litigation/us-senate-negotiators-consider-requiring-ai-firms-mitigate-known-major-risks-2026-09-11/",
+          "note": "Reuters reports active bipartisan negotiations; terms remain unsettled."
+        },
+        {
+          "date": "2026-09-15",
+          "url": "https://www.reuters.com/legal/litigation/germany-says-halting-ai-development-not-viable-calls-us-china-involvement-2026-09-14/",
+          "note": "European governments are calling for international risk mechanisms, but no new U.S. legislative text satisfying this prediction's criteria surfaced in today's run. Status remains open."
+        },
+        {
+          "date": "2026-09-16",
+          "url": "https://www.reuters.com/technology/openai-is-working-with-anthropic-google-ai-safety-bloomberg-news-reports-2026-09-15/",
+          "note": "OpenAI policy chief Chris Lehane reportedly backed bipartisan catastrophic-risk legislation, but no qualifying Senate draft or agreed legislative language was published. Status remains open."
+        }
+      ]
+    },
+    {
+      "id": "pred-openai-misalignment-disclosure-2026-10",
+      "created": "2026-09-12",
+      "status": "confirmed",
+      "confidence": "medium-high",
+      "prediction": "By 2026-10-10 OpenAI will publish the misalignment-incident disclosure framework it previously promised for the coming weeks, or publicly update/delay that commitment.",
+      "review_after": "2026-10-10",
+      "confirmation_criteria": [
+        "Public OpenAI disclosure framework with scope or reporting criteria",
+        "Public OpenAI update explicitly changing the promised timeline or scope"
+      ],
+      "falsification_criteria": [
+        "No framework and no public timeline/scope update by the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-12",
+          "url": "https://www.reuters.com/legal/litigation/openai-agents-attacked-software-service-rubygems-before-hugging-face-incident-2026-09-11/",
+          "note": "RubyGems adds another concrete external-side-effect incident against which disclosure scope can be evaluated."
+        },
+        {
+          "date": "2026-09-17",
+          "url": "https://openai.com/index/model-misalignment-reporting-framework/",
+          "note": "OpenAI published the promised structured model-misalignment disclosure framework on Sep 16, with scope, case-selection process, investigation tracks, escalation path and six initial reports. Confirmation criterion satisfied."
+        }
+      ]
+    },
+    {
+      "id": "pred-uae-ai-resilience-plan-2026-10",
+      "created": "2026-09-12",
+      "status": "open",
+      "confidence": "medium",
+      "prediction": "By 2026-10-31 G42, UAE authorities or project partners will publicly confirm at least one concrete resilience change to the 5 GW AI infrastructure plan — such as multi-site distribution, physical hardening or additional utility redundancy — or explicitly reaffirm the original concentrated design.",
+      "review_after": "2026-10-31",
+      "confirmation_criteria": [
+        "Public confirmation of multi-site distribution, physical hardening, underground facilities or materially increased utility redundancy",
+        "Public reaffirmation that the original concentrated campus design will proceed substantially unchanged"
+      ],
+      "falsification_criteria": [
+        "No concrete public architecture update or reaffirmation by the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-12",
+          "url": "https://www.reuters.com/world/middle-east/uae-revises-ai-data-center-plan-after-iranian-attacks-sources-say-2026-09-11/",
+          "note": "Reuters reports redesign discussions; final masterplan has not been announced."
+        }
+      ]
+    },
+    {
+      "id": "pred-embedded-evaluator-details-2026-09",
+      "created": "2026-09-13",
+      "status": "confirmed",
+      "confidence": "medium-high",
+      "prediction": "By 2026-09-30 Anthropic or OpenAI will publish concrete operational details for permanent embedded independent evaluators, such as reviewer identity, access scope, release-gate role, escalation rights or reporting process.",
+      "review_after": "2026-09-30",
+      "confirmation_criteria": [
+        "Named independent evaluator or defined selection/governance mechanism",
+        "Published access scope plus at least one release/escalation/reporting responsibility"
+      ],
+      "falsification_criteria": [
+        "Only high-level support for independent evaluation remains public with no operational detail by the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-13",
+          "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+          "note": "Amodei proposes permanent embedded evaluators with employee-like access."
+        },
+        {
+          "date": "2026-09-13",
+          "url": "https://www.reuters.com/business/anthropic-ceo-urges-ai-companies-slow-model-development-2026-09-12/",
+          "note": "Reuters reports Altman said OpenAI will do the same and provide more information soon."
+        },
+        {
+          "date": "2026-09-14",
+          "url": "https://www.reuters.com/world/europe/trump-says-very-negative-forces-raising-exaggerated-concerns-over-ai-2026-09-13/",
+          "note": "Political counterpressure increases the importance of whether embedded evaluators receive enforceable rights rather than advisory access."
+        },
+        {
+          "date": "2026-09-15",
+          "url": "https://microsoft.ai/code-of-conduct/",
+          "note": "Microsoft's new governance draft is concrete about authority and human control but does not provide the Anthropic/OpenAI embedded-evaluator identity, access scope or stop/escalation rights required by this prediction. Status remains open."
+        },
+        {
+          "date": "2026-09-16",
+          "url": "https://www.reuters.com/business/metas-zuckerberg-says-ai-labs-have-enough-incentive-build-safely-2026-09-16/",
+          "note": "Zuckerberg says Meta already uses independent evaluators and calls this industry best practice, but no Anthropic/OpenAI evaluator identity, employee-like access scope, release role or escalation rights were disclosed. Prediction remains open."
+        },
+        {
+          "date": "2026-09-18",
+          "url": "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
+          "note": "Anthropic now says multiple independent third-party evaluators will get access comparable to internal risk teams and will verify safety practices, report incidents and monitor metrics. This materially advances access/responsibility detail, but evaluator identity/selection and stop or release-gate rights remain unpublished."
+        },
+        {
+          "date": "2026-09-19",
+          "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+          "note": "Confirmed: Anthropic named Accenture/Faculty as an embedded evaluator, described employee-like access and concrete evaluation/red-team/alignment/safeguard responsibilities. Identity/access/responsibility criteria are satisfied; release-stop authority remains a separate open question."
+        }
+      ]
+    },
+    {
+      "id": "pred-sglang-cve-remediation-2026-09",
+      "created": "2026-09-13",
+      "status": "falsified",
+      "confidence": "high",
+      "prediction": "By 2026-09-20 SGLang will publish an official patch, release note or unambiguous project mitigation for CVE-2026-86793, or the advisory ecosystem will document a confirmed patched version.",
+      "review_after": "2026-09-20",
+      "confirmation_criteria": [
+        "Official SGLang patch/release/advisory addressing CVE-2026-86793",
+        "GitHub/NVD/CVE record identifies a confirmed patched version backed by project changes"
+      ],
+      "falsification_criteria": [
+        "No official remediation or confirmed patched version by the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-13",
+          "url": "https://github.com/advisories/GHSA-m675-99qc-9233",
+          "note": "GitHub Advisory lists affected and patched versions as unknown."
+        },
+        {
+          "date": "2026-09-13",
+          "url": "https://vicone.com/blog/cve-2026-86793-sglang-bypass-could-let-attackers-run-code-on-ai-servers/",
+          "note": "VicOne says maintainers acknowledged the report but had not provided a patch timeline at publication."
+        },
+        {
+          "date": "2026-09-16",
+          "url": "https://github.com/advisories/GHSA-m675-99qc-9233",
+          "note": "Due three-day review: the advisory, updated Sep 14, still lists affected and patched versions as unknown. SGLang documentation still exposes update_weights_from_tensor as an administrative endpoint. No unambiguous upstream remediation cleared the evidence bar, so prediction remains open."
+        },
+        {
+          "date": "2026-09-19",
+          "url": "https://github.com/advisories/GHSA-m675-99qc-9233",
+          "note": "One day before the Sep 20 review date, GitHub Advisory still lists patched versions as Unknown. Prediction remains open until its review date."
+        },
+        {
+          "date": "2026-09-20",
+          "url": "https://github.com/advisories/GHSA-m675-99qc-9233",
+          "note": "Review date reached: GitHub Advisory still lists patched versions as Unknown and no official remediation cleared the evidence bar. Prediction is falsified without rewriting its original text."
+        }
+      ]
+    },
+    {
+      "id": "pred-deepseek-alias-regression-2026-09",
+      "created": "2026-09-14",
+      "status": "falsified",
+      "confidence": "medium-high",
+      "prediction": "By 2026-09-18 at least one credible production-style or reproducible evaluation will quantify meaningful behavioral, task-success or latency/cost deltas caused by DeepSeek routing deepseek-v4-pro to V4.1-Flash, or DeepSeek will expose clearer resolved-model/version telemetry for the alias.",
+      "review_after": "2026-09-18",
+      "confirmation_criteria": [
+        "Comparable pre/post task suite with methodology and observed deltas",
+        "Provider exposes a resolved immutable model/version identifier or migration telemetry for aliased requests"
+      ],
+      "falsification_criteria": [
+        "No comparable post-migration evidence or resolved-version mechanism by review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-14",
+          "url": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/",
+          "note": "DeepSeek says all deepseek-v4-pro requests route to V4.1-Flash from 04:00 UTC Sep 14 until V4.1-Pro launches."
+        },
+        {
+          "date": "2026-09-15",
+          "note": "No comparable post-migration production-style evaluation or resolved immutable-version telemetry cleared the evidence threshold in today's sweep. Prediction remains open."
+        },
+        {
+          "date": "2026-09-18",
+          "url": "https://api-docs.deepseek.com/updates/",
+          "note": "Prediction falsified: DeepSeek's current official changelog says V4-Pro service continues after Sep 14 in response to user demand, so the forecast forced alias migration did not remain in effect and no migration-regression boundary existed as predicted."
+        }
+      ]
+    },
+    {
+      "id": "pred-frontier-pacing-operationalization-2026-09",
+      "created": "2026-09-14",
+      "status": "progress",
+      "confidence": "medium",
+      "prediction": "By 2026-09-30 the frontier-pacing debate will produce at least one concrete operational mechanism — evaluator governance, release threshold, bilateral safety-testing commitment or legislative text — rather than remaining only executive statements, or the coordination thesis will weaken materially.",
+      "review_after": "2026-09-30",
+      "confirmation_criteria": [
+        "Published evaluator stop/escalation rights or release threshold",
+        "U.S.-China or U.S. legislative text with a concrete testing/release mechanism"
+      ],
+      "falsification_criteria": [
+        "No operational mechanism emerges while major political actors continue rejecting slowdown/coordination"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-14",
+          "url": "https://www.reuters.com/world/china/china-state-newspaper-blasts-anthropics-calls-slow-ai-cold-war-tactic-2026-09-14/",
+          "note": "Global Times editorial frames the proposal as anti-China; Reuters says bilateral frontier-AI safety talks are expected in mid-September."
+        },
+        {
+          "date": "2026-09-14",
+          "url": "https://www.reuters.com/world/europe/trump-says-very-negative-forces-raising-exaggerated-concerns-over-ai-2026-09-13/",
+          "note": "Trump rejects slowing AI while allowing that guardrails may be considered."
+        },
+        {
+          "date": "2026-09-15",
+          "url": "https://www.reuters.com/legal/litigation/how-china-is-preparing-risk-ai-escaping-human-control-2026-09-14/",
+          "note": "China's agent-control rules and loss-of-control framework show operational safety mechanisms can advance without endorsing frontier pacing, but they do not satisfy this prediction's evaluator/release/bilateral criteria."
+        },
+        {
+          "date": "2026-09-15",
+          "url": "https://www.reuters.com/legal/litigation/germany-says-halting-ai-development-not-viable-calls-us-china-involvement-2026-09-14/",
+          "note": "Germany rejects a development halt while calling for international governance. No qualifying bilateral testing commitment or frontier release threshold surfaced today, so status remains open."
+        },
+        {
+          "date": "2026-09-16",
+          "url": "https://www.reuters.com/technology/openai-is-working-with-anthropic-google-ai-safety-bloomberg-news-reports-2026-09-15/",
+          "note": "OpenAI's policy chief reportedly says OpenAI has been in safety talks with Anthropic and Google DeepMind for several weeks. This advances the prediction from rhetoric to active coordination and moves status to progress, but no release threshold, evaluator stop-right, bilateral testing commitment or legislative text has been published."
+        },
+        {
+          "date": "2026-09-16",
+          "url": "https://www.reuters.com/world/ftc-chair-suspicious-calls-ai-antitrust-exemptions-2026-09-15/",
+          "note": "FTC Chair Ferguson's skepticism about antitrust exemptions and Meta's separate preference for lab-by-lab safety are material counterevidence to broad industry coordination."
+        },
+        {
+          "date": "2026-09-17",
+          "url": "https://openai.com/index/model-misalignment-reporting-framework/",
+          "note": "OpenAI operationalized incident disclosure, strengthening the broader safety-governance direction, but this prediction specifically requires evaluator governance/release thresholds/bilateral testing or legislation. Status remains progress."
+        },
+        {
+          "date": "2026-09-18",
+          "url": "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
+          "note": "Anthropic added a concrete external-evaluator access and reporting plan plus candidate pace metrics, but no evaluator stop-right, release threshold, bilateral testing commitment or binding legislative mechanism has yet met this prediction's confirmation criterion."
+        },
+        {
+          "date": "2026-09-19",
+          "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+          "note": "A named embedded evaluator is now concrete, but confirmation still requires stop/escalation rights, a release threshold, bilateral testing commitment or binding legislative mechanism. Status remains progress."
+        },
+        {
+          "date": "2026-09-19",
+          "url": "https://www.reuters.com/business/europes-ai-firms-playing-catch-up-challenge-us-calls-slowdown-2026-09-18/",
+          "note": "European competitive and regulatory-capture objections are material contrarian evidence against assuming broad acceptance of frontier-pacing coordination."
+        },
+        {
+          "date": "2026-09-20",
+          "url": "https://apnews.com/article/960af4308161eaf4ed13c383b0ce1c1b",
+          "note": "A new antitrust complaint alleges unlawful slowdown coordination. This is counter/constraint evidence: embedded evaluation has operationalized part of the pacing debate, while cross-lab coordination now faces explicit legal challenge. Status remains progress, not confirmed."
+        },
+        {
+          "date": "2026-09-21",
+          "url": "https://apnews.com/article/2c7f54f07e755f506d9db9b91df282bd",
+          "note": "The U.S. proposed a bilateral AI incident notification mechanism to China. This is operational governance progress but does not satisfy the prediction's shared release/testing-gate criteria."
+        },
+        {
+          "date": "2026-09-24",
+          "url": "https://openai.com/index/sam-altman-un-security-council-remarks/",
+          "note": "The UN Security Council discussion materially raises the coordination venue: OpenAI proposed common frontier standards and incident protocols, while Reuters reports the U.S. rejected a global regulatory scheme and China called for cross-border cooperation. No shared release threshold, evaluator stop-right or binding testing mechanism emerged, so status remains progress."
+        }
+      ]
+    },
+    {
+      "id": "pred-anthropic-evaluator-governance-2026-10",
+      "created": "2026-09-19",
+      "status": "open",
+      "confidence": "medium-high",
+      "prediction": "By 2026-10-10 Anthropic will either name at least one additional embedded evaluator or publish material governance details covering evaluator selection, reporting, escalation, publication rights or release/stop authority.",
+      "review_after": "2026-10-10",
+      "confirmation_criteria": [
+        "At least one additional named embedded evaluator",
+        "Published governance rules materially clarifying selection, reporting, escalation, publication or release/stop authority"
+      ],
+      "falsification_criteria": [
+        "No additional evaluator and no material governance detail by the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-19",
+          "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+          "note": "Anthropic says embedded-evaluation operating details are still being worked out."
+        }
+      ]
+    },
+    {
+      "id": "pred-agentcore-v2-production-repro-2026-10",
+      "created": "2026-09-19",
+      "status": "open",
+      "confidence": "medium",
+      "prediction": "By 2026-10-19 at least one credible non-AWS or production-style measurement will quantify whether AgentCore Runtime V2 materially improves cold-start or memory-cost behavior on a real agent workload versus V1 or an equivalent baseline.",
+      "review_after": "2026-10-19",
+      "confirmation_criteria": [
+        "Published real-agent workload with reproducible latency or memory/cost measurements",
+        "Comparable V1 or equivalent baseline with workload/configuration detail"
+      ],
+      "falsification_criteria": [
+        "Only AWS vendor benchmark evidence is available by the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-19",
+          "url": "https://aws.amazon.com/blogs/machine-learning/the-new-agentcore-runtime-elastic-optimized-and-consistently-fast-starts/",
+          "note": "AWS publishes a concrete V2 benchmark and opt-in boundary, but the benchmark uses an empty echo agent and is vendor-run."
+        }
+      ]
+    },
+    {
+      "id": "pred-qwen38-omni-independent-evidence-2026-10",
+      "created": "2026-09-20",
+      "status": "open",
+      "confidence": "medium",
+      "prediction": "By 2026-10-04 at least one credible independent or production-style evaluation will quantify qwen3.8-omni-flash on a mixed audio/video/tool-use workload with disclosed sampling/context usage and end-to-end latency or cost, or comparable evidence will remain unavailable.",
+      "review_after": "2026-10-04",
+      "confirmation_criteria": [
+        "Independent or customer production-style mixed-modality evaluation",
+        "Method discloses media sampling/context usage and task-success plus latency/cost"
+      ],
+      "falsification_criteria": [
+        "No comparable independent or production-style evidence by the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-20",
+          "url": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+          "note": "Primary capability documentation is available; decision-grade independent end-to-end evidence was not found in this run."
+        }
+      ]
+    },
+    {
+      "id": "pred-us-china-ai-incident-mechanism-2026-10",
+      "created": "2026-09-21",
+      "status": "progress",
+      "confidence": "medium",
+      "prediction": "By 2026-10-15 the proposed U.S.-China AI incident notification mechanism will either gain at least one public operational element—trigger/severity scope, contact channel, notification timeline or agreed next-step process—or remain proposal-level without such detail.",
+      "review_after": "2026-10-15",
+      "confirmation_criteria": [
+        "Public trigger/severity scope or contact/notification process",
+        "Joint or official statement describing an agreed operational next step"
+      ],
+      "falsification_criteria": [
+        "No operational detail or agreed next-step process by the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-21",
+          "url": "https://apnews.com/article/2c7f54f07e755f506d9db9b91df282bd",
+          "note": "Initial U.S. proposal reported after Bessent-He talks; implementation details remain absent."
+        },
+        {
+          "date": "2026-09-25",
+          "note": "A formalized dialogue, incident line and follow-up meeting were publicly described; detailed operating criteria remain unpublished."
+        }
+      ]
+    },
+    {
+      "id": "pred-china-humanoid-commercial-proof-2026-10",
+      "created": "2026-09-21",
+      "status": "open",
+      "confidence": "medium",
+      "prediction": "By 2026-10-15 at least one humanoid-robot company affected by the current Chinese IPO scrutiny will publicly clarify state-supported versus commercial revenue, repeat-customer demand, or listing timing in a prospectus/exchange/company update, or no such clarification will surface.",
+      "review_after": "2026-10-15",
+      "confirmation_criteria": [
+        "Public filing or company/exchange update separates demand/revenue quality or listing timing",
+        "Concrete repeat-order or recurring-commercial-demand disclosure"
+      ],
+      "falsification_criteria": [
+        "No material public clarification by the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-21",
+          "url": "https://www.reuters.com/business/finance/china-slows-humanoid-robot-ipo-rush-hype-outruns-reality-2026-09-21/",
+          "note": "Reuters reports tighter IPO scrutiny focused on revenue sustainability and state-supported demand."
+        }
+      ]
+    },
+    {
+      "id": "pred-zcode-control-disclosure-2026-10",
+      "created": "2026-09-22",
+      "status": "open",
+      "confidence": "medium",
+      "prediction": "By 2026-10-15 Z.ai will publish at least one materially testable follow-up to the ZCode repository-upload incident: a technical root-cause/audit report, explicit repository-upload consent/default controls, residency controls, or independently inspectable deletion/retention evidence.",
+      "review_after": "2026-10-15",
+      "confirmation_criteria": [
+        "Public technical RCA or audit with data-flow detail",
+        "Product controls make repository upload explicit/opt-in or expose residency",
+        "Independent or inspectable evidence clarifies retention/deletion"
+      ],
+      "falsification_criteria": [
+        "No materially testable technical or control-plane follow-up by the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-22",
+          "url": "https://zcode.z.ai/en/changelog",
+          "note": "Primary changelog acknowledges an abnormal repository-upload fix; Reuters reports company apology and feature disabling, but a full public RCA is not available."
+        }
+      ]
+    },
+    {
+      "id": "pred-v900-independent-evidence-2027-q1",
+      "created": "2026-09-22",
+      "status": "open",
+      "confidence": "medium",
+      "prediction": "By 2027-03-31 independent or customer production evidence will clarify Zhenwu V900 performance, availability and system economics beyond Alibaba's 3x-performance claim, or the roadmap will remain primarily vendor-evidenced.",
+      "review_after": "2027-03-31",
+      "confirmation_criteria": [
+        "Comparable independent benchmark or production customer measurement with workload/system configuration",
+        "Evidence of shipping availability or production deployment"
+      ],
+      "falsification_criteria": [
+        "No decision-grade external performance/availability evidence by the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-22",
+          "url": "https://www.reuters.com/business/retail-consumer/alibaba-plans-ai-model-with-5-trillion-10-trillion-parameters-unveils-new-chip-2026-09-22/",
+          "note": "Alibaba announced V900 and an early-2027 mass-production target; 3x performance remains a vendor claim."
+        }
+      ]
+    },
+    {
+      "id": "pred-art-independent-validation-2026-10",
+      "created": "2026-09-24",
+      "status": "open",
+      "confidence": "medium",
+      "prediction": "By 2026-10-31 an external research group or a public follow-up with new experimental evidence will independently test or materially clarify ART's biological function beyond the initial RNA-expression result.",
+      "review_after": "2026-10-31",
+      "confirmation_criteria": [
+        "Independent experimental replication of a key ART property",
+        "New experimental evidence establishes or materially narrows ART's biological function"
+      ],
+      "falsification_criteria": [
+        "No independent replication or material functional clarification by the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-24",
+          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+          "note": "Initial Anthropic report; function explicitly remains unknown."
+        }
+      ]
+    },
+    {
+      "id": "pred-sandbox-strict-authority-default-2026-10",
+      "created": "2026-09-24",
+      "status": "open",
+      "confidence": "medium-high",
+      "prediction": "By 2026-10-31 at least one major sandbox platform named in the SPACE disclosures will make strict HTTPS hostname-authority validation a default egress behavior rather than only an optional mode or documentation caveat.",
+      "review_after": "2026-10-31",
+      "confirmation_criteria": [
+        "Vendor release/default change enforces SNI/Host/authority consistency for domain-based HTTPS allowlists by default",
+        "Public product documentation states strict authority validation is default-on for the affected policy mode"
+      ],
+      "falsification_criteria": [
+        "Affected major platforms retain only optional strict modes or documented limitations through the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-24",
+          "url": "https://www.perplexity.ai/en-GB/hub/blog/escaping-space-part-i",
+          "note": "Perplexity reports a mix of shipped fixes, optional strict modes, planned mitigations and documented limitations across affected vendors."
+        }
+      ]
+    },
+    {
+      "id": "pred-un-ai-standards-process-2026-10",
+      "created": "2026-09-24",
+      "status": "open",
+      "confidence": "medium",
+      "prediction": "By 2026-10-31 the UN Security Council AI discussion or adjacent government diplomacy will produce at least one public operational process for frontier-AI standards or incident coordination—such as a named working process, draft standard, bilateral channel or implementation timetable—or remain primarily rhetorical.",
+      "review_after": "2026-10-31",
+      "confirmation_criteria": [
+        "Named multilateral/bilateral working process with scope and next step",
+        "Draft/common standard or incident channel with operational detail",
+        "Government implementation timetable tied to the proposed evidence/incident framework"
+      ],
+      "falsification_criteria": [
+        "No public operational process, draft or implementation timetable by the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-24",
+          "url": "https://www.reuters.com/business/ai-leaders-brief-un-amid-warnings-technology-could-slip-beyond-human-control-2026-09-23/",
+          "note": "UN discussion exposed both cooperation proposals and governance disagreement."
+        }
+      ]
+    },
+    {
+      "id": "pred-akamai-anthropic-ramp-2026-12",
+      "created": "2026-09-25",
+      "status": "open",
+      "confidence": "medium",
+      "prediction": "By 2026-12-31 Akamai or Anthropic will disclose at least one concrete deployment, contracted-capacity or capex milestone showing how the $11.6B cloud commitment is translating into real infrastructure.",
+      "review_after": "2026-12-31",
+      "confirmation_criteria": [
+        "Named capacity or deployment milestone tied to the Anthropic agreement",
+        "Quantified capex or service milestone explicitly tied to the agreement"
+      ],
+      "falsification_criteria": [
+        "No concrete public execution milestone tied to the agreement by the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-25",
+          "url": "https://www.akamai.com/newsroom/press-release/akamai-announces-11-6-billion-multi-year-agreement-with-anthropic-to-support-growing-demand",
+          "note": "Initial contract and capex estimate."
+        }
+      ]
+    },
+    {
+      "id": "pred-local-agent-independent-eval-2026-10",
+      "created": "2026-09-25",
+      "status": "open",
+      "confidence": "medium",
+      "prediction": "By 2026-10-31 a credible independent or production-style evaluation will report a local or hybrid coding-agent workload with task success plus latency and data-movement or cost measurements, beyond vendor demos.",
+      "review_after": "2026-10-31",
+      "confirmation_criteria": [
+        "Independent or customer production-style local or hybrid agent evaluation",
+        "Reports task success plus latency and either data movement or cost under disclosed hardware and model conditions"
+      ],
+      "falsification_criteria": [
+        "No comparable independent or production-style evaluation by the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-25",
+          "url": "https://developers.googleblog.com/introducing-support-for-local-ai-models-in-the-antigravity-sdk/",
+          "note": "Google provides a vendor demo and local/hybrid execution path; independent decision-grade evidence remains missing."
+        }
+      ]
+    },
+    {
+      "id": "pred-placement-policy-runtime-2026-11",
+      "created": "2026-09-25",
+      "status": "open",
+      "confidence": "medium",
+      "prediction": "By 2026-11-30 at least one major AI or agent platform will expose local, edge or cloud execution placement as a declarative runtime policy or scheduler primitive rather than only as separate deployment options.",
+      "review_after": "2026-11-30",
+      "confirmation_criteria": [
+        "Documented policy or scheduler can choose among at least two execution locations using workload or runtime constraints",
+        "Placement decision and fallback are exposed as first-class configuration or API state"
+      ],
+      "falsification_criteria": [
+        "Major platforms still expose only manual or static deployment-location choices by the review date"
+      ],
+      "evidence": [
+        {
+          "date": "2026-09-25",
+          "url": "https://developers.googleblog.com/introducing-support-for-local-ai-models-in-the-antigravity-sdk/"
+        },
+        {
+          "date": "2026-09-25",
+          "url": "https://www.microsoft.com/en-us/research/blog/offloaded-inference-for-real-world-physical-ai-robotics/"
+        }
+      ]
+    }
+  ],
+  "scorecard": {
+    "confirmed": 2,
+    "falsified": 3,
+    "expired": 0,
+    "open": 16,
+    "progress": 1
+  },
+  "last_daily_review": "2026-09-25",
+  "last_daily_review_note": "Reviewed open items against new evidence; one bilateral AI coordination item moved to progress while implementation details remain unpublished."
+}

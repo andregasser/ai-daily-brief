@@ -1,0 +1,438 @@
+{
+  "version": 1,
+  "date": "2026-09-25",
+  "created_at": "2026-09-25T07:00:00+02:00",
+  "coverage_window": {
+    "from": "2026-09-24T07:00:00+02:00",
+    "to": "2026-09-25T07:00:00+02:00",
+    "fallback_used": false
+  },
+  "continuity": {
+    "question": "Was hat sich seit gestern geändert?",
+    "answer": "The strongest delta is execution placement: Anthropic-Akamai adds a large distributed CPU-cloud commitment, Google adds local and hybrid agent execution, and Microsoft quantifies robot-to-edge or cloud offload. Bilateral U.S.-China incident coordination also gained a named process while broader guardrail positions remained split.",
+    "not_repeated": [
+      "Perplexity SPACE network-authority results",
+      "Anthropic ART discovery details",
+      "FermiLink multi-day lab agent",
+      "FLUX 3 Action benchmark"
+    ]
+  },
+  "mandatory_source_sweep": {
+    "completed": true,
+    "equal_priority": true,
+    "sources": [
+      "Ben's Bites News",
+      "Ben's Bites",
+      "AI Weekly",
+      "OpenAI",
+      "Anthropic",
+      "Google DeepMind",
+      "Google AI",
+      "Meta AI",
+      "Meta AI Research",
+      "Microsoft AI",
+      "AWS Machine Learning",
+      "NVIDIA AI",
+      "Hugging Face",
+      "Mistral AI",
+      "DeepSeek",
+      "World Labs",
+      "Reuters AI",
+      "Artificial Analysis",
+      "arXiv AI",
+      "arXiv Machine Learning",
+      "European Commission Digital Strategy",
+      "UK AI Security Institute"
+    ]
+  },
+  "role_catalog_sweep": {
+    "completed": true,
+    "roles": [
+      "discovery",
+      "primary",
+      "journalism",
+      "engineering",
+      "research",
+      "business_strategy",
+      "contrarian",
+      "builder_radar",
+      "community_signal",
+      "regional"
+    ]
+  },
+  "open_web_discovery": {
+    "completed": true,
+    "domain_whitelist": false
+  },
+  "candidates": [
+    {
+      "id": "akamai-anthropic",
+      "title": "Akamai-Anthropic cloud agreement",
+      "selected": true,
+      "evidence": "confirmed_multiple"
+    },
+    {
+      "id": "antigravity-local",
+      "title": "Google Antigravity local and hybrid agents",
+      "selected": true,
+      "evidence": "confirmed_primary plus vendor demo"
+    },
+    {
+      "id": "physical-ai-offload",
+      "title": "Microsoft Physical AI offloaded inference",
+      "selected": true,
+      "evidence": "primary research plus vendor measurements"
+    },
+    {
+      "id": "us-china-incident",
+      "title": "U.S.-China formalized AI dialogue and incident line",
+      "selected": true,
+      "evidence": "reported official statement"
+    },
+    {
+      "id": "rrsi",
+      "title": "RRSI regularized recursive harness improvement",
+      "selected": true,
+      "evidence": "preprint author evidence"
+    },
+    {
+      "id": "nemotron-diarization",
+      "title": "NVIDIA Nemotron 3 Diarization",
+      "selected": true,
+      "evidence": "primary release plus initial vendor benchmark"
+    },
+    {
+      "id": "reported-model-preview",
+      "title": "Reported model preview without primary release",
+      "selected": false,
+      "evidence": "reported only"
+    },
+    {
+      "id": "home-mcp",
+      "title": "Home automation MCP discovery signal",
+      "selected": false,
+      "evidence": "discovery only"
+    },
+    {
+      "id": "space-ai-loi",
+      "title": "Reported space-sector AI letter of intent",
+      "selected": false,
+      "evidence": "insufficient primary scope"
+    }
+  ],
+  "clusters": [
+    {
+      "id": "placement-aware-ai",
+      "members": [
+        "antigravity-local",
+        "physical-ai-offload",
+        "akamai-anthropic"
+      ],
+      "assessment": "Independent layers point to workload placement becoming strategic across procurement, local agents and edge/cloud offload."
+    },
+    {
+      "id": "bilateral-governance",
+      "members": [
+        "us-china-incident"
+      ],
+      "assessment": "Incident coordination gained a named process, but broader guardrail alignment did not."
+    },
+    {
+      "id": "builder-research",
+      "members": [
+        "rrsi",
+        "nemotron-diarization"
+      ],
+      "assessment": "Testable artifacts retained with benchmark caveats."
+    }
+  ],
+  "rejected_stories": [
+    {
+      "story": "Reported model preview",
+      "reason": "No primary release or documentation found; defer until release or stronger evidence."
+    },
+    {
+      "story": "Home automation MCP discovery signal",
+      "reason": "Discovery signal did not receive sufficiently strong current primary corroboration relative to higher-evidence engineering items."
+    },
+    {
+      "story": "Space-sector AI letter of intent",
+      "reason": "No sufficiently detailed current primary source with commercial scope or implementation timeline was found."
+    },
+    {
+      "story": "Unchanged Sep24 agent-security and agentic-science stories",
+      "reason": "No material new evidence justified repeating yesterday's coverage."
+    }
+  ],
+  "claims_evidence": [
+    {
+      "id": "2026-09-25-akamai-anthropic-deal",
+      "state": "confirmed_multiple"
+    },
+    {
+      "id": "2026-09-25-akamai-cpu-capex",
+      "state": "confirmed_multiple"
+    },
+    {
+      "id": "2026-09-25-antigravity-local-sdk",
+      "state": "confirmed_primary"
+    },
+    {
+      "id": "2026-09-25-antigravity-hybrid-demo",
+      "state": "vendor_claim"
+    },
+    {
+      "id": "2026-09-25-microsoft-robotics-offload",
+      "state": "vendor_claim"
+    },
+    {
+      "id": "2026-09-25-placement-aware-signal",
+      "state": "early_signal"
+    },
+    {
+      "id": "2026-09-25-us-china-incident-dialogue",
+      "state": "reported"
+    },
+    {
+      "id": "2026-09-25-us-china-governance-divergence",
+      "state": "reported"
+    },
+    {
+      "id": "2026-09-25-rrsi-results",
+      "state": "vendor_claim"
+    },
+    {
+      "id": "2026-09-25-nemotron-diarization-benchmark",
+      "state": "vendor_claim"
+    }
+  ],
+  "evidence": {
+    "primary": [
+      "Akamai",
+      "Google Developers",
+      "Microsoft Research",
+      "Google Research code",
+      "NVIDIA on Hugging Face"
+    ],
+    "independent": [
+      "Reuters"
+    ],
+    "research": [
+      "arXiv:2609.24972"
+    ],
+    "unresolved_material_conflicts": []
+  },
+  "source_contributions": [
+    {
+      "source": "Akamai",
+      "role": "primary",
+      "contribution": "Agreement value, term, CPU scope, capex estimate and warrant mechanics."
+    },
+    {
+      "source": "Reuters AI",
+      "role": "journalism",
+      "contribution": "Independent agreement corroboration and bilateral governance context."
+    },
+    {
+      "source": "Google Developers",
+      "role": "primary engineering",
+      "contribution": "Local and hybrid Antigravity execution details."
+    },
+    {
+      "source": "Microsoft Research",
+      "role": "research engineering",
+      "contribution": "Physical-AI offload measurements and network tradeoffs."
+    },
+    {
+      "source": "arXiv and Google Research",
+      "role": "research",
+      "contribution": "RRSI paper and code."
+    },
+    {
+      "source": "NVIDIA on Hugging Face",
+      "role": "primary tooling",
+      "contribution": "Diarization release and initial benchmark."
+    }
+  ],
+  "ranking": [
+    {
+      "rank": 1,
+      "id": "akamai-anthropic",
+      "reason": "Durable infrastructure commitment with primary plus independent evidence and strategic impact."
+    },
+    {
+      "rank": 2,
+      "id": "placement-aware-ai",
+      "reason": "Cross-source architecture synthesis with direct builder relevance."
+    },
+    {
+      "rank": 3,
+      "id": "us-china-incident",
+      "reason": "Material continuity update to an open prediction."
+    },
+    {
+      "rank": 4,
+      "id": "rrsi",
+      "reason": "Research with code and practical eval implications, but preprint-only performance evidence."
+    },
+    {
+      "rank": 5,
+      "id": "nemotron-diarization",
+      "reason": "Concrete testable release; benchmark remains initial and vendor-controlled."
+    }
+  ],
+  "research_watch_hits": [
+    {
+      "watch": "coding-agents",
+      "hit": "Local and hybrid agent execution plus a placement-routing experiment."
+    },
+    {
+      "watch": "inference-serving",
+      "hit": "Local, edge and cloud placement emerges as a cost-per-success variable."
+    },
+    {
+      "watch": "open-models-local",
+      "hit": "Local Gemma execution and Nemotron diarization."
+    },
+    {
+      "watch": "ai-hardware-compute",
+      "hit": "Large distributed CPU-cloud commitment and capex buildout."
+    },
+    {
+      "watch": "agent-evaluation",
+      "hit": "RRSI reinforces held-out and OOD regularization for evolving harnesses."
+    },
+    {
+      "watch": "regulation-governance",
+      "hit": "Bilateral incident dialogue progresses while guardrail positions diverge."
+    }
+  ],
+  "contrarian_evidence": [
+    {
+      "story": "Akamai-Anthropic",
+      "finding": "Contract value is multi-year, not current revenue; capex is an Akamai estimate."
+    },
+    {
+      "story": "Antigravity",
+      "finding": "Local-token split is a vendor demo, not an independent production distribution."
+    },
+    {
+      "story": "Physical AI offload",
+      "finding": "Results are workload-specific and remote execution depends on network and capacity."
+    },
+    {
+      "story": "U.S.-China dialogue",
+      "finding": "No public operating details exist; broader governance views remain divergent."
+    },
+    {
+      "story": "RRSI",
+      "finding": "Preprint metrics are author-reported and not independently reproduced."
+    },
+    {
+      "story": "Nemotron diarization",
+      "finding": "Benchmark is initial and protocol-sensitive."
+    }
+  ],
+  "emerging_signals": [
+    {
+      "id": "placement-aware-inference",
+      "confidence": "medium",
+      "assessment": "Execution location is becoming a programmable architecture variable rather than a fixed deployment decision.",
+      "evidence_chain": [
+        "Google local/hybrid agents",
+        "Microsoft robot-to-edge/cloud offload",
+        "Anthropic-Akamai distributed CPU capacity"
+      ],
+      "falsification": "Weakens if independent hybrid/local workloads lose too much quality, remote execution is dominated by network failure, or placement never becomes a platform policy primitive."
+    }
+  ],
+  "builder_radar": {
+    "new": [
+      "builder-placement-routing-harness"
+    ],
+    "reviews": [
+      {
+        "id": "builder-agent-egress-canary",
+        "disposition": "promote_promising",
+        "next_review": "2026-09-29"
+      },
+      {
+        "id": "builder-biomolecular-kernel-repro",
+        "disposition": "remain_experimental",
+        "next_review": "2026-10-18"
+      }
+    ]
+  },
+  "eval_references": {
+    "executed": false,
+    "reason": "No pinned comparable local or remote agent environment and no representative robotics placement fixture were available; vendor measurements were not relabeled as house evidence."
+  },
+  "prediction_reviews": [
+    {
+      "id": "pred-us-china-ai-incident-mechanism-2026-10",
+      "from": "open",
+      "to": "progress",
+      "reason": "A formalized dialogue, incident line and follow-up meeting were publicly described; detailed operating criteria remain absent."
+    }
+  ],
+  "red_team_report": {
+    "status": "passed",
+    "checks": [
+      "numbers",
+      "confidence",
+      "vendor claim labels",
+      "primary sources",
+      "counterevidence",
+      "benchmark comparability",
+      "yesterday duplicates",
+      "DE/EN equivalence",
+      "visual provenance"
+    ],
+    "findings": [
+      {
+        "finding": "Agreement value could be misread as current revenue.",
+        "disposition": "Qualified as a multi-year contractual commitment."
+      },
+      {
+        "finding": "Google hybrid token split is vendor-demo evidence.",
+        "disposition": "Explicitly labeled as a vendor demo."
+      },
+      {
+        "finding": "Microsoft measurements could be generalized too broadly.",
+        "disposition": "Scope and network tradeoffs stated."
+      },
+      {
+        "finding": "Bilateral incident line could be overstated as a complete mechanism.",
+        "disposition": "Status kept at progress and missing operating details stated."
+      },
+      {
+        "finding": "RRSI and Nemotron performance figures are author or vendor controlled.",
+        "disposition": "Labeled accordingly and not treated as house results."
+      },
+      {
+        "finding": "DE and EN facts, numbers, evidence labels and forward points match.",
+        "disposition": "Passed."
+      },
+      {
+        "finding": "Visuals are original diagrams or evidence cards based on cited data.",
+        "disposition": "Passed."
+      }
+    ],
+    "unresolved_material_findings": []
+  },
+  "quality_gates": {
+    "claim_level_evidence": true,
+    "red_team_pass": true,
+    "research_audit": true,
+    "source_metrics_updated": true,
+    "due_prediction_reviews": true,
+    "due_builder_reviews": true,
+    "no_unresolved_material_contradictions": true,
+    "de_en_equivalence": true,
+    "visual_provenance": true
+  },
+  "publish_decision": {
+    "status": "publish",
+    "reason": "All required gates pass and no unresolved material contradiction remains."
+  }
+}

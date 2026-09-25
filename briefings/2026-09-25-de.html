@@ -1,0 +1,108 @@
+<section class="briefing-intro">
+<div class="brief-label">AI Daily Brief · 25.09.2026</div>
+<h1>AI wird zum Placement-Problem: Anthropic bindet 11,6 Mrd. $ Cloud-Kapazität, Agents wandern lokal – Robotik nach Edge und Cloud</h1>
+<p class="dek">Gestern stand verifizierbare Ausführung im Zentrum. Heute zeigt sich die nächste Schicht: Nicht nur welches Modell läuft, sondern wo welcher Teil eines AI-Workloads läuft, wird zur Architektur- und Geschäftsentscheidung.</p>
+<p><strong>Editorial Lead — Analyse:</strong> Anthropic bindet sich für 11,6 Mrd. US-Dollar an Akamais verteilte Cloud für wachsende CPU-Workloads. Google öffnet Antigravity für komplett lokale und hybride Agent-Workflows. Microsoft Research zeigt in der Robotik die Gegenbewegung: Edge-/Cloud-Offload kann Onboard-Limits überwinden. Die gemeinsame Klammer ist <strong>Placement-aware AI</strong>: Datenschutz, Latenz, Energie, Kapazität und Kosten entscheiden pro Subtask über den Ausführungsort.</p>
+</section>
+<section class="executive">
+<div class="section-kicker">In 60 Sekunden</div>
+<div class="signal-grid">
+<div><strong>Anthropic × Akamai: 11,6 Mrd. $</strong><br>Sieben Jahre Cloud-Verpflichtung, potenziell weitere 9 Mrd. $. Akamai schätzt rund 5,5 Mrd. $ Capex für die initiale Verpflichtung.</div>
+<div><strong>Agents laufen lokal</strong><br>Googles Antigravity SDK unterstützt lokale Workflows, initial mit Gemma 4 26B A4B via LiteRT. Komplett offline ist möglich; empfohlen werden &gt;24 GB VRAM bzw. Unified Memory.</div>
+<div><strong>Robotik lagert Inference aus</strong><br>Microsoft Research misst bei schwächeren Onboard-GPUs bis zu 383% langsamere Mapping-/Planning-Workloads, 30% weniger rechtzeitige Hinderniserkennung und bis zu 50% niedrigere VLA-Genauigkeit.</div>
+<div><strong>US–China: Kanal ja, Guardrails uneinig</strong><br>Bessent sagte, beide Seiten hätten einen formalisierten AI-Dialog inklusive „incident line“ vereinbart; beim Gipfel am 24.09. traten zugleich gegensätzliche Positionen zu neuen Guardrails hervor.</div>
+</div>
+</section>
+<section class="chapter">
+<div class="section-kicker">Business &amp; Strategie</div>
+<article class="story lead-story">
+<div class="story-meta"><span class="priority critical">CRITICAL</span><span class="evidence multiple">CONFIRMED MULTIPLE</span></div>
+<h2>Anthropic bindet 11,6 Mrd. $ an Akamai – verteilte CPU-Kapazität wird zum strategischen Asset</h2>
+<p>Akamai und Anthropic haben eine <strong>11,6-Mrd.-US-Dollar-Verpflichtung über sieben Jahre</strong> vereinbart. Laut Akamai soll die verteilte Cloud wachsende <strong>CPU-Workloads</strong> von Anthropic bedienen. Die Beziehung kann um weitere 9 Mrd. $ wachsen. Ein an die Ausweitung gekoppelter Warrant kann Anthropic bis zu ungefähr 5% von Akamais Aktien verschaffen.</p>
+<div class="concept-visual" data-visual-class="evidence-card">
+<div class="visual-label">AI Daily Brief · Original evidence card · Contract economics</div>
+<div class="signal-grid"><div><strong>11,6 Mrd. $</strong><br>initiale Verpflichtung</div><div><strong>7 Jahre</strong><br>Laufzeit</div><div><strong>+9 Mrd. $</strong><br>mögliche Ausweitung</div><div><strong>~5,5 Mrd. $</strong><br>geschätzter Capex</div></div>
+<div class="visual-source">Quellen: Akamai; Reuters, 24.09.2026. Vertragsvolumen ist nicht gleich Umsatzrealisierung.</div>
+</div>
+<p class="changed"><strong>Was hat sich seit gestern geändert?</strong> Frontier-Compute zeigt sich heute als breiteres Portfolio: Anthropic sichert nicht nur Accelerator-Kapazität, sondern bindet auf Jahre verteilte CPU-Cloud-Infrastruktur.</p>
+<p class="why"><strong>Warum relevant?</strong> Agenten-, Daten-, Orchestrierungs-, Tool- und Service-Workloads erzeugen neben GPUs enorme CPU-, Memory-, Netzwerk- und Edge-Nachfrage. Für Infrastruktur-Anbieter entsteht Wert ausserhalb des GPU-Racks.</p>
+<p class="signal-hype"><strong>Signal vs. Hype:</strong> Der Vertrag ist primär bestätigt und finanziell substanziell. 11,6 Mrd. $ sind aber eine mehrjährige Verpflichtung, kein aktueller Jahresumsatz; Akamais 5,5-Mrd.-Capex ist eine Unternehmensschätzung.</p>
+<div class="sources"><strong>Originalquellen:</strong> <a href="https://www.akamai.com/newsroom/press-release/akamai-announces-11-6-billion-multi-year-agreement-with-anthropic-to-support-growing-demand">Akamai</a> · <a href="https://www.reuters.com/technology/akamai-anthropic-sign-116-billion-cloud-services-deal-2026-09-24/">Reuters</a></div>
+</article>
+<article class="story">
+<div class="story-meta"><span class="priority high">HIGH</span><span class="evidence reported">REPORTED + OFFICIAL STATEMENT</span></div>
+<h2>US–China: Ein AI-Incident-Kanal nimmt Form an, während die politische Linie auseinanderläuft</h2>
+<p>US-Finanzminister Scott Bessent sagte am 21. September, Washington und Peking hätten einen formalisierten AI-Dialog inklusive „incident line“ vereinbart und planten in etwa zwei Monaten ein weiteres Treffen in Shenzhen. Beim Trump-Xi-Gipfel am 24. September wurde zugleich der politische Abstand sichtbar: Trump sprach sich gegen neue AI-Guardrails aus; Xi sagte, beide Länder müssten AI so managen, dass sie unter menschlicher Kontrolle bleibe.</p>
+<p class="changed"><strong>Kontinuitäts-Check:</strong> Die Prediction zum bilateralen Incident-Mechanismus wechselt von <code>open</code> zu <code>progress</code>. Ein offizieller nächster Prozess ist benannt; Trigger, Severity-Scope, Kontaktweg und Notification-Timeline sind öffentlich noch nicht spezifiziert.</p>
+<div class="sources"><a href="https://www.reuters.com/world/asia-pacific/us-china-meet-again-ai-safety-two-months-shenzhen-bessent-says-2026-09-21/">Reuters · Incident dialogue</a> · <a href="https://www.reuters.com/world/china/four-takeaways-trumps-summit-with-xi-washington-2026-09-24/">Reuters · Summit</a></div>
+</article>
+</section>
+<section class="chapter">
+<div class="section-kicker">Modelle, Agents &amp; Engineering</div>
+<article class="story">
+<div class="story-meta"><span class="priority critical">CRITICAL</span><span class="evidence primary">PRIMARY + VENDOR MEASUREMENTS</span></div>
+<h2>Local ist kein Zielzustand, Cloud auch nicht: Der Agent-Stack braucht Placement-Policies</h2>
+<p>Google unterstützt im <strong>Antigravity SDK</strong> lokale Modelle und Ausführungsoptionen; initial wird Gemma 4 26B A4B via LiteRT hervorgehoben. Lokale Agenten können komplett offline laufen. Google empfiehlt mehr als 24 GB VRAM oder Unified Memory. In einem aufgezeichneten Hybrid-Demo plant Gemini 3.8 Flash in der Cloud, während lokale Gemma-Instanzen Audit und Patch-Arbeit übernehmen; Google meldet 97,2% der 3'322 Tokens lokal. Das ist ein Vendor-Demo, kein unabhängiger Benchmark.</p>
+<p>Microsoft Research zeigt gleichzeitig, warum „alles lokal“ ebenfalls falsch sein kann. In einer Physical-AI-Studie verlangsamten kleinere GPUs Mapping/Planning gegenüber einer A100 um bis zu 383%; bei Navigation sank die rechtzeitige Hinderniserkennung um 30%, und die Genauigkeit von VLA-Modellen fiel in den getesteten Setups um bis zu 50%. Microsoft nennt Netzwerk-Latenz, Bandbreite und GPU-Verfügbarkeit ausdrücklich als Gegenkosten des Offloads.</p>
+<div class="concept-visual" data-visual-class="explanatory-diagram">
+<div class="visual-label">AI Daily Brief · Original diagram · Placement-aware orchestration</div>
+<div class="flow"><span class="node">Subtask + Data Class</span><span class="arrow">→</span><span class="node">Privacy · Latency · Power · Cost · Capacity</span><span class="arrow">→</span><span class="node">Local / Edge / Cloud</span><span class="arrow">→</span><span class="node">Task Success + Telemetry</span></div>
+<div class="visual-source">Synthese aus Google Antigravity SDK und Microsoft Research.</div>
+</div>
+<div class="concept-visual" data-visual-class="data-visualization">
+<div class="visual-label">AI Daily Brief · Original data card · Microsoft Physical AI</div>
+<div class="signal-grid"><div><strong>bis +383%</strong><br>Mapping/Planning-Laufzeit</div><div><strong>−30%</strong><br>rechtzeitige Hinderniserkennung</div><div><strong>bis −50%</strong><br>VLA-Genauigkeit</div><div><strong>&gt;100%</strong><br>mögliche Stretch-3-Batterielaufzeit durch Offload</div></div>
+<div class="visual-source">Quelle: Microsoft Research, 23.09.2026. Workload- und Hardware-spezifische Messungen.</div>
+</div>
+<p class="engineering"><strong>Engineering Takeaway:</strong> Behandle Execution Placement wie Model Routing: deklarative Policy statt hart verdrahteter Endpoints. Logge pro Task Datenklassifikation, gewählten Ort, transferierte Bytes, p50/p95-Latenz, Task Success, Kosten und Fallback-Grund.</p>
+<p class="why"><strong>Originalanalyse:</strong> Google bewegt Agent-Workloads Richtung Gerät, Microsoft Robotik-Inference vom Gerät weg. Das ist kein Widerspruch: <strong>Der Ausführungsort wird workload-spezifisch.</strong> Placement wird neben Modellwahl, Context Engineering und Tool Policy zu einer Control-Plane-Entscheidung.</p>
+<p class="signal-hype"><strong>Signal vs. Hype:</strong> Beide Quellen sind Primärquellen, aber die Leistungszahlen stammen aus eigenen Demos/Studien. Entscheidend ist, ob der eigene Workload unter gepinnten Daten-, Netz- und Hardwarebedingungen reproduzierbar besser platziert wird.</p>
+<div class="sources"><a href="https://developers.googleblog.com/introducing-support-for-local-ai-models-in-the-antigravity-sdk/">Google Developers</a> · <a href="https://www.microsoft.com/en-us/research/blog/offloaded-inference-for-real-world-physical-ai-robotics/">Microsoft Research</a></div>
+</article>
+</section>
+<section class="signal-box emerging-callout">
+<div class="section-kicker">Emerging Signal</div>
+<h2>Placement-aware AI wird zur neuen Orchestrierungsschicht</h2>
+<p><strong>Confidence: Medium.</strong> Anthropic kauft verteilte CPU-Cloud-Kapazität, Google macht lokale/hybride Agent-Ausführung explizit, Microsoft operationalisiert Robot→Edge→Cloud-Offload. Das Muster ist nicht Zentralisierung oder Dezentralisierung, sondern <strong>programmierbare Platzierung</strong>.</p>
+<p><strong>Falsifizierbar:</strong> Das Signal schwächt sich, wenn lokale/hybride Agent-Workflows real zu viel Qualitätsverlust erzeugen, Remote-Robotik an Netzwerkjitter scheitert oder Plattformen Placement langfristig nur als manuelle Deployment-Option behandeln.</p>
+</section>
+<section class="chapter">
+<div class="section-kicker">Research Digest</div>
+<article class="story">
+<h2>RRSI: Harness-Selbstverbesserung braucht Regularisierung gegen Benchmark-Overfitting</h2>
+<p>Ein neues arXiv-Paper mit offenem Google-Research-Code behandelt den Agent-Harness selbst als evolvierbares System. RRSI begrenzt gebündelte Änderungen, nutzt einen Critic gegen benchmark-spezifische Tricks und entfernt teure oder nutzlose Komponenten. Die Autoren berichten über acht Benchmarks bis zu 14,1 Punkte Gewinn in-distribution, bis zu 4,7 Punkte auf fünf OOD-Benchmarks und 30% weniger Policy-Tokens als unregularisierte Evolution. Das ist frühe Autorenevidenz; eine unabhängige Reproduktion liegt nicht vor.</p>
+<div class="sources"><a href="https://arxiv.org/abs/2609.24972">arXiv</a> · <a href="https://github.com/google-research/rrsi">Code</a></div>
+</article>
+</section>
+<section class="chapter">
+<div class="section-kicker">Open Source Radar</div>
+<article class="story">
+<h2>NVIDIA Nemotron 3 Diarization: Streaming Speaker-Turns mit mehreren Latenzpunkten</h2>
+<p>NVIDIA hat auf Hugging Face Nemotron 3 Diarization veröffentlicht. Der Chunked-Inference-Ansatz unterstützt empfohlene Input-Buffer von 30,4 s bis 0,32 s. Im initialen VoiceArena Diarization-Bench meldet NVIDIA <strong>14,72% DER</strong> gegenüber 19,3% beim nächsten System über 139 englische Gespräche (~22 Stunden). Die Auswertung ist noch initial und protokollabhängig.</p>
+<div class="sources"><a href="https://huggingface.co/blog/nvidia/nemotron-diarization">NVIDIA on Hugging Face</a></div>
+</article>
+</section>
+<section class="chapter">
+<div class="section-kicker">Builder Radar</div>
+<article class="story"><h2>Placement-Routing-Harness für lokale, Edge- und Cloud-Agenten</h2><p>Neu: Führe 20–50 repräsentative Agent-Tasks mit identischen Prompts/Tools in mindestens zwei Placement-Varianten aus. Miss Task Success, p95-Latenz, transferierte Bytes, Kosten und Fallbacks. Erfolg heisst eine reproduzierbare Policy, nicht einfach „mehr lokal“.</p><p><strong>Lifecycle:</strong> <code>trial</code>, erster Review am 28.09.</p></article>
+<article class="story"><h2>3-Tage-Review: Default-Deny-Egress-Canary wird stärker</h2><p>Der Item vom 22.09. wird von <code>trial</code> auf <code>promising</code> hochgestuft. Perplexitys SPACE-Red-Team stärkt die zugrunde liegende Kontrollklasse. Nächster Review: 29.09.</p></article>
+<article class="story"><h2>7-Tage-Review: Biomolekulare Kernel-Optimierungen bleiben experimentell</h2><p>Die offene Anthropic-Implementierung bleibt testbar, aber dieser Lauf fand keine glaubwürdige unabhängige Reproduktion der berichteten End-to-End-Speedups. Nächster Review: 18.10.</p></article>
+</section>
+<section class="concept">
+<div class="section-kicker">🔬 Konzept des Tages</div>
+<h2 class="concept-heading">Placement-aware Inference: Local, Edge und Cloud als Scheduling-Problem</h2>
+<p>Agentische Systeme zerlegen Arbeit in heterogene Subtasks. Ein Planner kann nur Dateinamen brauchen, ein Code-Worker vollständigen Quelltext; ein Robot braucht eine harte Reaktionsgrenze, ein globaler Planner viel Compute. Deshalb sollte der Ausführungsort nicht pauschal beim Deployment festgelegt werden.</p>
+<p><strong>Technische Intuition:</strong> Für jeden Subtask wird ein Ort aus Local, Edge und Cloud gewählt, der Task Success maximiert und gleichzeitig Privacy-, Latenz-, Kapazitäts- und Kostenbudgets respektiert.</p>
+<div class="concept-visual" data-visual-class="explanatory-diagram"><div class="visual-label">AI Daily Brief · Original diagram · Placement decision</div><div class="flow"><span class="node">Task</span><span class="arrow">→</span><span class="node">Data Sensitivity + Latency SLO + Compute Need + Network State</span><span class="arrow">→</span><span class="node">Placement + Fallback</span></div><div class="visual-source">Synthese aus Google Antigravity SDK und Microsoft Physical AI offloading; verwandt mit „Model Portfolio Routing“ vom 23.09.</div></div>
+<p><strong>Praktische Relevanz:</strong> Das erweitert Model Routing um eine zweite Achse: nicht nur welches Modell, sondern auch wo Modell, Tools und Daten zusammenkommen dürfen. Für production-grade Agents sollte die Entscheidung policy-basiert, beobachtbar und fallback-fähig sein.</p>
+<div class="sources"><a href="https://developers.googleblog.com/introducing-support-for-local-ai-models-in-the-antigravity-sdk/">Google Developers</a> · <a href="https://www.microsoft.com/en-us/research/blog/offloaded-inference-for-real-world-physical-ai-robotics/">Microsoft Research</a></div>
+</section>
+<section class="chapter">
+<div class="section-kicker">Was als Nächstes wichtig wird</div>
+<div class="signal-grid">
+<div><strong>Akamai-Ramp bis 31.12.</strong><br>Werden Deployment-/Umsatz-/Capex-Meilensteine sichtbar, die zeigen, wie schnell die Verpflichtung in reale Kapazität übergeht?</div>
+<div><strong>Local-Agent-Evidenz bis 31.10.</strong><br>Erscheint eine unabhängige Evaluation eines Hybrid-Agent-Setups mit Task Success, Latenz, Datenabfluss und Kosten?</div>
+<div><strong>Placement-Policy bis 30.11.</strong><br>Macht mindestens eine grosse AI-Plattform Local/Edge/Cloud-Placement zu einer deklarativen Runtime-Policy?</div>
+<div><strong>US–China Incident Line bis 15.10.</strong><br>Werden Trigger, Kontaktweg, Severity-Scope oder Notification-Timeline öffentlich konkretisiert?</div>
+</div>
+</section>
