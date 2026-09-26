@@ -21,7 +21,7 @@ jobs:
         run: |
           git config user.name "AI Daily Brief"
           git config user.email "actions@users.noreply.github.com"
-          git add briefings weekly data
+          git add briefings weekly data assets/illustrations
           if git diff --cached --quiet; then
             echo "No generated changes"
             exit 0

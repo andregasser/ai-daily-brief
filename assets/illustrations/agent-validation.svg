@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 500" fill="none">
+  <defs>
+    <linearGradient id="paper" x1="45" y1="20" x2="550" y2="480" gradientUnits="userSpaceOnUse"><stop stop-color="#edf1fb"/><stop offset="1" stop-color="#e5efea"/></linearGradient>
+    <linearGradient id="screen" x1="72" y1="167" x2="318" y2="353" gradientUnits="userSpaceOnUse"><stop stop-color="#52698d"/><stop offset="1" stop-color="#354661"/></linearGradient>
+    <linearGradient id="glass" x1="415" y1="47" x2="520" y2="233" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#d7e8e1"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="170%" height="180%"><feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#344666" flood-opacity=".09"/></filter>
+  </defs>
+  <rect x="7" y="7" width="606" height="486" rx="40" fill="url(#paper)"/>
+  <circle cx="306" cy="250" r="193" stroke="#cbd6e3" stroke-dasharray="3 9"/>
+  <circle cx="306" cy="250" r="145" stroke="#d6dfe9"/>
+  <!-- An agent's digital work branches into scientific verification and access control. -->
+  <path d="M294 218C351 218 320 115 388 115M296 282C358 282 340 363 407 363" stroke="#899db8" stroke-width="3" stroke-dasharray="6 7"/>
+  <path d="m379 108 9 7-9 7m19 241 9 7-9 7" stroke="#899db8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g filter="url(#shadow)">
+    <rect x="38" y="151" width="284" height="204" rx="20" fill="#fcfdff" stroke="#c6d2e2" stroke-width="2"/>
+    <rect x="52" y="166" width="256" height="174" rx="11" fill="url(#screen)"/>
+    <circle cx="67" cy="180" r="3" fill="#c1d3cb"/><circle cx="79" cy="180" r="3" fill="#d3c5df"/><circle cx="91" cy="180" r="3" fill="#e1cbb1"/>
+    <path d="M157 357v20m-30 0h84" stroke="#a8b8ca" stroke-width="9" stroke-linecap="round"/>
+    <rect x="76" y="202" width="65" height="65" rx="16" fill="#6a81a4"/>
+    <path d="m94 220-10 13 10 13m30-26 10 13-10 13m-13-30-8 34" stroke="#e9f1f7" stroke-width="3" stroke-linecap="round"/>
+    <path d="M164 211h104m-104 16h77m-77 17h91" stroke="#afc2d7" stroke-width="6" stroke-linecap="round"/>
+    <rect x="76" y="286" width="31" height="25" rx="7" fill="#9dbdb3"/><rect x="125" y="286" width="31" height="25" rx="7" fill="#a6b8d3"/><rect x="174" y="286" width="31" height="25" rx="7" fill="#b6accf"/>
+    <path d="M107 299h18m31 0h18" stroke="#bccbdc" stroke-width="2"/>
+    <circle cx="258" cy="299" r="16" stroke="#a7beb8" stroke-width="2"/><path d="m251 299 5 5 9-11" stroke="#cbe3d7" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- Stylized wet-lab validation; this is not a depiction of a specific experiment. -->
+  <g filter="url(#shadow)">
+    <rect x="380" y="40" width="185" height="196" rx="26" fill="#fafdfb" stroke="#c7dcd3" stroke-width="2"/>
+    <path d="M429 63h43m-34 2v48l-34 58c-6 12 1 22 13 22h66c12 0 19-10 13-22l-34-58V65" fill="url(#glass)" stroke="#799c91" stroke-width="3" stroke-linecap="round"/>
+    <path d="m424 145-17 30c-3 6 2 13 10 13h65c8 0 13-7 10-13l-18-30c-17 12-33-10-50 0Z" fill="#aacdbd"/>
+    <circle cx="439" cy="164" r="4" fill="#e7f3eb"/><circle cx="461" cy="177" r="6" fill="#e7f3eb"/><circle cx="454" cy="131" r="3" fill="#9ac1b0"/>
+    <ellipse cx="511" cy="202" rx="35" ry="12" fill="#d3e5dc" stroke="#96b4a7" stroke-width="2"/>
+    <path d="M477 191v10c0 7 15 12 34 12s35-5 35-12v-10" fill="#e1ede5" stroke="#96b4a7" stroke-width="2"/>
+    <ellipse cx="511" cy="190" rx="35" ry="12" fill="#f3faf5" stroke="#96b4a7" stroke-width="2"/>
+    <ellipse cx="503" cy="190" rx="6" ry="2.5" fill="#a5c7b6"/><ellipse cx="521" cy="188" rx="4" ry="2" fill="#bfb6d2"/>
+  </g>
+  <!-- Network access is checked independently of the execution boundary. -->
+  <g filter="url(#shadow)">
+    <rect x="383" y="283" width="182" height="168" rx="26" fill="#f9f8fd" stroke="#d6cee5" stroke-width="2"/>
+    <path d="m469 311 43 17v37c0 28-23 48-43 58-20-10-43-30-43-58v-37l43-17Z" fill="#e4def0" stroke="#9c8bb8" stroke-width="2"/>
+    <path d="M441 366h55m-55 0 16-20m-16 20 16 20m39-20-15-20m15 20-15 20" stroke="#897aa4" stroke-width="2"/>
+    <circle cx="441" cy="366" r="6" fill="#fcfbff" stroke="#897aa4" stroke-width="2"/><circle cx="496" cy="366" r="6" fill="#fcfbff" stroke="#897aa4" stroke-width="2"/>
+    <rect x="453" y="351" width="32" height="30" rx="7" fill="#fff" stroke="#897aa4" stroke-width="2"/>
+    <path d="M462 350v-5a7 7 0 0 1 14 0v5" stroke="#897aa4" stroke-width="3"/><circle cx="469" cy="364" r="3" fill="#897aa4"/><path d="M469 365v7" stroke="#897aa4" stroke-width="2"/>
+  </g>
+  <circle cx="67" cy="99" r="10" fill="#c3d2e7"/><circle cx="342" cy="435" r="7" fill="#c5d9cf"/>
+  <path d="M310 63v14m-7-7h14M87 428v14m-7-7h14" stroke="#aabbd0" stroke-width="2" stroke-linecap="round"/>
+</svg>

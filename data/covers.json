@@ -1,15 +1,68 @@
 {
   "2026-09-22": {
-    "title": { "de": ["Wer", "hat die", "Kontrolle?"], "en": ["Who", "is in", "control?"] },
-    "kicker": { "de": "Das grosse Thema / Kontrolle", "en": "The big picture / Control" },
+    "title": {
+      "de": [
+        "Wer",
+        "hat die",
+        "Kontrolle?"
+      ],
+      "en": [
+        "Who",
+        "is in",
+        "control?"
+      ]
+    },
+    "kicker": {
+      "de": "Das grosse Thema / Kontrolle",
+      "en": "The big picture / Control"
+    },
     "deck": {
       "de": "Modelle. Chips. Datenflüsse. Die nächste Machtfrage der AI entscheidet sich im ganzen Stack.",
       "en": "Models. Chips. Data flows. AI's next power shift plays out across the entire stack."
     },
     "visual": "control-stack",
     "signals": {
-      "de": ["↑ Agent Security", "↑ Full-Stack AI", "↗ Resource Governance"],
-      "en": ["↑ Agent Security", "↑ Full-Stack AI", "↗ Resource Governance"]
+      "de": [
+        "↑ Agent Security",
+        "↑ Full-Stack AI",
+        "↗ Resource Governance"
+      ],
+      "en": [
+        "↑ Agent Security",
+        "↑ Full-Stack AI",
+        "↗ Resource Governance"
+      ]
+    }
+  },
+  "2026-09-24": {
+    "kicker": {
+      "de": "Die Leitgeschichte / Verifizierbare Ausführung",
+      "en": "The lead story / Verifiable execution"
+    },
+    "deck": {
+      "de": "Agents suchen im Genom und steuern Messinstrumente. Entscheidend werden überprüfbare Experimente und kontrollierte Netzwerkzugriffe.",
+      "en": "Agents search genomes and operate lab instruments. Verifiable experiments and controlled network access become essential."
+    },
+    "illustration": {
+      "src": "assets/illustrations/agent-validation.svg",
+      "alt": {
+        "de": "Schematische Illustration: Von einer Agent-Konsole führen zwei Wege zu Laborvalidierung und kontrolliertem Netzwerkzugriff.",
+        "en": "Schematic illustration: an agent console branches into lab validation and controlled network access."
+      },
+      "caption": {
+        "de": "Autonomie braucht Prüfung: im Labor und an der Netzwerkgrenze.",
+        "en": "Autonomy needs verification: in the lab and at the network boundary."
+      },
+      "sources": [
+        {
+          "label": "Anthropic",
+          "href": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+        },
+        {
+          "label": "Perplexity",
+          "href": "https://www.perplexity.ai/en-GB/hub/blog/escaping-space-part-i"
+        }
+      ]
     }
   }
 }

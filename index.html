@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="AI Daily Brief — evidence-first AI engineering and strategy intelligence, published daily.">
-  <meta name="theme-color" content="#141512">
+  <meta name="theme-color" content="#f7f9fb">
   <title>AI Daily Brief</title>
   <link rel="stylesheet" href="assets/style.css?v=20260910-1544-wide">
   <link rel="stylesheet" href="assets/layout-v3.css?v=20260922-visual">
-  <link rel="stylesheet" href="assets/editorial.css?v=20260924-typography">
+  <link rel="stylesheet" href="assets/editorial.css?v=20260926-cover-nav">
 </head>
 <body>
   <a class="skip-link" href="#brief" data-de="Zum Briefing" data-en="Skip to briefing">Zum Briefing</a>
@@ -16,9 +16,9 @@
   <header class="topbar">
     <a class="brand" href="./" aria-label="AI Daily Brief — Home">ai daily brief<span aria-hidden="true">↗</span></a>
     <nav aria-label="Navigation">
-      <a href="#brief" data-de="Die Ausgabe" data-en="The edition">Die Ausgabe</a>
-      <a href="#intelligence">Intelligence</a>
-      <a href="#archive" data-de="Bibliothek" data-en="Library">Bibliothek</a>
+      <a href="#edition" data-de="Die Ausgabe" data-en="The edition">Die Ausgabe</a>
+      <a href="concepts.html" data-de="Konzepte" data-en="Concepts">Konzepte</a>
+      <a href="#archive" data-de="Archiv" data-en="Archive">Archiv</a>
       <div class="lang" role="group" aria-label="Language / Sprache">
         <button type="button" class="active" data-lang="de" aria-pressed="true">DE</button>
         <span aria-hidden="true">/</span><button type="button" data-lang="en" aria-pressed="false">EN</button>
@@ -27,22 +27,23 @@
   </header>
   <main>
     <div class="edition-line"><span class="edition-date"><time id="hero-date">—</time><span id="edition-label" data-de="Die tägliche Dosis Klarheit" data-en="Your daily dose of clarity">Die tägliche Dosis Klarheit</span></span><span>Engineering / Business / Research</span></div>
-    <section class="edition-cover" aria-labelledby="cover-title" aria-busy="true">
+    <section id="edition" class="edition-cover" aria-labelledby="cover-title" aria-busy="true">
       <div class="cover-copy">
         <div id="cover-kicker" class="cover-kicker" data-de="Die aktuelle Ausgabe" data-en="The latest edition">Die aktuelle Ausgabe</div>
         <h1 id="cover-title"><span>AI</span><span class="outline">Daily</span><span>Brief.</span></h1>
         <p id="cover-deck" data-de="Die wichtigsten Entwicklungen in AI. Technisch eingeordnet, mit Quellen und konkreten Impulsen für Builder." data-en="The developments that matter in AI. Technical context, original sources and practical ideas for builders.">Die wichtigsten Entwicklungen in AI. Technisch eingeordnet, mit Quellen und konkreten Impulsen für Builder.</p>
-        <a class="cover-action" href="#brief"><span data-de="Die Einordnung" data-en="Read the analysis">Die Einordnung</span><span aria-hidden="true">↗</span></a>
+        <a class="cover-action" href="#brief"><span data-de="Zum Schnellüberblick" data-en="Quick overview">Zum Schnellüberblick</span><span aria-hidden="true">↗</span></a>
       </div>
-      <div id="cover-visual" class="cover-visual"><div class="cover-placeholder" data-de="Signal statt Hype." data-en="Signal over hype.">Signal statt Hype.</div></div>
+
     </section>
-    <div id="edition-signals" class="edition-signals" hidden></div>
+
     <details class="edition-navigation" id="edition-navigation" hidden>
       <summary data-de="In dieser Ausgabe" data-en="In this edition">In dieser Ausgabe</summary>
       <nav id="chapter-links" aria-label="Kapitel / Chapters"></nav>
     </details>
     <section id="brief" class="brief">
-      <div class="brief-head"><div><span class="kicker" data-de="DER DAILY BRIEF" data-en="THE DAILY BRIEF">DER DAILY BRIEF</span><h2 id="brief-title" data-de="Was heute zählt." data-en="What matters today.">Was heute zählt.</h2></div><time id="brief-date">—</time></div>
+      <div class="brief-head" hidden><div><span class="kicker" data-de="DER DAILY BRIEF" data-en="THE DAILY BRIEF">DER DAILY BRIEF</span><h2 id="brief-title" data-de="Was heute zählt." data-en="What matters today.">Was heute zählt.</h2></div><time id="brief-date">—</time></div>
+      <a id="back-to-cover" class="back-to-cover" href="#edition" data-de="↑ Zum Titelbild" data-en="↑ Back to cover illustration" hidden>↑ Zum Titelbild</a>
       <article id="brief-content" class="content" aria-busy="true"><p class="loading" role="status" data-de="Briefing wird geladen …" data-en="Loading brief …">Briefing wird geladen …</p></article>
       <noscript><p>JavaScript ist nötig, um die Ausgaben zu laden. / JavaScript is required to load the editions.</p><a href="data/archive.json">Ausgaben / Editions</a></noscript>
     </section>
@@ -56,12 +57,12 @@
       </div>
     </section>
     <section id="archive" class="archive">
-      <div class="section-head"><div><span class="kicker">KNOWLEDGE LIBRARY</span><h2 data-de="Das Archiv." data-en="The archive.">Das Archiv.</h2></div><p data-de="Verfolge, wie sich AI entwickelt — Ausgabe für Ausgabe." data-en="Follow how AI evolves — edition by edition.">Verfolge, wie sich AI entwickelt — Ausgabe für Ausgabe.</p></div>
+      <div class="section-head"><div><span class="kicker" data-de="FRÜHERE AUSGABEN" data-en="PREVIOUS EDITIONS">FRÜHERE AUSGABEN</span><h2 data-de="Das Archiv." data-en="The archive.">Das Archiv.</h2></div><p data-de="Verfolge, wie sich AI entwickelt — Ausgabe für Ausgabe." data-en="Follow how AI evolves — edition by edition.">Verfolge, wie sich AI entwickelt — Ausgabe für Ausgabe.</p></div>
       <div id="archive-list" class="archive-list"><p class="muted" data-de="Archiv wird geladen …" data-en="Loading archive …">Archiv wird geladen …</p></div>
     </section>
   </main>
   <footer><a class="brand" href="./">ai daily brief<span aria-hidden="true">↗</span></a><span data-de="Evidence first. Jeden Tag." data-en="Evidence first. Every day.">Evidence first. Jeden Tag.</span><a href="#top" data-de="Nach oben ↑" data-en="Back to top ↑">Nach oben ↑</a></footer>
-  <script src="assets/editorial.js?v=20260924-typography"></script>
-  <script src="assets/app.js?v=20260924-typography"></script>
+  <script src="assets/editorial.js?v=20260926-cover-nav"></script>
+  <script src="assets/app.js?v=20260926-cover-nav"></script>
 </body>
 </html>

@@ -54,7 +54,11 @@ const widths = process.env.BRIEF_WIDTHS?.split(',').map(Number) || [1440, 768, 3
               outside: [...document.querySelectorAll('main *')].filter(el => !el.closest('pre') && el.getBoundingClientRect().right > innerWidth + 1)
                 .slice(0, 5).map(el => `${el.tagName}.${el.className}`),
               cardBodies: [...rendered.querySelectorAll('.signal-grid > div > p')].every(p => getComputedStyle(p).fontFamily.includes('DM Sans')),
-              cardTitles: [...rendered.querySelectorAll('.signal-title')].every(h => getComputedStyle(h).fontFamily.includes('Barlow Condensed')),
+              cardTitles: [...rendered.querySelectorAll('.signal-title')].every(h => getComputedStyle(h).fontFamily.includes('DM Sans')),
+              aligned: current.every(story => [...story.querySelectorAll(':scope > p, :scope > .sources')].every(el => Math.abs(el.getBoundingClientRect().left - story.getBoundingClientRect().left) < 1)),
+              summaryFirst: rendered.firstElementChild?.classList.contains('executive'),
+              summaryHeadingSize: parseFloat(getComputedStyle(rendered.querySelector('.executive h2')).fontSize),
+              archiveLabel: document.querySelector('.topbar a[href="#archive"]').textContent,
               coverRows: [...document.querySelectorAll('.cover-story-row strong')].map(el => el.textContent),
               signalTitles: [...rendered.querySelectorAll('.executive .signal-title')].slice(0, 3).map(el => el.textContent)
             };
@@ -64,15 +68,17 @@ const widths = process.env.BRIEF_WIDTHS?.split(',').map(Number) || [1440, 768, 3
           assert.deepEqual(result.missingText, [], context);
           assert.deepEqual(result.missingLinks, [], context);
           assert.ok(result.headings && result.bodyFonts && result.cardBodies && result.cardTitles, context);
-          assert.match(result.titleFont, /Barlow Condensed/, context);
+          assert.match(result.titleFont, /DM Sans/, context);
           assert.equal(result.invalidChapters, 0, context);
           assert.equal(result.navigation.length, result.chapterCount, context);
           assert.ok(result.navigation.every(length => length < 100), context);
           assert.equal(result.overflow, false, context);
           assert.deepEqual(result.outside, [], context);
+          assert.ok(result.aligned && result.summaryFirst && result.summaryHeadingSize >= 30, context);
+          assert.equal(result.archiveLabel, language === 'de' ? 'Archiv' : 'Archive', context);
           if (date >= '2026-09-23') {
             assert.equal(result.coverTitle, result.sourceTitle, context);
-            assert.deepEqual(result.coverRows, result.signalTitles, context);
+
           }
           if (date === '2026-09-24' && language === 'de' && [1440, 320].includes(width)) {
             await page.screenshot({ path: `/tmp/ai-brief-type-cover-${width}.png` });

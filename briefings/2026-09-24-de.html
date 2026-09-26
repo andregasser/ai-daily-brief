@@ -43,16 +43,16 @@
     <div class="story-meta"><span class="priority critical">CRITICAL</span><span class="evidence primary">CONFIRMED PRIMARY</span></div>
     <h2>Perplexity SPACE: Die MicroVM hielt – die Egress-Policy nicht immer</h2>
     <p>Perplexity hat seinen Firecracker-basierten SPACE-Sandbox mit neun Modellkonfigurationen red-teamen lassen. In <strong>108</strong> VM→Host-Escape-Runs wurde kein erfolgreicher Escape beobachtet. Beim Netzwerk-Test war die vollständig gesperrte Variante ebenfalls stabil: <strong>0/54</strong> erfolgreiche Bypasses. Sobald jedoch ausgewählte Paket-Repositories erlaubt waren, erreichten Agents vor dem Fix in <strong>11/54</strong> Runs ein eigentlich blockiertes Ziel.</p>
-    <div class="concept-visual">
-      <div class="visual-label">AI Daily Brief · Original graphic · Boundary Results</div>
-      <div class="signal-grid">
-        <div><strong>VM → Host</strong><br>0 / 108 beobachtete Escapes</div>
-        <div><strong>No Network</strong><br>0 / 54 Egress-Bypasses</div>
-        <div><strong>Partial Network</strong><br>11 / 54 Bypasses vor Fix</div>
-        <div><strong>Post-Fix</strong><br>0 verifizierte Bypasses der getesteten Mechanismen</div>
-      </div>
-      <div class="visual-source">Quelle: Perplexity Research. Begrenzte CTF-Tests; 0 beobachtete Escapes sind kein Beweis perfekter Isolation.</div>
-    </div>
+<figure class="editorial-visual visual-data-visualization boundary-chart">
+<div class="visual-label">SANDBOX-AUDIT / DIE GRENZEN IM VERGLEICH</div>
+<h3>Die VM hielt. Die Netzwerk-Policy hatte Lücken.</h3>
+<div class="chart-legend">Beobachtete erfolgreiche Bypasses · Anteil an den jeweiligen Testläufen</div>
+<div class="boundary-row"><span>VM → Host</span><div class="boundary-track" aria-hidden="true"><i style="width:0.000000%"></i></div><strong>0 / 108</strong></div>
+<div class="boundary-row"><span>Kein Netzwerk</span><div class="boundary-track" aria-hidden="true"><i style="width:0.000000%"></i></div><strong>0 / 54</strong></div>
+<div class="boundary-row"><span>Teilweise freigegeben</span><div class="boundary-track" aria-hidden="true"><i style="width:20.370370%"></i></div><strong>11 / 54</strong></div>
+<div class="chart-scale" aria-hidden="true"><span>0 %</span><span>50 %</span><span>100 %</span></div>
+<div class="chart-note"><strong>Nach dem Fix:</strong> Keine verifizierten Bypasses der getesteten Mechanismen. 0 beobachtete Escapes sind kein Beweis perfekter Isolation.</div>
+<figcaption><span>AI Daily Brief · Eigene Grafik · Datenvisualisierung</span><span>Quelle: Perplexity Research. Begrenzte CTF-Tests; 0 beobachtete Escapes sind kein Beweis perfekter Isolation. <a href="https://www.perplexity.ai/en-GB/hub/blog/escaping-space-part-i">Perplexity Research ↗</a></span></figcaption></figure>
     <p>Die zwei gefundenen Mechanismen sind architektonisch wichtiger als die Modellnamen: <strong>DNS-Spoofing</strong> konnte eine erlaubte Domain auf die IP des blockierten Ziels abbilden; bei <strong>Shared-IP/CDN-Infrastruktur</strong> konnte die IP erlaubt sein, obwohl die spätere HTTP/TLS-Autorität zu einem anderen Tenant gehörte. Perplexity ergänzt deshalb Source-Validation sowie Konsistenzchecks zwischen DNS, Ziel-IP, TLS-SNI und HTTP-Authority.</p>
     <div class="concept-visual">
       <div class="visual-label">AI Daily Brief · Original graphic · Network Authority Chain</div>
@@ -127,6 +127,7 @@
   <h2 class="concept-heading">Network Authority: Warum eine Domain-Allowlist keine Netzwerkgrenze ist</h2>
   <p>Eine Regel wie <code>allow pypi.org</code> klingt semantisch eindeutig. Auf dem Netzwerkpfad existiert aber keine einzelne, unveränderliche „Domain“. DNS übersetzt Namen in IPs, CDNs teilen IPs zwischen vielen Tenants, TLS nutzt <strong>SNI</strong>, HTTP/1.1 den <strong>Host</strong>-Header und HTTP/2/3 <strong>:authority</strong>. Wenn ein Gateway nur einen Teil dieser Kette prüft, kann eine erlaubte Identität an einer späteren Schicht in eine andere Autorität kippen.</p>
   <p><strong>Technische Intuition:</strong> Autorisierung darf nicht aus „IP wurde irgendwann für eine erlaubte Domain gesehen“ folgen. Sie muss eine konsistente Bindung prüfen: vertrauenswürdige DNS-Antwort → erwartete Ziel-IP → erlaubtes SNI → erlaubte HTTP-Authority. Bei Protokollen ohne überprüfbare Host-Autorität muss die Policy konservativer sein.</p>
+<figure class="editorial-visual visual-explanatory-diagram authority-illustration"><div class="visual-label">EINE IDENTITÄT. FÜNF PRÜFPUNKTE.</div><h3>Eine erlaubte Domain muss bis zur Anfrage dieselbe bleiben.</h3><ol class="authority-stages"><li><svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="21"/><ellipse cx="32" cy="32" rx="10" ry="21"/><path d="M12 25h40M12 39h40"/></svg><strong>Domain</strong><span>Was ist erlaubt?</span></li><li><svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="11" y="12" width="42" height="16" rx="5"/><rect x="11" y="36" width="42" height="16" rx="5"/><path d="M19 20h2m8 0h15M19 44h2m8 0h15M32 28v8"/></svg><strong>DNS</strong><span>Antwort prüfen</span></li><li><svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="11" y="15" width="42" height="30" rx="5"/><path d="M23 53h18m-9-8v8M20 30h1m10 0h1m10 0h1"/></svg><strong>Ziel-IP</strong><span>Ziel abgleichen</span></li><li><svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m32 8 20 8v17c0 14-12 21-20 24-8-3-20-10-20-24V16L32 8Z"/><path d="m22 32 7 7 14-16"/></svg><strong>TLS / SNI</strong><span>Namen prüfen</span></li><li><svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="12" width="46" height="41" rx="6"/><path d="M9 23h46M18 18h1m6 0h1M20 33h24M20 41h17"/></svg><strong>HTTP / Host</strong><span>Autorität prüfen</span></li></ol><div class="authority-binding"><span aria-hidden="true">↳</span> Durchgehend dieselbe erlaubte Autorität — eine gemeinsame IP allein reicht nicht.</div><figcaption><span>AI Daily Brief · Eigene Grafik · Erklärdiagramm</span><a href="https://www.perplexity.ai/en-GB/hub/blog/escaping-space-part-i">Perplexity Research ↗</a></figcaption></figure>
   <pre><code>policy = allow("pypi.org")
 dns = resolve_with_provenance("pypi.org")
 conn = tls_connect(dst_ip)

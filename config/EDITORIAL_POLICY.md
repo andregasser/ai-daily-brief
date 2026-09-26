@@ -178,7 +178,7 @@ The purpose is calibration, not vanity. Failed predictions are valuable data and
 ## 8. Concept Knowledge Base
 Every Concept of the Day is registered in `data/concepts.json` with stable ID, titles, date first covered, summary, related storylines/tags and source links. Link to prior concepts from new editions when useful. Avoid repeating a concept unless there is a materially new angle.
 
-The archive should increasingly behave like an AI Engineering knowledge base rather than a date-only list.
+Keep the date-based archive separate from the Concept Library. Each concept opens a dedicated explanation page rather than an archived daily edition.
 
 ## 9. Visual editorial & media policy
 The AI Daily Brief should look like a technical intelligence report, not a rendered chat transcript or a stock-photo news site. The selection question is: **Which information can a reader understand faster visually than in two paragraphs?** A visual that cannot answer that question is omitted.
@@ -215,6 +215,18 @@ Target **3–5 information-bearing visuals per daily edition**, including the Co
 Media preference order: suitable official media; clearly reusable/licensed technical media; an original diagram/chart from verified facts; otherwise no image. Never scrape or hotlink arbitrary search images or use unclear copyrighted news photography.
 
 Every third-party visual must include a visible organization/author credit linked to the original source plus license/reuse status where relevant. Publication-created charts and diagrams must be labeled `AI Daily Brief · Original graphic` and cite the underlying source or dataset. Every image requires meaningful alt text; diagrams need an adjacent text summary or semantic labels. Visual meaning must not rely on color alone.
+
+### Approved presentation — starting with the 2026-09-25 edition
+The approved default is the modern illustrated layout in `index.html`, `assets/editorial.css`, `assets/editorial.js` and `assets/library.css`: prominent DM Sans headings, cool light surfaces, restrained sky-blue/sage/lavender/sand accents, rounded summary cards and consistently aligned prose. Keep **In 60 Sekunden / In 60 Seconds** prominent and before the long editorial introduction. New daily editions supply content fragments; do not regenerate the site shell or restore older dark, neon or serif-led presentation.
+
+For the next edition, **2026-09-25**, and subsequent editions:
+
+- Generate both language fragments using the rendering contract below. Shared styles automatically apply the approved layout to each new edition.
+- Plan an edition-specific lead illustration that explains the lead thesis, plus useful in-article graphics and an illustrated Concept of the Day. Follow the evidence and visual-budget rules above. Do not substitute text-only boxes for every visual.
+- Store original vector assets in `assets/illustrations/`. Register the date in `data/covers.json` with translated `kicker` and `deck`, plus `illustration: {src, alt: {de, en}, caption: {de, en}, sources: [{label, href}]}`. Use repo-relative paths, meaningful alternative text and original source links. The September 24 entry is a schema/style reference, not artwork to reuse for an unrelated story.
+- Include the cover metadata and illustration assets in the publication, together with the briefings and research audit. Record the visual plan and provenance in the edition audit. The publishing runner stages `assets/illustrations` alongside `briefings`, `weekly` and `data`.
+- Keep “Archiv / Archive” for dated briefs. Register concepts with stable IDs and `briefing.de` / `briefing.en` paths; link concepts to `concept.html?id=<id>&lang=<language>`, not to an old edition. Place the complete explanation and its graphics inside `.concept` so the dedicated page includes them.
+- Verify DE/EN at desktop and 320 px: title illustration loads, navigation opens the cover via `#edition`, summary and article remain readable, and the concept detail page retains the explanation, diagrams and sources.
 
 ### Rendering contract
 - Keep chapter headings separate from chapter contents: use `h2.chapter` for the heading and `h3` for story titles. If grouping content in `section.chapter`, supply a direct `.section-kicker` label; the renderer converts it into the chapter heading without flattening the section.
