@@ -70,6 +70,12 @@ For each new edition:
 
 The site intentionally separates presentation from generated briefing content so the publisher can evolve the intelligence system without coupling the homepage to the research pipeline.
 
+## Automated publishing
+
+`.github/workflows/ai-daily-brief-runner.yml` publishes the brief every day at 07:00 Europe/Zurich, including automatic CET/CEST handling. The workflow uses the official `openai/codex-action` with live web search to research and edit the repository, validates the resulting patch in a separate job, and commits it with the repository-scoped `GITHUB_TOKEN`.
+
+Repository setup requires one Actions secret named `OPENAI_API_KEY`. The workflow can also be started manually with `workflow_dispatch`. The legacy `automation/run_daily.py` and `automation/payload_*` files are retained only as historical artifacts and are no longer executed by the scheduled workflow.
+
 ## Visual editorial system
 
 Daily editions use a small set of information-bearing visual classes: primary-source media, data visualizations, explanatory diagrams and evidence cards. The default budget is three to five visuals per edition, including the Concept of the Day. Trend heatmaps are rendered from `data/trends.json`; Builder Radar cards are hydrated from `data/builder_radar.json`. Every original graphic carries provenance, and external media requires a visible source and reuse status. Generic AI stock imagery is not used.

@@ -1,38 +1,141 @@
-name: AI Daily Brief publishing runner
+name: Publish AI Daily Brief
 
 on:
-  push:
-    paths:
-      - 'automation/run_daily.py'
+  schedule:
+    # GitHub cron is UTC. Select the matching run below so publication stays
+    # at 07:00 Europe/Zurich across CET and CEST changes.
+    - cron: '0 5 * * *'
+    - cron: '0 6 * * *'
+  workflow_dispatch:
 
-permissions:
-  contents: write
+concurrency:
+  group: ai-daily-brief-publisher
+  cancel-in-progress: false
 
 jobs:
-  publish:
+  prepare:
     runs-on: ubuntu-latest
+    outputs:
+      should_run: ${{ steps.schedule.outputs.should_run }}
+      run_date: ${{ steps.schedule.outputs.run_date }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Select the 07:00 Zurich run
+        id: schedule
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          run_date=$(TZ=Europe/Zurich date +%F)
+          echo "run_date=$run_date" >> "$GITHUB_OUTPUT"
+
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          offset=$(TZ=Europe/Zurich date +%z)
+          if [ "$offset" = "+0200" ]; then
+            expected_schedule='0 5 * * *'
+          else
+            expected_schedule='0 6 * * *'
+          fi
+
+          if [ "$EVENT_SCHEDULE" = "$expected_schedule" ]; then
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  generate:
+    needs: prepare
+    if: needs.prepare.outputs.should_run == 'true'
+    runs-on: ubuntu-latest
+    outputs:
+      has_changes: ${{ steps.patch.outputs.has_changes }}
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - name: Generate briefing and update intelligence data
-        run: python3 automation/run_daily.py
-      - name: Commit generated brief
+          persist-credentials: false
+
+      - name: Generate today's briefing with Codex
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: .github/codex/prompts/publish-daily-brief.md
+          permission-profile: ':workspace'
+          codex-args: '["--search", "--ephemeral", "--ignore-user-config"]'
+          effort: high
+          safety-strategy: drop-sudo
+          allow-bots: true
+          output-file: codex-result.md
+
+      - name: Package generated changes
+        id: patch
+        run: |
+          git add -N .
+          git diff --binary HEAD -- . ':!codex-result.md' > daily-brief.patch
+          if [ -s daily-brief.patch ]; then
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            echo "No briefing changes were generated"
+          fi
+
+      - name: Upload generated patch
+        if: steps.patch.outputs.has_changes == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-brief-${{ needs.prepare.outputs.run_date }}
+          path: daily-brief.patch
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    needs: [prepare, generate]
+    if: needs.generate.outputs.has_changes == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Download generated patch
+        uses: actions/download-artifact@v4
+        with:
+          name: daily-brief-${{ needs.prepare.outputs.run_date }}
+
+      - name: Apply and validate briefing
+        env:
+          RUN_DATE: ${{ needs.prepare.outputs.run_date }}
+        run: |
+          git apply --index daily-brief.patch
+          while IFS= read -r path; do
+            case "$path" in
+              briefings/*|weekly/*|data/*|assets/illustrations/*) ;;
+              *)
+                echo "Generated patch changed a disallowed path: $path" >&2
+                exit 1
+                ;;
+            esac
+          done < <(git diff --cached --name-only)
+          python3 automation/validate_daily.py "$RUN_DATE"
+          rm daily-brief.patch
+
+      - name: Commit and publish
+        env:
+          RUN_DATE: ${{ needs.prepare.outputs.run_date }}
         run: |
           git config user.name "AI Daily Brief"
-          git config user.email "actions@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add briefings weekly data assets/illustrations
           if git diff --cached --quiet; then
             echo "No generated changes"
             exit 0
           fi
-          RUN_DATE=$(python3 - <<'PY'
-          from pathlib import Path
-          import re
-          text = Path('automation/run_daily.py').read_text(encoding='utf-8')
-          match = re.search(r'^DATE = "([^"]+)"', text, re.MULTILINE)
-          print(match.group(1) if match else 'daily-run')
-          PY
-          )
           git commit -m "Publish AI Daily Brief ${RUN_DATE}"
-          git push
+          git push origin HEAD:main
