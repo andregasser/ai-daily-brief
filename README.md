@@ -72,7 +72,9 @@ The site intentionally separates presentation from generated briefing content so
 
 ## Automated publishing
 
-`.github/workflows/ai-daily-brief-runner.yml` publishes the brief every day at 07:00 Europe/Zurich, including automatic CET/CEST handling. The workflow uses the official `openai/codex-action` with live web search to research and edit the repository, validates the resulting patch in a separate job, and commits it with the repository-scoped `GITHUB_TOKEN`.
+`.github/workflows/ai-daily-brief-runner.yml` publishes the brief every day at 07:00 Europe/Zurich, including automatic CET/CEST handling. Before invoking Codex, `automation/prepare_daily_context.py` checks the configured feeds, deduplicates and bounds the candidate set, and creates compact research and continuity packets under the ignored `.ai-daily/` directory. This preserves broad source coverage without making the model scan the complete historical repository on every run.
+
+Codex performs focused verification and editorial judgment with medium reasoning effort, then writes one canonical bilingual `.ai-daily/daily-brief.json` document matching `config/daily_brief.schema.json`. `automation/render_daily.py` deterministically generates both HTML editions and updates the publication metadata, concept record and research audit. The workflow validates the resulting patch in a separate job and commits it with the repository-scoped `GITHUB_TOKEN`.
 
 Repository setup requires one Actions secret named `OPENAI_API_KEY`. The workflow can also be started manually with `workflow_dispatch`. The legacy `automation/run_daily.py` and `automation/payload_*` files are retained only as historical artifacts and are no longer executed by the scheduled workflow.
 

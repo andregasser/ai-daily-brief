@@ -50,6 +50,7 @@ jobs:
     needs: prepare
     if: needs.prepare.outputs.should_run == 'true'
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     outputs:
       has_changes: ${{ steps.patch.outputs.has_changes }}
     permissions:
@@ -65,6 +66,9 @@ jobs:
           install -d "${{ runner.temp }}/codex-home"
           install -m 0644 .codex/config.toml "${{ runner.temp }}/codex-home/config.toml"
 
+      - name: Prepare bounded research inputs
+        run: python3 automation/prepare_daily_context.py "${{ needs.prepare.outputs.run_date }}"
+
       - name: Generate today's briefing with Codex
         uses: openai/codex-action@v1
         with:
@@ -73,7 +77,7 @@ jobs:
           prompt-file: .github/codex/prompts/publish-daily-brief.md
           permission-profile: 'workspace-net'
           codex-args: '["--config", "web_search=\"live\"", "--ephemeral"]'
-          effort: high
+          effort: medium
           safety-strategy: drop-sudo
           allow-bots: true
           output-file: codex-result.md

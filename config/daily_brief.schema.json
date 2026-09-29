@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Daily Brief canonical bilingual edition",
+  "type": "object",
+  "required": ["date", "updated_at", "headline", "dek", "editorial_lead", "executive_summary", "sections", "concept", "what_next", "tags", "research_audit"],
+  "$defs": {
+    "localized": {
+      "type": "object",
+      "required": ["de", "en"],
+      "properties": {"de": {"type": "string", "minLength": 1}, "en": {"type": "string", "minLength": 1}},
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "required": ["label", "url"],
+      "properties": {"label": {"type": "string"}, "url": {"type": "string", "format": "uri"}},
+      "additionalProperties": false
+    },
+    "localizedList": {
+      "type": "object",
+      "required": ["de", "en"],
+      "properties": {
+        "de": {"type": "array", "items": {"type": "string"}},
+        "en": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  },
+  "properties": {
+    "date": {"type": "string", "format": "date"},
+    "updated_at": {"type": "string"},
+    "headline": {"$ref": "#/$defs/localized"},
+    "dek": {"$ref": "#/$defs/localized"},
+    "editorial_lead": {"$ref": "#/$defs/localized"},
+    "executive_summary": {
+      "type": "array", "minItems": 3, "maxItems": 4,
+      "items": {"type": "object", "required": ["title", "body"], "properties": {"title": {"$ref": "#/$defs/localized"}, "body": {"$ref": "#/$defs/localized"}}}
+    },
+    "sections": {
+      "type": "array", "minItems": 2,
+      "items": {
+        "type": "object", "required": ["title", "stories"],
+        "properties": {
+          "title": {"$ref": "#/$defs/localized"},
+          "stories": {
+            "type": "array", "minItems": 1,
+            "items": {
+              "type": "object", "required": ["priority", "evidence", "title", "body", "why", "signal_hype", "sources"],
+              "properties": {
+                "priority": {"type": "string"}, "evidence": {"type": "string"},
+                "title": {"$ref": "#/$defs/localized"}, "body": {"$ref": "#/$defs/localizedList"},
+                "changed": {"$ref": "#/$defs/localized"}, "why": {"$ref": "#/$defs/localized"},
+                "engineering": {"$ref": "#/$defs/localized"}, "signal_hype": {"$ref": "#/$defs/localized"},
+                "sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}}
+              }
+            }
+          }
+        }
+      }
+    },
+    "emerging_signal": {
+      "type": "object",
+      "properties": {"title": {"$ref": "#/$defs/localized"}, "confidence": {"type": "string"}, "analysis": {"$ref": "#/$defs/localized"}, "falsifiable": {"$ref": "#/$defs/localized"}}
+    },
+    "concept": {
+      "type": "object", "required": ["id", "title", "summary", "intuition", "technical_depth", "practical", "sources"],
+      "properties": {
+        "id": {"type": "string"}, "title": {"$ref": "#/$defs/localized"}, "summary": {"$ref": "#/$defs/localized"},
+        "intuition": {"$ref": "#/$defs/localized"}, "technical_depth": {"$ref": "#/$defs/localizedList"},
+        "example": {"$ref": "#/$defs/localized"}, "code": {"type": "string"}, "practical": {"$ref": "#/$defs/localized"},
+        "sources": {"type": "array", "items": {"$ref": "#/$defs/source"}}, "tags": {"type": "array", "items": {"type": "string"}},
+        "storylines": {"type": "array", "items": {"type": "string"}}, "related_concepts": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "what_next": {"$ref": "#/$defs/localizedList"},
+    "tags": {"type": "array", "minItems": 3, "items": {"type": "string"}},
+    "cover": {"type": "object"},
+    "weekly_review": {
+      "type": "object",
+      "required": ["week", "headline", "intro", "sections"],
+      "properties": {
+        "week": {"type": "string"}, "headline": {"$ref": "#/$defs/localized"}, "intro": {"$ref": "#/$defs/localized"},
+        "sections": {"type": "array", "minItems": 3, "items": {"type": "object", "required": ["title", "body"], "properties": {"title": {"$ref": "#/$defs/localized"}, "body": {"$ref": "#/$defs/localizedList"}}}}
+      }
+    },
+    "research_audit": {"type": "object"}
+  }
+}
