@@ -60,10 +60,16 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
+      - name: Prepare Codex configuration
+        run: |
+          install -d "${{ runner.temp }}/codex-home"
+          install -m 0644 .codex/config.toml "${{ runner.temp }}/codex-home/config.toml"
+
       - name: Generate today's briefing with Codex
         uses: openai/codex-action@v1
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          codex-home: ${{ runner.temp }}/codex-home
           prompt-file: .github/codex/prompts/publish-daily-brief.md
           permission-profile: 'workspace-net'
           codex-args: '["--config", "web_search=\"live\"", "--ephemeral"]'
