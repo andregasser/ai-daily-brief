@@ -77,7 +77,7 @@ jobs:
           prompt-file: .github/codex/prompts/publish-daily-brief.md
           permission-profile: 'workspace-net'
           codex-args: '["--config", "web_search=\"live\"", "--ephemeral"]'
-          model: gpt-5.4-mini
+          model: gpt-6-sol
           effort: medium
           safety-strategy: drop-sudo
           allow-bots: true
