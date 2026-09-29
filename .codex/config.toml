@@ -1,0 +1,16 @@
+# GitHub Actions needs to research a broad, changing set of public sources.
+# Keep the built-in workspace filesystem restrictions while allowing public
+# network access through Codex's domain-enforcing proxy.
+
+[features]
+network_proxy = true
+
+[permissions.workspace-net]
+description = "Workspace editing with unrestricted public web access for Daily Brief research."
+extends = ":workspace"
+
+[permissions.workspace-net.network]
+enabled = true
+
+[permissions.workspace-net.network.domains]
+"*" = "allow"
