@@ -2,6 +2,7 @@
 const {chromium} = require('playwright');
 const assert = require('node:assert/strict');
 const base = process.env.BRIEF_URL || 'http://127.0.0.1:8766/';
+const date = process.env.BRIEF_DATE || '2026-09-24';
 (async () => {
   const browser = await chromium.launch({headless:true});
   try {
@@ -11,7 +12,7 @@ const base = process.env.BRIEF_URL || 'http://127.0.0.1:8766/';
     for (const width of [1280, 390, 320]) {
       await page.setViewportSize({width,height:1000});
       for (const lang of ['de','en']) {
-        await page.goto(`${base}?date=2026-09-24&lang=${lang}#brief`);
+        await page.goto(`${base}?date=${date}&lang=${lang}#brief`);
         await page.waitForSelector('#brief-content[aria-busy="false"] .story');
         await page.waitForFunction(() => document.querySelector('.lead-illustration img')?.naturalWidth > 0);
         assert.ok(await page.locator('#back-to-cover').isVisible());
@@ -24,7 +25,7 @@ const base = process.env.BRIEF_URL || 'http://127.0.0.1:8766/';
         assert.equal(new URL(page.url()).hash, '#brief');
         await page.locator('.topbar a[href="#edition"]').click();
         await page.waitForFunction(() => location.hash === '#edition' && document.querySelector('#edition').getBoundingClientRect().top >= 0);
-        const archiveLink = page.locator('.archive-card').filter({has:page.locator('.archive-date', {hasText:'2026-09-24'})}).first();
+        const archiveLink = page.locator('.archive-card').filter({has:page.locator('.archive-date', {hasText:date})}).first();
         assert.equal(new URL(await archiveLink.getAttribute('href'),base).hash, '#edition');
         await archiveLink.click();
         await page.waitForSelector('#brief-content[aria-busy="false"] .story');

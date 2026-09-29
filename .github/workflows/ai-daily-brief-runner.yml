@@ -126,6 +126,27 @@ jobs:
           python3 automation/validate_daily.py "$RUN_DATE"
           rm daily-brief.patch
 
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Install browser test dependencies
+        run: |
+          npm ci --no-audit --no-fund
+          npx playwright install --with-deps chromium
+
+      - name: Run browser publishing tests
+        env:
+          BRIEF_DATE: ${{ needs.prepare.outputs.run_date }}
+          BRIEF_DATES: ${{ needs.prepare.outputs.run_date }}
+          BRIEF_URL: http://127.0.0.1:8766/
+        run: |
+          python3 -m http.server 8766 --bind 127.0.0.1 > /tmp/ai-daily-brief-http.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          curl --fail --retry 10 --retry-delay 1 --retry-connrefused "$BRIEF_URL" > /dev/null
+          npm run test:browser
+
       - name: Commit and publish
         env:
           RUN_DATE: ${{ needs.prepare.outputs.run_date }}
