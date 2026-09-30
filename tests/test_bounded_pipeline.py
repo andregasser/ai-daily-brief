@@ -56,6 +56,10 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(requests[0]["max_tool_calls"], 6)
         self.assertEqual(requests[0]["tools"], [{"type": "web_search", "search_context_size": "low"}])
         self.assertFalse(requests[0]["store"])
+        self.assertNotIn("text", requests[0])
+        client.call("draft", "Return JSON", {}, seconds=2, tokens=100)
+        self.assertEqual(requests[1]["text"]["format"], {"type": "json_object"})
+        self.assertNotIn("tools", requests[1])
         self.assertNotIn("SENTINEL_SECRET", "".join(p.read_text() for p in self.path.rglob("*") if p.is_file()))
 
     def test_incomplete_or_interrupted_response_cannot_publish(self):
