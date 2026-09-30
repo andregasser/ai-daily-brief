@@ -8,6 +8,7 @@ from contextlib import contextmanager
 from datetime import datetime, timezone
 import json
 import os
+import re
 from pathlib import Path
 import signal
 import sys
@@ -136,10 +137,23 @@ class Responses:
             self.event(stage, "completed", elapsed_seconds=round(time.monotonic() - started, 2), usage=response.get("usage"), response_id=response.get("id"))
             return result
         except HTTPError as exc:
-            self.event(stage, "failed", error="HTTPError", http_status=exc.code, elapsed_seconds=round(time.monotonic() - started, 2))
-            exc.close()
+            details = {}
+            try:
+                with deadline(5):
+                    error = json.loads(exc.read(16_384)).get("error", {})
+                for field in ("type", "code", "param", "message"):
+                    if isinstance(error.get(field), str):
+                        value = error[field].replace(self.key, "[REDACTED]")
+                        value = re.sub(r"(?i)\b(?:sk-[\w-]+|Bearer\s+\S+)", "[REDACTED]", value)
+                        details[field] = value[:1500]
+            except (ValueError, AttributeError, OSError, TimeoutError):
+                pass
+            finally:
+                exc.close()
+            self.event(stage, "failed", error="HTTPError", http_status=exc.code, api_error=details,
+                       elapsed_seconds=round(time.monotonic() - started, 2))
             # No automatic retry: a repeated expensive generation is not a recovery policy.
-            raise RuntimeError(f"OpenAI API HTTP {exc.code}; inspect quota/model access for 400/401/403/429") from None
+            raise RuntimeError(f"OpenAI API HTTP {exc.code}: {details.get('message', 'No structured error details available')}") from None
         except Exception as exc:
             self.event(stage, "failed", error=type(exc).__name__, elapsed_seconds=round(time.monotonic() - started, 2))
             raise

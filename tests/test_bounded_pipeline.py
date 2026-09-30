@@ -76,6 +76,20 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(len(calls), 1)
         self.assertNotIn("SENTINEL_SECRET", client.events.read_text())
 
+    def test_http_error_keeps_actionable_details_and_redacts_credentials(self):
+        def fail(*args, **kwargs):
+            body = {"error": {"type": "invalid_request_error", "param": "text.format",
+                              "message": "Unsupported format SENTINEL_SECRET sk-other-secret Bearer private",
+                              "debug": "SENTINEL_SECRET"}}
+            raise HTTPError("https://api.openai.com", 400, "Bad request", {}, io.BytesIO(json.dumps(body).encode()))
+        client = generate_daily.Responses(self.path, "SENTINEL_SECRET", fail)
+        with self.assertRaisesRegex(RuntimeError, "Unsupported format") as raised:
+            client.call("research", "JSON", {}, seconds=2, tokens=10)
+        records = client.events.read_text()
+        self.assertEqual(json.loads(records.splitlines()[-1])["api_error"]["param"], "text.format")
+        for secret in ("SENTINEL_SECRET", "sk-other-secret", "Bearer private", '"debug"'):
+            self.assertNotIn(secret, records + str(raised.exception))
+
     def test_unknown_citations_and_missing_visuals_are_rejected(self):
         doc = brief()
         generate_daily.validate_draft(doc, doc["date"], {URL})
