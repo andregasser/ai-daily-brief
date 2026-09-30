@@ -131,6 +131,44 @@ class PipelineTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, r"claims\[0\].*requires primary evidence"):
             generate_daily.validate_draft(doc, doc["date"], {URL})
 
+    def test_ap_aliases_use_retrieved_urls_without_authorizing_other_articles(self):
+        article_id = '89ac416717adbfb1d72f2d85e6ce83d1'
+        retrieved = 'https://apnews.com/article/' + article_id
+        urls = ['https://apnews.com/article/descriptive-slug-' + article_id,
+                'https://apnews.com/article/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+                'https://other.example/article/' + article_id,
+                'https://apnews.com.evil.example/article/' + article_id,
+                'https://user@apnews.com/article/' + article_id]
+        doc = {'stories': [{'sources': [{'url': url} for url in urls]}]}
+        generate_daily.align_retrieved_sources(doc, {retrieved})
+        self.assertEqual([s['url'] for s in doc['stories'][0]['sources']], [retrieved, *urls[1:]])
+        self.assertEqual(generate_daily.all_source_urls(doc) - {retrieved}, set(urls[1:]))
+
+    def test_completed_research_can_resume_without_a_draft_but_requires_new_review(self):
+        source = self.path / 'source'
+        source.mkdir()
+        self.prepare_inputs()
+        for name in ('research-input.json', 'editorial-context.json', 'evidence.json'):
+            shutil.copyfile(self.path / name, source / name)
+        dossier = {'publish': True}
+        response = {'status': 'completed', 'output': [{'type': 'message', 'content': [{'type': 'output_text', 'text': json.dumps(dossier)}]}]}
+        (source / 'research.json').write_text(json.dumps(dossier))
+        (source / 'research.response.json').write_text(json.dumps(response))
+        (source / 'review.json').write_text('{"approved":true}')
+        self.assertTrue(restore_checkpoint.restore(source, self.path, '2026-09-30'))
+        self.assertFalse((self.path / 'review.json').exists())
+        calls = []
+        class Client:
+            evidence_urls = set()
+            def call(_, stage, *args, **kwargs):
+                calls.append(stage)
+                return brief() if stage == 'draft' else {'approved': True, 'issues': [], 'checks': ['Fresh review']}
+        generate_daily.generate('2026-09-30', self.path, Client())
+        self.assertEqual(calls, ['draft', 'review'])
+        response['status'] = 'incomplete'
+        (source / 'research.response.json').write_text(json.dumps(response))
+        self.assertFalse(restore_checkpoint.restore(source, self.path / 'incomplete', '2026-09-30'))
+
     def test_checkpoint_requires_matching_completed_same_day_data_and_new_review(self):
         source = self.path / "source"
         source.mkdir()

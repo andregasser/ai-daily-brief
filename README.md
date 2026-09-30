@@ -89,6 +89,8 @@ Every run uploads `daily-brief-diagnostics-<run-id>` with per-stage timings/logs
 
 The internal research dossier targets 1,200 words and requests at most 1,800 words or 18,000 characters in compact JSON. Material facts, caveats and due continuity checks remain required; the writer receives original evidence separately. Diagnostics record time to first text and the number of characters received before a failure, so a slow response can be distinguished from an oversized handoff.
 
+A recent failed run can also restore completed research when writing has not started yet. Response completion, matching JSON and edition dates are checked; a new review is always required. Alternate AP article slugs with the same 32-character article ID are replaced by the exact retrieved AP URL before provenance validation. Other hosts and article IDs remain subject to rejection.
+
 After a successful publisher run on `main`, `deploy-published-brief.yml` explicitly requests a GitHub Pages build of the latest `main` revision. This is necessary because commits pushed with the workflow's `GITHUB_TOKEN` do not automatically trigger branch-based Pages builds. The separate deployment workflow can also be run manually without regenerating an edition.
 
 For manual runs and pipeline-fix pushes on `main`, a failed run from the last 30 minutes can supply completed research and draft checkpoints for the same edition date, provided the configuration and editorial prompts have not changed. Stored JSON must match completed API responses. The new run revalidates everything and performs a fresh independent review; it never reuses approval. Scheduled runs always prepare fresh evidence. Repairs return only changed JSON fields rather than repeating the entire bilingual edition.

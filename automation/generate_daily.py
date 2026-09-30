@@ -15,6 +15,7 @@ import signal
 import sys
 import time
 from urllib.error import HTTPError
+from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
 
 from jsonschema import Draft202012Validator, FormatChecker, ValidationError
@@ -205,6 +206,32 @@ def response_evidence_urls(response):
     return urls
 
 
+def align_retrieved_sources(value, known_urls):
+    """Use the retrieved AP URL for alternate slugs with the same article ID.
+
+    This never authorizes another publisher or article. Unknown citations still
+    fail the provenance check, and the original response remains in diagnostics.
+    """
+    def ap_id(url):
+        parsed = urlsplit(canonical_url(url))
+        if parsed.scheme != 'https' or parsed.netloc not in {'apnews.com', 'www.apnews.com'} or parsed.query:
+            return None
+        match = re.fullmatch(r'/article/(?:[a-z0-9-]+-)?([0-9a-f]{32})', parsed.path)
+        return match[1] if match else None
+    retrieved = {ap_id(url): url for url in sorted(known_urls) if ap_id(url)}
+    if isinstance(value, dict):
+        for source in value.get('sources', []) + value.get('support', []):
+            if isinstance(source, dict) and isinstance(source.get('url'), str):
+                article_id = ap_id(source['url'])
+                if article_id in retrieved:
+                    source['url'] = retrieved[article_id]
+        for child in value.values():
+            align_retrieved_sources(child, known_urls)
+    elif isinstance(value, list):
+        for child in value:
+            align_retrieved_sources(child, known_urls)
+
+
 def validate_draft(brief, run_date, evidence_urls):
     schema = json.loads((ROOT / "config/daily_brief.schema.json").read_text())
     Draft202012Validator(schema, format_checker=FormatChecker()).validate(brief)
@@ -259,7 +286,8 @@ item still needs its supplied ID and an honest assessment. Do not omit due items
 List rejected events, watch hits and coverage gaps concisely. The writer receives the original evidence
 separately, so do not copy long excerpts or write the final analysis here. Retain material numbers, dates,
 attribution, availability limits and uncertainty. All sources must be URLs actually supplied as page evidence
-or returned by web search. Continuity kind must be prediction, builder, thesis, storyline or trend;
+or returned by web search. Copy source URLs verbatim; do not reconstruct a title slug or alter an article ID.
+Continuity kind must be prediction, builder, thesis, storyline or trend;
 use only exact supplied IDs. For each story, retain numerical limitations, availability dates and attribution.
 Do not attempt to edit files, run tests, or design HTML. Those are separate deterministic stages."""
 
@@ -340,16 +368,19 @@ def generate(run_date, output, client):
     evidence = json.loads((output / "evidence.json").read_text())
     if research["run_date"] != run_date or context["run_date"] != run_date:
         raise ValueError("Prepared inputs do not match the workflow date")
-    resumed = (output / "checkpoint-restored.json").exists()
+    checkpoint = output / "checkpoint-restored.json"
+    phases = json.loads(checkpoint.read_text()).get('phases', []) if checkpoint.exists() else []
+    resumed = 'research' in phases
     if resumed:
         dossier = json.loads((output / "research.json").read_text())
         client.evidence_urls.update(response_evidence_urls(json.loads((output / "research.response.json").read_text())))
-        print("Reusing completed research and draft from a recent failed run; validating and reviewing afresh", flush=True)
+        print("Reusing completed " + ', '.join(phases) + " from a recent failed run; validating and reviewing afresh", flush=True)
     else:
         dossier = client.call("research", RESEARCH, {"research": research, "context": context, "evidence": evidence}, seconds=150, tokens=8500, search=True)
     if dossier.get("publish") is not True:
         raise ValueError("Research did not clear the evidence threshold; previous edition retained")
     known_urls = {url for item in evidence if item["status"] == "ok" for url in [item["url"], item.get("final_url", item["url"]) ]} | client.evidence_urls
+    align_retrieved_sources(dossier, known_urls)
     unknown = {url for url in all_source_urls(dossier) if canonical_url(url) not in {canonical_url(x) for x in known_urls}}
     if unknown:
         raise ValueError("Research cited evidence it did not retrieve: " + ", ".join(sorted(unknown))[:600])
@@ -371,7 +402,7 @@ Treat inherited continuity statuses as historical unless current evidence suppor
 Role primary_<source type> denotes an original source; this does not establish that vendor claims are true."""
     draft_inputs = {"date": run_date, "updated_at": datetime.now(timezone.utc).isoformat(), "dossier": dossier, "context": context, "schema": schema,
                     "weekly_evidence": research.get("weekly_evidence", []), "evidence": evidence, "coverage": research["coverage"]}
-    brief = json.loads((output / "draft.json").read_text()) if resumed else client.call("draft", instructions, draft_inputs, seconds=180, tokens=16000)
+    brief = json.loads((output / "draft.json").read_text()) if 'draft' in phases else client.call("draft", instructions, draft_inputs, seconds=180, tokens=16000)
     # One bounded repair across schema and editorial review, never an open loop.
     repaired = False
     try:
