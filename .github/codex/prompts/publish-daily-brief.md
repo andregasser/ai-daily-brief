@@ -31,15 +31,27 @@ continuity context, and schema. You have no tools and no repository tasks.
 
 ## Graphics
 
-Provide 3–5 structured visual specifications, including target=cover,
-target=concept and at least one target=story-N (one-based story number across
-sections). Each has an id, kind (flow or comparison), localized title/caption,
-2–4 localized nodes (label/detail), and real source objects {label,url}.
-Use flow only for a supported sequence or architecture. A comparison implies no
-causality. Each graphic must explain verified relationships or distinctions, not
-repeat generic headlines. The renderer supplies original SVG drawings, layout,
-accessibility, source captions and language-specific files. Do not generate SVG,
-HTML, shell commands, filenames, or illustration source paths.
+Choose zero to three graphics. There is NO minimum and no compulsory cover or
+concept image. Omit a graphic when it merely repeats prose or labels topics.
+Every graphic must answer a concrete localized question and state a localized
+takeaway: what can a reader compare or understand more easily by seeing it?
+
+Choose the matching schema variant:
+- bars: 2–5 sourced numerical values with one shared unit and comparable basis.
+  The renderer uses a zero baseline. Never invent scores, confidence percentages,
+  benchmark comparability or unmeasured values. State limitations in the caption.
+- matrix: compare 2–3 alternatives along the SAME 2–4 dimensions. Columns name
+  the alternatives, each row has exactly one cell per column. Make differences
+  actionable; mark unknown or unverified facts instead of filling gaps.
+- decision: a concrete illustrative input, named question, 2–3 alternative
+  outcomes, one selected route and its result. Set example=true. This is an
+  explicitly labelled example, not a measured model result or real API payload.
+
+Use short labels, concise cells and a clear takeaway. Supply id, target (cover,
+concept or story-N), title, question, caption, takeaway and actual source URLs.
+Only one graphic per target. For quantitative graphics verify every value and
+unit; for decision examples distinguish valid output from correct reasoning.
+Do not generate SVG, HTML, shell commands, filenames or illustration paths.
 
 ## Scope and repair
 

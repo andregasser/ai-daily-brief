@@ -90,14 +90,15 @@ def main() -> int:
         for lang in ("de", "en"):
             src = illustration.get("src", {})
             src = src.get(lang) if isinstance(src, dict) else src
-            if not src or not src.startswith("assets/illustrations/") or not (ROOT / src).is_file():
+            if illustration and (not src or not src.startswith("assets/illustrations/") or not (ROOT / src).is_file()):
                 raise AssertionError(f"Missing {lang} cover illustration")
             fragment = (ROOT / f"briefings/{run_date}-{lang}.html").read_text()
             for image in re.findall(r'<img[^>]+src="([^"]+)"', fragment):
                 if not image.startswith("assets/illustrations/") or not (ROOT / image).is_file():
                     raise AssertionError("Missing generated diagram: " + image)
-            if fragment.count('class="editorial-visual ') < 2:
-                raise AssertionError("Article and concept diagrams are required")
+            expected = sum(v.get("target") != "cover" for v in research.get("visual_plan", []))
+            if fragment.count('class="editorial-visual ') != expected:
+                raise AssertionError("Rendered graphics do not match the editorial visual plan")
     print(f"Validated AI Daily Brief publishing contract for {run_date}")
     return 0
 

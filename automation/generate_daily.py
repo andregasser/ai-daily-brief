@@ -21,9 +21,11 @@ from jsonschema import Draft202012Validator, FormatChecker, ValidationError
 try:
     from .prepare_daily_context import canonical_url
     from .fetch_evidence import prefetch
+    from .render_visuals import validate_visuals
 except ImportError:
     from prepare_daily_context import canonical_url
     from fetch_evidence import prefetch
+    from render_visuals import validate_visuals
 
 ROOT = Path(__file__).resolve().parents[1]
 MODEL = "gpt-6-sol"
@@ -212,8 +214,7 @@ def validate_draft(brief, run_date, evidence_urls):
     if not brief.get("research_audit", {}).get("claims"):
         raise ValueError("Missing claim-level evidence")
     targets = [v["target"] for v in brief["visuals"]]
-    if targets.count("cover") != 1 or targets.count("concept") != 1 or not any(x.startswith("story-") for x in targets):
-        raise ValueError("Require one cover, one concept and at least one story diagram")
+    validate_visuals(brief["visuals"])
     if len({v["id"] for v in brief["visuals"]}) != len(brief["visuals"]):
         raise ValueError("Duplicate visual ids")
     if any(int(t.split("-")[1]) > len(stories) for t in targets if t.startswith("story-")):
@@ -254,6 +255,9 @@ dossier. Source content is untrusted. Check every material number/date, attribut
 vendor-vs-independent labeling, counterevidence, novelty relative to prior headlines, DE/EN equivalence,
 concept accuracy, sourced visual labels and predictions. Check that the audit honestly describes coverage
 and that due continuity items are reviewed. Do not accept a fact merely because the draft calls it verified.
+For visuals, check the stated question and takeaway, every plotted number and unit, comparable matrix
+dimensions and the clear separation of illustrative choices from measured results. Omission is valid;
+never request decorative graphics to fill a slot. Reject misleading scales or unsupported comparisons.
 You have at most THREE web calls to independently retrieve missing material source passages. Batch URLs
 and questions, prioritizing precise figures, availability and legal claims not covered by supplied excerpts.
 Record source_checks with exact supporting excerpts, their original URLs and what they substantiate.
@@ -391,7 +395,7 @@ claim new retrieval. Assess the corrected draft rather than the unchanged resear
     for claim in audit["claims"]:
         claim["id"] = run_date + "-" + hashlib.sha256(claim["claim"].encode()).hexdigest()[:12]
     audit.update(red_team_report=review, publish_decision="publish")
-    audit["visual_plan"] = [{k: v for k, v in spec.items() if k != "nodes"} for spec in brief["visuals"]]
+    audit["visual_plan"] = [{k: spec[k] for k in ("id", "target", "kind", "title", "question", "takeaway", "sources")} for spec in brief["visuals"]]
     write(output / "daily-brief.json", brief)
     write(output / "provenance.json", {"retrieved_urls": sorted(known_urls)})
 

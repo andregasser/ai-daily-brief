@@ -114,8 +114,8 @@ class PipelineTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Unretrieved"):
             generate_daily.validate_draft(doc, doc["date"], {URL})
         doc = brief()
-        doc["visuals"][0]["target"] = "story-2"
-        with self.assertRaisesRegex(ValueError, "cover"):
+        doc["visuals"][0]["target"] = "story-1"
+        with self.assertRaisesRegex(ValueError, "unique"):
             generate_daily.validate_draft(doc, doc["date"], {URL})
 
     def test_primary_evaluation_is_primary_but_reporting_is_not(self):

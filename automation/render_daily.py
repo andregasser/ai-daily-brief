@@ -103,7 +103,10 @@ def story_html(story: dict[str, Any], lang: str) -> str:
     for field, css_name in (("changed", "changed"), ("why", "why"), ("engineering", "engineering"), ("signal_hype", "signal-hype")):
         value = optional_loc(story.get(field), lang)
         if value:
-            pieces.append(f'    <p class="{css_name}"><strong>{LABELS[lang]["hype" if field == "signal_hype" else field]}:</strong> {esc(value)}</p>')
+            icon = {"changed": "✨", "why": "🎯", "engineering": "🛠️", "signal_hype": "⚖️"}[field]
+            label = LABELS[lang]["hype" if field == "signal_hype" else field]
+            punctuation = "" if label.endswith("?") else ":"
+            pieces.append(f'    <p class="{css_name}"><strong><span class="editorial-icon" aria-hidden="true">{icon}</span>{label}{punctuation}</strong> {esc(value)}</p>')
     pieces.extend(render_visuals.figure(v, lang) for v in story.get("_visuals", []))
     pieces.append("    " + source_links(story.get("sources"), lang))
     pieces.append("  </article>")

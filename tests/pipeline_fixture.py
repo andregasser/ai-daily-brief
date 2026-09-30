@@ -19,11 +19,13 @@ def brief():
                         "why": localized(de, en), "engineering": localized(de, en), "signal_hype": localized(de, en), "sources": [source]})
     visuals = []
     for target in ("cover", "story-1", "concept"):
-        visuals.append({"id": "fixture-" + target, "target": target, "kind": "flow",
+        visuals.append({"id": "fixture-" + target, "target": target, "kind": "bars",
                         "title": localized("Von der Quelle zur Prüfung", "From source to verification"),
                         "caption": localized("Synthetisches Ablaufdiagramm für den Test.", "Synthetic process diagram for the test."),
-                        "nodes": [{"label": localized("Quelle", "Source"), "detail": localized("Belegte Aussagen erfassen.", "Record supported claims.")},
-                                  {"label": localized("Prüfung", "Verification"), "detail": localized("Aussagen mit Belegen abgleichen.", "Compare claims with evidence.")}],
+                        "question": localized("Was unterscheidet die Testwerte?", "How do the test values differ?"),
+                        "takeaway": localized("Der zweite Testwert ist halb so gross.", "The second fixture value is half as large."),
+                        "unit": localized("Synthetische Einheiten", "Synthetic units"),
+                        "items": [{"label": localized("A"), "value": 2}, {"label": localized("B"), "value": 1}],
                         "sources": [source]})
     claims = [{"id": f"fixture-{i}", "claim": f"Synthetic fixture claim number {i} is supported by the fixture.",
                "evidence_state": "confirmed_primary", "support": [{"role": "primary", "name": source["label"], "url": URL}],
