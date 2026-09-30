@@ -1,0 +1,31 @@
+name: Deploy published brief to Pages
+
+on:
+  workflow_run:
+    workflows: ['Publish AI Daily Brief']
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  pages: write
+
+concurrency:
+  group: deploy-published-brief
+  cancel-in-progress: false
+
+jobs:
+  request-build:
+    if: >-
+      (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main') ||
+      (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      # GITHUB_TOKEN commits do not trigger the branch-based Pages build.
+      # Explicitly build the latest published main revision; no code or artifacts
+      # from the triggering run execute with Pages write permission.
+      - name: Request GitHub Pages build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"

@@ -87,6 +87,8 @@ Repository setup still requires only the Actions secret `OPENAI_API_KEY`. It is 
 
 Every run uploads `daily-brief-diagnostics-<run-id>` with per-stage timings/logs, public evidence excerpts, partial model outputs, final response statuses and token usage, even when a stage fails. API credentials and request headers are not stored. The GitHub job summary lists measured stage durations. Diagnostics are retained for seven days. Failures preserve the last published edition; an existing valid edition is skipped rather than regenerated.
 
+After a successful publisher run on `main`, `deploy-published-brief.yml` explicitly requests a GitHub Pages build of the latest `main` revision. This is necessary because commits pushed with the workflow's `GITHUB_TOKEN` do not automatically trigger branch-based Pages builds. The separate deployment workflow can also be run manually without regenerating an edition.
+
 For offline checks, install `automation/requirements.txt` and run `python3 -m unittest discover -s tests -p 'test*.py'`. To inspect preparation without calling the model, run `python3 automation/run_step.py prepare --timeout 90 -- python3 automation/prepare_daily_context.py YYYY-MM-DD`. Model output must pass the separate review before `render_daily.py --approved` accepts it. Browser test setup is described below.
 
 ## Visual editorial system
