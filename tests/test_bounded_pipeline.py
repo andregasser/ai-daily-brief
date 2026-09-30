@@ -105,6 +105,30 @@ class PipelineTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "cover"):
             generate_daily.validate_draft(doc, doc["date"], {URL})
 
+    def test_primary_evaluation_is_primary_but_reporting_is_not(self):
+        doc = brief()
+        claim = doc["research_audit"]["claims"][0]
+        claim["evidence_state"] = "confirmed_primary"
+        claim["support"] = [{"role": "primary_evaluation", "name": "Original evaluation", "url": URL}]
+        generate_daily.validate_draft(doc, doc["date"], {URL})
+        claim["support"][0]["role"] = "independent_reporting"
+        with self.assertRaisesRegex(ValueError, "requires primary evidence"):
+            generate_daily.validate_draft(doc, doc["date"], {URL})
+
+    def test_small_repairs_preserve_original_and_still_require_validation(self):
+        doc = brief()
+        fixed = generate_daily.apply_repairs(doc, {"changes": [
+            {"op": "replace", "path": "/headline/de", "value": "Korrigierter Titel"},
+            {"op": "add", "path": "/temporary", "value": True},
+            {"op": "remove", "path": "/temporary"},
+        ]})
+        self.assertEqual(fixed["headline"]["de"], "Korrigierter Titel")
+        self.assertNotEqual(doc["headline"]["de"], fixed["headline"]["de"])
+        self.assertEqual(doc["sections"], fixed["sections"])
+        generate_daily.validate_draft(fixed, fixed["date"], {URL})
+        for path in ("", "/sections/-1", "/sections/999", "/missing"):
+            with self.assertRaises(ValueError):
+                generate_daily.apply_repairs(doc, {"changes": [{"op": "replace", "path": path, "value": "x"}]})
     def test_refused_review_keeps_last_edition_and_bounds_repair(self):
         self.prepare_inputs()
         calls = []
@@ -113,7 +137,8 @@ class PipelineTests(unittest.TestCase):
             def call(_, stage, *args, **kwargs):
                 calls.append(stage)
                 if stage == "research": return {"publish": True, "stories": [], "continuity_reviews": []}
-                if stage in {"draft", "repair"}: return brief()
+                if stage == "draft": return brief()
+                if stage == "repair": return {"changes": [{"op": "replace", "path": "/headline/de", "value": "Korrigiert"}]}
                 return {"approved": False, "issues": ["Unsupported factual claim"], "checks": ["Evidence"]}
         with self.assertRaisesRegex(ValueError, "Material review issues"):
             generate_daily.generate("2026-09-30", self.path, Client())

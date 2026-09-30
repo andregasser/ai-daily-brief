@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 from contextlib import contextmanager
 from datetime import datetime, timezone
@@ -26,6 +27,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MODEL = "gpt-6-sol"
 TOTAL_SECONDS = 450
 MAX_SEARCH_CALLS = 6
+PRIMARY_ROLES = {"primary", "primary_evidence", "primary_filing", "primary_legal_filing", "primary_evaluation", "primary_research"}
 
 
 def write(path: Path, value):
@@ -201,7 +203,7 @@ def validate_draft(brief, run_date, evidence_urls):
         if prediction["review_after"] <= run_date:
             raise ValueError("New predictions require future review dates")
     for claim in brief["research_audit"]["claims"]:
-        if claim["evidence_state"] == "confirmed_primary" and not any(s["role"] in {"primary", "primary_evidence"} for s in claim["support"]):
+        if claim["evidence_state"] == "confirmed_primary" and not any(s["role"] in PRIMARY_ROLES for s in claim["support"]):
             raise ValueError("Primary confirmation requires primary evidence")
     if datetime.fromisoformat(run_date).weekday() == 6 and not brief.get("weekly_review"):
         raise ValueError("Sunday requires weekly evidence synthesis")
@@ -235,6 +237,51 @@ Approve only if no material issues remain. Return JSON {approved:boolean,issues:
 checks:[checks actually performed]}. Do not rewrite the draft. This call has no tools."""
 
 
+def apply_repairs(brief, patch):
+    """Apply a bounded JSON Pointer patch to a copy, then validate as usual."""
+    changes = patch.get("changes")
+    if not isinstance(changes, list) or not 1 <= len(changes) <= 40:
+        raise ValueError("Repair requires 1–40 explicit changes")
+    result = copy.deepcopy(brief)
+    for change in changes:
+        path, operation = change.get("path"), change.get("op")
+        if not isinstance(path, str) or not path.startswith("/") or operation not in {"add", "replace", "remove"}:
+            raise ValueError("Invalid repair operation")
+        keys = [key.replace("~1", "/").replace("~0", "~") for key in path[1:].split("/")]
+        target = result
+        for key in keys[:-1]:
+            target = target[int(key)] if isinstance(target, list) and key.isdigit() else target[key]
+        key = keys[-1]
+        if isinstance(target, list):
+            if not key.isdigit():
+                raise ValueError("Repair array index must be nonnegative")
+            key = int(key)
+            if key >= len(target):
+                raise ValueError("Repair array index does not exist")
+        elif not isinstance(target, dict):
+            raise ValueError("Repair parent must be an object or array")
+        if operation == "remove":
+            del target[key]
+        elif operation == "add" and isinstance(target, list):
+            target.insert(key, change["value"])
+        else:
+            if operation == "replace" and isinstance(target, dict) and key not in target:
+                raise ValueError("Repair replacement path does not exist")
+            target[key] = change["value"]
+    return result
+
+
+def repair_draft(client, instructions, inputs, brief, issues):
+    prompt = instructions + """\nREPAIR MODE overrides the complete-draft output instruction above.
+Return only JSON {"changes":[{"op":"replace","path":"/field/0/subfield","value":...}]}.
+Use 1–40 JSON Pointer operations (add, replace, remove) addressing the supplied draft.
+Return only changed values, never the full draft. Preserve all unaffected fields.
+Object add may create a missing property; array indices must exist. Escape / as ~1 and ~ as ~0.
+Fix all supplied issues, keeping both languages consistent and every claim grounded in the dossier."""
+    patch = client.call("repair", prompt, {**inputs, "draft": brief, "issues": issues}, seconds=60, tokens=8000)
+    return apply_repairs(brief, patch)
+
+
 def generate(run_date, output, client):
     research = json.loads((output / "research-input.json").read_text())
     context = json.loads((output / "editorial-context.json").read_text())
@@ -260,7 +307,8 @@ def generate(run_date, output, client):
     except (ValueError, ValidationError) as exc:
         # jsonschema ValidationError includes the full instance in str(); give only its message.
         issue = getattr(exc, "message", str(exc))[:1200]
-        brief = client.call("repair", instructions, {**draft_inputs, "draft": brief, "issues": [issue]}, seconds=60, tokens=16000)
+        write(output / "validation-issues.json", [issue])
+        brief = repair_draft(client, instructions, draft_inputs, brief, [issue])
         validate_draft(brief, run_date, known_urls)
         repaired = True
     review_inputs = {"draft": brief, "dossier": dossier, "evidence": evidence, "context": context}
@@ -268,7 +316,7 @@ def generate(run_date, output, client):
     if not review["approved"] or review["issues"]:
         if repaired:
             raise ValueError("Review rejected repaired draft; previous edition retained")
-        brief = client.call("repair", instructions, {**draft_inputs, "draft": brief, "issues": review["issues"]}, seconds=60, tokens=16000)
+        brief = repair_draft(client, instructions, draft_inputs, brief, review["issues"])
         validate_draft(brief, run_date, known_urls)
         review = client.call("review_repaired", REVIEW, {**review_inputs, "draft": brief}, seconds=45, tokens=3500, schema=REVIEW_SCHEMA)
     if not review["approved"] or review["issues"]:

@@ -146,6 +146,9 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
+          # Apply the generated patch on the current branch tip, including any
+          # independent changes committed during the editorial API calls.
+          ref: ${{ github.ref }}
           fetch-depth: 0
 
       - name: Download generated patch
