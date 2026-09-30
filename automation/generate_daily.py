@@ -44,7 +44,8 @@ def obj(properties):
 
 STRING = {"type": "string"}
 STRINGS = {"type": "array", "items": STRING}
-REVIEW_SCHEMA = obj({"approved": {"type": "boolean"}, "issues": STRINGS, "checks": STRINGS,
+REVIEW_ISSUES = {"type": "array", "items": {"anyOf": [STRING, obj({"paths": STRINGS, "issue": STRING, "correction": STRING})]}}
+REVIEW_SCHEMA = obj({"approved": {"type": "boolean"}, "issues": REVIEW_ISSUES, "checks": STRINGS,
                      "source_checks": {"type": "array", "items": obj({"url": STRING, "excerpt": STRING, "assessment": STRING})}})
 
 
@@ -260,8 +261,8 @@ An earlier source_checks record is evidence from an independent web check, not a
 Do not treat a local HTTP fetch failure as proof the separate web search failed to retrieve the page.
 Use supplied coverage for feed failures; page fetch outcomes and feed fetch outcomes are distinct.
 Prior continuity status is historical, not newly verified; lack of evidence is inconclusive, not falsification.
-Approve only if no material issues remain. Return JSON {approved:boolean,issues:[specific actionable issue
-with exact JSON paths and a concrete correction],checks:[checks actually performed],
+Approve only if no material issues remain. Return JSON {approved:boolean,
+issues:[{paths:[exact JSON paths],issue:specific material problem,correction:concrete correction}],checks:[checks actually performed],
 source_checks:[{url,excerpt,assessment}]}. Do not rewrite the draft. If tools are unavailable, use the
 supplied source passages and previous independent source_checks; never invent a new retrieval."""
 
@@ -374,7 +375,11 @@ Role primary_<source type> denotes an original source; this does not establish t
             raise ValueError("Review rejected repaired draft; previous edition retained")
         brief = repair_draft(client, instructions, {**draft_inputs, "independent_source_checks": review.get("source_checks", [])}, brief, review["issues"])
         validate_draft(brief, run_date, known_urls)
-        review = client.call("review_repaired", REVIEW, {**review_inputs, "draft": brief, "previous_source_checks": review.get("source_checks", [])}, seconds=45, tokens=3500, schema=REVIEW_SCHEMA)
+        recheck = REVIEW + """\nRE-REVIEW: The previous independent review already performed the listed web checks.
+Check that every previous issue is resolved and that corrections introduced no new material problem.
+Use the previous review's source checks and findings for unchanged claims; do not repeat discovery or
+claim new retrieval. Assess the corrected draft rather than the unchanged research dossier."""
+        review = client.call("review_repaired", recheck, {**review_inputs, "draft": brief, "previous_review": review}, seconds=45, tokens=3500, schema=REVIEW_SCHEMA)
     if not review["approved"] or review["issues"]:
         raise ValueError("Material review issues remain; previous edition retained")
     audit = brief["research_audit"]

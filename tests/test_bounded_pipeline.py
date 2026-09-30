@@ -74,6 +74,14 @@ class PipelineTests(unittest.TestCase):
         self.assertTrue((self.path / "draft.partial.txt").exists())
         self.assertFalse((self.path / "draft.json").exists())
 
+    def test_review_accepts_actionable_structured_issues(self):
+        result = {"approved": False, "issues": [{"paths": ["/predictions/0"], "issue": "Missing outcome", "correction": "State a testable outcome"}],
+                  "checks": ["Prediction criteria"], "source_checks": []}
+        client = generate_daily.Responses(self.path, "secret", lambda *a, **k: self.stream(result))
+        review = client.call("review", "JSON", {}, seconds=2, tokens=100, search=True, schema=generate_daily.REVIEW_SCHEMA)
+        self.assertFalse(review["approved"])
+        self.assertEqual(review["issues"][0]["paths"], ["/predictions/0"])
+
     def test_http_error_does_not_retry_or_leak_response(self):
         calls = []
         def fail(*args, **kwargs):
