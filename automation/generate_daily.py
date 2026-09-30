@@ -105,6 +105,7 @@ class Responses:
                           headers={"Authorization": "Bearer " + self.key, "Content-Type": "application/json"}, method="POST")
         started = time.monotonic()
         response = None
+        received_chars = 0
         try:
             with deadline(limit), self.transport(request, timeout=min(limit, 60)) as stream, (self.output / f"{stage}.partial.txt").open("w") as partial:
                 for line in stream:
@@ -113,7 +114,11 @@ class Responses:
                     event = json.loads(line[6:])
                     kind = event.get("type", "")
                     if kind == "response.output_text.delta":
-                        partial.write(event.get("delta", ""))
+                        delta = event.get("delta", "")
+                        if delta and not received_chars:
+                            self.event(stage, "first_text", elapsed_seconds=round(time.monotonic() - started, 2))
+                        received_chars += len(delta)
+                        partial.write(delta)
                         partial.flush()
                     elif kind in {"response.completed", "response.failed", "response.incomplete"}:
                         response = event["response"]
@@ -168,7 +173,7 @@ class Responses:
             # No automatic retry: a repeated expensive generation is not a recovery policy.
             raise RuntimeError(f"OpenAI API HTTP {exc.code}: {details.get('message', 'No structured error details available')}") from None
         except Exception as exc:
-            self.event(stage, "failed", error=type(exc).__name__, elapsed_seconds=round(time.monotonic() - started, 2))
+            self.event(stage, "failed", error=type(exc).__name__, elapsed_seconds=round(time.monotonic() - started, 2), partial_chars=received_chars)
             raise
 
 
@@ -245,8 +250,16 @@ Return JSON {publish: boolean, stories: [{id, title, category, changed, facts: [
 sources:[{label,url,role}], caveats}], why, counterevidence, builder_action}], rejected:[{title,reason}],
 concept:{title, explanation, sources:[{label,url}]}, continuity_reviews:[{kind,id,assessment,sources:[{label,url}]}],
 watch_hits:[string], coverage_gaps:[string], emerging_signal:string, weekly_assessment:string}.
-Keep the dossier under 6000 words. All sources must be URLs actually supplied as page evidence or returned
-by web search. Continuity kind must be prediction, builder, thesis, storyline or trend;
+This is an internal handoff, not the finished article. Target 1200 words; never exceed 1800 words
+or 18000 characters including JSON and URLs. Return compact JSON without indentation. For each story,
+keep at most three material facts with the sources needed to establish them; put related caveats together
+and avoid repeating a caveat across fields. Keep why, changed and builder_action to one short sentence each.
+Keep each continuity assessment to one sentence and cite new evidence only when relevant; an unchanged
+item still needs its supplied ID and an honest assessment. Do not omit due items to meet the budget.
+List rejected events, watch hits and coverage gaps concisely. The writer receives the original evidence
+separately, so do not copy long excerpts or write the final analysis here. Retain material numbers, dates,
+attribution, availability limits and uncertainty. All sources must be URLs actually supplied as page evidence
+or returned by web search. Continuity kind must be prediction, builder, thesis, storyline or trend;
 use only exact supplied IDs. For each story, retain numerical limitations, availability dates and attribution.
 Do not attempt to edit files, run tests, or design HTML. Those are separate deterministic stages."""
 

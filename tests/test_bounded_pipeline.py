@@ -73,6 +73,9 @@ class PipelineTests(unittest.TestCase):
             client.call("draft", "JSON", {}, seconds=2, tokens=10)
         self.assertTrue((self.path / "draft.partial.txt").exists())
         self.assertFalse((self.path / "draft.json").exists())
+        events = [json.loads(line) for line in client.events.read_text().splitlines()]
+        self.assertEqual(sum(event["status"] == "first_text" for event in events), 1)
+        self.assertEqual(events[-1]["partial_chars"], len('{"ok":'))
 
     def test_review_accepts_actionable_structured_issues(self):
         result = {"approved": False, "issues": [{"paths": ["/predictions/0"], "issue": "Missing outcome", "correction": "State a testable outcome"}],

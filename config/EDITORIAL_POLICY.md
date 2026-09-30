@@ -17,6 +17,11 @@ run broad searches without a limit, update the repository or run tests itself.
   open-web discovery, primary verification and counterevidence. It selects 4–7
   supported stories from at most 12 events. Coverage gaps must be disclosed;
   incomplete feed or excerpt coverage must never be reported as a complete sweep.
+  The internal dossier targets 1,200 words, with an upper bound of 1,800 words
+  and 18,000 characters including JSON and source URLs. It retains material
+  facts, caveats and due continuity assessments; the writer also receives the
+  original evidence. Compact JSON avoids spending the research budget on prose
+  repetition and indentation.
 - The writing API stage produces bilingual JSON and structured diagram specs.
   It cannot browse, edit files, execute code or run tests. The independent review
   stage checks claims, translation, caveats, visuals and continuity against the
