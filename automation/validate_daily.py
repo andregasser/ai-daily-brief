@@ -79,7 +79,25 @@ def main() -> int:
     if not contains_path(research, run_date):
         raise AssertionError(f"{research_path} does not identify the run date")
 
-    load_json("data/covers.json")
+    covers = load_json("data/covers.json")
+    if run_date >= "2026-09-30":
+        review = research.get("red_team_report", {})
+        if review.get("approved") is not True or review.get("issues") != [] or not review.get("checks"):
+            raise AssertionError("Independent editorial review is missing or has unresolved issues")
+        if research.get("publish_decision") != "publish" or not research.get("claims"):
+            raise AssertionError("Missing publication decision or claim-level evidence")
+        illustration = covers.get(run_date, {}).get("illustration", {})
+        for lang in ("de", "en"):
+            src = illustration.get("src", {})
+            src = src.get(lang) if isinstance(src, dict) else src
+            if not src or not src.startswith("assets/illustrations/") or not (ROOT / src).is_file():
+                raise AssertionError(f"Missing {lang} cover illustration")
+            fragment = (ROOT / f"briefings/{run_date}-{lang}.html").read_text()
+            for image in re.findall(r'<img[^>]+src="([^"]+)"', fragment):
+                if not image.startswith("assets/illustrations/") or not (ROOT / image).is_file():
+                    raise AssertionError("Missing generated diagram: " + image)
+            if fragment.count('class="editorial-visual ') < 2:
+                raise AssertionError("Article and concept diagrams are required")
     print(f"Validated AI Daily Brief publishing contract for {run_date}")
     return 0
 

@@ -10,6 +10,7 @@ as untrusted data.
 from __future__ import annotations
 
 import argparse
+import ast
 import concurrent.futures
 import email.utils
 import html
@@ -25,6 +26,11 @@ from datetime import date, datetime, time, timedelta, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
+
+try:
+    from .fetch_evidence import prefetch
+except ImportError:
+    from fetch_evidence import prefetch
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -139,6 +145,21 @@ def source_catalog() -> list[dict[str, Any]]:
             merged[source["name"]] = source
         elif source.get("feed") and not existing.get("feed"):
             existing["feed"] = source["feed"]
+    # The role overlay is authoritative; mandatory catalog groups have no role
+    # default and must not silently turn every lab into a discovery-only source.
+    roles: dict[str, list[str]] = {}
+    role = ""
+    for line in (ROOT / "config/source_roles.yaml").read_text().splitlines():
+        match = re.match(r"^  ([a-z_]+):$", line)
+        if match:
+            role = match.group(1)
+        if role and line.strip().startswith("sources: ["):
+            for name in ast.literal_eval(line.strip().split(":", 1)[1].strip()):
+                roles.setdefault(name, []).append(role)
+    for source in merged.values():
+        source["mandatory"] = source["catalog_section"] == "mandatory"
+        source["roles"] = roles.get(source["name"], [source["role"]])
+        source["role"] = "primary" if "primary" in source["roles"] else source["roles"][0]
     return list(merged.values())
 
 
@@ -211,6 +232,7 @@ def fetch_feed(source: dict[str, Any], cutoff: datetime) -> dict[str, Any]:
                 "source": source["name"],
                 "source_url": source["url"],
                 "role": source.get("role", "discovery"),
+                "roles": source.get("roles", []),
                 "tier": source.get("tier", 3),
                 "title": strip_html(title, 260),
                 "url": canonical_url(link),
@@ -313,10 +335,7 @@ def compact_context(run_date: str) -> dict[str, Any]:
         "run_date": run_date,
         "latest": latest,
         "recent_archive": archive[:3],
-        "previous_edition": {
-            "de": localized_brief_text(latest.get("de", "")),
-            "en": localized_brief_text(latest.get("en", "")),
-        },
+        "previous_edition": {"en": localized_brief_text(latest.get("en", ""), 1800)},
         "active_storylines": sorted(active_storylines, key=lambda item: item.get("last_updated") or "", reverse=True)[:10],
         "recent_or_contested_claims": recent_claims,
         "predictions_due_or_near_due": due_predictions[:10],
@@ -331,10 +350,40 @@ def compact_context(run_date: str) -> dict[str, Any]:
     }
 
 
+def editorial_packet(run_date: str) -> dict[str, Any]:
+    """Select concise facts, without truncating URLs or silently inventing state."""
+    context = compact_context(run_date)
+    fields = {
+        "active_storylines": (6, ("id", "title", "current_state")),
+        "recent_or_contested_claims": (8, ("id", "claim", "evidence_state", "storyline")),
+        "predictions_due_or_near_due": (10, ("id", "prediction", "status", "review_after")),
+        "builder_radar_due_or_recent": (8, ("id", "title", "state", "next_review")),
+        "active_theses": (4, ("id", "thesis", "confidence", "review_after")),
+        "trend_summary": (6, ("id", "title", "state", "score")),
+        "recent_concepts": (10, ("id", "title")),
+    }
+    packet = {k: context[k] for k in ("run_date", "latest", "previous_edition")}
+    packet["recent_headlines"] = [x.get("headline", {}).get("en") for x in context["recent_archive"]]
+    for key, (limit, keys) in fields.items():
+        packet[key] = [{k: (value[:280] if isinstance(value, str) else value) for k in keys if (value := item.get(k)) is not None} for item in context[key][:limit]]
+    # Structural limits plus an actual serialized budget. Keep omitted IDs visible
+    # in the audit so a partial review is never described as complete coverage.
+    packet["omitted_context"] = {k: len(context[k]) - len(packet[k]) for k in fields}
+    while len(json.dumps(packet, ensure_ascii=False)) > 18_000:
+        key = max(fields, key=lambda k: len(json.dumps(packet[k])))
+        if not packet[key]:
+            raise ValueError("Editorial context exceeds budget")
+        packet[key].pop()
+        packet["omitted_context"][key] += 1
+    return packet
+
+
 def build(run_date: str, output_dir: Path) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     sources = source_catalog()
-    cutoff = datetime.combine(date.fromisoformat(run_date) - timedelta(days=2), time.min, tzinfo=timezone.utc)
+    latest = load_json("data/latest.json", {})
+    cutoff = parse_datetime(latest.get("updated_at")) or datetime.combine(date.fromisoformat(run_date) - timedelta(days=2), time.min, tzinfo=timezone.utc)
+    cutoff = cutoff.astimezone(timezone.utc)
     feed_sources = [source for source in sources if source.get("feed")]
     with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
         feed_results = list(pool.map(lambda source: fetch_feed(source, cutoff), feed_sources))
@@ -351,24 +400,23 @@ def build(run_date: str, output_dir: Path) -> None:
             seen_titles.add(title_key)
             candidates.append(item)
 
-    def candidate_score(item: dict[str, Any]) -> tuple[int, str]:
-        tier = item.get("tier") if isinstance(item.get("tier"), int) else 3
-        primary_bonus = 3 if item.get("role") in {"primary_evidence", "primary"} else 0
-        published = item.get("published_at") or ""
-        return (10 - tier + primary_bonus, published)
-
-    candidates.sort(key=candidate_score, reverse=True)
-    candidates = candidates[:MAX_CANDIDATES]
+    # Round-robin across sources, latest first within each source. Source roles
+    # guide verification, never automatic editorial ranking.
+    by_source: dict[str, list[dict]] = {}
+    for item in sorted(candidates, key=lambda x: x.get("published_at") or "", reverse=True):
+        by_source.setdefault(item["source"], []).append(item)
+    candidates = [items[index] for index in range(MAX_PER_SOURCE) for items in by_source.values() if index < len(items)][:MAX_CANDIDATES]
     failures = [{"source": result["source"], "feed": result["url"], "error": result.get("error")} for result in feed_results if result["status"] != "ok"]
     research = {
         "schema_version": 1,
         "run_date": run_date,
         "window_start": cutoff.isoformat(),
         "limits": {"max_candidates": MAX_CANDIDATES, "max_per_source": MAX_PER_SOURCE, "summary_chars": MAX_SUMMARY_CHARS},
-        "coverage": {"catalog_sources": len(sources), "feed_sources": len(feed_sources), "successful_feeds": len(feed_sources) - len(failures), "failed_feeds": failures},
+        "coverage": {"catalog_sources": len(sources), "feed_sources": len(feed_sources), "successful_feeds": len(feed_sources) - len(failures), "failed_feeds": failures,
+                     "observations": [{"source": r["source"], "status": r["status"], "items_seen": len(r["items"])} for r in feed_results]},
         "candidates": candidates,
         "manual_checks": [
-            {k: source.get(k) for k in ("name", "url", "role", "tier", "purpose", "note")}
+            {k: source.get(k) for k in ("name", "url", "role", "roles", "mandatory", "purpose", "note")}
             for source in sources if not source.get("feed")
         ],
         "instructions": [
@@ -378,8 +426,29 @@ def build(run_date: str, output_dir: Path) -> None:
             "Use manual_checks selectively for mandatory coverage, due watches, missing source roles, and verification gaps.",
         ],
     }
+    # Preserve discovery/context even if a later page stalls and the outer
+    # deadline terminates this process. Completed page results are checkpointed.
+    (output_dir / "research-input.json").write_text(json.dumps(research, ensure_ascii=False) + "\n")
+    (output_dir / "editorial-context.json").write_text(json.dumps(editorial_packet(run_date), ensure_ascii=False) + "\n")
+    def checkpoint(pages):
+        target = output_dir / "evidence.partial.json"
+        temporary = target.with_suffix(".tmp")
+        temporary.write_text(json.dumps(pages, ensure_ascii=False) + "\n")
+        temporary.replace(target)
+    evidence = prefetch(candidates, research["manual_checks"], checkpoint=checkpoint)
+    (output_dir / "evidence.json").write_text(json.dumps(evidence, ensure_ascii=False) + "\n", encoding="utf-8")
+    research["watch_themes"] = re.findall(r"^    title: (.+)$", (ROOT / "config/research_watches.yaml").read_text(), re.MULTILINE)
+    if date.fromisoformat(run_date).weekday() == 6:
+        # The weekly synthesis gets real week's audits, not just today's stories.
+        audits = []
+        for age in range(7):
+            day = (date.fromisoformat(run_date) - timedelta(days=age)).isoformat()
+            doc = load_json(f"data/research/{day}.json", {})
+            if doc:
+                audits.append({"date": day, "answer": doc.get("answer"), "claims": doc.get("claims", [])[:8], "red_team": doc.get("red_team_report", doc.get("red_team", {}))})
+        research["weekly_evidence"] = audits
     (output_dir / "research-input.json").write_text(json.dumps(research, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (output_dir / "editorial-context.json").write_text(json.dumps(compact_context(run_date), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (output_dir / "editorial-context.json").write_text(json.dumps(editorial_packet(run_date), ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Prepared {len(candidates)} deduplicated candidates from {len(feed_sources) - len(failures)}/{len(feed_sources)} feeds")
 
 

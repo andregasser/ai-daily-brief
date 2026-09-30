@@ -87,7 +87,7 @@ function renderEditionCover(article, meta, language, covers) {
   if (illustration) {
     const figure = editorialNode('figure', 'lead-illustration visual-explanatory-diagram');
     const img = document.createElement('img');
-    img.src = illustration.src;
+    img.src = typeof illustration.src === 'string' ? illustration.src : illustration.src?.[language];
     img.alt = illustration.alt?.[language] || '';
     img.width = 620; img.height = 500;
     const caption = editorialNode('figcaption');
