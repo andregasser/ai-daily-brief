@@ -412,7 +412,7 @@ short auditable claims with their actual sources and caveats; do not omit materi
 Copy every source URL verbatim from the supplied dossier or evidence."""
     draft_inputs = {"date": run_date, "updated_at": datetime.now(timezone.utc).isoformat(), "dossier": dossier, "context": context, "schema": schema,
                     "weekly_evidence": research.get("weekly_evidence", []), "evidence": evidence, "coverage": research["coverage"]}
-    brief = json.loads((output / "draft.json").read_text()) if 'draft' in phases else client.call("draft", instructions, draft_inputs, seconds=180, tokens=16000)
+    brief = json.loads((output / "draft.json").read_text()) if 'draft' in phases else client.call("draft", instructions, draft_inputs, seconds=240, tokens=16000)
     # One bounded repair across schema and editorial review, never an open loop.
     repaired = False
     try:
