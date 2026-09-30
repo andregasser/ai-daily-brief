@@ -1,8 +1,12 @@
 // Serve the repository first. Run with Playwright installed.
 const {chromium} = require('playwright');
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
 const base = process.env.BRIEF_URL || 'http://127.0.0.1:8766/';
 const date = process.env.BRIEF_DATE || '2026-09-24';
+const covers = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/covers.json'), 'utf8'));
+const hasIllustration = !!covers[date]?.illustration;
 (async () => {
   const browser = await chromium.launch({headless:true});
   try {
@@ -14,13 +18,19 @@ const date = process.env.BRIEF_DATE || '2026-09-24';
       for (const lang of ['de','en']) {
         await page.goto(`${base}?date=${date}&lang=${lang}#brief`);
         await page.waitForSelector('#brief-content[aria-busy="false"] .story');
-        await page.waitForFunction(() => document.querySelector('.lead-illustration img')?.naturalWidth > 0);
-        assert.ok(await page.locator('#back-to-cover').isVisible());
-        await page.locator('#back-to-cover').click();
-        await page.waitForFunction(() => {
-          const rect = document.querySelector('.lead-illustration img').getBoundingClientRect();
-          return location.hash === '#edition' && rect.top < innerHeight && rect.bottom > 0;
-        });
+        if (hasIllustration) {
+          await page.waitForFunction(() => document.querySelector('.lead-illustration img')?.naturalWidth > 0);
+          assert.ok(await page.locator('#back-to-cover').isVisible());
+          await page.locator('#back-to-cover').click();
+          await page.waitForFunction(() => {
+            const rect = document.querySelector('.lead-illustration img').getBoundingClientRect();
+            return location.hash === '#edition' && rect.top < innerHeight && rect.bottom > 0;
+          });
+        } else {
+          assert.equal(await page.locator('.lead-illustration').count(), 0);
+          assert.equal(await page.locator('#back-to-cover').isVisible(), false);
+          await page.locator('.topbar a[href="#edition"]').click();
+        }
         await page.locator('.cover-action').click();
         assert.equal(new URL(page.url()).hash, '#brief');
         await page.locator('.topbar a[href="#edition"]').click();
@@ -29,9 +39,9 @@ const date = process.env.BRIEF_DATE || '2026-09-24';
         assert.equal(new URL(await archiveLink.getAttribute('href'),base).hash, '#edition');
         await archiveLink.click();
         await page.waitForSelector('#brief-content[aria-busy="false"] .story');
-        await page.waitForFunction(() => document.querySelector('.lead-illustration img')?.naturalWidth > 0 && document.querySelector('#edition').getBoundingClientRect().top >= 0);
+        await page.waitForFunction(withImage => (!withImage || document.querySelector('.lead-illustration img')?.naturalWidth > 0) && document.querySelector('#edition').getBoundingClientRect().top >= 0, hasIllustration);
         if(width === 1280 && lang === 'de') await page.screenshot({path:'/tmp/ai-brief-cover-visible.png'});
-        console.log(`${lang}/${width}: image loads; overview return, edition menu and archive open the cover.`);
+        console.log(`${lang}/${width}: ${hasIllustration ? 'image loads' : 'text-only cover'}; edition menu and archive open the cover.`);
       }
     }
     await page.goto(`${base}?date=2026-09-10&lang=de#edition`);

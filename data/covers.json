@@ -75,30 +75,23 @@
       "en": "AMD proposes to buy a spatial-model lab, OpenAI broadens its agent platform, and a voluntary accord and a lawsuit put control of autonomous actions in focus."
     },
     "illustration": {
+      "visual_class": "data-visualization",
       "src": {
-        "de": "assets/illustrations/2026-09-30-accountability-surfaces-de.svg",
-        "en": "assets/illustrations/2026-09-30-accountability-surfaces-en.svg"
+        "de": "assets/illustrations/2026-09-30-cached-input-price-de.svg",
+        "en": "assets/illustrations/2026-09-30-cached-input-price-en.svg"
       },
       "alt": {
-        "de": "Drei verschiedene Grenzen für Agenten",
-        "en": "Three different boundaries for agents"
+        "de": "Der Cache wird günstiger. USD je 1 Mio. Cache-Input-Tokens: GPT-6 Sol 0,2; GPT-6.1 Sol 0,1. 50 % weniger für Cache-Input. Standard-Input und Output bleiben gleich.",
+        "en": "Cached input gets cheaper. USD per 1M cached input tokens: GPT-6 Sol 0.2; GPT-6.1 Sol 0.1. 50% less for cached input. Standard input and output are unchanged."
       },
       "caption": {
-        "de": "Produktoberfläche, freiwillige Aufsicht und Rechtsstreit sind verschiedene Entwicklungen; keine davon belegt für sich sichere autonome Arbeit.",
-        "en": "Product surface, voluntary oversight and litigation are distinct developments; none alone establishes safe autonomous work."
+        "de": "API-Listenpreise am 30.09.2026. Standard-Input weiterhin 2 $, Output 10 $ pro Million Tokens. Kein Nachweis geringerer Kosten pro erfolgreicher Aufgabe.",
+        "en": "API list prices on 30 Sep 2026. Standard input remains $2 and output $10 per million tokens. This does not establish a lower cost per successful task."
       },
       "sources": [
         {
-          "label": "OpenAI DevDay recap",
-          "href": "https://openai.com/index/devday-2026-recap/"
-        },
-        {
-          "label": "Associated Press report",
-          "href": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e"
-        },
-        {
-          "label": "Plaintiff’s complaint",
-          "href": "https://lasst.org/in-the-courts/hugging-face-complaint"
+          "label": "OpenAI · GPT-6.1 Sol",
+          "href": "https://openai.com/index/introducing-gpt-6-1-sol/"
         }
       ]
     }

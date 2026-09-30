@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 514.4" role="img" aria-labelledby="title desc">
+<title id="title">Cached input gets cheaper</title><desc id="desc">Which token price falls with the Sol upgrade? USD per 1M cached input tokens: GPT-6 Sol 0.2; GPT-6.1 Sol 0.1. 50% less for cached input. Standard input and output are unchanged. API list prices on 30 Sep 2026. Standard input remains $2 and output $10 per million tokens. This does not establish a lower cost per successful task.</desc>
+<rect width="480" height="514.4" fill="#fffdf8"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="28" y="32" font-size="13" fill="#16786d" font-weight="700" text-anchor="start">DATA COMPARISON</text>
+<text x="28" y="68" font-size="27" fill="#233548" font-weight="700" text-anchor="start">Cached input gets cheaper</text>
+<text x="28" y="119.45" font-size="17" fill="#64748b" font-weight="400" text-anchor="start">USD per 1M cached input tokens</text>
+<path d="M28 157.4 L28 336.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="28" y="361.4" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">0</text>
+<path d="M125.5 157.4 L125.5 336.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="125.5" y="361.4" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">0.05</text>
+<path d="M223 157.4 L223 336.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="223" y="361.4" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">0.1</text>
+<path d="M320.5 157.4 L320.5 336.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="320.5" y="361.4" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">0.15</text>
+<path d="M418 157.4 L418 336.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="418" y="361.4" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">0.2</text>
+<text x="28" y="177.4" font-size="21" fill="#233548" font-weight="600" text-anchor="start">GPT-6 Sol</text>
+<rect class="data-bar" data-value="0.2" x="28" y="210.75" width="390" height="19" rx="2" fill="#8b9bb0"/>
+<text x="450" y="177.4" font-size="24" fill="#8b9bb0" font-weight="700" text-anchor="end">0.2</text>
+<text x="28" y="269.4" font-size="21" fill="#233548" font-weight="600" text-anchor="start">GPT-6.1 Sol</text>
+<rect class="data-bar" data-value="0.1" x="28" y="302.75" width="195" height="19" rx="2" fill="#16786d"/>
+<text x="450" y="269.4" font-size="24" fill="#16786d" font-weight="700" text-anchor="end">0.1</text>
+<path d="M28 401.4 L452 401.4" stroke="#16786d" stroke-width="2" fill="none"/>
+<text x="28" y="434.4" font-size="20" fill="#233548" font-weight="600" text-anchor="start">50% less for cached input. Standard</text>
+<text x="28" y="461.4" font-size="20" fill="#233548" font-weight="600" text-anchor="start">input and output are unchanged.</text>
+</g></svg>

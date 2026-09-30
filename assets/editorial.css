@@ -2,6 +2,7 @@
 @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url('fonts/barlow-condensed-800.ttf') format('truetype')}
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/dm-sans-400.ttf') format('truetype')}
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/dm-sans-700.ttf') format('truetype')}
+@font-face{font-family:'Editorial Emoji';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/editorial-emoji.woff2') format('woff2')}
 /* Modern reading layout: soft color, clear hierarchy and consistent text alignment. */
 :root{color-scheme:light;--bg:#f7f9fb;--panel:#eef2f6;--line:#dce3eb;--text:#253044;--muted:#5b687c;--brand:#485f91;--green:#3e7060;--amber:#886335;--red:#9b4b44;--violet:#6c6192;--blue:#485f91;--surface:#fff;--mint:#eaf3ee;--lavender:#f0edf8;--sky:#eaf0fa;--peach:#f8efe7;--max:1160px;--display:'DM Sans',Arial,sans-serif;--body:'DM Sans',Arial,sans-serif;--body-size:17px;--support-size:15px}
 *{box-sizing:border-box}
@@ -88,10 +89,17 @@ main{max-width:var(--max);margin:auto;padding:0 24px}
 .evidence:before{color:var(--green)}
 .evidence.reported,.evidence.vendor,.evidence.early,.evidence.attention{color:var(--amber)!important;background:#f1eadf!important}
 .emerging-story .story-meta:before,.qa-story .story-meta:before{display:none}
-.why,.engineering,.changed,.builder-action,.thesis,.signal-hype{padding:14px 0;background:none;border:0;border-top:1px solid var(--line);margin:18px 0}
-.why>strong,.engineering>strong,.changed>strong,.builder-action>strong,.thesis>strong,.signal-hype>strong{font-size:14px;color:var(--brand)}
+.why,.engineering,.changed,.builder-action,.thesis,.signal-hype{padding:18px 22px;background:var(--sky);border:1px solid #d5dfee;border-left:4px solid var(--brand);border-radius:0 12px 12px 0;margin:16px 0}
+.changed{background:var(--lavender);border-color:#dfd8ee;border-left-color:var(--violet)}
+.engineering,.builder-action{background:var(--mint);border-color:#d5e5db;border-left-color:var(--green)}
+.signal-hype{background:#fffaf1;border-color:#eadfcd;border-left-color:var(--amber)}
+.why>strong,.engineering>strong,.changed>strong,.builder-action>strong,.thesis>strong,.signal-hype>strong{font-size:16px;line-height:1.5;color:var(--brand)}
 .engineering>strong,.builder-action>strong{color:var(--green)}
 .changed>strong,.signal-hype>strong{color:var(--violet)}
+.signal-hype>strong{color:var(--amber)}
+.editorial-icon{display:inline-block;margin-right:.55em;font-family:'Editorial Emoji','Apple Color Emoji','Segoe UI Emoji',sans-serif;font-weight:400;font-size:1.05em;line-height:1;letter-spacing:0;flex:none}
+.chapter>.editorial-icon{margin-right:0}
+.chapter{flex-wrap:wrap;border-bottom:2px solid #cdd8e8}
 p:is(.why,.engineering,.changed,.builder-action,.thesis,.signal-hype)>strong:first-child{display:block;margin-bottom:6px}
 .why p,.engineering p,.changed p,.builder-action p,.thesis p,.signal-hype p{color:var(--text)!important;font-size:16px!important;line-height:1.75}
 .sources{font:400 12px/1.7 var(--body);color:var(--muted);gap:8px 14px!important}
@@ -220,3 +228,11 @@ footer>a:last-child{color:var(--muted);text-decoration:none}
 
 .back-to-cover{display:inline-flex;align-items:center;min-height:44px;margin-bottom:12px;color:var(--brand);font-size:13px;font-weight:700;text-decoration:none}
 .back-to-cover:hover{text-decoration:underline}
+
+/* Editorial graphics encode values, aligned comparisons or a concrete choice. */
+.visual-editorial-data{background:#fffdf8;border:1px solid #e5e1d8;border-radius:0;padding:20px;margin:32px 0}
+.visual-editorial-data img{display:block;width:100%;max-width:580px;height:auto;margin:0 auto}
+.visual-editorial-data figcaption{display:block;padding:18px 8px 4px;border-top:1px solid #e5e1d8;font:400 13px/1.65 var(--body);color:var(--muted)}
+.visual-sources{display:block;margin-top:8px;font-size:11px}
+.lead-illustration img{max-height:none;object-fit:contain}
+@media(max-width:760px){.visual-editorial-data{padding:0;margin:26px 0}.visual-editorial-data figcaption{padding:16px}.lead-illustration{width:100%}.lead-illustration img{max-height:none}}

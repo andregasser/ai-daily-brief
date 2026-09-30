@@ -55,13 +55,30 @@ function normalizeEditorialMarkup(article) {
       if (body.hasChildNodes()) card.append(body);
     }
   });
+  decorateEditorialMarkup(article);
 }
 
-function cleanEditorialLabel(label) {
-  const walker = document.createTreeWalker(label, NodeFilter.SHOW_TEXT);
-  while (walker.nextNode()) {
-    walker.currentNode.textContent = walker.currentNode.textContent.replace(/[\p{Extended_Pictographic}\uFE0F]/gu, '');
-  }
+function decorateEditorialMarkup(article) {
+  const addIcon = (label, symbol) => {
+    if (!label || label.querySelector('.editorial-icon') || /\p{Extended_Pictographic}/u.test(label.textContent)) return;
+    const icon = editorialNode('span', 'editorial-icon', symbol);
+    icon.setAttribute('aria-hidden', 'true');
+    label.prepend(icon);
+  };
+  const callouts = {changed:'✨', why:'🎯', engineering:'🛠️', 'builder-action':'🛠️', thesis:'💡', 'signal-hype':'⚖️'};
+  Object.entries(callouts).forEach(([className, icon]) => {
+    article.querySelectorAll('.' + className).forEach(block => {
+      block.classList.add('editorial-callout');
+      addIcon(block.querySelector(':scope > strong, :scope > h3'), icon);
+    });
+  });
+  article.querySelectorAll('.chapter, .concept > .section-kicker, .executive > h2, .next > .section-kicker').forEach(label => {
+    const title = label.textContent.toLowerCase();
+    const icon = /60/.test(title) ? '⚡' : /business|strategie|strategy/.test(title) ? '💼'
+      : /konzept|concept/.test(title) ? '🧠' : /research|forschung/.test(title) ? '🔬'
+      : /engineering|builder|modelle|models/.test(title) ? '🛠️' : '🔭';
+    addIcon(label, icon);
+  });
 }
 
 function renderEditionCover(article, meta, language, covers) {
@@ -85,14 +102,15 @@ function renderEditionCover(article, meta, language, covers) {
   coverElement.classList.toggle('with-illustration', !!illustration);
   document.getElementById('back-to-cover').hidden = !illustration;
   if (illustration) {
-    const figure = editorialNode('figure', 'lead-illustration visual-explanatory-diagram');
+    const visualClass = illustration.visual_class === 'data-visualization' ? 'data-visualization' : 'explanatory-diagram';
+    const figure = editorialNode('figure', 'lead-illustration visual-' + visualClass);
     const img = document.createElement('img');
     img.src = typeof illustration.src === 'string' ? illustration.src : illustration.src?.[language];
     img.alt = illustration.alt?.[language] || '';
     img.width = 620; img.height = 500;
     const caption = editorialNode('figcaption');
     caption.append(editorialNode('strong', '', illustration.caption?.[language] || ''));
-    caption.append(editorialNode('span', '', de ? 'AI Daily Brief · Eigene Grafik · Erklärdiagramm' : 'AI Daily Brief · Original graphic · Explanatory diagram'));
+    caption.append(editorialNode('span', '', de ? 'AI Daily Brief · Eigene Grafik' : 'AI Daily Brief · Original graphic'));
     const sources = editorialNode('span', 'illustration-sources', de ? 'Grundlage: ' : 'Based on: ');
     (illustration.sources || []).forEach((source, i) => {
       if (i) sources.append(document.createTextNode(' / '));
@@ -104,13 +122,13 @@ function renderEditionCover(article, meta, language, covers) {
 
   const navigation = document.getElementById('chapter-links');
   navigation.replaceChildren();
-  article.querySelectorAll('.executive .signal-label').forEach(cleanEditorialLabel);
   const chapters = [...article.querySelectorAll('h2.chapter, h3.chapter')];
   chapters.forEach((chapter, index) => {
     if (!chapter.id) chapter.id = `chapter-${index + 1}`;
     chapter.dataset.number = String(index + 1).padStart(2, '0');
-    cleanEditorialLabel(chapter);
-    const link = editorialNode('a', '', `${chapter.dataset.number} / ${chapter.textContent}`);
+    const label = chapter.cloneNode(true);
+    label.querySelectorAll('.editorial-icon').forEach(icon => icon.remove());
+    const link = editorialNode('a', '', `${chapter.dataset.number} / ${label.textContent}`);
     link.href = `#${chapter.id}`;
     navigation.append(link);
   });

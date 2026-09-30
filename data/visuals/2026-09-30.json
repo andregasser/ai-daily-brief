@@ -1,0 +1,225 @@
+[
+  {
+    "id": "cached-input-price",
+    "target": "cover",
+    "kind": "bars",
+    "title": {
+      "de": "Der Cache wird günstiger",
+      "en": "Cached input gets cheaper"
+    },
+    "question": {
+      "de": "Welcher Tokenpreis sinkt beim Sol-Upgrade?",
+      "en": "Which token price falls with the Sol upgrade?"
+    },
+    "takeaway": {
+      "de": "50 % weniger für Cache-Input. Standard-Input und Output bleiben gleich.",
+      "en": "50% less for cached input. Standard input and output are unchanged."
+    },
+    "caption": {
+      "de": "API-Listenpreise am 30.09.2026. Standard-Input weiterhin 2 $, Output 10 $ pro Million Tokens. Kein Nachweis geringerer Kosten pro erfolgreicher Aufgabe.",
+      "en": "API list prices on 30 Sep 2026. Standard input remains $2 and output $10 per million tokens. This does not establish a lower cost per successful task."
+    },
+    "unit": {
+      "de": "USD je 1 Mio. Cache-Input-Tokens",
+      "en": "USD per 1M cached input tokens"
+    },
+    "items": [
+      {
+        "label": {
+          "de": "GPT-6 Sol",
+          "en": "GPT-6 Sol"
+        },
+        "value": 0.2
+      },
+      {
+        "label": {
+          "de": "GPT-6.1 Sol",
+          "en": "GPT-6.1 Sol"
+        },
+        "value": 0.1
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenAI · GPT-6.1 Sol",
+        "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
+      }
+    ]
+  },
+  {
+    "id": "agent-offering-matrix",
+    "target": "story-4",
+    "kind": "matrix",
+    "title": {
+      "de": "Welches Angebot passt zur Aufgabe?",
+      "en": "Which offering fits the task?"
+    },
+    "question": {
+      "de": "Wie unterscheiden sich Dots, Agents API und Decisions API?",
+      "en": "How do Dots, Agents API and Decisions API differ?"
+    },
+    "takeaway": {
+      "de": "Zuerst die Arbeitseinheit wählen: Daueraufgabe, Software-Aktion oder einzelne Auswahl.",
+      "en": "Choose the unit of work first: ongoing work, software actions or a single choice."
+    },
+    "caption": {
+      "de": "Angekündigte Funktionen, keine Zuverlässigkeitsrangliste. Dots: je Tarif und Markt, teils Admin-Beta. Agents API: über API; in Work/Codex auf Pro 500 und Enterprise. Decisions: begrenzte Vorschau.",
+      "en": "Announced functions, not a reliability ranking. Dots: depends on plan and market, with some admin-enabled betas. Agents API: via API; in Work/Codex on Pro 500 and Enterprise. Decisions: limited preview."
+    },
+    "columns": [
+      {
+        "de": "Dots",
+        "en": "Dots"
+      },
+      {
+        "de": "Agents API",
+        "en": "Agents API"
+      },
+      {
+        "de": "Decisions API",
+        "en": "Decisions API"
+      }
+    ],
+    "rows": [
+      {
+        "label": {
+          "de": "Arbeitseinheit",
+          "en": "Unit of work"
+        },
+        "cells": [
+          {
+            "de": "Daueraufgabe",
+            "en": "Ongoing task"
+          },
+          {
+            "de": "Software-Aktion",
+            "en": "Software action"
+          },
+          {
+            "de": "Einzelauswahl",
+            "en": "Single choice"
+          }
+        ]
+      },
+      {
+        "label": {
+          "de": "Einsatzpunkt",
+          "en": "Integration"
+        },
+        "cells": [
+          {
+            "de": "Delegieren",
+            "en": "Delegate"
+          },
+          {
+            "de": "Eigene App",
+            "en": "Your app"
+          },
+          {
+            "de": "Fragen + Auswahl",
+            "en": "Questions + choices"
+          }
+        ]
+      },
+      {
+        "label": {
+          "de": "Zugang",
+          "en": "Access"
+        },
+        "cells": [
+          {
+            "de": "Tarifabhängig",
+            "en": "Plan-dependent"
+          },
+          {
+            "de": "API + Work",
+            "en": "API + Work"
+          },
+          {
+            "de": "Begrenzte Vorschau",
+            "en": "Limited preview"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "OpenAI · DevDay 2026",
+        "url": "https://openai.com/index/devday-2026-recap/"
+      }
+    ]
+  },
+  {
+    "id": "typed-routing-example",
+    "target": "concept",
+    "kind": "decision",
+    "example": true,
+    "title": {
+      "de": "Eine Auswahl statt freiem Text",
+      "en": "A choice instead of free text"
+    },
+    "question": {
+      "de": "Was macht eine typisierte Entscheidung konkret überprüfbar?",
+      "en": "What makes a typed decision concretely testable?"
+    },
+    "takeaway": {
+      "de": "Das Format ist prüfbar. Ob die Auswahl stimmt, zeigen erst gelabelte Testfälle.",
+      "en": "The format is testable. Labeled test cases establish whether the choice is correct."
+    },
+    "caption": {
+      "de": "Illustratives Ticket-Beispiel mit selbst gewählten Kategorien. Kein gemessener Modelllauf und kein dokumentiertes API-Payload. Der manuelle Pfad ist eine Entwurfsentscheidung der Anwendung.",
+      "en": "Illustrative ticket example with application-defined categories. Not a measured model run or documented API payload. The manual path is an application design choice."
+    },
+    "input": {
+      "de": "Ticket: «Die Rechnung wurde doppelt belastet.»",
+      "en": "Ticket: “I was charged twice.”"
+    },
+    "question_label": {
+      "de": "Welches Team übernimmt?",
+      "en": "Which team takes ownership?"
+    },
+    "outcomes": [
+      {
+        "label": {
+          "de": "Zahlungen",
+          "en": "Payments"
+        },
+        "detail": {
+          "de": "Gewählte Route",
+          "en": "Selected route"
+        }
+      },
+      {
+        "label": {
+          "de": "Konto",
+          "en": "Account"
+        },
+        "detail": {
+          "de": "Andere Kategorie",
+          "en": "Other category"
+        }
+      },
+      {
+        "label": {
+          "de": "Manuell",
+          "en": "Manual"
+        },
+        "detail": {
+          "de": "Bei Unklarheit",
+          "en": "Escalation path"
+        }
+      }
+    ],
+    "selected": 0,
+    "result": {
+      "de": "Ergebnis: team = payments",
+      "en": "Result: team = payments"
+    },
+    "sources": [
+      {
+        "label": "Ollama · Decision models",
+        "url": "https://ollama.com/blog/ollama-now-supports-jev-style-decision-models"
+      }
+    ]
+  }
+]

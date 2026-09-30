@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 743.2" role="img" aria-labelledby="title desc">
+<title id="title">Which offering fits the task?</title><desc id="desc">How do Dots, Agents API and Decisions API differ? Unit of work: Dots — Ongoing task, Agents API — Software action, Decisions API — Single choice; Integration: Dots — Delegate, Agents API — Your app, Decisions API — Questions + choices; Access: Dots — Plan-dependent, Agents API — API + Work, Decisions API — Limited preview. Choose the unit of work first: ongoing work, software actions or a single choice. Announced functions, not a reliability ranking. Dots: depends on plan and market, with some admin-enabled betas. Agents API: via API; in Work/Codex on Pro 500 and Enterprise. Decisions: limited preview.</desc>
+<rect width="480" height="743.2" fill="#fffdf8"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="28" y="32" font-size="13" fill="#16786d" font-weight="700" text-anchor="start">SIDE BY SIDE</text>
+<text x="28" y="68" font-size="27" fill="#233548" font-weight="700" text-anchor="start">Which offering fits the task?</text>
+<text x="28" y="119.45" font-size="20" fill="#233548" font-weight="700" text-anchor="start">Dots</text>
+<text x="169.333" y="119.45" font-size="20" fill="#233548" font-weight="700" text-anchor="start">Agents API</text>
+<text x="310.667" y="119.45" font-size="20" fill="#233548" font-weight="700" text-anchor="start">Decisions</text>
+<text x="310.667" y="146.45" font-size="20" fill="#233548" font-weight="700" text-anchor="start">API</text>
+<path d="M28 191.45 L452 191.45" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="28" y="219.45" font-size="17" fill="#16786d" font-weight="700" text-anchor="start">Unit of work</text>
+<text x="28" y="252.4" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Ongoing task</text>
+<text x="169.333" y="252.4" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Software</text>
+<text x="169.333" y="278.05" font-size="19" fill="#233548" font-weight="400" text-anchor="start">action</text>
+<text x="310.667" y="252.4" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Single choice</text>
+<path d="M28 328.7 L452 328.7" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="28" y="356.7" font-size="17" fill="#16786d" font-weight="700" text-anchor="start">Integration</text>
+<text x="28" y="389.65" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Delegate</text>
+<text x="169.333" y="389.65" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Your app</text>
+<text x="310.667" y="389.65" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Questions +</text>
+<text x="310.667" y="415.3" font-size="19" fill="#233548" font-weight="400" text-anchor="start">choices</text>
+<path d="M28 465.95 L452 465.95" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="28" y="493.95" font-size="17" fill="#16786d" font-weight="700" text-anchor="start">Access</text>
+<text x="28" y="526.9" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Plan-dependent</text>
+<text x="169.333" y="526.9" font-size="19" fill="#233548" font-weight="400" text-anchor="start">API + Work</text>
+<text x="310.667" y="526.9" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Limited</text>
+<text x="310.667" y="552.55" font-size="19" fill="#233548" font-weight="400" text-anchor="start">preview</text>
+<path d="M28 603.2 L452 603.2" stroke="#16786d" stroke-width="2" fill="none"/>
+<text x="28" y="636.2" font-size="20" fill="#233548" font-weight="600" text-anchor="start">Choose the unit of work first:</text>
+<text x="28" y="663.2" font-size="20" fill="#233548" font-weight="600" text-anchor="start">ongoing work, software actions or a</text>
+<text x="28" y="690.2" font-size="20" fill="#233548" font-weight="600" text-anchor="start">single choice.</text>
+</g></svg>

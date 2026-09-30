@@ -55,6 +55,11 @@ const widths = process.env.BRIEF_WIDTHS?.split(',').map(Number) || [1440, 768, 3
                 .slice(0, 5).map(el => `${el.tagName}.${el.className}`),
               cardBodies: [...rendered.querySelectorAll('.signal-grid > div > p')].every(p => getComputedStyle(p).fontFamily.includes('DM Sans')),
               cardTitles: [...rendered.querySelectorAll('.signal-title')].every(h => getComputedStyle(h).fontFamily.includes('DM Sans')),
+              callouts: [...rendered.querySelectorAll('.changed, .why')].every(block => {
+                const style = getComputedStyle(block);
+                return style.backgroundColor !== 'rgba(0, 0, 0, 0)' && parseFloat(style.borderLeftWidth) >= 4 &&
+                  !!block.querySelector(':scope > strong > .editorial-icon[aria-hidden="true"]');
+              }),
               aligned: current.every(story => [...story.querySelectorAll(':scope > p, :scope > .sources')].every(el => Math.abs(el.getBoundingClientRect().left - story.getBoundingClientRect().left) < 1)),
               summaryFirst: rendered.firstElementChild?.classList.contains('executive'),
               summaryHeadingSize: parseFloat(getComputedStyle(rendered.querySelector('.executive h2')).fontSize),
@@ -75,6 +80,7 @@ const widths = process.env.BRIEF_WIDTHS?.split(',').map(Number) || [1440, 768, 3
           assert.equal(result.overflow, false, context);
           assert.deepEqual(result.outside, [], context);
           assert.ok(result.aligned && result.summaryFirst && result.summaryHeadingSize >= 30, context);
+          assert.ok(result.callouts, context);
           assert.equal(result.archiveLabel, language === 'de' ? 'Archiv' : 'Archive', context);
           if (date >= '2026-09-23') {
             assert.equal(result.coverTitle, result.sourceTitle, context);

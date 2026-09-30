@@ -227,13 +227,13 @@ Every visual must declare exactly one of these classes in its markup and researc
 No decorative fifth class exists. Generic AI illustrations, robot hands, glowing brains, server-room stock photos, portraits without editorial relevance and imagery sourced only because it is available are prohibited.
 
 ### Edition budget and hierarchy
-Target **3–5 information-bearing visuals per daily edition**, including the Concept of the Day diagram. Fewer are acceptable on quiet days; exceed five only when every additional visual replaces substantial prose or is necessary to understand a distinct story.
+Use **zero to three information-bearing visuals per daily edition**. There is no minimum and no mandatory cover or concept graphic. Every visual must answer a concrete question and state a sourced takeaway. Omit topic lists, decorated text boxes and graphics that merely repeat the article.
 
 - Give the editorial lead one dominant visual only when it explains the lead thesis.
 - Business & Strategy usually receives at most one timeline, comparison or chart.
 - Models, Agents & Engineering may receive one or two architecture, evidence or data visuals.
 - Emerging Signals may surface the internal trend heatmap when it is informative.
-- Concept of the Day should normally include an original explanatory diagram.
+- Concept of the Day may include a concrete worked example with explicit alternatives; illustrative choices must be labelled and must not be presented as measured model outcomes.
 - Builder Radar may use compact cards for 1–3 items with action, effort and maturity; do not turn the section into a tool-logo gallery.
 
 ### Selection and factual rules
@@ -255,8 +255,9 @@ The approved default is the modern illustrated layout in `index.html`, `assets/e
 For the next edition, **2026-09-25**, and subsequent editions:
 
 - Generate both language fragments using the rendering contract below. Shared styles automatically apply the approved layout to each new edition.
-- Plan an edition-specific lead illustration that explains the lead thesis, plus useful in-article graphics and an illustrated Concept of the Day. Follow the evidence and visual-budget rules above. Do not substitute text-only boxes for every visual.
-- Store original vector assets in `assets/illustrations/`. Register the date in `data/covers.json` with translated `kicker` and `deck`, plus `illustration: {src, alt: {de, en}, caption: {de, en}, sources: [{label, href}]}`. Use repo-relative paths, meaningful alternative text and original source links. The September 24 entry is a schema/style reference, not artwork to reuse for an unrelated story.
+- Select an edition-specific quantitative comparison, aligned comparison matrix or worked decision example only when it adds information. Every specification supplies a question, takeaway and sources. Bar charts share a unit and zero baseline; matrices compare the same dimensions; decision examples show alternatives and identify the illustrated route. A cover can highlight a concrete finding from the edition. No slot requires an illustration.
+- Store original vector assets in `assets/illustrations/`. Register the date in `data/covers.json` with translated `kicker` and `deck`, and, when a cover graphic is selected, `illustration: {src, alt: {de, en}, caption: {de, en}, sources: [{label, href}]}`. Use repo-relative paths, meaningful alternative text and original source links. The September 24 entry is a schema/style reference, not artwork to reuse for an unrelated story.
+- Keep “What changed?” and “Why it matters” visually distinct from narrative paragraphs: explicit labels, decorative emojis, a contrasting background and an accent rule. Use chapter emojis as orientation cues; preserve existing editorial icons. Icons supplement text and do not replace labels or count toward the graphic budget.
 - Include the cover metadata and illustration assets in the publication, together with the briefings and research audit. Record the visual plan and provenance in the edition audit. The publishing runner stages `assets/illustrations` alongside `briefings`, `weekly` and `data`.
 - Keep “Archiv / Archive” for dated briefs. Register concepts with stable IDs and `briefing.de` / `briefing.en` paths; link concepts to `concept.html?id=<id>&lang=<language>`, not to an old edition. Place the complete explanation and its graphics inside `.concept` so the dedicated page includes them.
 - Verify DE/EN at desktop and 320 px: title illustration loads, navigation opens the cover via `#edition`, summary and article remain readable, and the concept detail page retains the explanation, diagrams and sources.

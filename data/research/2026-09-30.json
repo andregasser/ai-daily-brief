@@ -346,20 +346,46 @@
   ],
   "visual_provenance": [
     {
-      "visual_id": "accountability-surfaces",
-      "basis": "The OpenAI product announcement, AP’s accord report and the complaint/WIRED report describe distinct product, voluntary-review and legal processes; the comparison asserts no causal link."
+      "id": "cached-input-price",
+      "class": "data-visualization",
+      "basis": {
+        "de": "API-Listenpreise am 30.09.2026. Standard-Input weiterhin 2 $, Output 10 $ pro Million Tokens. Kein Nachweis geringerer Kosten pro erfolgreicher Aufgabe.",
+        "en": "API list prices on 30 Sep 2026. Standard input remains $2 and output $10 per million tokens. This does not establish a lower cost per successful task."
+      },
+      "sources": [
+        {
+          "label": "OpenAI · GPT-6.1 Sol",
+          "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
+        }
+      ]
     },
     {
-      "visual_id": "accord-versus-gate",
-      "basis": "AP reports the proposed review structure; the signed text and release authority are unverified."
+      "id": "agent-offering-matrix",
+      "class": "explanatory-diagram",
+      "basis": {
+        "de": "Angekündigte Funktionen, keine Zuverlässigkeitsrangliste. Dots: je Tarif und Markt, teils Admin-Beta. Agents API: über API; in Work/Codex auf Pro 500 und Enterprise. Decisions: begrenzte Vorschau.",
+        "en": "Announced functions, not a reliability ranking. Dots: depends on plan and market, with some admin-enabled betas. Agents API: via API; in Work/Codex on Pro 500 and Enterprise. Decisions: limited preview."
+      },
+      "sources": [
+        {
+          "label": "OpenAI · DevDay 2026",
+          "url": "https://openai.com/index/devday-2026-recap/"
+        }
+      ]
     },
     {
-      "visual_id": "agent-product-surfaces",
-      "basis": "OpenAI’s DevDay recap distinguishes Dots, the Agents API and the limited-preview Decisions API."
-    },
-    {
-      "visual_id": "typed-decision-interface",
-      "basis": "Ollama describes a state and named questions submitted to /v1/systemone, yielding typed decisions; no accuracy is implied."
+      "id": "typed-routing-example",
+      "class": "explanatory-diagram",
+      "basis": {
+        "de": "Illustratives Ticket-Beispiel mit selbst gewählten Kategorien. Kein gemessener Modelllauf und kein dokumentiertes API-Payload. Der manuelle Pfad ist eine Entwurfsentscheidung der Anwendung.",
+        "en": "Illustrative ticket example with application-defined categories. Not a measured model run or documented API payload. The manual path is an application design choice."
+      },
+      "sources": [
+        {
+          "label": "Ollama · Decision models",
+          "url": "https://ollama.com/blog/ollama-now-supports-jev-style-decision-models"
+        }
+      ]
     }
   ],
   "date": "2026-09-30",
@@ -1155,92 +1181,78 @@
   "publish_decision": "publish",
   "visual_plan": [
     {
-      "id": "accountability-surfaces",
+      "id": "cached-input-price",
       "target": "cover",
-      "kind": "comparison",
+      "kind": "bars",
       "title": {
-        "de": "Drei verschiedene Grenzen für Agenten",
-        "en": "Three different boundaries for agents"
+        "de": "Der Cache wird günstiger",
+        "en": "Cached input gets cheaper"
       },
-      "caption": {
-        "de": "Produktoberfläche, freiwillige Aufsicht und Rechtsstreit sind verschiedene Entwicklungen; keine davon belegt für sich sichere autonome Arbeit.",
-        "en": "Product surface, voluntary oversight and litigation are distinct developments; none alone establishes safe autonomous work."
+      "question": {
+        "de": "Welcher Tokenpreis sinkt beim Sol-Upgrade?",
+        "en": "Which token price falls with the Sol upgrade?"
+      },
+      "takeaway": {
+        "de": "50 % weniger für Cache-Input. Standard-Input und Output bleiben gleich.",
+        "en": "50% less for cached input. Standard input and output are unchanged."
       },
       "sources": [
         {
-          "label": "OpenAI DevDay recap",
-          "url": "https://openai.com/index/devday-2026-recap/"
-        },
-        {
-          "label": "Associated Press report",
-          "url": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e"
-        },
-        {
-          "label": "Plaintiff’s complaint",
-          "url": "https://lasst.org/in-the-courts/hugging-face-complaint"
+          "label": "OpenAI · GPT-6.1 Sol",
+          "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
         }
       ]
     },
     {
-      "id": "accord-versus-gate",
-      "target": "story-2",
-      "kind": "comparison",
-      "title": {
-        "de": "Angekündigte Prüfung und offene Befugnisse",
-        "en": "Announced review and unresolved powers"
-      },
-      "caption": {
-        "de": "Die berichtete Struktur ist konkreter als ein allgemeines Versprechen; ein durchsetzbares Freigaberecht ist nicht verifiziert.",
-        "en": "The reported structure is more specific than a general pledge; an enforceable release right is unverified."
-      },
-      "sources": [
-        {
-          "label": "Associated Press report",
-          "url": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e"
-        }
-      ]
-    },
-    {
-      "id": "agent-product-surfaces",
+      "id": "agent-offering-matrix",
       "target": "story-4",
-      "kind": "comparison",
+      "kind": "matrix",
       "title": {
-        "de": "Drei angekündigte Agenten-Oberflächen",
-        "en": "Three announced agent surfaces"
+        "de": "Welches Angebot passt zur Aufgabe?",
+        "en": "Which offering fits the task?"
       },
-      "caption": {
-        "de": "Die Funktionen adressieren unterschiedliche Aufgaben und haben unterschiedliche Zugangsbedingungen; die Grafik behauptet keine gemeinsame Zuverlässigkeit.",
-        "en": "The capabilities address different tasks and have different access conditions; the graphic implies no shared reliability."
+      "question": {
+        "de": "Wie unterscheiden sich Dots, Agents API und Decisions API?",
+        "en": "How do Dots, Agents API and Decisions API differ?"
+      },
+      "takeaway": {
+        "de": "Zuerst die Arbeitseinheit wählen: Daueraufgabe, Software-Aktion oder einzelne Auswahl.",
+        "en": "Choose the unit of work first: ongoing work, software actions or a single choice."
       },
       "sources": [
         {
-          "label": "OpenAI DevDay recap",
+          "label": "OpenAI · DevDay 2026",
           "url": "https://openai.com/index/devday-2026-recap/"
-        },
-        {
-          "label": "OpenAI Dots announcement",
-          "url": "https://openai.com/index/introducing-dots/"
         }
       ]
     },
     {
-      "id": "typed-decision-interface",
+      "id": "typed-routing-example",
       "target": "concept",
-      "kind": "flow",
+      "kind": "decision",
       "title": {
-        "de": "Vom Zustand zur typisierten Entscheidung",
-        "en": "From state to typed decision"
+        "de": "Eine Auswahl statt freiem Text",
+        "en": "A choice instead of free text"
       },
-      "caption": {
-        "de": "Ollamas beschriebene Schnittstelle formt die Ausgabe; ihre Genauigkeit muss separat gemessen werden.",
-        "en": "Ollama’s described interface shapes the output; its accuracy must be measured separately."
+      "question": {
+        "de": "Was macht eine typisierte Entscheidung konkret überprüfbar?",
+        "en": "What makes a typed decision concretely testable?"
+      },
+      "takeaway": {
+        "de": "Das Format ist prüfbar. Ob die Auswahl stimmt, zeigen erst gelabelte Testfälle.",
+        "en": "The format is testable. Labeled test cases establish whether the choice is correct."
       },
       "sources": [
         {
-          "label": "Ollama decision-model announcement",
+          "label": "Ollama · Decision models",
           "url": "https://ollama.com/blog/ollama-now-supports-jev-style-decision-models"
         }
       ]
     }
-  ]
+  ],
+  "visual_revision": {
+    "date": "2026-09-30",
+    "reason": "Update source-backed graphics without rewriting the articles.",
+    "verification": "Visual structure validated and sources attached to each graphic. Original article review retained; this visual revision does not represent a new independent API review."
+  }
 }

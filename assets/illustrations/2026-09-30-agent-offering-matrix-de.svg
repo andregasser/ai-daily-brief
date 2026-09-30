@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 779.65" role="img" aria-labelledby="title desc">
+<title id="title">Welches Angebot passt zur Aufgabe?</title><desc id="desc">Wie unterscheiden sich Dots, Agents API und Decisions API? Arbeitseinheit: Dots — Daueraufgabe, Agents API — Software-Aktion, Decisions API — Einzelauswahl; Einsatzpunkt: Dots — Delegieren, Agents API — Eigene App, Decisions API — Fragen + Auswahl; Zugang: Dots — Tarifabhängig, Agents API — API + Work, Decisions API — Begrenzte Vorschau. Zuerst die Arbeitseinheit wählen: Daueraufgabe, Software-Aktion oder einzelne Auswahl. Angekündigte Funktionen, keine Zuverlässigkeitsrangliste. Dots: je Tarif und Markt, teils Admin-Beta. Agents API: über API; in Work/Codex auf Pro 500 und Enterprise. Decisions: begrenzte Vorschau.</desc>
+<rect width="480" height="779.65" fill="#fffdf8"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="28" y="32" font-size="13" fill="#16786d" font-weight="700" text-anchor="start">IM VERGLEICH</text>
+<text x="28" y="68" font-size="27" fill="#233548" font-weight="700" text-anchor="start">Welches Angebot passt zur</text>
+<text x="28" y="104.45" font-size="27" fill="#233548" font-weight="700" text-anchor="start">Aufgabe?</text>
+<text x="28" y="155.9" font-size="20" fill="#233548" font-weight="700" text-anchor="start">Dots</text>
+<text x="169.333" y="155.9" font-size="20" fill="#233548" font-weight="700" text-anchor="start">Agents API</text>
+<text x="310.667" y="155.9" font-size="20" fill="#233548" font-weight="700" text-anchor="start">Decisions</text>
+<text x="310.667" y="182.9" font-size="20" fill="#233548" font-weight="700" text-anchor="start">API</text>
+<path d="M28 227.9 L452 227.9" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="28" y="255.9" font-size="17" fill="#16786d" font-weight="700" text-anchor="start">Arbeitseinheit</text>
+<text x="28" y="288.85" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Daueraufgabe</text>
+<text x="169.333" y="288.85" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Software-</text>
+<text x="169.333" y="314.5" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Aktion</text>
+<text x="310.667" y="288.85" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Einzelauswahl</text>
+<path d="M28 365.15 L452 365.15" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="28" y="393.15" font-size="17" fill="#16786d" font-weight="700" text-anchor="start">Einsatzpunkt</text>
+<text x="28" y="426.1" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Delegieren</text>
+<text x="169.333" y="426.1" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Eigene App</text>
+<text x="310.667" y="426.1" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Fragen +</text>
+<text x="310.667" y="451.75" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Auswahl</text>
+<path d="M28 502.4 L452 502.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="28" y="530.4" font-size="17" fill="#16786d" font-weight="700" text-anchor="start">Zugang</text>
+<text x="28" y="563.35" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Tarifabhängig</text>
+<text x="169.333" y="563.35" font-size="19" fill="#233548" font-weight="400" text-anchor="start">API + Work</text>
+<text x="310.667" y="563.35" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Begrenzte</text>
+<text x="310.667" y="589" font-size="19" fill="#233548" font-weight="400" text-anchor="start">Vorschau</text>
+<path d="M28 639.65 L452 639.65" stroke="#16786d" stroke-width="2" fill="none"/>
+<text x="28" y="672.65" font-size="20" fill="#233548" font-weight="600" text-anchor="start">Zuerst die Arbeitseinheit wählen:</text>
+<text x="28" y="699.65" font-size="20" fill="#233548" font-weight="600" text-anchor="start">Daueraufgabe, Software-Aktion oder</text>
+<text x="28" y="726.65" font-size="20" fill="#233548" font-weight="600" text-anchor="start">einzelne Auswahl.</text>
+</g></svg>

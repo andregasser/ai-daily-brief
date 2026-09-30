@@ -50,7 +50,7 @@
     <p class="why"><strong>Why it matters:</strong> The accord makes review visible while leaving its practical force unresolved.</p>
     <p class="engineering"><strong>Engineering takeaway:</strong> Track review rights and potential effects on model releases separately from announced controls.</p>
     <p class="signal-hype"><strong>Signal vs. Hype:</strong> Independent reporting on a voluntary accord; its text and auditors’ powers are unverified.</p>
-<figure class="editorial-visual visual-explanatory-diagram"><img src="assets/illustrations/2026-09-30-accord-versus-gate-en.svg" alt="Announced review and unresolved powers" style="display:block;width:100%;max-width:420px;height:auto;margin:auto" loading="lazy"><figcaption>The reported structure is more specific than a general pledge; an enforceable release right is unverified.<br>AI Daily Brief · Original graphic · Explanatory diagram<br><a href="https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e">Associated Press report</a></figcaption></figure>
+
     <div class="sources"><strong>Sources:</strong> <a href="https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e">Associated Press report</a> · <a href="https://www.bbc.co.uk/news/articles/cvzez7k0pn40o?at_medium=RSS&amp;at_campaign=rss">BBC account</a></div>
   </article>
   <article class="story">
@@ -77,9 +77,9 @@
     <p class="why"><strong>Why it matters:</strong> Ongoing work and computer interaction are becoming platform capabilities rather than isolated demos.</p>
     <p class="engineering"><strong>Engineering takeaway:</strong> Test task-level success and approval behavior under explicit permissions.</p>
     <p class="signal-hype"><strong>Signal vs. Hype:</strong> Primary evidence for features and access conditions; no independent production evaluation.</p>
-<figure class="editorial-visual visual-explanatory-diagram"><img src="assets/illustrations/2026-09-30-agent-product-surfaces-en.svg" alt="Three announced agent surfaces" style="display:block;width:100%;max-width:420px;height:auto;margin:auto" loading="lazy"><figcaption>The capabilities address different tasks and have different access conditions; the graphic implies no shared reliability.<br>AI Daily Brief · Original graphic · Explanatory diagram<br><a href="https://openai.com/index/devday-2026-recap/">OpenAI DevDay recap</a> · <a href="https://openai.com/index/introducing-dots/">OpenAI Dots announcement</a></figcaption></figure>
+
     <div class="sources"><strong>Sources:</strong> <a href="https://openai.com/index/devday-2026-recap/">OpenAI DevDay recap</a> · <a href="https://openai.com/index/introducing-dots/">OpenAI Dots announcement</a> · <a href="https://openai.com/index/introducing-the-agents-api/">OpenAI Agents API announcement</a></div>
-  </article>
+  <figure class="editorial-visual visual-editorial-data visual-explanatory-diagram" data-visual-id="agent-offering-matrix"><img src="assets/illustrations/2026-09-30-agent-offering-matrix-en.svg" alt="Unit of work: Dots — Ongoing task, Agents API — Software action, Decisions API — Single choice; Integration: Dots — Delegate, Agents API — Your app, Decisions API — Questions + choices; Access: Dots — Plan-dependent, Agents API — API + Work, Decisions API — Limited preview. Choose the unit of work first: ongoing work, software actions or a single choice." loading="lazy"><figcaption>Announced functions, not a reliability ranking. Dots: depends on plan and market, with some admin-enabled betas. Agents API: via API; in Work/Codex on Pro 500 and Enterprise. Decisions: limited preview.<span class="visual-sources">AI Daily Brief · Original graphic · <a href="https://openai.com/index/devday-2026-recap/">OpenAI · DevDay 2026</a></span></figcaption></figure></article>
   <article class="story">
     <div class="story-meta"><span class="priority high">HIGH</span><span class="evidence reported">CONFIRMED_PRIMARY_WITH_VENDOR_EVALUATION</span></div>
     <h2>GPT-6.1 Sol makes model routing a fresh test case</h2>
@@ -131,9 +131,9 @@
     <p>A robust design specifies valid outputs, a safe escalation path and the meaning of any scores before deployment. Labeled cases can measure errors by decision class, calibration, escalation rate and latency. Independent production evidence for consequential decisions is absent here.</p>
   <p><strong>Concrete example:</strong> For low-stakes ticket triage, a named question might be “Which team owns this?”, with specified team categories and “manual review” as an escalation. Only a labeled test set shows how often the selection is right and when human review is needed.</p>
   <p><strong>Practical relevance:</strong> Treat the interface as a testable decision step, not an automatic approval mechanism: begin with low-stakes tasks and log errors, calibration, escalation and latency.</p>
-<figure class="editorial-visual visual-explanatory-diagram"><img src="assets/illustrations/2026-09-30-typed-decision-interface-en.svg" alt="From state to typed decision" style="display:block;width:100%;max-width:420px;height:auto;margin:auto" loading="lazy"><figcaption>Ollama’s described interface shapes the output; its accuracy must be measured separately.<br>AI Daily Brief · Original graphic · Explanatory diagram<br><a href="https://ollama.com/blog/ollama-now-supports-jev-style-decision-models">Ollama decision-model announcement</a></figcaption></figure>
+
   <div class="sources"><strong>Sources:</strong> <a href="https://ollama.com/blog/ollama-now-supports-jev-style-decision-models">Ollama decision-model announcement</a> · <a href="https://openai.com/index/devday-2026-recap/">OpenAI DevDay recap</a></div>
-</section>
+<figure class="editorial-visual visual-editorial-data visual-explanatory-diagram" data-visual-id="typed-routing-example"><img src="assets/illustrations/2026-09-30-typed-routing-example-en.svg" alt="Ticket: “I was charged twice.” Which team takes ownership? Payments. Result: team = payments. The format is testable. Labeled test cases establish whether the choice is correct." loading="lazy"><figcaption>Illustrative ticket example with application-defined categories. Not a measured model run or documented API payload. The manual path is an application design choice.<span class="visual-sources">AI Daily Brief · Original graphic · <a href="https://ollama.com/blog/ollama-now-supports-jev-style-decision-models">Ollama · Decision models</a></span></figcaption></figure></section>
 
 <section class="chapter">
 

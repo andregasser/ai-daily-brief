@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 541.4" role="img" aria-labelledby="title desc">
+<title id="title">Der Cache wird günstiger</title><desc id="desc">Welcher Tokenpreis sinkt beim Sol-Upgrade? USD je 1 Mio. Cache-Input-Tokens: GPT-6 Sol 0,2; GPT-6.1 Sol 0,1. 50 % weniger für Cache-Input. Standard-Input und Output bleiben gleich. API-Listenpreise am 30.09.2026. Standard-Input weiterhin 2 $, Output 10 $ pro Million Tokens. Kein Nachweis geringerer Kosten pro erfolgreicher Aufgabe.</desc>
+<rect width="480" height="541.4" fill="#fffdf8"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="28" y="32" font-size="13" fill="#16786d" font-weight="700" text-anchor="start">DATENVERGLEICH</text>
+<text x="28" y="68" font-size="27" fill="#233548" font-weight="700" text-anchor="start">Der Cache wird günstiger</text>
+<text x="28" y="119.45" font-size="17" fill="#64748b" font-weight="400" text-anchor="start">USD je 1 Mio. Cache-Input-Tokens</text>
+<path d="M28 157.4 L28 336.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="28" y="361.4" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">0</text>
+<path d="M125.5 157.4 L125.5 336.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="125.5" y="361.4" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">0,05</text>
+<path d="M223 157.4 L223 336.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="223" y="361.4" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">0,1</text>
+<path d="M320.5 157.4 L320.5 336.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="320.5" y="361.4" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">0,15</text>
+<path d="M418 157.4 L418 336.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="418" y="361.4" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">0,2</text>
+<text x="28" y="177.4" font-size="21" fill="#233548" font-weight="600" text-anchor="start">GPT-6 Sol</text>
+<rect class="data-bar" data-value="0.2" x="28" y="210.75" width="390" height="19" rx="2" fill="#8b9bb0"/>
+<text x="450" y="177.4" font-size="24" fill="#8b9bb0" font-weight="700" text-anchor="end">0,2</text>
+<text x="28" y="269.4" font-size="21" fill="#233548" font-weight="600" text-anchor="start">GPT-6.1 Sol</text>
+<rect class="data-bar" data-value="0.1" x="28" y="302.75" width="195" height="19" rx="2" fill="#16786d"/>
+<text x="450" y="269.4" font-size="24" fill="#16786d" font-weight="700" text-anchor="end">0,1</text>
+<path d="M28 401.4 L452 401.4" stroke="#16786d" stroke-width="2" fill="none"/>
+<text x="28" y="434.4" font-size="20" fill="#233548" font-weight="600" text-anchor="start">50 % weniger für Cache-Input.</text>
+<text x="28" y="461.4" font-size="20" fill="#233548" font-weight="600" text-anchor="start">Standard-Input und Output bleiben</text>
+<text x="28" y="488.4" font-size="20" fill="#233548" font-weight="600" text-anchor="start">gleich.</text>
+</g></svg>
