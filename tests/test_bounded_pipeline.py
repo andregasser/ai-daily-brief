@@ -164,9 +164,21 @@ class PipelineTests(unittest.TestCase):
         self.assertNotEqual(doc["headline"]["de"], fixed["headline"]["de"])
         self.assertEqual(doc["sections"], fixed["sections"])
         generate_daily.validate_draft(fixed, fixed["date"], {URL})
-        for path in ("", "/sections/-1", "/sections/999", "/missing"):
+        for path in ("", "/sections/-1", "/sections/999"):
             with self.assertRaises(ValueError):
                 generate_daily.apply_repairs(doc, {"changes": [{"op": "replace", "path": path, "value": "x"}]})
+
+    def test_repair_appends_evidence_and_handles_cancelled_object_edit(self):
+        original = {"support": [{"url": URL}], "body": {"de": "Original"}}
+        result = generate_daily.apply_repairs(original, {"changes": [
+            {"op": "add", "path": "/support/1", "value": {"url": "https://example.org/second"}},
+            {"op": "replace", "path": "/body/ de", "value": "Temporary"},
+            {"op": "remove", "path": "/body/ de"},
+            {"op": "replace", "path": "/body/de", "value": "Corrected"},
+        ]})
+        self.assertEqual(len(result["support"]), 2)
+        self.assertEqual(result["body"], {"de": "Corrected"})
+        self.assertEqual(original["body"], {"de": "Original"})
     def test_refused_review_keeps_last_edition_and_bounds_repair(self):
         self.prepare_inputs()
         calls = []

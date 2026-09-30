@@ -261,6 +261,11 @@ An earlier source_checks record is evidence from an independent web check, not a
 Do not treat a local HTTP fetch failure as proof the separate web search failed to retrieve the page.
 Use supplied coverage for feed failures; page fetch outcomes and feed fetch outcomes are distinct.
 Prior continuity status is historical, not newly verified; lack of evidence is inconclusive, not falsification.
+omitted_context counts records OMITTED from the compact packet, not records included or reviewed.
+Only block for material factual, evidence, translation or publication-contract defects. Optional enrichment,
+style preferences and additional detail are not blockers. A precisely attributed report with explicit
+limitations need not claim independent verification of the underlying event. Request corrections feasible
+from available evidence; removing or narrowing an unsupported claim is valid when further retrieval fails.
 Approve only if no material issues remain. Return JSON {approved:boolean,
 issues:[{paths:[exact JSON paths],issue:specific material problem,correction:concrete correction}],checks:[checks actually performed],
 source_checks:[{url,excerpt,assessment}]}. Do not rewrite the draft. If tools are unavailable, use the
@@ -268,7 +273,7 @@ supplied source passages and previous independent source_checks; never invent a 
 
 
 def apply_repairs(brief, patch):
-    """Apply a bounded JSON Pointer patch to a copy, then validate as usual."""
+    """Apply bounded JSON Pointer edits (object writes upsert), then validate."""
     changes = patch.get("changes")
     if not isinstance(changes, list) or not 1 <= len(changes) <= 40:
         raise ValueError("Repair requires 1–40 explicit changes")
@@ -286,7 +291,7 @@ def apply_repairs(brief, patch):
             if not key.isdigit():
                 raise ValueError("Repair array index must be nonnegative")
             key = int(key)
-            if key >= len(target):
+            if key > len(target) or (key == len(target) and operation != "add"):
                 raise ValueError("Repair array index does not exist")
         elif not isinstance(target, dict):
             raise ValueError("Repair parent must be an object or array")
@@ -295,8 +300,6 @@ def apply_repairs(brief, patch):
         elif operation == "add" and isinstance(target, list):
             target.insert(key, change["value"])
         else:
-            if operation == "replace" and isinstance(target, dict) and key not in target:
-                raise ValueError("Repair replacement path does not exist")
             target[key] = change["value"]
     return result
 
@@ -306,7 +309,9 @@ def repair_draft(client, instructions, inputs, brief, issues):
 Return only JSON {"changes":[{"op":"replace","path":"/field/0/subfield","value":...}]}.
 Use 1–40 JSON Pointer operations (add, replace, remove) addressing the supplied draft.
 Return only changed values, never the full draft. Preserve all unaffected fields.
-Object add may create a missing property; array indices must exist. Escape / as ~1 and ~ as ~0.
+Object add/replace sets a property, including a missing property. Array add inserts at an existing index
+or appends at index equal to array length; array replace/remove requires an existing index.
+Do not emit temporary edits, cancellations or whitespace typos in paths. Escape / as ~1 and ~ as ~0.
 Fix all supplied issues, keeping both languages consistent and every claim grounded in the dossier."""
     patch = client.call("repair", prompt, {**inputs, "draft": brief, "issues": issues}, seconds=60, tokens=8000)
     return apply_repairs(brief, patch)
