@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-10-01",
+    "de": "briefings/2026-10-01-de.html",
+    "en": "briefings/2026-10-01-en.html",
+    "headline": {
+      "de": "KI braucht nicht nur Fähigkeiten, sondern belastbare Nachweise",
+      "en": "AI needs not just capabilities, but defensible evidence"
+    },
+    "tags": [
+      "agent-governance",
+      "inference-economics",
+      "specialized-models",
+      "provenance",
+      "ai-rd-automation",
+      "model-security"
+    ],
+    "concept": {
+      "de": "Wasserzeichen sind Herkunftsevidenz, keine Zugangskontrolle",
+      "en": "Watermarking is provenance evidence, not access control"
+    }
+  },
+  {
     "date": "2026-09-30",
     "de": "briefings/2026-09-30-de.html",
     "en": "briefings/2026-09-30-en.html",

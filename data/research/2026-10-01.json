@@ -1,0 +1,1206 @@
+{
+  "claims": [
+    {
+      "id": "2026-10-01-8aaaea054e06",
+      "claim": "AP reports an FTC spokesperson's confirmation of an investigation into OpenAI, Anthropic and other AI companies over potential consumer dangers; September 30 is public confirmation, not an established start date.",
+      "evidence_state": "reported",
+      "entities": [
+        "FTC",
+        "OpenAI",
+        "Anthropic"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/89ac416717adbfb1d72f2d85e6ce83d1"
+        }
+      ],
+      "contradictions": [
+        "AP describes an initial report of an inquiry underway for months; no agency order or findings were obtained, and the FTC declined further detail."
+      ]
+    },
+    {
+      "id": "2026-10-01-20d30357b631",
+      "claim": "Reuters reports a senior FTC official's plan for formal information demands and compelled executive testimony, including OpenAI, Anthropic and METR.",
+      "evidence_state": "reported",
+      "entities": [
+        "FTC",
+        "OpenAI",
+        "Anthropic",
+        "METR"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Reuters via MarketScreener",
+          "url": "https://www.marketscreener.com/news/ftc-opens-probe-into-ai-giants-including-anthropic-and-openai-new-york-post-reports-ce785ad2d08bf22d"
+        }
+      ],
+      "contradictions": [
+        "Planned steps do not establish service, testimony, penalties, liability or mandatory release gates; scope and remedies remain unresolved."
+      ]
+    },
+    {
+      "id": "2026-10-01-061c8c179ec5",
+      "claim": "Synopsys announces a September 30 multi-year preferred-partner agreement with OpenAI to develop GPT-Synopsys, license EDA tools, share revenue and collaborate on go-to-market activities.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "OpenAI",
+        "Synopsys",
+        "GPT-Synopsys"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "primary_company_announcement",
+          "name": "Synopsys announcement",
+          "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design"
+        }
+      ],
+      "contradictions": [
+        "Financial terms were not disclosed; the signed agreement does not establish delivered technical outcomes."
+      ]
+    },
+    {
+      "id": "2026-10-01-56a8dab50ae7",
+      "claim": "Synopsys describes a planned OpenAI-hosted compute/model/license service with customer harness integration and tool-running design and verification workflows for engineer review, and says early customer engagements are underway.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "OpenAI",
+        "Synopsys",
+        "GPT-Synopsys"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_company_announcement",
+          "name": "Synopsys announcement",
+          "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design"
+        }
+      ],
+      "contradictions": [
+        "No general availability date, measured PPA/verification/development-time improvements or independently demonstrated autonomous chip-design success was established."
+      ]
+    },
+    {
+      "id": "2026-10-01-6fbfbf5c9da7",
+      "claim": "OpenAI reports coordinated attempts to transfer encrypted reasoning between conversations and induce decryption and transcription, and says it closed a replay pathway that allowed someone already possessing another user's encrypted reasoning to recover its contents.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "OpenAI"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_company_security_report",
+          "name": "OpenAI",
+          "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/"
+        }
+      ],
+      "contradictions": [
+        "The exposure/recovery pathway is vendor-reported, not independently verified campaign-specific success; recovery through manipulated model interactions does not establish broken encryption or improvements to competing models. The report is dated September 30, but its exact publication time remains feed-supplied near the window boundary."
+      ]
+    },
+    {
+      "id": "2026-10-01-78e158adfe81",
+      "claim": "OpenAI attributes a core activity cluster to individuals associated with Moonshot AI, developer of Kimi, while stating that not all observed operators necessarily came from one actor.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "OpenAI",
+        "Moonshot AI",
+        "Kimi"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_company_security_report",
+          "name": "OpenAI",
+          "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/"
+        }
+      ],
+      "contradictions": [
+        "No independent attribution or Moonshot response was verified; organizational authorization is not established."
+      ]
+    },
+    {
+      "id": "2026-10-01-da432a47717d",
+      "claim": "The supplied dossier dates Google's Argon announcement to September 30; The Decoder reports initial Fairwind cyber-defender and Google-team access, followed by paid API customers and AI Ultra subscribers, without a broader-release date.",
+      "evidence_state": "reported",
+      "entities": [
+        "Google",
+        "Gemini 4 Argon",
+        "Fairwind"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "reporting",
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/"
+        }
+      ],
+      "contradictions": [
+        "Availability is a vendor claim relayed through reporting; the article is truncated and Google primary retrieval was unstable."
+      ]
+    },
+    {
+      "id": "2026-10-01-97d9a31903e1",
+      "claim": "The Decoder reports Argon introductory input/output pricing of $2/$10 per million tokens, later $4/$20, a 95% cached-input discount and an output ceiling increase from 64,000 to one million tokens.",
+      "evidence_state": "reported",
+      "entities": [
+        "Google",
+        "Gemini 4 Argon"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "reporting",
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/"
+        }
+      ],
+      "contradictions": [
+        "Promotion expiry was not established; reported output capacity does not demonstrate reliable long-horizon work."
+      ]
+    },
+    {
+      "id": "2026-10-01-0d526f70c711",
+      "claim": "The supplied original Artificial Analysis evaluation lists Argon High at 53 on Intelligence Index v4.3.2 and $1.99 per evaluation task at $2/$10 token pricing.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Artificial Analysis",
+        "Gemini 4 Argon"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_independent_evaluation",
+          "name": "Artificial Analysis",
+          "url": "https://artificialanalysis.ai/ko/models/gemini-4-argon"
+        }
+      ],
+      "contradictions": [
+        "Benchmark-specific task costs are not production task economics; an API-provider listing does not establish public access."
+      ]
+    },
+    {
+      "id": "2026-10-01-c7c7211cd609",
+      "claim": "The Decoder reports Opus 5.5 at 58 index points and approximately 62,000 output tokens per Argon task versus 27,000 for Astra, challenging a simple token-price efficiency narrative.",
+      "evidence_state": "reported",
+      "entities": [
+        "Gemini 4 Argon",
+        "Claude Opus 5.5",
+        "GPT-6 Astra"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "reporting",
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/"
+        }
+      ],
+      "contradictions": [
+        "Underlying comparative tables were not directly verified; benchmark token consumption does not establish production economics."
+      ]
+    },
+    {
+      "id": "2026-10-01-b004a0c6f481",
+      "claim": "NVIDIA publishes an HSTU ranking-inference workflow combining AOTI-compiled native artifacts, validation, FlexKV-backed attention-state reuse and Dynamo-Triton serving through recsys-examples.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "NVIDIA",
+        "HSTU",
+        "AOTI",
+        "FlexKV",
+        "Dynamo-Triton"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_developer_documentation",
+          "name": "NVIDIA Developer Blog",
+          "url": "https://developer.nvidia.com/blog/deploying-an-hstu-generative-recommender-with-nvidia-dynamo-triton"
+        }
+      ],
+      "contradictions": [
+        "The page excerpt is truncated and repository artifacts were not inspected; this workflow is not independent multimodal EPD evidence."
+      ]
+    },
+    {
+      "id": "2026-10-01-4c00678a25f4",
+      "claim": "NVIDIA reports up to 4.47x and 5.93x latency speedups for three- and eight-layer HSTU models at dynamic batch size 8 on RTX PRO 6000 Blackwell Workstation Edition, against the same AOTI setup without caching.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "NVIDIA",
+        "HSTU",
+        "RTX PRO 6000 Blackwell Workstation Edition"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_benchmark",
+          "name": "NVIDIA Developer Blog",
+          "url": "https://developer.nvidia.com/blog/deploying-an-hstu-generative-recommender-with-nvidia-dynamo-triton"
+        }
+      ],
+      "contradictions": [
+        "Both are best-case results at 100% GPU KV-cache hit rate; misses, history changes and memory pressure may reduce gains, and independent production reproduction was not assessed."
+      ]
+    },
+    {
+      "id": "2026-10-01-030a28e19715",
+      "claim": "DeepMind introduces SynthID Bio as a biological-watermarking proof of concept that guides amino-acid choices for sequences and adjusts atomic coordinates for predicted structures to embed detectable signatures.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Google DeepMind",
+        "SynthID Bio"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_research_announcement",
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/introducing-synthid-bio/"
+        }
+      ],
+      "contradictions": [
+        "Only retrieved passages were assessed, not complete technical evidence; this is not an established production provenance standard."
+      ]
+    },
+    {
+      "id": "2026-10-01-d60b21ecedda",
+      "claim": "DeepMind reports AlphaProteo and SynthID Bio-enabled ProteinMPNN binder experiments preserving tested biological function and permitting verification on synthesized proteins.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Google DeepMind",
+        "SynthID Bio",
+        "AlphaProteo",
+        "ProteinMPNN"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_vendor_research_report",
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/introducing-synthid-bio/"
+        }
+      ],
+      "contradictions": [
+        "Independent replication, removal resistance, protein-family generalization and deployment availability were not verified; detectability does not establish safety or prevent harmful design."
+      ]
+    },
+    {
+      "id": "2026-10-01-990c7304744e",
+      "claim": "The GPT-Synopsys agreement, SynthID Bio proof of concept, FTC investigation and reported reasoning-extraction campaign suggest distinct requirements for domain performance, provenance and incident accountability.",
+      "evidence_state": "early_signal",
+      "entities": [
+        "OpenAI",
+        "Synopsys",
+        "Google DeepMind",
+        "FTC"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_company_announcement",
+          "name": "Synopsys announcement",
+          "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design"
+        },
+        {
+          "role": "primary_research_announcement",
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/introducing-synthid-bio/"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/89ac416717adbfb1d72f2d85e6ce83d1"
+        },
+        {
+          "role": "primary_company_security_report",
+          "name": "OpenAI",
+          "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/"
+        }
+      ],
+      "contradictions": [
+        "This is editorial synthesis, not evidence of an integrated delivered control system or mandatory new release gates."
+      ]
+    }
+  ],
+  "date": "2026-10-01",
+  "source_coverage": {
+    "catalog_sources": 74,
+    "feed_sources": 61,
+    "successful_feeds": 57,
+    "failed_feeds": [
+      {
+        "source": "arXiv Machine Learning",
+        "feed": "https://rss.arxiv.org/rss/cs.LG",
+        "error": "ParseError: no element found: line 18695, column 402"
+      },
+      {
+        "source": "SemiAnalysis",
+        "feed": "https://newsletter.semianalysis.com/feed",
+        "error": "ParseError: unclosed CDATA section: line 102, column 138176"
+      },
+      {
+        "source": "Don't Worry About the Vase",
+        "feed": "https://thezvi.substack.com/feed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      },
+      {
+        "source": "Marcus on AI",
+        "feed": "https://garymarcus.substack.com/feed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      }
+    ],
+    "observations": [
+      {
+        "source": "OpenAI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Anthropic",
+        "status": "ok",
+        "items_seen": 37
+      },
+      {
+        "source": "Google DeepMind",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Google AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "AWS Machine Learning",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "NVIDIA AI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Hugging Face",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Mistral AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "arXiv AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "arXiv Machine Learning",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Google Research Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Microsoft Research",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Meta Engineering",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "NVIDIA Blog",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "NVIDIA Developer Blog",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "TechCrunch AI",
+        "status": "ok",
+        "items_seen": 13
+      },
+      {
+        "source": "The Verge AI",
+        "status": "ok",
+        "items_seen": 6
+      },
+      {
+        "source": "Ars Technica AI",
+        "status": "ok",
+        "items_seen": 7
+      },
+      {
+        "source": "MIT Technology Review AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "IEEE Spectrum AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Wired AI",
+        "status": "ok",
+        "items_seen": 3
+      },
+      {
+        "source": "VentureBeat AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "The Guardian AI",
+        "status": "ok",
+        "items_seen": 9
+      },
+      {
+        "source": "Financial Times AI",
+        "status": "ok",
+        "items_seen": 7
+      },
+      {
+        "source": "404 Media",
+        "status": "ok",
+        "items_seen": 6
+      },
+      {
+        "source": "Platformer",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "CNBC Technology",
+        "status": "ok",
+        "items_seen": 13
+      },
+      {
+        "source": "BBC Technology",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "NYT Technology",
+        "status": "ok",
+        "items_seen": 5
+      },
+      {
+        "source": "Simon Willison",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Interconnects",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "SemiAnalysis",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Latent Space",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Import AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "One Useful Thing",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Understanding AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "AI Snake Oil",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Don't Worry About the Vase",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Marcus on AI",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "ChinaTalk",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Ahead of AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Lil'Log",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Andrej Karpathy",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "LessWrong",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "TLDR AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "arXiv Computational Linguistics",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "HF Daily Papers",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "MIT News AI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Synced Review",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "r/LocalLLaMA",
+        "status": "ok",
+        "items_seen": 17
+      },
+      {
+        "source": "Hacker News AI 100+ points",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "AWS Machine Learning Blog",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Azure Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "GitHub Blog AI and ML",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "PyTorch Blog",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Ollama Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "THE DECODER DE",
+        "status": "ok",
+        "items_seen": 7
+      },
+      {
+        "source": "THE DECODER EN",
+        "status": "ok",
+        "items_seen": 7
+      },
+      {
+        "source": "heise online",
+        "status": "ok",
+        "items_seen": 38
+      },
+      {
+        "source": "t3n",
+        "status": "ok",
+        "items_seen": 15
+      },
+      {
+        "source": "Google News DE/CH AI",
+        "status": "ok",
+        "items_seen": 24
+      }
+    ]
+  },
+  "coverage_gaps": [
+    "Twelve events considered; six selected; three batched web calls used.",
+    "Exact publication times remain feed-supplied, especially OpenAI's 10:30 UTC item just after the cutoff.",
+    "Argon primary retrieval was unstable; availability and later pricing rely on attributed reporting.",
+    "Reuters and Artificial Analysis landing-page failures were partly recovered through syndication and a localized original model page.",
+    "Truncated excerpts and narrow retrieved passages were not treated as complete-page reviews.",
+    "Four supplied feed failures; substantive China, open-weight and multimodal coverage remains incomplete.",
+    "Senate deadline resolution, evaluator governance and independent EPD/Qwen evidence remain unresolved."
+  ],
+  "continuity_reviews": [
+    {
+      "kind": "prediction",
+      "id": "pred-kya-interoperability-2026-10",
+      "assessment": "Open unchanged; no implementable specification or cross-network pilot verified.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-deepseek-v41-evidence-2026-09",
+      "assessment": "Falsified unchanged; supplied API documentation does not establish independent task economics.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-epd-independent-evidence-2026-10",
+      "assessment": "Open unchanged; HSTU caching is not independent multimodal EPD reproduction.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-us-duty-of-care-draft-2026-09",
+      "assessment": "Open unchanged pending adjudication; September 29 reporting indicates a postponed markup, but definitive timing and primary text remain unverified.",
+      "sources": [
+        {
+          "label": "Washington Post discovery excerpt",
+          "url": "https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/09/29/ai-tech-brief-dems-demand-ai-testing-regime/"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-embedded-evaluator-details-2026-09",
+      "assessment": "Confirmed unchanged; no new evidence warrants revising the supplied resolution.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-sglang-cve-remediation-2026-09",
+      "assessment": "Falsified unchanged; no patch evidence assessed.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-deepseek-alias-regression-2026-09",
+      "assessment": "Falsified unchanged; no reproducible alias-regression evaluation verified.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-frontier-pacing-operationalization-2026-09",
+      "assessment": "Progress unchanged; Argon's reported phased rollout adds operational evidence but not independently verified evaluator authority.",
+      "sources": [
+        {
+          "label": "The Decoder",
+          "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-anthropic-evaluator-governance-2026-10",
+      "assessment": "Open unchanged; no additional evaluator or new governance rights verified.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-qwen38-omni-independent-evidence-2026-10",
+      "assessment": "Open unchanged; qualifying mixed-modality workload evidence was not found in assessed material.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-sagemaker-instance-preferences",
+      "assessment": "Trial unchanged; no relevant capacity evidence assessed.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-authority-boundary-suite",
+      "assessment": "Trial unchanged; regulatory scrutiny strengthens relevance but does not validate the suite.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-inference-admin-hardening",
+      "assessment": "Experimental unchanged; reasoning extraction does not establish mutation-endpoint exposure.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-nvidia-dynamo-epd",
+      "assessment": "Trial unchanged; recommender caching does not validate EPD benefits.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-deepseek-v41-flash",
+      "assessment": "Watch unchanged; no production regression results assessed.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agent-memory-write-gate",
+      "assessment": "Experimental unchanged; no memory-write evaluation assessed.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agent-registry-poc",
+      "assessment": "Experimental unchanged; no interoperability or delegated-authority implementation verified.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-hermetic-coding-agent-canary",
+      "assessment": "Experimental unchanged; no new containment test results assessed.",
+      "sources": []
+    },
+    {
+      "kind": "thesis",
+      "id": "nvidia-rack-platform",
+      "assessment": "High confidence unchanged; assessed CoreWeave passages do not demonstrate third-party accelerator participation.",
+      "sources": []
+    },
+    {
+      "kind": "thesis",
+      "id": "enterprise-agent-control-plane",
+      "assessment": "High confidence unchanged; Synopsys promises configurable controls, but delivered runtime policies and customer telemetry remain unverified.",
+      "sources": [
+        {
+          "label": "Synopsys",
+          "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design"
+        }
+      ]
+    }
+  ],
+  "selection": {
+    "selected_stories": 6,
+    "rejections": [
+      {
+        "title": "Flow Engineering's $50M Series B at $750M valuation",
+        "reason": "Confirmed company announcement reported by TechCrunch, but less material than the overlapping Synopsys specialization agreement."
+      },
+      {
+        "title": "NVIDIA/CoreWeave agentic infrastructure",
+        "reason": "Primary passages available, but delivery timing and genuinely new availability were insufficiently resolved."
+      },
+      {
+        "title": "NVIDIA cuObject and SCADA SDK",
+        "reason": "Feed discovery only; release details unverified."
+      },
+      {
+        "title": "Model hermeneutics",
+        "reason": "Promising 27B/397B monitoring signal, but methods and original experimental evidence unverified."
+      },
+      {
+        "title": "OpenAI chief research officer on hack fallout",
+        "reason": "Potentially material follow-up; article evidence beyond the feed was not obtained."
+      },
+      {
+        "title": "Brockman withdraws second $25M super-PAC donation",
+        "reason": "Original article unavailable; feed alone cannot confirm."
+      }
+    ]
+  },
+  "counterevidence": [
+    {
+      "story_id": "2026-09-30-gemini-argon",
+      "assessment": "The Decoder reports Opus 5.5 ahead at 58 and roughly 62,000 output tokens per task versus Astra's 27,000; the comparative underlying tables were not directly verified."
+    },
+    {
+      "story_id": "2026-09-30-ftc-agent-probe",
+      "assessment": "The FTC declined further comment to AP; scope and remedies remain unresolved."
+    },
+    {
+      "story_id": "2026-09-30-gpt-synopsys",
+      "assessment": "The announcement describes intended capabilities, not independently demonstrated autonomous chip-design success."
+    },
+    {
+      "story_id": "2026-09-30-synthid-bio",
+      "assessment": "A working watermark does not itself prevent harmful design or establish universal detection."
+    },
+    {
+      "story_id": "2026-09-30-hstu-serving",
+      "assessment": "Real cache misses, changing histories and memory pressure could materially reduce the advertised gains."
+    },
+    {
+      "story_id": "2026-09-30-distillation-campaign",
+      "assessment": "Attribution remains OpenAI's assessment and expressly excludes certainty about the entire campaign."
+    }
+  ],
+  "watch_hits": [
+    "Inference economics: Argon benchmark task cost and HSTU cache dependence.",
+    "Agent security/governance: FTC scrutiny and reasoning extraction.",
+    "AI R&D automation: specialized EDA model and biological provenance.",
+    "China ecosystem: disputed Moonshot-linked attribution, not independently confirmed."
+  ],
+  "builder_actions": [
+    {
+      "story_id": "2026-09-30-gemini-argon",
+      "action": "Prepare a pinned task-cost evaluation, but defer deployment decisions until access and regular pricing are clear."
+    },
+    {
+      "story_id": "2026-09-30-ftc-agent-probe",
+      "action": "Preserve agent authorization, incident and evaluator-access records with explicit retention ownership."
+    },
+    {
+      "story_id": "2026-09-30-gpt-synopsys",
+      "action": "Require verified engineering outcomes, review gates and data-control terms before considering a pilot."
+    },
+    {
+      "story_id": "2026-09-30-synthid-bio",
+      "action": "Track robustness and false-positive evidence before making biological provenance a compliance dependency."
+    },
+    {
+      "story_id": "2026-09-30-hstu-serving",
+      "action": "Evaluate latency and memory across realistic cache-hit distributions against the unchanged AOTI baseline."
+    },
+    {
+      "story_id": "2026-09-30-distillation-campaign",
+      "action": "Audit cross-session reasoning exposure and distinguish attempted extraction from demonstrated compromise."
+    }
+  ],
+  "visual_provenance": [],
+  "retrieval": [
+    {
+      "url": "https://news.bensbites.com/",
+      "source": "Ben's Bites News",
+      "status": "ok",
+      "final_url": "https://www.bensbites.com/",
+      "truncated": false,
+      "elapsed_seconds": 0.338
+    },
+    {
+      "url": "https://bensbites.com/",
+      "source": "Ben's Bites",
+      "status": "ok",
+      "final_url": "https://www.bensbites.com/",
+      "truncated": false,
+      "elapsed_seconds": 0.344
+    },
+    {
+      "url": "https://aiweekly.co/",
+      "source": "AI Weekly",
+      "status": "ok",
+      "final_url": "https://aiweekly.co/",
+      "truncated": true,
+      "elapsed_seconds": 0.145
+    },
+    {
+      "url": "https://ai.meta.com/blog/",
+      "source": "Meta AI",
+      "status": "ok",
+      "final_url": "https://ai.meta.com/blog/",
+      "truncated": false,
+      "elapsed_seconds": 2.183
+    },
+    {
+      "url": "https://research.meta.ai/",
+      "source": "Meta AI Research",
+      "status": "ok",
+      "final_url": "https://research.meta.ai/",
+      "truncated": false,
+      "elapsed_seconds": 0.27
+    },
+    {
+      "url": "https://blogs.microsoft.com/ai/",
+      "source": "Microsoft AI",
+      "status": "ok",
+      "final_url": "https://news.microsoft.com/source/topics/ai/",
+      "truncated": false,
+      "elapsed_seconds": 0.442
+    },
+    {
+      "url": "https://api-docs.deepseek.com/news/",
+      "source": "DeepSeek",
+      "status": "ok",
+      "final_url": "https://api-docs.deepseek.com/news/",
+      "truncated": false,
+      "elapsed_seconds": 0.536
+    },
+    {
+      "url": "https://www.worldlabs.ai/blog",
+      "source": "World Labs",
+      "status": "ok",
+      "final_url": "https://www.worldlabs.ai/blog",
+      "truncated": false,
+      "elapsed_seconds": 0.618
+    },
+    {
+      "url": "https://www.reuters.com/technology/artificial-intelligence/",
+      "source": "Reuters AI",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.212
+    },
+    {
+      "url": "https://artificialanalysis.ai/",
+      "source": "Artificial Analysis",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.219
+    },
+    {
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence",
+      "source": "European Commission Digital Strategy",
+      "status": "ok",
+      "final_url": "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence",
+      "truncated": true,
+      "elapsed_seconds": 0.513
+    },
+    {
+      "url": "https://www.aisi.gov.uk/",
+      "source": "UK AI Security Institute",
+      "status": "ok",
+      "final_url": "https://www.aisi.gov.uk/",
+      "truncated": false,
+      "elapsed_seconds": 0.244
+    },
+    {
+      "url": "https://www.heise.de/news/Stadt-Wien-entdeckt-Einbruch-in-Online-Speicher-11471899.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "source": "heise online",
+      "status": "ok",
+      "final_url": "https://www.heise.de/news/Stadt-Wien-entdeckt-Einbruch-in-Online-Speicher-11471899.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "truncated": false,
+      "elapsed_seconds": 0.867
+    },
+    {
+      "url": "https://www.nytimes.com/2026/09/30/technology/openai-brockman-super-pac-leading-the-future.html",
+      "source": "NYT Technology",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.23
+    },
+    {
+      "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead",
+      "source": "THE DECODER EN",
+      "status": "ok",
+      "final_url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/",
+      "truncated": true,
+      "elapsed_seconds": 1.817
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPNERSOFU3M09XYWNrVTdSdHhkcVl4NkxXeUU2dHItLW41QnJ5TjhOX1VhaUh0Wmc1Y3ZFVm9qeXhfd0gxRVNNclo3UURDbGFrb19KS2RhSWlrbFl1RTZ5V2dlbEN4WXZ0SkwyTy1mRFc4M0lDYVRCZ0lBQnJzZ2xmenA1cDNaX294MzJYVmhydXlBQ1ZQbG40LW9lY1UtQ2MzRmZsdDJ2MWplNVAx?oc=5",
+      "source": "Anthropic",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.225
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/30/blue-origin-funding-round.html",
+      "source": "CNBC Technology",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.364
+    },
+    {
+      "url": "https://simonwillison.net/2026/Sep/30/he-built-this-city",
+      "source": "Simon Willison",
+      "status": "ok",
+      "final_url": "https://simonwillison.net/2026/Sep/30/he-built-this-city/",
+      "truncated": false,
+      "elapsed_seconds": 0.095
+    },
+    {
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wuhrop/if_one_hour_of_ai_is_costing_me_012_is_paying_for",
+      "source": "r/LocalLLaMA",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.101
+    },
+    {
+      "url": "https://the-decoder.de/google-gemini-4-argon-schliesst-zur-ki-spitze-auf-bleibt-aber-hinter-anthropics-claude-opus-5-5",
+      "source": "THE DECODER DE",
+      "status": "ok",
+      "final_url": "https://the-decoder.de/google-gemini-4-argon-schliesst-zur-ki-spitze-auf-bleibt-aber-hinter-anthropics-claude-opus-5-5/",
+      "truncated": true,
+      "elapsed_seconds": 1.763
+    },
+    {
+      "url": "https://www.ft.com/content/a3075bf9-5b6c-40c8-bb6b-aca4422d1cbb?syn-25a6b1a6=1",
+      "source": "Financial Times AI",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.072
+    },
+    {
+      "url": "https://www.404media.co/someone-torturing-llms-in-a-robot-prison-has-triggered-the-dumbest-debate-in-ai-yet",
+      "source": "404 Media",
+      "status": "ok",
+      "final_url": "https://www.404media.co/someone-torturing-llms-in-a-robot-prison-has-triggered-the-dumbest-debate-in-ai-yet/",
+      "truncated": true,
+      "elapsed_seconds": 0.102
+    },
+    {
+      "url": "https://developer.nvidia.com/blog/deploying-an-hstu-generative-recommender-with-nvidia-dynamo-triton",
+      "source": "NVIDIA Developer Blog",
+      "status": "ok",
+      "final_url": "https://developer.nvidia.com/blog/deploying-an-hstu-generative-recommender-with-nvidia-dynamo-triton",
+      "truncated": true,
+      "elapsed_seconds": 1.449
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/30/valor-atreides-and-sequoia-back-ai-startup-flow-engineering-at-750m-valuation",
+      "source": "TechCrunch AI",
+      "status": "ok",
+      "final_url": "https://techcrunch.com/2026/09/30/valor-atreides-and-sequoia-back-ai-startup-flow-engineering-at-750m-valuation/",
+      "truncated": false,
+      "elapsed_seconds": 0.121
+    },
+    {
+      "url": "https://apnews.com/article/89ac416717adbfb1d72f2d85e6ce83d1",
+      "source": "",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.138
+    },
+    {
+      "url": "https://artificialanalysis.ai/ko/models/gemini-4-argon",
+      "source": "",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.554
+    },
+    {
+      "url": "https://deepmind.google/blog/introducing-synthid-bio/",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://deepmind.google/blog/introducing-synthid-bio/",
+      "truncated": true,
+      "elapsed_seconds": 0.622
+    },
+    {
+      "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
+      "truncated": true,
+      "elapsed_seconds": 0.437
+    },
+    {
+      "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/",
+      "source": "",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.104
+    },
+    {
+      "url": "https://www.marketscreener.com/news/ftc-opens-probe-into-ai-giants-including-anthropic-and-openai-new-york-post-reports-ce785ad2d08bf22d",
+      "source": "",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.206
+    },
+    {
+      "url": "https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/09/29/ai-tech-brief-dems-demand-ai-testing-regime/",
+      "source": "",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.454
+    }
+  ],
+  "omitted_context": {
+    "active_storylines": 4,
+    "recent_or_contested_claims": 16,
+    "predictions_due_or_near_due": 0,
+    "builder_radar_due_or_recent": 2,
+    "active_theses": 0,
+    "trend_summary": 4,
+    "recent_concepts": 5
+  },
+  "model": "gpt-6.1-sol",
+  "red_team_report": {
+    "approved": true,
+    "issues": [],
+    "checks": [
+      "Re-reviewed the corrected draft against supplied evidence and the previous independent review; performed no new retrieval.",
+      "Confirmed resolution of every previously flagged path: both language versions, both changed fields and the audit now distinguish extraction attempts from OpenAI's reported replay/recovery pathway, without claiming independent campaign verification, broken encryption or improved competing models.",
+      "Checked that the correction preserves Moonshot attribution limits, uncertainty about organizational authorization and the feed-only exact publication time.",
+      "Rechecked material figures, dates, availability and legal distinctions using supplied passages and prior independent checks: Argon pricing/index/task costs, FTC planned investigative steps, Synopsys agreement and intended service, NVIDIA benchmark conditions and SynthID Bio mechanisms.",
+      "Checked DE/EN equivalence across summaries, stories, concept and watch items; no material mismatch remains.",
+      "Confirmed vendor claims remain distinguishable from independent reporting/evaluation, counterevidence is retained and recurring themes are accompanied by new developments rather than recycled headlines.",
+      "Reconciled six selected and six rejected events and 61 feeds with 57 successes and four failures; page-fetch failures are not presented as feed failures or failed independent web retrieval. Truncated passages are not represented as full-page reviews.",
+      "Matched all ten included prediction continuity items, eight builder items and two theses to audit reviews; historical statuses remain unchanged rather than newly verified, unresolved evidence remains inconclusive and omitted_context counts omitted records.",
+      "Checked prediction deadlines and confirmation/falsification criteria, including explicit inconclusive outcomes; forecasts are not presented as established availability commitments.",
+      "Checked provenance-versus-access-control concept accuracy and illustrative-example labeling. Visuals and visual_provenance are empty; omission introduces no publication defect."
+    ],
+    "source_checks": [
+      {
+        "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/",
+        "excerpt": "We closed a pathway that allowed someone who already possessed another user's encrypted reasoning to replay it and recover its contents",
+        "assessment": "Reused previous independent retrieval, not a new fetch. The corrected bilingual account and audit accurately describe this vendor-reported recovery pathway while separating it from independently established campaign success, cryptographic compromise and downstream model improvements."
+      },
+      {
+        "url": "https://apnews.com/article/89ac416717adbfb1d72f2d85e6ce83d1",
+        "excerpt": "An FTC spokesperson confirmed the investigation but declined further comment.",
+        "assessment": "Reused previous independent retrieval. Supports investigation confirmation and limited disclosed detail; previous findings also support distinguishing public confirmation from the inquiry's start."
+      },
+      {
+        "url": "https://www.marketscreener.com/news/ftc-opens-probe-into-ai-giants-including-anthropic-and-openai-new-york-post-reports-ce785ad2d08bf22d",
+        "excerpt": "The FTC plans to issue formal demands for information and compel testimony from executives at top AI developers",
+        "assessment": "Reused previous independent Reuters-syndication check. Supports planned steps, not completed service, sanctions, liability findings or mandatory release gates."
+      },
+      {
+        "url": "https://artificialanalysis.ai/ko/models/gemini-4-argon",
+        "excerpt": "입력 US$2.00 출력 US$10.00 캐시 할인 95%\n$1.99\nIntelligence Index 작업당 비용",
+        "assessment": "Reused previous independent evaluation-page check, which also recorded 53 points and Intelligence Index v4.3.2. Supports benchmark-specific pricing and task-cost claims, not public access or production economics."
+      },
+      {
+        "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
+        "excerpt": "GPT-Synopsys will run on OpenAI-hosted infrastructure, will be designed to interoperate with customer agent harness systems",
+        "assessment": "Reused previous independent retrieval. Supports intended hosting and harness integration; the draft correctly retains forward-looking status and does not infer measured engineering gains."
+      },
+      {
+        "url": "https://developer.nvidia.com/blog/deploying-an-hstu-generative-recommender-with-nvidia-dynamo-triton",
+        "excerpt": "best-case speedups of up to 4.47x for the three-layer HSTU model and 5.93x for the eight-layer model under a 100% GPU KV-cache hit rate, relative to the same AOTI configuration without KV caching.",
+        "assessment": "Checked supplied substantive vendor passage. The draft preserves model depths, batch size 8, GPU identity, baseline and ideal cache-hit condition."
+      },
+      {
+        "url": "https://deepmind.google/blog/introducing-synthid-bio/",
+        "excerpt": "subtly guiding the choice of amino acids for sequences and adjusting atomic coordinates for predicted 3D structures",
+        "assessment": "Checked supplied vendor passage. Supports the two described mechanisms; the draft appropriately separates reported function preservation and physical-protein verification from independent replication, universal detection and biological safety guarantees."
+      }
+    ]
+  },
+  "publish_decision": "publish",
+  "visual_plan": []
+}

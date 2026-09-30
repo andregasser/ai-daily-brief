@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-30",
+  "updated_at": "2026-10-01",
   "predictions": [
     {
       "id": "pred-kya-interoperability-2026-10",
@@ -26,7 +26,15 @@
           "date": "2026-09-14",
           "note": "Due Builder Radar review found no new public KYA specification, SDK, reference implementation or cross-network pilot. Prediction remains open."
         }
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-01",
+          "note": "Open unchanged; no implementable specification or cross-network pilot verified.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "pred-deepseek-v41-evidence-2026-09",
@@ -56,7 +64,15 @@
           "date": "2026-09-24",
           "note": "Review date reached. Stable primary V4.1-Flash documentation exists, but today's targeted search still found no credible independent end-to-end evaluation with a sufficiently comparable harness covering task success, latency and cost against the preceding Flash/Pro options. The forecast therefore did not satisfy its full confirmation criteria by the deadline."
         }
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-01",
+          "note": "Falsified unchanged; supplied API documentation does not establish independent task economics.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "pred-china-hbm-pricing-q4",
@@ -121,7 +137,15 @@
           "date": "2026-09-13",
           "note": "Three-day Builder Radar review found no new independent production-style reproduction; prediction remains open."
         }
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-01",
+          "note": "Open unchanged; HSTU caching is not independent multimodal EPD reproduction.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "pred-us-duty-of-care-draft-2026-09",
@@ -168,9 +192,19 @@
               "url": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e"
             }
           ]
+        },
+        {
+          "date": "2026-10-01",
+          "note": "Open unchanged pending adjudication; September 29 reporting indicates a postponed markup, but definitive timing and primary text remain unverified.",
+          "sources": [
+            {
+              "label": "Washington Post discovery excerpt",
+              "url": "https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/09/29/ai-tech-brief-dems-demand-ai-testing-regime/"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-09-30"
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "pred-openai-misalignment-disclosure-2026-10",
@@ -282,9 +316,14 @@
               "url": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e"
             }
           ]
+        },
+        {
+          "date": "2026-10-01",
+          "note": "Confirmed unchanged; no new evidence warrants revising the supplied resolution.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-09-30"
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "pred-sglang-cve-remediation-2026-09",
@@ -326,7 +365,15 @@
           "url": "https://github.com/advisories/GHSA-m675-99qc-9233",
           "note": "Review date reached: GitHub Advisory still lists patched versions as Unknown and no official remediation cleared the evidence bar. Prediction is falsified without rewriting its original text."
         }
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-01",
+          "note": "Falsified unchanged; no patch evidence assessed.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "pred-deepseek-alias-regression-2026-09",
@@ -357,7 +404,15 @@
           "url": "https://api-docs.deepseek.com/updates/",
           "note": "Prediction falsified: DeepSeek's current official changelog says V4-Pro service continues after Sep 14 in response to user demand, so the forecast forced alias migration did not remain in effect and no migration-regression boundary existed as predicted."
         }
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-01",
+          "note": "Falsified unchanged; no reproducible alias-regression evaluation verified.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "pred-frontier-pacing-operationalization-2026-09",
@@ -450,9 +505,19 @@
               "url": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e"
             }
           ]
+        },
+        {
+          "date": "2026-10-01",
+          "note": "Progress unchanged; Argon's reported phased rollout adds operational evidence but not independently verified evaluator authority.",
+          "sources": [
+            {
+              "label": "The Decoder",
+              "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-09-30"
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "pred-anthropic-evaluator-governance-2026-10",
@@ -485,9 +550,14 @@
               "url": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e"
             }
           ]
+        },
+        {
+          "date": "2026-10-01",
+          "note": "Open unchanged; no additional evaluator or new governance rights verified.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-09-30"
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "pred-agentcore-v2-production-repro-2026-10",
@@ -531,7 +601,15 @@
           "url": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
           "note": "Primary capability documentation is available; decision-grade independent end-to-end evidence was not found in this run."
         }
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-01",
+          "note": "Open unchanged; qualifying mixed-modality workload evidence was not found in assessed material.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "pred-us-china-ai-incident-mechanism-2026-10",
@@ -746,6 +824,70 @@
       "confidence": "low",
       "id": "pred-2026-09-30-c8b58c02cf13",
       "created": "2026-09-30",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-10-31, Google will document an opening of Gemini 4 Argon API access to paid customers outside the initial Fairwind and Google-team tester group.",
+      "review_after": "2026-10-31",
+      "confirmation_criteria": [
+        "An official Google availability notice or access documentation explicitly permits paid API customers outside the initial restricted tester group to use Argon; a benchmark provider listing alone does not qualify."
+      ],
+      "falsification_criteria": [
+        "A dated official Google statement establishes that access remains limited to the initial tester group through October 31 or explicitly postpones paid-customer access beyond that date.",
+        "Missing or inaccessible availability evidence is inconclusive, not falsification."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-01-7cc32f7d3d25",
+      "created": "2026-10-01",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-10-31, the FTC investigation will produce documented service of at least one formal information demand or a scheduled compelled-testimony session involving a named AI company or evaluator.",
+      "review_after": "2026-10-31",
+      "confirmation_criteria": [
+        "An agency record, recipient confirmation or credible independent report explicitly describes a served formal demand or a scheduled compelled-testimony session in this investigation; repetition of planned steps does not qualify."
+      ],
+      "falsification_criteria": [
+        "An authoritative agency or recipient statement, or credible independently sourced reporting, establishes that these steps were withdrawn or postponed beyond October 31 without a qualifying step having occurred.",
+        "No public documentation by the review date is inconclusive because investigative steps may be nonpublic."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-01-2a350cf44b82",
+      "created": "2026-10-01",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-30, OpenAI or Synopsys will publish concrete GPT-Synopsys pilot or integration documentation specifying supported tool scope, customer harness integration and an engineer-review gate.",
+      "review_after": "2026-11-30",
+      "confirmation_criteria": [
+        "Official documentation or a detailed joint customer-pilot description addresses all three elements: supported EDA workflow/tool scope, a concrete harness integration mechanism and an explicit human review checkpoint; the initial partnership announcement does not qualify."
+      ],
+      "falsification_criteria": [
+        "Official documentation explicitly establishes that the service lacks customer harness integration or engineer review, or the companies state that such implementation documentation is deferred beyond November 30.",
+        "Absence of additional public documentation alone is inconclusive."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-01-a033a463bd18",
+      "created": "2026-10-01",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-10-31, DeepMind or an independent research group will publish additional quantitative SynthID Bio evidence addressing watermark alteration/removal robustness or false-positive behavior beyond the supplied announcement passages.",
+      "review_after": "2026-10-31",
+      "confirmation_criteria": [
+        "A publicly accessible technical report, paper or evaluation discloses test conditions and quantitative results for at least one specified alteration/removal challenge or false-positive assessment; qualitative assurances and additional examples alone do not qualify."
+      ],
+      "falsification_criteria": [
+        "DeepMind explicitly states that qualifying robustness or false-positive evidence is deferred beyond October 31 or that no such assessment will be published within the window.",
+        "Failure to locate a qualifying report is inconclusive, and vendor-only evidence does not establish independent replication."
+      ],
+      "confidence": "low",
+      "id": "pred-2026-10-01-eb487a2caf1c",
+      "created": "2026-10-01",
       "status": "open",
       "evidence": []
     }

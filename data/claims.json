@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-30",
+  "updated_at": "2026-10-01",
   "claims": [
     {
       "id": "2026-09-10-kya-joint-framework",
@@ -3701,6 +3701,351 @@
         "The reverse shift was harder; no independent replication, treatment effect or patient outcome was established."
       ],
       "date": "2026-09-30"
+    },
+    {
+      "id": "2026-10-01-8aaaea054e06",
+      "claim": "AP reports an FTC spokesperson's confirmation of an investigation into OpenAI, Anthropic and other AI companies over potential consumer dangers; September 30 is public confirmation, not an established start date.",
+      "evidence_state": "reported",
+      "entities": [
+        "FTC",
+        "OpenAI",
+        "Anthropic"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/89ac416717adbfb1d72f2d85e6ce83d1"
+        }
+      ],
+      "contradictions": [
+        "AP describes an initial report of an inquiry underway for months; no agency order or findings were obtained, and the FTC declined further detail."
+      ],
+      "date": "2026-10-01"
+    },
+    {
+      "id": "2026-10-01-20d30357b631",
+      "claim": "Reuters reports a senior FTC official's plan for formal information demands and compelled executive testimony, including OpenAI, Anthropic and METR.",
+      "evidence_state": "reported",
+      "entities": [
+        "FTC",
+        "OpenAI",
+        "Anthropic",
+        "METR"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Reuters via MarketScreener",
+          "url": "https://www.marketscreener.com/news/ftc-opens-probe-into-ai-giants-including-anthropic-and-openai-new-york-post-reports-ce785ad2d08bf22d"
+        }
+      ],
+      "contradictions": [
+        "Planned steps do not establish service, testimony, penalties, liability or mandatory release gates; scope and remedies remain unresolved."
+      ],
+      "date": "2026-10-01"
+    },
+    {
+      "id": "2026-10-01-061c8c179ec5",
+      "claim": "Synopsys announces a September 30 multi-year preferred-partner agreement with OpenAI to develop GPT-Synopsys, license EDA tools, share revenue and collaborate on go-to-market activities.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "OpenAI",
+        "Synopsys",
+        "GPT-Synopsys"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "primary_company_announcement",
+          "name": "Synopsys announcement",
+          "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design"
+        }
+      ],
+      "contradictions": [
+        "Financial terms were not disclosed; the signed agreement does not establish delivered technical outcomes."
+      ],
+      "date": "2026-10-01"
+    },
+    {
+      "id": "2026-10-01-56a8dab50ae7",
+      "claim": "Synopsys describes a planned OpenAI-hosted compute/model/license service with customer harness integration and tool-running design and verification workflows for engineer review, and says early customer engagements are underway.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "OpenAI",
+        "Synopsys",
+        "GPT-Synopsys"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_company_announcement",
+          "name": "Synopsys announcement",
+          "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design"
+        }
+      ],
+      "contradictions": [
+        "No general availability date, measured PPA/verification/development-time improvements or independently demonstrated autonomous chip-design success was established."
+      ],
+      "date": "2026-10-01"
+    },
+    {
+      "id": "2026-10-01-6fbfbf5c9da7",
+      "claim": "OpenAI reports coordinated attempts to transfer encrypted reasoning between conversations and induce decryption and transcription, and says it closed a replay pathway that allowed someone already possessing another user's encrypted reasoning to recover its contents.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "OpenAI"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_company_security_report",
+          "name": "OpenAI",
+          "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/"
+        }
+      ],
+      "contradictions": [
+        "The exposure/recovery pathway is vendor-reported, not independently verified campaign-specific success; recovery through manipulated model interactions does not establish broken encryption or improvements to competing models. The report is dated September 30, but its exact publication time remains feed-supplied near the window boundary."
+      ],
+      "date": "2026-10-01"
+    },
+    {
+      "id": "2026-10-01-78e158adfe81",
+      "claim": "OpenAI attributes a core activity cluster to individuals associated with Moonshot AI, developer of Kimi, while stating that not all observed operators necessarily came from one actor.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "OpenAI",
+        "Moonshot AI",
+        "Kimi"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_company_security_report",
+          "name": "OpenAI",
+          "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/"
+        }
+      ],
+      "contradictions": [
+        "No independent attribution or Moonshot response was verified; organizational authorization is not established."
+      ],
+      "date": "2026-10-01"
+    },
+    {
+      "id": "2026-10-01-da432a47717d",
+      "claim": "The supplied dossier dates Google's Argon announcement to September 30; The Decoder reports initial Fairwind cyber-defender and Google-team access, followed by paid API customers and AI Ultra subscribers, without a broader-release date.",
+      "evidence_state": "reported",
+      "entities": [
+        "Google",
+        "Gemini 4 Argon",
+        "Fairwind"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "reporting",
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/"
+        }
+      ],
+      "contradictions": [
+        "Availability is a vendor claim relayed through reporting; the article is truncated and Google primary retrieval was unstable."
+      ],
+      "date": "2026-10-01"
+    },
+    {
+      "id": "2026-10-01-97d9a31903e1",
+      "claim": "The Decoder reports Argon introductory input/output pricing of $2/$10 per million tokens, later $4/$20, a 95% cached-input discount and an output ceiling increase from 64,000 to one million tokens.",
+      "evidence_state": "reported",
+      "entities": [
+        "Google",
+        "Gemini 4 Argon"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "reporting",
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/"
+        }
+      ],
+      "contradictions": [
+        "Promotion expiry was not established; reported output capacity does not demonstrate reliable long-horizon work."
+      ],
+      "date": "2026-10-01"
+    },
+    {
+      "id": "2026-10-01-0d526f70c711",
+      "claim": "The supplied original Artificial Analysis evaluation lists Argon High at 53 on Intelligence Index v4.3.2 and $1.99 per evaluation task at $2/$10 token pricing.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Artificial Analysis",
+        "Gemini 4 Argon"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_independent_evaluation",
+          "name": "Artificial Analysis",
+          "url": "https://artificialanalysis.ai/ko/models/gemini-4-argon"
+        }
+      ],
+      "contradictions": [
+        "Benchmark-specific task costs are not production task economics; an API-provider listing does not establish public access."
+      ],
+      "date": "2026-10-01"
+    },
+    {
+      "id": "2026-10-01-c7c7211cd609",
+      "claim": "The Decoder reports Opus 5.5 at 58 index points and approximately 62,000 output tokens per Argon task versus 27,000 for Astra, challenging a simple token-price efficiency narrative.",
+      "evidence_state": "reported",
+      "entities": [
+        "Gemini 4 Argon",
+        "Claude Opus 5.5",
+        "GPT-6 Astra"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "reporting",
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/"
+        }
+      ],
+      "contradictions": [
+        "Underlying comparative tables were not directly verified; benchmark token consumption does not establish production economics."
+      ],
+      "date": "2026-10-01"
+    },
+    {
+      "id": "2026-10-01-b004a0c6f481",
+      "claim": "NVIDIA publishes an HSTU ranking-inference workflow combining AOTI-compiled native artifacts, validation, FlexKV-backed attention-state reuse and Dynamo-Triton serving through recsys-examples.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "NVIDIA",
+        "HSTU",
+        "AOTI",
+        "FlexKV",
+        "Dynamo-Triton"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_developer_documentation",
+          "name": "NVIDIA Developer Blog",
+          "url": "https://developer.nvidia.com/blog/deploying-an-hstu-generative-recommender-with-nvidia-dynamo-triton"
+        }
+      ],
+      "contradictions": [
+        "The page excerpt is truncated and repository artifacts were not inspected; this workflow is not independent multimodal EPD evidence."
+      ],
+      "date": "2026-10-01"
+    },
+    {
+      "id": "2026-10-01-4c00678a25f4",
+      "claim": "NVIDIA reports up to 4.47x and 5.93x latency speedups for three- and eight-layer HSTU models at dynamic batch size 8 on RTX PRO 6000 Blackwell Workstation Edition, against the same AOTI setup without caching.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "NVIDIA",
+        "HSTU",
+        "RTX PRO 6000 Blackwell Workstation Edition"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_benchmark",
+          "name": "NVIDIA Developer Blog",
+          "url": "https://developer.nvidia.com/blog/deploying-an-hstu-generative-recommender-with-nvidia-dynamo-triton"
+        }
+      ],
+      "contradictions": [
+        "Both are best-case results at 100% GPU KV-cache hit rate; misses, history changes and memory pressure may reduce gains, and independent production reproduction was not assessed."
+      ],
+      "date": "2026-10-01"
+    },
+    {
+      "id": "2026-10-01-030a28e19715",
+      "claim": "DeepMind introduces SynthID Bio as a biological-watermarking proof of concept that guides amino-acid choices for sequences and adjusts atomic coordinates for predicted structures to embed detectable signatures.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Google DeepMind",
+        "SynthID Bio"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_research_announcement",
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/introducing-synthid-bio/"
+        }
+      ],
+      "contradictions": [
+        "Only retrieved passages were assessed, not complete technical evidence; this is not an established production provenance standard."
+      ],
+      "date": "2026-10-01"
+    },
+    {
+      "id": "2026-10-01-d60b21ecedda",
+      "claim": "DeepMind reports AlphaProteo and SynthID Bio-enabled ProteinMPNN binder experiments preserving tested biological function and permitting verification on synthesized proteins.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Google DeepMind",
+        "SynthID Bio",
+        "AlphaProteo",
+        "ProteinMPNN"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_vendor_research_report",
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/introducing-synthid-bio/"
+        }
+      ],
+      "contradictions": [
+        "Independent replication, removal resistance, protein-family generalization and deployment availability were not verified; detectability does not establish safety or prevent harmful design."
+      ],
+      "date": "2026-10-01"
+    },
+    {
+      "id": "2026-10-01-990c7304744e",
+      "claim": "The GPT-Synopsys agreement, SynthID Bio proof of concept, FTC investigation and reported reasoning-extraction campaign suggest distinct requirements for domain performance, provenance and incident accountability.",
+      "evidence_state": "early_signal",
+      "entities": [
+        "OpenAI",
+        "Synopsys",
+        "Google DeepMind",
+        "FTC"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_company_announcement",
+          "name": "Synopsys announcement",
+          "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design"
+        },
+        {
+          "role": "primary_research_announcement",
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/introducing-synthid-bio/"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/89ac416717adbfb1d72f2d85e6ce83d1"
+        },
+        {
+          "role": "primary_company_security_report",
+          "name": "OpenAI",
+          "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/"
+        }
+      ],
+      "contradictions": [
+        "This is editorial synthesis, not evidence of an integrated delivered control system or mandatory new release gates."
+      ],
+      "date": "2026-10-01"
     }
   ]
 }

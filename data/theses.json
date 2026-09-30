@@ -14,7 +14,7 @@
         "NVLink Fusion sees little production adoption outside NVIDIA-centric systems",
         "NVIDIA retreats from third-party XPU integration"
       ],
-      "last_reviewed": "2026-09-30",
+      "last_reviewed": "2026-10-01",
       "evidence_updates": [
         {
           "date": "2026-09-09",
@@ -43,6 +43,11 @@
               "url": "https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute"
             }
           ]
+        },
+        {
+          "date": "2026-10-01",
+          "note": "High confidence unchanged; assessed CoreWeave passages do not demonstrate third-party accelerator participation.",
+          "sources": []
         }
       ]
     },
@@ -59,7 +64,7 @@
         "Customer-controlled agent telemetry remains a niche or pilot-only feature without meaningful enterprise production adoption",
         "Major providers retreat toward model-only refusals without exposing operational policy controls"
       ],
-      "last_reviewed": "2026-09-30",
+      "last_reviewed": "2026-10-01",
       "evidence_updates": [
         {
           "date": "2026-09-09",
@@ -114,6 +119,16 @@
             {
               "label": "OpenAI Dots announcement",
               "url": "https://openai.com/index/introducing-dots/"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-01",
+          "note": "High confidence unchanged; Synopsys promises configurable controls, but delivered runtime policies and customer telemetry remain unverified.",
+          "sources": [
+            {
+              "label": "Synopsys",
+              "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design"
             }
           ]
         }

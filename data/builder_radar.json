@@ -42,7 +42,15 @@
           "disposition": "remain_trial",
           "note": "Seven-day review: current secondary coverage restates AWS's ordered-fallback semantics but no credible independent production measurement demonstrates queue-time, throughput or cost impact across heterogeneous accelerated instances. Keep the primitive trial; next lifecycle review at ~30 days."
         }
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-01",
+          "note": "Trial unchanged; no relevant capacity evidence assessed.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "builder-authority-boundary-suite",
@@ -86,7 +94,15 @@
           "disposition": "remain_trial",
           "note": "Seven-day review: no new cross-vendor production evidence establishes the instruction hierarchy as a runtime-enforced standard. Keep the adversarial authority-boundary suite as a trial and move to the 30-day review."
         }
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-01",
+          "note": "Trial unchanged; regulatory scrutiny strengthens relevance but does not validate the suite.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "builder-inference-admin-hardening",
@@ -130,7 +146,15 @@
         "https://github.com/advisories/GHSA-m675-99qc-9233",
         "https://vicone.com/blog/cve-2026-86793-sglang-bypass-could-let-attackers-run-code-on-ai-servers/",
         "https://github.com/sgl-project/sglang/blob/main/docs/docs/advanced_features/sglang_for_rl.mdx"
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-01",
+          "note": "Experimental unchanged; reasoning extraction does not establish mutation-endpoint exposure.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "builder-nvidia-dynamo-epd",
@@ -169,7 +193,15 @@
       ],
       "sources": [
         "https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving/"
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-01",
+          "note": "Trial unchanged; recommender caching does not validate EPD benefits.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "builder-deepseek-v41-flash",
@@ -228,7 +260,15 @@
         "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf",
         "https://s5labs.io/resources/insights/deepseek-v41-flash-native-vision-api-migration/",
         "https://api-docs.deepseek.com/updates/"
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-01",
+          "note": "Watch unchanged; no production regression results assessed.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "builder-agent-memory-write-gate",
@@ -267,7 +307,15 @@
       ],
       "sources": [
         "https://arxiv.org/abs/2609.08747"
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-01",
+          "note": "Experimental unchanged; no memory-write evaluation assessed.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "builder-agent-registry-poc",
@@ -317,9 +365,14 @@
               "url": "https://openai.com/index/introducing-dots/"
             }
           ]
+        },
+        {
+          "date": "2026-10-01",
+          "note": "Experimental unchanged; no interoperability or delegated-authority implementation verified.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-09-30"
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "builder-hermetic-coding-agent-canary",
@@ -361,7 +414,15 @@
       "sources": [
         "https://accomplish.ai/blog/beltdown-escaping-the-claude-code-sandbox/",
         "https://blog.rubygems.org/2026/09/11/update-may-spam-publishing-campaign.html"
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-01",
+          "note": "Experimental unchanged; no new containment test results assessed.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-01"
     },
     {
       "id": "builder-outcome-cost-benchmark-harness",
