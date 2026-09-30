@@ -28,7 +28,7 @@ except ImportError:
     from render_visuals import validate_visuals
 
 ROOT = Path(__file__).resolve().parents[1]
-MODEL = "gpt-6-sol"
+MODEL = "gpt-6.1-sol"
 TOTAL_SECONDS = 450
 MAX_SEARCH_CALLS = 6
 

@@ -21,7 +21,7 @@ run broad searches without a limit, update the repository or run tests itself.
   It cannot browse, edit files, execute code or run tests. The independent review
   stage checks claims, translation, caveats, visuals and continuity against the
   evidence. At most one repair is permitted, followed by another review.
-- GPT-6 Sol with medium reasoning is retained. The editorial calls share a
+- GPT-6.1 Sol with medium reasoning is used. The editorial calls share a
   450-second wall-clock budget and individual output/search limits. The target
   for the complete ordinary daily run is 5–10 minutes, not a guaranteed SLA.
 - Python renders the approved edition, original bilingual diagrams, metadata,
