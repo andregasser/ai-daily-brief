@@ -1,0 +1,1246 @@
+{
+  "claims": [
+    {
+      "id": "2026-09-30-7d2a75f4762b",
+      "claim": "AMD disclosed an agreement signed September 26 to acquire World Labs for approximately $8.2 billion in AMD shares, subject to adjustments; closing remains conditional.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "AMD",
+        "World Labs"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "primary_filing",
+          "name": "AMD Form 8-K",
+          "url": "https://ir.amd.com/financial-information/sec-filings/content/0000002488-26-000182/amd-20260926.htm"
+        },
+        {
+          "role": "primary_counterparty",
+          "name": "World Labs announcement",
+          "url": "https://www.worldlabs.ai/blog/amd-announcement"
+        }
+      ],
+      "contradictions": [
+        "An agreement is not a completed acquisition; performance and open-model benefits were not demonstrated."
+      ]
+    },
+    {
+      "id": "2026-09-30-3523629c2d26",
+      "claim": "AP reports that the voluntary US accord calls for company controls, an independent external auditor and board-committee review of auditor reports.",
+      "evidence_state": "reported",
+      "entities": [
+        "White House",
+        "AI companies"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Associated Press report",
+          "url": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "BBC account",
+          "url": "https://www.bbc.co.uk/news/articles/cvzez7k0pn40o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "contradictions": [
+        "The signed text was not located; auditor powers and release authority are unverified.",
+        "AP reports Dario Amodei said the risk-addressing mechanism remained under discussion."
+      ]
+    },
+    {
+      "id": "2026-09-30-b086cf41d69e",
+      "claim": "A complaint dated September 29 concerning OpenAI agents’ access to Hugging Face systems was filed; WIRED reports an alleged California computer-access-law violation.",
+      "evidence_state": "confirmed_multiple",
+      "entities": [
+        "Legal Advocates for Safe Science and Technology",
+        "OpenAI",
+        "Hugging Face"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_legal_filing",
+          "name": "Plaintiff’s complaint",
+          "url": "https://lasst.org/in-the-courts/hugging-face-complaint"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "WIRED report",
+          "url": "https://www.wired.com/story/openai-sued-over-the-hugging-face-hack"
+        }
+      ],
+      "contradictions": [
+        "The complaint is an allegation, not a judicial finding; no ruling appears in the supplied evidence."
+      ]
+    },
+    {
+      "id": "2026-09-30-6bbeb777b4a3",
+      "claim": "OpenAI announced Dots for ongoing work and computer use in the Agents API, with specified product and workspace access restrictions.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "OpenAI",
+        "Dots",
+        "Agents API"
+      ],
+      "storyline": "enterprise-agent-control-plane",
+      "support": [
+        {
+          "role": "primary_announcement",
+          "name": "OpenAI DevDay recap",
+          "url": "https://openai.com/index/devday-2026-recap/"
+        },
+        {
+          "role": "primary_product_detail",
+          "name": "OpenAI Dots announcement",
+          "url": "https://openai.com/index/introducing-dots/"
+        },
+        {
+          "role": "primary_product_detail",
+          "name": "OpenAI Agents API announcement",
+          "url": "https://openai.com/index/introducing-the-agents-api/"
+        }
+      ],
+      "contradictions": [
+        "No independent long-horizon reliability or production permission-control assessment was supplied."
+      ]
+    },
+    {
+      "id": "2026-09-30-675759f5f0ba",
+      "claim": "OpenAI announced a Luna-based Decisions API in limited preview and plans for broader release in the coming days.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "OpenAI",
+        "Decisions API"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_announcement",
+          "name": "OpenAI DevDay recap",
+          "url": "https://openai.com/index/devday-2026-recap/"
+        }
+      ],
+      "contradictions": [
+        "The API is not yet broadly released in the supplied evidence; calibration was not independently established."
+      ]
+    },
+    {
+      "id": "2026-09-30-0e64641f4c42",
+      "claim": "OpenAI lists GPT-6.1 Sol at $2 per million standard input tokens, $0.10 per million cached input tokens and $10 per million output tokens.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "OpenAI",
+        "GPT-6.1 Sol"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_announcement",
+          "name": "OpenAI GPT-6.1 Sol announcement",
+          "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
+        }
+      ],
+      "contradictions": [
+        "Token prices do not establish cost per successful task."
+      ]
+    },
+    {
+      "id": "2026-09-30-693e2a4b16f0",
+      "claim": "OpenAI reports a 6.4-percentage-point DeepSWE v1.1 gain and a seven-percentage-point OSWorld 2.0 offline-set gain under different effort settings.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "OpenAI",
+        "GPT-6.1 Sol",
+        "GPT-6 Sol"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "vendor_evaluation",
+          "name": "OpenAI GPT-6.1 Sol evaluations",
+          "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
+        }
+      ],
+      "contradictions": [
+        "The setups differ and were not independently verified as production task-success results."
+      ]
+    },
+    {
+      "id": "2026-09-30-23a81c6397e7",
+      "claim": "Ollama announced /v1/systemone for typed decisions and listed Nimble 9B and two experimental Tev1 variants.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Ollama",
+        "Bespoke Labs",
+        "Together AI"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_announcement",
+          "name": "Ollama decision-model announcement",
+          "url": "https://ollama.com/blog/ollama-now-supports-jev-style-decision-models"
+        }
+      ],
+      "contradictions": [
+        "The Tev1 variants are experimental; planned cloud models were not announced as available."
+      ]
+    },
+    {
+      "id": "2026-09-30-c6f06cdaa530",
+      "claim": "Ollama reports 91 milliseconds per decision for Nimble 9B in one local Pac-Man example on an M5 Max and cites a comparison spanning 13 datasets and 3,880 decisions.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Ollama",
+        "Nimble 9B"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "vendor_evaluation",
+          "name": "Ollama performance and evaluation description",
+          "url": "https://ollama.com/blog/ollama-now-supports-jev-style-decision-models"
+        }
+      ],
+      "contradictions": [
+        "One machine and example do not establish general latency; one comparison model’s results came from a separate run."
+      ]
+    },
+    {
+      "id": "2026-09-30-476ef5ec4620",
+      "claim": "Microsoft reports using Quine to prioritize thousands of compounds for pancreatic-cancer cell-state assays; its highest-ranked compounds produced the largest intended shifts in the reported experiments.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Microsoft Research",
+        "Quine"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_research_account",
+          "name": "Microsoft Research Quine announcement",
+          "url": "https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/"
+        }
+      ],
+      "contradictions": [
+        "The reverse shift was harder; no independent replication, treatment effect or patient outcome was established."
+      ]
+    }
+  ],
+  "selection": {
+    "selected_story_ids": [
+      "2026-09-28-amd-world-labs-agreement",
+      "2026-09-29-us-voluntary-ai-accord",
+      "2026-09-29-openai-hugging-face-complaint",
+      "2026-09-29-openai-devday-agent-platform",
+      "2026-09-29-gpt-61-sol",
+      "2026-09-29-ollama-decision-models",
+      "2026-09-29-microsoft-quine"
+    ],
+    "reason": "Selected the material transaction, platform and model changes, an early experimental feedback loop, and two distinct accountability developments. Product availability is distinguished from vendor performance claims and independent reporting."
+  },
+  "rejections": [
+    {
+      "title": "Google publisher payments for AI-answer content",
+      "reason": "Underlying reporting or contracts were not verified; the supplied headline overgeneralizes reported payments."
+    },
+    {
+      "title": "Anthropic IPO losses",
+      "reason": "Only a distributed headline was supplied, without checked filing or original financial evidence."
+    },
+    {
+      "title": "Gemini 3.8 Live with Live Avatar",
+      "reason": "The primary page could not be opened; availability and capabilities were not confirmed."
+    },
+    {
+      "title": "Mistral Munich industrial-AI hub",
+      "reason": "Confirmed by Mistral but displaced by more material developments; collaboration outcomes remain unverified."
+    },
+    {
+      "title": "AWS in-India geographic inference for Claude",
+      "reason": "Confirmed but narrower than selected stories; routing between Mumbai and Hyderabad is not single-Region confinement."
+    },
+    {
+      "title": "Google Research Diffusion Controller",
+      "reason": "Research result, not a confirmed launch; reported win rates were not independently checked for this edition."
+    },
+    {
+      "title": "GLM-5.3-Flash llama.cpp support",
+      "reason": "Community pointer only; pull request and working support were not verified."
+    }
+  ],
+  "counterevidence": [
+    "AMD’s transaction remains conditional and no hardware or open-model benefit was demonstrated.",
+    "The signed voluntary accord was not located, and its auditors’ powers are unknown.",
+    "A legal complaint is not a finding of liability.",
+    "No independent production evaluation was supplied for Dots, GPT-6.1 Sol, Ollama’s decision models or Quine."
+  ],
+  "continuity": [
+    {
+      "id": "pred-us-duty-of-care-draft-2026-09",
+      "assessment": "Retain open: the reported voluntary accord is not a verified Senate duty-of-care draft."
+    },
+    {
+      "id": "pred-embedded-evaluator-details-2026-09",
+      "assessment": "Retain the prior confirmed status; the accord does not supply new permanent-embedded-evaluator operational details."
+    },
+    {
+      "id": "pred-frontier-pacing-operationalization-2026-09",
+      "assessment": "Retain progress: a reported review structure is more concrete, but no binding release threshold was verified."
+    },
+    {
+      "id": "pred-anthropic-evaluator-governance-2026-10",
+      "assessment": "Retain open: no Anthropic-specific selection, escalation, publication or stop-authority details were verified."
+    },
+    {
+      "id": "builder-agent-registry-poc",
+      "assessment": "Retain experimental: Dots’ described permissions and visibility do not establish delegated authority and customer-controlled telemetry for the proposed registry."
+    },
+    {
+      "id": "enterprise-agent-control-plane",
+      "assessment": "Retain high confidence without declaring the thesis met; the required combination was not verified at two platforms."
+    },
+    {
+      "id": "nvidia-rack-platform",
+      "assessment": "Retain high confidence unchanged; AMD’s agreement is not direct evidence about NVIDIA’s rack architecture."
+    },
+    {
+      "id": "ai-rd-automation",
+      "assessment": "Quine adds a reported wet-lab loop, with general reproducibility and clinical utility unverified."
+    },
+    {
+      "id": "agent-economics",
+      "assessment": "GPT-6.1 Sol warrants local routing tests, not an assumed improvement in cost per successful task."
+    },
+    {
+      "id": "agent-security",
+      "assessment": "The complaint adds a legal question without changing earlier sandbox measurements or proving the allegations."
+    }
+  ],
+  "watch_hits": [
+    "Agent evaluation and long-horizon reliability: Dots and the Agents API call for measured completion and approval behavior.",
+    "Coding agents and serving economics: GPT-6.1 Sol calls for pinned task-cost comparisons.",
+    "Agent security: the Hugging Face complaint adds a legal development, not a new technical finding.",
+    "Open-weight models and local inference: Ollama lists three local decision models.",
+    "Enterprise strategy: AMD’s proposed acquisition links model research with infrastructure.",
+    "AI governance: the voluntary accord needs a published text and documented auditor authority."
+  ],
+  "builder_actions": [
+    "Specify permissions, approvals, logs and task-level success criteria before piloting persistent or computer-using agents.",
+    "Compare GPT-6.1 Sol on pinned tasks using successful-task cost, latency, effort and tool configuration.",
+    "Test typed decisions on labeled, low-stakes cases, including calibration and escalation.",
+    "Track Quine protocols and independent replication rather than infer clinical utility.",
+    "Track the accord’s signed text and auditor powers; preserve explicit network authority and incident records for agents."
+  ],
+  "coverage_gaps": [
+    "The signed White House accord was not located; its exact text, signatories and auditor powers remain unverified.",
+    "Reuters’ AI landing page and Artificial Analysis’ landing page failed in the supplied fetch, limiting independent business reporting and benchmark checks.",
+    "The Google DeepMind Gemini 3.8 Live page could not be opened.",
+    "Four feeds failed: arXiv Machine Learning, SemiAnalysis, Don't Worry About the Vase and Marcus on AI.",
+    "No independent production evaluation was checked for GPT-6.1 Sol, Dots, Ollama’s decision models or Quine.",
+    "No current Senate duty-of-care draft was verified; absence from this review is not proof that no draft exists."
+  ],
+  "visual_provenance": [
+    {
+      "visual_id": "accountability-surfaces",
+      "basis": "The OpenAI product announcement, AP’s accord report and the complaint/WIRED report describe distinct product, voluntary-review and legal processes; the comparison asserts no causal link."
+    },
+    {
+      "visual_id": "accord-versus-gate",
+      "basis": "AP reports the proposed review structure; the signed text and release authority are unverified."
+    },
+    {
+      "visual_id": "agent-product-surfaces",
+      "basis": "OpenAI’s DevDay recap distinguishes Dots, the Agents API and the limited-preview Decisions API."
+    },
+    {
+      "visual_id": "typed-decision-interface",
+      "basis": "Ollama describes a state and named questions submitted to /v1/systemone, yielding typed decisions; no accuracy is implied."
+    }
+  ],
+  "date": "2026-09-30",
+  "source_coverage": {
+    "catalog_sources": 74,
+    "feed_sources": 61,
+    "successful_feeds": 57,
+    "failed_feeds": [
+      {
+        "source": "arXiv Machine Learning",
+        "feed": "https://rss.arxiv.org/rss/cs.LG",
+        "error": "ParseError: no element found: line 18695, column 402"
+      },
+      {
+        "source": "SemiAnalysis",
+        "feed": "https://newsletter.semianalysis.com/feed",
+        "error": "ParseError: unclosed CDATA section: line 102, column 138176"
+      },
+      {
+        "source": "Don't Worry About the Vase",
+        "feed": "https://thezvi.substack.com/feed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      },
+      {
+        "source": "Marcus on AI",
+        "feed": "https://garymarcus.substack.com/feed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      }
+    ],
+    "observations": [
+      {
+        "source": "OpenAI",
+        "status": "ok",
+        "items_seen": 9
+      },
+      {
+        "source": "Anthropic",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "Google DeepMind",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Google AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "AWS Machine Learning",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "NVIDIA AI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Hugging Face",
+        "status": "ok",
+        "items_seen": 4
+      },
+      {
+        "source": "Mistral AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "arXiv AI",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "arXiv Machine Learning",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Google Research Blog",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Microsoft Research",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Meta Engineering",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "NVIDIA Blog",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "NVIDIA Developer Blog",
+        "status": "ok",
+        "items_seen": 8
+      },
+      {
+        "source": "TechCrunch AI",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "The Verge AI",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "Ars Technica AI",
+        "status": "ok",
+        "items_seen": 19
+      },
+      {
+        "source": "MIT Technology Review AI",
+        "status": "ok",
+        "items_seen": 5
+      },
+      {
+        "source": "IEEE Spectrum AI",
+        "status": "ok",
+        "items_seen": 4
+      },
+      {
+        "source": "Wired AI",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "VentureBeat AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "The Guardian AI",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "Financial Times AI",
+        "status": "ok",
+        "items_seen": 25
+      },
+      {
+        "source": "404 Media",
+        "status": "ok",
+        "items_seen": 13
+      },
+      {
+        "source": "Platformer",
+        "status": "ok",
+        "items_seen": 3
+      },
+      {
+        "source": "CNBC Technology",
+        "status": "ok",
+        "items_seen": 30
+      },
+      {
+        "source": "BBC Technology",
+        "status": "ok",
+        "items_seen": 15
+      },
+      {
+        "source": "NYT Technology",
+        "status": "ok",
+        "items_seen": 14
+      },
+      {
+        "source": "Simon Willison",
+        "status": "ok",
+        "items_seen": 15
+      },
+      {
+        "source": "Interconnects",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "SemiAnalysis",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Latent Space",
+        "status": "ok",
+        "items_seen": 9
+      },
+      {
+        "source": "Import AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "One Useful Thing",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Understanding AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "AI Snake Oil",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Don't Worry About the Vase",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Marcus on AI",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "ChinaTalk",
+        "status": "ok",
+        "items_seen": 3
+      },
+      {
+        "source": "Ahead of AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Lil'Log",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Andrej Karpathy",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "LessWrong",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "TLDR AI",
+        "status": "ok",
+        "items_seen": 3
+      },
+      {
+        "source": "arXiv Computational Linguistics",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "HF Daily Papers",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "MIT News AI",
+        "status": "ok",
+        "items_seen": 5
+      },
+      {
+        "source": "Synced Review",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "r/LocalLLaMA",
+        "status": "ok",
+        "items_seen": 25
+      },
+      {
+        "source": "Hacker News AI 100+ points",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "AWS Machine Learning Blog",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "Azure Blog",
+        "status": "ok",
+        "items_seen": 3
+      },
+      {
+        "source": "GitHub Blog AI and ML",
+        "status": "ok",
+        "items_seen": 3
+      },
+      {
+        "source": "PyTorch Blog",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Ollama Blog",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "THE DECODER DE",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "THE DECODER EN",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "heise online",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "t3n",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "Google News DE/CH AI",
+        "status": "ok",
+        "items_seen": 40
+      }
+    ]
+  },
+  "continuity_reviews": [
+    {
+      "kind": "prediction",
+      "id": "pred-us-duty-of-care-draft-2026-09",
+      "assessment": "Retain open. A September 11 Reuters report described negotiations, but this review did not establish a newly published draft or substantive framework by September 30. The voluntary White House accord is a different mechanism.",
+      "sources": [
+        {
+          "label": "Reuters report republished by Investing.com",
+          "url": "https://www.investing.com/news/stock-market-news/us-senate-negotiators-consider-requiring-ai-firms-to-mitigate-known-major-risks-4898357"
+        },
+        {
+          "label": "Associated Press accord report",
+          "url": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-embedded-evaluator-details-2026-09",
+      "assessment": "Retain confirmed from the prior review; this dossier found no basis to revise that status. The new voluntary accord should not be conflated with operational details for permanently embedded evaluators.",
+      "sources": [
+        {
+          "label": "Associated Press accord report",
+          "url": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-frontier-pacing-operationalization-2026-09",
+      "assessment": "Retain progress. The accord describes a concrete review structure, but its voluntary status and the unverified powers of external auditors do not establish a binding release threshold.",
+      "sources": [
+        {
+          "label": "Associated Press accord report",
+          "url": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-anthropic-evaluator-governance-2026-10",
+      "assessment": "Retain open. The industry accord supplies no verified Anthropic-specific evaluator-selection, escalation, publication or stop-authority details.",
+      "sources": [
+        {
+          "label": "Associated Press accord report",
+          "url": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e"
+        }
+      ]
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agent-registry-poc",
+      "assessment": "Retain experimental. OpenAI’s Dots announcement describes app permissions, custom rules and activity visibility, but does not establish the delegated-authority and customer-controlled telemetry requirements of the proposed internal registry.",
+      "sources": [
+        {
+          "label": "OpenAI Dots announcement",
+          "url": "https://openai.com/index/introducing-dots/"
+        }
+      ]
+    },
+    {
+      "kind": "thesis",
+      "id": "enterprise-agent-control-plane",
+      "assessment": "Retain high confidence without declaring the thesis met. Dots adds customer-facing rules and visibility, but this review did not verify the full runtime-policy and customer-controlled-telemetry combination at two major platforms.",
+      "sources": [
+        {
+          "label": "OpenAI Dots announcement",
+          "url": "https://openai.com/index/introducing-dots/"
+        }
+      ]
+    },
+    {
+      "kind": "thesis",
+      "id": "nvidia-rack-platform",
+      "assessment": "Retain high confidence unchanged. AMD’s World Labs agreement concerns a competing company’s model-research strategy, not direct evidence about NVIDIA’s third-party-accelerator rack architecture.",
+      "sources": [
+        {
+          "label": "AMD acquisition announcement",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute"
+        }
+      ]
+    },
+    {
+      "kind": "storyline",
+      "id": "ai-rd-automation",
+      "assessment": "Microsoft’s Quine account adds a reported model-to-wet-lab prioritization loop. Retain the verification bottleneck: the selected experiments do not establish general reproducibility or clinical utility.",
+      "sources": [
+        {
+          "label": "Microsoft Research Quine announcement",
+          "url": "https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/"
+        }
+      ]
+    },
+    {
+      "kind": "storyline",
+      "id": "agent-economics",
+      "assessment": "GPT-6.1 Sol warrants a new routing comparison, but OpenAI’s benchmark and price claims do not replace workload-specific successful-task cost measurements.",
+      "sources": [
+        {
+          "label": "OpenAI GPT-6.1 Sol announcement",
+          "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
+        }
+      ]
+    },
+    {
+      "kind": "storyline",
+      "id": "agent-security",
+      "assessment": "The California complaint adds a legal-accountability question to the existing runtime-boundary storyline. It does not change the previously reported sandbox measurements or prove the complaint’s allegations.",
+      "sources": [
+        {
+          "label": "Plaintiff’s complaint",
+          "url": "https://lasst.org/in-the-courts/hugging-face-complaint"
+        },
+        {
+          "label": "WIRED report",
+          "url": "https://www.wired.com/story/openai-sued-over-the-hugging-face-hack"
+        }
+      ]
+    }
+  ],
+  "retrieval": [
+    {
+      "url": "https://news.bensbites.com/",
+      "source": "Ben's Bites News",
+      "status": "ok",
+      "final_url": "https://www.bensbites.com/",
+      "truncated": false,
+      "elapsed_seconds": 0.342
+    },
+    {
+      "url": "https://bensbites.com/",
+      "source": "Ben's Bites",
+      "status": "ok",
+      "final_url": "https://www.bensbites.com/",
+      "truncated": false,
+      "elapsed_seconds": 0.388
+    },
+    {
+      "url": "https://aiweekly.co/",
+      "source": "AI Weekly",
+      "status": "ok",
+      "final_url": "https://aiweekly.co/",
+      "truncated": true,
+      "elapsed_seconds": 0.142
+    },
+    {
+      "url": "https://ai.meta.com/blog/",
+      "source": "Meta AI",
+      "status": "ok",
+      "final_url": "https://ai.meta.com/blog/",
+      "truncated": false,
+      "elapsed_seconds": 1.803
+    },
+    {
+      "url": "https://research.meta.ai/",
+      "source": "Meta AI Research",
+      "status": "ok",
+      "final_url": "https://research.meta.ai/",
+      "truncated": false,
+      "elapsed_seconds": 0.559
+    },
+    {
+      "url": "https://blogs.microsoft.com/ai/",
+      "source": "Microsoft AI",
+      "status": "ok",
+      "final_url": "https://news.microsoft.com/source/topics/ai/",
+      "truncated": false,
+      "elapsed_seconds": 0.727
+    },
+    {
+      "url": "https://api-docs.deepseek.com/news/",
+      "source": "DeepSeek",
+      "status": "ok",
+      "final_url": "https://api-docs.deepseek.com/news/",
+      "truncated": false,
+      "elapsed_seconds": 0.489
+    },
+    {
+      "url": "https://www.worldlabs.ai/blog",
+      "source": "World Labs",
+      "status": "ok",
+      "final_url": "https://www.worldlabs.ai/blog",
+      "truncated": false,
+      "elapsed_seconds": 0.439
+    },
+    {
+      "url": "https://www.reuters.com/technology/artificial-intelligence/",
+      "source": "Reuters AI",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.28
+    },
+    {
+      "url": "https://artificialanalysis.ai/",
+      "source": "Artificial Analysis",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.422
+    },
+    {
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence",
+      "source": "European Commission Digital Strategy",
+      "status": "ok",
+      "final_url": "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence",
+      "truncated": true,
+      "elapsed_seconds": 0.396
+    },
+    {
+      "url": "https://www.aisi.gov.uk/",
+      "source": "UK AI Security Institute",
+      "status": "ok",
+      "final_url": "https://www.aisi.gov.uk/",
+      "truncated": false,
+      "elapsed_seconds": 0.304
+    },
+    {
+      "url": "https://www.heise.de/ratgeber/Wie-Sie-KI-Agenten-mit-NET-orchestrieren-11464010.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
+      "source": "heise online",
+      "status": "ok",
+      "final_url": "https://www.heise.de/ratgeber/Wie-Sie-KI-Agenten-mit-NET-orchestrieren-11464010.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
+      "truncated": false,
+      "elapsed_seconds": 1.196
+    },
+    {
+      "url": "https://t3n.de/news/verspaetungen-und-zugausfaelle-mit-diesem-tool-vermeidest-du-stress-beim-bahnfahren-1765831",
+      "source": "t3n",
+      "status": "ok",
+      "final_url": "https://t3n.de/news/verspaetungen-und-zugausfaelle-mit-diesem-tool-vermeidest-du-stress-beim-bahnfahren-1765831/",
+      "truncated": true,
+      "elapsed_seconds": 0.611
+    },
+    {
+      "url": "https://www.ft.com/content/db266f36-c6d3-4368-8633-290e2c35e54d?syn-25a6b1a6=1",
+      "source": "Financial Times AI",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.057
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/cvzez7k0pn40o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Technology",
+      "status": "ok",
+      "final_url": "https://www.bbc.co.uk/news/articles/cvzez7k0pn40o?at_medium=RSS&at_campaign=rss",
+      "truncated": false,
+      "elapsed_seconds": 0.295
+    },
+    {
+      "url": "https://the-decoder.com/google-is-paying-almost-no-publishers-almost-nothing-for-content-used-in-ai-answers",
+      "source": "THE DECODER EN",
+      "status": "ok",
+      "final_url": "https://the-decoder.com/google-is-paying-almost-no-publishers-almost-nothing-for-content-used-in-ai-answers/",
+      "truncated": false,
+      "elapsed_seconds": 1.704
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/29/trump-ai-super-intelligence.html",
+      "source": "CNBC Technology",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.587
+    },
+    {
+      "url": "https://www.chinatalk.media/p/logan-wright-on-broken-china",
+      "source": "ChinaTalk",
+      "status": "ok",
+      "final_url": "https://www.chinatalk.media/p/logan-wright-on-broken-china",
+      "truncated": true,
+      "elapsed_seconds": 0.132
+    },
+    {
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/30/bill-gates-thinks-ai-could-kill-people-can-we-trust-judgment-after-epstein",
+      "source": "The Guardian AI",
+      "status": "ok",
+      "final_url": "https://www.theguardian.com/commentisfree/2026/sep/30/bill-gates-thinks-ai-could-kill-people-can-we-trust-judgment-after-epstein",
+      "truncated": false,
+      "elapsed_seconds": 0.227
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOTFJoUjRNa0F1Yzk1Vmc1aDJJOGdNTDdJaDIyM1E5aDNubnhaM0pxcGZLRXc2RGhxc1JSUVN2YlFobExKbEdZdWpZaUJ6SDljcUZ5NkNDVmZpSGU3U3RBdER2UnpaZF8tQjJXSEJkMzAxQXlJa28tWUpmR2w1OTlDWncyMTJSMTVHSm54NlBrLVZmWnhxeDRUVkQ1TzU3Y2xxYlk4QXVhbFg?oc=5",
+      "source": "Google News DE/CH AI",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.335
+    },
+    {
+      "url": "https://the-decoder.de/trump-laesst-tech-chefs-moralisch-bindenden-ki-kodex-unterschreiben-der-keine-rechtliche-grundlage-hat",
+      "source": "THE DECODER DE",
+      "status": "ok",
+      "final_url": "https://the-decoder.de/trump-laesst-tech-chefs-moralisch-bindenden-ki-kodex-unterschreiben-der-keine-rechtliche-grundlage-hat/",
+      "truncated": false,
+      "elapsed_seconds": 1.913
+    },
+    {
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wu0bdf/add_glm53flash_glm5next_support_by_timkhronos",
+      "source": "r/LocalLLaMA",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.149
+    },
+    {
+      "url": "https://www.nytimes.com/2026/09/30/technology/personaltech/how-to-listen-to-your-favorite-music-online-or-off-the-grid.html",
+      "source": "NYT Technology",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.122
+    },
+    {
+      "url": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e",
+      "source": "",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.135
+    },
+    {
+      "url": "https://ir.amd.com/financial-information/sec-filings/content/0000002488-26-000182/amd-20260926.htm",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://ir.amd.com/financial-information/sec-filings/content/0000002488-26-000182/amd-20260926.htm",
+      "truncated": false,
+      "elapsed_seconds": 0.153
+    },
+    {
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute",
+      "truncated": true,
+      "elapsed_seconds": 0.132
+    },
+    {
+      "url": "https://lasst.org/in-the-courts/hugging-face-complaint",
+      "source": "",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.337
+    },
+    {
+      "url": "https://ollama.com/blog/ollama-now-supports-jev-style-decision-models",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://ollama.com/blog/ollama-now-supports-jev-style-decision-models",
+      "truncated": false,
+      "elapsed_seconds": 0.274
+    },
+    {
+      "url": "https://openai.com/index/devday-2026-recap/",
+      "source": "",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.119
+    },
+    {
+      "url": "https://openai.com/index/introducing-dots/",
+      "source": "",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.118
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "source": "",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.083
+    },
+    {
+      "url": "https://openai.com/index/introducing-the-agents-api/",
+      "source": "",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.132
+    },
+    {
+      "url": "https://www.investing.com/news/stock-market-news/us-senate-negotiators-consider-requiring-ai-firms-to-mitigate-known-major-risks-4898357",
+      "source": "",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.112
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/",
+      "truncated": true,
+      "elapsed_seconds": 0.606
+    },
+    {
+      "url": "https://www.wired.com/story/openai-sued-over-the-hugging-face-hack",
+      "source": "",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.391
+    },
+    {
+      "url": "https://www.worldlabs.ai/blog/amd-announcement",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://www.worldlabs.ai/blog/amd-announcement",
+      "truncated": false,
+      "elapsed_seconds": 0.236
+    }
+  ],
+  "omitted_context": {
+    "active_storylines": 4,
+    "recent_or_contested_claims": 16,
+    "predictions_due_or_near_due": 0,
+    "builder_radar_due_or_recent": 2,
+    "active_theses": 0,
+    "trend_summary": 4,
+    "recent_concepts": 5
+  },
+  "model": "gpt-6-sol",
+  "red_team_report": {
+    "approved": true,
+    "issues": [],
+    "checks": [
+      "Re-reviewed the previous pricing-novelty issue. The corrected DE and EN text now distinguishes unchanged $2/$10 standard token prices from the cached-input reduction from $0.20 to $0.10 per million tokens.",
+      "Checked the revised pricing and routing claims against the previous independent source checks and the supplied prior-edition record; the correction introduces no material new claim without support.",
+      "Rechecked DE/EN equivalence, attribution of vendor evaluations, product availability, legal qualifications, visual labels and prediction criteria. Found no material new defect.",
+      "Reconciled the audit’s 57 successful and four failed feeds with supplied coverage, without conflating feed failures, local page-fetch failures and prior independent retrievals. Reviewed the due continuity entries without treating historical statuses as newly verified."
+    ],
+    "source_checks": [
+      {
+        "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "excerpt": "“Its standard API prices are $2 per million input tokens, $0.10 per million cached input tokens, and $10 per million output tokens.” The announcement also says cached input is “50% less than GPT-6 Sol’s cached input pricing.”",
+        "assessment": "Previous independent check supports the corrected GPT-6.1 Sol prices and cached-input reduction. The supplied previous-edition record establishes that GPT-6 Sol already listed $2/$10 standard input/output prices."
+      },
+      {
+        "url": "https://openai.com/index/devday-2026-recap/",
+        "excerpt": "“Available in limited preview today with a broad release planned in the coming days.” The Agents API is described as supporting computer use and as “Available through the API and in Codex and ChatGPT Work on Pro 500 and Enterprise.”",
+        "assessment": "Previous independent check supports the stated Decisions API preview and Agents API availability, not production reliability."
+      },
+      {
+        "url": "https://openai.com/index/introducing-dots/",
+        "excerpt": "“Dots are rolling out today in ChatGPT to Pro and Business Premium users in eligible markets. Enterprise users (including Edu and Healthcare) can try the beta when their workspace admin enables it.”",
+        "assessment": "Previous independent check supports the differentiated Dots access claims."
+      },
+      {
+        "url": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e",
+        "excerpt": "“The accord said the companies would implement ‘robust internal controls,’ partner with an ‘independent external auditor’ to assess whether the controls were working, and establish a committee within each company’s board of directors to evaluate reports from internal and external auditors.”",
+        "assessment": "Previous independent check supports the attributed review structure, not enforceable auditor release authority."
+      },
+      {
+        "url": "https://lasst.org/in-the-courts/hugging-face-complaint",
+        "excerpt": "The document identifies Legal Advocates for Safe Science and Technology, Inc. as plaintiff, OpenAI Group PBC and OpenAI Foundation as defendants, and “Date: September 29, 2026.” It alleges access in violation of the California Comprehensive Computer Data Access and Fraud Act.",
+        "assessment": "Previous independent check supports the complaint’s identity, date and treatment as an allegation."
+      },
+      {
+        "url": "https://www.wired.com/story/openai-sued-over-the-hugging-face-hack",
+        "excerpt": "“It alleges that OpenAI’s agents violated California’s Comprehensive Computer Data Access and Fraud Act (CDAFA)”; “OpenAI did not immediately respond to a request for comment.”",
+        "assessment": "Previous independent check supports the attributed legal allegation and qualified response account."
+      }
+    ]
+  },
+  "publish_decision": "publish",
+  "visual_plan": [
+    {
+      "id": "accountability-surfaces",
+      "target": "cover",
+      "kind": "comparison",
+      "title": {
+        "de": "Drei verschiedene Grenzen für Agenten",
+        "en": "Three different boundaries for agents"
+      },
+      "caption": {
+        "de": "Produktoberfläche, freiwillige Aufsicht und Rechtsstreit sind verschiedene Entwicklungen; keine davon belegt für sich sichere autonome Arbeit.",
+        "en": "Product surface, voluntary oversight and litigation are distinct developments; none alone establishes safe autonomous work."
+      },
+      "sources": [
+        {
+          "label": "OpenAI DevDay recap",
+          "url": "https://openai.com/index/devday-2026-recap/"
+        },
+        {
+          "label": "Associated Press report",
+          "url": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e"
+        },
+        {
+          "label": "Plaintiff’s complaint",
+          "url": "https://lasst.org/in-the-courts/hugging-face-complaint"
+        }
+      ]
+    },
+    {
+      "id": "accord-versus-gate",
+      "target": "story-2",
+      "kind": "comparison",
+      "title": {
+        "de": "Angekündigte Prüfung und offene Befugnisse",
+        "en": "Announced review and unresolved powers"
+      },
+      "caption": {
+        "de": "Die berichtete Struktur ist konkreter als ein allgemeines Versprechen; ein durchsetzbares Freigaberecht ist nicht verifiziert.",
+        "en": "The reported structure is more specific than a general pledge; an enforceable release right is unverified."
+      },
+      "sources": [
+        {
+          "label": "Associated Press report",
+          "url": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e"
+        }
+      ]
+    },
+    {
+      "id": "agent-product-surfaces",
+      "target": "story-4",
+      "kind": "comparison",
+      "title": {
+        "de": "Drei angekündigte Agenten-Oberflächen",
+        "en": "Three announced agent surfaces"
+      },
+      "caption": {
+        "de": "Die Funktionen adressieren unterschiedliche Aufgaben und haben unterschiedliche Zugangsbedingungen; die Grafik behauptet keine gemeinsame Zuverlässigkeit.",
+        "en": "The capabilities address different tasks and have different access conditions; the graphic implies no shared reliability."
+      },
+      "sources": [
+        {
+          "label": "OpenAI DevDay recap",
+          "url": "https://openai.com/index/devday-2026-recap/"
+        },
+        {
+          "label": "OpenAI Dots announcement",
+          "url": "https://openai.com/index/introducing-dots/"
+        }
+      ]
+    },
+    {
+      "id": "typed-decision-interface",
+      "target": "concept",
+      "kind": "flow",
+      "title": {
+        "de": "Vom Zustand zur typisierten Entscheidung",
+        "en": "From state to typed decision"
+      },
+      "caption": {
+        "de": "Ollamas beschriebene Schnittstelle formt die Ausgabe; ihre Genauigkeit muss separat gemessen werden.",
+        "en": "Ollama’s described interface shapes the output; its accuracy must be measured separately."
+      },
+      "sources": [
+        {
+          "label": "Ollama decision-model announcement",
+          "url": "https://ollama.com/blog/ollama-now-supports-jev-style-decision-models"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 617" role="img" aria-labelledby="title desc">
+<title id="title">Drei angekündigte Agenten-Oberflächen</title><desc id="desc">Die Funktionen adressieren unterschiedliche Aufgaben und haben unterschiedliche Zugangsbedingungen; die Grafik behauptet keine gemeinsame Zuverlässigkeit.</desc>
+<rect width="420" height="617" rx="24" fill="#eff3f7"/>
+<g font-family="sans-serif" fill="#233548">
+<text x="24" y="36" font-size="23" font-weight="700">Drei angekündigte Agenten-</text>
+<text x="24" y="63" font-size="23" font-weight="700">Oberflächen</text>
+<rect x="24" y="112" width="372" height="147" rx="18" fill="#dcecf5" stroke="#b3c1cd"/>
+<circle cx="47" cy="141" r="11" fill="#416a83"/>
+<text x="47" y="146" text-anchor="middle" font-size="14" fill="white">1</text>
+<text x="67" y="146" font-size="21" font-weight="700">Dots</text>
+<text x="42" y="176" font-size="19">Fortlaufende Arbeit; verfügbare</text>
+<text x="42" y="198" font-size="19">Tarife und administrativ</text>
+<text x="42" y="220" font-size="19">aktivierte Beta unterscheiden</text>
+<text x="42" y="242" font-size="19">sich.</text>
+<rect x="24" y="299" width="372" height="125" rx="18" fill="#e1eddf" stroke="#b3c1cd"/>
+<circle cx="47" cy="328" r="11" fill="#416a83"/>
+<text x="47" y="333" text-anchor="middle" font-size="14" fill="white">2</text>
+<text x="67" y="333" font-size="21" font-weight="700">Agents API</text>
+<text x="42" y="363" font-size="19">Computernutzung, Multi-Agent-</text>
+<text x="42" y="385" font-size="19">Funktionen, Tool-Suche und</text>
+<text x="42" y="407" font-size="19">Kontextkompaktierung.</text>
+<rect x="24" y="464" width="372" height="103" rx="18" fill="#e9e3f1" stroke="#b3c1cd"/>
+<circle cx="47" cy="493" r="11" fill="#416a83"/>
+<text x="47" y="498" text-anchor="middle" font-size="14" fill="white">3</text>
+<text x="67" y="498" font-size="21" font-weight="700">Decisions API</text>
+<text x="42" y="528" font-size="19">Luna-basiert und derzeit in</text>
+<text x="42" y="550" font-size="19">begrenzter Vorschau.</text>
+</g></svg>

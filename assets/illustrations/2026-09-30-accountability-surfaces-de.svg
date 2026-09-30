@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 595" role="img" aria-labelledby="title desc">
+<title id="title">Drei verschiedene Grenzen für Agenten</title><desc id="desc">Produktoberfläche, freiwillige Aufsicht und Rechtsstreit sind verschiedene Entwicklungen; keine davon belegt für sich sichere autonome Arbeit.</desc>
+<rect width="420" height="595" rx="24" fill="#eff3f7"/>
+<g font-family="sans-serif" fill="#233548">
+<text x="24" y="36" font-size="23" font-weight="700">Drei verschiedene Grenzen</text>
+<text x="24" y="63" font-size="23" font-weight="700">für Agenten</text>
+<rect x="24" y="112" width="372" height="103" rx="18" fill="#dcecf5" stroke="#b3c1cd"/>
+<circle cx="47" cy="141" r="11" fill="#416a83"/>
+<text x="47" y="146" text-anchor="middle" font-size="14" fill="white">1</text>
+<text x="67" y="146" font-size="21" font-weight="700">Ausführung</text>
+<text x="42" y="176" font-size="19">OpenAI kündigt Daueraufgaben und</text>
+<text x="42" y="198" font-size="19">Computernutzung an.</text>
+<rect x="24" y="255" width="372" height="125" rx="18" fill="#e1eddf" stroke="#b3c1cd"/>
+<circle cx="47" cy="284" r="11" fill="#416a83"/>
+<text x="47" y="289" text-anchor="middle" font-size="14" fill="white">2</text>
+<text x="67" y="289" font-size="21" font-weight="700">Prüfung</text>
+<text x="42" y="319" font-size="19">Berichtetes US-Abkommen nennt</text>
+<text x="42" y="341" font-size="19">externe Prüfer, aber keine</text>
+<text x="42" y="363" font-size="19">verifizierte Freigabemacht.</text>
+<rect x="24" y="420" width="372" height="125" rx="18" fill="#e9e3f1" stroke="#b3c1cd"/>
+<circle cx="47" cy="449" r="11" fill="#416a83"/>
+<text x="47" y="454" text-anchor="middle" font-size="14" fill="white">3</text>
+<text x="67" y="454" font-size="21" font-weight="700">Haftungsfrage</text>
+<text x="42" y="484" font-size="19">Eine Klage enthält Vorwürfe zum</text>
+<text x="42" y="506" font-size="19">Zugriff von Agenten; es liegt</text>
+<text x="42" y="528" font-size="19">kein Urteil vor.</text>
+</g></svg>

@@ -64,5 +64,43 @@
         }
       ]
     }
+  },
+  "2026-09-30": {
+    "kicker": {
+      "de": "Die Leitgeschichte",
+      "en": "The lead story"
+    },
+    "deck": {
+      "de": "AMD will ein Spatial-Model-Labor kaufen, OpenAI erweitert seine Agentenplattform, und ein freiwilliges Abkommen sowie eine Klage rücken die Kontrolle autonomer Handlungen in den Vordergrund.",
+      "en": "AMD proposes to buy a spatial-model lab, OpenAI broadens its agent platform, and a voluntary accord and a lawsuit put control of autonomous actions in focus."
+    },
+    "illustration": {
+      "src": {
+        "de": "assets/illustrations/2026-09-30-accountability-surfaces-de.svg",
+        "en": "assets/illustrations/2026-09-30-accountability-surfaces-en.svg"
+      },
+      "alt": {
+        "de": "Drei verschiedene Grenzen für Agenten",
+        "en": "Three different boundaries for agents"
+      },
+      "caption": {
+        "de": "Produktoberfläche, freiwillige Aufsicht und Rechtsstreit sind verschiedene Entwicklungen; keine davon belegt für sich sichere autonome Arbeit.",
+        "en": "Product surface, voluntary oversight and litigation are distinct developments; none alone establishes safe autonomous work."
+      },
+      "sources": [
+        {
+          "label": "OpenAI DevDay recap",
+          "href": "https://openai.com/index/devday-2026-recap/"
+        },
+        {
+          "label": "Associated Press report",
+          "href": "https://apnews.com/article/trump-ai-anthropic-musk-595796511f110fc006cca0d01329733e"
+        },
+        {
+          "label": "Plaintiff’s complaint",
+          "href": "https://lasst.org/in-the-courts/hugging-face-complaint"
+        }
+      ]
+    }
   }
 }
