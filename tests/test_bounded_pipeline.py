@@ -53,13 +53,18 @@ class PipelineTests(unittest.TestCase):
             return self.stream()
         client = generate_daily.Responses(self.path, "SENTINEL_SECRET", transport)
         self.assertEqual(client.call("research", "Return JSON", {}, seconds=2, tokens=100, search=True), {"ok": True})
-        self.assertEqual(requests[0]["max_tool_calls"], 6)
+        self.assertEqual(requests[0]["max_tool_calls"], 3)
         self.assertEqual(requests[0]["tools"], [{"type": "web_search", "search_context_size": "low"}])
         self.assertFalse(requests[0]["store"])
         self.assertNotIn("text", requests[0])
         client.call("draft", "Return JSON", {}, seconds=2, tokens=100)
         self.assertEqual(requests[1]["text"]["format"], {"type": "json_object"})
         self.assertNotIn("tools", requests[1])
+        client.call("review", "Return JSON", {}, seconds=2, tokens=100, search=True)
+        client.call("review_repaired", "Return JSON", {}, seconds=2, tokens=100, search=True)
+        self.assertEqual(requests[2]["max_tool_calls"], 3)
+        self.assertNotIn("tools", requests[3])
+        self.assertEqual(sum(request.get("max_tool_calls", 0) for request in requests), 6)
         self.assertNotIn("SENTINEL_SECRET", "".join(p.read_text() for p in self.path.rglob("*") if p.is_file()))
 
     def test_incomplete_or_interrupted_response_cannot_publish(self):
@@ -177,6 +182,8 @@ class PipelineTests(unittest.TestCase):
             def call(_, stage, *args, **kwargs):
                 if stage == "research": return {"publish": True, "stories": [], "continuity_reviews": []}
                 if stage == "draft": return brief()
+                self.assertTrue(kwargs["search"])
+                self.assertEqual(args[1]["draft"]["research_audit"]["source_coverage"], {})
                 return {"approved": True, "issues": [], "checks": ["Evidence and bilingual equivalence"]}
         generate_daily.generate("2026-09-30", self.path, Client())
         output = json.loads((self.path / "daily-brief.json").read_text())
@@ -187,6 +194,20 @@ class PipelineTests(unittest.TestCase):
         subprocess.run([sys.executable, str(self.path / "automation/render_daily.py"), str(self.path / "daily-brief.json"), "--date", "2026-09-30", "--approved"], check=True, capture_output=True)
         subprocess.run([sys.executable, str(self.path / "automation/validate_daily.py"), "2026-09-30"], check=True, capture_output=True)
         self.assertEqual(json.loads((self.path / "data/latest.json").read_text())["date"], "2026-09-30")
+
+    def test_published_continuity_keeps_reviewed_corrections(self):
+        self.prepare_inputs()
+        class Client:
+            evidence_urls = set()
+            def call(_, stage, *args, **kwargs):
+                if stage == "research": return {"publish": True, "continuity_reviews": [{"assessment": "Unverified old observation"}]}
+                if stage == "draft": return brief()
+                if stage == "review": return {"approved": False, "issues": ["Remove unverified continuity observation"], "checks": ["Continuity"]}
+                if stage == "repair": return {"changes": [{"op": "replace", "path": "/research_audit/continuity_reviews", "value": []}]}
+                return {"approved": True, "issues": [], "checks": ["Corrected continuity"]}
+        generate_daily.generate("2026-09-30", self.path, Client())
+        final = json.loads((self.path / "daily-brief.json").read_text())
+        self.assertEqual(final["research_audit"]["continuity_reviews"], [])
 
     def test_api_deadline_stops_a_stalled_stream(self):
         class Stalled(io.BytesIO):
