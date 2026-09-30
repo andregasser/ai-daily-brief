@@ -89,6 +89,8 @@ Every run uploads `daily-brief-diagnostics-<run-id>` with per-stage timings/logs
 
 After a successful publisher run on `main`, `deploy-published-brief.yml` explicitly requests a GitHub Pages build of the latest `main` revision. This is necessary because commits pushed with the workflow's `GITHUB_TOKEN` do not automatically trigger branch-based Pages builds. The separate deployment workflow can also be run manually without regenerating an edition.
 
+For manual runs and pipeline-fix pushes on `main`, a failed run from the last 30 minutes can supply completed research and draft checkpoints for the same edition date, provided the configuration and editorial prompts have not changed. Stored JSON must match completed API responses. The new run revalidates everything and performs a fresh independent review; it never reuses approval. Scheduled runs always prepare fresh evidence. Repairs return only changed JSON fields rather than repeating the entire bilingual edition.
+
 For offline checks, install `automation/requirements.txt` and run `python3 -m unittest discover -s tests -p 'test*.py'`. To inspect preparation without calling the model, run `python3 automation/run_step.py prepare --timeout 90 -- python3 automation/prepare_daily_context.py YYYY-MM-DD`. Model output must pass the separate review before `render_daily.py --approved` accepts it. Browser test setup is described below.
 
 ## Visual editorial system

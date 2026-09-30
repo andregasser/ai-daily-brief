@@ -27,7 +27,6 @@ ROOT = Path(__file__).resolve().parents[1]
 MODEL = "gpt-6-sol"
 TOTAL_SECONDS = 450
 MAX_SEARCH_CALLS = 6
-PRIMARY_ROLES = {"primary", "primary_evidence", "primary_filing", "primary_legal_filing", "primary_evaluation", "primary_research"}
 
 
 def write(path: Path, value):
@@ -179,6 +178,19 @@ def all_source_urls(value):
     return urls
 
 
+def response_evidence_urls(response):
+    urls = set()
+    for item in response.get("output", []):
+        if item.get("type") == "web_search_call":
+            action = item.get("action", {})
+            urls.update(source["url"] for source in action.get("sources", []) if source.get("url"))
+            if action.get("url"):
+                urls.add(action["url"])
+        for part in item.get("content", []):
+            urls.update(a["url"] for a in part.get("annotations", []) if a.get("type") == "url_citation")
+    return urls
+
+
 def validate_draft(brief, run_date, evidence_urls):
     schema = json.loads((ROOT / "config/daily_brief.schema.json").read_text())
     Draft202012Validator(schema, format_checker=FormatChecker()).validate(brief)
@@ -202,9 +214,11 @@ def validate_draft(brief, run_date, evidence_urls):
     for prediction in brief["predictions"]:
         if prediction["review_after"] <= run_date:
             raise ValueError("New predictions require future review dates")
-    for claim in brief["research_audit"]["claims"]:
-        if claim["evidence_state"] == "confirmed_primary" and not any(s["role"] in PRIMARY_ROLES for s in claim["support"]):
-            raise ValueError("Primary confirmation requires primary evidence")
+    for index, claim in enumerate(brief["research_audit"]["claims"]):
+        # Roles retain source-specific detail (primary_announcement, primary_filing,
+        # primary_evaluation, ...); independent review checks their factual basis.
+        if claim["evidence_state"] == "confirmed_primary" and not any(s["role"] == "primary" or s["role"].startswith("primary_") for s in claim["support"]):
+            raise ValueError(f"research_audit.claims[{index}] ({claim['id']}): confirmed_primary requires primary evidence; support.role must be primary or primary_<source type> for an original source, otherwise correct evidence_state")
     if datetime.fromisoformat(run_date).weekday() == 6 and not brief.get("weekly_review"):
         raise ValueError("Sunday requires weekly evidence synthesis")
 
@@ -288,7 +302,13 @@ def generate(run_date, output, client):
     evidence = json.loads((output / "evidence.json").read_text())
     if research["run_date"] != run_date or context["run_date"] != run_date:
         raise ValueError("Prepared inputs do not match the workflow date")
-    dossier = client.call("research", RESEARCH, {"research": research, "context": context, "evidence": evidence}, seconds=150, tokens=8500, search=True)
+    resumed = (output / "checkpoint-restored.json").exists()
+    if resumed:
+        dossier = json.loads((output / "research.json").read_text())
+        client.evidence_urls.update(response_evidence_urls(json.loads((output / "research.response.json").read_text())))
+        print("Reusing completed research and draft from a recent failed run; validating and reviewing afresh", flush=True)
+    else:
+        dossier = client.call("research", RESEARCH, {"research": research, "context": context, "evidence": evidence}, seconds=150, tokens=8500, search=True)
     if dossier.get("publish") is not True:
         raise ValueError("Research did not clear the evidence threshold; previous edition retained")
     known_urls = {url for item in evidence if item["status"] == "ok" for url in [item["url"], item.get("final_url", item["url"]) ]} | client.evidence_urls
@@ -299,7 +319,7 @@ def generate(run_date, output, client):
     instructions = (ROOT / ".github/codex/prompts/publish-daily-brief.md").read_text()
     draft_inputs = {"date": run_date, "updated_at": datetime.now(timezone.utc).isoformat(), "dossier": dossier, "context": context, "schema": schema,
                     "weekly_evidence": research.get("weekly_evidence", [])}
-    brief = client.call("draft", instructions, draft_inputs, seconds=180, tokens=16000)
+    brief = json.loads((output / "draft.json").read_text()) if resumed else client.call("draft", instructions, draft_inputs, seconds=180, tokens=16000)
     # One bounded repair across schema and editorial review, never an open loop.
     repaired = False
     try:

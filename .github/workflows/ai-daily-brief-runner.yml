@@ -62,6 +62,7 @@ jobs:
       has_changes: ${{ steps.patch.outputs.has_changes }}
     permissions:
       contents: read
+      actions: read
     steps:
       - uses: actions/checkout@v5
         with:
@@ -82,8 +83,40 @@ jobs:
             echo "exists=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Find recent failed checkpoint
+        id: checkpoint
+        if: steps.existing.outputs.exists != 'true' && github.ref == 'refs/heads/main' && github.event_name != 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          candidate=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/ai-daily-brief-runner.yml/runs?status=failure&branch=main&per_page=1" --jq '.workflow_runs[0] | [.id, .head_sha, .created_at] | @tsv')
+          read -r run_id revision created_at <<< "$candidate"
+          if [[ "$run_id" =~ ^[0-9]+$ && "$revision" =~ ^[0-9a-f]{40}$ ]]; then
+            age=$(( $(date +%s) - $(date -d "$created_at" +%s) ))
+            if [ "$age" -ge 0 ] && [ "$age" -le 1800 ] && git diff --quiet "$revision" HEAD -- config .github/codex/prompts; then
+              echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+      - name: Download recent checkpoint
+        if: steps.checkpoint.outputs.run_id != ''
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: daily-brief-diagnostics-${{ steps.checkpoint.outputs.run_id }}
+          path: ${{ runner.temp }}/brief-checkpoint
+          github-token: ${{ github.token }}
+          run-id: ${{ steps.checkpoint.outputs.run_id }}
+
+      - name: Validate and restore completed phases
+        id: restore
+        if: steps.checkpoint.outputs.run_id != ''
+        env:
+          CHECKPOINT_DIR: ${{ runner.temp }}/brief-checkpoint
+        run: python3 automation/restore_checkpoint.py "${{ needs.prepare.outputs.run_date }}" "$CHECKPOINT_DIR"
+
       - name: Prepare feeds, evidence and compact context
-        if: steps.existing.outputs.exists != 'true'
+        if: steps.existing.outputs.exists != 'true' && steps.restore.outputs.restored != 'true'
         run: python3 automation/run_step.py prepare --timeout 90 -- python3 automation/prepare_daily_context.py "${{ needs.prepare.outputs.run_date }}"
 
       - name: Research, write and independently review

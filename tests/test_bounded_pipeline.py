@@ -15,7 +15,7 @@ from urllib.error import HTTPError
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from automation import fetch_evidence, generate_daily, prepare_daily_context, render_daily, render_visuals, run_step, update_intelligence
+from automation import fetch_evidence, generate_daily, prepare_daily_context, render_daily, render_visuals, restore_checkpoint, run_step, update_intelligence
 from pipeline_fixture import brief, URL
 
 
@@ -112,8 +112,33 @@ class PipelineTests(unittest.TestCase):
         claim["support"] = [{"role": "primary_evaluation", "name": "Original evaluation", "url": URL}]
         generate_daily.validate_draft(doc, doc["date"], {URL})
         claim["support"][0]["role"] = "independent_reporting"
-        with self.assertRaisesRegex(ValueError, "requires primary evidence"):
+        with self.assertRaisesRegex(ValueError, r"claims\[0\].*requires primary evidence"):
             generate_daily.validate_draft(doc, doc["date"], {URL})
+
+    def test_checkpoint_requires_matching_completed_same_day_data_and_new_review(self):
+        source = self.path / "source"
+        source.mkdir()
+        self.prepare_inputs()
+        for name in ("research-input.json", "editorial-context.json", "evidence.json"):
+            shutil.copyfile(self.path / name, source / name)
+        for phase, value in (("research", {"publish": True}), ("draft", brief())):
+            (source / (phase + ".json")).write_text(json.dumps(value))
+            response = {"status": "completed", "output": [{"type": "message", "content": [{"type": "output_text", "text": json.dumps(value)}]}]}
+            (source / (phase + ".response.json")).write_text(json.dumps(response))
+        (source / "review.json").write_text('{"approved": true}')
+        self.assertFalse(restore_checkpoint.restore(source, self.path / "wrong", "2026-10-01"))
+        self.assertTrue(restore_checkpoint.restore(source, self.path, "2026-09-30"))
+        self.assertFalse((self.path / "review.json").exists())
+        calls = []
+        class Client:
+            evidence_urls = set()
+            def call(_, stage, *args, **kwargs):
+                calls.append(stage)
+                return {"approved": True, "issues": [], "checks": ["Fresh review"]}
+        generate_daily.generate("2026-09-30", self.path, Client())
+        self.assertEqual(calls, ["review"])
+        (source / "draft.json").write_text('{"date":"2026-09-30"}')
+        self.assertFalse(restore_checkpoint.restore(source, self.path / "mismatch", "2026-09-30"))
 
     def test_small_repairs_preserve_original_and_still_require_validation(self):
         doc = brief()
