@@ -245,6 +245,9 @@ class PipelineTests(unittest.TestCase):
                 if stage == "draft": return brief()
                 self.assertTrue(kwargs["search"])
                 self.assertEqual(args[1]["draft"]["research_audit"]["source_coverage"], {})
+                audit = args[1]['draft']['research_audit']
+                self.assertEqual(audit['selection']['selected_stories'], sum(len(s['stories']) for s in args[1]['draft']['sections']))
+                self.assertEqual(len(audit['visual_provenance']), 3)
                 return {"approved": True, "issues": [], "checks": ["Evidence and bilingual equivalence"]}
         generate_daily.generate("2026-09-30", self.path, Client())
         output = json.loads((self.path / "daily-brief.json").read_text())
