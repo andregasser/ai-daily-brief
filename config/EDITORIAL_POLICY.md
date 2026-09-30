@@ -2,6 +2,39 @@
 
 This file defines the canonical process for every daily edition. `config/sources.yaml` defines the configurable source catalog and mandatory coverage floor. `config/source_roles.yaml`, `config/research_watches.yaml`, `config/intelligence.yaml` and `config/evals.yaml` define the advanced intelligence system.
 
+## Automated execution contract (2026-09-30)
+
+The quality requirements below remain authoritative. Their execution is split
+across fixed stages, not delegated wholesale to a coding agent. This section
+supersedes older procedural wording that asks the model to inspect every file,
+run broad searches without a limit, update the repository or run tests itself.
+
+- Python checks all configured feeds in parallel and prefetches at most 24 public
+  evidence/mandatory landing pages. Failed and truncated sources are recorded.
+  The discovery window starts at the previous edition, with a two-day fallback.
+- The research API stage reviews up to 50 diverse candidates, the compact
+  continuity packet and evidence excerpts. It has at most six web-tool calls for
+  open-web discovery, primary verification and counterevidence. It selects 4–7
+  supported stories from at most 12 events. Coverage gaps must be disclosed;
+  incomplete feed or excerpt coverage must never be reported as a complete sweep.
+- The writing API stage produces bilingual JSON and structured diagram specs.
+  It cannot browse, edit files, execute code or run tests. The independent review
+  stage checks claims, translation, caveats, visuals and continuity against the
+  evidence. At most one repair is permitted, followed by another review.
+- GPT-6 Sol with medium reasoning is retained. The editorial calls share a
+  450-second wall-clock budget and individual output/search limits. The target
+  for the complete ordinary daily run is 5–10 minutes, not a guaranteed SLA.
+- Python renders the approved edition, original bilingual diagrams, metadata,
+  claims and predictions. Continuity reviews append observations while retaining
+  historical criteria/status; they do not automatically recalibrate old scores.
+  Source observations are measured, not filled with invented contribution counts.
+- Rendering, validation and browser tests are fixed workflow commands. Production
+  publication requires every stage to succeed. Failure retains the last valid
+  edition; timing, partial outputs and API usage are saved as workflow artifacts.
+- Sunday synthesis uses the available week's audit evidence and explicitly
+  discloses missing days. It does not launch a second unbounded research run.
+
+
 ## 1. Coverage window and continuity
 Cover meaningful developments since the previous published brief. If the previous timestamp cannot be established, use the fallback lookback configured in `sources.yaml`. Older developments may be included only when there is a meaningful new development today.
 

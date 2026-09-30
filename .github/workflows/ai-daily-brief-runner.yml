@@ -1,6 +1,13 @@
 name: Publish AI Daily Brief
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'automation/**'
+      - 'config/daily_brief.schema.json'
+      - '.github/codex/prompts/publish-daily-brief.md'
+      - '.github/workflows/ai-daily-brief-runner.yml'
   schedule:
     # GitHub cron is UTC. Select the matching run below so publication stays
     # at 07:00 Europe/Zurich across CET and CEST changes.
@@ -28,7 +35,7 @@ jobs:
           run_date=$(TZ=Europe/Zurich date +%F)
           echo "run_date=$run_date" >> "$GITHUB_OUTPUT"
 
-          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$EVENT_NAME" = "push" ]; then
             echo "should_run=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
@@ -50,7 +57,7 @@ jobs:
     needs: prepare
     if: needs.prepare.outputs.should_run == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 12
     outputs:
       has_changes: ${{ steps.patch.outputs.has_changes }}
     permissions:
@@ -61,38 +68,49 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Prepare Codex configuration
+      - name: Install validation dependency
+        run: python3 -m pip install -r automation/requirements.txt
+
+      - name: Check for an existing valid edition
+        id: existing
+        env:
+          RUN_DATE: ${{ needs.prepare.outputs.run_date }}
         run: |
-          install -d "${{ runner.temp }}/codex-home"
-          install -m 0644 .codex/config.toml "${{ runner.temp }}/codex-home/config.toml"
+          if [ -f "briefings/$RUN_DATE-de.html" ] && python3 automation/validate_daily.py "$RUN_DATE"; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
 
-      - name: Prepare bounded research inputs
-        run: python3 automation/prepare_daily_context.py "${{ needs.prepare.outputs.run_date }}"
+      - name: Prepare feeds, evidence and compact context
+        if: steps.existing.outputs.exists != 'true'
+        run: python3 automation/run_step.py prepare --timeout 90 -- python3 automation/prepare_daily_context.py "${{ needs.prepare.outputs.run_date }}"
 
-      - name: Generate today's briefing with Codex
-        uses: openai/codex-action@v1
-        with:
-          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
-          codex-home: ${{ runner.temp }}/codex-home
-          prompt-file: .github/codex/prompts/publish-daily-brief.md
-          permission-profile: 'workspace-net'
-          codex-args: '["--config", "web_search=\"live\"", "--ephemeral"]'
-          model: gpt-6-sol
-          effort: medium
-          safety-strategy: drop-sudo
-          allow-bots: true
-          output-file: codex-result.md
+      - name: Research, write and independently review
+        if: steps.existing.outputs.exists != 'true'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python3 automation/run_step.py generate --timeout 465 -- python3 -u automation/generate_daily.py "${{ needs.prepare.outputs.run_date }}"
+
+      - name: Render reviewed content and update intelligence
+        if: steps.existing.outputs.exists != 'true'
+        run: python3 automation/run_step.py render --timeout 30 -- python3 automation/render_daily.py .ai-daily/daily-brief.json --date "${{ needs.prepare.outputs.run_date }}" --approved
+
+      - name: Validate publication
+        if: steps.existing.outputs.exists != 'true'
+        run: python3 automation/run_step.py validate --timeout 30 -- python3 automation/validate_daily.py "${{ needs.prepare.outputs.run_date }}"
 
       - name: Package generated changes
+        if: steps.existing.outputs.exists != 'true'
         id: patch
         run: |
-          git add -N .
-          git diff --binary HEAD -- . ':!codex-result.md' > daily-brief.patch
+          git diff --check
+          git add -N briefings weekly data assets/illustrations
+          git diff --binary HEAD -- briefings weekly data assets/illustrations > daily-brief.patch
           if [ -s daily-brief.patch ]; then
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
           else
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
-            echo "No briefing changes were generated"
           fi
 
       - name: Upload generated patch
@@ -104,8 +122,23 @@ jobs:
           if-no-files-found: error
           retention-days: 7
 
+      - name: Summarize stage timings
+        if: always()
+        run: python3 automation/run_step.py summary
+
+      - name: Preserve diagnostics and intermediate results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-brief-diagnostics-${{ github.run_id }}
+          path: .ai-daily/
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 7
+
   publish:
     needs: [prepare, generate]
+    timeout-minutes: 6
     if: needs.generate.outputs.has_changes == 'true'
     runs-on: ubuntu-latest
     permissions:
@@ -119,6 +152,9 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: daily-brief-${{ needs.prepare.outputs.run_date }}
+
+      - name: Install validation dependency
+        run: python3 -m pip install -r automation/requirements.txt
 
       - name: Apply and validate briefing
         env:
@@ -140,6 +176,7 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: '24'
+          cache: npm
 
       - name: Install browser test dependencies
         run: |
@@ -159,6 +196,7 @@ jobs:
           npm run test:browser
 
       - name: Commit and publish
+        if: github.ref == 'refs/heads/main'
         env:
           RUN_DATE: ${{ needs.prepare.outputs.run_date }}
         run: |

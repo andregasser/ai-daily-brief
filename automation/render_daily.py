@@ -12,6 +12,12 @@ from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 
+try:
+    from . import render_visuals, update_intelligence
+except ImportError:
+    import render_visuals
+    import update_intelligence
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -98,6 +104,7 @@ def story_html(story: dict[str, Any], lang: str) -> str:
         value = optional_loc(story.get(field), lang)
         if value:
             pieces.append(f'    <p class="{css_name}"><strong>{LABELS[lang]["hype" if field == "signal_hype" else field]}:</strong> {esc(value)}</p>')
+    pieces.extend(render_visuals.figure(v, lang) for v in story.get("_visuals", []))
     pieces.append("    " + source_links(story.get("sources"), lang))
     pieces.append("  </article>")
     return "\n".join(piece for piece in pieces if piece.strip())
@@ -151,6 +158,7 @@ def concept_html(concept: dict[str, Any], lang: str) -> str:
     practical = optional_loc(concept.get("practical"), lang)
     if practical:
         pieces.append(f'  <p><strong>{LABELS[lang]["practical"]}:</strong> {esc(practical)}</p>')
+    pieces.extend(render_visuals.figure(v, lang) for v in concept.get("_visuals", []))
     pieces.append("  " + source_links(concept.get("sources"), lang))
     pieces.append("</section>")
     return "\n".join(piece for piece in pieces if piece.strip())
@@ -264,9 +272,10 @@ def update_metadata(brief: dict[str, Any]) -> None:
     concepts_doc = load(concepts_path)
     records = concepts_doc.setdefault("concepts", [])
     concept_id = concept.get("id") or slug(concept["title"]["en"])
+    previous = next((item for item in records if item.get("id") == concept_id), {})
     records[:] = [item for item in records if item.get("id") != concept_id]
     records.append({
-        "id": concept_id, "first_seen": run_date, "last_seen": run_date,
+        "id": concept_id, "first_seen": previous.get("first_seen", run_date), "last_seen": run_date,
         "title": concept["title"], "summary": concept.get("summary") or concept.get("intuition"),
         "tags": concept.get("tags", []), "storylines": concept.get("storylines", []),
         "sources": [source["url"] for source in concept.get("sources", []) if isinstance(source, dict) and source.get("url")],
@@ -287,10 +296,28 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("input", type=Path)
     parser.add_argument("--date", dest="expected_date")
+    parser.add_argument("--approved", action="store_true", help="Require independent review and the complete current schema")
     args = parser.parse_args()
     try:
         brief = load(args.input)
         validate_brief(brief, args.expected_date)
+        if args.approved:
+            try:
+                from .generate_daily import validate_draft
+            except ImportError:
+                from generate_daily import validate_draft
+            provenance = load(args.input.parent / "provenance.json")
+            validate_draft(brief, args.expected_date, set(provenance["retrieved_urls"]))
+            report = brief["research_audit"].get("red_team_report", {})
+            if report.get("approved") is not True or report.get("issues") != []:
+                raise ValueError("Independent review did not approve publication")
+        render_visuals.materialize(brief, ROOT)
+        stories = [story for section in brief["sections"] for story in section["stories"]]
+        for visual in brief.get("visuals", []):
+            if visual["target"] == "concept":
+                brief["concept"].setdefault("_visuals", []).append(visual)
+            elif visual["target"].startswith("story-"):
+                stories[int(visual["target"].split("-")[1]) - 1].setdefault("_visuals", []).append(visual)
         for lang in ("de", "en"):
             output = ROOT / f"briefings/{brief['date']}-{lang}.html"
             output.parent.mkdir(parents=True, exist_ok=True)
@@ -301,6 +328,8 @@ def main() -> int:
                 weekly_output.parent.mkdir(parents=True, exist_ok=True)
                 weekly_output.write_text(render_weekly(weekly, lang), encoding="utf-8")
         update_metadata(brief)
+        if args.approved:
+            update_intelligence.update(brief, ROOT)
         print(f"Rendered bilingual AI Daily Brief for {brief['date']}")
         return 0
     except (ValueError, KeyError, TypeError) as exc:
