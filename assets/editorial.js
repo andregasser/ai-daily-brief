@@ -56,10 +56,15 @@ function normalizeEditorialMarkup(article) {
     }
   });
   normalizeConceptMarkup(article, retag);
+  // Reserve the anchors from the previous layout before adding section headings.
+  article.querySelectorAll('h2.chapter, h3.chapter').forEach((heading, index) => {
+    if (!heading.id) heading.id = `chapter-${index + 1}`;
+  });
   normalizeOutlookMarkup(article);
   normalizeEvidenceMarkup(article);
   normalizePriorityMarkup(article);
   normalizeEmergingSignalMarkup(article, retag);
+  normalizeHeadingHierarchy(article, retag);
   decorateEditorialMarkup(article);
   article.querySelectorAll('.chapter').forEach(heading => {
     if (heading.querySelector(':scope > .chapter-title')) return;
@@ -73,21 +78,32 @@ function normalizeEmergingSignalMarkup(article, retag) {
   const de = document.documentElement.lang === 'de';
   const labels = de ? {early_signal:'Frühes Signal', low:'Einschätzung: niedrig', medium:'Einschätzung: mittel', medium_high:'Einschätzung: mittel bis hoch', high:'Einschätzung: hoch'}
     : {early_signal:'Early signal', low:'Confidence: low', medium:'Confidence: medium', medium_high:'Confidence: medium to high', high:'Confidence: high'};
-  article.querySelectorAll('.signal-box').forEach(box => {
-    const label = box.querySelector(':scope > .section-kicker, :scope > h2, :scope > strong, :scope > .emerging-section-title');
-    if (!label || !/emerging signal/i.test(label.textContent)) return;
+  article.querySelectorAll('.signal-box, .story.emerging-story').forEach(box => {
+    const label = box.querySelector(':scope > .section-kicker, :scope > h2, :scope > h3, :scope > strong, :scope > .emerging-section-title');
+    if (!box.classList.contains('emerging-feature') && (!label || !/emerging signal/i.test(label.textContent))) return;
     if (!box.classList.contains('emerging-feature')) {
       box.classList.add('emerging-feature');
+      let heading;
       if (label.classList.contains('section-kicker')) {
         const topic = box.querySelector(':scope > h2');
-        const heading = retag(label, 'h2');
+        heading = retag(label, 'h2');
         heading.classList.remove('section-kicker');
-        heading.classList.add('emerging-section-title');
-        const icon = editorialNode('span', 'editorial-icon', '💡');
-        icon.setAttribute('aria-hidden', 'true');
-        heading.prepend(icon);
         if (topic) retag(topic, 'h3').classList.add('emerging-topic-title');
+      } else {
+        const prefix = label.textContent.match(/^.*?Emerging Signal\s*[:·—–-]\s*/i);
+        if (prefix) {
+          const topic = retag(label, 'h3');
+          const remaining = extractHeadingTail(topic, prefix[0].length);
+          topic.replaceChildren(remaining);
+          topic.classList.add('emerging-topic-title');
+          heading = editorialNode('h2', '', 'Emerging Signal');
+        } else {
+          heading = retag(label, 'h2');
+        }
       }
+      heading.classList.add('chapter', 'emerging-section-title');
+      heading.id ||= 'section-emerging';
+      box.before(heading);
     }
     box.querySelectorAll('strong:not(.signal-confidence)').forEach(confidence => {
       const match = confidence.textContent.trim().match(/^(?:(Analyse|Analysis),\s*)?Confidence:\s*([a-z_-]+)\.?$/i);
@@ -100,6 +116,124 @@ function normalizeEmergingSignalMarkup(article, retag) {
       icon.setAttribute('aria-hidden', 'true');
       confidence.replaceChildren(icon, document.createTextNode((match[1] ? `${match[1]} · ` : '') + text));
     });
+  });
+}
+
+// Split at a text offset without losing nested emphasis or links.
+function extractHeadingTail(heading, offset) {
+  const walker = document.createTreeWalker(heading, NodeFilter.SHOW_TEXT);
+  let node;
+  while ((node = walker.nextNode())) {
+    if (offset <= node.textContent.length) {
+      const range = document.createRange();
+      range.selectNodeContents(heading);
+      range.setStart(node, offset);
+      return range.extractContents();
+    }
+    offset -= node.textContent.length;
+  }
+  return document.createDocumentFragment();
+}
+
+function normalizeHeadingHierarchy(article, retag) {
+  const de = document.documentElement.lang === 'de';
+  const sections = [
+    [/^in 60 (?:sekunden|seconds)$/i, de ? 'In 60 Sekunden' : 'In 60 Seconds', '⚡', 'overview'],
+    [/^business\s*(?:&|und|and)\s*(?:strategie|strategy)$/i, de ? 'Business & Strategie' : 'Business & Strategy', '💼', 'business'],
+    [/^(?:modelle|models),?\s*agents\s*(?:&|und|and)\s*engineering$/i, de ? 'Modelle, Agents & Engineering' : 'Models, Agents & Engineering', '🛠️', 'engineering'],
+    [/^emerging signal$/i, 'Emerging Signal', '💡', 'emerging'],
+    [/^(?:konzept des tages|concept of the day)$/i, de ? 'Konzept des Tages' : 'Concept of the Day', '🧠', 'concept'],
+    [/^(?:was als nächstes wichtig wird|what (?:comes|matters) next|what to watch next)$/i, de ? 'Was als Nächstes wichtig wird' : 'What comes next', '🔭', 'outlook'],
+    [/^watch today$/i, de ? 'Heute im Blick' : 'Watch today', '🔭', 'watch-today'],
+    [/^builder radar$/i, 'Builder Radar', '🛠️', 'builder'],
+    [/^research digest$/i, 'Research Digest', '🔬', 'research'],
+    [/^open[ -]source radar$/i, 'Open Source Radar', '🛠️', 'open-source'],
+    [/^signal vs\.? hype$/i, 'Signal vs. Hype', '⚖️', 'assessment'],
+    [/^(?:originalanalyse|original analysis)$/i, de ? 'Originalanalyse' : 'Original analysis', '💡', 'analysis']
+  ];
+  const cleanLabel = node => node.textContent.trim().replace(/^[\s\p{Extended_Pictographic}\p{Emoji_Presentation}\uFE0F\u200D]+/u, '').trim();
+  const usedIds = new Set([...article.querySelectorAll('[id]')].map(node => node.id));
+  const assignSectionId = (heading, key) => {
+    if (heading.id) return;
+    let id = `section-${key}`, suffix = 2;
+    while (usedIds.has(id)) id = `section-${key}-${suffix++}`;
+    heading.id = id;
+    usedIds.add(id);
+  };
+  const previousHeading = node => {
+    let previous = node.previousElementSibling;
+    if (previous?.classList.contains('section-intro')) previous = previous.previousElementSibling;
+    return previous?.matches('.chapter') ? previous : null;
+  };
+  article.querySelectorAll('.executive, .next, .watch').forEach(host => {
+    let label = host.querySelector(':scope > .section-kicker, :scope > h2');
+    if (!label) return;
+    const previous = previousHeading(host);
+    if (previous && /next|nächstes|watch/i.test(cleanLabel(previous))) {
+      if (label.classList.contains('section-kicker')) label.remove();
+      else retag(label, 'p').classList.add('section-deck');
+    } else {
+      if (label.tagName !== 'H2') label = retag(label, 'h2');
+      label.classList.remove('section-kicker');
+      label.classList.add('chapter');
+      // Older summaries contain a second, explanatory heading.
+      host.querySelectorAll(':scope > h2:not(.chapter)').forEach(h => retag(h, 'p').classList.add('section-deck'));
+    }
+  });
+  article.querySelectorAll('.signal-box, .digest:not(.story), .oss-radar:not(.story)').forEach(box => {
+    const label = box.querySelector(':scope > .section-kicker');
+    if (label) {
+      const previous = previousHeading(box);
+      if (previous && cleanLabel(previous).toLowerCase() === cleanLabel(label).toLowerCase()) label.remove();
+      else {
+        const heading = retag(label, 'h2');
+        heading.classList.remove('section-kicker');
+        heading.classList.add('chapter');
+        box.before(heading);
+      }
+    }
+    box.querySelectorAll(':scope > h2').forEach(h => retag(h, 'h3').classList.add('brief-topic-title'));
+    box.querySelectorAll(':scope > h3').forEach(h => h.classList.add('brief-topic-title'));
+  });
+  article.querySelectorAll('.chapter').forEach(original => {
+    const heading = original.tagName === 'H2' ? original : retag(original, 'h2');
+    heading.classList.add('brief-section-title');
+    const definition = sections.find(([pattern]) => pattern.test(cleanLabel(heading)));
+    if (definition) {
+      const [, text, symbol, key] = definition;
+      const icon = editorialNode('span', 'editorial-icon', symbol);
+      icon.setAttribute('aria-hidden', 'true');
+      heading.replaceChildren(icon, document.createTextNode(text));
+      assignSectionId(heading, key);
+    }
+    const key = cleanLabel(heading).toLowerCase().normalize('NFKD').replace(/\p{M}/gu, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'heading';
+    assignSectionId(heading, key);
+  });
+  article.querySelectorAll('.story > h3, .concept-topic-title, .emerging-topic-title').forEach(h => h.classList.add('brief-topic-title'));
+  const conceptLabels = /^(?:intuition|intuitiv|technische tiefe|technical depth|konkretes beispiel|concrete example|practical relevance(?: for software engineers)?|praktische relevanz(?: für software engineers)?)\s*:?$/i;
+  article.querySelectorAll('.concept-feature').forEach(concept => {
+    concept.querySelectorAll(':scope > p:not(.sources)').forEach(p => {
+      const label = p.firstElementChild;
+      if (!label?.matches('strong') || [...p.childNodes].slice(0, [...p.childNodes].indexOf(label)).some(node => node.textContent.trim()) || !conceptLabels.test(label.textContent.trim())) return;
+      const heading = retag(label, 'h4');
+      heading.textContent = heading.textContent.trim().replace(/:\s*$/, '');
+      p.before(heading);
+    });
+    concept.querySelectorAll(':scope > h4').forEach(h => h.classList.add('brief-subtitle'));
+  });
+  article.querySelectorAll('.signal-title, .outlook-title, .digest-item > h3, .radar-item > h3').forEach(h => h.classList.add('brief-card-title'));
+  article.querySelectorAll('.editorial-visual h3, .concept-visual h3').forEach(h => retag(h, 'h4').classList.add('brief-card-title'));
+  article.querySelectorAll('.changed > strong, .why > strong, .engineering > strong, .builder-action > strong, .thesis > strong, .signal-hype > strong').forEach(h => h.classList.add('brief-label-title'));
+  // A long, two-part title can use a deck while retaining its entire wording.
+  article.querySelectorAll('.brief-topic-title:not([data-original-title])').forEach(h => {
+    const text = h.textContent;
+    if (text.length <= 85) return;
+    const split = [...text.matchAll(/\s+[—–]\s+/g)].find(m => m.index >= 20 && m.index <= 70 && text.length - m.index >= 20);
+    if (!split) return;
+    h.dataset.originalTitle = text;
+    const deck = editorialNode('p', 'title-deck');
+    deck.append(extractHeadingTail(h, split.index));
+    h.after(deck);
   });
 }
 
@@ -123,7 +257,8 @@ function normalizePriorityMarkup(article) {
     }
     // Keep the evidence buttons and their explanation in the same container.
     if (meta.textContent.trim()) {
-      title.after(meta);
+      const deck = title.nextElementSibling?.matches('.title-deck') ? title.nextElementSibling : title;
+      deck.after(meta);
       story.classList.add('with-source-meta');
     } else {
       meta.remove();
@@ -238,7 +373,7 @@ function normalizeConceptMarkup(article, retag) {
 function normalizeOutlookMarkup(article) {
   const hosts = new Set(article.querySelectorAll('.next, .watch, .watch-grid'));
   article.querySelectorAll('.chapter, .next > h2, .next > .section-kicker, .watch > .section-kicker').forEach(heading => {
-    if (!/was als nächstes wichtig wird|what (?:comes|matters) next/i.test(heading.textContent)) return;
+    if (!/was als nächstes wichtig wird|what (?:comes|matters) next|what to watch next/i.test(heading.textContent)) return;
     heading.classList.add('outlook-heading');
     let host = heading.closest('.brief-chapter, .next, .watch') || heading.nextElementSibling;
     if (host?.classList.contains('section-intro')) host = host.nextElementSibling;
