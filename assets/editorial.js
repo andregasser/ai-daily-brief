@@ -57,12 +57,86 @@ function normalizeEditorialMarkup(article) {
   });
   normalizeConceptMarkup(article, retag);
   normalizeOutlookMarkup(article);
+  normalizeEvidenceMarkup(article);
   decorateEditorialMarkup(article);
   article.querySelectorAll('.chapter').forEach(heading => {
     if (heading.querySelector(':scope > .chapter-title')) return;
     const title = editorialNode('span', 'chapter-title');
     [...heading.childNodes].filter(node => !node.classList?.contains('editorial-icon')).forEach(node => title.append(node));
     heading.append(title);
+  });
+}
+
+function normalizeEvidenceMarkup(article) {
+  const de = document.documentElement.lang === 'de';
+  const types = {
+    primary: ['📄', de ? 'Originalquelle' : 'Primary source', de ? 'Die Meldung ist durch eine Originalquelle belegt. Leistungsversprechen sind damit nicht unabhängig geprüft.' : 'The story is supported by an original source. This does not independently verify performance claims.'],
+    vendor: ['📣', de ? 'Anbieterangabe' : 'Vendor claim', de ? 'Diese Aussage stammt vom Anbieter und ist nicht unabhängig bestätigt.' : 'This claim comes from the vendor and has not been independently confirmed.'],
+    vendor_reported: ['📣', de ? 'Anbieterangabe' : 'Vendor claim', de ? 'Die Anbieterangabe wurde über Berichterstattung übernommen; sie ist nicht unabhängig bestätigt.' : 'The vendor claim was relayed through reporting; it has not been independently confirmed.'],
+    independent: ['📰', de ? 'Unabhängig berichtet' : 'Independent reporting', de ? 'Die Meldung wird durch unabhängige Berichterstattung gestützt. Das ist kein unabhängiger Leistungstest.' : 'The story is supported by independent reporting. This is not an independent performance test.'],
+    evaluation: ['🧪', de ? 'Unabhängiger Testbericht' : 'Independent evaluation', de ? 'Es liegt eine externe Bewertung vor. Ihre Aussagekraft gilt für die beschriebenen Tests und Bedingungen.' : 'An external evaluation is available. Its conclusions apply to the tests and conditions described.'],
+    multiple: ['📰', de ? 'Mehrfach belegt' : 'Multiple sources', de ? 'Mehrere Quellen stützen die Meldung; einzelne Leistungsangaben können weiterhin Anbieterangaben sein.' : 'Multiple sources support the story; individual performance claims may still come from vendors.'],
+    reported: ['📰', de ? 'Berichtet' : 'Reported', de ? 'Diese Einordnung beruht auf Berichterstattung; die Einschränkungen stehen im Artikel.' : 'This assessment is based on reporting; limitations are described in the article.'],
+    early: ['🔭', de ? 'Frühes Signal' : 'Early signal', de ? 'Vorläufige Evidenz: Reifegrad und unabhängige Bestätigung sind noch offen.' : 'Preliminary evidence: maturity and independent confirmation remain open.']
+  };
+  const codes = {
+    CONFIRMED_PRIMARY: ['primary'], PRIMARY: ['primary'], CONFIRMED_PRIMARY_SOURCES: ['primary'],
+    VENDOR_CLAIM: ['vendor'], INDEPENDENT_REPORTING: ['independent'], INDEPENDENT: ['independent'],
+    INDEPENDENT_EVALUATION: ['evaluation'], VENDOR_CLAIM_VIA_REPORTING: ['vendor_reported'],
+    CONFIRMED_MULTIPLE: ['multiple'], MULTIPLE_REPORTING: ['multiple'], REPORTED: ['reported'],
+    EARLY_SIGNAL: ['early'], EARLY_SIGNAL_PREPRINT: ['early'],
+    CONFIRMED_PRIMARY_AND_INDEPENDENT_REPORTING: ['primary', 'independent'],
+    CONFIRMED_PRIMARY_WITH_VENDOR_EVALUATION: ['primary', 'vendor'],
+    CONFIRMED_PRIMARY_WITH_VENDOR_RESEARCH_CLAIM: ['primary', 'vendor']
+  };
+  article.querySelectorAll('.story-meta').forEach((meta, index) => {
+    const priority = meta.querySelector('.priority:not([data-display-label])');
+    const priorities = de ? {HIGH:'Fokus', MEDIUM:'Im Blick', LOW:'Kurz notiert', CRITICAL:'Besonders wichtig'}
+      : {HIGH:'Focus', MEDIUM:'On the radar', LOW:'In brief', CRITICAL:'High priority'};
+    if (priority && priorities[priority.textContent.trim()]) {
+      priority.dataset.displayLabel = priority.textContent.trim();
+      priority.textContent = priorities[priority.dataset.displayLabel];
+    }
+    const original = [...meta.querySelectorAll('.evidence')];
+    if (!original.length) return;
+    const help = editorialNode('span', 'evidence-explainer');
+    help.id = `evidence-explanation-${index + 1}`;
+    help.hidden = true;
+    help.setAttribute('role', 'status');
+    original.forEach(source => {
+      const group = editorialNode('span', 'evidence-tags');
+      const raw = source.textContent.trim();
+      const parts = /^[A-Z_]+(?:\s*[\/+]\s*[A-Z_]+)+$/.test(raw) ? raw.split(/\s*[\/+]\s*/)
+        : raw.split(/\s+[\/+]+\s+/);
+      parts.forEach(part => {
+        const code = part.trim().toUpperCase().replace(/[·\s-]+/g, '_');
+        const keys = codes[code] || [null];
+        keys.forEach(key => {
+          const readable = part.trim().replace(/_/g, ' ');
+          const label = readable === readable.toUpperCase() ? readable.charAt(0) + readable.slice(1).toLowerCase() : readable;
+          const [symbol, text, description] = types[key] || ['🏷️', label, `${de ? 'Evidenzhinweis' : 'Evidence note'}: ${label}`];
+          const badge = editorialNode('button', `source-tag source-${key || 'other'}`);
+          badge.type = 'button';
+          badge.dataset.evidenceCode = code;
+          badge.title = description;
+          badge.setAttribute('aria-expanded', 'false');
+          badge.setAttribute('aria-controls', help.id);
+          const icon = editorialNode('span', 'editorial-icon', symbol);
+          icon.setAttribute('aria-hidden', 'true');
+          badge.append(icon, document.createTextNode(text));
+          badge.addEventListener('click', () => {
+            const expanded = badge.getAttribute('aria-expanded') === 'true';
+            meta.querySelectorAll('.source-tag').forEach(tag => tag.setAttribute('aria-expanded', 'false'));
+            badge.setAttribute('aria-expanded', String(!expanded));
+            help.textContent = description;
+            help.hidden = expanded;
+          });
+          group.append(badge);
+        });
+      });
+      source.replaceWith(group);
+    });
+    meta.append(help);
   });
 }
 
