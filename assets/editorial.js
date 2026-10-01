@@ -59,12 +59,47 @@ function normalizeEditorialMarkup(article) {
   normalizeOutlookMarkup(article);
   normalizeEvidenceMarkup(article);
   normalizePriorityMarkup(article);
+  normalizeEmergingSignalMarkup(article, retag);
   decorateEditorialMarkup(article);
   article.querySelectorAll('.chapter').forEach(heading => {
     if (heading.querySelector(':scope > .chapter-title')) return;
     const title = editorialNode('span', 'chapter-title');
     [...heading.childNodes].filter(node => !node.classList?.contains('editorial-icon')).forEach(node => title.append(node));
     heading.append(title);
+  });
+}
+
+function normalizeEmergingSignalMarkup(article, retag) {
+  const de = document.documentElement.lang === 'de';
+  const labels = de ? {early_signal:'Frühes Signal', low:'Einschätzung: niedrig', medium:'Einschätzung: mittel', medium_high:'Einschätzung: mittel bis hoch', high:'Einschätzung: hoch'}
+    : {early_signal:'Early signal', low:'Confidence: low', medium:'Confidence: medium', medium_high:'Confidence: medium to high', high:'Confidence: high'};
+  article.querySelectorAll('.signal-box').forEach(box => {
+    const label = box.querySelector(':scope > .section-kicker, :scope > h2, :scope > strong, :scope > .emerging-section-title');
+    if (!label || !/emerging signal/i.test(label.textContent)) return;
+    if (!box.classList.contains('emerging-feature')) {
+      box.classList.add('emerging-feature');
+      if (label.classList.contains('section-kicker')) {
+        const topic = box.querySelector(':scope > h2');
+        const heading = retag(label, 'h2');
+        heading.classList.remove('section-kicker');
+        heading.classList.add('emerging-section-title');
+        const icon = editorialNode('span', 'editorial-icon', '💡');
+        icon.setAttribute('aria-hidden', 'true');
+        heading.prepend(icon);
+        if (topic) retag(topic, 'h3').classList.add('emerging-topic-title');
+      }
+    }
+    box.querySelectorAll('strong:not(.signal-confidence)').forEach(confidence => {
+      const match = confidence.textContent.trim().match(/^(?:(Analyse|Analysis),\s*)?Confidence:\s*([a-z_-]+)\.?$/i);
+      if (!match) return;
+      const code = match[2].toLowerCase().replace(/-/g, '_');
+      const text = labels[code] || `${de ? 'Einschätzung' : 'Confidence'}: ${code.replace(/_/g, ' ')}`;
+      confidence.classList.add('signal-confidence');
+      confidence.dataset.confidence = code;
+      const icon = editorialNode('span', 'editorial-icon', code === 'early_signal' ? '🔭' : '💡');
+      icon.setAttribute('aria-hidden', 'true');
+      confidence.replaceChildren(icon, document.createTextNode((match[1] ? `${match[1]} · ` : '') + text));
+    });
   });
 }
 

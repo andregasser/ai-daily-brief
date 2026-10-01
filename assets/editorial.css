@@ -132,6 +132,12 @@ p:is(.why,.engineering,.changed,.builder-action,.thesis,.signal-hype)>strong:fir
 .emerging-callout:has(>.section-kicker):before{display:none}
 .emerging-callout>h2,.emerging-callout>strong{font:700 26px/1.3 var(--body)}
 .emerging-callout p{max-width:100%;color:var(--text)}
+.emerging-callout.emerging-feature:before{display:none}
+.emerging-feature>.emerging-section-title{display:flex;align-items:center;gap:10px;font:700 clamp(24px,2.6vw,30px)/1.3 var(--body);letter-spacing:-.025em;margin:0 0 14px;color:var(--text)}
+.emerging-section-title>.editorial-icon{display:grid;place-items:center;width:34px;height:34px;margin:0}
+.emerging-feature>.emerging-topic-title,.emerging-feature>h2:not(.emerging-section-title),.emerging-feature>strong{display:block;font:700 clamp(28px,2.5vw,32px)/1.3 var(--body);letter-spacing:-.025em;margin:0 0 18px;color:var(--text)}
+.signal-confidence{display:flex;align-items:center;gap:7px;width:fit-content;max-width:100%;margin:0 0 10px;padding:5px 10px;border:1px solid #cdded3;border-radius:9px;background:#ffffffc2;color:#3b6657;font:700 13px/1.5 var(--body)}
+.signal-confidence>.editorial-icon{margin:0;font-size:16px}
 .builder-heading,.research-heading{color:var(--text)}
 .concept{background:transparent;color:var(--text);padding:30px 0;border:0;border-top:2px solid var(--line);box-shadow:none;margin:48px 0 32px}
 .concept h2{font:700 clamp(28px,3.3vw,40px)/1.2 var(--body);letter-spacing:-.03em;color:var(--text);margin:14px 0 24px}
