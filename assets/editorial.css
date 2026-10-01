@@ -123,8 +123,36 @@ p:is(.why,.engineering,.changed,.builder-action,.thesis,.signal-hype)>strong:fir
 .concept-bottom p{color:var(--text)}
 .concept-related{border-color:var(--line);gap:20px}
 .concept-related span,.concept-related a{color:var(--brand)!important}
+.chapter.concept-section-title{font-size:clamp(32px,3.8vw,44px)!important;line-height:1.2!important;letter-spacing:-.035em;border-bottom-color:#d9d0eb}
+.concept-section-title:before{background:var(--lavender);color:var(--violet)}
+.concept-section-title+.section-intro{color:var(--muted)!important}
+.content .concept.concept-feature{margin-top:24px;padding:30px 32px;background:linear-gradient(135deg,#f3effa 0%,#fff 36%);border:1px solid #dcd3ed;border-top:4px solid var(--violet);border-radius:20px;box-shadow:0 6px 20px #6c619208}
+.content .concept-story.concept-feature{border-top:4px solid var(--violet)!important;background:linear-gradient(135deg,#f3effa,transparent 50%)}
+.concept-feature>.concept-topic-title{font:700 clamp(30px,3.5vw,42px)/1.2 var(--body);letter-spacing:-.035em;margin:0 0 24px!important;color:var(--text)}
+.concept-feature>h4{font:700 23px/1.35 var(--body);letter-spacing:-.02em;margin:30px 0 14px;color:var(--text)}
+.concept-feature>.concept-head,.concept-feature>.section-kicker{margin-bottom:16px}
+.concept-feature>p:first-of-type{font-size:18px;line-height:1.8}
+@media(max-width:760px){.chapter.concept-section-title{font-size:32px!important}.content .concept.concept-feature{padding:22px 20px;border-radius:16px}.concept-feature>.concept-topic-title{font-size:28px}.concept-feature>p:first-of-type{font-size:17px}.concept-feature>h4{font-size:21px}}
 .next li,.watch li{color:var(--text);max-width:100%;font-size:16px}
 .next li:before,.watch li:before{color:var(--brand)}
+/* Outlook cards separate the topic, explicit deadline and next evidence to watch. */
+.outlook-list{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;padding:0;margin:0;list-style:none}
+.outlook-list>.outlook-item{display:grid;grid-template-columns:44px minmax(0,1fr);gap:18px;align-items:start;max-width:100%;padding:22px 24px;border:1px solid var(--line);border-radius:16px;background:var(--surface);color:var(--text)}
+.outlook-list>.outlook-item:before{display:none}
+.outlook-symbol{display:grid;place-items:center;width:44px;height:44px;margin:0;border-radius:13px;background:var(--sky);font-size:23px;line-height:1}
+.outlook-item:nth-child(4n+2)>.outlook-symbol{background:var(--peach)}
+.outlook-item:nth-child(4n+3)>.outlook-symbol{background:var(--mint)}
+.outlook-item:nth-child(4n+4)>.outlook-symbol{background:var(--lavender)}
+.outlook-copy{min-width:0}
+.outlook-item-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;margin-bottom:9px}
+.outlook-item .outlook-title{min-width:0;max-width:100%;overflow-wrap:anywhere;font:700 20px/1.4 var(--body);letter-spacing:-.02em;margin:0;color:var(--text)}
+.outlook-deadline{flex:none;max-width:100%;padding:4px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);font:700 12px/1.6 var(--body);color:var(--muted);overflow-wrap:anywhere}
+.outlook-body,.outlook-body>p{font:400 16px/1.75 var(--body);color:var(--muted)}
+.outlook-body>p{margin:0}
+.outlook-body>p+p{margin-top:10px}
+.content .story.outlook-story{border-bottom:0!important;padding-bottom:0!important}
+.outlook:not(.brief-chapter):not(.story)>.outlook-list{margin-top:24px}
+@media(max-width:760px){.outlook-list>.outlook-item{grid-template-columns:36px minmax(0,1fr);gap:12px;padding:18px 16px}.outlook-symbol{width:36px;height:36px;font-size:20px;border-radius:11px}.outlook-item .outlook-title{font-size:18px}.outlook-item-head{align-items:flex-start;flex-direction:column;gap:7px}.outlook-body,.outlook-body>p{font-size:15px}}
 /* Authored diagrams retain their structure while sharing the reading palette. */
 .editorial-visual,.concept-visual{background:#eff3f7;border:1px solid var(--line);border-radius:18px;color:var(--text);padding:24px;margin:26px 0;max-width:100%}
 .visual-label{color:var(--brand);font:700 11px/1.5 var(--body);letter-spacing:.06em;margin-bottom:18px}
