@@ -47,8 +47,8 @@ const widths = process.env.BRIEF_WIDTHS?.split(',').map(Number) || [1440, 768, 3
               titleFont: getComputedStyle(current[0].querySelector('h3')).fontFamily,
               coverTitle: document.querySelector('#cover-title').textContent,
               sourceTitle: original.querySelector('.briefing-intro h1, .briefing-intro h2').textContent,
-              navigation: [...document.querySelectorAll('#chapter-links a')].map(a => a.textContent.length),
-              chapterCount: rendered.querySelectorAll('h2.chapter, h3.chapter').length,
+              hasEditionNavigation: !!document.querySelector('#edition-navigation, #chapter-links'),
+              chaptersUnnumbered: [...rendered.querySelectorAll('h2.chapter, h3.chapter')].every(h => ['none', 'normal'].includes(getComputedStyle(h, '::before').content)),
               invalidChapters: rendered.querySelectorAll('.chapter:not(h2):not(h3)').length,
               overflow: document.documentElement.scrollWidth > innerWidth + 1,
               outside: [...document.querySelectorAll('main *')].filter(el => !el.closest('pre') && el.getBoundingClientRect().right > innerWidth + 1)
@@ -75,8 +75,8 @@ const widths = process.env.BRIEF_WIDTHS?.split(',').map(Number) || [1440, 768, 3
           assert.ok(result.headings && result.bodyFonts && result.cardBodies && result.cardTitles, context);
           assert.match(result.titleFont, /DM Sans/, context);
           assert.equal(result.invalidChapters, 0, context);
-          assert.equal(result.navigation.length, result.chapterCount, context);
-          assert.ok(result.navigation.every(length => length < 100), context);
+          assert.equal(result.hasEditionNavigation, false, context);
+          assert.ok(result.chaptersUnnumbered, context);
           assert.equal(result.overflow, false, context);
           assert.deepEqual(result.outside, [], context);
           assert.ok(result.aligned && result.summaryFirst && result.summaryHeadingSize >= 30, context);

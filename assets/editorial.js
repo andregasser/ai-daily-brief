@@ -367,19 +367,11 @@ function renderEditionCover(article, meta, language, covers) {
   }
   coverElement.setAttribute('aria-busy', 'false');
 
-  const navigation = document.getElementById('chapter-links');
-  navigation.replaceChildren();
+  // Preserve existing chapter anchors for previously shared edition links.
   const chapters = [...article.querySelectorAll('h2.chapter, h3.chapter')];
   chapters.forEach((chapter, index) => {
     if (!chapter.id) chapter.id = `chapter-${index + 1}`;
-    chapter.dataset.number = String(index + 1).padStart(2, '0');
-    const label = chapter.cloneNode(true);
-    label.querySelectorAll('.editorial-icon').forEach(icon => icon.remove());
-    const link = editorialNode('a', '', `${chapter.dataset.number} / ${label.textContent}`);
-    link.href = `#${chapter.id}`;
-    navigation.append(link);
   });
-  document.getElementById('edition-navigation').hidden = !chapters.length;
   // Keep the complete editorial introduction, but the cover already displays its headline.
   if (intro) intro.classList.add('cover-introduction');
 }

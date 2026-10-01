@@ -130,7 +130,6 @@ async function loadBrief() {
     $('#cover-kicker').textContent = 'AI DAILY BRIEF';
     $('#hero-date').textContent = requestedDate || '—';
     $('#brief-date').textContent = requestedDate || '—';
-    $('#edition-navigation').hidden = true;
     document.title = 'AI Daily Brief';
   } finally {
     if (request === briefRequest) {
