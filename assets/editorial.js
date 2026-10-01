@@ -58,12 +58,41 @@ function normalizeEditorialMarkup(article) {
   normalizeConceptMarkup(article, retag);
   normalizeOutlookMarkup(article);
   normalizeEvidenceMarkup(article);
+  normalizePriorityMarkup(article);
   decorateEditorialMarkup(article);
   article.querySelectorAll('.chapter').forEach(heading => {
     if (heading.querySelector(':scope > .chapter-title')) return;
     const title = editorialNode('span', 'chapter-title');
     [...heading.childNodes].filter(node => !node.classList?.contains('editorial-icon')).forEach(node => title.append(node));
     heading.append(title);
+  });
+}
+
+function normalizePriorityMarkup(article) {
+  const icons = {HIGH:'⭐', MEDIUM:'🔭', LOW:'📝', CRITICAL:'⚡'};
+  article.querySelectorAll('.story').forEach(story => {
+    const title = story.querySelector(':scope > h3');
+    const meta = story.querySelector(':scope > .story-meta');
+    if (!title || !meta) return;
+    const priority = meta.querySelector('.priority');
+    const level = priority?.dataset.displayLabel;
+    if (icons[level]) {
+      const row = editorialNode('div', 'story-priority');
+      priority.dataset.priorityLevel = level.toLowerCase();
+      const label = priority.textContent;
+      const icon = editorialNode('span', 'editorial-icon', icons[level]);
+      icon.setAttribute('aria-hidden', 'true');
+      priority.replaceChildren(icon, document.createTextNode(label));
+      row.append(priority);
+      title.before(row);
+    }
+    // Keep the evidence buttons and their explanation in the same container.
+    if (meta.textContent.trim()) {
+      title.after(meta);
+      story.classList.add('with-source-meta');
+    } else {
+      meta.remove();
+    }
   });
 }
 
