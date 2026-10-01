@@ -58,6 +58,12 @@ function normalizeEditorialMarkup(article) {
   normalizeConceptMarkup(article, retag);
   normalizeOutlookMarkup(article);
   decorateEditorialMarkup(article);
+  article.querySelectorAll('.chapter').forEach(heading => {
+    if (heading.querySelector(':scope > .chapter-title')) return;
+    const title = editorialNode('span', 'chapter-title');
+    [...heading.childNodes].filter(node => !node.classList?.contains('editorial-icon')).forEach(node => title.append(node));
+    heading.append(title);
+  });
 }
 
 function normalizeConceptMarkup(article, retag) {

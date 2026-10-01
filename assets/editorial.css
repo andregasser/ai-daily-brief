@@ -72,7 +72,8 @@ main{max-width:var(--max);margin:auto;padding:0 24px}
 .signal-grid>div>p{font:400 15px/1.7 var(--body);color:var(--muted);margin:0}
 .signal-grid>div>p :is(strong,span){display:inline;font:inherit;color:inherit;letter-spacing:inherit}
 .signal-grid>div>p strong{font-weight:700}
-.chapter{display:flex;gap:14px;align-items:baseline;color:var(--text);font:700 clamp(24px,2.6vw,30px)/1.3 var(--body)!important;letter-spacing:-.025em;border-bottom:1px solid var(--line);padding:0 0 16px;margin-top:48px!important;margin-bottom:0!important}
+.chapter{display:flex;gap:14px;align-items:center;color:var(--text);font:700 clamp(24px,2.6vw,30px)/1.3 var(--body)!important;letter-spacing:-.025em;border-bottom:1px solid var(--line);padding:0 0 8px;margin-top:48px!important;margin-bottom:0!important}
+.chapter-title{flex:1;min-width:0}
 .chapter:before{content:attr(data-number);display:inline-grid;place-items:center;width:34px;height:34px;border-radius:11px;background:var(--sky);font:700 12px/1 var(--body);color:var(--brand);flex:none}
 .builder-heading:before{background:var(--mint);color:var(--green)}
 .research-heading:before{background:var(--lavender);color:var(--violet)}
@@ -100,8 +101,8 @@ main{max-width:var(--max);margin:auto;padding:0 24px}
 .changed>strong,.signal-hype>strong{color:var(--violet)}
 .signal-hype>strong{color:var(--amber)}
 .editorial-icon{display:inline-block;margin-right:.55em;font-family:'Editorial Emoji','Apple Color Emoji','Segoe UI Emoji',sans-serif;font-weight:400;font-size:1.05em;line-height:1;letter-spacing:0;flex:none}
-.chapter>.editorial-icon{margin-right:0}
-.chapter{flex-wrap:wrap;border-bottom:2px solid #cdd8e8}
+.chapter>.editorial-icon{display:grid;place-items:center;width:34px;height:34px;margin-right:0}
+.chapter{flex-wrap:nowrap;border-bottom:2px solid #cdd8e8}
 p:is(.why,.engineering,.changed,.builder-action,.thesis,.signal-hype)>strong:first-child{display:block;margin-bottom:6px}
 .why p,.engineering p,.changed p,.builder-action p,.thesis p,.signal-hype p{color:var(--text)!important;font-size:16px!important;line-height:1.75}
 .sources{font:400 12px/1.7 var(--body);color:var(--muted);gap:8px 14px!important}
