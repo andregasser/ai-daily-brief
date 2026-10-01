@@ -123,7 +123,7 @@ p:is(.why,.engineering,.changed,.builder-action,.thesis,.signal-hype)>strong:fir
 .concept-bottom p{color:var(--text)}
 .concept-related{border-color:var(--line);gap:20px}
 .concept-related span,.concept-related a{color:var(--brand)!important}
-.chapter.concept-section-title{font-size:clamp(32px,3.8vw,44px)!important;line-height:1.2!important;letter-spacing:-.035em;border-bottom-color:#d9d0eb}
+.chapter.concept-section-title{border-bottom-color:#d9d0eb}
 .concept-section-title:before{background:var(--lavender);color:var(--violet)}
 .concept-section-title+.section-intro{color:var(--muted)!important}
 .content .concept.concept-feature{margin-top:24px;padding:30px 32px;background:linear-gradient(135deg,#f3effa 0%,#fff 36%);border:1px solid #dcd3ed;border-top:4px solid var(--violet);border-radius:20px;box-shadow:0 6px 20px #6c619208}
@@ -132,7 +132,7 @@ p:is(.why,.engineering,.changed,.builder-action,.thesis,.signal-hype)>strong:fir
 .concept-feature>h4{font:700 23px/1.35 var(--body);letter-spacing:-.02em;margin:30px 0 14px;color:var(--text)}
 .concept-feature>.concept-head,.concept-feature>.section-kicker{margin-bottom:16px}
 .concept-feature>p:first-of-type{font-size:18px;line-height:1.8}
-@media(max-width:760px){.chapter.concept-section-title{font-size:32px!important}.content .concept.concept-feature{padding:22px 20px;border-radius:16px}.concept-feature>.concept-topic-title{font-size:28px}.concept-feature>p:first-of-type{font-size:17px}.concept-feature>h4{font-size:21px}}
+@media(max-width:760px){.content .concept.concept-feature{padding:22px 20px;border-radius:16px}.concept-feature>.concept-topic-title{font-size:28px}.concept-feature>p:first-of-type{font-size:17px}.concept-feature>h4{font-size:21px}}
 .next li,.watch li{color:var(--text);max-width:100%;font-size:16px}
 .next li:before,.watch li:before{color:var(--brand)}
 /* Outlook cards separate the topic, explicit deadline and next evidence to watch. */
