@@ -68,7 +68,7 @@ main{max-width:var(--max);margin:auto;padding:0 24px}
 .signal-grid>div>p{font:400 15px/1.7 var(--body);color:var(--muted);margin:0}
 .signal-grid>div>p :is(strong,span){display:inline;font:inherit;color:inherit;letter-spacing:inherit}
 .signal-grid>div>p strong{font-weight:700}
-.chapter{display:flex;gap:12px;align-items:center;color:var(--text);font:700 var(--chapter-title-size)/1.3 var(--body)!important;letter-spacing:-.025em;border-bottom:1px solid var(--line);padding:0 0 8px;margin-top:var(--chapter-space)!important;margin-bottom:0!important;text-wrap:pretty}
+.chapter{display:flex;gap:12px;align-items:flex-start;color:var(--text);font:700 var(--chapter-title-size)/1.3 var(--body)!important;letter-spacing:-.025em;border-bottom:1px solid var(--line);padding:0 0 8px;margin-top:var(--chapter-space)!important;margin-bottom:0!important;text-wrap:pretty}
 .chapter-title{flex:1;min-width:0}
 #brief-content .executive>.chapter{margin-top:0!important}
 #brief-content .brief-topic-title{font:700 var(--topic-title-size)/1.3 var(--body)!important;letter-spacing:-.025em;margin:0 0 16px!important;text-wrap:pretty}
@@ -112,7 +112,8 @@ main{max-width:var(--max);margin:auto;padding:0 24px}
 .changed>strong,.signal-hype>strong{color:var(--violet)}
 .signal-hype>strong{color:var(--amber)}
 .editorial-icon{display:inline-block;margin-right:.55em;font-family:'Editorial Emoji','Apple Color Emoji','Segoe UI Emoji',sans-serif;font-weight:400;font-size:1.05em;line-height:1;letter-spacing:0;flex:none}
-.chapter>.editorial-icon{display:grid;place-items:center;width:34px;height:34px;margin-right:0}
+/* Center emoji artwork optically beside the first title line, including wrapped titles. */
+.chapter>.editorial-icon{display:grid;place-items:center;width:34px;height:1.3em;margin-right:0;font-size:1em;transform:translateY(-.125em)}
 .chapter{flex-wrap:nowrap;border-bottom:2px solid #cdd8e8}
 p:is(.why,.engineering,.changed,.builder-action,.thesis,.signal-hype)>strong:first-child{display:block;margin-bottom:6px}
 .why p,.engineering p,.changed p,.builder-action p,.thesis p,.signal-hype p{color:var(--text)!important;font-size:16px!important;line-height:1.75}
