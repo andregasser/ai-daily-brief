@@ -318,6 +318,8 @@ The Weekly Review is **not** a seven-day article digest. It must answer:
 Use the week's research audits, claims, storylines, predictions, builder lifecycle, trends and source metrics as inputs. Publish only evidence-backed synthesis.
 
 ## 12. Archive as knowledge library
+The full edition listing lives on `archive.html`, linked as “Archiv / Archive” from the main menu and companion pages. Do not append the archive listing to a daily edition. Archive links retain the selected language and open the chosen edition at its cover.
+
 Archive metadata should expose editorial headline, topic tags and Concept of the Day when available. Preserve backward compatibility. Over time, the archive should allow readers to follow recurring storylines, emerging signals and concepts, not merely dates.
 
 ## 13. Publishing and structured intelligence contract

@@ -95,7 +95,7 @@ const widths = process.env.BRIEF_WIDTHS?.split(',').map(Number) || [1440, 768, 3
               })),
               summaryFirst: rendered.firstElementChild?.classList.contains('executive'),
               summaryHeadingSize: parseFloat(getComputedStyle(rendered.querySelector('.executive h2')).fontSize),
-              archiveLabel: document.querySelector('.topbar a[href="#archive"]').textContent,
+              archiveLabel: document.querySelector('.topbar a[href*="archive.html"]').textContent,
               coverRows: [...document.querySelectorAll('.cover-story-row strong')].map(el => el.textContent),
               signalTitles: [...rendered.querySelectorAll('.executive .signal-title')].slice(0, 3).map(el => el.textContent)
             };

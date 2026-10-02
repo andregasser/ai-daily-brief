@@ -14,11 +14,11 @@ function translate() {
   });
   document.querySelectorAll('a[href]').forEach(a => {
     const url = new URL(a.href);
-    if (url.origin === location.origin && /\/(concepts\.html|weekly\/)$/.test(url.pathname)) {
+    if (url.origin === location.origin && /\/(concepts\.html|archive\.html|weekly\/)$/.test(url.pathname)) {
       url.searchParams.set('lang', lang); a.href = url.href;
     }
   });
-  loadBrief(); loadArchive(); loadTrends();
+  loadBrief(); loadTrends();
 }
 $$('[data-lang]').forEach(button => button.onclick = () => {
   lang = button.dataset.lang;
@@ -138,26 +138,6 @@ async function loadBrief() {
     }
   }
 }
-async function loadArchive() {
-  const language = lang;
-  try {
-    const items = await fetchJSON('data/archive.json');
-    if (language !== lang) return;
-    const rows = items.map((item, index) => {
-      const link = editorialNode('a', 'archive-card');
-      link.href = `./?date=${encodeURIComponent(item.date)}&lang=${language}#edition`;
-      link.append(editorialNode('span', 'archive-num', String(index + 1).padStart(2, '0')));
-      link.append(editorialNode('span', 'archive-date', item.date));
-      link.append(editorialNode('strong', '', item.headline?.[language] || 'AI Daily Brief'));
-      const concept = item.concept?.[language];
-      link.append(editorialNode('span', 'archive-action', [(item.tags || []).slice(0,3).join(' · '), concept ? (language === 'de' ? 'Konzept: ' : 'Concept: ') + concept : '', language === 'de' ? 'Ausgabe lesen ↗' : 'Read edition ↗'].filter(Boolean).join(' · ')));
-      return link;
-    });
-    $('#archive-list').replaceChildren(...(rows.length ? rows : [editorialNode('p','muted',language === 'de' ? 'Noch keine archivierten Ausgaben.' : 'No archived editions yet.')]));
-  } catch {
-    if (language === lang) $('#archive-list').replaceChildren(editorialNode('p','muted',language === 'de' ? 'Archiv momentan nicht verfügbar.' : 'Archive currently unavailable.'));
-  }
-}
 async function loadTrends() {
   const language = lang;
   try {
@@ -184,4 +164,9 @@ window.addEventListener('scroll', () => {
   const doc = document.documentElement, max = doc.scrollHeight - doc.clientHeight;
   $('#progress').style.width = (max ? doc.scrollTop / max * 100 : 0) + '%';
 }, {passive:true});
-translate();
+// Keep previously shared archive anchors working after moving the listing.
+if (location.hash === '#archive') {
+  location.replace(`archive.html?lang=${lang}`);
+} else {
+  translate();
+}

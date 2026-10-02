@@ -23,7 +23,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .topbar nav{gap:26px}
 .topbar nav>a{font-size:13px;font-weight:700;color:var(--muted);padding:8px 0}
 .topbar nav>a:hover{color:var(--brand)}
-.topbar nav>a:first-child{color:var(--brand)}
+.topbar nav>a[aria-current="page"]{color:var(--brand)}
 .lang{display:flex;align-items:center;font:700 12px/1 var(--body);gap:3px;background:var(--panel);border-radius:12px;padding:3px}
 .lang>span{display:none}
 .lang button{border:0;background:none;min-width:34px;min-height:38px;font:inherit;color:var(--muted);border-radius:9px}
