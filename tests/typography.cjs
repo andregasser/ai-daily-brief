@@ -61,7 +61,7 @@ const widths = process.env.BRIEF_WIDTHS?.split(',').map(Number) || [1440, 768, 3
               headings: current.every((story, i) => !stories[i].querySelector(':scope > h2, :scope > h3') || story.querySelector(':scope > h3')),
               bodyFonts: current.every(story => [...story.querySelectorAll('p:not(.sources)')].every(p => {
                 const style = getComputedStyle(p);
-                return style.fontFamily.includes('DM Sans') && style.textTransform === 'none';
+                return style.fontFamily.includes('IBM Plex Sans') && style.textTransform === 'none';
               })),
               titleFont: getComputedStyle(current[0].querySelector('h3')).fontFamily,
               coverTitle: document.querySelector('#cover-title').textContent,
@@ -81,8 +81,8 @@ const widths = process.env.BRIEF_WIDTHS?.split(',').map(Number) || [1440, 768, 3
               overflow: document.documentElement.scrollWidth > innerWidth + 1,
               outside: [...document.querySelectorAll('main *')].filter(el => !el.closest('pre') && el.getBoundingClientRect().right > innerWidth + 1)
                 .slice(0, 5).map(el => `${el.tagName}.${el.className}`),
-              cardBodies: [...rendered.querySelectorAll('.signal-grid > div > p')].every(p => getComputedStyle(p).fontFamily.includes('DM Sans')),
-              cardTitles: [...rendered.querySelectorAll('.signal-title')].every(h => getComputedStyle(h).fontFamily.includes('DM Sans')),
+              cardBodies: [...rendered.querySelectorAll('.signal-grid > div > p')].every(p => getComputedStyle(p).fontFamily.includes('IBM Plex Sans')),
+              cardTitles: [...rendered.querySelectorAll('.signal-title')].every(h => getComputedStyle(h).fontFamily.includes('Barlow Condensed')),
               callouts: [...rendered.querySelectorAll('.changed, .why')].every(block => {
                 const style = getComputedStyle(block);
                 return style.backgroundColor !== 'rgba(0, 0, 0, 0)' && parseFloat(style.borderLeftWidth) >= 4 &&
@@ -105,7 +105,7 @@ const widths = process.env.BRIEF_WIDTHS?.split(',').map(Number) || [1440, 768, 3
           assert.deepEqual(result.missingText, [], context);
           assert.deepEqual(result.missingLinks, [], context);
           assert.ok(result.headings && result.bodyFonts && result.cardBodies && result.cardTitles, context);
-          assert.match(result.titleFont, /DM Sans/, context);
+          assert.match(result.titleFont, /Barlow Condensed/, context);
           assert.equal(result.invalidChapters, 0, context);
           assert.equal(result.hasStoryPriority, false, context);
           assert.equal(result.hasEditionNavigation, false, context);
@@ -114,7 +114,7 @@ const widths = process.env.BRIEF_WIDTHS?.split(',').map(Number) || [1440, 768, 3
           for (const {role, headings} of result.headingRoles) {
             for (const h of headings) {
               assert.equal(h.size, sizes[role], `${context}/${role}`);
-              assert.match(h.font, /DM Sans/, context);
+              assert.match(h.font, ['section', 'topic', 'card'].includes(role) ? /Barlow Condensed/ : /IBM Plex Sans/, context);
               assert.equal(h.weight, '700', context);
               if (role === 'section') assert.equal(h.tag, 'H2', context);
               if (role === 'topic') assert.equal(h.tag, 'H3', context);
