@@ -2,7 +2,7 @@
   "name": "ai-daily-brief",
   "private": true,
   "scripts": {
-    "test:browser": "node tests/cover-navigation.cjs && node tests/archive.cjs && node tests/concepts.cjs && node tests/typography.cjs"
+    "test:browser": "node tests/cover-navigation.cjs && node tests/archive.cjs && node tests/concepts.cjs && node tests/typography.cjs && node tests/theme.cjs"
   },
   "devDependencies": {
     "playwright": "1.55.0"
