@@ -62,7 +62,7 @@ function normalizeEditorialMarkup(article) {
   });
   normalizeOutlookMarkup(article);
   normalizeEvidenceMarkup(article);
-  normalizePriorityMarkup(article);
+  normalizeStoryMetadata(article);
   normalizeEmergingSignalMarkup(article, retag);
   normalizeHeadingHierarchy(article, retag);
   decorateEditorialMarkup(article);
@@ -237,24 +237,13 @@ function normalizeHeadingHierarchy(article, retag) {
   });
 }
 
-function normalizePriorityMarkup(article) {
-  const icons = {HIGH:'⭐', MEDIUM:'🔭', LOW:'📝', CRITICAL:'⚡'};
+function normalizeStoryMetadata(article) {
+  // Relevance is implicit in story selection; only source context belongs here.
+  article.querySelectorAll('.story .priority, .story-priority').forEach(badge => badge.remove());
   article.querySelectorAll('.story').forEach(story => {
     const title = story.querySelector(':scope > h3');
     const meta = story.querySelector(':scope > .story-meta');
     if (!title || !meta) return;
-    const priority = meta.querySelector('.priority');
-    const level = priority?.dataset.displayLabel;
-    if (icons[level]) {
-      const row = editorialNode('div', 'story-priority');
-      priority.dataset.priorityLevel = level.toLowerCase();
-      const label = priority.textContent;
-      const icon = editorialNode('span', 'editorial-icon', icons[level]);
-      icon.setAttribute('aria-hidden', 'true');
-      priority.replaceChildren(icon, document.createTextNode(label));
-      row.append(priority);
-      title.before(row);
-    }
     // Keep the evidence buttons and their explanation in the same container.
     if (meta.textContent.trim()) {
       const deck = title.nextElementSibling?.matches('.title-deck') ? title.nextElementSibling : title;
@@ -262,6 +251,7 @@ function normalizePriorityMarkup(article) {
       story.classList.add('with-source-meta');
     } else {
       meta.remove();
+      story.classList.remove('with-source-meta');
     }
   });
 }
@@ -289,13 +279,6 @@ function normalizeEvidenceMarkup(article) {
     CONFIRMED_PRIMARY_WITH_VENDOR_RESEARCH_CLAIM: ['primary', 'vendor']
   };
   article.querySelectorAll('.story-meta').forEach((meta, index) => {
-    const priority = meta.querySelector('.priority:not([data-display-label])');
-    const priorities = de ? {HIGH:'Fokus', MEDIUM:'Im Blick', LOW:'Kurz notiert', CRITICAL:'Besonders wichtig'}
-      : {HIGH:'Focus', MEDIUM:'On the radar', LOW:'In brief', CRITICAL:'High priority'};
-    if (priority && priorities[priority.textContent.trim()]) {
-      priority.dataset.displayLabel = priority.textContent.trim();
-      priority.textContent = priorities[priority.dataset.displayLabel];
-    }
     const original = [...meta.querySelectorAll('.evidence')];
     if (!original.length) return;
     const help = editorialNode('span', 'evidence-explainer');

@@ -66,6 +66,7 @@ const widths = process.env.BRIEF_WIDTHS?.split(',').map(Number) || [1440, 768, 3
               titleFont: getComputedStyle(current[0].querySelector('h3')).fontFamily,
               coverTitle: document.querySelector('#cover-title').textContent,
               sourceTitle: original.querySelector('.briefing-intro h1, .briefing-intro h2').textContent,
+              hasStoryPriority: !!rendered.querySelector('.story .priority, .story-priority'),
               hasEditionNavigation: !!document.querySelector('#edition-navigation, #chapter-links'),
               chaptersUnnumbered: [...rendered.querySelectorAll('h2.chapter, h3.chapter')].every(h => ['none', 'normal'].includes(getComputedStyle(h, '::before').content)),
               headingRoles: ['section', 'topic', 'subtitle', 'card', 'label'].map(role => ({
@@ -106,6 +107,7 @@ const widths = process.env.BRIEF_WIDTHS?.split(',').map(Number) || [1440, 768, 3
           assert.ok(result.headings && result.bodyFonts && result.cardBodies && result.cardTitles, context);
           assert.match(result.titleFont, /DM Sans/, context);
           assert.equal(result.invalidChapters, 0, context);
+          assert.equal(result.hasStoryPriority, false, context);
           assert.equal(result.hasEditionNavigation, false, context);
           assert.ok(result.chaptersUnnumbered, context);
           const sizes = width <= 760 ? {section:26, topic:24, subtitle:18, card:18, label:15} : {section:32, topic:28, subtitle:20, card:20, label:16};

@@ -86,14 +86,6 @@ main{max-width:var(--max);margin:auto;padding:0 24px}
 .story>p,.story>.sources,.story>h3,.story>.why,.story>.engineering,.story>.changed,.story>.builder-action,.story>.thesis,.story>.signal-hype{max-width:100%!important;margin-left:0!important;margin-right:0!important}
 .story>h3,.story.lead-story>h3,.story.brief-story>h3{font:700 var(--topic-title-size)/1.3 var(--body);letter-spacing:-.025em;margin:0 0 16px;max-width:100%!important}
 .story>p{line-height:1.8;color:var(--text)}
-.story-meta .priority{padding:4px 8px;border-radius:6px;background:var(--panel)!important}
-.story-priority{display:flex;margin-bottom:10px}
-.story-priority .priority{display:inline-flex;align-items:center;gap:8px;max-width:100%;padding:8px 12px;border:1px solid #ffffff26;border-radius:10px;background:#344666!important;color:#fff!important;font:700 14px/1.4 var(--body);letter-spacing:0;overflow-wrap:anywhere}
-.story-priority .priority[data-priority-level="medium"]{background:#6c6192!important}
-.story-priority .priority[data-priority-level="low"]{background:#64748b!important}
-.story-priority .priority[data-priority-level="critical"]{background:#9b5726!important}
-.story-priority .editorial-icon{margin:0;font-size:17px}
-.story>.story-priority+h3{margin-top:0}
 .story.with-source-meta>h3{margin-bottom:12px}
 .story.with-source-meta>.story-meta{margin-bottom:16px}
 .story-meta .evidence{min-width:0;max-width:100%;overflow-wrap:anywhere;border-radius:6px}
@@ -107,7 +99,6 @@ main{max-width:var(--max);margin:auto;padding:0 24px}
 .source-early{background:var(--lavender);border-color:#dbd2ec;color:#67548a}
 .source-reported,.source-other{background:var(--panel);border-color:var(--line);color:var(--muted)}
 .evidence-explainer{flex-basis:100%;padding:10px 14px;border-left:3px solid #a8b8d0;border-radius:0 8px 8px 0;background:var(--panel);color:var(--muted);font:400 13px/1.65 var(--body)}
-.priority{color:var(--muted)!important}
 .evidence{color:var(--green)}
 .evidence:before{color:var(--green)}
 .evidence.reported,.evidence.vendor,.evidence.early,.evidence.attention{color:var(--amber)!important;background:#f1eadf!important}
