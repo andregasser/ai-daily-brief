@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 550.85" role="img" aria-labelledby="title desc">
+<title id="title">Asta: compare the full pipeline</title><desc id="desc">How large is the reported time difference per complete report, rather than text generation alone? Seconds per report: Fast 51.1; Thinking 178.5. The reported end-to-end advantage is approximately 3.5×, not nearly 10×. Ai2 averages for the complete pipeline; no independent replication or established quality parity. Most evaluation dates from 2025; do not confuse this with the separate nearly 10× generation claim.</desc>
+<rect width="480" height="550.85" fill="#fffdf8"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="28" y="32" font-size="13" fill="#16786d" font-weight="700" text-anchor="start">DATA COMPARISON</text>
+<text x="28" y="68" font-size="27" fill="#233548" font-weight="700" text-anchor="start">Asta: compare the full</text>
+<text x="28" y="104.45" font-size="27" fill="#233548" font-weight="700" text-anchor="start">pipeline</text>
+<text x="28" y="155.9" font-size="17" fill="#64748b" font-weight="400" text-anchor="start">Seconds per report</text>
+<path d="M28 193.85 L28 372.85" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="28" y="397.85" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">0</text>
+<path d="M125.5 193.85 L125.5 372.85" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="125.5" y="397.85" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">44.62</text>
+<path d="M223 193.85 L223 372.85" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="223" y="397.85" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">89.25</text>
+<path d="M320.5 193.85 L320.5 372.85" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="320.5" y="397.85" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">133.9</text>
+<path d="M418 193.85 L418 372.85" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="418" y="397.85" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">178.5</text>
+<text x="28" y="213.85" font-size="21" fill="#233548" font-weight="600" text-anchor="start">Fast</text>
+<rect class="data-bar" data-value="51.1" x="28" y="247.2" width="111.647" height="19" rx="2" fill="#8b9bb0"/>
+<text x="450" y="213.85" font-size="24" fill="#8b9bb0" font-weight="700" text-anchor="end">51.1</text>
+<text x="28" y="305.85" font-size="21" fill="#233548" font-weight="600" text-anchor="start">Thinking</text>
+<rect class="data-bar" data-value="178.5" x="28" y="339.2" width="390" height="19" rx="2" fill="#16786d"/>
+<text x="450" y="305.85" font-size="24" fill="#16786d" font-weight="700" text-anchor="end">178.5</text>
+<path d="M28 437.85 L452 437.85" stroke="#16786d" stroke-width="2" fill="none"/>
+<text x="28" y="470.85" font-size="20" fill="#233548" font-weight="600" text-anchor="start">The reported end-to-end advantage is</text>
+<text x="28" y="497.85" font-size="20" fill="#233548" font-weight="600" text-anchor="start">approximately 3.5×, not nearly 10×.</text>
+</g></svg>

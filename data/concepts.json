@@ -785,6 +785,36 @@
         "de": "briefings/2026-10-01-de.html",
         "en": "briefings/2026-10-01-en.html"
       }
+    },
+    {
+      "id": "permission-versus-preference",
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "title": {
+        "de": "Konzept des Tages: Berechtigung versus Präferenz",
+        "en": "Concept of the Day: Permission versus preference"
+      },
+      "summary": {
+        "de": "Eine Präferenz beschreibt, was eine Anwendung tun soll; eine Berechtigung begrenzt, was ihr Prozess technisch tun kann.",
+        "en": "A preference describes what an application should do; a permission limits what its process can technically do."
+      },
+      "tags": [
+        "agent-security",
+        "permissions",
+        "least-privilege"
+      ],
+      "storylines": [
+        "agent-security"
+      ],
+      "sources": [
+        "https://developer.apple.com/news/?id=p6zjojqw",
+        "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents"
+      ],
+      "related_concepts": [],
+      "briefing": {
+        "de": "briefings/2026-10-03-de.html",
+        "en": "briefings/2026-10-03-en.html"
+      }
     }
   ]
 }

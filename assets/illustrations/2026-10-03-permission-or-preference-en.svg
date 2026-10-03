@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 1182.8" role="img" aria-labelledby="title desc">
+<title id="title">Connector off: is access actually blocked?</title><desc id="desc">What security conclusion does a disabled connector allow when Full Disk Access remains granted? Research agent: Messages connector disabled, Full Disk Access still granted. Is technical unreachability established? No, check permissions separately. Pause approval and establish effective permissions; assert neither safe exclusion nor a specific access event.. The toggle establishes the preference; only enforced permissions establish the access boundary. Illustrative decision example, not a Muse test or real API payload; a formally valid status message does not prove a correct security conclusion.</desc>
+<rect width="480" height="1182.8" fill="#fffdf8"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="28" y="32" font-size="13" fill="#16786d" font-weight="700" text-anchor="start">ILLUSTRATIVE EXAMPLE</text>
+<text x="28" y="68" font-size="27" fill="#233548" font-weight="700" text-anchor="start">Connector off: is access</text>
+<text x="28" y="104.45" font-size="27" fill="#233548" font-weight="700" text-anchor="start">actually blocked?</text>
+<path d="M32 155.9 h34 l12 12 v43 h-46 z M66 155.9 v12 h12 M42 182.9 h24 M42 193.9 h20" fill="none" stroke="#64748b" stroke-width="2"/>
+<text x="100" y="175.9" font-size="21" fill="#233548" font-weight="400" text-anchor="start">Research agent: Messages</text>
+<text x="100" y="204.25" font-size="21" fill="#233548" font-weight="400" text-anchor="start">connector disabled, Full</text>
+<text x="100" y="232.6" font-size="21" fill="#233548" font-weight="400" text-anchor="start">Disk Access still</text>
+<text x="100" y="260.95" font-size="21" fill="#233548" font-weight="400" text-anchor="start">granted.</text>
+<path d="M240 304.3 L240 329.3" stroke="#16786d" stroke-width="2" fill="none"/>
+<text x="240" y="359.3" font-size="23" fill="#233548" font-weight="700" text-anchor="middle">Is technical unreachability</text>
+<text x="240" y="390.35" font-size="23" fill="#233548" font-weight="700" text-anchor="middle">established?</text>
+<path d="M240 425.4 L240 447.4" stroke="#64748b" stroke-width="1" fill="none"/>
+<path d="M98.6667 447.4 L381.333 447.4" stroke="#64748b" stroke-width="1" fill="none"/>
+<path d="M98.6667 447.4 L98.6667 481.4" stroke="#64748b" stroke-width="1" fill="none" stroke-dasharray="4 5"/>
+<circle cx="98.6667" cy="482.4" r="5" fill="#64748b"/>
+<text x="98.6667" y="515.4" font-size="20" fill="#64748b" font-weight="700" text-anchor="middle">Yes, because</text>
+<text x="98.6667" y="542.4" font-size="20" fill="#64748b" font-weight="700" text-anchor="middle">connector is</text>
+<text x="98.6667" y="569.4" font-size="20" fill="#64748b" font-weight="700" text-anchor="middle">off</text>
+<path d="M240 447.4 L240 481.4" stroke="#16786d" stroke-width="3" fill="none"/>
+<circle cx="240" cy="482.4" r="5" fill="#16786d"/>
+<text x="240" y="515.4" font-size="20" fill="#16786d" font-weight="700" text-anchor="middle">No, check</text>
+<text x="240" y="542.4" font-size="20" fill="#16786d" font-weight="700" text-anchor="middle">permissions</text>
+<text x="240" y="569.4" font-size="20" fill="#16786d" font-weight="700" text-anchor="middle">separately</text>
+<path d="M381.333 447.4 L381.333 481.4" stroke="#64748b" stroke-width="1" fill="none" stroke-dasharray="4 5"/>
+<circle cx="381.333" cy="482.4" r="5" fill="#64748b"/>
+<text x="381.333" y="515.4" font-size="20" fill="#64748b" font-weight="700" text-anchor="middle">Assert a</text>
+<text x="381.333" y="542.4" font-size="20" fill="#64748b" font-weight="700" text-anchor="middle">specific</text>
+<text x="381.333" y="569.4" font-size="20" fill="#64748b" font-weight="700" text-anchor="middle">access</text>
+<text x="381.333" y="596.4" font-size="20" fill="#64748b" font-weight="700" text-anchor="middle">occurred</text>
+<text x="98.6667" y="633.4" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">Invalid</text>
+<text x="98.6667" y="656.35" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">inference:</text>
+<text x="98.6667" y="679.3" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">product</text>
+<text x="98.6667" y="702.25" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">preference is</text>
+<text x="98.6667" y="725.2" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">equated with</text>
+<text x="98.6667" y="748.15" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">revoked</text>
+<text x="98.6667" y="771.1" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">process</text>
+<text x="98.6667" y="794.05" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">privileges.</text>
+<text x="240" y="633.4" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">Integration is</text>
+<text x="240" y="656.35" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">disabled;</text>
+<text x="240" y="679.3" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">actual access</text>
+<text x="240" y="702.25" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">denial must be</text>
+<text x="240" y="725.2" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">established</text>
+<text x="240" y="748.15" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">separately.</text>
+<text x="381.333" y="633.4" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">Also</text>
+<text x="381.333" y="656.35" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">unsupported:</text>
+<text x="381.333" y="679.3" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">broad</text>
+<text x="381.333" y="702.25" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">privileges do</text>
+<text x="381.333" y="725.2" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">not prove this</text>
+<text x="381.333" y="748.15" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">agent read</text>
+<text x="381.333" y="771.1" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">this data.</text>
+<path d="M28 847.4 L452 847.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="28" y="882.4" font-size="21" fill="#16786d" font-weight="600" text-anchor="start">Pause approval and establish</text>
+<text x="28" y="910.75" font-size="21" fill="#16786d" font-weight="600" text-anchor="start">effective permissions; assert</text>
+<text x="28" y="939.1" font-size="21" fill="#16786d" font-weight="600" text-anchor="start">neither safe exclusion nor a</text>
+<text x="28" y="967.45" font-size="21" fill="#16786d" font-weight="600" text-anchor="start">specific access event.</text>
+<path d="M28 1015.8 L452 1015.8" stroke="#16786d" stroke-width="2" fill="none"/>
+<text x="28" y="1048.8" font-size="20" fill="#233548" font-weight="600" text-anchor="start">The toggle establishes the</text>
+<text x="28" y="1075.8" font-size="20" fill="#233548" font-weight="600" text-anchor="start">preference; only enforced</text>
+<text x="28" y="1102.8" font-size="20" fill="#233548" font-weight="600" text-anchor="start">permissions establish the access</text>
+<text x="28" y="1129.8" font-size="20" fill="#233548" font-weight="600" text-anchor="start">boundary.</text>
+</g></svg>

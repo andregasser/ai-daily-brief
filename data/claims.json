@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-01",
+  "updated_at": "2026-10-03",
   "claims": [
     {
       "id": "2026-09-10-kya-joint-framework",
@@ -4046,6 +4046,304 @@
         "This is editorial synthesis, not evidence of an integrated delivered control system or mandatory new release gates."
       ],
       "date": "2026-10-01"
+    },
+    {
+      "id": "2026-10-03-26121073add2",
+      "claim": "Anthropic launched Claude Frontier Academy on October 2 with a $100M commitment and a target of 10,000 Frontier Deployed Engineers by end-2027; initial participants include Accenture, Deloitte, McKinsey, Morgan Stanley and Novo Nordisk.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Anthropic",
+        "Accenture",
+        "Deloitte",
+        "McKinsey",
+        "Morgan Stanley",
+        "Novo Nordisk"
+      ],
+      "storyline": null,
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "Claude Frontier Academy",
+          "url": "https://www.anthropic.com/news/claude-frontier-academy"
+        }
+      ],
+      "contradictions": [
+        "Commitment and enrollment target are not completed spending or demonstrated productivity outcomes."
+      ],
+      "date": "2026-10-03"
+    },
+    {
+      "id": "2026-10-03-613bcdb317bb",
+      "claim": "Academy participation is organization-nominated through account or partner channels; cohorts run in San Francisco, New York and London, followed by a 12-week workplace residency on a named project, with first final credentials expected in early 2027.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Anthropic"
+      ],
+      "storyline": null,
+      "support": [
+        {
+          "role": "primary_program_description",
+          "name": "Academy eligibility and residency",
+          "url": "https://www.anthropic.com/news/claude-frontier-academy"
+        }
+      ],
+      "contradictions": [
+        "No independent evidence establishes credential value outside participating organizations or business results."
+      ],
+      "date": "2026-10-03"
+    },
+    {
+      "id": "2026-10-03-43697769c012",
+      "claim": "Muse Gadgets supplies ESP32 and Linux device SDKs and firmware under Apache 2.0, as-is without warranty; this opens device integration, not Muse's underlying model weights.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Meta",
+        "Muse"
+      ],
+      "storyline": null,
+      "support": [
+        {
+          "role": "primary_project_page",
+          "name": "Muse Gadgets",
+          "url": "https://gadgets.muse.ai/"
+        }
+      ],
+      "contradictions": [
+        "SDK availability does not establish adoption, reliable control or household security."
+      ],
+      "date": "2026-10-03"
+    },
+    {
+      "id": "2026-10-03-cd6bd31296bb",
+      "claim": "The Verge describes custom display and touchscreen projects; the official Muse Gadgets page specifies October Home Link shipping on a first-come, first-served basis, restricted to active Muse subscribers in the United States with a limit of one device per subscriber; claiming a waitlist place is distinct from ordering.",
+      "evidence_state": "confirmed_multiple",
+      "entities": [
+        "Meta",
+        "Muse",
+        "Home Link"
+      ],
+      "storyline": null,
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "The Verge launch coverage",
+          "url": "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link"
+        },
+        {
+          "role": "primary_project_page",
+          "name": "Muse Gadgets availability",
+          "url": "https://gadgets.muse.ai/"
+        }
+      ],
+      "contradictions": [
+        "Actual dispatch commencement, exact shipment dates and total allocation are not verified; no total unit count is retained. The official US-only, active-subscription requirement and one-per-subscriber limit are established."
+      ],
+      "date": "2026-10-03"
+    },
+    {
+      "id": "2026-10-03-9f4b3d65844b",
+      "claim": "NVIDIA announced the 64GB DGX Spark configuration and cluster assistance on October 2, with October 23 availability through Acer, ASUS, Dell, Gigabyte, HP and MSI.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "NVIDIA",
+        "Acer",
+        "ASUS",
+        "Dell",
+        "Gigabyte",
+        "HP",
+        "MSI"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "DGX Spark 64GB and Sync",
+          "url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync"
+        }
+      ],
+      "contradictions": [
+        "Availability is prospective as of October 3."
+      ],
+      "date": "2026-10-03"
+    },
+    {
+      "id": "2026-10-03-20c401222a87",
+      "claim": "Hardware Busters reports a $4,999 starting price for the 64GB Spark and $6,950 for the 128GB model; two devices at the reported starting price arithmetically total $9,998 before additional procurement costs.",
+      "evidence_state": "reported",
+      "entities": [
+        "NVIDIA",
+        "Hardware Busters"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Hardware Busters pricing report",
+          "url": "https://hwbusters.com/news/nvidia-dgx-spark-64gb-arrives-at-4999-as-the-128gb-model-jumps-to-6950/"
+        }
+      ],
+      "contradictions": [
+        "Prices were not verified at checkout; purchase price alone does not establish inference cost per successful task."
+      ],
+      "date": "2026-10-03"
+    },
+    {
+      "id": "2026-10-03-1739cf024856",
+      "claim": "NVIDIA reports up to 1.7× performance from two clustered 64GB systems versus one in its Qwen 3.8 27B test.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "NVIDIA",
+        "Qwen"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_measurement",
+          "name": "NVIDIA clustered Qwen test",
+          "url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync"
+        }
+      ],
+      "contradictions": [
+        "Workload-specific vendor measurement, not independent replication or a general throughput guarantee."
+      ],
+      "date": "2026-10-03"
+    },
+    {
+      "id": "2026-10-03-2bf88604d21d",
+      "claim": "Apple announced additional macOS Full Disk Access controls requiring very explicit user action and warned that broad access can expose files, mail, messages and browsing history; full implementation and rollout details are not supplied.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Apple",
+        "macOS"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_platform_announcement",
+          "name": "Updates to Full Disk Access",
+          "url": "https://developer.apple.com/news/?id=p6zjojqw"
+        }
+      ],
+      "contradictions": [
+        "The announcement does not show deployed agents are already contained and does not explicitly name Muse."
+      ],
+      "date": "2026-10-03"
+    },
+    {
+      "id": "2026-10-03-cb601b420b57",
+      "claim": "Ars reports Meta's claim that Muse message access requires Full Disk Access and an enabled Messages connector, and Patrick Wardle's challenge distinguishing broad file access from the connector setting.",
+      "evidence_state": "reported",
+      "entities": [
+        "Meta",
+        "Muse",
+        "Patrick Wardle"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Ars Technica permission dispute",
+          "url": "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents"
+        }
+      ],
+      "contradictions": [
+        "The underlying incident and specific access path were not reproduced in this review."
+      ],
+      "date": "2026-10-03"
+    },
+    {
+      "id": "2026-10-03-9db2e9d75972",
+      "claim": "Ai2's October 2 release describes AstaBrief as an 8B model based on Qwen3-8B, trained with SFT and DPO using citation-focused filtering, and a pipeline generating complete reports in one pass; model weights and training data are announced.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Ai2",
+        "AstaBrief",
+        "Qwen"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_release_account",
+          "name": "Ai2 AstaBrief release and training description",
+          "url": "https://huggingface.co/blog/allenai/astabrief"
+        }
+      ],
+      "contradictions": [
+        "The 8B size is stated in the supplied article; linked artifacts, license and reproducibility details were not separately inspected."
+      ],
+      "date": "2026-10-03"
+    },
+    {
+      "id": "2026-10-03-2ec99ba814af",
+      "claim": "Ai2 reports full-pipeline averages of 51.1 seconds per report in Fast mode versus 178.5 seconds in Claude-powered Thinking mode, approximately 3.5× faster, distinct from its nearly order-of-magnitude report-generation-only claim.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Ai2",
+        "AstaBrief",
+        "Claude"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_measurement",
+          "name": "Ai2 latency comparison",
+          "url": "https://huggingface.co/blog/allenai/astabrief"
+        }
+      ],
+      "contradictions": [
+        "No independent latency or citation-quality replication; most training and evaluation occurred in 2025 and the full evaluation was not rerun against current frontier models."
+      ],
+      "date": "2026-10-03"
+    },
+    {
+      "id": "2026-10-03-38eeb019690b",
+      "claim": "In his Anthropic guest post, Matthew Schwartz reports 36 manuscripts across 18 fields with 19 coauthors over three months, selected from roughly 400 candidate problems using BootLoops and Claude; the harness is publicly linked on GitHub.",
+      "evidence_state": "reported",
+      "entities": [
+        "Matthew Schwartz",
+        "Anthropic",
+        "BootLoops",
+        "Claude"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_guest_account",
+          "name": "Schwartz: Claude-shaped science",
+          "url": "https://www.anthropic.com/research/claude-shaped-science?from=20421"
+        }
+      ],
+      "contradictions": [
+        "Schwartz is affiliated with Anthropic; manuscripts are not 36 independently validated discoveries or peer-reviewed publications; repository and manuscripts were not individually audited."
+      ],
+      "date": "2026-10-03"
+    },
+    {
+      "id": "2026-10-03-d3d310acc922",
+      "claim": "Schwartz's primary account says technically correct cross-field connections needed domain-expert steering to become scientifically useful; The Decoder reports premature success declarations and incorrect conclusions despite correct calculations.",
+      "evidence_state": "reported",
+      "entities": [
+        "Matthew Schwartz",
+        "BootLoops",
+        "Claude"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_guest_account",
+          "name": "Schwartz on expert steering",
+          "url": "https://www.anthropic.com/research/claude-shaped-science?from=20421"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "The Decoder on verification limits",
+          "url": "https://the-decoder.com/open-source-bootloops-harness-supports-ai-models-in-performing-precise-scientific-calculations"
+        }
+      ],
+      "contradictions": [
+        "Independent reporting summarizes the account; it does not independently reproduce the scientific results."
+      ],
+      "date": "2026-10-03"
     }
   ]
 }

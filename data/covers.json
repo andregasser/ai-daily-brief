@@ -105,5 +105,15 @@
       "de": "Die FTC untersucht mögliche Verbrauchergefahren, Google erweitert die Modell-Auswahl, und spezialisierte Engineering-Systeme verschieben die Frage von versprochenen Fähigkeiten zu überprüfbaren Ergebnissen.",
       "en": "The FTC investigates potential consumer dangers, Google expands the model shortlist, and specialized engineering systems shift the question from promised capabilities to verifiable results."
     }
+  },
+  "2026-10-03": {
+    "kicker": {
+      "de": "Die Leitgeschichte",
+      "en": "The lead story"
+    },
+    "deck": {
+      "de": "Anthropic investiert in Deployment-Talent, Meta öffnet Geräteanbindungen und Apple will Zugriffsrechte verschärfen. Lokale Hardware und wissenschaftliche Workflows erweitern die Möglichkeiten — nicht automatisch den belegten Nutzen.",
+      "en": "Anthropic invests in deployment talent, Meta opens device integrations and Apple plans tighter access controls. Local hardware and scientific workflows expand what is possible—not automatically what has proven useful."
+    }
   }
 }

@@ -48,9 +48,14 @@
           "date": "2026-10-01",
           "note": "Trial unchanged; no relevant capacity evidence assessed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-03",
+          "note": "Preserve trial: no relevant new capacity evidence reviewed.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "builder-authority-boundary-suite",
@@ -100,9 +105,19 @@
           "date": "2026-10-01",
           "note": "Trial unchanged; regulatory scrutiny strengthens relevance but does not validate the suite.",
           "sources": []
+        },
+        {
+          "date": "2026-10-03",
+          "note": "Preserve trial: Apple's announcement motivates permission-boundary cases but supplies no suite results.",
+          "sources": [
+            {
+              "label": "Apple announcement",
+              "url": "https://developer.apple.com/news/?id=p6zjojqw"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "builder-inference-admin-hardening",
@@ -152,9 +167,14 @@
           "date": "2026-10-01",
           "note": "Experimental unchanged; reasoning extraction does not establish mutation-endpoint exposure.",
           "sources": []
+        },
+        {
+          "date": "2026-10-03",
+          "note": "Preserve experimental: no mutation-endpoint remediation or local audit results reviewed.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "builder-nvidia-dynamo-epd",
@@ -266,9 +286,14 @@
           "date": "2026-10-01",
           "note": "Watch unchanged; no production regression results assessed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-03",
+          "note": "Preserve watch: preview documentation does not substitute for alias-migration regression testing.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "builder-agent-memory-write-gate",
@@ -420,9 +445,14 @@
           "date": "2026-10-01",
           "note": "Experimental unchanged; no new containment test results assessed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-03",
+          "note": "Preserve experimental: no canary execution or containment validation occurred.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "builder-outcome-cost-benchmark-harness",
@@ -470,7 +500,15 @@
         "https://developers.openai.com/api/docs/changelog",
         "https://www.anthropic.com/claude-opus-5-5",
         "https://artificialanalysis.ai/articles/claude-opus-5-5/"
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-03",
+          "note": "Preserve trial: AstaBrief's vendor latency figures are candidates for measurement, not validated harness outcomes.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "builder-agent-dual-monitoring",
@@ -511,7 +549,15 @@
       ],
       "sources": [
         "https://aws.amazon.com/blogs/machine-learning/monitoring-production-agent-lifecycle-with-aws-devops-agent-and-agentcore-evaluations/"
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-03",
+          "note": "Preserve watch: permission changes do not establish dual-layer monitoring coverage.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "builder-biomolecular-kernel-repro",
@@ -549,7 +595,15 @@
           "disposition": "remain_experimental",
           "note": "Three-day review: code remains open and testable, but no credible independent upstream-vs-optimized reproduction with pinned hardware and domain-quality metric cleared the evidence bar. Next review Sep25."
         }
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-03",
+          "note": "Preserve experimental despite the passed September 25 review date: BootLoops does not reproduce the watched biomolecular optimization.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "builder-agentcore-v2-runtime",

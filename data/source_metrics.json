@@ -1,7 +1,7 @@
 {
   "version": 1,
   "window_days": 30,
-  "last_updated": "2026-10-01",
+  "last_updated": "2026-10-03",
   "methodology": {
     "principle": "Measure source contribution, not popularity. Metrics influence catalog maintenance and research effort, never automatic story ranking.",
     "counters": {
@@ -48,10 +48,10 @@
         "primary",
         "research"
       ],
-      "observation_days": 17,
-      "last_observed": "2026-10-01",
+      "observation_days": 18,
+      "last_observed": "2026-10-03",
       "counters": {
-        "items_seen": 107,
+        "items_seen": 147,
         "candidates": 13,
         "shortlisted": 10,
         "published": 8,
@@ -72,10 +72,10 @@
         "engineering",
         "builder_radar"
       ],
-      "observation_days": 8,
-      "last_observed": "2026-10-01",
+      "observation_days": 9,
+      "last_observed": "2026-10-03",
       "counters": {
-        "items_seen": 16,
+        "items_seen": 46,
         "candidates": 1,
         "shortlisted": 1,
         "published": 1,
@@ -96,10 +96,10 @@
         "business_strategy",
         "engineering"
       ],
-      "observation_days": 8,
-      "last_observed": "2026-10-01",
+      "observation_days": 9,
+      "last_observed": "2026-10-03",
       "counters": {
-        "items_seen": 12,
+        "items_seen": 16,
         "candidates": 1,
         "shortlisted": 1,
         "published": 1,
@@ -141,10 +141,10 @@
         "regulation",
         "engineering"
       ],
-      "observation_days": 16,
-      "last_observed": "2026-10-01",
+      "observation_days": 17,
+      "last_observed": "2026-10-03",
       "counters": {
-        "items_seen": 33,
+        "items_seen": 38,
         "candidates": 6,
         "shortlisted": 5,
         "published": 5,
@@ -301,10 +301,10 @@
         "engineering",
         "builder_radar"
       ],
-      "observation_days": 15,
-      "last_observed": "2026-10-01",
+      "observation_days": 16,
+      "last_observed": "2026-10-03",
       "counters": {
-        "items_seen": 52,
+        "items_seen": 63,
         "candidates": 10,
         "shortlisted": 6,
         "published": 3,
@@ -435,8 +435,8 @@
         "primary",
         "research"
       ],
-      "observation_days": 15,
-      "last_observed": "2026-10-01",
+      "observation_days": 16,
+      "last_observed": "2026-10-03",
       "counters": {
         "items_seen": 15,
         "candidates": 0,
@@ -457,10 +457,10 @@
       "roles": [
         "primary"
       ],
-      "observation_days": 15,
-      "last_observed": "2026-10-01",
+      "observation_days": 16,
+      "last_observed": "2026-10-03",
       "counters": {
-        "items_seen": 17,
+        "items_seen": 18,
         "candidates": 1,
         "shortlisted": 1,
         "published": 1,
@@ -549,10 +549,10 @@
         "engineering",
         "research"
       ],
-      "observation_days": 15,
-      "last_observed": "2026-10-01",
+      "observation_days": 16,
+      "last_observed": "2026-10-03",
       "counters": {
-        "items_seen": 20,
+        "items_seen": 22,
         "candidates": 3,
         "shortlisted": 2,
         "published": 2,
@@ -571,8 +571,8 @@
       "roles": [
         "primary"
       ],
-      "observation_days": 15,
-      "last_observed": "2026-10-01",
+      "observation_days": 16,
+      "last_observed": "2026-10-03",
       "counters": {
         "items_seen": 14,
         "candidates": 2,
@@ -871,7 +871,7 @@
         "engineering"
       ],
       "counters": {
-        "items_seen": 7,
+        "items_seen": 11,
         "candidates": 0,
         "shortlisted": 0,
         "published": 0,
@@ -884,8 +884,8 @@
         "false_or_retracted": 0,
         "duplicate_only": 1
       },
-      "last_observed": "2026-10-01",
-      "observation_days": 8,
+      "last_observed": "2026-10-03",
+      "observation_days": 9,
       "notes": "Sep22 mandatory source sweep completed; mandatory status was a coverage floor only and conferred no editorial ranking priority."
     },
     "arXiv AI": {
@@ -906,9 +906,9 @@
         "builder_hits": 0,
         "false_or_retracted": 0
       },
-      "last_observed": "2026-10-01",
+      "last_observed": "2026-10-03",
       "notes": "Sep23 research-watch sweep found no fresh paper clearing novelty, reproducibility and decision-relevance gates.",
-      "observation_days": 5
+      "observation_days": 6
     },
     "arXiv Machine Learning": {
       "roles": [
@@ -928,43 +928,43 @@
         "false_or_retracted": 0,
         "duplicate_only": 16
       },
-      "last_observed": "2026-09-23",
-      "observation_days": 3,
+      "last_observed": "2026-10-03",
+      "observation_days": 4,
       "notes": "Sep23 research-watch sweep found no fresh paper clearing novelty, reproducibility and decision-relevance gates."
     },
     "GitHub Blog AI and ML": {
       "roles": [],
       "counters": {
-        "items_seen": 6,
+        "items_seen": 7,
         "candidates": 1,
         "duplicate_only": 2
       },
-      "last_observed": "2026-10-01",
-      "observation_days": 3
+      "last_observed": "2026-10-03",
+      "observation_days": 4
     },
     "PyTorch Blog": {
       "roles": [],
       "counters": {
-        "items_seen": 5,
+        "items_seen": 8,
         "duplicate_only": 1
       },
-      "last_observed": "2026-10-01",
-      "observation_days": 3
+      "last_observed": "2026-10-03",
+      "observation_days": 4
     },
     "TechCrunch AI": {
       "roles": [
         "journalism"
       ],
       "counters": {
-        "items_seen": 38,
+        "items_seen": 58,
         "candidates": 3,
         "shortlisted": 2,
         "published": 2,
         "independent_confirmations": 2,
         "contrarian_hits": 2
       },
-      "last_observed": "2026-10-01",
-      "observation_days": 4,
+      "last_observed": "2026-10-03",
+      "observation_days": 5,
       "notes": "Sep23: corroborated Snorkel financing and supplied useful revenue-accounting context; did not override primary/Reuters evidence."
     },
     "Associated Press": {
@@ -1197,129 +1197,129 @@
     },
     "Google Research Blog": {
       "counters": {
-        "items_seen": 2
+        "items_seen": 3
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Microsoft Research": {
       "counters": {
         "items_seen": 3
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Meta Engineering": {
       "counters": {
         "items_seen": 0
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "The Verge AI": {
       "counters": {
-        "items_seen": 16
+        "items_seen": 25
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Ars Technica AI": {
       "counters": {
-        "items_seen": 26
+        "items_seen": 32
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "MIT Technology Review AI": {
       "counters": {
-        "items_seen": 6
+        "items_seen": 8
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "IEEE Spectrum AI": {
       "counters": {
         "items_seen": 4
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Wired AI": {
       "counters": {
-        "items_seen": 13
+        "items_seen": 19
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "VentureBeat AI": {
       "counters": {
         "items_seen": 0
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "The Guardian AI": {
       "counters": {
-        "items_seen": 29
+        "items_seen": 48
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Financial Times AI": {
       "counters": {
-        "items_seen": 32
+        "items_seen": 48
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "404 Media": {
       "counters": {
-        "items_seen": 19
+        "items_seen": 25
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Platformer": {
       "counters": {
         "items_seen": 3
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "CNBC Technology": {
       "counters": {
-        "items_seen": 43
+        "items_seen": 71
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "BBC Technology": {
       "counters": {
-        "items_seen": 17
+        "items_seen": 24
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "NYT Technology": {
       "counters": {
-        "items_seen": 19
+        "items_seen": 30
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Simon Willison": {
       "counters": {
-        "items_seen": 16
+        "items_seen": 17
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Interconnects": {
       "counters": {
         "items_seen": 0
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "SemiAnalysis": {
       "counters": {},
@@ -1327,38 +1327,38 @@
     },
     "Latent Space": {
       "counters": {
-        "items_seen": 9
+        "items_seen": 14
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Import AI": {
       "counters": {
         "items_seen": 1
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "One Useful Thing": {
       "counters": {
-        "items_seen": 0
+        "items_seen": 1
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Understanding AI": {
       "counters": {
         "items_seen": 0
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "AI Snake Oil": {
       "counters": {
-        "items_seen": 1
+        "items_seen": 2
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Don't Worry About the Vase": {
       "counters": {},
@@ -1370,143 +1370,143 @@
     },
     "ChinaTalk": {
       "counters": {
-        "items_seen": 3
+        "items_seen": 5
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Ahead of AI": {
       "counters": {
         "items_seen": 1
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Lil'Log": {
       "counters": {
         "items_seen": 0
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Andrej Karpathy": {
       "counters": {
         "items_seen": 0
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "LessWrong": {
       "counters": {
-        "items_seen": 20
+        "items_seen": 30
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "TLDR AI": {
       "counters": {
-        "items_seen": 3
+        "items_seen": 5
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "arXiv Computational Linguistics": {
       "counters": {
         "items_seen": 40
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "HF Daily Papers": {
       "counters": {
-        "items_seen": 40
+        "items_seen": 51
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "MIT News AI": {
       "counters": {
-        "items_seen": 7
+        "items_seen": 11
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Synced Review": {
       "counters": {
         "items_seen": 0
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "r/LocalLLaMA": {
       "counters": {
-        "items_seen": 42
+        "items_seen": 67
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Hacker News AI 100+ points": {
       "counters": {
-        "items_seen": 21
+        "items_seen": 29
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "AWS Machine Learning Blog": {
       "counters": {
-        "items_seen": 22
+        "items_seen": 33
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Azure Blog": {
       "counters": {
         "items_seen": 3
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Ollama Blog": {
       "counters": {
         "items_seen": 1
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "THE DECODER DE": {
       "counters": {
-        "items_seen": 17
+        "items_seen": 27
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "THE DECODER EN": {
       "counters": {
-        "items_seen": 17
+        "items_seen": 27
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "heise online": {
       "counters": {
-        "items_seen": 78
+        "items_seen": 118
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "t3n": {
       "counters": {
-        "items_seen": 35
+        "items_seen": 55
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     },
     "Google News DE/CH AI": {
       "counters": {
-        "items_seen": 64
+        "items_seen": 104
       },
-      "observation_days": 2,
-      "last_observed": "2026-10-01"
+      "observation_days": 3,
+      "last_observed": "2026-10-03"
     }
   },
   "run_coverage": {
@@ -2187,6 +2187,313 @@
         "source": "Google News DE/CH AI",
         "status": "ok",
         "items_seen": 24
+      }
+    ],
+    "2026-10-03": [
+      {
+        "source": "OpenAI",
+        "status": "ok",
+        "items_seen": 5
+      },
+      {
+        "source": "Anthropic",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "Google DeepMind",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Google AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "AWS Machine Learning",
+        "status": "ok",
+        "items_seen": 11
+      },
+      {
+        "source": "NVIDIA AI",
+        "status": "ok",
+        "items_seen": 4
+      },
+      {
+        "source": "Hugging Face",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Mistral AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "arXiv AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "arXiv Machine Learning",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Google Research Blog",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Microsoft Research",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Meta Engineering",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "NVIDIA Blog",
+        "status": "ok",
+        "items_seen": 4
+      },
+      {
+        "source": "NVIDIA Developer Blog",
+        "status": "ok",
+        "items_seen": 30
+      },
+      {
+        "source": "TechCrunch AI",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "The Verge AI",
+        "status": "ok",
+        "items_seen": 9
+      },
+      {
+        "source": "Ars Technica AI",
+        "status": "ok",
+        "items_seen": 6
+      },
+      {
+        "source": "MIT Technology Review AI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "IEEE Spectrum AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Wired AI",
+        "status": "ok",
+        "items_seen": 6
+      },
+      {
+        "source": "VentureBeat AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "The Guardian AI",
+        "status": "ok",
+        "items_seen": 19
+      },
+      {
+        "source": "Financial Times AI",
+        "status": "ok",
+        "items_seen": 16
+      },
+      {
+        "source": "404 Media",
+        "status": "ok",
+        "items_seen": 6
+      },
+      {
+        "source": "Platformer",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "CNBC Technology",
+        "status": "ok",
+        "items_seen": 28
+      },
+      {
+        "source": "BBC Technology",
+        "status": "ok",
+        "items_seen": 7
+      },
+      {
+        "source": "NYT Technology",
+        "status": "ok",
+        "items_seen": 11
+      },
+      {
+        "source": "Simon Willison",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Interconnects",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "SemiAnalysis",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Latent Space",
+        "status": "ok",
+        "items_seen": 5
+      },
+      {
+        "source": "Import AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "One Useful Thing",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Understanding AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "AI Snake Oil",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Don't Worry About the Vase",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Marcus on AI",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "ChinaTalk",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Ahead of AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Lil'Log",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Andrej Karpathy",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "LessWrong",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "TLDR AI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "arXiv Computational Linguistics",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "HF Daily Papers",
+        "status": "ok",
+        "items_seen": 11
+      },
+      {
+        "source": "MIT News AI",
+        "status": "ok",
+        "items_seen": 4
+      },
+      {
+        "source": "Synced Review",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "r/LocalLLaMA",
+        "status": "ok",
+        "items_seen": 25
+      },
+      {
+        "source": "Hacker News AI 100+ points",
+        "status": "ok",
+        "items_seen": 8
+      },
+      {
+        "source": "AWS Machine Learning Blog",
+        "status": "ok",
+        "items_seen": 11
+      },
+      {
+        "source": "Azure Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "GitHub Blog AI and ML",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "PyTorch Blog",
+        "status": "ok",
+        "items_seen": 3
+      },
+      {
+        "source": "Ollama Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "THE DECODER DE",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "THE DECODER EN",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "heise online",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "t3n",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "Google News DE/CH AI",
+        "status": "ok",
+        "items_seen": 40
       }
     ]
   }

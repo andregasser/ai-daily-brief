@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-01",
+  "updated_at": "2026-10-03",
   "predictions": [
     {
       "id": "pred-kya-interoperability-2026-10",
@@ -32,9 +32,14 @@
           "date": "2026-10-01",
           "note": "Open unchanged; no implementable specification or cross-network pilot verified.",
           "sources": []
+        },
+        {
+          "date": "2026-10-03",
+          "note": "Preserve open: searches found similarly named projects, not a verified implementation from the watched initiative.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "pred-deepseek-v41-evidence-2026-09",
@@ -70,9 +75,14 @@
           "date": "2026-10-01",
           "note": "Falsified unchanged; supplied API documentation does not establish independent task economics.",
           "sources": []
+        },
+        {
+          "date": "2026-10-03",
+          "note": "Preserve falsified: supplied documentation adds no independent task-success, latency or cost comparison.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "pred-china-hbm-pricing-q4",
@@ -143,9 +153,14 @@
           "date": "2026-10-01",
           "note": "Open unchanged; HSTU caching is not independent multimodal EPD reproduction.",
           "sources": []
+        },
+        {
+          "date": "2026-10-03",
+          "note": "Preserve open: an older EPD paper surfaced, but no qualifying new independent reproduction was established.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "pred-us-duty-of-care-draft-2026-09",
@@ -202,9 +217,14 @@
               "url": "https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/09/29/ai-tech-brief-dems-demand-ai-testing-regime/"
             }
           ]
+        },
+        {
+          "date": "2026-10-03",
+          "note": "Preserve open despite the passed September 30 deadline: hearing material does not resolve either branch of the prediction.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "pred-openai-misalignment-disclosure-2026-10",
@@ -321,9 +341,14 @@
           "date": "2026-10-01",
           "note": "Confirmed unchanged; no new evidence warrants revising the supplied resolution.",
           "sources": []
+        },
+        {
+          "date": "2026-10-03",
+          "note": "Preserve confirmed: no relevant new evidence changes the supplied assessment.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "pred-sglang-cve-remediation-2026-09",
@@ -371,9 +396,14 @@
           "date": "2026-10-01",
           "note": "Falsified unchanged; no patch evidence assessed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-03",
+          "note": "Preserve falsified: remediation was not reverified in this run.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "pred-deepseek-alias-regression-2026-09",
@@ -410,9 +440,14 @@
           "date": "2026-10-01",
           "note": "Falsified unchanged; no reproducible alias-regression evaluation verified.",
           "sources": []
+        },
+        {
+          "date": "2026-10-03",
+          "note": "Preserve falsified: the supplied legacy-Flash routing notice does not establish the predicted Pro-alias regression evidence.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "pred-frontier-pacing-operationalization-2026-09",
@@ -515,9 +550,14 @@
               "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/"
             }
           ]
+        },
+        {
+          "date": "2026-10-03",
+          "note": "Preserve progress: retrieved material does not justify upgrading operationalization to confirmed.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "pred-anthropic-evaluator-governance-2026-10",
@@ -555,9 +595,14 @@
           "date": "2026-10-01",
           "note": "Open unchanged; no additional evaluator or new governance rights verified.",
           "sources": []
+        },
+        {
+          "date": "2026-10-03",
+          "note": "Preserve open: Academy training is unrelated to independent evaluator selection or authority.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "pred-agentcore-v2-production-repro-2026-10",
@@ -607,9 +652,14 @@
           "date": "2026-10-01",
           "note": "Open unchanged; qualifying mixed-modality workload evidence was not found in assessed material.",
           "sources": []
+        },
+        {
+          "date": "2026-10-03",
+          "note": "Preserve open ahead of October 4: limited searches did not establish the required independent workload evidence.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-03"
     },
     {
       "id": "pred-us-china-ai-incident-mechanism-2026-10",
@@ -888,6 +938,70 @@
       "confidence": "low",
       "id": "pred-2026-10-01-eb487a2caf1c",
       "created": "2026-10-01",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-03, Apple will publish a concrete user-flow description for the newly announced additional macOS Full Disk Access controls, beyond the October 2 warning.",
+      "review_after": "2026-11-04",
+      "confirmation_criteria": [
+        "Dated Apple documentation or release notes describe the required user actions for granting the additional-control-protected access and identify the affected macOS scope."
+      ],
+      "falsification_criteria": [
+        "Apple explicitly withdraws the additional-control plan or states that concrete implementation documentation will not be provided until after November 3.",
+        "Missing documentation in the available evidence alone is inconclusive."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-03-610de9fcc249",
+      "created": "2026-10-03",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "On or before 2026-10-23, at least one of Acer, ASUS, Dell, Gigabyte, HP or MSI will make a 64GB DGX Spark regularly orderable with a stated delivery or stock status.",
+      "review_after": "2026-10-24",
+      "confirmation_criteria": [
+        "A dated partner sales listing accepts a regular order and identifies the 64GB configuration plus stock or delivery status; a waitlist or announcement alone does not qualify."
+      ],
+      "falsification_criteria": [
+        "NVIDIA or the named partners explicitly announce that the 64GB launch is delayed beyond October 23, with no qualifying partner offer.",
+        "A missing listing or failed retrieval alone is inconclusive."
+      ],
+      "confidence": "high",
+      "id": "pred-2026-10-03-64f3fdd15225",
+      "created": "2026-10-03",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-10-31, Meta will begin shipping Muse Home Link units to initial recipients.",
+      "review_after": "2026-11-02",
+      "confirmation_criteria": [
+        "A dated official statement confirms dispatch has begun, or credible reporting documents at least one recipient's shipment confirmation or delivery by October 31."
+      ],
+      "falsification_criteria": [
+        "Meta explicitly postpones all initial Home Link shipments beyond October or cancels the distribution.",
+        "Waitlist availability and absent shipment evidence alone do not resolve the forecast."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-03-6cc432d7af39",
+      "created": "2026-10-03",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2027-03-31, Anthropic will award the first final Claude Frontier Deployed Engineer credentials following the workplace residency.",
+      "review_after": "2027-04-01",
+      "confirmation_criteria": [
+        "Anthropic or a participating organization publicly documents at least one final Frontier Deployed Engineer credential awarded after the 12-week residency; a Claude Resident Engineer entry badge does not qualify."
+      ],
+      "falsification_criteria": [
+        "Anthropic explicitly cancels the final credential or announces that the first awards have been delayed beyond March 31.",
+        "No public graduation evidence in the available record alone is inconclusive."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-03-f58215cb6a1b",
+      "created": "2026-10-03",
       "status": "open",
       "evidence": []
     }

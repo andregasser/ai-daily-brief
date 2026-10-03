@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-10-03",
+    "de": "briefings/2026-10-03-de.html",
+    "en": "briefings/2026-10-03-en.html",
+    "headline": {
+      "de": "Der nächste KI-Wettbewerb entscheidet sich an den Schnittstellen",
+      "en": "The next AI competition will be decided at the interfaces"
+    },
+    "tags": [
+      "enterprise-ai",
+      "agent-security",
+      "open-source-integrations",
+      "local-inference",
+      "scientific-ai",
+      "verification"
+    ],
+    "concept": {
+      "de": "Konzept des Tages: Berechtigung versus Präferenz",
+      "en": "Concept of the Day: Permission versus preference"
+    }
+  },
+  {
     "date": "2026-10-01",
     "de": "briefings/2026-10-01-de.html",
     "en": "briefings/2026-10-01-en.html",

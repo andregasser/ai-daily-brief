@@ -1,0 +1,126 @@
+[
+  {
+    "id": "permission-or-preference",
+    "target": "concept",
+    "kind": "decision",
+    "example": true,
+    "title": {
+      "de": "Connector aus: Ist der Zugriff wirklich gesperrt?",
+      "en": "Connector off: is access actually blocked?"
+    },
+    "question": {
+      "de": "Welche Sicherheitsfolgerung erlaubt ein deaktivierter Connector bei weiterhin gewährtem Full Disk Access?",
+      "en": "What security conclusion does a disabled connector allow when Full Disk Access remains granted?"
+    },
+    "caption": {
+      "de": "Illustratives Entscheidungsbeispiel, kein Muse-Test und kein reales API-Payload; eine formal gültige Statusmeldung beweist keine korrekte Sicherheitsfolgerung.",
+      "en": "Illustrative decision example, not a Muse test or real API payload; a formally valid status message does not prove a correct security conclusion."
+    },
+    "takeaway": {
+      "de": "Der Schalter belegt die Präferenz; erst durchgesetzte Rechte belegen die Zugriffsgrenze.",
+      "en": "The toggle establishes the preference; only enforced permissions establish the access boundary."
+    },
+    "sources": [
+      {
+        "label": "Apple: Full Disk Access",
+        "url": "https://developer.apple.com/news/?id=p6zjojqw"
+      },
+      {
+        "label": "Ars Technica: permission dispute",
+        "url": "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents"
+      }
+    ],
+    "input": {
+      "de": "Recherche-Agent: Messages-Connector deaktiviert, Full Disk Access weiterhin gewährt.",
+      "en": "Research agent: Messages connector disabled, Full Disk Access still granted."
+    },
+    "question_label": {
+      "de": "Ist technische Nichterreichbarkeit belegt?",
+      "en": "Is technical unreachability established?"
+    },
+    "outcomes": [
+      {
+        "label": {
+          "de": "Ja, weil Connector aus",
+          "en": "Yes, because connector is off"
+        },
+        "detail": {
+          "de": "Unzulässiger Schluss: Produktpräferenz wird mit entzogenen Prozessrechten gleichgesetzt.",
+          "en": "Invalid inference: product preference is equated with revoked process privileges."
+        }
+      },
+      {
+        "label": {
+          "de": "Nein, Rechte separat prüfen",
+          "en": "No, check permissions separately"
+        },
+        "detail": {
+          "de": "Integration ist deaktiviert; tatsächliche Zugriffsverweigerung muss separat nachgewiesen werden.",
+          "en": "Integration is disabled; actual access denial must be established separately."
+        }
+      },
+      {
+        "label": {
+          "de": "Konkreten Zugriff behaupten",
+          "en": "Assert a specific access occurred"
+        },
+        "detail": {
+          "de": "Ebenfalls unbelegt: breite Rechte beweisen nicht, dass dieser Agent diese Daten gelesen hat.",
+          "en": "Also unsupported: broad privileges do not prove this agent read this data."
+        }
+      }
+    ],
+    "selected": 1,
+    "result": {
+      "de": "Freigabe pausieren und effektive Rechte klären; weder sicheren Ausschluss noch einen konkreten Zugriff behaupten.",
+      "en": "Pause approval and establish effective permissions; assert neither safe exclusion nor a specific access event."
+    }
+  },
+  {
+    "id": "astabrief-full-pipeline",
+    "target": "story-5",
+    "kind": "bars",
+    "title": {
+      "de": "Asta: die gesamte Pipeline vergleichen",
+      "en": "Asta: compare the full pipeline"
+    },
+    "question": {
+      "de": "Wie gross ist der berichtete Zeitunterschied pro vollständigem Bericht, statt nur bei der Textgenerierung?",
+      "en": "How large is the reported time difference per complete report, rather than text generation alone?"
+    },
+    "caption": {
+      "de": "Ai2-Durchschnittswerte der vollständigen Pipeline; keine unabhängige Replikation oder belegte Qualitätsgleichheit. Der Grossteil der Evaluation stammt aus 2025; nicht mit der separaten nahezu 10×-Generierungsbehauptung verwechseln.",
+      "en": "Ai2 averages for the complete pipeline; no independent replication or established quality parity. Most evaluation dates from 2025; do not confuse this with the separate nearly 10× generation claim."
+    },
+    "takeaway": {
+      "de": "Der berichtete End-to-End-Vorteil beträgt ungefähr 3,5×, nicht nahezu 10×.",
+      "en": "The reported end-to-end advantage is approximately 3.5×, not nearly 10×."
+    },
+    "sources": [
+      {
+        "label": "Ai2: AstaBrief pipeline latency",
+        "url": "https://huggingface.co/blog/allenai/astabrief"
+      }
+    ],
+    "unit": {
+      "de": "Sekunden pro Bericht",
+      "en": "Seconds per report"
+    },
+    "items": [
+      {
+        "label": {
+          "de": "Fast",
+          "en": "Fast"
+        },
+        "value": 51.1
+      },
+      {
+        "label": {
+          "de": "Thinking",
+          "en": "Thinking"
+        },
+        "value": 178.5
+      }
+    ]
+  }
+]
