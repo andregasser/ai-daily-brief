@@ -53,9 +53,14 @@
           "date": "2026-10-03",
           "note": "Preserve trial: no relevant new capacity evidence reviewed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-05",
+          "note": "Trial unchanged; no capacity-aware training evidence relevant to this item inspected.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-03"
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "builder-authority-boundary-suite",
@@ -115,9 +120,14 @@
               "url": "https://developer.apple.com/news/?id=p6zjojqw"
             }
           ]
+        },
+        {
+          "date": "2026-10-05",
+          "note": "Trial unchanged; outcome verification is complementary but does not validate instruction-hierarchy enforcement.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-03"
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "builder-inference-admin-hardening",
@@ -291,9 +301,14 @@
           "date": "2026-10-03",
           "note": "Preserve watch: preview documentation does not substitute for alias-migration regression testing.",
           "sources": []
+        },
+        {
+          "date": "2026-10-05",
+          "note": "Watch unchanged; supplied alias documentation warrants continued version scrutiny but establishes no new behavioral delta.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-03"
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "builder-agent-memory-write-gate",
@@ -506,9 +521,19 @@
           "date": "2026-10-03",
           "note": "Preserve trial: AstaBrief's vendor latency figures are candidates for measurement, not validated harness outcomes.",
           "sources": []
+        },
+        {
+          "date": "2026-10-05",
+          "note": "Trial unchanged; ThinkingBox is relevant new material for backend-state grading and repeated-run evaluation, not validation of the existing harness.",
+          "sources": [
+            {
+              "label": "Microsoft ThinkingBox",
+              "url": "https://huggingface.co/blog/microsoft/thinkingbox"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-03"
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "builder-agent-dual-monitoring",
@@ -601,9 +626,14 @@
           "date": "2026-10-03",
           "note": "Preserve experimental despite the passed September 25 review date: BootLoops does not reproduce the watched biomolecular optimization.",
           "sources": []
+        },
+        {
+          "date": "2026-10-05",
+          "note": "Experimental unchanged and overdue; no reproduction evidence inspected.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-03"
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "builder-agentcore-v2-runtime",
@@ -640,7 +670,15 @@
           "disposition": "remain_trial",
           "note": "Three-day review: current secondary coverage mostly repeats AWS's ~2s P75 cold-start test. No independent real-workload V1-vs-V2 measurement cleared the decision threshold. Next review Sep26."
         }
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-05",
+          "note": "Trial unchanged and overdue; no A/B measurements inspected.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "builder-qwen38-omni-budget-harness",
@@ -678,7 +716,15 @@
           "disposition": "remain_trial",
           "note": "Three-day review: fresh secondary writeups mostly derive their numbers from Qwen's own launch tables and pricing documentation. No credible independent end-to-end multimodal production evaluation with pinned preprocessing, task success, latency and cost cleared the promotion threshold."
         }
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-05",
+          "note": "Trial unchanged and overdue; no relevant multimodal budget measurements inspected.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "builder-agent-egress-canary",
@@ -711,7 +757,15 @@
         "https://zcode.z.ai/en/changelog",
         "https://blog.ferstar.org/en/posts/zcode-silent-workspace-snapshot-upload/"
       ],
-      "review_history": []
+      "review_history": [],
+      "reviews": [
+        {
+          "date": "2026-10-05",
+          "note": "Trial unchanged and overdue; no new egress containment test inspected.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "builder-agent-egress-authority-canary",

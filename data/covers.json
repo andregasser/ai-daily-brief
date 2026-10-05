@@ -115,5 +115,15 @@
       "de": "Anthropic investiert in Deployment-Talent, Meta öffnet Geräteanbindungen und Apple will Zugriffsrechte verschärfen. Lokale Hardware und wissenschaftliche Workflows erweitern die Möglichkeiten — nicht automatisch den belegten Nutzen.",
       "en": "Anthropic invests in deployment talent, Meta opens device integrations and Apple plans tighter access controls. Local hardware and scientific workflows expand what is possible—not automatically what has proven useful."
     }
+  },
+  "2026-10-05": {
+    "kicker": {
+      "de": "Die Leitgeschichte",
+      "en": "The lead story"
+    },
+    "deck": {
+      "de": "OpenAI erweitert Werbeformate und Conversion-Messung, Microsoft prüft Agenten am Backend-Zustand. Neue US-Aufseher und ein späterer EU-Ausblick für Siri zeigen zugleich: Koordination, Verfügbarkeit und Verlässlichkeit bleiben getrennte Fragen.",
+      "en": "OpenAI expands ad formats and conversion measurement; Microsoft tests agents against backend state. New US oversight leaders and a later EU outlook for Siri also show that coordination, availability and reliability remain separate questions."
+    }
   }
 }

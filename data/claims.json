@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-03",
+  "updated_at": "2026-10-05",
   "claims": [
     {
       "id": "2026-09-10-kya-joint-framework",
@@ -4344,6 +4344,302 @@
         "Independent reporting summarizes the account; it does not independently reproduce the scientific results."
       ],
       "date": "2026-10-03"
+    },
+    {
+      "id": "2026-10-05-3bae19a5c6c8",
+      "claim": "OpenAI announces a limited-advertiser US visual-ad test during ChatGPT image generation later in October 2026, with labelled ads separate from generated images; this expands existing advertising rather than introducing it.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "OpenAI",
+        "ChatGPT"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "OpenAI announcement",
+          "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement/"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "Digiday",
+          "url": "https://digiday.com/marketing/openai-moves-to-make-chatgpt-ads-more-measurable-and-more-visual/"
+        }
+      ],
+      "contradictions": [
+        "Forthcoming test, not general availability; answer independence is stated policy, not an independently verified result."
+      ],
+      "date": "2026-10-05"
+    },
+    {
+      "id": "2026-10-05-1d50738d41c5",
+      "claim": "OpenAI announces conversion-data integrations with Hightouch, Tealium and LiveRamp; Digiday reports that measurement limitations constrain advertiser budgets and that inventory constraints remain.",
+      "evidence_state": "confirmed_multiple",
+      "entities": [
+        "OpenAI",
+        "Hightouch",
+        "Tealium",
+        "LiveRamp"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "OpenAI announcement",
+          "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement/"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "Digiday",
+          "url": "https://digiday.com/marketing/openai-moves-to-make-chatgpt-ads-more-measurable-and-more-visual/"
+        }
+      ],
+      "contradictions": [
+        "Measurement infrastructure alone does not establish incremental benefit or advertising profitability. OpenAI reports positive commercial-partner findings: WorkMagic's statistically significant incremental lift and DV Rockerbox's lower attributed acquisition costs; neither was independently validated, and attribution is distinct from causal lift.",
+        "The announcement does not demonstrate resolution of inventory limits."
+      ],
+      "date": "2026-10-05"
+    },
+    {
+      "id": "2026-10-05-afaeba6fa9f0",
+      "claim": "Digiday describes geo-based incrementality as early partner experimentation and reports OpenAI's statement that DoubleVerify and Integral Ad Science brand-suitability pilots will not access real user conversations.",
+      "evidence_state": "reported",
+      "entities": [
+        "OpenAI",
+        "DoubleVerify",
+        "Integral Ad Science"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Digiday",
+          "url": "https://digiday.com/marketing/openai-moves-to-make-chatgpt-ads-more-measurable-and-more-visual/"
+        }
+      ],
+      "contradictions": [
+        "The pilot descriptions alone establish neither independently validated lift nor independently verified privacy behaviour. OpenAI separately attributes positive early lift findings to WorkMagic; these remain commercial-partner measurements."
+      ],
+      "date": "2026-10-05"
+    },
+    {
+      "id": "2026-10-05-a22ee2236bd1",
+      "claim": "Microsoft's October 3 ThinkingBox article describes isolated MCP sessions graded by terminal backend state and side effects, 507 workflows with 20 independent runs from clean state, OpenEnv setup, and distinct pass@1, pass@20 and observed-20/20 metrics.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Microsoft",
+        "ThinkingBox",
+        "Hugging Face",
+        "OpenEnv"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_release_article",
+          "name": "Microsoft ThinkingBox",
+          "url": "https://huggingface.co/blog/microsoft/thinkingbox"
+        }
+      ],
+      "contradictions": [
+        "Selected article passages were inspected, not linked code or the full paper; no tests were reproduced. Observed 20/20 is finite observed consistency, not a guarantee."
+      ],
+      "date": "2026-10-05"
+    },
+    {
+      "id": "2026-10-05-ba68049deae0",
+      "claim": "The publisher reports Claude Opus 5.5 at 67.16% task-weighted overall pass@1, and Claude Opus 4.6 at 68.62% in retail versus 8.30% in auto insurance.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Microsoft",
+        "ThinkingBox",
+        "Claude Opus 5.5",
+        "Claude Opus 4.6"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_benchmark_report",
+          "name": "Microsoft ThinkingBox results",
+          "url": "https://huggingface.co/blog/microsoft/thinkingbox"
+        }
+      ],
+      "contradictions": [
+        "Not independent reproductions or production reliability; overall score is not success on all 20 repeats. Domain differences limit universal rankings."
+      ],
+      "date": "2026-10-05"
+    },
+    {
+      "id": "2026-10-05-f13c6116c979",
+      "claim": "ThinkingBox reports an ablation of 121,680 valid attempts across 12 models with 79,853 executable-check failures; 67.24% of failures terminated cleanly with a state-changing tool and no final tool error. Among failures, wrong values, extra effects and missing effects occurred in 77.61%, 43.30% and 25.36%, respectively.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Microsoft",
+        "ThinkingBox"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_benchmark_report",
+          "name": "Microsoft ThinkingBox ablation",
+          "url": "https://huggingface.co/blog/microsoft/thinkingbox"
+        }
+      ],
+      "contradictions": [
+        "State-check categories overlap and must not be summed; publisher measurements were not independently reproduced."
+      ],
+      "date": "2026-10-05"
+    },
+    {
+      "id": "2026-10-05-4a2e992bb07e",
+      "claim": "AP reports October 4 appointments of Jay Clayton to lead the Super Intelligence Force with Andrew Ferguson, Emil Michael and Scott Kupor, reporting to Trump and Susie Wiles; BBC dates the initiative's first announcement to September.",
+      "evidence_state": "reported",
+      "entities": [
+        "Donald Trump",
+        "Jay Clayton",
+        "Andrew Ferguson",
+        "Emil Michael",
+        "Scott Kupor",
+        "Susie Wiles"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/b8689ea07de9102a52bd1cd2049b5901"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "BBC supplied excerpt",
+          "url": "https://www.bbc.co.uk/news/articles/cqj6jenp26zyo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "contradictions": [
+        "Original appointment instrument was not inspected; appointment novelty is not initiative novelty. The name does not establish technical superintelligence."
+      ],
+      "date": "2026-10-05"
+    },
+    {
+      "id": "2026-10-05-f33109359dd7",
+      "claim": "Semafor reports a 120-day report mandate covering AI risks, opportunities and federal responsibility, alongside continued reliance on companies for risk management.",
+      "evidence_state": "reported",
+      "entities": [
+        "Super Intelligence Force",
+        "US federal government"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Semafor",
+          "url": "https://www.semafor.com/article/10/04/2026/trump-unveils-ai-task-force"
+        }
+      ],
+      "contradictions": [
+        "Deadline and broader membership lack inspected primary-document confirmation; coordination establishes no binding release gate or new statutory duty."
+      ],
+      "date": "2026-10-05"
+    },
+    {
+      "id": "2026-10-05-20e318a1b90c",
+      "claim": "Heise attributes a spring 2027 best-case EU iPhone/iPad Siri AI launch to Bloomberg; MacRumors attributes approximately five months of best-case waiting to Mark Gurman's latest newsletter.",
+      "evidence_state": "reported",
+      "entities": [
+        "Apple",
+        "Siri AI",
+        "Bloomberg",
+        "Mark Gurman"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "secondary_reporting",
+          "name": "Heise",
+          "url": "https://www.heise.de/news/Siri-AI-in-der-EU-iPhone-und-iPad-Nutzer-muessen-weiter-warten-11476199.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag"
+        },
+        {
+          "role": "secondary_reporting",
+          "name": "MacRumors",
+          "url": "https://www.macrumors.com/2026/10/05/extended-eu-wait-predicted-for-siri-ai/"
+        }
+      ],
+      "contradictions": [
+        "Shared underlying Bloomberg source, not independent confirmations; original newsletter uninspected. Forecasts are neither Apple commitments nor new regulatory decisions."
+      ],
+      "date": "2026-10-05"
+    },
+    {
+      "id": "2026-10-05-8594f4a0df25",
+      "claim": "Heise and MacRumors report unavailable EU Siri AI access on iPhone/iPad but available Mac access; Heise says full functionality including voice currently requires US English.",
+      "evidence_state": "reported",
+      "entities": [
+        "Apple",
+        "Siri AI",
+        "iPhone",
+        "iPad",
+        "Mac"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "journalism",
+          "name": "Heise",
+          "url": "https://www.heise.de/news/Siri-AI-in-der-EU-iPhone-und-iPad-Nutzer-muessen-weiter-warten-11476199.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag"
+        },
+        {
+          "role": "secondary_reporting",
+          "name": "MacRumors",
+          "url": "https://www.macrumors.com/2026/10/05/extended-eu-wait-predicted-for-siri-ai/"
+        }
+      ],
+      "contradictions": [
+        "Not checked against Apple support documentation; restrictions cannot be generalised across devices or languages."
+      ],
+      "date": "2026-10-05"
+    },
+    {
+      "id": "2026-10-05-4841332b1ece",
+      "claim": "Simon Willison's October 3 commentary argues for default hard spending limits that cut off further billable work rather than notification-only soft caps; the concept develops this as a proposed runtime authority boundary.",
+      "evidence_state": "early_signal",
+      "entities": [
+        "Simon Willison",
+        "agent runtimes"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_engineering_commentary",
+          "name": "Simon Willison",
+          "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/"
+        }
+      ],
+      "contradictions": [
+        "Engineering commentary is not a newly shipped general capability. Reservation architecture and the USD 10 example are editorial design guidance and an illustrative example, not measured results."
+      ],
+      "date": "2026-10-05"
+    },
+    {
+      "id": "2026-10-05-ed4970c27040",
+      "claim": "OpenAI attributes statistically significant incremental lift for wellness brand Dose to WorkMagic, with 67% of incremental purchases from net-new customers, and lower attributed acquisition costs to DV Rockerbox.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "OpenAI",
+        "WorkMagic",
+        "Dose",
+        "DV Rockerbox"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "OpenAI announcement reporting commercial-partner measurements",
+          "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement/"
+        }
+      ],
+      "contradictions": [
+        "Positive early commercial-partner measurements, not independent validation. Lower attributed acquisition costs are distinct from causal lift; neither finding establishes advertising profitability."
+      ],
+      "date": "2026-10-05"
     }
   ]
 }

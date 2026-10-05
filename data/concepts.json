@@ -815,6 +815,40 @@
         "de": "briefings/2026-10-03-de.html",
         "en": "briefings/2026-10-03-en.html"
       }
+    },
+    {
+      "id": "hard-budget-caps-runtime-authority",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "title": {
+        "de": "Harte Budgetgrenzen sind eine Laufzeit-Berechtigung",
+        "en": "Hard budget caps are runtime authority boundaries"
+      },
+      "summary": {
+        "de": "Ein Alarm meldet eine Überschreitung; eine harte Grenze verweigert weitere kostenpflichtige Arbeit. Bei Agenten muss diese Unterscheidung ausserhalb der Modellentscheidung durchgesetzt werden.",
+        "en": "An alert reports an overrun; a hard cap refuses further billable work. For agents, that distinction must be enforced outside the model's decision process."
+      },
+      "tags": [
+        "runtime-controls",
+        "agent-economics",
+        "budget-enforcement"
+      ],
+      "storylines": [
+        "agent-security",
+        "agent-economics"
+      ],
+      "sources": [
+        "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
+        "https://huggingface.co/blog/microsoft/thinkingbox"
+      ],
+      "related_concepts": [
+        "multimodal-token-budgeting",
+        "agent-default-deny-egress"
+      ],
+      "briefing": {
+        "de": "briefings/2026-10-05-de.html",
+        "en": "briefings/2026-10-05-en.html"
+      }
     }
   ]
 }

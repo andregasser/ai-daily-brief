@@ -1,0 +1,1197 @@
+{
+  "claims": [
+    {
+      "id": "2026-10-05-3bae19a5c6c8",
+      "claim": "OpenAI announces a limited-advertiser US visual-ad test during ChatGPT image generation later in October 2026, with labelled ads separate from generated images; this expands existing advertising rather than introducing it.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "OpenAI",
+        "ChatGPT"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "OpenAI announcement",
+          "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement/"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "Digiday",
+          "url": "https://digiday.com/marketing/openai-moves-to-make-chatgpt-ads-more-measurable-and-more-visual/"
+        }
+      ],
+      "contradictions": [
+        "Forthcoming test, not general availability; answer independence is stated policy, not an independently verified result."
+      ]
+    },
+    {
+      "id": "2026-10-05-1d50738d41c5",
+      "claim": "OpenAI announces conversion-data integrations with Hightouch, Tealium and LiveRamp; Digiday reports that measurement limitations constrain advertiser budgets and that inventory constraints remain.",
+      "evidence_state": "confirmed_multiple",
+      "entities": [
+        "OpenAI",
+        "Hightouch",
+        "Tealium",
+        "LiveRamp"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "OpenAI announcement",
+          "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement/"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "Digiday",
+          "url": "https://digiday.com/marketing/openai-moves-to-make-chatgpt-ads-more-measurable-and-more-visual/"
+        }
+      ],
+      "contradictions": [
+        "Measurement infrastructure alone does not establish incremental benefit or advertising profitability. OpenAI reports positive commercial-partner findings: WorkMagic's statistically significant incremental lift and DV Rockerbox's lower attributed acquisition costs; neither was independently validated, and attribution is distinct from causal lift.",
+        "The announcement does not demonstrate resolution of inventory limits."
+      ]
+    },
+    {
+      "id": "2026-10-05-afaeba6fa9f0",
+      "claim": "Digiday describes geo-based incrementality as early partner experimentation and reports OpenAI's statement that DoubleVerify and Integral Ad Science brand-suitability pilots will not access real user conversations.",
+      "evidence_state": "reported",
+      "entities": [
+        "OpenAI",
+        "DoubleVerify",
+        "Integral Ad Science"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Digiday",
+          "url": "https://digiday.com/marketing/openai-moves-to-make-chatgpt-ads-more-measurable-and-more-visual/"
+        }
+      ],
+      "contradictions": [
+        "The pilot descriptions alone establish neither independently validated lift nor independently verified privacy behaviour. OpenAI separately attributes positive early lift findings to WorkMagic; these remain commercial-partner measurements."
+      ]
+    },
+    {
+      "id": "2026-10-05-a22ee2236bd1",
+      "claim": "Microsoft's October 3 ThinkingBox article describes isolated MCP sessions graded by terminal backend state and side effects, 507 workflows with 20 independent runs from clean state, OpenEnv setup, and distinct pass@1, pass@20 and observed-20/20 metrics.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Microsoft",
+        "ThinkingBox",
+        "Hugging Face",
+        "OpenEnv"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_release_article",
+          "name": "Microsoft ThinkingBox",
+          "url": "https://huggingface.co/blog/microsoft/thinkingbox"
+        }
+      ],
+      "contradictions": [
+        "Selected article passages were inspected, not linked code or the full paper; no tests were reproduced. Observed 20/20 is finite observed consistency, not a guarantee."
+      ]
+    },
+    {
+      "id": "2026-10-05-ba68049deae0",
+      "claim": "The publisher reports Claude Opus 5.5 at 67.16% task-weighted overall pass@1, and Claude Opus 4.6 at 68.62% in retail versus 8.30% in auto insurance.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Microsoft",
+        "ThinkingBox",
+        "Claude Opus 5.5",
+        "Claude Opus 4.6"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_benchmark_report",
+          "name": "Microsoft ThinkingBox results",
+          "url": "https://huggingface.co/blog/microsoft/thinkingbox"
+        }
+      ],
+      "contradictions": [
+        "Not independent reproductions or production reliability; overall score is not success on all 20 repeats. Domain differences limit universal rankings."
+      ]
+    },
+    {
+      "id": "2026-10-05-f13c6116c979",
+      "claim": "ThinkingBox reports an ablation of 121,680 valid attempts across 12 models with 79,853 executable-check failures; 67.24% of failures terminated cleanly with a state-changing tool and no final tool error. Among failures, wrong values, extra effects and missing effects occurred in 77.61%, 43.30% and 25.36%, respectively.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Microsoft",
+        "ThinkingBox"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_benchmark_report",
+          "name": "Microsoft ThinkingBox ablation",
+          "url": "https://huggingface.co/blog/microsoft/thinkingbox"
+        }
+      ],
+      "contradictions": [
+        "State-check categories overlap and must not be summed; publisher measurements were not independently reproduced."
+      ]
+    },
+    {
+      "id": "2026-10-05-4a2e992bb07e",
+      "claim": "AP reports October 4 appointments of Jay Clayton to lead the Super Intelligence Force with Andrew Ferguson, Emil Michael and Scott Kupor, reporting to Trump and Susie Wiles; BBC dates the initiative's first announcement to September.",
+      "evidence_state": "reported",
+      "entities": [
+        "Donald Trump",
+        "Jay Clayton",
+        "Andrew Ferguson",
+        "Emil Michael",
+        "Scott Kupor",
+        "Susie Wiles"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/b8689ea07de9102a52bd1cd2049b5901"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "BBC supplied excerpt",
+          "url": "https://www.bbc.co.uk/news/articles/cqj6jenp26zyo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "contradictions": [
+        "Original appointment instrument was not inspected; appointment novelty is not initiative novelty. The name does not establish technical superintelligence."
+      ]
+    },
+    {
+      "id": "2026-10-05-f33109359dd7",
+      "claim": "Semafor reports a 120-day report mandate covering AI risks, opportunities and federal responsibility, alongside continued reliance on companies for risk management.",
+      "evidence_state": "reported",
+      "entities": [
+        "Super Intelligence Force",
+        "US federal government"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Semafor",
+          "url": "https://www.semafor.com/article/10/04/2026/trump-unveils-ai-task-force"
+        }
+      ],
+      "contradictions": [
+        "Deadline and broader membership lack inspected primary-document confirmation; coordination establishes no binding release gate or new statutory duty."
+      ]
+    },
+    {
+      "id": "2026-10-05-20e318a1b90c",
+      "claim": "Heise attributes a spring 2027 best-case EU iPhone/iPad Siri AI launch to Bloomberg; MacRumors attributes approximately five months of best-case waiting to Mark Gurman's latest newsletter.",
+      "evidence_state": "reported",
+      "entities": [
+        "Apple",
+        "Siri AI",
+        "Bloomberg",
+        "Mark Gurman"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "secondary_reporting",
+          "name": "Heise",
+          "url": "https://www.heise.de/news/Siri-AI-in-der-EU-iPhone-und-iPad-Nutzer-muessen-weiter-warten-11476199.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag"
+        },
+        {
+          "role": "secondary_reporting",
+          "name": "MacRumors",
+          "url": "https://www.macrumors.com/2026/10/05/extended-eu-wait-predicted-for-siri-ai/"
+        }
+      ],
+      "contradictions": [
+        "Shared underlying Bloomberg source, not independent confirmations; original newsletter uninspected. Forecasts are neither Apple commitments nor new regulatory decisions."
+      ]
+    },
+    {
+      "id": "2026-10-05-8594f4a0df25",
+      "claim": "Heise and MacRumors report unavailable EU Siri AI access on iPhone/iPad but available Mac access; Heise says full functionality including voice currently requires US English.",
+      "evidence_state": "reported",
+      "entities": [
+        "Apple",
+        "Siri AI",
+        "iPhone",
+        "iPad",
+        "Mac"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "journalism",
+          "name": "Heise",
+          "url": "https://www.heise.de/news/Siri-AI-in-der-EU-iPhone-und-iPad-Nutzer-muessen-weiter-warten-11476199.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag"
+        },
+        {
+          "role": "secondary_reporting",
+          "name": "MacRumors",
+          "url": "https://www.macrumors.com/2026/10/05/extended-eu-wait-predicted-for-siri-ai/"
+        }
+      ],
+      "contradictions": [
+        "Not checked against Apple support documentation; restrictions cannot be generalised across devices or languages."
+      ]
+    },
+    {
+      "id": "2026-10-05-4841332b1ece",
+      "claim": "Simon Willison's October 3 commentary argues for default hard spending limits that cut off further billable work rather than notification-only soft caps; the concept develops this as a proposed runtime authority boundary.",
+      "evidence_state": "early_signal",
+      "entities": [
+        "Simon Willison",
+        "agent runtimes"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_engineering_commentary",
+          "name": "Simon Willison",
+          "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/"
+        }
+      ],
+      "contradictions": [
+        "Engineering commentary is not a newly shipped general capability. Reservation architecture and the USD 10 example are editorial design guidance and an illustrative example, not measured results."
+      ]
+    },
+    {
+      "id": "2026-10-05-ed4970c27040",
+      "claim": "OpenAI attributes statistically significant incremental lift for wellness brand Dose to WorkMagic, with 67% of incremental purchases from net-new customers, and lower attributed acquisition costs to DV Rockerbox.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "OpenAI",
+        "WorkMagic",
+        "Dose",
+        "DV Rockerbox"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "OpenAI announcement reporting commercial-partner measurements",
+          "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement/"
+        }
+      ],
+      "contradictions": [
+        "Positive early commercial-partner measurements, not independent validation. Lower attributed acquisition costs are distinct from causal lift; neither finding establishes advertising profitability."
+      ]
+    }
+  ],
+  "date": "2026-10-05",
+  "source_coverage": {
+    "catalog_sources": 74,
+    "feed_sources": 61,
+    "successful_feeds": 58,
+    "failed_feeds": [
+      {
+        "source": "SemiAnalysis",
+        "feed": "https://newsletter.semianalysis.com/feed",
+        "error": "ParseError: unclosed CDATA section: line 102, column 138159"
+      },
+      {
+        "source": "Don't Worry About the Vase",
+        "feed": "https://thezvi.substack.com/feed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      },
+      {
+        "source": "Marcus on AI",
+        "feed": "https://garymarcus.substack.com/feed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      }
+    ],
+    "observations": [
+      {
+        "source": "OpenAI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Anthropic",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "Google DeepMind",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Google AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "AWS Machine Learning",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "NVIDIA AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Hugging Face",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Mistral AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "arXiv AI",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "arXiv Machine Learning",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "Google Research Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Microsoft Research",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Meta Engineering",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "NVIDIA Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "NVIDIA Developer Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "TechCrunch AI",
+        "status": "ok",
+        "items_seen": 6
+      },
+      {
+        "source": "The Verge AI",
+        "status": "ok",
+        "items_seen": 5
+      },
+      {
+        "source": "Ars Technica AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "MIT Technology Review AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "IEEE Spectrum AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Wired AI",
+        "status": "ok",
+        "items_seen": 3
+      },
+      {
+        "source": "VentureBeat AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "The Guardian AI",
+        "status": "ok",
+        "items_seen": 8
+      },
+      {
+        "source": "Financial Times AI",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "404 Media",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Platformer",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "CNBC Technology",
+        "status": "ok",
+        "items_seen": 8
+      },
+      {
+        "source": "BBC Technology",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "NYT Technology",
+        "status": "ok",
+        "items_seen": 7
+      },
+      {
+        "source": "Simon Willison",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Interconnects",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "SemiAnalysis",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Latent Space",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Import AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "One Useful Thing",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Understanding AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "AI Snake Oil",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Don't Worry About the Vase",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Marcus on AI",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "ChinaTalk",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Ahead of AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Lil'Log",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Andrej Karpathy",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "LessWrong",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "TLDR AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "arXiv Computational Linguistics",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "HF Daily Papers",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "MIT News AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Synced Review",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "r/LocalLLaMA",
+        "status": "ok",
+        "items_seen": 25
+      },
+      {
+        "source": "Hacker News AI 100+ points",
+        "status": "ok",
+        "items_seen": 5
+      },
+      {
+        "source": "AWS Machine Learning Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Azure Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "GitHub Blog AI and ML",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "PyTorch Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Ollama Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "THE DECODER DE",
+        "status": "ok",
+        "items_seen": 9
+      },
+      {
+        "source": "THE DECODER EN",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "heise online",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "t3n",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Google News DE/CH AI",
+        "status": "ok",
+        "items_seen": 40
+      }
+    ]
+  },
+  "coverage_gaps": [
+    "Exactly three web calls used; 12 shortlisted events considered.",
+    "Reuters and Artificial Analysis supplied fetches failed; no fresh independent model leaderboard verified.",
+    "SemiAnalysis, Don't Worry About the Vase and Marcus on AI feeds failed.",
+    "Landing pages are coverage signals only; truncated IEEE, ChinaTalk, BBC, MIT coverage and EC excerpts were not treated as fully checked.",
+    "ThinkingBox inspection covered selected article passages, not linked code, full paper or reproduced tests.",
+    "Original Bloomberg Siri forecast and federal task-force instrument remain uninspected.",
+    "Overdue continuity items retain supplied statuses; absence of evidence in this pass is not deadline adjudication.",
+    "No confirmed new China model, inference-serving, hardware or multimodal release selected."
+  ],
+  "continuity_reviews": [
+    {
+      "kind": "prediction",
+      "id": "pred-kya-interoperability-2026-10",
+      "assessment": "Open unchanged; no inspected specification, SDK or cross-network pilot evidence, and October 15 remains ahead.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-deepseek-v41-evidence-2026-09",
+      "assessment": "Falsified unchanged; supplied API landing content does not provide new independent task-success, latency or cost evaluation.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-epd-independent-evidence-2026-10",
+      "assessment": "Open unchanged; no relevant non-NVIDIA production reproduction inspected.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-us-duty-of-care-draft-2026-09",
+      "assessment": "Open unchanged and overdue; task-force appointments do not establish the predicted Senate draft or a documented legislative slip.",
+      "sources": [
+        {
+          "label": "AP task-force reporting",
+          "url": "https://apnews.com/article/b8689ea07de9102a52bd1cd2049b5901"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-embedded-evaluator-details-2026-09",
+      "assessment": "Confirmed unchanged; no new operational evaluator evidence inspected.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-sglang-cve-remediation-2026-09",
+      "assessment": "Falsified unchanged; this pass did not verify project remediation or advisory updates.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-deepseek-alias-regression-2026-09",
+      "assessment": "Falsified unchanged; supplied documentation describes retired Flash aliases but supplies no quantified regression or resolved-version telemetry.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-frontier-pacing-operationalization-2026-09",
+      "assessment": "Progress unchanged; new task-force leadership adds coordination, not verified evaluator governance, thresholds or legislative text.",
+      "sources": [
+        {
+          "label": "AP task-force reporting",
+          "url": "https://apnews.com/article/b8689ea07de9102a52bd1cd2049b5901"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-anthropic-evaluator-governance-2026-10",
+      "assessment": "Open unchanged; no additional evaluator or material governance detail inspected before October 10.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-agentcore-v2-production-repro-2026-10",
+      "assessment": "Open unchanged; no relevant independent measurement inspected before October 19.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-sagemaker-instance-preferences",
+      "assessment": "Trial unchanged; no capacity-aware training evidence relevant to this item inspected.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-authority-boundary-suite",
+      "assessment": "Trial unchanged; outcome verification is complementary but does not validate instruction-hierarchy enforcement.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-deepseek-v41-flash",
+      "assessment": "Watch unchanged; supplied alias documentation warrants continued version scrutiny but establishes no new behavioral delta.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-outcome-cost-benchmark-harness",
+      "assessment": "Trial unchanged; ThinkingBox is relevant new material for backend-state grading and repeated-run evaluation, not validation of the existing harness.",
+      "sources": [
+        {
+          "label": "Microsoft ThinkingBox",
+          "url": "https://huggingface.co/blog/microsoft/thinkingbox"
+        }
+      ]
+    },
+    {
+      "kind": "builder",
+      "id": "builder-biomolecular-kernel-repro",
+      "assessment": "Experimental unchanged and overdue; no reproduction evidence inspected.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agentcore-v2-runtime",
+      "assessment": "Trial unchanged and overdue; no A/B measurements inspected.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-qwen38-omni-budget-harness",
+      "assessment": "Trial unchanged and overdue; no relevant multimodal budget measurements inspected.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agent-egress-canary",
+      "assessment": "Trial unchanged and overdue; no new egress containment test inspected.",
+      "sources": []
+    },
+    {
+      "kind": "thesis",
+      "id": "nvidia-rack-platform",
+      "assessment": "High confidence unchanged; no relevant rack-platform evidence inspected.",
+      "sources": []
+    },
+    {
+      "kind": "thesis",
+      "id": "enterprise-agent-control-plane",
+      "assessment": "High confidence unchanged; hard-cap commentary supports the need conceptually but establishes no qualifying platform deployment.",
+      "sources": []
+    }
+  ],
+  "selection": {
+    "selected_stories": 4,
+    "rejections": [
+      {
+        "title": "Google pauses open-source bug-bounty submissions",
+        "reason": "The reported pause took effect October 1, before the window; October 4 coverage does not establish a new change."
+      },
+      {
+        "title": "Google RRSI harness regularization",
+        "reason": "Primary repository dates the paper release September 21; October 4 discovery coverage is not new research."
+      },
+      {
+        "title": "XiangqiBench closed-loop agent evaluation",
+        "reason": "The original arXiv page says submitted October 1, despite the October 5 feed announcement; no in-window revision established."
+      },
+      {
+        "title": "Default hard budget caps",
+        "reason": "Useful October 3 engineering commentary, but not a new product capability or measured event; retained as the concept."
+      },
+      {
+        "title": "NYC Council AI-company testimony",
+        "reason": "September 28 primary notice already announced October 5 participation; inspected evidence does not confirm testimony occurred or reveal new outcomes."
+      },
+      {
+        "title": "MIT higher-education AI report",
+        "reason": "The supplied article dates the underlying report to June 2026."
+      },
+      {
+        "title": "AI Millennium Prize controversy",
+        "reason": "Truncated retrospective discusses September proceedings and an earlier claim; no new verified proof or acceptance established."
+      },
+      {
+        "title": "China's AI safety funding constraints",
+        "reason": "Potentially useful analysis, but the truncated excerpt establishes no discrete new funding or policy event."
+      }
+    ]
+  },
+  "counterevidence": [
+    {
+      "story_id": "2026-10-05-chatgpt-visual-ads",
+      "assessment": "OpenAI reports positive early commercial-partner measurements: WorkMagic found statistically significant incremental lift for Dose, with 67% of incremental purchases from net-new customers, while DV Rockerbox reported lower attributed acquisition costs. These findings counter a blanket claim that no positive measurements exist, but lack independent validation; attribution is not causal lift and neither establishes profitability. Digiday reports continuing inventory constraints, which the announcement does not demonstrate are solved."
+    },
+    {
+      "story_id": "2026-10-03-thinkingbox",
+      "assessment": "Large domain differences undermine any universal model ranking, and selected page passages do not establish external reproducibility."
+    },
+    {
+      "story_id": "2026-10-04-federal-ai-taskforce",
+      "assessment": "The supplied BBC excerpt says the task force was first announced in September; appointment novelty must not become a claim that the entire initiative is new."
+    },
+    {
+      "story_id": "2026-10-05-siri-eu-outlook",
+      "assessment": "The forecast is not a newly announced regulatory decision or confirmed launch date."
+    }
+  ],
+  "watch_hits": [
+    "Agent evaluation and reliability: ThinkingBox backend-state grading and 20 repeats.",
+    "Enterprise AI economics: ChatGPT advertising measurement expansion.",
+    "AI governance: federal task-force leadership and conditional EU assistant access.",
+    "Agent runtime controls: hard budget caps as an engineering signal, not shipped capability."
+  ],
+  "builder_actions": [
+    {
+      "story_id": "2026-10-05-chatgpt-visual-ads",
+      "action": "Evaluate conversion-data permissions and incremental lift before committing production advertising budgets."
+    },
+    {
+      "story_id": "2026-10-03-thinkingbox",
+      "action": "Trial backend-state acceptance checks and repeated runs in the existing outcome-cost harness."
+    },
+    {
+      "story_id": "2026-10-04-federal-ai-taskforce",
+      "action": "Track the report mandate and enforceable mechanisms separately from voluntary company commitments."
+    },
+    {
+      "story_id": "2026-10-05-siri-eu-outlook",
+      "action": "Keep EU mobile deployment assumptions conditional and separate them from Mac support."
+    }
+  ],
+  "visual_provenance": [
+    {
+      "id": "budget-admission-example",
+      "class": "explanatory-diagram",
+      "basis": {
+        "de": "Illustratives Designbeispiel, kein gemessener Agentenlauf oder realer API-Payload. Angenommene Beträge in USD; eine korrekte Budgetentscheidung beweist keine korrekte fachliche Bearbeitung.",
+        "en": "Illustrative design example, not a measured agent run or real API payload. Assumed amounts in USD; a correct budget decision does not prove correct business execution."
+      },
+      "sources": [
+        {
+          "label": "Simon Willison on hard versus soft caps",
+          "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/"
+        }
+      ]
+    }
+  ],
+  "retrieval": [
+    {
+      "url": "https://news.bensbites.com/",
+      "source": "Ben's Bites News",
+      "status": "ok",
+      "final_url": "https://www.bensbites.com/",
+      "truncated": false,
+      "elapsed_seconds": 0.238
+    },
+    {
+      "url": "https://bensbites.com/",
+      "source": "Ben's Bites",
+      "status": "ok",
+      "final_url": "https://www.bensbites.com/",
+      "truncated": false,
+      "elapsed_seconds": 0.206
+    },
+    {
+      "url": "https://aiweekly.co/",
+      "source": "AI Weekly",
+      "status": "ok",
+      "final_url": "https://aiweekly.co/",
+      "truncated": true,
+      "elapsed_seconds": 0.118
+    },
+    {
+      "url": "https://ai.meta.com/blog/",
+      "source": "Meta AI",
+      "status": "ok",
+      "final_url": "https://ai.meta.com/blog/",
+      "truncated": false,
+      "elapsed_seconds": 2.485
+    },
+    {
+      "url": "https://research.meta.ai/",
+      "source": "Meta AI Research",
+      "status": "ok",
+      "final_url": "https://research.meta.ai/",
+      "truncated": false,
+      "elapsed_seconds": 0.169
+    },
+    {
+      "url": "https://blogs.microsoft.com/ai/",
+      "source": "Microsoft AI",
+      "status": "ok",
+      "final_url": "https://news.microsoft.com/source/topics/ai/",
+      "truncated": false,
+      "elapsed_seconds": 0.34
+    },
+    {
+      "url": "https://api-docs.deepseek.com/news/",
+      "source": "DeepSeek",
+      "status": "ok",
+      "final_url": "https://api-docs.deepseek.com/news/",
+      "truncated": false,
+      "elapsed_seconds": 0.449
+    },
+    {
+      "url": "https://www.worldlabs.ai/blog",
+      "source": "World Labs",
+      "status": "ok",
+      "final_url": "https://www.worldlabs.ai/blog",
+      "truncated": false,
+      "elapsed_seconds": 0.174
+    },
+    {
+      "url": "https://www.reuters.com/technology/artificial-intelligence/",
+      "source": "Reuters AI",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.281
+    },
+    {
+      "url": "https://artificialanalysis.ai/",
+      "source": "Artificial Analysis",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.212
+    },
+    {
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence",
+      "source": "European Commission Digital Strategy",
+      "status": "ok",
+      "final_url": "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence",
+      "truncated": true,
+      "elapsed_seconds": 0.42
+    },
+    {
+      "url": "https://www.aisi.gov.uk/",
+      "source": "UK AI Security Institute",
+      "status": "ok",
+      "final_url": "https://www.aisi.gov.uk/",
+      "truncated": false,
+      "elapsed_seconds": 0.184
+    },
+    {
+      "url": "https://www.heise.de/news/Siri-AI-in-der-EU-iPhone-und-iPad-Nutzer-muessen-weiter-warten-11476199.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "source": "heise online",
+      "status": "ok",
+      "final_url": "https://www.heise.de/news/Siri-AI-in-der-EU-iPhone-und-iPad-Nutzer-muessen-weiter-warten-11476199.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "truncated": false,
+      "elapsed_seconds": 0.887
+    },
+    {
+      "url": "https://spectrum.ieee.org/millennium-prize-ai",
+      "source": "IEEE Spectrum AI",
+      "status": "ok",
+      "final_url": "https://spectrum.ieee.org/millennium-prize-ai",
+      "truncated": true,
+      "elapsed_seconds": 0.142
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/05/world/asia/south-korea-ai-humanoid-robot-park.html",
+      "source": "NYT Technology",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.154
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/05/satya-nadella-reinvented-microsoft-once-can-he-do-it-in-the-ai-era.html",
+      "source": "CNBC Technology",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.266
+    },
+    {
+      "url": "https://the-decoder.com/ai-is-eroding-office-hours-study-groups-and-the-trust-between-faculty-and-students-mit-report-finds",
+      "source": "THE DECODER EN",
+      "status": "ok",
+      "final_url": "https://the-decoder.com/ai-is-eroding-office-hours-study-groups-and-the-trust-between-faculty-and-students-mit-report-finds/",
+      "truncated": true,
+      "elapsed_seconds": 1.661
+    },
+    {
+      "url": "https://www.chinatalk.media/p/chinas-ai-safety-money-problem",
+      "source": "ChinaTalk",
+      "status": "ok",
+      "final_url": "https://www.chinatalk.media/p/chinas-ai-safety-money-problem",
+      "truncated": true,
+      "elapsed_seconds": 0.114
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOakpsWEEzVk9OYUdKaXF0Zy1GczN2dUhKS3VueTZuZ1owXzRyVnZXczd0Y0I1N2J6Y2JqMGhUXzBPUHMwOEhwR09aclpNNmlaZWt5N09XYTAyYTNnX0NNajlfSnBMZ1hweGNsT0Q4WkdEcjN6eHdDNG5TOTI5LTZpMm5hNThMNGdhbmwxcEdLMkNMb0NqSVowbkgwTmM2MnRYbkJYdWkyYjZrd1hIal9RTzZldHpqSVc0bFZRVzBOcDJ5MzZESk9WM2Y5ZmFsN0daUHA4MjY5ZEZZWmFGZkJWR29SQmVvU1hJTGF0bUljc3JIamxtV3lZUWhmeHhSZw?oc=5",
+      "source": "Google News DE/CH AI",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.205
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQdmxFaTRxb3pSUEw0NC1qT0lIMU9wY1ducjF3SkZEXzJpT2M3MGdHbWNOZVM3QlFZVkRDZ29pSEV0TmU0dURxWkZPNWNRTXAwUURhaXdMb0E1OGsxWlRUOTVjdC02OFFINGdndW1lb2U4c0FWT2x3cnlmZFVQR0xSQlN4NWFURW1fLW5N?oc=5",
+      "source": "Anthropic",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.181
+    },
+    {
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wy5bmy/which_model_which_harness_i_have_data_for_you",
+      "source": "r/LocalLLaMA",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.1
+    },
+    {
+      "url": "https://the-decoder.de/mit-bericht-fordert-radikale-neuordnung-der-hochschulbildung-wegen-generativer-ki",
+      "source": "THE DECODER DE",
+      "status": "ok",
+      "final_url": "https://the-decoder.de/mit-bericht-fordert-radikale-neuordnung-der-hochschulbildung-wegen-generativer-ki/",
+      "truncated": true,
+      "elapsed_seconds": 1.364
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/cqj6jenp26zyo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Technology",
+      "status": "ok",
+      "final_url": "https://www.bbc.co.uk/news/articles/cqj6jenp26zyo?at_medium=RSS&at_campaign=rss",
+      "truncated": true,
+      "elapsed_seconds": 0.208
+    },
+    {
+      "url": "https://www.ft.com/content/91741bbc-9626-41fc-8320-9ab9adbd8631?syn-25a6b1a6=1",
+      "source": "Financial Times AI",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.083
+    },
+    {
+      "url": "https://apnews.com/article/b8689ea07de9102a52bd1cd2049b5901",
+      "source": "",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.151
+    },
+    {
+      "url": "https://digiday.com/marketing/openai-moves-to-make-chatgpt-ads-more-measurable-and-more-visual/",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://digiday.com/marketing/openai-moves-to-make-chatgpt-ads-more-measurable-and-more-visual/",
+      "truncated": false,
+      "elapsed_seconds": 0.222
+    },
+    {
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://huggingface.co/blog/microsoft/thinkingbox",
+      "truncated": true,
+      "elapsed_seconds": 0.13
+    },
+    {
+      "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement/",
+      "source": "",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.062
+    },
+    {
+      "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
+      "truncated": false,
+      "elapsed_seconds": 0.061
+    },
+    {
+      "url": "https://www.macrumors.com/2026/10/05/extended-eu-wait-predicted-for-siri-ai/",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://www.macrumors.com/2026/10/05/extended-eu-wait-predicted-for-siri-ai/",
+      "truncated": false,
+      "elapsed_seconds": 0.186
+    },
+    {
+      "url": "https://www.semafor.com/article/10/04/2026/trump-unveils-ai-task-force",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://www.semafor.com/article/10/04/2026/trump-unveils-ai-task-force",
+      "truncated": false,
+      "elapsed_seconds": 0.14
+    }
+  ],
+  "omitted_context": {
+    "active_storylines": 4,
+    "recent_or_contested_claims": 16,
+    "predictions_due_or_near_due": 0,
+    "builder_radar_due_or_recent": 1,
+    "active_theses": 0,
+    "trend_summary": 4,
+    "recent_concepts": 5
+  },
+  "model": "gpt-6.1-sol",
+  "red_team_report": {
+    "approved": true,
+    "issues": [],
+    "checks": [
+      "Re-reviewed the corrected draft against supplied evidence and the previous independent review; performed no new web retrieval.",
+      "Both previous issues are resolved: bilingual advertising coverage and audit now acknowledge WorkMagic's positive partner-reported lift and DV Rockerbox's lower attributed acquisition costs, distinguish attribution from causal lift, and limit conclusions to absent independent validation or profitability evidence.",
+      "ThinkingBox prediction now treats one failed attempt as counterevidence, not sufficient falsification of an existential prediction; incomplete coverage and missing reports remain inconclusive.",
+      "Checked material advertising dates, US test scope, advertiser limitations, integrations, labeling, privacy-policy attribution and inventory counterevidence using supplied passages and prior findings.",
+      "Checked ThinkingBox publication date, 507 workflows, 20 repeats, metric definitions, model scores, ablation counts and overlapping failure percentages. The 121,680 attempts equal 507 × 20 × 12; publisher results are not presented as independently reproduced or production reliability.",
+      "Checked appointment attribution, names, reporting chain, September initiative context and reported 120-day mandate. The draft does not infer statutory duties or binding release authority from coordination.",
+      "Checked Siri's separately attributed five-month and spring-2027 forecasts, shared Bloomberg provenance, device distinctions and Heise-attributed language limitation. Primary confirmation gaps remain explicit.",
+      "Compared DE/EN headline, lead, summaries, stories, concept, watch items and visual; found no material translation mismatch or new factual problem introduced by corrections.",
+      "Checked novelty against supplied prior headlines and edition context; announcements, appointments and revised forecasts are distinguished from previously existing offerings or initiatives.",
+      "Checked all 20 supplied continuity records, including overdue items. Historical statuses are retained with evidence limitations rather than newly adjudicated from missing evidence.",
+      "Checked coverage against supplied records: 58 successful plus three failed feeds equals 61; failure identities match; page-fetch failures remain distinct from feed outcomes and prior independent retrieval. Four selected stories plus eight rejections equals 12 shortlisted events. omitted_context is treated as omitted-record counts.",
+      "Checked hard-cap guidance as proposed architecture, not measured performance or general product availability. Visual question, takeaway, USD units, assumed 10/8/1/2 amounts, 8 + 1 + 2 = 11, selected rejection outcome and backend-state caveat agree. No misleading plot, scale or comparative matrix is present.",
+      "Checked prediction deadlines, review dates, confirmation requirements and missing-evidence limitations; no remaining material publication defect identified."
+    ],
+    "source_checks": [
+      {
+        "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement/",
+        "excerpt": "WorkMagic reported statistically significant lift for wellness brand Dose, with 67% of incremental purchases coming from net-new customers.",
+        "assessment": "Reused previous independent retrieval. Supports the newly included positive commercial-partner result and 67% figure, not independent validation or profitability."
+      },
+      {
+        "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+        "excerpt": "Claude Opus 5.5 | 80.97 | 68.40 | 54.28 | 71.25 | 61.58 | 67.16",
+        "assessment": "Reused previous independent table check. Supports the reported 67.16% task-weighted pass@1 score; previous surrounding-passage findings support metric distinctions and Opus 4.6 domain figures. No tests were reproduced."
+      },
+      {
+        "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+        "excerpt": "In a common-set ablation covering 121,680 valid trials across 12 LLM models, 79,853 attempts failed the executable checks. Of those failures, 67.24% still terminated cleanly, invoked a state-changing tool, and reported no final tool error.",
+        "assessment": "Supplied passage supports the ablation counts, denominator and clean-looking failure percentage; these remain publisher-reported measurements."
+      },
+      {
+        "url": "https://apnews.com/article/b8689ea07de9102a52bd1cd2049b5901",
+        "excerpt": "The group will report to Trump and his chief of staff, Susie Wiles.",
+        "assessment": "Reused previous independent retrieval supporting the reporting chain. Prior adjoining-passage findings support appointments and membership despite the separate local HTTP failure."
+      },
+      {
+        "url": "https://www.semafor.com/article/10/04/2026/trump-unveils-ai-task-force",
+        "excerpt": "will complete a report within 120 days that outlines the risks and opportunities of AI and determines the federal government’s responsibility.",
+        "assessment": "Reused previous independent retrieval supporting the attributed deadline and scope, not primary legal confirmation or enforceable release authority."
+      },
+      {
+        "url": "https://www.macrumors.com/2026/10/05/extended-eu-wait-predicted-for-siri-ai/",
+        "excerpt": "Gurman said a delay of around five months would be the \"absolute best-case scenario,\"",
+        "assessment": "Reused previous independent retrieval supporting the forecast and attribution, not an Apple commitment or independent confirmation of Bloomberg's underlying forecast."
+      },
+      {
+        "url": "https://digiday.com/marketing/openai-moves-to-make-chatgpt-ads-more-measurable-and-more-visual/",
+        "excerpt": "they can’t measure the ads properly, they don’t have enough formats to work with and there isn’t enough inventory",
+        "assessment": "Supplied passage supports measurement, format and inventory constraints; no new retrieval claimed."
+      },
+      {
+        "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
+        "excerpt": "These need to be hard limits. Soft caps, “after $X/month, send me a warning email”, will not cut it.",
+        "assessment": "Supplied commentary supports the hard-cap versus warning distinction. Reservation architecture and visual amounts are explicitly editorial illustrations."
+      }
+    ]
+  },
+  "publish_decision": "publish",
+  "visual_plan": [
+    {
+      "id": "budget-admission-example",
+      "target": "concept",
+      "kind": "decision",
+      "title": {
+        "de": "Reicht das Restbudget für den nächsten Aufruf?",
+        "en": "Can the remaining budget admit the next call?"
+      },
+      "question": {
+        "de": "Wie verändert reservierte Arbeit die Entscheidung über einen neuen kostenpflichtigen Aufruf?",
+        "en": "How does reserved work change the decision on a new billable call?"
+      },
+      "takeaway": {
+        "de": "Bereits reservierte Kosten zählen mit: Der nächste Aufruf wird vor dem Start gestoppt, nicht erst nach einer Warnung.",
+        "en": "Already-reserved costs count: the next call is stopped before starting, not merely followed by a warning."
+      },
+      "sources": [
+        {
+          "label": "Simon Willison on hard versus soft caps",
+          "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/"
+        }
+      ]
+    }
+  ]
+}

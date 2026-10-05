@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 995.05" role="img" aria-labelledby="title desc">
+<title id="title">Can the remaining budget admit the next call?</title><desc id="desc">How does reserved work change the decision on a new billable call? Budget USD 10 · settled USD 8 · reserved USD 1 · next call at most USD 2 8 + 1 + 2 ≤ 10? Reject and pause. No new call authorised; the task remains incomplete and its backend state must be checked separately.. Already-reserved costs count: the next call is stopped before starting, not merely followed by a warning. Illustrative design example, not a measured agent run or real API payload. Assumed amounts in USD; a correct budget decision does not prove correct business execution.</desc>
+<rect width="480" height="995.05" fill="#fffdf8"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="28" y="32" font-size="13" fill="#16786d" font-weight="700" text-anchor="start">ILLUSTRATIVE EXAMPLE</text>
+<text x="28" y="68" font-size="27" fill="#233548" font-weight="700" text-anchor="start">Can the remaining budget admit</text>
+<text x="28" y="104.45" font-size="27" fill="#233548" font-weight="700" text-anchor="start">the next call?</text>
+<path d="M32 155.9 h34 l12 12 v43 h-46 z M66 155.9 v12 h12 M42 182.9 h24 M42 193.9 h20" fill="none" stroke="#64748b" stroke-width="2"/>
+<text x="100" y="175.9" font-size="21" fill="#233548" font-weight="400" text-anchor="start">Budget USD 10 · settled</text>
+<text x="100" y="204.25" font-size="21" fill="#233548" font-weight="400" text-anchor="start">USD 8 · reserved USD 1 ·</text>
+<text x="100" y="232.6" font-size="21" fill="#233548" font-weight="400" text-anchor="start">next call at most USD 2</text>
+<path d="M240 275.95 L240 300.95" stroke="#16786d" stroke-width="2" fill="none"/>
+<text x="240" y="330.95" font-size="23" fill="#233548" font-weight="700" text-anchor="middle">8 + 1 + 2 ≤ 10?</text>
+<path d="M240 366 L240 388" stroke="#64748b" stroke-width="1" fill="none"/>
+<path d="M98.6667 388 L381.333 388" stroke="#64748b" stroke-width="1" fill="none"/>
+<path d="M98.6667 388 L98.6667 422" stroke="#64748b" stroke-width="1" fill="none" stroke-dasharray="4 5"/>
+<circle cx="98.6667" cy="423" r="5" fill="#64748b"/>
+<text x="98.6667" y="456" font-size="20" fill="#64748b" font-weight="700" text-anchor="middle">Admit</text>
+<path d="M240 388 L240 422" stroke="#16786d" stroke-width="3" fill="none"/>
+<circle cx="240" cy="423" r="5" fill="#16786d"/>
+<text x="240" y="456" font-size="20" fill="#16786d" font-weight="700" text-anchor="middle">Reject and</text>
+<text x="240" y="483" font-size="20" fill="#16786d" font-weight="700" text-anchor="middle">pause</text>
+<path d="M381.333 388 L381.333 422" stroke="#64748b" stroke-width="1" fill="none" stroke-dasharray="4 5"/>
+<circle cx="381.333" cy="423" r="5" fill="#64748b"/>
+<text x="381.333" y="456" font-size="20" fill="#64748b" font-weight="700" text-anchor="middle">Warn only</text>
+<text x="98.6667" y="520" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">Only if the</text>
+<text x="98.6667" y="542.95" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">total does not</text>
+<text x="98.6667" y="565.9" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">exceed the</text>
+<text x="98.6667" y="588.85" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">budget.</text>
+<text x="240" y="520" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">Here: USD 11 &gt;</text>
+<text x="240" y="542.95" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">USD 10; save</text>
+<text x="240" y="565.9" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">partial</text>
+<text x="240" y="588.85" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">progress,</text>
+<text x="240" y="611.8" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">request</text>
+<text x="240" y="634.75" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">approval.</text>
+<text x="381.333" y="520" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">Not a hard</text>
+<text x="381.333" y="542.95" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">cap: further</text>
+<text x="381.333" y="565.9" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">spending</text>
+<text x="381.333" y="588.85" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">remains</text>
+<text x="381.333" y="611.8" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">possible.</text>
+<path d="M28 688 L452 688" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="28" y="723" font-size="21" fill="#16786d" font-weight="600" text-anchor="start">No new call authorised; the task</text>
+<text x="28" y="751.35" font-size="21" fill="#16786d" font-weight="600" text-anchor="start">remains incomplete and its backend</text>
+<text x="28" y="779.7" font-size="21" fill="#16786d" font-weight="600" text-anchor="start">state must be checked separately.</text>
+<path d="M28 828.05 L452 828.05" stroke="#16786d" stroke-width="2" fill="none"/>
+<text x="28" y="861.05" font-size="20" fill="#233548" font-weight="600" text-anchor="start">Already-reserved costs count: the</text>
+<text x="28" y="888.05" font-size="20" fill="#233548" font-weight="600" text-anchor="start">next call is stopped before</text>
+<text x="28" y="915.05" font-size="20" fill="#233548" font-weight="600" text-anchor="start">starting, not merely followed by a</text>
+<text x="28" y="942.05" font-size="20" fill="#233548" font-weight="600" text-anchor="start">warning.</text>
+</g></svg>

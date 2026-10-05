@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-10-05",
+    "de": "briefings/2026-10-05-de.html",
+    "en": "briefings/2026-10-05-en.html",
+    "headline": {
+      "de": "KI bekommt Messinstrumente – aber noch keinen Wirkungsnachweis",
+      "en": "AI gets measurement tools—not yet proof of value"
+    },
+    "tags": [
+      "advertising-measurement",
+      "agent-reliability",
+      "runtime-controls",
+      "ai-governance",
+      "regional-availability"
+    ],
+    "concept": {
+      "de": "Harte Budgetgrenzen sind eine Laufzeit-Berechtigung",
+      "en": "Hard budget caps are runtime authority boundaries"
+    }
+  },
+  {
     "date": "2026-10-03",
     "de": "briefings/2026-10-03-de.html",
     "en": "briefings/2026-10-03-en.html",

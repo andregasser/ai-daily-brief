@@ -1,0 +1,75 @@
+[
+  {
+    "id": "budget-admission-example",
+    "target": "concept",
+    "kind": "decision",
+    "example": true,
+    "title": {
+      "de": "Reicht das Restbudget für den nächsten Aufruf?",
+      "en": "Can the remaining budget admit the next call?"
+    },
+    "question": {
+      "de": "Wie verändert reservierte Arbeit die Entscheidung über einen neuen kostenpflichtigen Aufruf?",
+      "en": "How does reserved work change the decision on a new billable call?"
+    },
+    "caption": {
+      "de": "Illustratives Designbeispiel, kein gemessener Agentenlauf oder realer API-Payload. Angenommene Beträge in USD; eine korrekte Budgetentscheidung beweist keine korrekte fachliche Bearbeitung.",
+      "en": "Illustrative design example, not a measured agent run or real API payload. Assumed amounts in USD; a correct budget decision does not prove correct business execution."
+    },
+    "takeaway": {
+      "de": "Bereits reservierte Kosten zählen mit: Der nächste Aufruf wird vor dem Start gestoppt, nicht erst nach einer Warnung.",
+      "en": "Already-reserved costs count: the next call is stopped before starting, not merely followed by a warning."
+    },
+    "sources": [
+      {
+        "label": "Simon Willison on hard versus soft caps",
+        "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/"
+      }
+    ],
+    "input": {
+      "de": "Budget USD 10 · abgerechnet USD 8 · reserviert USD 1 · nächster Aufruf höchstens USD 2",
+      "en": "Budget USD 10 · settled USD 8 · reserved USD 1 · next call at most USD 2"
+    },
+    "question_label": {
+      "de": "8 + 1 + 2 ≤ 10?",
+      "en": "8 + 1 + 2 ≤ 10?"
+    },
+    "outcomes": [
+      {
+        "label": {
+          "de": "Zulassen",
+          "en": "Admit"
+        },
+        "detail": {
+          "de": "Nur wenn die Summe das Budget nicht überschreitet.",
+          "en": "Only if the total does not exceed the budget."
+        }
+      },
+      {
+        "label": {
+          "de": "Ablehnen und pausieren",
+          "en": "Reject and pause"
+        },
+        "detail": {
+          "de": "Hier: USD 11 > USD 10; Teilstand sichern, Freigabe anfordern.",
+          "en": "Here: USD 11 > USD 10; save partial progress, request approval."
+        }
+      },
+      {
+        "label": {
+          "de": "Nur warnen",
+          "en": "Warn only"
+        },
+        "detail": {
+          "de": "Keine harte Grenze: weitere Ausgabe bleibt möglich.",
+          "en": "Not a hard cap: further spending remains possible."
+        }
+      }
+    ],
+    "selected": 1,
+    "result": {
+      "de": "Kein neuer Aufruf autorisiert; die Aufgabe bleibt unvollständig und ihr Backend-Zustand muss separat geprüft werden.",
+      "en": "No new call authorised; the task remains incomplete and its backend state must be checked separately."
+    }
+  }
+]

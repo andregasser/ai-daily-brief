@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-03",
+  "updated_at": "2026-10-05",
   "predictions": [
     {
       "id": "pred-kya-interoperability-2026-10",
@@ -37,9 +37,14 @@
           "date": "2026-10-03",
           "note": "Preserve open: searches found similarly named projects, not a verified implementation from the watched initiative.",
           "sources": []
+        },
+        {
+          "date": "2026-10-05",
+          "note": "Open unchanged; no inspected specification, SDK or cross-network pilot evidence, and October 15 remains ahead.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-03"
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "pred-deepseek-v41-evidence-2026-09",
@@ -80,9 +85,14 @@
           "date": "2026-10-03",
           "note": "Preserve falsified: supplied documentation adds no independent task-success, latency or cost comparison.",
           "sources": []
+        },
+        {
+          "date": "2026-10-05",
+          "note": "Falsified unchanged; supplied API landing content does not provide new independent task-success, latency or cost evaluation.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-03"
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "pred-china-hbm-pricing-q4",
@@ -158,9 +168,14 @@
           "date": "2026-10-03",
           "note": "Preserve open: an older EPD paper surfaced, but no qualifying new independent reproduction was established.",
           "sources": []
+        },
+        {
+          "date": "2026-10-05",
+          "note": "Open unchanged; no relevant non-NVIDIA production reproduction inspected.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-03"
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "pred-us-duty-of-care-draft-2026-09",
@@ -222,9 +237,19 @@
           "date": "2026-10-03",
           "note": "Preserve open despite the passed September 30 deadline: hearing material does not resolve either branch of the prediction.",
           "sources": []
+        },
+        {
+          "date": "2026-10-05",
+          "note": "Open unchanged and overdue; task-force appointments do not establish the predicted Senate draft or a documented legislative slip.",
+          "sources": [
+            {
+              "label": "AP task-force reporting",
+              "url": "https://apnews.com/article/b8689ea07de9102a52bd1cd2049b5901"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-03"
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "pred-openai-misalignment-disclosure-2026-10",
@@ -346,9 +371,14 @@
           "date": "2026-10-03",
           "note": "Preserve confirmed: no relevant new evidence changes the supplied assessment.",
           "sources": []
+        },
+        {
+          "date": "2026-10-05",
+          "note": "Confirmed unchanged; no new operational evaluator evidence inspected.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-03"
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "pred-sglang-cve-remediation-2026-09",
@@ -401,9 +431,14 @@
           "date": "2026-10-03",
           "note": "Preserve falsified: remediation was not reverified in this run.",
           "sources": []
+        },
+        {
+          "date": "2026-10-05",
+          "note": "Falsified unchanged; this pass did not verify project remediation or advisory updates.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-03"
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "pred-deepseek-alias-regression-2026-09",
@@ -445,9 +480,14 @@
           "date": "2026-10-03",
           "note": "Preserve falsified: the supplied legacy-Flash routing notice does not establish the predicted Pro-alias regression evidence.",
           "sources": []
+        },
+        {
+          "date": "2026-10-05",
+          "note": "Falsified unchanged; supplied documentation describes retired Flash aliases but supplies no quantified regression or resolved-version telemetry.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-03"
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "pred-frontier-pacing-operationalization-2026-09",
@@ -555,9 +595,19 @@
           "date": "2026-10-03",
           "note": "Preserve progress: retrieved material does not justify upgrading operationalization to confirmed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-05",
+          "note": "Progress unchanged; new task-force leadership adds coordination, not verified evaluator governance, thresholds or legislative text.",
+          "sources": [
+            {
+              "label": "AP task-force reporting",
+              "url": "https://apnews.com/article/b8689ea07de9102a52bd1cd2049b5901"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-03"
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "pred-anthropic-evaluator-governance-2026-10",
@@ -600,9 +650,14 @@
           "date": "2026-10-03",
           "note": "Preserve open: Academy training is unrelated to independent evaluator selection or authority.",
           "sources": []
+        },
+        {
+          "date": "2026-10-05",
+          "note": "Open unchanged; no additional evaluator or material governance detail inspected before October 10.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-03"
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "pred-agentcore-v2-production-repro-2026-10",
@@ -624,7 +679,15 @@
           "url": "https://aws.amazon.com/blogs/machine-learning/the-new-agentcore-runtime-elastic-optimized-and-consistently-fast-starts/",
           "note": "AWS publishes a concrete V2 benchmark and opt-in boundary, but the benchmark uses an empty echo agent and is vendor-run."
         }
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-05",
+          "note": "Open unchanged; no relevant independent measurement inspected before October 19.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-05"
     },
     {
       "id": "pred-qwen38-omni-independent-evidence-2026-10",
@@ -1002,6 +1065,70 @@
       "confidence": "medium",
       "id": "pred-2026-10-03-f58215cb6a1b",
       "created": "2026-10-03",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-10-31, OpenAI will begin the limited US visual-ad test during ChatGPT image generation announced on October 5.",
+      "review_after": "2026-11-01",
+      "confirmation_criteria": [
+        "A dated OpenAI update explicitly states that the US image-generation ad test has begun, or credible reporting documents active placements with participating advertisers."
+      ],
+      "falsification_criteria": [
+        "OpenAI explicitly postpones or cancels the test beyond October 31, or a credible post-deadline report establishes that the planned test did not begin by the deadline.",
+        "Missing launch evidence alone is inconclusive; conversion integrations or a repeated announcement do not confirm launch."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-05-4aff121acb05",
+      "created": "2026-10-05",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-05, at least one independent team will publish a ThinkingBox reproduction with executable backend-state checks and repeated runs, rather than only restating the publisher's leaderboard.",
+      "review_after": "2026-11-06",
+      "confirmation_criteria": [
+        "A non-publisher report provides model and harness configuration, backend-state acceptance results and repeated-run measurements sufficient to assess consistency."
+      ],
+      "falsification_criteria": [
+        "Affirmative post-deadline evidence establishes that every claimed independent reproduction published by November 5 fails the specified requirements for executable backend-state checks, repeated-run measurements and model/harness details. A single unsuccessful attempt is counterevidence, not sufficient falsification: another team could succeed. If publication coverage is incomplete or no reports are found, the outcome remains inconclusive.",
+        "No independent report found by the review date is inconclusive, not evidence that reproduction failed."
+      ],
+      "confidence": "low",
+      "id": "pred-2026-10-05-0f4500ae2312",
+      "created": "2026-10-05",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-10-19, a public official US task-force instrument or mandate will explicitly corroborate the reported 120-day assignment on AI risks, opportunities and federal responsibilities.",
+      "review_after": "2026-10-20",
+      "confirmation_criteria": [
+        "An official government document states the task force's report obligation, 120-day deadline and substantive scope."
+      ],
+      "falsification_criteria": [
+        "An official mandate specifies a materially different deadline or scope, or an official statement says the reported 120-day assignment is incorrect or has been withdrawn.",
+        "Failure to locate an original mandate is inconclusive; additional journalism or appointments alone do not confirm it."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-05-a3e6697681e0",
+      "created": "2026-10-05",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "As of 2026-12-31, Siri AI will remain officially unavailable on iPhone and iPad in the EU, separately from reported Mac access.",
+      "review_after": "2027-01-02",
+      "confirmation_criteria": [
+        "A current Apple availability statement or credible contemporaneous reporting explicitly confirms continued EU iPhone/iPad unavailability at year-end."
+      ],
+      "falsification_criteria": [
+        "Apple confirms EU Siri AI availability on either iPhone or iPad by December 31, or credible reporting documents an actual official rollout on either device class before that date.",
+        "Mac access, language expansion elsewhere and absence of a launch report do not resolve the prediction; missing current availability evidence is inconclusive."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-05-f1a355181abb",
+      "created": "2026-10-05",
       "status": "open",
       "evidence": []
     }

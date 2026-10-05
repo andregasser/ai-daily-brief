@@ -14,7 +14,7 @@
         "NVLink Fusion sees little production adoption outside NVIDIA-centric systems",
         "NVIDIA retreats from third-party XPU integration"
       ],
-      "last_reviewed": "2026-10-03",
+      "last_reviewed": "2026-10-05",
       "evidence_updates": [
         {
           "date": "2026-09-09",
@@ -53,6 +53,11 @@
           "date": "2026-10-03",
           "note": "Preserve high confidence: desktop Spark clustering is not new evidence of third-party accelerator integration into rack architecture.",
           "sources": []
+        },
+        {
+          "date": "2026-10-05",
+          "note": "High confidence unchanged; no relevant rack-platform evidence inspected.",
+          "sources": []
         }
       ]
     },
@@ -69,7 +74,7 @@
         "Customer-controlled agent telemetry remains a niche or pilot-only feature without meaningful enterprise production adoption",
         "Major providers retreat toward model-only refusals without exposing operational policy controls"
       ],
-      "last_reviewed": "2026-10-03",
+      "last_reviewed": "2026-10-05",
       "evidence_updates": [
         {
           "date": "2026-09-09",
@@ -140,6 +145,11 @@
         {
           "date": "2026-10-03",
           "note": "Preserve high confidence: OS permissions and device SDKs do not satisfy customer-configurable platform policies plus telemetry.",
+          "sources": []
+        },
+        {
+          "date": "2026-10-05",
+          "note": "High confidence unchanged; hard-cap commentary supports the need conceptually but establishes no qualifying platform deployment.",
           "sources": []
         }
       ]
