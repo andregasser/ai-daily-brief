@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-05",
+  "updated_at": "2026-10-06",
   "predictions": [
     {
       "id": "pred-kya-interoperability-2026-10",
@@ -42,9 +42,14 @@
           "date": "2026-10-05",
           "note": "Open unchanged; no inspected specification, SDK or cross-network pilot evidence, and October 15 remains ahead.",
           "sources": []
+        },
+        {
+          "date": "2026-10-06",
+          "note": "Open unchanged; no implementable specification or cross-network pilot was verified.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-05"
+      "last_reviewed": "2026-10-06"
     },
     {
       "id": "pred-deepseek-v41-evidence-2026-09",
@@ -90,9 +95,14 @@
           "date": "2026-10-05",
           "note": "Falsified unchanged; supplied API landing content does not provide new independent task-success, latency or cost evaluation.",
           "sources": []
+        },
+        {
+          "date": "2026-10-06",
+          "note": "Falsified unchanged; financing reporting adds no independent task-success, latency or cost evaluation.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-05"
+      "last_reviewed": "2026-10-06"
     },
     {
       "id": "pred-china-hbm-pricing-q4",
@@ -173,9 +183,14 @@
           "date": "2026-10-05",
           "note": "Open unchanged; no relevant non-NVIDIA production reproduction inspected.",
           "sources": []
+        },
+        {
+          "date": "2026-10-06",
+          "note": "Open unchanged; no qualifying independent multimodal-serving reproduction was retrieved.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-05"
+      "last_reviewed": "2026-10-06"
     },
     {
       "id": "pred-us-duty-of-care-draft-2026-09",
@@ -247,9 +262,14 @@
               "url": "https://apnews.com/article/b8689ea07de9102a52bd1cd2049b5901"
             }
           ]
+        },
+        {
+          "date": "2026-10-06",
+          "note": "Open unchanged and overdue; searches found earlier discussions, not sufficient evidence to resolve the September 30 condition.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-05"
+      "last_reviewed": "2026-10-06"
     },
     {
       "id": "pred-openai-misalignment-disclosure-2026-10",
@@ -376,9 +396,14 @@
           "date": "2026-10-05",
           "note": "Confirmed unchanged; no new operational evaluator evidence inspected.",
           "sources": []
+        },
+        {
+          "date": "2026-10-06",
+          "note": "Confirmed unchanged; no relevant new operational evidence was verified.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-05"
+      "last_reviewed": "2026-10-06"
     },
     {
       "id": "pred-sglang-cve-remediation-2026-09",
@@ -436,9 +461,14 @@
           "date": "2026-10-05",
           "note": "Falsified unchanged; this pass did not verify project remediation or advisory updates.",
           "sources": []
+        },
+        {
+          "date": "2026-10-06",
+          "note": "Falsified unchanged; official remediation was not rechecked in this bounded pass.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-05"
+      "last_reviewed": "2026-10-06"
     },
     {
       "id": "pred-deepseek-alias-regression-2026-09",
@@ -485,9 +515,19 @@
           "date": "2026-10-05",
           "note": "Falsified unchanged; supplied documentation describes retired Flash aliases but supplies no quantified regression or resolved-version telemetry.",
           "sources": []
+        },
+        {
+          "date": "2026-10-06",
+          "note": "Falsified unchanged; supplied API documentation does not quantify migration regressions or establish clearer resolved-version telemetry.",
+          "sources": [
+            {
+              "label": "DeepSeek API excerpt",
+              "url": "https://api-docs.deepseek.com/news/"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-05"
+      "last_reviewed": "2026-10-06"
     },
     {
       "id": "pred-frontier-pacing-operationalization-2026-09",
@@ -605,9 +645,14 @@
               "url": "https://apnews.com/article/b8689ea07de9102a52bd1cd2049b5901"
             }
           ]
+        },
+        {
+          "date": "2026-10-06",
+          "note": "Progress unchanged; no new verified release threshold or evaluator-governance mechanism was established.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-05"
+      "last_reviewed": "2026-10-06"
     },
     {
       "id": "pred-anthropic-evaluator-governance-2026-10",
@@ -655,9 +700,14 @@
           "date": "2026-10-05",
           "note": "Open unchanged; no additional evaluator or material governance detail inspected before October 10.",
           "sources": []
+        },
+        {
+          "date": "2026-10-06",
+          "note": "Open unchanged; targeted search did not establish additional evaluator identities or governance rights.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-05"
+      "last_reviewed": "2026-10-06"
     },
     {
       "id": "pred-agentcore-v2-production-repro-2026-10",
@@ -685,9 +735,14 @@
           "date": "2026-10-05",
           "note": "Open unchanged; no relevant independent measurement inspected before October 19.",
           "sources": []
+        },
+        {
+          "date": "2026-10-06",
+          "note": "Open unchanged; no qualifying non-AWS production comparison was retrieved.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-05"
+      "last_reviewed": "2026-10-06"
     },
     {
       "id": "pred-qwen38-omni-independent-evidence-2026-10",
@@ -1129,6 +1184,66 @@
       "confidence": "medium",
       "id": "pred-2026-10-05-f1a355181abb",
       "created": "2026-10-05",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-10-31, Reflection will publicly release downloadable Beam weights together with an Apache-2.0 license and a model card, moving beyond selective preview access.",
+      "review_after": "2026-11-01",
+      "confirmation_criteria": [
+        "A publicly accessible official release provides downloadable Beam weights, an Apache-2.0 license and a model card by October 31."
+      ],
+      "falsification_criteria": [
+        "Reflection explicitly postpones the complete package beyond October 31, retains weights behind selective approval, or releases the weights under materially different licensing by the deadline."
+      ],
+      "confidence": "high",
+      "id": "pred-2026-10-06-cca86cdb811f",
+      "created": "2026-10-06",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-06, OpenAI will publish explicit confirmation that EU text watermarking is active on at least one eligible ChatGPT or Codex output surface.",
+      "review_after": "2026-11-07",
+      "confirmation_criteria": [
+        "An official rollout update or product document explicitly states that watermarking is active for at least one eligible EU ChatGPT or Codex output surface by November 6; repeating the original plan does not qualify."
+      ],
+      "falsification_criteria": [
+        "An official update states that the relevant EU rollout remains entirely pending beyond November 6, has been suspended, or has been cancelled."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-06-37603e781364",
+      "created": "2026-10-06",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-06, DeepSeek's current financing round will be explicitly reported as closed at no less than 80 billion yuan, rather than merely supported by term sheets.",
+      "review_after": "2026-11-07",
+      "confirmation_criteria": [
+        "A company or investor statement, or credible original reporting explicitly describing a completed round, establishes a final amount of at least 80 billion yuan by November 6."
+      ],
+      "falsification_criteria": [
+        "A company or investor statement, or credible original reporting, establishes closure below 80 billion yuan, cancellation, or explicit delay beyond November 6."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-06-bc9aa49e2f3e",
+      "created": "2026-10-06",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-20, a team independent of GitHub will publish a ReviewBench evaluation with a named review system, a described judging setup and precision–recall results.",
+      "review_after": "2026-11-21",
+      "confirmation_criteria": [
+        "A non-GitHub team publishes actual ReviewBench evaluation results by November 20, naming the review system and describing the judging setup and precision–recall results; benchmark summaries or undetailed leaderboard quotations do not qualify."
+      ],
+      "falsification_criteria": [
+        "A comprehensive, documented deadline review establishes that no qualifying independent evaluation was published, or a cited candidate publication is withdrawn or explicitly identified as not using ReviewBench. Missing or incomplete publication evidence alone remains inconclusive."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-06-14e8de2af9c4",
+      "created": "2026-10-06",
       "status": "open",
       "evidence": []
     }

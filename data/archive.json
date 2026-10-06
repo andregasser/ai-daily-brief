@@ -1,5 +1,27 @@
 [
   {
+    "date": "2026-10-06",
+    "de": "briefings/2026-10-06-de.html",
+    "en": "briefings/2026-10-06-en.html",
+    "headline": {
+      "de": "KI braucht Beweisketten, nicht nur neue Angebote",
+      "en": "AI needs chains of evidence, not just new offerings"
+    },
+    "tags": [
+      "provenance",
+      "agent-security",
+      "benchmark-integrity",
+      "open-weights",
+      "agent-economics",
+      "china-ai",
+      "governance"
+    ],
+    "concept": {
+      "de": "Concept of the Day: Provenienz ist nicht Urheberschaft",
+      "en": "Concept of the Day: provenance is not authorship"
+    }
+  },
+  {
     "date": "2026-10-05",
     "de": "briefings/2026-10-05-de.html",
     "en": "briefings/2026-10-05-en.html",

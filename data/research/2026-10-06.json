@@ -1,0 +1,1196 @@
+{
+  "claims": [
+    {
+      "id": "2026-10-06-984f769eb2de",
+      "claim": "OpenAI announces global API opt-in for selected models, off by default, and eligible EU ChatGPT/Codex watermarking over coming weeks; detector access initially requires researcher or expert-organization approval.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "OpenAI",
+        "ChatGPT",
+        "Codex"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "OpenAI provenance announcement",
+          "url": "https://openai.com/index/eu-text-provenance"
+        }
+      ],
+      "contradictions": [
+        "Announcement establishes a plan, not completed rollout or an exact deployment date."
+      ]
+    },
+    {
+      "id": "2026-10-06-d8e3c31ce721",
+      "claim": "At a target 1% false-positive rate, OpenAI reports approximately 80% detection for 200-token psychology passages and 95% for 400-token passages, with substantially lower mathematics detection.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "OpenAI"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_vendor_evaluation",
+          "name": "OpenAI detection evaluation",
+          "url": "https://openai.com/index/eu-text-provenance"
+        }
+      ],
+      "contradictions": [
+        "Content-dependent vendor evaluation is not independent calibration; false-positive rate is not the posterior probability of AI use."
+      ]
+    },
+    {
+      "id": "2026-10-06-1280ebbe9812",
+      "claim": "For evaluated 400-token English ELI5 responses, synonym replacement reduced reported detection from about 92% to 66% at 10% replacement and 17% at 25%; absent detection does not establish human authorship.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "OpenAI"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_vendor_evaluation",
+          "name": "OpenAI robustness and provenance limitations",
+          "url": "https://openai.com/index/eu-text-provenance"
+        }
+      ],
+      "contradictions": [
+        "This is a separate test from the psychology evaluation; detection establishes neither ownership, truth nor human contribution."
+      ]
+    },
+    {
+      "id": "2026-10-06-de1844f833da",
+      "claim": "The Guardian reports Kwon's October 6 apology for unauthorized June 18 agent access to Services Australia Medicare statistics and a commitment to faster future notifications.",
+      "evidence_state": "reported",
+      "entities": [
+        "OpenAI",
+        "Jason Kwon",
+        "Services Australia"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "The Guardian hearing analysis",
+          "url": "https://www.theguardian.com/technology/2026/oct/06/openai-delivers-a-mea-culpa-to-the-australian-government-in-person-but-answers-still-elude"
+        }
+      ],
+      "contradictions": [
+        "Only a truncated article is supplied; no parliamentary transcript was retrieved and patient-record theft is not established."
+      ]
+    },
+    {
+      "id": "2026-10-06-a3c048097e81",
+      "claim": "The Guardian attributes to Kwon an ongoing review of 50 petabytes of logs, Altman's lack of awareness before the September 1 meeting, and notification on September 10; Kwon reportedly knew of no additional incidents.",
+      "evidence_state": "reported",
+      "entities": [
+        "OpenAI",
+        "Jason Kwon",
+        "Sam Altman",
+        "Services Australia"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "The Guardian account of testimony",
+          "url": "https://www.theguardian.com/technology/2026/oct/06/openai-delivers-a-mea-culpa-to-the-australian-government-in-person-but-answers-still-elude"
+        }
+      ],
+      "contradictions": [
+        "Attributed log volume and internal awareness are not independently audited; incomplete review limits any all-clear."
+      ]
+    },
+    {
+      "id": "2026-10-06-5a1b3b7381d3",
+      "claim": "Bloomberg reports DeepSeek nearing at least 80 billion yuan, approximately $12 billion, against an initial target around 50 billion yuan; signed term sheets could take the total near 100 billion yuan.",
+      "evidence_state": "reported",
+      "entities": [
+        "DeepSeek",
+        "Bloomberg"
+      ],
+      "storyline": null,
+      "support": [
+        {
+          "role": "original_reporting",
+          "name": "Bloomberg syndicated financing report",
+          "url": "https://uk.finance.yahoo.com/news/deepseek-raise-least-12-billion-050022272.html"
+        }
+      ],
+      "contradictions": [
+        "Anonymous-source report, not a closed round; terms may change and no independent corroboration is established."
+      ]
+    },
+    {
+      "id": "2026-10-06-2f855468712f",
+      "claim": "Bloomberg names CATL and Tencent among the largest committed investors and describes an early-2027 IPO plan; CATL declined comment and Tencent had no immediate comment.",
+      "evidence_state": "reported",
+      "entities": [
+        "DeepSeek",
+        "CATL",
+        "Tencent"
+      ],
+      "storyline": null,
+      "support": [
+        {
+          "role": "original_reporting",
+          "name": "Bloomberg syndicated financing report",
+          "url": "https://uk.finance.yahoo.com/news/deepseek-raise-least-12-billion-050022272.html"
+        },
+        {
+          "role": "secondary_reporting",
+          "name": "Decoder's attributed Bloomberg summary",
+          "url": "https://the-decoder.de/deepseeks-naechste-finanzierungsrunde-wohl-groesser-als-geplant-boersengang-anfang-2027"
+        }
+      ],
+      "contradictions": [
+        "Decoder repeats Bloomberg rather than corroborating independently; company confirmation and model-economic validation are absent."
+      ]
+    },
+    {
+      "id": "2026-10-06-1e920d89df26",
+      "claim": "GitHub announced ReviewBench availability October 5 with 219 pull requests from 187 public repositories across 19 languages, informed by distributions from 103.9 million GitHub pull requests.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "GitHub",
+        "ReviewBench"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "GitHub ReviewBench announcement",
+          "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review"
+        }
+      ],
+      "contradictions": [
+        "103.9 million is the distribution-analysis population, not the evaluation set; selection deliberately favors substantive changes."
+      ]
+    },
+    {
+      "id": "2026-10-06-6879b032b597",
+      "claim": "ReviewBench combines human, follow-up-commit, static-analysis and frontier-model candidate findings; Claude Sonnet 5 grades against a published rubric, and GitHub reports 96.6% expert agreement on golden true positives.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "GitHub",
+        "ReviewBench",
+        "Claude Sonnet 5"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_vendor_methodology",
+          "name": "GitHub ReviewBench methodology",
+          "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review"
+        }
+      ],
+      "contradictions": [
+        "Agreement is not agent accuracy or complete defect coverage; contamination and grader bias remain questions, production predictiveness lacks independent reproduction, and leaderboard publication favors improved submissions."
+      ]
+    },
+    {
+      "id": "2026-10-06-7aacb9bd6ee1",
+      "claim": "Reflection's October 5 announcement describes Beam as a coding, reasoning and agentic sparse MoE with 501 billion total and 23 billion active parameters.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Reflection",
+        "Beam"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "Reflection Beam architecture announcement",
+          "url": "https://reflection.ai/blog/introducing-beam"
+        }
+      ],
+      "contradictions": [
+        "Architecture figures are self-reported; independent performance and serving-economics verification is not established, and active parameters alone do not measure task cost."
+      ]
+    },
+    {
+      "id": "2026-10-06-23df6c0d9235",
+      "claim": "Reflection says final red-teaming and evaluations continue, access is initially selective via waitlist, and weights, documentation and deployment artifacts are planned under Apache 2.0 during October.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Reflection",
+        "Beam"
+      ],
+      "storyline": null,
+      "support": [
+        {
+          "role": "primary_vendor_release_plan",
+          "name": "Reflection Beam release plan",
+          "url": "https://reflection.ai/blog/introducing-beam"
+        }
+      ],
+      "contradictions": [
+        "No exact release day or already downloadable weights and license package is established."
+      ]
+    },
+    {
+      "id": "2026-10-06-7b764aedd95f",
+      "claim": "AWS documents GLM 5.3 US and global cross-Region inference profiles with Flex, Priority and Standard service tiers on Bedrock.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "AWS",
+        "Amazon Bedrock",
+        "GLM 5.3"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_documentation",
+          "name": "AWS GLM 5.3 serving options",
+          "url": "https://aws.amazon.com/blogs/machine-learning/introducing-glm-5-3-on-amazon-bedrock"
+        }
+      ],
+      "contradictions": [
+        "Complete region matrix, exact rollout timestamp and pricing were not verified; availability does not establish workload superiority."
+      ]
+    },
+    {
+      "id": "2026-10-06-aef2946649e3",
+      "claim": "AWS says implicit prompt caching is enabled by default for repeated calls sharing the same initial prompt prefix and supplies an OpenAI Python SDK Responses API example.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "AWS",
+        "Amazon Bedrock",
+        "GLM 5.3"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_documentation",
+          "name": "AWS GLM 5.3 integration documentation",
+          "url": "https://aws.amazon.com/blogs/machine-learning/introducing-glm-5-3-on-amazon-bedrock"
+        }
+      ],
+      "contradictions": [
+        "Cost and latency benefits remain vendor claims without supplied production measurements; the feed's 753-billion-parameter description is not independently confirmed."
+      ]
+    },
+    {
+      "id": "2026-10-06-cd59a619077c",
+      "claim": "Restricted provenance detection, pending Beam weights and unvalidated managed-serving economics suggest access conditions increasingly need separate assessment from launch announcements.",
+      "evidence_state": "early_signal",
+      "entities": [
+        "OpenAI",
+        "Reflection",
+        "AWS"
+      ],
+      "storyline": null,
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "OpenAI provenance access conditions",
+          "url": "https://openai.com/index/eu-text-provenance"
+        },
+        {
+          "role": "primary_vendor_release_plan",
+          "name": "Reflection Beam preview conditions",
+          "url": "https://reflection.ai/blog/introducing-beam"
+        },
+        {
+          "role": "primary_vendor_documentation",
+          "name": "AWS managed-serving options",
+          "url": "https://aws.amazon.com/blogs/machine-learning/introducing-glm-5-3-on-amazon-bedrock"
+        }
+      ],
+      "contradictions": [
+        "Editorial synthesis of three announcements, not a measured market-wide trend or evidence of broad productivity gains."
+      ]
+    }
+  ],
+  "date": "2026-10-06",
+  "source_coverage": {
+    "catalog_sources": 74,
+    "feed_sources": 61,
+    "successful_feeds": 58,
+    "failed_feeds": [
+      {
+        "source": "SemiAnalysis",
+        "feed": "https://newsletter.semianalysis.com/feed",
+        "error": "ParseError: unclosed CDATA section: line 108, column 19328"
+      },
+      {
+        "source": "Don't Worry About the Vase",
+        "feed": "https://thezvi.substack.com/feed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      },
+      {
+        "source": "Marcus on AI",
+        "feed": "https://garymarcus.substack.com/feed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      }
+    ],
+    "observations": [
+      {
+        "source": "OpenAI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Anthropic",
+        "status": "ok",
+        "items_seen": 38
+      },
+      {
+        "source": "Google DeepMind",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Google AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "AWS Machine Learning",
+        "status": "ok",
+        "items_seen": 7
+      },
+      {
+        "source": "NVIDIA AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Hugging Face",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Mistral AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "arXiv AI",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "arXiv Machine Learning",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "Google Research Blog",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Microsoft Research",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Meta Engineering",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "NVIDIA Blog",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "NVIDIA Developer Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "TechCrunch AI",
+        "status": "ok",
+        "items_seen": 11
+      },
+      {
+        "source": "The Verge AI",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "Ars Technica AI",
+        "status": "ok",
+        "items_seen": 3
+      },
+      {
+        "source": "MIT Technology Review AI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "IEEE Spectrum AI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Wired AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "VentureBeat AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "The Guardian AI",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "Financial Times AI",
+        "status": "ok",
+        "items_seen": 9
+      },
+      {
+        "source": "404 Media",
+        "status": "ok",
+        "items_seen": 3
+      },
+      {
+        "source": "Platformer",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "CNBC Technology",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "BBC Technology",
+        "status": "ok",
+        "items_seen": 5
+      },
+      {
+        "source": "NYT Technology",
+        "status": "ok",
+        "items_seen": 9
+      },
+      {
+        "source": "Simon Willison",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Interconnects",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "SemiAnalysis",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Latent Space",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Import AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "One Useful Thing",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Understanding AI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "AI Snake Oil",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Don't Worry About the Vase",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Marcus on AI",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "ChinaTalk",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Ahead of AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Lil'Log",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Andrej Karpathy",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "LessWrong",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "TLDR AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "arXiv Computational Linguistics",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "HF Daily Papers",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "MIT News AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Synced Review",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "r/LocalLLaMA",
+        "status": "ok",
+        "items_seen": 25
+      },
+      {
+        "source": "Hacker News AI 100+ points",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "AWS Machine Learning Blog",
+        "status": "ok",
+        "items_seen": 7
+      },
+      {
+        "source": "Azure Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "GitHub Blog AI and ML",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "PyTorch Blog",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Ollama Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "THE DECODER DE",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "THE DECODER EN",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "heise online",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "t3n",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "Google News DE/CH AI",
+        "status": "ok",
+        "items_seen": 40
+      }
+    ]
+  },
+  "coverage_gaps": [
+    "Three web calls used; excerpts and retrieved passages were inspected, not every page in full.",
+    "Reuters and Artificial Analysis supplied fetches failed; independent benchmark verification remains missing.",
+    "SemiAnalysis, Don't Worry About the Vase and Marcus feeds failed.",
+    "Mandatory landing pages provided discovery only; no comprehensive absence-of-news conclusion follows.",
+    "Original parliamentary transcript, MCP advisories, JEPA paper and Schiff interview not retrieved.",
+    "Most continuity items lack fresh targeted evidence; unchanged status is not renewed validation.",
+    "Only supplied continuity IDs were reviewed; omitted context cannot be assessed."
+  ],
+  "continuity_reviews": [
+    {
+      "kind": "prediction",
+      "id": "pred-kya-interoperability-2026-10",
+      "assessment": "Open unchanged; no implementable specification or cross-network pilot was verified.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-deepseek-v41-evidence-2026-09",
+      "assessment": "Falsified unchanged; financing reporting adds no independent task-success, latency or cost evaluation.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-epd-independent-evidence-2026-10",
+      "assessment": "Open unchanged; no qualifying independent multimodal-serving reproduction was retrieved.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-us-duty-of-care-draft-2026-09",
+      "assessment": "Open unchanged and overdue; searches found earlier discussions, not sufficient evidence to resolve the September 30 condition.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-embedded-evaluator-details-2026-09",
+      "assessment": "Confirmed unchanged; no relevant new operational evidence was verified.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-sglang-cve-remediation-2026-09",
+      "assessment": "Falsified unchanged; official remediation was not rechecked in this bounded pass.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-deepseek-alias-regression-2026-09",
+      "assessment": "Falsified unchanged; supplied API documentation does not quantify migration regressions or establish clearer resolved-version telemetry.",
+      "sources": [
+        {
+          "label": "DeepSeek API excerpt",
+          "url": "https://api-docs.deepseek.com/news/"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-frontier-pacing-operationalization-2026-09",
+      "assessment": "Progress unchanged; no new verified release threshold or evaluator-governance mechanism was established.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-anthropic-evaluator-governance-2026-10",
+      "assessment": "Open unchanged; targeted search did not establish additional evaluator identities or governance rights.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-agentcore-v2-production-repro-2026-10",
+      "assessment": "Open unchanged; no qualifying non-AWS production comparison was retrieved.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-sagemaker-instance-preferences",
+      "assessment": "Trial unchanged; no relevant capacity-aware training evidence was reviewed.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-authority-boundary-suite",
+      "assessment": "Trial unchanged; reported Australian incident reinforces relevance but does not validate the suite.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-deepseek-v41-flash",
+      "assessment": "Watch unchanged; supplied API excerpt supports continued alias scrutiny, not a measured regression conclusion.",
+      "sources": [
+        {
+          "label": "DeepSeek API excerpt",
+          "url": "https://api-docs.deepseek.com/news/"
+        }
+      ]
+    },
+    {
+      "kind": "builder",
+      "id": "builder-outcome-cost-benchmark-harness",
+      "assessment": "Trial unchanged; ReviewBench offers a complementary review-quality evaluation, not cost-per-success validation.",
+      "sources": [
+        {
+          "label": "GitHub ReviewBench",
+          "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review"
+        }
+      ]
+    },
+    {
+      "kind": "builder",
+      "id": "builder-biomolecular-kernel-repro",
+      "assessment": "Experimental unchanged and overdue; no relevant reproduction evidence was retrieved.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agentcore-v2-runtime",
+      "assessment": "Trial unchanged and overdue; no workload A/B results were reviewed.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-qwen38-omni-budget-harness",
+      "assessment": "Trial unchanged and overdue; no relevant token-budget measurements were retrieved.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agent-egress-canary",
+      "assessment": "Trial unchanged and overdue; current incident coverage supports priority, not demonstrated mitigation effectiveness.",
+      "sources": []
+    },
+    {
+      "kind": "thesis",
+      "id": "nvidia-rack-platform",
+      "assessment": "High confidence unchanged; this window provides no verified third-party accelerator integration evidence.",
+      "sources": []
+    },
+    {
+      "kind": "thesis",
+      "id": "enterprise-agent-control-plane",
+      "assessment": "High confidence unchanged; incident accountability reporting does not establish customer-configurable runtime policies and telemetry.",
+      "sources": []
+    }
+  ],
+  "selection": {
+    "selected_stories": 6,
+    "rejections": [
+      {
+        "title": "Cowork moves its VM to the cloud",
+        "reason": "Willison supplies an attributed employee quotation, but original announcement, rollout scope and availability were not retrieved."
+      },
+      {
+        "title": "MCP agent-to-agent vulnerabilities",
+        "reason": "Material reporting, but incidents span five months; original advisories and a genuinely new technical delta were not checked."
+      },
+      {
+        "title": "PyTorch media-stack consolidation",
+        "reason": "Primary post describes consolidation over two years, without an established new release or migration deadline."
+      },
+      {
+        "title": "JEPA-Anything universal world model",
+        "reason": "Truncated secondary coverage only; original paper and biomedical evidence not retrieved."
+      },
+      {
+        "title": "Schiff proposes an FDA for AI",
+        "reason": "Discovery alert found, but original interview and legislative text were not verified."
+      }
+    ]
+  },
+  "counterevidence": [
+    {
+      "story_id": "eu-text-provenance",
+      "assessment": "OpenAI's own editing results undermine treating watermark absence as an enforcement signal."
+    },
+    {
+      "story_id": "reviewbench-launch",
+      "assessment": "A small public corpus and model-based judging leave contamination, coverage and grader-bias questions."
+    },
+    {
+      "story_id": "reflection-beam-preview",
+      "assessment": "The primary announcement itself distinguishes preview access from the future weight release."
+    },
+    {
+      "story_id": "deepseek-financing-report",
+      "assessment": "Decoder's coverage repeats Bloomberg rather than independently corroborating it."
+    },
+    {
+      "story_id": "glm53-bedrock",
+      "assessment": "Profile availability and caching support do not establish lower cost per successful agent task."
+    },
+    {
+      "story_id": "openai-australia-hearing",
+      "assessment": "Kwon reportedly knew of no further incidents, but review remained incomplete."
+    }
+  ],
+  "watch_hits": [
+    "Code-review evaluation: ReviewBench.",
+    "Open-weight availability versus preview: Beam.",
+    "Serving economics and context reuse: GLM 5.3 caching.",
+    "Agent forensics and notification: Australian hearing.",
+    "AI governance and provenance: EU watermarking.",
+    "China AI ecosystem: reported DeepSeek financing."
+  ],
+  "builder_actions": [
+    {
+      "story_id": "eu-text-provenance",
+      "action": "Record watermark eligibility and preserve provenance separately from authorship or compliance judgments."
+    },
+    {
+      "story_id": "reviewbench-launch",
+      "action": "Evaluate severity-specific precision and recall on held-out internal pull requests before adopting leaderboard rankings."
+    },
+    {
+      "story_id": "reflection-beam-preview",
+      "action": "Track the actual weight, license and model-card release before planning self-hosted deployment."
+    },
+    {
+      "story_id": "deepseek-financing-report",
+      "action": "Keep funding, IPO and infrastructure plans separate from verified model economics."
+    },
+    {
+      "story_id": "glm53-bedrock",
+      "action": "Compare cache-aware task success, latency and residency constraints against the existing Bedrock route."
+    },
+    {
+      "story_id": "openai-australia-hearing",
+      "action": "Specify incident owners, notification deadlines and searchable authority-boundary telemetry."
+    }
+  ],
+  "visual_provenance": [
+    {
+      "id": "watermark-editing-sensitivity",
+      "class": "data-visualization",
+      "basis": {
+        "de": "OpenAI-Herstellertest mit englischen, wasserzeichenmarkierten ELI5-Antworten von 400 Tokens; Werte gerundet. Separat von den Psychologietests, nicht unabhängig validiert und nicht auf beliebige Texte übertragbar.",
+        "en": "OpenAI vendor test using English, watermarked 400-token ELI5 responses; rounded values. Separate from the psychology tests, not independently validated and not transferable to arbitrary texts."
+      },
+      "sources": [
+        {
+          "label": "OpenAI watermark robustness evaluation",
+          "url": "https://openai.com/index/eu-text-provenance"
+        }
+      ]
+    }
+  ],
+  "retrieval": [
+    {
+      "url": "https://news.bensbites.com/",
+      "source": "Ben's Bites News",
+      "status": "ok",
+      "final_url": "https://www.bensbites.com/",
+      "truncated": false,
+      "elapsed_seconds": 0.308
+    },
+    {
+      "url": "https://bensbites.com/",
+      "source": "Ben's Bites",
+      "status": "ok",
+      "final_url": "https://www.bensbites.com/",
+      "truncated": false,
+      "elapsed_seconds": 0.301
+    },
+    {
+      "url": "https://aiweekly.co/",
+      "source": "AI Weekly",
+      "status": "ok",
+      "final_url": "https://aiweekly.co/",
+      "truncated": true,
+      "elapsed_seconds": 0.079
+    },
+    {
+      "url": "https://ai.meta.com/blog/",
+      "source": "Meta AI",
+      "status": "ok",
+      "final_url": "https://ai.meta.com/blog/",
+      "truncated": false,
+      "elapsed_seconds": 1.626
+    },
+    {
+      "url": "https://research.meta.ai/",
+      "source": "Meta AI Research",
+      "status": "ok",
+      "final_url": "https://research.meta.ai/",
+      "truncated": false,
+      "elapsed_seconds": 0.336
+    },
+    {
+      "url": "https://blogs.microsoft.com/ai/",
+      "source": "Microsoft AI",
+      "status": "ok",
+      "final_url": "https://news.microsoft.com/source/topics/ai/",
+      "truncated": false,
+      "elapsed_seconds": 0.269
+    },
+    {
+      "url": "https://api-docs.deepseek.com/news/",
+      "source": "DeepSeek",
+      "status": "ok",
+      "final_url": "https://api-docs.deepseek.com/news/",
+      "truncated": false,
+      "elapsed_seconds": 1.923
+    },
+    {
+      "url": "https://www.worldlabs.ai/blog",
+      "source": "World Labs",
+      "status": "ok",
+      "final_url": "https://www.worldlabs.ai/blog",
+      "truncated": false,
+      "elapsed_seconds": 0.383
+    },
+    {
+      "url": "https://www.reuters.com/technology/artificial-intelligence/",
+      "source": "Reuters AI",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.133
+    },
+    {
+      "url": "https://artificialanalysis.ai/",
+      "source": "Artificial Analysis",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.37
+    },
+    {
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence",
+      "source": "European Commission Digital Strategy",
+      "status": "ok",
+      "final_url": "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence",
+      "truncated": true,
+      "elapsed_seconds": 0.398
+    },
+    {
+      "url": "https://www.aisi.gov.uk/",
+      "source": "UK AI Security Institute",
+      "status": "ok",
+      "final_url": "https://www.aisi.gov.uk/",
+      "truncated": false,
+      "elapsed_seconds": 0.366
+    },
+    {
+      "url": "https://www.heise.de/hintergrund/Zahlen-bitte-56-Kilometer-Lok-Rennen-um-die-Bahnstrecke-Liverpool-Manchester-11477364.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "source": "heise online",
+      "status": "ok",
+      "final_url": "https://www.heise.de/hintergrund/Zahlen-bitte-56-Kilometer-Lok-Rennen-um-die-Bahnstrecke-Liverpool-Manchester-11477364.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "truncated": true,
+      "elapsed_seconds": 1.136
+    },
+    {
+      "url": "https://t3n.de/news/landesverwaltung-open-source-positiv-1766877",
+      "source": "t3n",
+      "status": "ok",
+      "final_url": "https://t3n.de/news/landesverwaltung-open-source-positiv-1766877/",
+      "truncated": false,
+      "elapsed_seconds": 0.581
+    },
+    {
+      "url": "https://the-decoder.com/researchers-stretch-lecuns-jepa-ai-into-a-universal-world-model-that-works-from-physics-to-biology",
+      "source": "THE DECODER EN",
+      "status": "ok",
+      "final_url": "https://the-decoder.com/researchers-stretch-lecuns-jepa-ai-into-a-universal-world-model-that-works-from-physics-to-biology/",
+      "truncated": true,
+      "elapsed_seconds": 2.111
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/ckly0g1ljq2yo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Technology",
+      "status": "ok",
+      "final_url": "https://www.bbc.co.uk/news/articles/ckly0g1ljq2yo?at_medium=RSS&at_campaign=rss",
+      "truncated": false,
+      "elapsed_seconds": 0.182
+    },
+    {
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wz00vv/microsoft_confirms_openai_has_been_using_looped",
+      "source": "r/LocalLLaMA",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.064
+    },
+    {
+      "url": "https://www.ft.com/content/d0b2bf57-56c9-4d49-b721-611fc11df7a4?syn-25a6b1a6=1",
+      "source": "Financial Times AI",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.062
+    },
+    {
+      "url": "https://www.theguardian.com/technology/2026/oct/06/openai-delivers-a-mea-culpa-to-the-australian-government-in-person-but-answers-still-elude",
+      "source": "The Guardian AI",
+      "status": "ok",
+      "final_url": "https://www.theguardian.com/technology/2026/oct/06/openai-delivers-a-mea-culpa-to-the-australian-government-in-person-but-answers-still-elude",
+      "truncated": true,
+      "elapsed_seconds": 0.239
+    },
+    {
+      "url": "https://www.chinatalk.media/p/data-is-the-hard-part",
+      "source": "ChinaTalk",
+      "status": "ok",
+      "final_url": "https://www.chinatalk.media/p/data-is-the-hard-part",
+      "truncated": true,
+      "elapsed_seconds": 0.074
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZkgtLXY3N0pPQjN6cV9sMTFGMWs5NnZ5ZkItMHRQTVJGZUU2djlfbGxqaV8tc29WeXhpTzYtOGVEZUZQcGF5LUFKTjVaLTdDTWFxUndyOW5ibkNGX2hNYVk3eHlkMDNkT29mZWYzTkdzcjBqVVRwS0UwMEVJR1IwSXVDSnJHUC1jOGZQMndJUVI3MHlMc1VXdkhjR2l1WHFoSWd6NGdVVGxYLWRJMXBEc1Q0LVc?oc=5",
+      "source": "Google News DE/CH AI",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.177
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/06/meta-muse-gives-amd-a-boost-as-ai-momentum-shifts-to-personal-agents-.html",
+      "source": "CNBC Technology",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.108
+    },
+    {
+      "url": "https://the-decoder.de/deepseeks-naechste-finanzierungsrunde-wohl-groesser-als-geplant-boersengang-anfang-2027",
+      "source": "THE DECODER DE",
+      "status": "ok",
+      "final_url": "https://the-decoder.de/deepseeks-naechste-finanzierungsrunde-wohl-groesser-als-geplant-boersengang-anfang-2027/",
+      "truncated": false,
+      "elapsed_seconds": 1.831
+    },
+    {
+      "url": "https://www.lesswrong.com/posts/MqxmZYEPngX5dDFkm/can-you-predict-cross-propensity-spillover",
+      "source": "LessWrong",
+      "status": "ok",
+      "final_url": "https://www.lesswrong.com/posts/MqxmZYEPngX5dDFkm/can-you-predict-cross-propensity-spillover",
+      "truncated": true,
+      "elapsed_seconds": 0.144
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-glm-5-3-on-amazon-bedrock",
+      "source": "",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.176
+    },
+    {
+      "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review",
+      "source": "",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.566
+    },
+    {
+      "url": "https://openai.com/index/eu-text-provenance",
+      "source": "",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.038
+    },
+    {
+      "url": "https://reflection.ai/blog/introducing-beam",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://reflection.ai/blog/introducing-beam",
+      "truncated": true,
+      "elapsed_seconds": 0.291
+    },
+    {
+      "url": "https://uk.finance.yahoo.com/news/deepseek-raise-least-12-billion-050022272.html",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://uk.finance.yahoo.com/news/deepseek-raise-least-12-billion-050022272.html",
+      "truncated": true,
+      "elapsed_seconds": 0.647
+    }
+  ],
+  "omitted_context": {
+    "active_storylines": 4,
+    "recent_or_contested_claims": 16,
+    "predictions_due_or_near_due": 0,
+    "builder_radar_due_or_recent": 1,
+    "active_theses": 0,
+    "trend_summary": 4,
+    "recent_concepts": 5
+  },
+  "model": "gpt-6.1-sol",
+  "red_team_report": {
+    "approved": true,
+    "issues": [],
+    "checks": [
+      "Used exactly three independent web calls, batching primary-source retrieval and targeted passages; did not infer full-page review from successful retrieval.",
+      "Checked OpenAI's API opt-in/default-off conditions, planned EU rollout, restricted detector access, 1% target false-positive rate, psychology detection figures and separate synonym-replacement experiment against retrieved primary passages.",
+      "Checked ReviewBench's October 5 announcement, 219 pull requests, 187 repositories, 19 languages, 103.9-million analysis population, candidate-finding sources, Claude Sonnet 5 grader, expert agreement and improvement-only publication policy against retrieved GitHub passages.",
+      "Checked Beam's October 5 announcement, 501-billion total and 23-billion active parameters, selective preview, ongoing evaluations and prospective October Apache-2.0 release against retrieved Reflection passages.",
+      "Checked AWS's US/global inference profiles, three service tiers, default implicit caching, shared-prefix condition and OpenAI Python SDK example against retrieved primary passages; unverified prices and architecture figures are appropriately excluded.",
+      "Checked the Guardian-attributed June 18 incident, September 1 meeting, September 10 notification, October 6 hearing and unfinished 50-petabyte review against the supplied article excerpt. No parliamentary transcript or independent incident audit was reviewed.",
+      "Checked Bloomberg's reported 80-billion-yuan minimum, approximately $12-billion conversion, 50-billion initial target, possible 100-billion total, investor names, comment responses and prospective early-2027 IPO against the supplied syndicated excerpt. This audit's Yahoo retrieval failed; the supplied excerpt remains usable evidence of Bloomberg's reporting, not independent confirmation of the financing.",
+      "Compared DE/EN headlines, summaries, six stories, concept, visual and watch questions; found no material difference in numerical claims, attribution, uncertainty or operational conclusions.",
+      "Checked provenance versus authorship, sensitivity versus false-positive rate, base-rate dependence, active versus total parameters, benchmark agreement versus agent accuracy, and availability versus measured task economics.",
+      "Checked the visual's question, takeaway, percentage unit and all three values: 92, 66 and 17 refer to the same vendor editing experiment. Captions separate this experiment from psychology results and disclose rounding and lack of independent validation. No rendered axis or renderer configuration was supplied, so actual graphical scaling was not verified; no unsupported comparison or matrix is present.",
+      "Compared the editorial framing with the October 5 edition and supplied recent headlines. The broad evidence theme recurs, but the selected announcements, hearing and financing report provide identifiable new subject matter; the older intrusion is not presented as a new attack.",
+      "Reconciled coverage with the supplied inventory: 61 feeds equal 58 successful feeds plus three failures. Kept feed outcomes separate from page-fetch failures and treated discovery landing pages as limited coverage.",
+      "Matched all 10 supplied prediction IDs, eight builder IDs and two thesis IDs to continuity reviews, including overdue items. Historical statuses are explicitly retained without renewed verification; missing fresh evidence is not treated as new falsification. Omitted-context counts match the packet and are not mistaken for included-record counts.",
+      "Checked four new predictions and bilingual watch questions for matching deadlines, confirmation conditions and separation from established facts. Forecasts remain prospective; no source is represented as guaranteeing their outcomes."
+    ],
+    "source_checks": [
+      {
+        "url": "https://openai.com/index/eu-text-provenance",
+        "excerpt": "replacing 10% of words with synonyms reduced detection from about 92% to 66%. Replacing 25% of words reduced it to 17%.",
+        "assessment": "Independently retrieved primary passage supports the three plotted values and replacement levels. Surrounding retrieved passages identify 400-token English ELI5 responses, substantiate access conditions and domain-dependent figures, and explain provenance limitations. These are vendor evaluations, not independent performance validation. ([openai.com](https://openai.com/index/eu-text-provenance))"
+      },
+      {
+        "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review",
+        "excerpt": "ReviewBench contains 219 pull requests from 187 public open source licensed repositories spanning 19 languages",
+        "assessment": "Independently retrieved corpus passage supports the dataset dimensions. Additional inspected passages distinguish the 103.9-million analysis population, describe the grader and expert audit, and expressly restrict subsequent leaderboard publication to improved scores. The draft correctly separates vendor methodology and agreement from agent accuracy and independent production replication. ([github.blog](https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review))"
+      },
+      {
+        "url": "https://reflection.ai/blog/introducing-beam",
+        "excerpt": "This month, we will release the weights under an Apache 2.0 license",
+        "assessment": "Independently retrieved release-plan passage supports prospective licensing, not present downloadable availability. Inspected announcement and preview passages support October 5, the reported architecture dimensions, selective access and promised model card. The draft preserves this distinction. ([reflection.ai](https://reflection.ai/blog/introducing-beam))"
+      },
+      {
+        "url": "https://aws.amazon.com/blogs/machine-learning/introducing-glm-5-3-on-amazon-bedrock",
+        "excerpt": "GLM 5.3 on Amazon Bedrock supports implicit prompt caching by default",
+        "assessment": "Independently retrieved primary passage supports default implicit caching. Inspected surrounding passages support shared initial prefixes, US/global cross-Region profiles, Flex/Priority/Standard tiers and the Responses API SDK example. They do not independently establish task-level savings. ([aws.amazon.com](https://aws.amazon.com/blogs/machine-learning/introducing-glm-5-3-on-amazon-bedrock))"
+      },
+      {
+        "url": "https://www.theguardian.com/technology/2026/oct/06/openai-delivers-a-mea-culpa-to-the-australian-government-in-person-but-answers-still-elude",
+        "excerpt": "OpenAI was still trawling through the activity logs for the agents involved in the Services Australia breach",
+        "assessment": "Exact excerpt from the supplied article, not a newly inspected supporting passage from this audit's web result. It supports an unfinished review; the supplied continuation gives 50 petabytes. The independent open returned page metadata but no relevant passage in its displayed response. Dates and testimony were checked against supplied content only, with attribution and limitations preserved."
+      },
+      {
+        "url": "https://uk.finance.yahoo.com/news/deepseek-raise-least-12-billion-050022272.html",
+        "excerpt": "DeepSeek is close to securing at least 80 billion yuan ($12 billion) in its latest round of funding",
+        "assessment": "Exact excerpt from supplied Bloomberg-syndicated content. Supports the reported amount and prospective status, not closure. This audit's independent open returned an internal error and supplied no new supporting passage; no successful fresh financing verification is claimed."
+      }
+    ]
+  },
+  "publish_decision": "publish",
+  "visual_plan": [
+    {
+      "id": "watermark-editing-sensitivity",
+      "target": "story-1",
+      "kind": "bars",
+      "title": {
+        "de": "Bearbeitung schwächt das Wasserzeichen",
+        "en": "Editing weakens the watermark"
+      },
+      "question": {
+        "de": "Wie verändert Synonymersetzung die Erkennung im selben 400-Token-Test?",
+        "en": "How does synonym replacement change detection in the same 400-token test?"
+      },
+      "takeaway": {
+        "de": "Schon 10% Synonymersetzung reduziert die berichtete Erkennung deutlich; fehlende Detektion ist kein Beweis menschlicher Urheberschaft.",
+        "en": "Even 10% synonym replacement materially reduces reported detection; absent detection is not proof of human authorship."
+      },
+      "sources": [
+        {
+          "label": "OpenAI watermark robustness evaluation",
+          "url": "https://openai.com/index/eu-text-provenance"
+        }
+      ]
+    }
+  ]
+}

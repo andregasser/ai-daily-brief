@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 696.85" role="img" aria-labelledby="title desc">
+<title id="title">Bearbeitung schwächt das Wasserzeichen</title><desc id="desc">Wie verändert Synonymersetzung die Erkennung im selben 400-Token-Test? Erkennungsrate (%): Ohne Ersetzung 92; 10% Ersetzung 66; 25% Ersetzung 17. Schon 10% Synonymersetzung reduziert die berichtete Erkennung deutlich; fehlende Detektion ist kein Beweis menschlicher Urheberschaft. OpenAI-Herstellertest mit englischen, wasserzeichenmarkierten ELI5-Antworten von 400 Tokens; Werte gerundet. Separat von den Psychologietests, nicht unabhängig validiert und nicht auf beliebige Texte übertragbar.</desc>
+<rect width="480" height="696.85" fill="#fffdf8"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="28" y="32" font-size="13" fill="#16786d" font-weight="700" text-anchor="start">DATENVERGLEICH</text>
+<text x="28" y="68" font-size="27" fill="#233548" font-weight="700" text-anchor="start">Bearbeitung schwächt das</text>
+<text x="28" y="104.45" font-size="27" fill="#233548" font-weight="700" text-anchor="start">Wasserzeichen</text>
+<text x="28" y="155.9" font-size="17" fill="#64748b" font-weight="400" text-anchor="start">Erkennungsrate (%)</text>
+<path d="M28 193.85 L28 464.85" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="28" y="489.85" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">0</text>
+<path d="M125.5 193.85 L125.5 464.85" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="125.5" y="489.85" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">23</text>
+<path d="M223 193.85 L223 464.85" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="223" y="489.85" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">46</text>
+<path d="M320.5 193.85 L320.5 464.85" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="320.5" y="489.85" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">69</text>
+<path d="M418 193.85 L418 464.85" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="418" y="489.85" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">92</text>
+<text x="28" y="213.85" font-size="21" fill="#233548" font-weight="600" text-anchor="start">Ohne Ersetzung</text>
+<rect class="data-bar" data-value="92" x="28" y="247.2" width="390" height="19" rx="2" fill="#8b9bb0"/>
+<text x="450" y="213.85" font-size="24" fill="#8b9bb0" font-weight="700" text-anchor="end">92</text>
+<text x="28" y="305.85" font-size="21" fill="#233548" font-weight="600" text-anchor="start">10% Ersetzung</text>
+<rect class="data-bar" data-value="66" x="28" y="339.2" width="279.783" height="19" rx="2" fill="#8b9bb0"/>
+<text x="450" y="305.85" font-size="24" fill="#8b9bb0" font-weight="700" text-anchor="end">66</text>
+<text x="28" y="397.85" font-size="21" fill="#233548" font-weight="600" text-anchor="start">25% Ersetzung</text>
+<rect class="data-bar" data-value="17" x="28" y="431.2" width="72.0652" height="19" rx="2" fill="#16786d"/>
+<text x="450" y="397.85" font-size="24" fill="#16786d" font-weight="700" text-anchor="end">17</text>
+<path d="M28 529.85 L452 529.85" stroke="#16786d" stroke-width="2" fill="none"/>
+<text x="28" y="562.85" font-size="20" fill="#233548" font-weight="600" text-anchor="start">Schon 10% Synonymersetzung reduziert</text>
+<text x="28" y="589.85" font-size="20" fill="#233548" font-weight="600" text-anchor="start">die berichtete Erkennung deutlich;</text>
+<text x="28" y="616.85" font-size="20" fill="#233548" font-weight="600" text-anchor="start">fehlende Detektion ist kein Beweis</text>
+<text x="28" y="643.85" font-size="20" fill="#233548" font-weight="600" text-anchor="start">menschlicher Urheberschaft.</text>
+</g></svg>

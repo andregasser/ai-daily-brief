@@ -1,0 +1,56 @@
+[
+  {
+    "id": "watermark-editing-sensitivity",
+    "target": "story-1",
+    "title": {
+      "de": "Bearbeitung schwächt das Wasserzeichen",
+      "en": "Editing weakens the watermark"
+    },
+    "question": {
+      "de": "Wie verändert Synonymersetzung die Erkennung im selben 400-Token-Test?",
+      "en": "How does synonym replacement change detection in the same 400-token test?"
+    },
+    "caption": {
+      "de": "OpenAI-Herstellertest mit englischen, wasserzeichenmarkierten ELI5-Antworten von 400 Tokens; Werte gerundet. Separat von den Psychologietests, nicht unabhängig validiert und nicht auf beliebige Texte übertragbar.",
+      "en": "OpenAI vendor test using English, watermarked 400-token ELI5 responses; rounded values. Separate from the psychology tests, not independently validated and not transferable to arbitrary texts."
+    },
+    "takeaway": {
+      "de": "Schon 10% Synonymersetzung reduziert die berichtete Erkennung deutlich; fehlende Detektion ist kein Beweis menschlicher Urheberschaft.",
+      "en": "Even 10% synonym replacement materially reduces reported detection; absent detection is not proof of human authorship."
+    },
+    "sources": [
+      {
+        "label": "OpenAI watermark robustness evaluation",
+        "url": "https://openai.com/index/eu-text-provenance"
+      }
+    ],
+    "kind": "bars",
+    "unit": {
+      "de": "Erkennungsrate (%)",
+      "en": "Detection rate (%)"
+    },
+    "items": [
+      {
+        "label": {
+          "de": "Ohne Ersetzung",
+          "en": "No replacement"
+        },
+        "value": 92
+      },
+      {
+        "label": {
+          "de": "10% Ersetzung",
+          "en": "10% replacement"
+        },
+        "value": 66
+      },
+      {
+        "label": {
+          "de": "25% Ersetzung",
+          "en": "25% replacement"
+        },
+        "value": 17
+      }
+    ]
+  }
+]

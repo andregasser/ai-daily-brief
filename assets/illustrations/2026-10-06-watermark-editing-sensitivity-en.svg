@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 660.4" role="img" aria-labelledby="title desc">
+<title id="title">Editing weakens the watermark</title><desc id="desc">How does synonym replacement change detection in the same 400-token test? Detection rate (%): No replacement 92; 10% replacement 66; 25% replacement 17. Even 10% synonym replacement materially reduces reported detection; absent detection is not proof of human authorship. OpenAI vendor test using English, watermarked 400-token ELI5 responses; rounded values. Separate from the psychology tests, not independently validated and not transferable to arbitrary texts.</desc>
+<rect width="480" height="660.4" fill="#fffdf8"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="28" y="32" font-size="13" fill="#16786d" font-weight="700" text-anchor="start">DATA COMPARISON</text>
+<text x="28" y="68" font-size="27" fill="#233548" font-weight="700" text-anchor="start">Editing weakens the watermark</text>
+<text x="28" y="119.45" font-size="17" fill="#64748b" font-weight="400" text-anchor="start">Detection rate (%)</text>
+<path d="M28 157.4 L28 428.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="28" y="453.4" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">0</text>
+<path d="M125.5 157.4 L125.5 428.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="125.5" y="453.4" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">23</text>
+<path d="M223 157.4 L223 428.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="223" y="453.4" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">46</text>
+<path d="M320.5 157.4 L320.5 428.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="320.5" y="453.4" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">69</text>
+<path d="M418 157.4 L418 428.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="418" y="453.4" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">92</text>
+<text x="28" y="177.4" font-size="21" fill="#233548" font-weight="600" text-anchor="start">No replacement</text>
+<rect class="data-bar" data-value="92" x="28" y="210.75" width="390" height="19" rx="2" fill="#8b9bb0"/>
+<text x="450" y="177.4" font-size="24" fill="#8b9bb0" font-weight="700" text-anchor="end">92</text>
+<text x="28" y="269.4" font-size="21" fill="#233548" font-weight="600" text-anchor="start">10% replacement</text>
+<rect class="data-bar" data-value="66" x="28" y="302.75" width="279.783" height="19" rx="2" fill="#8b9bb0"/>
+<text x="450" y="269.4" font-size="24" fill="#8b9bb0" font-weight="700" text-anchor="end">66</text>
+<text x="28" y="361.4" font-size="21" fill="#233548" font-weight="600" text-anchor="start">25% replacement</text>
+<rect class="data-bar" data-value="17" x="28" y="394.75" width="72.0652" height="19" rx="2" fill="#16786d"/>
+<text x="450" y="361.4" font-size="24" fill="#16786d" font-weight="700" text-anchor="end">17</text>
+<path d="M28 493.4 L452 493.4" stroke="#16786d" stroke-width="2" fill="none"/>
+<text x="28" y="526.4" font-size="20" fill="#233548" font-weight="600" text-anchor="start">Even 10% synonym replacement</text>
+<text x="28" y="553.4" font-size="20" fill="#233548" font-weight="600" text-anchor="start">materially reduces reported</text>
+<text x="28" y="580.4" font-size="20" fill="#233548" font-weight="600" text-anchor="start">detection; absent detection is not</text>
+<text x="28" y="607.4" font-size="20" fill="#233548" font-weight="600" text-anchor="start">proof of human authorship.</text>
+</g></svg>

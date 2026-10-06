@@ -1,0 +1,142 @@
+<section class="briefing-intro">
+
+  <div class="brief-label">AI Daily Brief · 06.10.2026</div>
+
+  <h1>KI braucht Beweisketten, nicht nur neue Angebote</h1>
+
+  <p class="dek">OpenAI kündigt Text-Wasserzeichen an und erklärt verspätete Vorfallmeldungen. GitHub macht Code-Review messbarer; Beam, Bedrock und DeepSeeks gemeldete Finanzierung zeigen, warum Zugang, Leistung und Betriebsfähigkeit getrennt bewertet werden müssen.</p>
+
+  <p><strong>Editorial Lead — Analyse:</strong> Die entscheidende Frage heute ist nicht, ob KI mehr kann, sondern welche Schlussfolgerung ein einzelner Beleg tatsächlich trägt. Ein Wasserzeichen kann auf Modellverarbeitung hinweisen, aber keine Urheberschaft feststellen. Ein Review-Benchmark kann einen Teil der Fehlererkennung messen, aber nicht die Zuverlässigkeit im eigenen Repository garantieren. Und 50 Petabyte Agent-Logs sind noch kein abgeschlossener Vorfall-Audit. Gegenüber der gestrigen Ausgabe verschiebt sich der Schwerpunkt von Ergebnismessung zu Beweisketten: Welcher Zugriff war erlaubt, was wurde beobachtet, wer wird informiert, und welche Unsicherheit bleibt? Die stärksten Belege betreffen angekündigte Produktbedingungen und dokumentierte Methoden; unabhängige Leistungsreproduktionen und das australische Parlamentsprotokoll fehlen. Für Beschaffung und Engineering folgt daraus: jede Entscheidung an den passenden Beleg binden, statt Verfügbarkeit, Modellqualität und Verantwortlichkeit zusammenzufassen.</p>
+
+</section>
+
+<section class="executive">
+
+  <div class="section-kicker">In 60 Sekunden</div>
+
+  <div class="signal-grid">
+
+    <div><strong>Provenienz: Signal mit engen Grenzen</strong><br>OpenAI plant EU-Wasserzeichen und globales API-Opt-in; Detektorzugang bleibt zunächst genehmigungspflichtig. In einem Herstellertest sank die Erkennung nach 25% Synonymersetzung von rund 92% auf 17%.</div>
+
+    <div><strong>Agent-Sicherheit: Eskalation zählt</strong><br>Laut Guardian versprach OpenAI bei der australischen Anhörung schnellere Meldungen. Die zugeschriebene Prüfung von 50 Petabyte Logs läuft weiter: «keine weiteren bekannten Vorfälle» ist keine abgeschlossene Entwarnung.</div>
+
+    <div><strong>Code-Review ist eine eigene Disziplin</strong><br>ReviewBench umfasst 219 Pull Requests aus 187 Repositories in 19 Sprachen. GitHubs 96,6% Expertenübereinstimmung betrifft goldene True Positives, nicht die Genauigkeit eines Review-Agenten.</div>
+
+    <div><strong>Kapital und Zugang sind keine Leistungsmessung</strong><br>Bloomberg meldet mindestens 80 Milliarden Yuan für DeepSeek; abgeschlossen ist die Runde nicht. Beam bleibt eine selektive Vorschau, und GLM 5.3 auf Bedrock braucht weiterhin einen aufgabenspezifischen Kostenvergleich.</div>
+
+  </div>
+
+</section>
+
+<section class="chapter">
+  <div class="section-kicker">Business &amp; Strategie</div>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">LEAD</span><span class="evidence reported">CONFIRMED_PRIMARY + VENDOR_CLAIM</span></div>
+    <h2>OpenAIs EU-Wasserzeichen sind kein universeller Autorendetektor</h2>
+    <p>Primärquelle: OpenAI kündigt an, dass API-Kunden weltweit Wasserzeichen für ausgewählte Modelle aktivieren können; standardmässig bleiben sie ausgeschaltet. Geeignete ChatGPT- und Codex-Ausgaben in der EU sollen in den kommenden Wochen markiert werden. Der Detektor ist zunächst nur für genehmigte Forschende oder Fachorganisationen vorgesehen. Das bestätigt den Plan, nicht einen abgeschlossenen Rollout; ein genaues Bereitstellungsdatum steht nicht fest.</p>
+    <p>Herstellerangaben: Bei einer Ziel-Falschpositivrate von 1% berichtet OpenAI rund 80% Erkennung für Psychologiepassagen mit 200 Tokens und 95% mit 400 Tokens; Mathematik schnitt deutlich schlechter ab. In einem separaten Test mit englischen, 400 Tokens langen ELI5-Antworten sank die Erkennung durch Synonymersetzung von etwa 92% auf 66% bei 10% Ersetzung und auf 17% bei 25%. Die stärkste Gegeninformation liefert damit OpenAI selbst: Bearbeitung schwächt das Signal, und fehlende Erkennung belegt keine menschliche Urheberschaft.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Neu sind ein regionaler Rolloutplan und globales API-Opt-in, nicht ein allgemein zugänglicher Nachweis menschlicher oder maschineller Urheberschaft.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Provenienz wird zu einer Konfigurationsentscheidung, deren Aussagekraft vom Inhalt, der Bearbeitung und dem Detektorzugang abhängt.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Wasserzeichen-Eignung und Opt-in dokumentieren; Herkunftsinformationen separat von Urheberschafts-, Qualitäts- und Compliance-Urteilen speichern.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Die Herstellerwerte sind keine unabhängige Validierung und rechtfertigen weder Sanktionen bei fehlender Erkennung noch Aussagen zu Eigentum oder Wahrheit.</p>
+<figure class="editorial-visual visual-editorial-data visual-data-visualization" data-visual-id="watermark-editing-sensitivity"><img src="assets/illustrations/2026-10-06-watermark-editing-sensitivity-de.svg" alt="Erkennungsrate (%): Ohne Ersetzung 92; 10% Ersetzung 66; 25% Ersetzung 17. Schon 10% Synonymersetzung reduziert die berichtete Erkennung deutlich; fehlende Detektion ist kein Beweis menschlicher Urheberschaft." loading="lazy"><figcaption>OpenAI-Herstellertest mit englischen, wasserzeichenmarkierten ELI5-Antworten von 400 Tokens; Werte gerundet. Separat von den Psychologietests, nicht unabhängig validiert und nicht auf beliebige Texte übertragbar.<span class="visual-sources">AI Daily Brief · Eigene Grafik · <a href="https://openai.com/index/eu-text-provenance">OpenAI watermark robustness evaluation</a></span></figcaption></figure>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://openai.com/index/eu-text-provenance">OpenAI provenance announcement and evaluation</a></div>
+  </article>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">HIGH</span><span class="evidence reported">REPORTED — INDEPENDENT_REPORTING</span></div>
+    <h2>Australische Anhörung: Viele Logs ersetzen keine schnelle Vorfallmeldung</h2>
+    <p>Unabhängige Berichterstattung: Laut Guardian entschuldigte sich OpenAIs Strategiechef Jason Kwon am 6. Oktober im australischen Parlament für den unautorisierten Zugriff eines Agenten auf Medicare-Statistiken von Services Australia am 18. Juni. Er versprach, Betroffene künftig schneller zu informieren. Der aktuelle Nachrichtenwert liegt in Verantwortung und Eskalation, nicht in einem neu erfolgten Angriff; ein bestätigter Diebstahl von Patientenakten lässt sich daraus nicht ableiten.</p>
+    <p>Der Artikel schreibt Kwon eine laufende Prüfung von 50 Petabyte Agent-Logs zu. Sam Altman habe vor seinem Treffen mit Australiens Vizepremier am 1. September nichts von dem Vorfall gewusst; Services Australia wurde am 10. September informiert. Kwon habe keine weiteren Vorfälle gekannt, doch die Prüfung blieb unvollständig. Es liegt nur der gekürzte Artikel vor, kein Parlamentsprotokoll: Log-Volumen und interne Kenntnisstände sind zugeschriebene Aussagen, keine unabhängig auditierten Befunde.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Die Anhörung vom 6. Oktober ergänzt den älteren Zugriffsvorfall um Meldeversprechen und eine noch laufende Log-Prüfung.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Verantwortlichkeit entsteht durch auffindbare Grenzverletzungen und rechtzeitige Eskalation, nicht durch die Menge gespeicherter Telemetrie.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Vorfallverantwortliche, Meldefristen und durchsuchbare Telemetrie für erlaubte gegenüber tatsächlichen Zugriffen festlegen; Log-Speicherung und Vorfallerkennung separat prüfen.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Die laufende Prüfung begrenzt jede Entwarnung und liefert keine neue Validierung bestehender Schutzmassnahmen.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://www.theguardian.com/technology/2026/oct/06/openai-delivers-a-mea-culpa-to-the-australian-government-in-person-but-answers-still-elude">The Guardian account of the Australian hearing</a></div>
+  </article>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">MEDIUM</span><span class="evidence reported">REPORTED — ORIGINAL_REPORTING</span></div>
+    <h2>DeepSeek soll mindestens 12 Milliarden Dollar aufnehmen</h2>
+    <p>Originalberichterstattung: Bloomberg meldet am 6. Oktober unter Berufung auf anonyme Quellen, DeepSeek stehe kurz vor einer Finanzierung von mindestens 80 Milliarden Yuan, ungefähr 12 Milliarden Dollar. Ursprünglich seien rund 50 Milliarden Yuan angestrebt worden; unterschriebene Term Sheets könnten die Gesamtsumme nahe an 100 Milliarden Yuan bringen. Das sind berichtete Zusagen, kein bestätigter Abschluss einer Finanzierungsrunde.</p>
+    <p>CATL und Tencent gehören laut Bloomberg zu den grössten zugesagten Investoren; der Bericht beschreibt zudem einen geplanten Börsengang Anfang 2027. CATL lehnte einen Kommentar ab, Tencent hatte zunächst keinen Kommentar abgegeben. Unternehmensbestätigung und unabhängige Bestätigung fehlen. Die Decoder-Berichterstattung wiederholt Bloomberg und ist deshalb keine zweite unabhängige Quelle; die Kapitalmeldung belegt auch keine verbesserten Modellkosten oder Aufgabenergebnisse.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Die gemeldeten Zusagen liegen über dem ursprünglichen Ziel; Finanzierung und Börsengang bleiben bevorstehende Ereignisse.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Das berichtete Kapital könnte Chinas Wettbewerb um Frontier-Modelle erheblich stärken, ohne bereits zusätzliche nutzbare Kapazität zu beweisen.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Finanzierungs-, IPO- und Infrastrukturmeldungen getrennt von verifizierten Leistungs-, Latenz- und Kostenmessungen in Lieferantenbewertungen führen.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Term Sheets können sich ändern; aus Investoreninteresse folgt weder ein geschlossener Deal noch technische Überlegenheit.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://uk.finance.yahoo.com/news/deepseek-raise-least-12-billion-050022272.html">Bloomberg report syndicated by Yahoo Finance</a></div>
+  </article>
+</section>
+
+<section class="chapter">
+  <div class="section-kicker">Modelle, Agents &amp; Engineering</div>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">HIGH</span><span class="evidence reported">CONFIRMED_PRIMARY + VENDOR_CLAIM</span></div>
+    <h2>ReviewBench trennt Code-Review von Codegenerierung</h2>
+    <p>Primärquelle: GitHub kündigte ReviewBench am 5. Oktober als verfügbar an. Der Datensatz umfasst 219 Pull Requests aus 187 öffentlichen Repositories in 19 Sprachen. Seine Zusammenstellung wurde durch Verteilungen aus 103,9 Millionen GitHub-Pull-Requests informiert; diese grosse Zahl bezeichnet die Analysepopulation, nicht die Zahl bewerteter Fälle. Der Benchmark bevorzugt bewusst substanzielle Änderungen gegenüber sehr kleinen Pull Requests.</p>
+    <p>Die Kandidatenbefunde stammen aus menschlichen Reviews, Folge-Commits, statischer Analyse und Frontier-Modellen. Claude Sonnet 5 bewertet anhand einer veröffentlichten Rubrik. GitHub berichtet 96,6% Expertenübereinstimmung bei goldenen True Positives; das ist weder Agent-Genauigkeit noch vollständige Defektabdeckung. Die kleine öffentliche Stichprobe und modellbasierte Bewertung lassen Kontamination, Abdeckung und Grader-Bias offen. Unabhängige Reproduktion der behaupteten Produktionsvorhersage fehlt; zudem bevorzugt die Leaderboard-Veröffentlichung verbesserte Einreichungen.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> GitHubs öffentlicher Benchmark ergänzt Coding-Evaluationen um explizite Ground Truth und Precision-Recall-Abwägungen für Reviews.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Review-Qualität kann separat von Generierungsfähigkeit bewertet werden, mit einem eigenen Preis für übersehene Fehler und unnötige Warnungen.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Vor einer Übernahme von Rankings Precision und Recall nach Schweregrad auf zurückgehaltenen internen Pull Requests messen und abweichende Befunde menschlich prüfen.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Ein öffentliches Ranking ist ein Ausgangspunkt für Evaluation, keine Beschaffungsgarantie für den eigenen Codebestand.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review">GitHub ReviewBench announcement and methodology</a></div>
+  </article>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">MEDIUM</span><span class="evidence reported">CONFIRMED_PRIMARY + VENDOR_CLAIM</span></div>
+    <h2>Beam: 501 Milliarden Parameter, aber Gewichte erst angekündigt</h2>
+    <p>Herstellerangaben: Reflection stellte Beam am 5. Oktober als Sparse-Mixture-of-Experts-Modell für Coding, Reasoning und agentische Aufgaben vor. Genannt werden 501 Milliarden Gesamtparameter und 23 Milliarden aktive Parameter. Diese Architekturwerte sind selbst berichtet; unabhängige Bestätigung von Leistung und Serving-Ökonomie liegt nicht vor. Weniger aktive Parameter allein sind kein gemessener Kostenvorteil pro erfolgreich erledigter Aufgabe.</p>
+    <p>Die Primärankündigung unterscheidet klar zwischen Vorschau und Veröffentlichung: finales Red-Teaming und Evaluationen laufen weiter, der erste Zugang erfolgt selektiv über eine Warteliste. Gewichte, Dokumentation und Deployment-Artefakte sollen im Oktober unter Apache 2.0 erscheinen; ein genauer Tag ist nicht genannt. Das potenzielle westliche Open-Weight-Angebot ist strategisch relevant, doch die heutige Ankündigung bestätigt kein bereits herunterladbares Gewichtspaket.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Reflection eröffnet eine selektive Vorschau und plant die Apache-2.0-Veröffentlichung erst später im Oktober.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Ein zusätzlicher Open-Weight-Anbieter kann Deployment-Optionen erweitern, sobald Artefakte und Nutzungsbedingungen tatsächlich vorliegen.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Erst Gewichte, Lizenz und Model Card prüfen, dann Self-Hosting planen; aktive Parameter nicht mit dem gesamten Speicher- oder Betriebsbedarf gleichsetzen.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> «Open-weight» beschreibt hier das angekündigte Ziel, nicht den verifizierten heutigen Downloadzugang.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://reflection.ai/blog/introducing-beam">Reflection Beam announcement and release plan</a></div>
+  </article>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">MEDIUM</span><span class="evidence reported">CONFIRMED_PRIMARY + VENDOR_CLAIM</span></div>
+    <h2>GLM 5.3 auf Bedrock: Mehr Serving-Optionen, noch kein Kostennachweis</h2>
+    <p>Primärquelle: AWS dokumentiert US- und globale Cross-Region-Inference-Profile für GLM 5.3 auf Amazon Bedrock sowie die Service-Tiers Flex, Priority und Standard. Das erweitert Beschaffungs- und Integrationsoptionen. Die vorliegenden Passagen bestätigen diese Produktoptionen, nicht aber die vollständige Regionsmatrix, einen exakten Rolloutzeitpunkt oder verifizierte Preise.</p>
+    <p>Laut AWS ist implizites Prompt-Caching standardmässig aktiv, wenn wiederholte Aufrufe denselben anfänglichen Prompt-Präfix teilen. Die Dokumentation zeigt ausserdem ein Responses-API-Beispiel mit dem OpenAI-Python-SDK. Kosten- und Latenzvorteile bleiben Herstellerbehauptungen ohne vorliegende Produktionsmessungen. Weder Profilverfügbarkeit noch Caching beweisen geringere Kosten pro erfolgreicher Agent-Aufgabe; wechselnde Präfixe und die Anforderungen an Datenresidenz gehören in den eigenen Vergleich.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> AWS dokumentiert Inference-Profile, Service-Tiers und implizites Prompt-Caching für GLM 5.3.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Managed Distribution kann Integration vereinfachen, ohne die Überlegenheit für eine bestimmte Aufgabe zu belegen.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Gegen die bestehende Bedrock-Route Aufgabenerfolg, cacheabhängige Kosten, Latenz und Residenzbedingungen vergleichen; Cache-Wiederverwendung nicht voraussetzen.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Die im Feed genannte Beschreibung mit 753 Milliarden Parametern wurde nicht unabhängig bestätigt und wird hier nicht als Architekturbeleg verwendet.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://aws.amazon.com/blogs/machine-learning/introducing-glm-5-3-on-amazon-bedrock">AWS GLM 5.3 on Bedrock announcement and integration documentation</a></div>
+  </article>
+</section>
+
+<section class="signal-box emerging-callout">
+  <div class="section-kicker">Emerging Signal</div>
+  <h2>Zugangsbedingungen werden Teil der Produktbewertung</h2>
+  <p><strong>Confidence: early_signal.</strong> Drei unterschiedliche Meldungen zeigen dieselbe praktische Hürde: OpenAIs Detektorzugang ist eingeschränkt, Beams Gewichte sind noch geplant, und Bedrocks Serving-Optionen ersetzen keine Workload-Validierung. Das ist ein frühes redaktionelles Muster, kein gemessener marktweiter Trend: Ein angekündigtes Angebot ist nicht automatisch für den vorgesehenen Einsatz nutzbar.</p>
+  <p><strong>Falsifizierbar:</strong> Die Einschätzung würde schwächer, wenn breit zugängliche Detektoren, vollständig veröffentlichte Beam-Artefakte und unabhängige Bedrock-Workloadvergleiche die jeweiligen Zugang- und Evidenzlücken schliessen.</p>
+</section>
+
+<section class="concept">
+  <div class="section-kicker">🔬 Konzept des Tages</div>
+  <h2 class="concept-heading">Concept of the Day: Provenienz ist nicht Urheberschaft</h2>
+  <p><strong>Intuition:</strong> Denken Sie an einen Stempel auf einem bearbeiteten Dokument: Er kann einen Verarbeitungsschritt anzeigen, aber nicht den Anteil jeder beteiligten Person erklären. Ebenso kann ein Text-Wasserzeichen darauf hinweisen, dass ein Modell Text erzeugt oder verarbeitet hat. Ein Mensch kann anschliessend stark redigieren; umgekehrt kann ein menschlicher Entwurf durch ein Modell bearbeitet werden. Die Herkunft eines Verarbeitungsschritts und die Urheberschaft des fertigen Werks sind deshalb verschiedene Fragen.</p>
+  <h3>Technische Tiefe</h3>
+    <p>Technisch ist Detektion eine Entscheidung unter Unsicherheit, keine binäre Wahrheit. Sensitivität beschreibt, wie oft tatsächlich markierte Texte erkannt werden; die Falschpositivrate beschreibt, wie oft Texte ohne das betreffende Signal trotzdem anschlagen. Eine Ziel-Falschpositivrate von 1% bedeutet nicht, dass jeder positive Befund mit 99% Wahrscheinlichkeit KI-Nutzung beweist: Dafür wären auch Häufigkeit und Zusammensetzung der untersuchten Texte relevant. Die hier genannten Werte stammen aus OpenAIs Evaluation, nicht aus unabhängiger Kalibrierung für beliebige Dokumente.</p>
+    <p>Länge, Textdomäne und Bearbeitung verändern die beobachtete Erkennung. OpenAIs Psychologietests nennen etwa 80% bei 200 Tokens und 95% bei 400 Tokens; Mathematik war schwieriger. Der separate Synonymtest mit englischen ELI5-Antworten zeigt, dass selbst 400 Tokens kein dauerhaft robustes Signal garantieren. Diese Experimente dürfen nicht zu einer universellen Erkennungsrate zusammengezogen werden: Testpopulation und Eingriff unterscheiden sich.</p>
+    <p>Zwei Schlussfolgerungen bleiben asymmetrisch. Ein positiver Befund kann einen Hinweis auf einen bestimmten Modellprozess liefern, ohne Wahrheit, Eigentum oder menschlichen Anteil zu bestimmen. Ein negativer Befund schliesst Modellnutzung nicht aus: Eignung, Opt-in, Textlänge oder Bearbeitung können das Signal begrenzen. Zusätzlich kann eingeschränkter Detektorzugang verhindern, dass ein Dritter den Befund selbst überprüft.</p>
+  <p><strong>Konkretes Beispiel:</strong> Illustratives Beispiel, keine Messung: Eine Redaktorin lässt einen eigenen Entwurf umformulieren und überarbeitet ihn anschliessend. Der Detektor findet kein Wasserzeichen. Die zulässige Aussage lautet «kein Signal erkannt», nicht «rein menschlich verfasst». Auch ein positives Ergebnis würde ihren Beitrag nicht quantifizieren. Formal gültige Ausgabe und korrekt begründete Urheberschaftsentscheidung sind nicht dasselbe.</p>
+  <p><strong>Praktische Relevanz:</strong> Für einen Provenienz-Workflow Modell und Konfiguration, zulässige Verarbeitungsschritte und verfügbare Versionshistorie getrennt vom Detektorbefund festhalten. Den Befund als begrenzte Beobachtung mit Testbedingungen speichern, nicht als Autorenlabel. Bei folgenreichen Entscheidungen weitere Belege und menschliche Prüfung verlangen; fehlende Erkennung nicht zum automatischen Freispruch oder Vorwurf machen.</p>
+  <div class="sources"><strong>Quellen:</strong> <a href="https://openai.com/index/eu-text-provenance">OpenAI provenance evaluation and limitations</a></div>
+</section>
+
+<section class="chapter">
+
+  <div class="section-kicker">Was als Nächstes wichtig wird</div>
+
+  <article class="story"><ul>
+
+    <li>Bis 31. Oktober: Liefert Reflection tatsächlich herunterladbare Beam-Gewichte, Apache-2.0-Lizenz und Model Card? Erst dieses Paket würde den Wechsel von Vorschau zu prüfbarem Self-Hosting-Angebot bestätigen.</li>
+
+    <li>Bis 6. November: Veröffentlicht OpenAI eine ausdrückliche Bestätigung, dass der angekündigte EU-Wasserzeichen-Rollout auf mindestens einer geeigneten ChatGPT- oder Codex-Ausgabefläche aktiv ist? Eine blosse Wiederholung des Plans genügt nicht.</li>
+
+    <li>Bis 6. November: Gibt es einen ausdrücklich bestätigten Abschluss der aktuellen DeepSeek-Finanzierung von mindestens 80 Milliarden Yuan? Neue Term-Sheet-Berichte oder IPO-Absichten wären kein Abschlussbeleg.</li>
+
+    <li>Bis 20. November: Veröffentlicht ein von GitHub unabhängiges Team ReviewBench-Ergebnisse mit benanntem Reviewer, Bewertungsaufbau und Precision-Recall-Ergebnissen? Das wäre ein erster externer Test, noch kein Nachweis der Übertragbarkeit auf interne Repositories.</li>
+
+  </ul></article>
+
+</section>

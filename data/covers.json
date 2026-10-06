@@ -125,5 +125,15 @@
       "de": "OpenAI erweitert Werbeformate und Conversion-Messung, Microsoft prüft Agenten am Backend-Zustand. Neue US-Aufseher und ein späterer EU-Ausblick für Siri zeigen zugleich: Koordination, Verfügbarkeit und Verlässlichkeit bleiben getrennte Fragen.",
       "en": "OpenAI expands ad formats and conversion measurement; Microsoft tests agents against backend state. New US oversight leaders and a later EU outlook for Siri also show that coordination, availability and reliability remain separate questions."
     }
+  },
+  "2026-10-06": {
+    "kicker": {
+      "de": "Die Leitgeschichte",
+      "en": "The lead story"
+    },
+    "deck": {
+      "de": "OpenAI kündigt Text-Wasserzeichen an und erklärt verspätete Vorfallmeldungen. GitHub macht Code-Review messbarer; Beam, Bedrock und DeepSeeks gemeldete Finanzierung zeigen, warum Zugang, Leistung und Betriebsfähigkeit getrennt bewertet werden müssen.",
+      "en": "OpenAI announces text watermarks and explains delayed incident notifications. GitHub makes code review more measurable; Beam, Bedrock and DeepSeek’s reported financing show why access, performance and operational readiness must be assessed separately."
+    }
   }
 }
