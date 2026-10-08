@@ -1,0 +1,75 @@
+[
+  {
+    "id": "bounded-ticket-decision",
+    "target": "concept",
+    "title": {
+      "de": "Routing ist noch keine Handlungsberechtigung",
+      "en": "Routing is not authorization to act"
+    },
+    "question": {
+      "de": "Was kann eine begrenzte Ticket-Entscheidung liefern, ohne eine Rückzahlung zu autorisieren?",
+      "en": "What can a bounded ticket decision provide without authorizing a refund?"
+    },
+    "caption": {
+      "de": "Illustratives Anwendungsbeispiel nach dem Entscheidungsprinzip des d1-Releases, kein gemessener Modelloutput und kein echter API-Payload; ein zulässiges Label belegt weder korrektes Reasoning noch allgemeine Genauigkeit.",
+      "en": "Illustrative application example following the d1 release's decision principle, not a measured model output or real API payload; an allowed label establishes neither correct reasoning nor general accuracy."
+    },
+    "takeaway": {
+      "de": "Eine strukturierte Entscheidung kann das zuständige Team auswählen, während die Berechtigung zur Geldbewegung separat geprüft wird.",
+      "en": "A structured decision can select the responsible team while authorization to move money is checked separately."
+    },
+    "sources": [
+      {
+        "label": "Liquid AI: single-pass decision models and routing examples",
+        "url": "https://huggingface.co/blog/LiquidAI/open-d1"
+      }
+    ],
+    "kind": "decision",
+    "example": true,
+    "input": {
+      "de": "«Meine Rechnung enthält dieselbe Monatsgebühr zweimal; bitte korrigieren.»",
+      "en": "“My invoice contains the same monthly fee twice; please correct it.”"
+    },
+    "question_label": {
+      "de": "Welches Team soll das bearbeiten?",
+      "en": "Which team should handle this?"
+    },
+    "outcomes": [
+      {
+        "label": {
+          "de": "Abrechnung",
+          "en": "Billing"
+        },
+        "detail": {
+          "de": "Gebühren, Rechnungen und Rückzahlungsanfragen",
+          "en": "Charges, invoices and refund requests"
+        }
+      },
+      {
+        "label": {
+          "de": "Technik",
+          "en": "Technical support"
+        },
+        "detail": {
+          "de": "App- oder Website-Fehler",
+          "en": "App or website faults"
+        }
+      },
+      {
+        "label": {
+          "de": "Menschliche Prüfung",
+          "en": "Human review"
+        },
+        "detail": {
+          "de": "Unklarer oder widersprüchlicher Sachverhalt",
+          "en": "Ambiguous or contradictory facts"
+        }
+      }
+    ],
+    "selected": 0,
+    "result": {
+      "de": "Vorgesehene Beispielroute: Abrechnung; Ticket zuweisen, keine automatische Rückzahlung auslösen.",
+      "en": "Intended example route: billing; assign the ticket, do not trigger an automatic refund."
+    }
+  }
+]

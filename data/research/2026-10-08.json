@@ -1,0 +1,1188 @@
+{
+  "claims": [
+    {
+      "id": "2026-10-08-e83ea9c45962",
+      "claim": "Anthropic released Haiku 5.5 on October 7 for high-volume work and coding subagents and claims average running costs about 75% below Haiku 4.5.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Anthropic",
+        "Claude Haiku 5.5",
+        "Claude Haiku 4.5"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_launch",
+          "name": "Anthropic Haiku 5.5 launch",
+          "url": "https://www.anthropic.com/claude-haiku-5-5"
+        }
+      ],
+      "contradictions": [
+        "The launch is primary evidence of release, not independent validation of average workload savings."
+      ]
+    },
+    {
+      "id": "2026-10-08-6603d9b4b27f",
+      "claim": "THE DECODER reports Haiku 5.5 input/output pricing of $0.10/$0.50 per million tokens for prompts up to 100,000 tokens, fivefold rates above that threshold, and increased consumption from an updated tokenizer.",
+      "evidence_state": "reported",
+      "entities": [
+        "Anthropic",
+        "Claude Haiku 5.5",
+        "THE DECODER"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "THE DECODER pricing report",
+          "url": "https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over"
+        }
+      ],
+      "contradictions": [
+        "Supplied excerpt is truncated; unit pricing does not establish cost per successful task."
+      ]
+    },
+    {
+      "id": "2026-10-08-631a62d81c2a",
+      "claim": "Anthropic reports OSWorld 2.1 scores of 72.4% for Haiku 5.5 and 15.7% for Haiku 4.5, explicitly on the offline subset.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Anthropic",
+        "Claude Haiku 5.5",
+        "Claude Haiku 4.5",
+        "OSWorld 2.1"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_vendor_benchmark",
+          "name": "Anthropic benchmark table",
+          "url": "https://www.anthropic.com/claude-haiku-5-5"
+        }
+      ],
+      "contradictions": [
+        "Not a full-benchmark or production-reliability measurement."
+      ]
+    },
+    {
+      "id": "2026-10-08-16ea5d74b0b0",
+      "claim": "THE DECODER attributes to Artificial Analysis a Haiku 5.5 Intelligence Index score of 43 with about 162,000 output tokens per task at maximum effort, and 38 with about 55,000 at high effort; GPT-6 Luna is reported at 38 with roughly 50,000 tokens.",
+      "evidence_state": "reported",
+      "entities": [
+        "Artificial Analysis",
+        "THE DECODER",
+        "Claude Haiku 5.5",
+        "GPT-6 Luna"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "THE DECODER October 8 evaluation update",
+          "url": "https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over"
+        }
+      ],
+      "contradictions": [
+        "Artificial Analysis was not directly verified; results describe its evaluation rather than all applications."
+      ]
+    },
+    {
+      "id": "2026-10-08-3a347cbfed81",
+      "claim": "Microsoft's October 7 Agent Lightning v1.0 announcement describes an open-source rebuild around Harnessed Agentic RL, roughly 3,500 lines of control-plane code, an LLM proxy leaving harness code unchanged, and native Kubernetes rollout jobs without mandatory commercial sandbox services.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Microsoft Research",
+        "Agent Lightning v1.0"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_vendor_technical_announcement",
+          "name": "Microsoft Research Agent Lightning v1.0",
+          "url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/?lang=fr-ca"
+        }
+      ],
+      "contradictions": [
+        "Confirmed as the announced design; repository contents, deployment behavior and isolation were not independently inspected."
+      ]
+    },
+    {
+      "id": "2026-10-08-a093a0c45992",
+      "claim": "Microsoft reports Qwen3.5-9B SWE-bench Verified Pass@1 improving from 41.8% to 56.4%, a 14.6-percentage-point gain, using about 6,000 training samples.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Microsoft Research",
+        "Agent Lightning v1.0",
+        "Qwen3.5-9B",
+        "SWE-bench Verified"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_vendor_research",
+          "name": "Microsoft Research coding training example",
+          "url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/?lang=fr-ca"
+        }
+      ],
+      "contradictions": [
+        "One coding pipeline does not establish general gains, total training savings or production reliability; independent reproduction was not established."
+      ]
+    },
+    {
+      "id": "2026-10-08-b1cb495cccf8",
+      "claim": "Liquid AI released open d1-3B and experimental d1-omni-600M weights on October 7; its release describes single-forward-pass decisions without output-token generation, with text/image inputs for d1-3B and text with image or audio for d1-omni-600M.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Liquid AI",
+        "d1-3B",
+        "d1-omni-600M"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_release",
+          "name": "Liquid AI open d1 release",
+          "url": "https://huggingface.co/blog/LiquidAI/open-d1"
+        }
+      ],
+      "contradictions": [
+        "The 600M model is an early research release; confirmed release and described capabilities do not independently validate modality quality."
+      ]
+    },
+    {
+      "id": "2026-10-08-4ad7340eaa9b",
+      "claim": "Liquid AI reports d1-3B response times of 16 ms on Jetson AGX Thor, 26 ms on AGX Orin and 50 ms on Orin Nano, and seven-public-text-dataset mean scores of 82.9 for d1-3B and 78.4 for d1-omni-600M.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Liquid AI",
+        "d1-3B",
+        "d1-omni-600M",
+        "NVIDIA Jetson"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_vendor_measurements",
+          "name": "Liquid AI latency and text benchmark tables",
+          "url": "https://huggingface.co/blog/LiquidAI/open-d1"
+        }
+      ],
+      "contradictions": [
+        "Latency conditions were not independently reproduced; release provides no vision or audio benchmark results."
+      ]
+    },
+    {
+      "id": "2026-10-08-e49d3b0683bd",
+      "claim": "Cantwell's October 7 six-principle framework proposes enforceable standards developed by NIST with other federal agencies and independent compliance audits before covered model releases.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Maria Cantwell",
+        "NIST",
+        "US Senate Commerce Committee"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "primary_government_proposal",
+          "name": "Senate Commerce governance framework",
+          "url": "https://www.commerce.senate.gov/press/dem/release/cantwell-outlines-comprehensive-governance-framework-for-safe-and-secure-frontier-ai/"
+        }
+      ],
+      "contradictions": [
+        "A senator's proposal, not enacted law or an operative release gate."
+      ]
+    },
+    {
+      "id": "2026-10-08-542f0c612133",
+      "claim": "Roll Call reports that Cantwell's framework contains no legislative text, that she is outside John Thune's separate AI-bill negotiations, and that potential bipartisan legislation remains prospective.",
+      "evidence_state": "reported",
+      "entities": [
+        "Maria Cantwell",
+        "John Thune",
+        "Roll Call"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Roll Call framework analysis",
+          "url": "https://rollcall.com/2026/10/07/sen-maria-cantwell-looks-to-federal-testing-role-in-ai-safety-framework/"
+        }
+      ],
+      "contradictions": [
+        "Agreement and passage are not established; proposal contrasts with voluntary-standard preferences."
+      ]
+    },
+    {
+      "id": "2026-10-08-51b5ddf2f4fa",
+      "claim": "NVIDIA announces RTX Spark laptop preorders from October 7 and availability October 16; the supplied dossier attributes a $2,599 Surface Laptop Ultra starting price to Tom's Hardware reporting.",
+      "evidence_state": "reported",
+      "entities": [
+        "NVIDIA",
+        "Microsoft",
+        "RTX Spark",
+        "Surface Laptop Ultra",
+        "Tom's Hardware"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "primary_vendor_schedule",
+          "name": "NVIDIA Windows RTX Spark announcement",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "Tom's Hardware launch report",
+          "url": "https://www.tomshardware.com/laptops/microsoft-and-nvidia-launch-surface-laptop-ultra-with-rtx-spark-rtx-spark-preorders-live-now-coinciding-with-major-windows-11-changes-for-agentic-ai"
+        }
+      ],
+      "contradictions": [
+        "Availability is an announced schedule, not delivered-device evidence; supplied direct Tom's Hardware page fetch failed, so price remains attributed through the verified dossier."
+      ]
+    },
+    {
+      "id": "2026-10-08-e719b60198e4",
+      "claim": "Microsoft describes Surface Laptop Ultra configurations with up to 6,144 Blackwell GPU cores, 20 Grace CPU cores and 128 GB unified memory.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Microsoft",
+        "NVIDIA",
+        "Surface Laptop Ultra",
+        "RTX Spark"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "primary_vendor_specification",
+          "name": "Microsoft Devices Surface announcement",
+          "url": "https://blogs.windows.com/devices/2026/10/07/pre-order-our-most-powerful-surface-devices-ever/"
+        }
+      ],
+      "contradictions": [
+        "Maximum configuration specifications, not the $2,599 base configuration or independent inference-performance measurements."
+      ]
+    },
+    {
+      "id": "2026-10-08-46c3e1a5deb9",
+      "claim": "Haiku worker pricing and Liquid single-pass decision models support an early architectural signal of separating expensive reasoning, cheap worker agents and bounded decisions.",
+      "evidence_state": "early_signal",
+      "entities": [
+        "Anthropic",
+        "Liquid AI"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_launch",
+          "name": "Anthropic Haiku worker positioning",
+          "url": "https://www.anthropic.com/claude-haiku-5-5"
+        },
+        {
+          "role": "primary_vendor_release",
+          "name": "Liquid AI bounded decision models",
+          "url": "https://huggingface.co/blog/LiquidAI/open-d1"
+        }
+      ],
+      "contradictions": [
+        "Reported effort-dependent consumption and missing image/audio evaluation prevent a claim of demonstrated production efficiency."
+      ]
+    }
+  ],
+  "date": "2026-10-08",
+  "source_coverage": {
+    "catalog_sources": 74,
+    "feed_sources": 61,
+    "successful_feeds": 58,
+    "failed_feeds": [
+      {
+        "source": "SemiAnalysis",
+        "feed": "https://newsletter.semianalysis.com/feed",
+        "error": "ParseError: unclosed CDATA section: line 108, column 27912"
+      },
+      {
+        "source": "Don't Worry About the Vase",
+        "feed": "https://thezvi.substack.com/feed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      },
+      {
+        "source": "Marcus on AI",
+        "feed": "https://garymarcus.substack.com/feed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      }
+    ],
+    "observations": [
+      {
+        "source": "OpenAI",
+        "status": "ok",
+        "items_seen": 6
+      },
+      {
+        "source": "Anthropic",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "Google DeepMind",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Google AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "AWS Machine Learning",
+        "status": "ok",
+        "items_seen": 12
+      },
+      {
+        "source": "NVIDIA AI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Hugging Face",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Mistral AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "arXiv AI",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "arXiv Machine Learning",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "Google Research Blog",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Microsoft Research",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Meta Engineering",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "NVIDIA Blog",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "NVIDIA Developer Blog",
+        "status": "ok",
+        "items_seen": 6
+      },
+      {
+        "source": "TechCrunch AI",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "The Verge AI",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "Ars Technica AI",
+        "status": "ok",
+        "items_seen": 8
+      },
+      {
+        "source": "MIT Technology Review AI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "IEEE Spectrum AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Wired AI",
+        "status": "ok",
+        "items_seen": 9
+      },
+      {
+        "source": "VentureBeat AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "The Guardian AI",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "Financial Times AI",
+        "status": "ok",
+        "items_seen": 12
+      },
+      {
+        "source": "404 Media",
+        "status": "ok",
+        "items_seen": 5
+      },
+      {
+        "source": "Platformer",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "CNBC Technology",
+        "status": "ok",
+        "items_seen": 26
+      },
+      {
+        "source": "BBC Technology",
+        "status": "ok",
+        "items_seen": 9
+      },
+      {
+        "source": "NYT Technology",
+        "status": "ok",
+        "items_seen": 11
+      },
+      {
+        "source": "Simon Willison",
+        "status": "ok",
+        "items_seen": 14
+      },
+      {
+        "source": "Interconnects",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "SemiAnalysis",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Latent Space",
+        "status": "ok",
+        "items_seen": 3
+      },
+      {
+        "source": "Import AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "One Useful Thing",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Understanding AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "AI Snake Oil",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Don't Worry About the Vase",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Marcus on AI",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "ChinaTalk",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Ahead of AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Lil'Log",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Andrej Karpathy",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "LessWrong",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "TLDR AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "arXiv Computational Linguistics",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "HF Daily Papers",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "MIT News AI",
+        "status": "ok",
+        "items_seen": 5
+      },
+      {
+        "source": "Synced Review",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "r/LocalLLaMA",
+        "status": "ok",
+        "items_seen": 25
+      },
+      {
+        "source": "Hacker News AI 100+ points",
+        "status": "ok",
+        "items_seen": 8
+      },
+      {
+        "source": "AWS Machine Learning Blog",
+        "status": "ok",
+        "items_seen": 12
+      },
+      {
+        "source": "Azure Blog",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "GitHub Blog AI and ML",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "PyTorch Blog",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Ollama Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "THE DECODER DE",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "THE DECODER EN",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "heise online",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "t3n",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "Google News DE/CH AI",
+        "status": "ok",
+        "items_seen": 40
+      }
+    ]
+  },
+  "coverage_gaps": [
+    "Three web calls used; page segments and search extracts were checked, not entire sites.",
+    "Supplied Reuters and Artificial Analysis fetches failed; Haiku's independent measurements remain attributed through reporting.",
+    "SemiAnalysis, The Zvi and Marcus feeds failed.",
+    "Due continuity items without new evidence retain supplied status; overdue outcomes were not comprehensively re-audited.",
+    "Mistral's intraday timing remains unresolved; EmbeddingGemma primary retrieval failed.",
+    "Landing-page security alerts remain discovery signals and were not promoted to confirmed incidents."
+  ],
+  "continuity_reviews": [
+    {
+      "kind": "prediction",
+      "id": "pred-kya-interoperability-2026-10",
+      "assessment": "Open unchanged; bounded discovery did not establish an implementable specification or cross-network pilot before the October 15 review.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-deepseek-v41-evidence-2026-09",
+      "assessment": "Falsified unchanged; the supplied API landing excerpt adds no independent success, latency or cost comparison.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-epd-independent-evidence-2026-10",
+      "assessment": "Open unchanged; no qualifying independent production-style reproduction was established.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-us-duty-of-care-draft-2026-09",
+      "assessment": "Open retained; the October 7 framework is late, lacks legislative text and is separate from Thune's negotiations, leaving the September 30 outcome unresolved.",
+      "sources": [
+        {
+          "label": "Roll Call",
+          "url": "https://rollcall.com/2026/10/07/sen-maria-cantwell-looks-to-federal-testing-role-in-ai-safety-framework/"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-embedded-evaluator-details-2026-09",
+      "assessment": "Confirmed unchanged; no newly verified evidence warrants revising the supplied historical assessment.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-sglang-cve-remediation-2026-09",
+      "assessment": "Falsified unchanged; official remediation was not newly verified in this run.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-deepseek-alias-regression-2026-09",
+      "assessment": "Falsified unchanged; the supplied landing excerpt documents legacy Flash aliases but neither quantified regression nor resolved-version telemetry.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-frontier-pacing-operationalization-2026-09",
+      "assessment": "Progress retained; Cantwell's October 7 release adds an audit-gate proposal but cannot establish implementation or the September 30 deadline outcome.",
+      "sources": [
+        {
+          "label": "Senate Commerce",
+          "url": "https://www.commerce.senate.gov/press/dem/release/cantwell-outlines-comprehensive-governance-framework-for-safe-and-secure-frontier-ai/"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-anthropic-evaluator-governance-2026-10",
+      "assessment": "Open unchanged; targeted discovery established no additional evaluator or material new governance details before October 10.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-agentcore-v2-production-repro-2026-10",
+      "assessment": "Open unchanged; no qualifying non-AWS production measurement was verified.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-deepseek-v41-flash",
+      "assessment": "Watch unchanged; alias documentation does not replace the pending regression evaluation.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-biomolecular-kernel-repro",
+      "assessment": "Experimental unchanged; no reproduction or new relevant measurement was verified.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agentcore-v2-runtime",
+      "assessment": "Trial unchanged; this run supplies no workload A/B results.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-qwen38-omni-budget-harness",
+      "assessment": "Trial unchanged; Liquid AI's distinct decision models do not validate this model's token-budget harness.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agent-egress-canary",
+      "assessment": "Trial unchanged; no canary execution or containment result was supplied.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agent-egress-authority-canary",
+      "assessment": "Trial unchanged; Kubernetes rollout support is not evidence of hardened network-authority enforcement.",
+      "sources": []
+    },
+    {
+      "kind": "thesis",
+      "id": "nvidia-rack-platform",
+      "assessment": "High confidence unchanged; RTX Spark's PC expansion does not test third-party accelerator participation in NVLink racks.",
+      "sources": []
+    },
+    {
+      "kind": "thesis",
+      "id": "enterprise-agent-control-plane",
+      "assessment": "High confidence unchanged; Agent Lightning's training control plane does not establish customer-configurable production policies and telemetry across two platforms.",
+      "sources": []
+    }
+  ],
+  "selection": {
+    "selected_stories": 5,
+    "rejections": [
+      {
+        "title": "Mistral Large 4 public preview",
+        "reason": "Material launch, but primary evidence establishes October 6 only; the feed's 12:00:27 UTC timestamp barely clears the 11:55:19 window boundary and was not independently confirmed. Weights are promised for month-end, not available now."
+      },
+      {
+        "title": "EmbeddingGemma 2",
+        "reason": "Primary page retrieval failed; feed title is insufficient confirmation."
+      },
+      {
+        "title": "Nous Research valuation and business agents",
+        "reason": "Only a restricted article extract was accessible; financing terms and product availability were not sufficiently established."
+      },
+      {
+        "title": "NVIDIA Halos robotics safety",
+        "reason": "Supplied reporting dates the robotics expansion to June 2026; no clearly new in-window launch established."
+      }
+    ]
+  },
+  "counterevidence": [
+    {
+      "story_id": "2026-10-08-haiku-55",
+      "assessment": "The reported independent evaluation shows that higher effort can consume enough tokens to erode headline savings."
+    },
+    {
+      "story_id": "2026-10-08-cantwell-framework",
+      "assessment": "Independent reporting separates this framework from the ongoing majority-led negotiations and voluntary-standard preferences."
+    },
+    {
+      "story_id": "2026-10-08-rtx-spark-surface",
+      "assessment": "The hardware was previewed earlier; this story's novelty is ordering and availability, not the original RTX Spark reveal."
+    },
+    {
+      "story_id": "2026-10-08-agent-lightning",
+      "assessment": "A smaller control plane and one benchmark improvement do not demonstrate lower total training cost or production reliability."
+    },
+    {
+      "story_id": "2026-10-08-liquid-d1",
+      "assessment": "The multimodal capability claim runs ahead of publicly reported modality-specific evaluation."
+    }
+  ],
+  "watch_hits": [
+    "Agent task economics and effort-sensitive routing",
+    "Harness-aware post-training and coding-agent evaluation",
+    "Open-weight edge decisions and missing multimodal benchmarks",
+    "Local inference hardware procurement",
+    "Proposed frontier-AI audit and release gates"
+  ],
+  "builder_actions": [
+    {
+      "story_id": "2026-10-08-haiku-55",
+      "action": "Shadow-test pinned effort levels and record successful-task cost, latency and token consumption before switching."
+    },
+    {
+      "story_id": "2026-10-08-cantwell-framework",
+      "action": "Map existing evaluation and incident records to the proposed obligations without treating them as current requirements."
+    },
+    {
+      "story_id": "2026-10-08-rtx-spark-surface",
+      "action": "Wait for sustained inference and compatibility measurements before committing beyond a small evaluation purchase."
+    },
+    {
+      "story_id": "2026-10-08-agent-lightning",
+      "action": "Assess harness integration and held-out task success before considering a controlled training trial."
+    },
+    {
+      "story_id": "2026-10-08-liquid-d1",
+      "action": "Evaluate routing or classification tasks with abstention tests and separate text, image and audio validation."
+    }
+  ],
+  "visual_provenance": [
+    {
+      "id": "bounded-ticket-decision",
+      "class": "explanatory-diagram",
+      "basis": {
+        "de": "Illustratives Anwendungsbeispiel nach dem Entscheidungsprinzip des d1-Releases, kein gemessener Modelloutput und kein echter API-Payload; ein zulässiges Label belegt weder korrektes Reasoning noch allgemeine Genauigkeit.",
+        "en": "Illustrative application example following the d1 release's decision principle, not a measured model output or real API payload; an allowed label establishes neither correct reasoning nor general accuracy."
+      },
+      "sources": [
+        {
+          "label": "Liquid AI: single-pass decision models and routing examples",
+          "url": "https://huggingface.co/blog/LiquidAI/open-d1"
+        }
+      ]
+    }
+  ],
+  "retrieval": [
+    {
+      "url": "https://news.bensbites.com/",
+      "source": "Ben's Bites News",
+      "status": "ok",
+      "final_url": "https://www.bensbites.com/",
+      "truncated": false,
+      "elapsed_seconds": 0.209
+    },
+    {
+      "url": "https://bensbites.com/",
+      "source": "Ben's Bites",
+      "status": "ok",
+      "final_url": "https://www.bensbites.com/",
+      "truncated": false,
+      "elapsed_seconds": 0.159
+    },
+    {
+      "url": "https://aiweekly.co/",
+      "source": "AI Weekly",
+      "status": "ok",
+      "final_url": "https://aiweekly.co/",
+      "truncated": true,
+      "elapsed_seconds": 0.137
+    },
+    {
+      "url": "https://ai.meta.com/blog/",
+      "source": "Meta AI",
+      "status": "ok",
+      "final_url": "https://ai.meta.com/blog/",
+      "truncated": false,
+      "elapsed_seconds": 1.87
+    },
+    {
+      "url": "https://research.meta.ai/",
+      "source": "Meta AI Research",
+      "status": "ok",
+      "final_url": "https://research.meta.ai/",
+      "truncated": false,
+      "elapsed_seconds": 0.224
+    },
+    {
+      "url": "https://blogs.microsoft.com/ai/",
+      "source": "Microsoft AI",
+      "status": "ok",
+      "final_url": "https://news.microsoft.com/source/topics/ai/",
+      "truncated": false,
+      "elapsed_seconds": 0.394
+    },
+    {
+      "url": "https://api-docs.deepseek.com/news/",
+      "source": "DeepSeek",
+      "status": "ok",
+      "final_url": "https://api-docs.deepseek.com/news/",
+      "truncated": false,
+      "elapsed_seconds": 0.763
+    },
+    {
+      "url": "https://www.worldlabs.ai/blog",
+      "source": "World Labs",
+      "status": "ok",
+      "final_url": "https://www.worldlabs.ai/blog",
+      "truncated": false,
+      "elapsed_seconds": 0.278
+    },
+    {
+      "url": "https://www.reuters.com/technology/artificial-intelligence/",
+      "source": "Reuters AI",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.17
+    },
+    {
+      "url": "https://artificialanalysis.ai/",
+      "source": "Artificial Analysis",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.375
+    },
+    {
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence",
+      "source": "European Commission Digital Strategy",
+      "status": "ok",
+      "final_url": "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence",
+      "truncated": true,
+      "elapsed_seconds": 0.337
+    },
+    {
+      "url": "https://www.aisi.gov.uk/",
+      "source": "UK AI Security Institute",
+      "status": "ok",
+      "final_url": "https://www.aisi.gov.uk/",
+      "truncated": false,
+      "elapsed_seconds": 0.196
+    },
+    {
+      "url": "https://www.heise.de/news/Anne-Carson-bekommt-den-Literaturnobelpreis-2026-11480836.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "source": "heise online",
+      "status": "ok",
+      "final_url": "https://www.heise.de/news/Anne-Carson-bekommt-den-Literaturnobelpreis-2026-11480836.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "truncated": false,
+      "elapsed_seconds": 0.766
+    },
+    {
+      "url": "https://t3n.de/news/97-prozent-kaufen-bei-amazon-wie-abhaengig-deutschlands-onlinehandel-vom-us-konzern-ist-1767222",
+      "source": "t3n",
+      "status": "ok",
+      "final_url": "https://t3n.de/news/97-prozent-kaufen-bei-amazon-wie-abhaengig-deutschlands-onlinehandel-vom-us-konzern-ist-1767222/",
+      "truncated": true,
+      "elapsed_seconds": 0.628
+    },
+    {
+      "url": "https://arstechnica.com/ai/2026/10/nvidias-big-bet-on-physical-ai-aims-for-safer-robotaxis-humanoid-robots",
+      "source": "Ars Technica AI",
+      "status": "ok",
+      "final_url": "https://arstechnica.com/ai/2026/10/nvidias-big-bet-on-physical-ai-aims-for-safer-robotaxis-humanoid-robots/",
+      "truncated": true,
+      "elapsed_seconds": 0.54
+    },
+    {
+      "url": "https://www.chinatalk.media/p/the-spice-trader-vs-the-tariffs",
+      "source": "ChinaTalk",
+      "status": "ok",
+      "final_url": "https://www.chinatalk.media/p/the-spice-trader-vs-the-tariffs",
+      "truncated": true,
+      "elapsed_seconds": 0.1
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c3zxjdw5ywgpo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Technology",
+      "status": "ok",
+      "final_url": "https://www.bbc.co.uk/news/articles/c3zxjdw5ywgpo?at_medium=RSS&at_campaign=rss",
+      "truncated": false,
+      "elapsed_seconds": 0.227
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNX2VHTnYxaGc5OE9FWmJRcC16akFhaDJBMk8wbWlKOXhBRWtfZUJZazhqODVoWHBKRmZERVQ3N3lIUnpPbkVvTVpQekh5Zlc3LVNvUmtoWDVjRVBmaURoZWZXMTRIdjNuWHNnWmpWWkU2WDdxWFpHZElLVE9OQ2RKelA3Y1RFYlBiRFB2YVhBVTZoSkctQy1OQWhMUWxwTXM3U21pU1l6Undrc2xrZ2tQU1lTeUpCMEVrMTBtalBjb1E1QW1PS0xudHUybnpRaUZpTmZkUUY0Q2k?oc=5",
+      "source": "Google News DE/CH AI",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.215
+    },
+    {
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0npmx/we_unlearned_ccp_alignment_from_qwen3635ba3b",
+      "source": "r/LocalLLaMA",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.117
+    },
+    {
+      "url": "https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over",
+      "source": "THE DECODER EN",
+      "status": "ok",
+      "final_url": "https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over/",
+      "truncated": true,
+      "elapsed_seconds": 1.648
+    },
+    {
+      "url": "https://the-decoder.de/ki-preiskampf-geht-weiter-claude-haiku-5-5-bietet-viel-mehr-leistung-fuer-deutlich-weniger-geld",
+      "source": "THE DECODER DE",
+      "status": "ok",
+      "final_url": "https://the-decoder.de/ki-preiskampf-geht-weiter-claude-haiku-5-5-bietet-viel-mehr-leistung-fuer-deutlich-weniger-geld/",
+      "truncated": true,
+      "elapsed_seconds": 1.691
+    },
+    {
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/08/ai-death-war-sam-altman",
+      "source": "The Guardian AI",
+      "status": "ok",
+      "final_url": "https://www.theguardian.com/commentisfree/2026/oct/08/ai-death-war-sam-altman",
+      "truncated": true,
+      "elapsed_seconds": 0.157
+    },
+    {
+      "url": "https://www.lesswrong.com/posts/EqfdfetDKxpFszpdD/ai-vigil-at-congress",
+      "source": "LessWrong",
+      "status": "ok",
+      "final_url": "https://www.lesswrong.com/posts/EqfdfetDKxpFszpdD/ai-vigil-at-congress",
+      "truncated": true,
+      "elapsed_seconds": 0.209
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/08/russia-yandex-ukraine-drone-strike-data-center.html",
+      "source": "CNBC Technology",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.66
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/",
+      "truncated": true,
+      "elapsed_seconds": 0.251
+    },
+    {
+      "url": "https://blogs.windows.com/devices/2026/10/07/pre-order-our-most-powerful-surface-devices-ever/",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://blogs.windows.com/devices/2026/10/07/pre-order-our-most-powerful-surface-devices-ever/",
+      "truncated": true,
+      "elapsed_seconds": 0.243
+    },
+    {
+      "url": "https://huggingface.co/blog/LiquidAI/open-d1",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://huggingface.co/blog/LiquidAI/open-d1",
+      "truncated": true,
+      "elapsed_seconds": 0.2
+    },
+    {
+      "url": "https://rollcall.com/2026/10/07/sen-maria-cantwell-looks-to-federal-testing-role-in-ai-safety-framework/",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://rollcall.com/2026/10/07/sen-maria-cantwell-looks-to-federal-testing-role-in-ai-safety-framework/",
+      "truncated": false,
+      "elapsed_seconds": 0.289
+    },
+    {
+      "url": "https://www.anthropic.com/claude-haiku-5-5",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://www.anthropic.com/claude-haiku-5-5",
+      "truncated": true,
+      "elapsed_seconds": 0.228
+    },
+    {
+      "url": "https://www.commerce.senate.gov/press/dem/release/cantwell-outlines-comprehensive-governance-framework-for-safe-and-secure-frontier-ai/",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://www.commerce.senate.gov/press/dem/release/cantwell-outlines-comprehensive-governance-framework-for-safe-and-secure-frontier-ai/",
+      "truncated": true,
+      "elapsed_seconds": 0.18
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/?lang=fr-ca",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/?lang=fr-ca",
+      "truncated": true,
+      "elapsed_seconds": 0.586
+    },
+    {
+      "url": "https://www.tomshardware.com/laptops/microsoft-and-nvidia-launch-surface-laptop-ultra-with-rtx-spark-rtx-spark-preorders-live-now-coinciding-with-major-windows-11-changes-for-agentic-ai",
+      "source": "",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.196
+    }
+  ],
+  "omitted_context": {
+    "active_storylines": 4,
+    "recent_or_contested_claims": 16,
+    "predictions_due_or_near_due": 0,
+    "builder_radar_due_or_recent": 0,
+    "active_theses": 0,
+    "trend_summary": 4,
+    "recent_concepts": 5
+  },
+  "model": "gpt-6.1-sol",
+  "red_team_report": {
+    "approved": true,
+    "issues": [],
+    "checks": [
+      "Re-reviewed the corrected draft against the previous review, supplied evidence and context; no new web retrieval was performed.",
+      "Confirmed the previous Haiku prediction issue is resolved: the individual-evaluator falsification alternative is removed, and incomplete discovery remains explicitly inconclusive. Confirmation and falsification criteria no longer conflict.",
+      "Rechecked all four predictions, deadlines and bilingual what-next summaries; found no material inconsistency.",
+      "Checked unchanged material figures, dates and attributions using supplied passages and previous source checks: Haiku pricing and effort-dependent consumption, offline-subset OSWorld results, Agent Lightning's 14.6-percentage-point gain, Liquid's latency and text scores, hardware ordering dates and maximum specifications, and Cantwell's proposal status remain appropriately qualified.",
+      "Confirmed that vendor measurements are not presented as independently reproduced results, Artificial Analysis results remain attributed through reporting, and the previously retrieved Tom's Hardware passage supports the $2,599 starting price despite the separate local fetch failure.",
+      "Checked DE/EN equivalence, concept accuracy, counterevidence and novelty relative to the supplied previous edition; no material defect found.",
+      "Checked the sole visual's question, takeaway, route labels and provenance. Its selected route and human-review option are explicitly illustrative application choices, not measured model output or demonstrated native abstention. No plotted numbers, scales or comparison matrices are present.",
+      "Checked audit coverage against supplied coverage: 61 feeds comprise 58 successes and three named failures. Page-fetch outcomes remain distinct from feed outcomes, and bounded passage review is not represented as full-site review.",
+      "Checked all 18 continuity records against the supplied ten predictions, six builder items and two theses. Historical statuses are retained with limitations; absent new evidence is not treated as new falsification. Omitted-context counts are correctly preserved as counts of omitted records."
+    ],
+    "source_checks": [
+      {
+        "url": "https://www.tomshardware.com/laptops/microsoft-and-nvidia-launch-surface-laptop-ultra-with-rtx-spark-rtx-spark-preorders-live-now-coinciding-with-major-windows-11-changes-for-agentic-ai",
+        "excerpt": "The Surface Laptop Ultra will start at $2,599, while the Surface RTX Spark Dev Box will begin at $5,999.",
+        "assessment": "Previously independently retrieved passage supports the attributed laptop starting price, not its base configuration or inference performance; no new retrieval."
+      },
+      {
+        "url": "https://huggingface.co/blog/LiquidAI/open-d1",
+        "excerpt": "Unlike our generative models, decision models don’t produce tokens but answer in a single forward pass.",
+        "assessment": "Previously independently retrieved passage supports the vendor-described computational distinction; it is not independent performance validation."
+      },
+      {
+        "url": "https://www.commerce.senate.gov/press/dem/release/cantwell-outlines-comprehensive-governance-framework-for-safe-and-secure-frontier-ai/",
+        "excerpt": "Covered models should not be released until they have undergone an independent audit confirming that they meet these safeguards and standards.",
+        "assessment": "Previously independently retrieved passage supports the proposed audit gate, not enacted law or a current release obligation."
+      },
+      {
+        "url": "https://www.anthropic.com/claude-haiku-5-5",
+        "excerpt": "72.4% Offline subset 15.7% Offline subset",
+        "assessment": "Supplied primary table supports the reported OSWorld figures and preserved subset limitation; vendor benchmark evidence only."
+      },
+      {
+        "url": "https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over",
+        "excerpt": "on the \"high\" effort setting, Haiku 5.5 scores 38 with about 55,000 tokens per task",
+        "assessment": "Supplied reporting supports the attributed high-effort result; direct Artificial Analysis verification is not claimed."
+      },
+      {
+        "url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/?lang=fr-ca",
+        "excerpt": "raised Qwen3.5-9B from 41.8% to 56.4% Pass@1 on SWE-bench Verified, a 14.6 percentage point gain",
+        "assessment": "Supplied announcement supports the attributed coding-pipeline result and arithmetic, not independent reproduction or general gains."
+      },
+      {
+        "url": "https://rollcall.com/2026/10/07/sen-maria-cantwell-looks-to-federal-testing-role-in-ai-safety-framework/",
+        "excerpt": "The six-point framework , which does not include legislative text",
+        "assessment": "Supplied reporting supports the legislative limitation retained in both languages."
+      },
+      {
+        "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/",
+        "excerpt": "with laptop preorders open today and available October 16.",
+        "assessment": "Supplied October 7 announcement supports preorder opening and announced availability, not delivered-device evidence."
+      },
+      {
+        "url": "https://blogs.windows.com/devices/2026/10/07/pre-order-our-most-powerful-surface-devices-ever/",
+        "excerpt": "an NVIDIA Grace CPU with up to 20 cores, and up to 128 GB of unified memory.",
+        "assessment": "Supplied specifications support maximum CPU and memory values; the draft correctly separates maximum specifications from base-price equipment and measured performance."
+      }
+    ]
+  },
+  "publish_decision": "publish",
+  "visual_plan": [
+    {
+      "id": "bounded-ticket-decision",
+      "target": "concept",
+      "kind": "decision",
+      "title": {
+        "de": "Routing ist noch keine Handlungsberechtigung",
+        "en": "Routing is not authorization to act"
+      },
+      "question": {
+        "de": "Was kann eine begrenzte Ticket-Entscheidung liefern, ohne eine Rückzahlung zu autorisieren?",
+        "en": "What can a bounded ticket decision provide without authorizing a refund?"
+      },
+      "takeaway": {
+        "de": "Eine strukturierte Entscheidung kann das zuständige Team auswählen, während die Berechtigung zur Geldbewegung separat geprüft wird.",
+        "en": "A structured decision can select the responsible team while authorization to move money is checked separately."
+      },
+      "sources": [
+        {
+          "label": "Liquid AI: single-pass decision models and routing examples",
+          "url": "https://huggingface.co/blog/LiquidAI/open-d1"
+        }
+      ]
+    }
+  ]
+}

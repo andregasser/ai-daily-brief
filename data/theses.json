@@ -14,7 +14,7 @@
         "NVLink Fusion sees little production adoption outside NVIDIA-centric systems",
         "NVIDIA retreats from third-party XPU integration"
       ],
-      "last_reviewed": "2026-10-06",
+      "last_reviewed": "2026-10-08",
       "evidence_updates": [
         {
           "date": "2026-09-09",
@@ -63,6 +63,11 @@
           "date": "2026-10-06",
           "note": "High confidence unchanged; this window provides no verified third-party accelerator integration evidence.",
           "sources": []
+        },
+        {
+          "date": "2026-10-08",
+          "note": "High confidence unchanged; RTX Spark's PC expansion does not test third-party accelerator participation in NVLink racks.",
+          "sources": []
         }
       ]
     },
@@ -79,7 +84,7 @@
         "Customer-controlled agent telemetry remains a niche or pilot-only feature without meaningful enterprise production adoption",
         "Major providers retreat toward model-only refusals without exposing operational policy controls"
       ],
-      "last_reviewed": "2026-10-06",
+      "last_reviewed": "2026-10-08",
       "evidence_updates": [
         {
           "date": "2026-09-09",
@@ -160,6 +165,11 @@
         {
           "date": "2026-10-06",
           "note": "High confidence unchanged; incident accountability reporting does not establish customer-configurable runtime policies and telemetry.",
+          "sources": []
+        },
+        {
+          "date": "2026-10-08",
+          "note": "High confidence unchanged; Agent Lightning's training control plane does not establish customer-configurable production policies and telemetry across two platforms.",
           "sources": []
         }
       ]

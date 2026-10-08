@@ -1,0 +1,136 @@
+<section class="briefing-intro">
+
+  <div class="brief-label">AI Daily Brief · 08.10.2026</div>
+
+  <h1>Billigere AI braucht präzisere Einsatzgrenzen</h1>
+
+  <p class="dek">Haiku 5.5 senkt Tokenpreise, Agent Lightning verbindet Training mit realen Harnesses, und Liquid AI ersetzt für begrenzte Aufgaben die Textgenerierung durch direkte Entscheidungen. Neue Hardware und ein US-Auditvorschlag machen daraus konkrete Beschaffungs- und Governance-Fragen.</p>
+
+  <p><strong>Editorial Lead — Analyse:</strong> Der nächste Effizienzgewinn entsteht nicht zwingend durch ein einziges besseres Modell, sondern durch die richtige Aufteilung der Arbeit. Aufwendiges Reasoning, günstige Worker-Agents und lokale Ein-Pass-Entscheidungen haben unterschiedliche Einsatzgrenzen. Die heutigen Veröffentlichungen erweitern diese Auswahl, belegen aber noch keinen allgemeinen Produktionsvorteil: Haikus berichteter Tokenverbrauch hängt stark vom Effort ab; Microsofts Trainingsgewinn stammt aus einer Coding-Pipeline; Liquid AI veröffentlicht keine Bild- oder Audio-Benchmarks. Gegenüber der letzten Ausgabe verschiebt sich der Schwerpunkt von Beweisketten zu Architekturentscheidungen auf Basis dieser Beweise. Auch bei Hardware und Regulierung zählt die genaue Grenze: Vorbestellungen sind keine ausgelieferten Geräte, ein vorgeschlagenes Audit-Gate ist kein geltendes Recht. Die belastbare Handlungsregel lautet deshalb: Kosten, Erfolg und Kontrolle auf derselben Aufgabenbasis vergleichen, bevor ein neues Angebot zum Standard wird.</p>
+
+</section>
+
+<section class="executive">
+
+  <div class="section-kicker">In 60 Sekunden</div>
+
+  <div class="signal-grid">
+
+    <div><strong>Tokenpreis ist nicht Aufgabenpreis</strong><br>Haiku 5.5 kostet laut Bericht bei Prompts bis 100&#x27;000 Tokens $0.10/$0.50 je Million Input-/Output-Tokens. Die Artificial Analysis zugeschriebene Evaluation meldet bei maximalem Effort rund 162&#x27;000 Output-Tokens pro Aufgabe; die durchschnittliche Ersparnis von 75% bleibt eine Anbieterangabe.</div>
+
+    <div><strong>Der Harness wird Teil des Trainings</strong><br>Agent Lightning v1.0 soll bestehende Agent-Orchestrierung über einen LLM-Proxy ins RL-Training einbinden. Microsoft berichtet 41.8% → 56.4% SWE-bench Verified Pass@1 für Qwen3.5-9B; eine unabhängige Reproduktion ist nicht belegt.</div>
+
+    <div><strong>Lokale Entscheidungen statt freier Antworten</strong><br>Liquid AI veröffentlicht d1-3B und das experimentelle d1-omni-600M. Ein Forward-Pass kann strukturierte Entscheidungen beschleunigen, doch die publizierten Qualitätsmessungen betreffen Text, nicht die beworbenen Bild- und Audiofähigkeiten.</div>
+
+    <div><strong>Zwei neue Gates, zwei Evidenzgrenzen</strong><br>RTX-Spark-Laptops sind seit 7. Oktober vorbestellbar, mit angekündigter Verfügbarkeit am 16. Oktober. Cantwell schlägt unabhängige Audits vor Modellfreigaben vor; ohne Gesetzestext oder verabschiedetes Gesetz besteht noch kein neues Release-Gate.</div>
+
+  </div>
+
+</section>
+
+<section class="chapter">
+  <div class="section-kicker">Modelle, Agents &amp; Engineering</div>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">1</span><span class="evidence reported">PRIMARY LAUNCH; INDEPENDENT REPORTING; VENDOR BENCHMARKS; INDEPENDENT EVALUATION ATTRIBUTED THROUGH REPORTING</span></div>
+    <h2>Haiku 5.5: günstigere Worker, aber Effort bestimmt die Rechnung</h2>
+    <p>Anthropic beziffert die durchschnittlichen Betriebskosten auf rund 75% unter Haiku 4.5. THE DECODER berichtet für Prompts bis 100&#x27;000 Tokens $0.10 pro Million Input-Tokens und $0.50 pro Million Output-Tokens; oberhalb dieser Schwelle gelten fünffache Sätze. Der aktualisierte Tokenizer erhöht den Tokenverbrauch. Das ist eine echte Änderung der Preisbedingungen, aber keine Garantie für dieselbe Ersparnis auf einem konkreten Workload; der bereitgestellte Berichtsauszug ist zudem gekürzt.</p>
+    <p>Die primäre Benchmarktabelle meldet für OSWorld 2.1 einen Sprung von 15.7% bei Haiku 4.5 auf 72.4% bei Haiku 5.5, ausdrücklich nur auf dem Offline-Subset. Das unterstützt die Hypothese leistungsfähigerer günstiger Computer-Use-Worker, misst jedoch weder den vollständigen Benchmark noch Produktionszuverlässigkeit. THE DECODER schreibt Artificial Analysis einen Intelligence-Index-Wert von 43 bei maximalem Effort und rund 162&#x27;000 Output-Tokens pro Aufgabe zu, gegenüber ungefähr 50&#x27;000 für GPT-6 Luna.</p>
+    <p>Die wichtigere Routing-Beobachtung liegt auf der niedrigeren Stufe: Bei «high» erreicht Haiku laut demselben Bericht 38 Punkte mit rund 55&#x27;000 Tokens; GPT-6 Luna erreicht ebenfalls 38 mit rund 50&#x27;000. Artificial Analysis wurde nicht direkt verifiziert. Die Messungen betreffen dessen Evaluation, nicht sämtliche Anwendungen, zeigen aber das stärkste Gegenargument zur Preisgeschichte: Mehr Rechenaufwand kann die Einsparung pro Token teilweise aufzehren.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Anthropic veröffentlichte Haiku 5.5 am 7. Oktober als günstigere Option für hochvolumige Aufgaben und Coding-Subagents.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Günstigere Subagents erweitern die Architekturwahl, doch entscheidend bleibt der Preis einer erfolgreich erledigten Aufgabe.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Effort-Stufen im Shadow-Test fixieren und Erfolg, Gesamtkosten, Latenz sowie Input-/Output-Verbrauch gemeinsam erfassen; lange Prompts separat auswerten.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Signal: niedrigere veröffentlichte Preisbedingungen und deutliche Anbieter-Benchmarkgewinne; Hype: daraus ohne vergleichbare Aufgabenmessung den günstigsten Worker abzuleiten.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://www.anthropic.com/claude-haiku-5-5">Anthropic: Claude Haiku 5.5</a> · <a href="https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over">THE DECODER: pricing and attributed Artificial Analysis evaluation</a></div>
+  </article>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">2</span><span class="evidence reported">PRIMARY TECHNICAL ANNOUNCEMENT; VENDOR RESEARCH RESULT; NO ESTABLISHED INDEPENDENT REPRODUCTION</span></div>
+    <h2>Agent Lightning trainiert mit dem Harness, der später arbeitet</h2>
+    <p>Der Ansatz adressiert einen konkreten Trainingsfehler: Wird die Agent-Schleife im RL-System neu implementiert, können Kontextverwaltung, Tool-Protokolle und Ausführungslogik von der späteren Anwendung abweichen. Laut Microsoft setzt Agent Lightning einen LLM-Proxy zwischen bestehenden Harness und Modell, sodass der Harness-Code unverändert bleibt. Der Anbieter beschreibt rund 3&#x27;500 Zeilen Control-Plane-Code sowie Rollouts als native Kubernetes-Jobs ohne verpflichtende kommerzielle Sandbox-Dienste.</p>
+    <p>Als Beispiel berichtet Microsoft, Qwen3.5-9B mit rund 6&#x27;000 Trainingsbeispielen auf SWE-bench Verified von 41.8% auf 56.4% Pass@1 verbessert zu haben: ein Plus von 14.6 Prozentpunkten. Das ist ein nützlicher Pipeline-Befund, aber keine allgemeine Zusage für andere Harnesses oder Aufgaben. Repository-Inhalte, Deployment-Verhalten und Isolation wurden nicht unabhängig geprüft; eine unabhängige Reproduktion ist in der begrenzten Recherche nicht belegt.</p>
+    <p>Die kleinere Control Plane sagt auch nichts Abschliessendes über den gesamten Trainingsaufwand aus. Kubernetes-Unterstützung ist eine Integrationsoption, kein Sicherheitsnachweis. Teams sollten zunächst prüfen, ob der Proxy die relevanten Modellaufrufe abdeckt und ob Verbesserungen auf zurückgehaltenen Aufgaben erhalten bleiben, bevor sie aus einer einfacheren Integration einen Produktionsvorteil ableiten.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Microsoft Research kündigte am 7. Oktober den Open-Source-Neuaufbau Agent Lightning v1.0 rund um Harnessed Agentic RL an.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Training und Deployment auf denselben Harness auszurichten kann eine wichtige Quelle von Agent-Leistungsabweichungen reduzieren.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Harness-Kompatibilität und zurückgehaltenen Aufgabenerfolg vor einem kontrollierten Trainingsversuch prüfen; Isolation und Netzwerkberechtigungen separat bewerten.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Signal: ein konkret beschriebener Weg zu harnessnahem RL; Hype: wenig Control-Plane-Code mit niedrigen Gesamtkosten oder sicherem Betrieb gleichzusetzen.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/?lang=fr-ca">Microsoft Research: Agent Lightning v1.0</a></div>
+  </article>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">3</span><span class="evidence reported">PRIMARY RELEASE; VENDOR LATENCY AND TEXT EVALUATIONS; EXPERIMENTAL MULTIMODAL EVIDENCE</span></div>
+    <h2>Liquid AI macht aus Generierung eine begrenzte Entscheidung</h2>
+    <p>Die d1-Modelle beantworten Fragen in einem Forward-Pass, statt eine Tokenfolge zu erzeugen. Laut Release verarbeitet d1-3B Text und Bilder; d1-omni-600M verarbeitet Text mit Bildern oder Text mit Audio. Das kleinere Modell ist ausdrücklich eine frühe Forschungsfreigabe. Für Routing oder Klassifikation ist diese eingeschränkte Ausgabeform interessant, für eine frei formulierte Erklärung jedoch kein Ersatz.</p>
+    <p>Liquid AI meldet für d1-3B Antwortzeiten von 16 ms auf Jetson AGX Thor, 26 ms auf AGX Orin und 50 ms auf Orin Nano. Auf sieben öffentlichen Textdatensätzen berichtet der Anbieter mittlere Scores von 82.9 für d1-3B und 78.4 für d1-omni-600M. Die Latenzbedingungen wurden nicht unabhängig reproduziert; die Textmittelwerte sind kein Nachweis gleichwertiger Qualität auf Bild- oder Audioaufgaben.</p>
+    <p>Gerade dort liegt die stärkste Einschränkung: Der Release veröffentlicht keine Vision- oder Audio-Benchmarkresultate. Eine bestätigte Veröffentlichung multimodaler Modelle bestätigt nicht die Qualität jeder Modalität. Praktisch sollten Teams Text, Bild und Audio getrennt validieren und unklare Eingaben an einen Menschen oder ein anderes Modell eskalieren, statt einen schnellen, formal zulässigen Output automatisch für richtig zu halten.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Liquid AI veröffentlichte am 7. Oktober offene Gewichte für d1-3B und das experimentelle d1-omni-600M.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Begrenzte lokale Entscheidungen können den Decoding-Aufwand vermeiden, wenn die Anwendung keine freie Textantwort braucht.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Mit Routing oder Klassifikation beginnen, Fehlentscheidungen und Eskalationen messen und je Modalität eigene Validierungsdaten verwenden.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Signal: offene Ein-Pass-Entscheidungsmodelle mit konkreten Anbietermessungen; Hype: Textscores als Beleg für multimodale Zuverlässigkeit zu lesen.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://huggingface.co/blog/LiquidAI/open-d1">Liquid AI: open d1 decision models</a></div>
+  </article>
+</section>
+
+<section class="chapter">
+  <div class="section-kicker">Business &amp; Strategie</div>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">4</span><span class="evidence reported">PRIMARY GOVERNANCE PROPOSAL; INDEPENDENT REPORTING; NOT ENACTED LAW</span></div>
+    <h2>Cantwell konkretisiert das Audit vor der Modellfreigabe</h2>
+    <p>Der primäre Vorschlag sieht durchsetzbare Standards vor, die NIST mit weiteren Bundesbehörden entwickeln soll. Er erfasste Modelle sollen erst veröffentlicht werden, wenn ein unabhängiges Audit die Einhaltung bestätigt. Damit wird die Verantwortungsverteilung für Standards, Tests und Freigaben konkreter: Es geht nicht nur um freiwillige Lab-Zusagen, sondern um einen vorgeschlagenen externen Prüfpunkt.</p>
+    <p>Roll Call liefert die entscheidende politische Begrenzung: Der Rahmen enthält keinen Gesetzestext, und Cantwell ist nicht an den separaten AI-Gesetzesverhandlungen von Mehrheitsführer John Thune beteiligt. Ein Ausschussmitarbeiter beschreibt mögliche spätere parteiübergreifende Gesetzgebung; Einigung und Verabschiedung sind nicht belegt. Der Vorschlag steht zudem im Gegensatz zu Präferenzen für freiwillige Standards und Selbstregulierung.</p>
+    <p>Für Anbieter und Beschaffer ist dies ein Planungs-, kein Compliance-Ereignis. Bestehende Evaluations- und Incident-Unterlagen lassen sich auf die vorgeschlagenen Pflichten abbilden, um Lücken sichtbar zu machen. Daraus folgt aber weder eine heute geltende Freigabespflicht noch eine nachträgliche Bestätigung früherer, inzwischen überfälliger Governance-Prognosen.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Senatorin Maria Cantwell veröffentlichte am 7. Oktober einen Governance-Rahmen mit sechs Prinzipien und einer föderalen Testrolle.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Ein konkret vorgeschlagenes Audit-Gate verändert die Governance-Debatte, ohne bereits die Regeln für Modellfreigaben zu ändern.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Vorhandene Testnachweise und Incident-Aufzeichnungen den vorgeschlagenen Pflichten zuordnen, aber keine aktuellen Rechtsanforderungen daraus ableiten.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Signal: benannte Standardsetzungs- und Auditrollen; Hype: den Rahmen als vereinbarten Gesetzentwurf oder operative Freigabekontrolle darzustellen.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://www.commerce.senate.gov/press/dem/release/cantwell-outlines-comprehensive-governance-framework-for-safe-and-secure-frontier-ai/">US Senate Commerce: Cantwell governance framework</a> · <a href="https://rollcall.com/2026/10/07/sen-maria-cantwell-looks-to-federal-testing-role-in-ai-safety-framework/">Roll Call: federal testing role and legislative limits</a></div>
+  </article>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">5</span><span class="evidence reported">PRIMARY ORDERING SCHEDULE AND SPECIFICATIONS; INDEPENDENTLY REPORTED STARTING PRICE; NO DELIVERED-DEVICE PROOF</span></div>
+    <h2>RTX Spark wird von der Vorschau zur Beschaffungsoption</h2>
+    <p>NVIDIA bestätigt den Vorbestellungsstart am 7. Oktober und nennt den 16. Oktober als Verfügbarkeitstermin für RTX-Spark-Laptops. Die unabhängige Berichterstattung beziffert den Einstiegspreis des Surface Laptop Ultra auf $2&#x27;599. Der neue Nachrichtenwert liegt in diesen Bestellbedingungen und Terminen, nicht in einer erstmaligen Vorstellung der zuvor gezeigten Hardware. Die angekündigte Verfügbarkeit ist noch kein Beleg für ausgelieferte Geräte.</p>
+    <p>Microsoft beschreibt Konfigurationen mit bis zu 6&#x27;144 Blackwell-GPU-Kernen, 20 Grace-CPU-Kernen und 128 GB Unified Memory. Das sind Maximalspezifikationen, nicht automatisch die Ausstattung des $2&#x27;599-Basismodells. Sie zeigen den vorgesehenen Spielraum für lokale Inferenz, ersetzen aber keine unabhängigen Messungen von Durchsatz, Dauerlast oder Softwarekompatibilität.</p>
+    <p>Für Teams wird lokale AI damit zu einer kalkulierbaren Evaluationsanschaffung. Der stärkste Vorbehalt bleibt die fehlende Messung des tatsächlich benötigten Workloads: Ein Modell im Speicher unterzubringen ist nicht dasselbe wie es mit akzeptabler Latenz dauerhaft zu betreiben. Vor grösseren Bestellungen sind deshalb Sustained-Inference-Tests und Kompatibilitätsberichte wichtiger als maximale Kern- oder Speicherzahlen.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Microsoft und NVIDIA kündigten am 7. Oktober Laptop-Vorbestellungen und Verfügbarkeit ab 16. Oktober an.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Datierte Bestellbedingungen machen lokale Agent-Hardware zu einer konkreten Beschaffungsentscheidung statt einer weiteren Roadmap.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Über eine kleine Evaluationsanschaffung hinaus erst nach Dauerlast- und Kompatibilitätsmessungen investieren; Basiskonfiguration und Maximalwerte getrennt kalkulieren.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Signal: bestellbare Hardware mit angekündigtem Termin; Hype: Maximalspezifikationen als gemessene Inferenzleistung oder als Basisausstattung auszugeben.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/">NVIDIA: RTX Spark Windows announcement</a> · <a href="https://blogs.windows.com/devices/2026/10/07/pre-order-our-most-powerful-surface-devices-ever/">Microsoft Devices: Surface specifications</a> · <a href="https://www.tomshardware.com/laptops/microsoft-and-nvidia-launch-surface-laptop-ultra-with-rtx-spark-rtx-spark-preorders-live-now-coinciding-with-major-windows-11-changes-for-agentic-ai">Tom&#x27;s Hardware: launch and reported starting price</a></div>
+  </article>
+</section>
+
+<section class="signal-box emerging-callout">
+  <div class="section-kicker">Emerging Signal</div>
+  <h2>Der AI-Stack trennt Denken, Arbeiten und Entscheiden</h2>
+  <p><strong>Confidence: early_signal.</strong> Haikus Worker-Preise und Liquids Ein-Pass-Modelle stützen die frühe These einer feineren Arbeitsteilung: Nicht jede Aufgabe braucht aufwendiges Reasoning oder freie Textgenerierung. Agent Lightning ergänzt die Frage, wie ein gewählter Worker im tatsächlichen Harness verbessert wird. Das ist ein Architektur-Signal, kein Nachweis realisierter Einsparungen; Effort-Verbrauch und fehlende Modalitätsbenchmarks begrenzen die Effizienzthese.</p>
+  <p><strong>Falsifizierbar:</strong> Die Effizienzthese würde geschwächt, wenn vergleichbare unabhängige Aufgabenmessungen zeigen, dass Routingfehler, Eskalationen und Wiederholungen den Vorteil günstiger Worker oder Ein-Pass-Entscheidungen gegenüber einer generativen Baseline aufheben.</p>
+</section>
+
+<section class="concept">
+  <div class="section-kicker">🔬 Konzept des Tages</div>
+  <h2 class="concept-heading">Concept of the Day: Ein-Pass-Entscheidung versus Token-Generierung</h2>
+  <p><strong>Intuition:</strong> Den Unterschied kann man sich wie eine Weiche gegenüber einem Autor vorstellen. Die Weiche wählt zwischen festgelegten Wegen, der Autor formuliert eine neue Antwort. Wenn eine Anwendung nur wissen muss, welches Team ein Ticket bearbeiten soll, ist ein ganzer Absatz oft unnötig. Wenn sie eine mehrstufige Analyse oder eine individuelle Erklärung benötigt, ist die eingeschränkte Auswahl dagegen gerade die Grenze des Entscheidungsmodells.</p>
+  <h3>Technische Tiefe</h3>
+    <p>Autoregressive Generierung baut eine Ausgabe schrittweise auf: Weitere Tokens werden unter Berücksichtigung der bisherigen Folge erzeugt. Liquids d1-Ansatz erzeugt laut Release keine solchen Ausgabetokens, sondern beantwortet benannte Fragen direkt. Die Produktentscheidung lautet deshalb nicht bloss «kleines oder grosses Modell», sondern auch «begrenzte Entscheidung oder offene Antwort». Eingabeaufbereitung und Modellberechnung verschwinden durch den Ein-Pass-Ansatz nicht.</p>
+    <p>Ein festgelegter Antwortbereich kann die Integration vereinfachen: Der nachgelagerte Dienst muss keine frei formulierte Teambezeichnung aus einem Absatz herauslesen. Dennoch ist ein gültiger Wert nicht notwendigerweise der richtige Wert. Ein erlaubtes Label wie «Abrechnung» kann falsch sein, wenn die Anfrage tatsächlich unautorisierte Nutzung beschreibt. Strukturvalidierung prüft die Form; fachliche Evaluation prüft die Zuordnung. Eine plausible Erklärung allein wäre ebenfalls kein Beweis korrekter Entscheidungsfindung.</p>
+    <p>Die sinnvolle Messbasis ist daher der gesamte Entscheidungsweg: korrekte Zuordnung, Fehlentscheidungen, Eskalationen und End-to-End-Latenz bei repräsentativen Eingaben. Liquids 16/26/50-ms-Angaben zeigen Anbieterresultate auf drei Jetson-Geräten, keine universelle Antwortzeit. Ebenso stützen die sieben Textdatensätze keine Bild- oder Audiozuverlässigkeit. Jede eingesetzte Modalität braucht eigene Testfälle, besonders bei widersprüchlichen oder unvollständigen Eingaben.</p>
+  <p><strong>Konkretes Beispiel:</strong> Illustratives Beispiel, kein Modelltest: «Meine Rechnung enthält dieselbe Monatsgebühr zweimal; bitte korrigieren.» Die benannte Frage lautet «Welches Team soll das bearbeiten?» mit den Wegen Abrechnung, Technik und menschliche Prüfung. Abrechnung ist die vorgesehene Auswahl dieses Beispiels. Eine Policy kann das Ticket dorthin routen, darf daraus aber keine automatische Rückzahlung ableiten. Bei zusätzlichem Hinweis auf unbekannte Kontonutzung wäre die Lage anders; der formal gültige Abrechnungswert allein würde dann keine korrekte Entscheidung belegen.</p>
+  <p><strong>Praktische Relevanz:</strong> Ein-Pass-Modelle dort prüfen, wo der Antwortbereich klein und der Fehlerfall kontrollierbar ist: Ticket-Routing, Intent-Klassifikation oder eine vorgeschaltete Auswahl. Unsicherheit braucht einen expliziten Eskalationsweg in der Anwendung; native, kalibrierte Abstention ist mit den vorliegenden Angaben nicht belegt. Die spätere Aktion sollte eine separate Berechtigungsprüfung durchlaufen. So wird eine schnelle Entscheidung zu einem begrenzten Baustein, nicht zu unbeaufsichtigter Handlungsautorität.</p>
+<figure class="editorial-visual visual-editorial-data visual-explanatory-diagram" data-visual-id="bounded-ticket-decision"><img src="assets/illustrations/2026-10-08-bounded-ticket-decision-de.svg" alt="«Meine Rechnung enthält dieselbe Monatsgebühr zweimal; bitte korrigieren.» Welches Team soll das bearbeiten? Abrechnung. Vorgesehene Beispielroute: Abrechnung; Ticket zuweisen, keine automatische Rückzahlung auslösen.. Eine strukturierte Entscheidung kann das zuständige Team auswählen, während die Berechtigung zur Geldbewegung separat geprüft wird." loading="lazy"><figcaption>Illustratives Anwendungsbeispiel nach dem Entscheidungsprinzip des d1-Releases, kein gemessener Modelloutput und kein echter API-Payload; ein zulässiges Label belegt weder korrektes Reasoning noch allgemeine Genauigkeit.<span class="visual-sources">AI Daily Brief · Eigene Grafik · <a href="https://huggingface.co/blog/LiquidAI/open-d1">Liquid AI: single-pass decision models and routing examples</a></span></figcaption></figure>
+  <div class="sources"><strong>Quellen:</strong> <a href="https://huggingface.co/blog/LiquidAI/open-d1">Liquid AI: technical release and decision-model examples</a></div>
+</section>
+
+<section class="chapter">
+
+  <div class="section-kicker">Was als Nächstes wichtig wird</div>
+
+  <article class="story"><ul>
+
+    <li>Haiku bis 22. Oktober: Wir erwarten einen weiteren unabhängigen Vergleich mit ausgewiesenen Effort-Stufen, Tokenverbrauch und Aufgabenqualität; eine reine Preisübersicht würde die Wirtschaftlichkeitsfrage nicht klären.</li>
+
+    <li>RTX Spark bis 23. Oktober: Wir erwarten nach dem angekündigten 16.-Oktober-Termin mindestens einen unabhängigen Bericht über ein physisches Gerät mit gemessener Inferenz und benannter Konfiguration.</li>
+
+    <li>Liquid d1 bis 5. November: Wir erwarten mindestens eine öffentlich beschriebene Bild- oder Audio-Qualitätsevaluation; Textscores oder Multimodal-Demos allein würden die Evidenzlücke nicht schliessen.</li>
+
+    <li>US-Governance bis 5. November: Wir erwarten, dass Cantwells Rahmen noch kein veröffentlichter Gesetzestext mit verpflichtendem unabhängigem Vorab-Audit wird; ein entsprechender Text wäre das klare Gegenereignis.</li>
+
+  </ul></article>
+
+</section>

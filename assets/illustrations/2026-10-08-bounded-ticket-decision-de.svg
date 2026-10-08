@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 1008.45" role="img" aria-labelledby="title desc">
+<title id="title">Routing ist noch keine Handlungsberechtigung</title><desc id="desc">Was kann eine begrenzte Ticket-Entscheidung liefern, ohne eine Rückzahlung zu autorisieren? «Meine Rechnung enthält dieselbe Monatsgebühr zweimal; bitte korrigieren.» Welches Team soll das bearbeiten? Abrechnung. Vorgesehene Beispielroute: Abrechnung; Ticket zuweisen, keine automatische Rückzahlung auslösen.. Eine strukturierte Entscheidung kann das zuständige Team auswählen, während die Berechtigung zur Geldbewegung separat geprüft wird. Illustratives Anwendungsbeispiel nach dem Entscheidungsprinzip des d1-Releases, kein gemessener Modelloutput und kein echter API-Payload; ein zulässiges Label belegt weder korrektes Reasoning noch allgemeine Genauigkeit.</desc>
+<rect width="480" height="1008.45" fill="#fffdf8"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="28" y="32" font-size="13" fill="#16786d" font-weight="700" text-anchor="start">ILLUSTRATIVES BEISPIEL</text>
+<text x="28" y="68" font-size="27" fill="#233548" font-weight="700" text-anchor="start">Routing ist noch keine</text>
+<text x="28" y="104.45" font-size="27" fill="#233548" font-weight="700" text-anchor="start">Handlungsberechtigung</text>
+<path d="M32 155.9 h34 l12 12 v43 h-46 z M66 155.9 v12 h12 M42 182.9 h24 M42 193.9 h20" fill="none" stroke="#64748b" stroke-width="2"/>
+<text x="100" y="175.9" font-size="21" fill="#233548" font-weight="400" text-anchor="start">«Meine Rechnung enthält</text>
+<text x="100" y="204.25" font-size="21" fill="#233548" font-weight="400" text-anchor="start">dieselbe Monatsgebühr</text>
+<text x="100" y="232.6" font-size="21" fill="#233548" font-weight="400" text-anchor="start">zweimal; bitte</text>
+<text x="100" y="260.95" font-size="21" fill="#233548" font-weight="400" text-anchor="start">korrigieren.»</text>
+<path d="M240 304.3 L240 329.3" stroke="#16786d" stroke-width="2" fill="none"/>
+<text x="240" y="359.3" font-size="23" fill="#233548" font-weight="700" text-anchor="middle">Welches Team soll das</text>
+<text x="240" y="390.35" font-size="23" fill="#233548" font-weight="700" text-anchor="middle">bearbeiten?</text>
+<path d="M240 425.4 L240 447.4" stroke="#64748b" stroke-width="1" fill="none"/>
+<path d="M98.6667 447.4 L381.333 447.4" stroke="#64748b" stroke-width="1" fill="none"/>
+<path d="M98.6667 447.4 L98.6667 481.4" stroke="#16786d" stroke-width="3" fill="none"/>
+<circle cx="98.6667" cy="482.4" r="5" fill="#16786d"/>
+<text x="98.6667" y="515.4" font-size="20" fill="#16786d" font-weight="700" text-anchor="middle">Abrechnung</text>
+<path d="M240 447.4 L240 481.4" stroke="#64748b" stroke-width="1" fill="none" stroke-dasharray="4 5"/>
+<circle cx="240" cy="482.4" r="5" fill="#64748b"/>
+<text x="240" y="515.4" font-size="20" fill="#64748b" font-weight="700" text-anchor="middle">Technik</text>
+<path d="M381.333 447.4 L381.333 481.4" stroke="#64748b" stroke-width="1" fill="none" stroke-dasharray="4 5"/>
+<circle cx="381.333" cy="482.4" r="5" fill="#64748b"/>
+<text x="381.333" y="515.4" font-size="20" fill="#64748b" font-weight="700" text-anchor="middle">Menschliche</text>
+<text x="381.333" y="542.4" font-size="20" fill="#64748b" font-weight="700" text-anchor="middle">Prüfung</text>
+<text x="98.6667" y="579.4" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">Gebühren,</text>
+<text x="98.6667" y="602.35" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">Rechnungen und</text>
+<text x="98.6667" y="625.3" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">Rückzahlungsan</text>
+<text x="98.6667" y="648.25" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">fragen</text>
+<text x="240" y="579.4" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">App- oder</text>
+<text x="240" y="602.35" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">Website-Fehler</text>
+<text x="381.333" y="579.4" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">Unklarer oder </text>
+<text x="381.333" y="602.35" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">widersprüchlic</text>
+<text x="381.333" y="625.3" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">her</text>
+<text x="381.333" y="648.25" font-size="17" fill="#64748b" font-weight="400" text-anchor="middle">Sachverhalt</text>
+<path d="M28 701.4 L452 701.4" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="28" y="736.4" font-size="21" fill="#16786d" font-weight="600" text-anchor="start">Vorgesehene Beispielroute:</text>
+<text x="28" y="764.75" font-size="21" fill="#16786d" font-weight="600" text-anchor="start">Abrechnung; Ticket zuweisen, keine</text>
+<text x="28" y="793.1" font-size="21" fill="#16786d" font-weight="600" text-anchor="start">automatische Rückzahlung auslösen.</text>
+<path d="M28 841.45 L452 841.45" stroke="#16786d" stroke-width="2" fill="none"/>
+<text x="28" y="874.45" font-size="20" fill="#233548" font-weight="600" text-anchor="start">Eine strukturierte Entscheidung kann</text>
+<text x="28" y="901.45" font-size="20" fill="#233548" font-weight="600" text-anchor="start">das zuständige Team auswählen,</text>
+<text x="28" y="928.45" font-size="20" fill="#233548" font-weight="600" text-anchor="start">während die Berechtigung zur</text>
+<text x="28" y="955.45" font-size="20" fill="#233548" font-weight="600" text-anchor="start">Geldbewegung separat geprüft wird.</text>
+</g></svg>

@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-10-08",
+    "de": "briefings/2026-10-08-de.html",
+    "en": "briefings/2026-10-08-en.html",
+    "headline": {
+      "de": "Billigere AI braucht präzisere Einsatzgrenzen",
+      "en": "Cheaper AI needs sharper deployment boundaries"
+    },
+    "tags": [
+      "agent-economics",
+      "harnessed-rl",
+      "decision-models",
+      "local-inference",
+      "frontier-ai-governance",
+      "benchmark-integrity"
+    ],
+    "concept": {
+      "de": "Concept of the Day: Ein-Pass-Entscheidung versus Token-Generierung",
+      "en": "Concept of the Day: single-pass decisions versus token generation"
+    }
+  },
+  {
     "date": "2026-10-06",
     "de": "briefings/2026-10-06-de.html",
     "en": "briefings/2026-10-06-en.html",

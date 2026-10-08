@@ -135,5 +135,15 @@
       "de": "OpenAI kündigt Text-Wasserzeichen an und erklärt verspätete Vorfallmeldungen. GitHub macht Code-Review messbarer; Beam, Bedrock und DeepSeeks gemeldete Finanzierung zeigen, warum Zugang, Leistung und Betriebsfähigkeit getrennt bewertet werden müssen.",
       "en": "OpenAI announces text watermarks and explains delayed incident notifications. GitHub makes code review more measurable; Beam, Bedrock and DeepSeek’s reported financing show why access, performance and operational readiness must be assessed separately."
     }
+  },
+  "2026-10-08": {
+    "kicker": {
+      "de": "Die Leitgeschichte",
+      "en": "The lead story"
+    },
+    "deck": {
+      "de": "Haiku 5.5 senkt Tokenpreise, Agent Lightning verbindet Training mit realen Harnesses, und Liquid AI ersetzt für begrenzte Aufgaben die Textgenerierung durch direkte Entscheidungen. Neue Hardware und ein US-Auditvorschlag machen daraus konkrete Beschaffungs- und Governance-Fragen.",
+      "en": "Haiku 5.5 lowers token prices, Agent Lightning connects training to real harnesses, and Liquid AI replaces text generation with direct decisions for bounded tasks. New hardware and a US audit proposal turn these into concrete procurement and governance questions."
+    }
   }
 }

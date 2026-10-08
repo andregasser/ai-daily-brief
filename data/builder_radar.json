@@ -326,9 +326,14 @@
               "url": "https://api-docs.deepseek.com/news/"
             }
           ]
+        },
+        {
+          "date": "2026-10-08",
+          "note": "Watch unchanged; alias documentation does not replace the pending regression evaluation.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-08"
     },
     {
       "id": "builder-agent-memory-write-gate",
@@ -666,9 +671,14 @@
           "date": "2026-10-06",
           "note": "Experimental unchanged and overdue; no relevant reproduction evidence was retrieved.",
           "sources": []
+        },
+        {
+          "date": "2026-10-08",
+          "note": "Experimental unchanged; no reproduction or new relevant measurement was verified.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-08"
     },
     {
       "id": "builder-agentcore-v2-runtime",
@@ -716,9 +726,14 @@
           "date": "2026-10-06",
           "note": "Trial unchanged and overdue; no workload A/B results were reviewed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-08",
+          "note": "Trial unchanged; this run supplies no workload A/B results.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-08"
     },
     {
       "id": "builder-qwen38-omni-budget-harness",
@@ -767,9 +782,14 @@
           "date": "2026-10-06",
           "note": "Trial unchanged and overdue; no relevant token-budget measurements were retrieved.",
           "sources": []
+        },
+        {
+          "date": "2026-10-08",
+          "note": "Trial unchanged; Liquid AI's distinct decision models do not validate this model's token-budget harness.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-08"
     },
     {
       "id": "builder-agent-egress-canary",
@@ -813,9 +833,14 @@
           "date": "2026-10-06",
           "note": "Trial unchanged and overdue; current incident coverage supports priority, not demonstrated mitigation effectiveness.",
           "sources": []
+        },
+        {
+          "date": "2026-10-08",
+          "note": "Trial unchanged; no canary execution or containment result was supplied.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-08"
     },
     {
       "id": "builder-agent-egress-authority-canary",
@@ -846,7 +871,15 @@
       "sources": [
         "https://www.perplexity.ai/en-GB/hub/blog/escaping-space-part-i"
       ],
-      "review_history": []
+      "review_history": [],
+      "reviews": [
+        {
+          "date": "2026-10-08",
+          "note": "Trial unchanged; Kubernetes rollout support is not evidence of hardened network-authority enforcement.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-08"
     }
   ]
 }

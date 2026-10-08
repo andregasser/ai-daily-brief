@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-06",
+  "updated_at": "2026-10-08",
   "claims": [
     {
       "id": "2026-09-10-kya-joint-framework",
@@ -4956,6 +4956,307 @@
         "Editorial synthesis of three announcements, not a measured market-wide trend or evidence of broad productivity gains."
       ],
       "date": "2026-10-06"
+    },
+    {
+      "id": "2026-10-08-e83ea9c45962",
+      "claim": "Anthropic released Haiku 5.5 on October 7 for high-volume work and coding subagents and claims average running costs about 75% below Haiku 4.5.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Anthropic",
+        "Claude Haiku 5.5",
+        "Claude Haiku 4.5"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_launch",
+          "name": "Anthropic Haiku 5.5 launch",
+          "url": "https://www.anthropic.com/claude-haiku-5-5"
+        }
+      ],
+      "contradictions": [
+        "The launch is primary evidence of release, not independent validation of average workload savings."
+      ],
+      "date": "2026-10-08"
+    },
+    {
+      "id": "2026-10-08-6603d9b4b27f",
+      "claim": "THE DECODER reports Haiku 5.5 input/output pricing of $0.10/$0.50 per million tokens for prompts up to 100,000 tokens, fivefold rates above that threshold, and increased consumption from an updated tokenizer.",
+      "evidence_state": "reported",
+      "entities": [
+        "Anthropic",
+        "Claude Haiku 5.5",
+        "THE DECODER"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "THE DECODER pricing report",
+          "url": "https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over"
+        }
+      ],
+      "contradictions": [
+        "Supplied excerpt is truncated; unit pricing does not establish cost per successful task."
+      ],
+      "date": "2026-10-08"
+    },
+    {
+      "id": "2026-10-08-631a62d81c2a",
+      "claim": "Anthropic reports OSWorld 2.1 scores of 72.4% for Haiku 5.5 and 15.7% for Haiku 4.5, explicitly on the offline subset.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Anthropic",
+        "Claude Haiku 5.5",
+        "Claude Haiku 4.5",
+        "OSWorld 2.1"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_vendor_benchmark",
+          "name": "Anthropic benchmark table",
+          "url": "https://www.anthropic.com/claude-haiku-5-5"
+        }
+      ],
+      "contradictions": [
+        "Not a full-benchmark or production-reliability measurement."
+      ],
+      "date": "2026-10-08"
+    },
+    {
+      "id": "2026-10-08-16ea5d74b0b0",
+      "claim": "THE DECODER attributes to Artificial Analysis a Haiku 5.5 Intelligence Index score of 43 with about 162,000 output tokens per task at maximum effort, and 38 with about 55,000 at high effort; GPT-6 Luna is reported at 38 with roughly 50,000 tokens.",
+      "evidence_state": "reported",
+      "entities": [
+        "Artificial Analysis",
+        "THE DECODER",
+        "Claude Haiku 5.5",
+        "GPT-6 Luna"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "THE DECODER October 8 evaluation update",
+          "url": "https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over"
+        }
+      ],
+      "contradictions": [
+        "Artificial Analysis was not directly verified; results describe its evaluation rather than all applications."
+      ],
+      "date": "2026-10-08"
+    },
+    {
+      "id": "2026-10-08-3a347cbfed81",
+      "claim": "Microsoft's October 7 Agent Lightning v1.0 announcement describes an open-source rebuild around Harnessed Agentic RL, roughly 3,500 lines of control-plane code, an LLM proxy leaving harness code unchanged, and native Kubernetes rollout jobs without mandatory commercial sandbox services.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Microsoft Research",
+        "Agent Lightning v1.0"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_vendor_technical_announcement",
+          "name": "Microsoft Research Agent Lightning v1.0",
+          "url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/?lang=fr-ca"
+        }
+      ],
+      "contradictions": [
+        "Confirmed as the announced design; repository contents, deployment behavior and isolation were not independently inspected."
+      ],
+      "date": "2026-10-08"
+    },
+    {
+      "id": "2026-10-08-a093a0c45992",
+      "claim": "Microsoft reports Qwen3.5-9B SWE-bench Verified Pass@1 improving from 41.8% to 56.4%, a 14.6-percentage-point gain, using about 6,000 training samples.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Microsoft Research",
+        "Agent Lightning v1.0",
+        "Qwen3.5-9B",
+        "SWE-bench Verified"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_vendor_research",
+          "name": "Microsoft Research coding training example",
+          "url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/?lang=fr-ca"
+        }
+      ],
+      "contradictions": [
+        "One coding pipeline does not establish general gains, total training savings or production reliability; independent reproduction was not established."
+      ],
+      "date": "2026-10-08"
+    },
+    {
+      "id": "2026-10-08-b1cb495cccf8",
+      "claim": "Liquid AI released open d1-3B and experimental d1-omni-600M weights on October 7; its release describes single-forward-pass decisions without output-token generation, with text/image inputs for d1-3B and text with image or audio for d1-omni-600M.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Liquid AI",
+        "d1-3B",
+        "d1-omni-600M"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_release",
+          "name": "Liquid AI open d1 release",
+          "url": "https://huggingface.co/blog/LiquidAI/open-d1"
+        }
+      ],
+      "contradictions": [
+        "The 600M model is an early research release; confirmed release and described capabilities do not independently validate modality quality."
+      ],
+      "date": "2026-10-08"
+    },
+    {
+      "id": "2026-10-08-4ad7340eaa9b",
+      "claim": "Liquid AI reports d1-3B response times of 16 ms on Jetson AGX Thor, 26 ms on AGX Orin and 50 ms on Orin Nano, and seven-public-text-dataset mean scores of 82.9 for d1-3B and 78.4 for d1-omni-600M.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Liquid AI",
+        "d1-3B",
+        "d1-omni-600M",
+        "NVIDIA Jetson"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_vendor_measurements",
+          "name": "Liquid AI latency and text benchmark tables",
+          "url": "https://huggingface.co/blog/LiquidAI/open-d1"
+        }
+      ],
+      "contradictions": [
+        "Latency conditions were not independently reproduced; release provides no vision or audio benchmark results."
+      ],
+      "date": "2026-10-08"
+    },
+    {
+      "id": "2026-10-08-e49d3b0683bd",
+      "claim": "Cantwell's October 7 six-principle framework proposes enforceable standards developed by NIST with other federal agencies and independent compliance audits before covered model releases.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Maria Cantwell",
+        "NIST",
+        "US Senate Commerce Committee"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "primary_government_proposal",
+          "name": "Senate Commerce governance framework",
+          "url": "https://www.commerce.senate.gov/press/dem/release/cantwell-outlines-comprehensive-governance-framework-for-safe-and-secure-frontier-ai/"
+        }
+      ],
+      "contradictions": [
+        "A senator's proposal, not enacted law or an operative release gate."
+      ],
+      "date": "2026-10-08"
+    },
+    {
+      "id": "2026-10-08-542f0c612133",
+      "claim": "Roll Call reports that Cantwell's framework contains no legislative text, that she is outside John Thune's separate AI-bill negotiations, and that potential bipartisan legislation remains prospective.",
+      "evidence_state": "reported",
+      "entities": [
+        "Maria Cantwell",
+        "John Thune",
+        "Roll Call"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Roll Call framework analysis",
+          "url": "https://rollcall.com/2026/10/07/sen-maria-cantwell-looks-to-federal-testing-role-in-ai-safety-framework/"
+        }
+      ],
+      "contradictions": [
+        "Agreement and passage are not established; proposal contrasts with voluntary-standard preferences."
+      ],
+      "date": "2026-10-08"
+    },
+    {
+      "id": "2026-10-08-51b5ddf2f4fa",
+      "claim": "NVIDIA announces RTX Spark laptop preorders from October 7 and availability October 16; the supplied dossier attributes a $2,599 Surface Laptop Ultra starting price to Tom's Hardware reporting.",
+      "evidence_state": "reported",
+      "entities": [
+        "NVIDIA",
+        "Microsoft",
+        "RTX Spark",
+        "Surface Laptop Ultra",
+        "Tom's Hardware"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "primary_vendor_schedule",
+          "name": "NVIDIA Windows RTX Spark announcement",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "Tom's Hardware launch report",
+          "url": "https://www.tomshardware.com/laptops/microsoft-and-nvidia-launch-surface-laptop-ultra-with-rtx-spark-rtx-spark-preorders-live-now-coinciding-with-major-windows-11-changes-for-agentic-ai"
+        }
+      ],
+      "contradictions": [
+        "Availability is an announced schedule, not delivered-device evidence; supplied direct Tom's Hardware page fetch failed, so price remains attributed through the verified dossier."
+      ],
+      "date": "2026-10-08"
+    },
+    {
+      "id": "2026-10-08-e719b60198e4",
+      "claim": "Microsoft describes Surface Laptop Ultra configurations with up to 6,144 Blackwell GPU cores, 20 Grace CPU cores and 128 GB unified memory.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Microsoft",
+        "NVIDIA",
+        "Surface Laptop Ultra",
+        "RTX Spark"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "primary_vendor_specification",
+          "name": "Microsoft Devices Surface announcement",
+          "url": "https://blogs.windows.com/devices/2026/10/07/pre-order-our-most-powerful-surface-devices-ever/"
+        }
+      ],
+      "contradictions": [
+        "Maximum configuration specifications, not the $2,599 base configuration or independent inference-performance measurements."
+      ],
+      "date": "2026-10-08"
+    },
+    {
+      "id": "2026-10-08-46c3e1a5deb9",
+      "claim": "Haiku worker pricing and Liquid single-pass decision models support an early architectural signal of separating expensive reasoning, cheap worker agents and bounded decisions.",
+      "evidence_state": "early_signal",
+      "entities": [
+        "Anthropic",
+        "Liquid AI"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_launch",
+          "name": "Anthropic Haiku worker positioning",
+          "url": "https://www.anthropic.com/claude-haiku-5-5"
+        },
+        {
+          "role": "primary_vendor_release",
+          "name": "Liquid AI bounded decision models",
+          "url": "https://huggingface.co/blog/LiquidAI/open-d1"
+        }
+      ],
+      "contradictions": [
+        "Reported effort-dependent consumption and missing image/audio evaluation prevent a claim of demonstrated production efficiency."
+      ],
+      "date": "2026-10-08"
     }
   ]
 }

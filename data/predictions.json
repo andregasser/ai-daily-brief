@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-06",
+  "updated_at": "2026-10-08",
   "predictions": [
     {
       "id": "pred-kya-interoperability-2026-10",
@@ -47,9 +47,14 @@
           "date": "2026-10-06",
           "note": "Open unchanged; no implementable specification or cross-network pilot was verified.",
           "sources": []
+        },
+        {
+          "date": "2026-10-08",
+          "note": "Open unchanged; bounded discovery did not establish an implementable specification or cross-network pilot before the October 15 review.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-08"
     },
     {
       "id": "pred-deepseek-v41-evidence-2026-09",
@@ -100,9 +105,14 @@
           "date": "2026-10-06",
           "note": "Falsified unchanged; financing reporting adds no independent task-success, latency or cost evaluation.",
           "sources": []
+        },
+        {
+          "date": "2026-10-08",
+          "note": "Falsified unchanged; the supplied API landing excerpt adds no independent success, latency or cost comparison.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-08"
     },
     {
       "id": "pred-china-hbm-pricing-q4",
@@ -188,9 +198,14 @@
           "date": "2026-10-06",
           "note": "Open unchanged; no qualifying independent multimodal-serving reproduction was retrieved.",
           "sources": []
+        },
+        {
+          "date": "2026-10-08",
+          "note": "Open unchanged; no qualifying independent production-style reproduction was established.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-08"
     },
     {
       "id": "pred-us-duty-of-care-draft-2026-09",
@@ -267,9 +282,19 @@
           "date": "2026-10-06",
           "note": "Open unchanged and overdue; searches found earlier discussions, not sufficient evidence to resolve the September 30 condition.",
           "sources": []
+        },
+        {
+          "date": "2026-10-08",
+          "note": "Open retained; the October 7 framework is late, lacks legislative text and is separate from Thune's negotiations, leaving the September 30 outcome unresolved.",
+          "sources": [
+            {
+              "label": "Roll Call",
+              "url": "https://rollcall.com/2026/10/07/sen-maria-cantwell-looks-to-federal-testing-role-in-ai-safety-framework/"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-08"
     },
     {
       "id": "pred-openai-misalignment-disclosure-2026-10",
@@ -401,9 +426,14 @@
           "date": "2026-10-06",
           "note": "Confirmed unchanged; no relevant new operational evidence was verified.",
           "sources": []
+        },
+        {
+          "date": "2026-10-08",
+          "note": "Confirmed unchanged; no newly verified evidence warrants revising the supplied historical assessment.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-08"
     },
     {
       "id": "pred-sglang-cve-remediation-2026-09",
@@ -466,9 +496,14 @@
           "date": "2026-10-06",
           "note": "Falsified unchanged; official remediation was not rechecked in this bounded pass.",
           "sources": []
+        },
+        {
+          "date": "2026-10-08",
+          "note": "Falsified unchanged; official remediation was not newly verified in this run.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-08"
     },
     {
       "id": "pred-deepseek-alias-regression-2026-09",
@@ -525,9 +560,14 @@
               "url": "https://api-docs.deepseek.com/news/"
             }
           ]
+        },
+        {
+          "date": "2026-10-08",
+          "note": "Falsified unchanged; the supplied landing excerpt documents legacy Flash aliases but neither quantified regression nor resolved-version telemetry.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-08"
     },
     {
       "id": "pred-frontier-pacing-operationalization-2026-09",
@@ -650,9 +690,19 @@
           "date": "2026-10-06",
           "note": "Progress unchanged; no new verified release threshold or evaluator-governance mechanism was established.",
           "sources": []
+        },
+        {
+          "date": "2026-10-08",
+          "note": "Progress retained; Cantwell's October 7 release adds an audit-gate proposal but cannot establish implementation or the September 30 deadline outcome.",
+          "sources": [
+            {
+              "label": "Senate Commerce",
+              "url": "https://www.commerce.senate.gov/press/dem/release/cantwell-outlines-comprehensive-governance-framework-for-safe-and-secure-frontier-ai/"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-08"
     },
     {
       "id": "pred-anthropic-evaluator-governance-2026-10",
@@ -705,9 +755,14 @@
           "date": "2026-10-06",
           "note": "Open unchanged; targeted search did not establish additional evaluator identities or governance rights.",
           "sources": []
+        },
+        {
+          "date": "2026-10-08",
+          "note": "Open unchanged; targeted discovery established no additional evaluator or material new governance details before October 10.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-08"
     },
     {
       "id": "pred-agentcore-v2-production-repro-2026-10",
@@ -740,9 +795,14 @@
           "date": "2026-10-06",
           "note": "Open unchanged; no qualifying non-AWS production comparison was retrieved.",
           "sources": []
+        },
+        {
+          "date": "2026-10-08",
+          "note": "Open unchanged; no qualifying non-AWS production measurement was verified.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-08"
     },
     {
       "id": "pred-qwen38-omni-independent-evidence-2026-10",
@@ -1244,6 +1304,68 @@
       "confidence": "medium",
       "id": "pred-2026-10-06-14e8de2af9c4",
       "created": "2026-10-06",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-10-22, at least one additional independent public evaluation of Haiku 5.5 will report effort settings, output-token consumption and task-quality results together.",
+      "review_after": "2026-10-22",
+      "confirmation_criteria": [
+        "A non-Anthropic evaluation published after this edition identifies Haiku 5.5 effort settings and reports both output-token consumption and quality on a described task set."
+      ],
+      "falsification_criteria": [
+        "A comprehensive deadline review establishes that public independent evaluations published in the interval provide no effort-linked token-and-quality results; incomplete discovery is inconclusive."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-08-82c64dba91a9",
+      "created": "2026-10-08",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-10-23, at least one independent report on a physical RTX Spark laptop will publish measured inference results and identify the tested configuration.",
+      "review_after": "2026-10-23",
+      "confirmation_criteria": [
+        "A non-Microsoft, non-NVIDIA report documents hands-on access to a physical laptop, names its configuration and measures inference latency or throughput on a named workload."
+      ],
+      "falsification_criteria": [
+        "An official delay places laptop availability beyond October 23 and independent reporting confirms review hardware is not available by the deadline.",
+        "A comprehensive deadline review establishes that available reports are previews or specification summaries without physical-device inference measurements; missing coverage alone is inconclusive."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-08-0dee56e1ea51",
+      "created": "2026-10-08",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-05, Liquid AI or an independent evaluator will publish at least one described image or audio quality evaluation for d1-3B or d1-omni-600M beyond text-only scores and demonstrations.",
+      "review_after": "2026-11-05",
+      "confirmation_criteria": [
+        "A public evaluation identifies a d1 model, an image or audio task set, its evaluation procedure and aggregate quality results."
+      ],
+      "falsification_criteria": [
+        "Liquid AI explicitly defers image and audio quality evaluation beyond November 5 without a qualifying independent evaluation by the deadline.",
+        "A comprehensive deadline review establishes that all public d1 evaluations in the interval remain text-only or demonstration-only; incomplete discovery is inconclusive."
+      ],
+      "confidence": "low",
+      "id": "pred-2026-10-08-1735516b9cde",
+      "created": "2026-10-08",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-05, Cantwell's October 7 framework will remain without published legislative text requiring an independent compliance audit before covered frontier-model releases.",
+      "review_after": "2026-11-05",
+      "confirmation_criteria": [
+        "A dated official or credible legislative-status account at the deadline explicitly describes the framework as still lacking legislative text, or publishes its legislative implementation without the proposed mandatory independent pre-release audit."
+      ],
+      "falsification_criteria": [
+        "Cantwell or a congressional co-sponsor publishes bill text by the deadline that requires an independent compliance audit before covered frontier-model releases; enactment is not necessary to falsify this forecast."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-08-8c848a4241d5",
+      "created": "2026-10-08",
       "status": "open",
       "evidence": []
     }

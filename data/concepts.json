@@ -880,6 +880,39 @@
         "de": "briefings/2026-10-06-de.html",
         "en": "briefings/2026-10-06-en.html"
       }
+    },
+    {
+      "id": "single-pass-decisions-vs-token-generation",
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "title": {
+        "de": "Concept of the Day: Ein-Pass-Entscheidung versus Token-Generierung",
+        "en": "Concept of the Day: single-pass decisions versus token generation"
+      },
+      "summary": {
+        "de": "Ein Entscheidungsmodell beantwortet eine begrenzte Frage in einem Forward-Pass; ein generatives Modell erzeugt eine Tokenfolge. Der Unterschied betrifft den Rechenpfad und die Ausgabeform, nicht automatisch Genauigkeit, Sicherheit oder korrektes Reasoning.",
+        "en": "A decision model answers a bounded question in one forward pass; a generative model produces a token sequence. The difference concerns the computational path and output form, not automatically accuracy, safety or correct reasoning."
+      },
+      "tags": [
+        "decision-models",
+        "edge-inference",
+        "evaluation"
+      ],
+      "storylines": [
+        "agent-economics",
+        "benchmark-integrity"
+      ],
+      "sources": [
+        "https://huggingface.co/blog/LiquidAI/open-d1"
+      ],
+      "related_concepts": [
+        "model-portfolio-routing-shadow-evals",
+        "multimodal-token-budgeting"
+      ],
+      "briefing": {
+        "de": "briefings/2026-10-08-de.html",
+        "en": "briefings/2026-10-08-en.html"
+      }
     }
   ]
 }
