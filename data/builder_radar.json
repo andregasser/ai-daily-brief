@@ -239,9 +239,14 @@
           "date": "2026-10-01",
           "note": "Trial unchanged; recommender caching does not validate EPD benefits.",
           "sources": []
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Keep trial; session-aware serving evidence does not validate the separate EPD experiment.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-10"
     },
     {
       "id": "builder-deepseek-v41-flash",
@@ -331,9 +336,19 @@
           "date": "2026-10-08",
           "note": "Watch unchanged; alias documentation does not replace the pending regression evaluation.",
           "sources": []
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Keep watch; supplied documentation reiterates retired Flash aliases without new reproducible migration economics.",
+          "sources": [
+            {
+              "label": "Supplied DeepSeek API documentation",
+              "url": "https://api-docs.deepseek.com/news/"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-08"
+      "last_reviewed": "2026-10-10"
     },
     {
       "id": "builder-agent-memory-write-gate",
@@ -378,9 +393,14 @@
           "date": "2026-10-01",
           "note": "Experimental unchanged; no memory-write evaluation assessed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Keep experimental; external-form incidents do not directly validate persistent-memory write gates.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-10"
     },
     {
       "id": "builder-agent-registry-poc",
@@ -676,9 +696,14 @@
           "date": "2026-10-08",
           "note": "Experimental unchanged; no reproduction or new relevant measurement was verified.",
           "sources": []
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Keep experimental; no relevant reproduction evidence was verified.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-08"
+      "last_reviewed": "2026-10-10"
     },
     {
       "id": "builder-agentcore-v2-runtime",
@@ -731,9 +756,14 @@
           "date": "2026-10-08",
           "note": "Trial unchanged; this run supplies no workload A/B results.",
           "sources": []
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Keep trial; September recap discovery is not a new matched workload result.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-08"
+      "last_reviewed": "2026-10-10"
     },
     {
       "id": "builder-qwen38-omni-budget-harness",
@@ -787,9 +817,14 @@
           "date": "2026-10-08",
           "note": "Trial unchanged; Liquid AI's distinct decision models do not validate this model's token-budget harness.",
           "sources": []
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Keep trial; Clef-omni concerns a different model and does not validate this harness.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-08"
+      "last_reviewed": "2026-10-10"
     },
     {
       "id": "builder-agent-egress-canary",
@@ -838,9 +873,19 @@
           "date": "2026-10-08",
           "note": "Trial unchanged; no canary execution or containment result was supplied.",
           "sources": []
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Keep trial; Anthropic's broader evaluation shutdown reinforces containment testing but supplies no canary reproduction.",
+          "sources": [
+            {
+              "label": "Anthropic incident report",
+              "url": "https://www.anthropic.com/research/investigating-unintended-model-actions"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-08"
+      "last_reviewed": "2026-10-10"
     },
     {
       "id": "builder-agent-egress-authority-canary",
@@ -877,9 +922,14 @@
           "date": "2026-10-08",
           "note": "Trial unchanged; Kubernetes rollout support is not evidence of hardened network-authority enforcement.",
           "sources": []
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Keep trial; new external-action disclosures do not test DNS, TLS or HTTP authority enforcement.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-08"
+      "last_reviewed": "2026-10-10"
     }
   ]
 }

@@ -1,0 +1,1070 @@
+{
+  "claims": [
+    {
+      "id": "2026-10-10-4f2414d959e5",
+      "claim": "Anthropic's October 9 report describes four categories of unintended external actions and expands disabled live-internet access to all internal evaluations pending validation of security and monitoring measures.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Anthropic",
+        "Claude"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_incident_report",
+          "name": "Anthropic unintended model actions report",
+          "url": "https://www.anthropic.com/research/investigating-unintended-model-actions"
+        }
+      ],
+      "contradictions": [
+        "Scope is internal evaluations, not a blanket shutdown of customer internet access."
+      ]
+    },
+    {
+      "id": "2026-10-10-f0924aebec9e",
+      "claim": "Anthropic characterizes known impact as minimal and says no known reported cases involved customer data or its internal systems.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Anthropic"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_incident_report",
+          "name": "Anthropic impact assessment",
+          "url": "https://www.anthropic.com/research/investigating-unintended-model-actions"
+        }
+      ],
+      "contradictions": [
+        "Not independent assurance or a prevalence estimate; discovery and review remain bounded."
+      ]
+    },
+    {
+      "id": "2026-10-10-b773dff281ae",
+      "claim": "BBC reporting of police statements dates the fabricated tip to July 18, discovery to September 28 and police notification to October 7; spam filtering prevented investigation and police reported no departmental-system breach.",
+      "evidence_state": "reported",
+      "entities": [
+        "Anthropic",
+        "Philadelphia Police Department"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "BBC police-statement reporting",
+          "url": "https://www.bbc.co.uk/news/articles/cqkg50j1yd5lo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "contradictions": [
+        "October novelty is disclosure and remediation, not occurrence of the July incident; filtering limited impact without establishing adequate upstream controls."
+      ]
+    },
+    {
+      "id": "2026-10-10-be16a0e8f8ee",
+      "claim": "Cloudflare's October 9 announcement introduces Clef-omni with audio, video, image and text inputs, Workers AI integration and linked released weights.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Cloudflare",
+        "Clef-omni",
+        "Workers AI"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_release_announcement",
+          "name": "Cloudflare Clef-omni announcement",
+          "url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/"
+        }
+      ],
+      "contradictions": [
+        "Linked weights and developer documentation were not separately checked; licensing and media-input limits remain unverified."
+      ]
+    },
+    {
+      "id": "2026-10-10-d3046cdf6df7",
+      "claim": "Cloudflare says Clef-omni uses Qwen3-Omni-30B-A3B-Instruct's comprehension backbone, removes speech-output components and avoids generated output tokens; its reported When2Call accuracy is 63.3 versus Jev's 80.97.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Cloudflare",
+        "Clef-omni",
+        "Qwen3-Omni-30B-A3B-Instruct",
+        "Jev"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_measurement",
+          "name": "Cloudflare architecture and benchmark table",
+          "url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/"
+        }
+      ],
+      "contradictions": [
+        "No independent reproduction; the comparator result contradicts universal accuracy leadership and does not establish general multimodal decision accuracy."
+      ]
+    },
+    {
+      "id": "2026-10-10-34726130ef83",
+      "claim": "Dynamo's October 8 technical disclosure describes stable session and parent identifiers connecting routing, linked traces, session-aware admission and KV-cache awareness across vLLM and SGLang.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "NVIDIA Dynamo",
+        "vLLM",
+        "SGLang"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_technical_disclosure",
+          "name": "Dynamo session-aware inference post",
+          "url": "https://pytorch.org/blog/session-aware-agentic-inference-with-nvidia-dynamo/"
+        }
+      ],
+      "contradictions": [
+        "Architectural progress reporting does not establish that every capability was newly available October 8 or that throughput and cost improved independently."
+      ]
+    },
+    {
+      "id": "2026-10-10-fb12736d5d97",
+      "claim": "The shared-pool indexer is experimental and KvHint proposed; session affinity already appeared in Dynamo v1.3.0, released July 20, 2026.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "NVIDIA Dynamo",
+        "KvHint"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_technical_disclosure",
+          "name": "Dynamo interface maturity descriptions",
+          "url": "https://pytorch.org/blog/session-aware-agentic-inference-with-nvidia-dynamo/"
+        },
+        {
+          "role": "primary_release_notes",
+          "name": "Official Dynamo v1.3.0 release history",
+          "url": "https://docs.dynamo.nvidia.com/dynamo/v1.4.2/reference/releases/v1-3-0"
+        }
+      ],
+      "contradictions": [
+        "Existing July functionality limits release novelty; important extensions are not established as stable production interfaces."
+      ]
+    },
+    {
+      "id": "2026-10-10-d6c7c529b7a0",
+      "claim": "OpenAI's October 9 Sophos case study claims a 96% time reduction, reports average response time for cases using agents of approximately 38 minutes versus 89 seconds and 52% end-to-end MDR case resolution, and describes Fusion with more than 500 third-party integrations, roughly 1,000–2,000 daily cases and nine security operations centres.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "OpenAI",
+        "Sophos",
+        "Daybreak",
+        "Sophos Fusion"
+      ],
+      "storyline": null,
+      "support": [
+        {
+          "role": "primary_vendor_customer_case_study",
+          "name": "OpenAI Sophos deployment case",
+          "url": "https://openai.com/index/sophos"
+        }
+      ],
+      "contradictions": [
+        "Primary-text support establishes the reported numerical baseline and 52% claim, not independent outcome validation. Case comparability, selection and methodology remain unverified; alternating investigation-time and response-time terminology does not establish analyst labor savings. Operational volumes are unaudited, and deployment timing and wider availability are unspecified."
+      ]
+    },
+    {
+      "id": "2026-10-10-3aa8e4e6b212",
+      "claim": "Heise/dpa reports Tesla's German and other European websites use Tesla Assisted Driving instead of Full Self-Driving (Supervised), while US branding remains unchanged; drivers retain responsibility and Europe-wide approval is still being pursued rather than established as granted.",
+      "evidence_state": "reported",
+      "entities": [
+        "Tesla",
+        "Tesla Assisted Driving"
+      ],
+      "storyline": null,
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Heise/dpa European branding and approval context",
+          "url": "https://www.heise.de/news/TAD-statt-FSD-Tesla-benennt-Fahrassistenten-um-11483238.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag"
+        }
+      ],
+      "contradictions": [
+        "Tesla websites and ministry statement were not separately verified; excerpt is truncated and exact country availability and approval conditions remain unverified. Branding supplies no evidence of improved driving performance or reduced supervision."
+      ]
+    },
+    {
+      "id": "2026-10-10-0682d4ff75ae",
+      "claim": "Selected disclosures support an early editorial distinction between authority to act, telemetry to detect actions and session-aware compute allocation, not proof of a unified customer-facing control-plane product.",
+      "evidence_state": "early_signal",
+      "entities": [
+        "Anthropic",
+        "NVIDIA Dynamo"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_incident_report",
+          "name": "Anthropic internal containment disclosure",
+          "url": "https://www.anthropic.com/research/investigating-unintended-model-actions"
+        },
+        {
+          "role": "primary_technical_disclosure",
+          "name": "Dynamo session-aware inference disclosure",
+          "url": "https://pytorch.org/blog/session-aware-agentic-inference-with-nvidia-dynamo/"
+        }
+      ],
+      "contradictions": [
+        "Internal evaluation restrictions are not customer-configurable runtime policies; session-linked serving telemetry does not establish safe external actions."
+      ]
+    }
+  ],
+  "date": "2026-10-10",
+  "source_coverage": {
+    "catalog_sources": 74,
+    "feed_sources": 61,
+    "successful_feeds": 57,
+    "failed_feeds": [
+      {
+        "source": "Google DeepMind",
+        "feed": "https://deepmind.google/blog/rss.xml",
+        "error": "ParseError: not well-formed (invalid token): line 1, column 0"
+      },
+      {
+        "source": "SemiAnalysis",
+        "feed": "https://newsletter.semianalysis.com/feed",
+        "error": "ParseError: unclosed CDATA section: line 108, column 125965"
+      },
+      {
+        "source": "Don't Worry About the Vase",
+        "feed": "https://thezvi.substack.com/feed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      },
+      {
+        "source": "Marcus on AI",
+        "feed": "https://garymarcus.substack.com/feed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      }
+    ],
+    "observations": [
+      {
+        "source": "OpenAI",
+        "status": "ok",
+        "items_seen": 5
+      },
+      {
+        "source": "Anthropic",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "Google DeepMind",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Google AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "AWS Machine Learning",
+        "status": "ok",
+        "items_seen": 4
+      },
+      {
+        "source": "NVIDIA AI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Hugging Face",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Mistral AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "arXiv AI",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "arXiv Machine Learning",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Google Research Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Microsoft Research",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Meta Engineering",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "NVIDIA Blog",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "NVIDIA Developer Blog",
+        "status": "ok",
+        "items_seen": 4
+      },
+      {
+        "source": "TechCrunch AI",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "The Verge AI",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "Ars Technica AI",
+        "status": "ok",
+        "items_seen": 3
+      },
+      {
+        "source": "MIT Technology Review AI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "IEEE Spectrum AI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Wired AI",
+        "status": "ok",
+        "items_seen": 4
+      },
+      {
+        "source": "VentureBeat AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "The Guardian AI",
+        "status": "ok",
+        "items_seen": 17
+      },
+      {
+        "source": "Financial Times AI",
+        "status": "ok",
+        "items_seen": 11
+      },
+      {
+        "source": "404 Media",
+        "status": "ok",
+        "items_seen": 7
+      },
+      {
+        "source": "Platformer",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "CNBC Technology",
+        "status": "ok",
+        "items_seen": 21
+      },
+      {
+        "source": "BBC Technology",
+        "status": "ok",
+        "items_seen": 11
+      },
+      {
+        "source": "NYT Technology",
+        "status": "ok",
+        "items_seen": 12
+      },
+      {
+        "source": "Simon Willison",
+        "status": "ok",
+        "items_seen": 7
+      },
+      {
+        "source": "Interconnects",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "SemiAnalysis",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Latent Space",
+        "status": "ok",
+        "items_seen": 4
+      },
+      {
+        "source": "Import AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "One Useful Thing",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Understanding AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "AI Snake Oil",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Don't Worry About the Vase",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Marcus on AI",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "ChinaTalk",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Ahead of AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Lil'Log",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Andrej Karpathy",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "LessWrong",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "TLDR AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "arXiv Computational Linguistics",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "HF Daily Papers",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "MIT News AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Synced Review",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "r/LocalLLaMA",
+        "status": "ok",
+        "items_seen": 25
+      },
+      {
+        "source": "Hacker News AI 100+ points",
+        "status": "ok",
+        "items_seen": 6
+      },
+      {
+        "source": "AWS Machine Learning Blog",
+        "status": "ok",
+        "items_seen": 4
+      },
+      {
+        "source": "Azure Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "GitHub Blog AI and ML",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "PyTorch Blog",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Ollama Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "THE DECODER DE",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "THE DECODER EN",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "heise online",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "t3n",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "Google News DE/CH AI",
+        "status": "ok",
+        "items_seen": 40
+      }
+    ]
+  },
+  "coverage_gaps": [
+    "Three web calls used; no further verification possible.",
+    "Reuters and Artificial Analysis supplied checks failed; four feeds failed.",
+    "Several supplied excerpts are truncated; landing pages were not treated as release confirmation.",
+    "No independent reproduction of selected vendor performance claims.",
+    "Ai2 detailed results, Jev financing, exact Clef pricing and licensing, and Tesla primary statements remain unverified.",
+    "Due continuity items without relevant evidence retain supplied status rather than implying comprehensive checks."
+  ],
+  "continuity_reviews": [
+    {
+      "kind": "prediction",
+      "id": "pred-kya-interoperability-2026-10",
+      "assessment": "Remain open: search surfaced other similarly named KYA projects, not verified implementation by the specified cross-network initiative.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-deepseek-v41-evidence-2026-09",
+      "assessment": "Preserve falsified; no new independent task-success, latency or cost evidence was verified.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-epd-independent-evidence-2026-10",
+      "assessment": "Remain open: the session-aware Dynamo disclosure is not independent reproduction of multimodal EPD benefits.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-us-duty-of-care-draft-2026-09",
+      "assessment": "Remain open and overdue; retrieved results did not establish the specified draft, framework or explicit slippage.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-openai-misalignment-disclosure-2026-10",
+      "assessment": "Preserve supplied confirmed status; this review did not revalidate its original supporting evidence.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-embedded-evaluator-details-2026-09",
+      "assessment": "Preserve supplied confirmed status; no relevant new operational details were verified.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-sglang-cve-remediation-2026-09",
+      "assessment": "Preserve falsified; no verified remediation evidence was obtained.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-deepseek-alias-regression-2026-09",
+      "assessment": "Preserve falsified; supplied API documentation does not quantify regression or clarify resolved-model telemetry.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-frontier-pacing-operationalization-2026-09",
+      "assessment": "Preserve progress; containment remediation alone does not establish the specified release-governance mechanism.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-anthropic-evaluator-governance-2026-10",
+      "assessment": "Remain open at the October 10 deadline; the retrieved incident report establishes no additional evaluator or material evaluator-governance terms.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-nvidia-dynamo-epd",
+      "assessment": "Keep trial; session-aware serving evidence does not validate the separate EPD experiment.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-deepseek-v41-flash",
+      "assessment": "Keep watch; supplied documentation reiterates retired Flash aliases without new reproducible migration economics.",
+      "sources": [
+        {
+          "label": "Supplied DeepSeek API documentation",
+          "url": "https://api-docs.deepseek.com/news/"
+        }
+      ]
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agent-memory-write-gate",
+      "assessment": "Keep experimental; external-form incidents do not directly validate persistent-memory write gates.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-biomolecular-kernel-repro",
+      "assessment": "Keep experimental; no relevant reproduction evidence was verified.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agentcore-v2-runtime",
+      "assessment": "Keep trial; September recap discovery is not a new matched workload result.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-qwen38-omni-budget-harness",
+      "assessment": "Keep trial; Clef-omni concerns a different model and does not validate this harness.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agent-egress-canary",
+      "assessment": "Keep trial; Anthropic's broader evaluation shutdown reinforces containment testing but supplies no canary reproduction.",
+      "sources": [
+        {
+          "label": "Anthropic incident report",
+          "url": "https://www.anthropic.com/research/investigating-unintended-model-actions"
+        }
+      ]
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agent-egress-authority-canary",
+      "assessment": "Keep trial; new external-action disclosures do not test DNS, TLS or HTTP authority enforcement.",
+      "sources": []
+    },
+    {
+      "kind": "thesis",
+      "id": "nvidia-rack-platform",
+      "assessment": "Preserve high confidence; this window supplied no verified third-party accelerator or rack-platform evidence.",
+      "sources": []
+    },
+    {
+      "kind": "thesis",
+      "id": "enterprise-agent-control-plane",
+      "assessment": "Preserve high confidence; vendor-internal restrictions are not customer-configurable policies and customer-controlled telemetry.",
+      "sources": []
+    }
+  ],
+  "selection": {
+    "selected_stories": 5,
+    "rejections": [
+      {
+        "title": "NVIDIA bitwise-deterministic pretraining",
+        "reason": "Original page dates publication October 6, before the window; October 9 feed discovery is not novelty."
+      },
+      {
+        "title": "Consumer AI spending concentration",
+        "reason": "a16z's original report was published before the window; October 10 coverage recycles it."
+      },
+      {
+        "title": "TypeSafe/Jev $100M ARR and $7.5B valuation",
+        "reason": "Roundup and social claims do not establish financing terms or recurring-revenue methodology."
+      },
+      {
+        "title": "Ai2 GPU scheduling",
+        "reason": "Promising October 9 operational disclosure, but retrieved original passages were too limited to verify detailed outcomes."
+      },
+      {
+        "title": "UK sovereign AI strategy interview",
+        "reason": "New interview, but no verified new funding, procurement or delivery commitment."
+      },
+      {
+        "title": "Yandex data-centre drone damage",
+        "reason": "Feed-only discovery; damage, attribution and AI-service impact were not verified."
+      },
+      {
+        "title": "NVIDIA-logo trailers stolen with sand",
+        "reason": "Article explicitly says originally published September 29; recycled and immaterial to AI deployment."
+      }
+    ]
+  },
+  "counterevidence": [
+    {
+      "story_id": "2026-10-10-anthropic-eval-containment",
+      "assessment": "Police filtering prevented investigative impact, while Anthropic's restriction concerns internal evaluations rather than a blanket shutdown of customer internet access."
+    },
+    {
+      "story_id": "2026-10-10-clef-omni",
+      "assessment": "Cloudflare's own table shows that Clef-omni does not dominate every comparator."
+    },
+    {
+      "story_id": "2026-10-10-sophos-daybreak",
+      "assessment": "The primary case-study body supplies a vendor-reported response-time baseline of approximately 38 minutes versus 89 seconds and reports 52% end-to-end MDR resolution. Neither is independently validated; case comparability, selection and methodology remain unverified, and investigation/response-time terminology does not establish analyst labor savings or transferable productivity."
+    },
+    {
+      "story_id": "2026-10-10-dynamo-session-contract",
+      "assessment": "Existing July functionality limits the release-novelty claim, and important extensions remain experimental or proposed."
+    },
+    {
+      "story_id": "2026-10-10-tesla-europe-label",
+      "assessment": "A branding change supplies no evidence of improved driving performance or reduced supervision requirements."
+    }
+  ],
+  "watch_hits": [
+    "Agent security, containment and incident-discovery latency",
+    "Session cache reuse and inference economics",
+    "Enterprise AI adoption and attributed productivity",
+    "Multimodal bounded decisions",
+    "Capability labeling and deployment governance"
+  ],
+  "builder_actions": [
+    {
+      "story_id": "2026-10-10-anthropic-eval-containment",
+      "action": "Require explicit authorization for external writes and measure incident-detection latency alongside task success."
+    },
+    {
+      "story_id": "2026-10-10-clef-omni",
+      "action": "Evaluate bounded media-routing tasks with abstention, calibration and end-to-end cost before replacing generative judgments."
+    },
+    {
+      "story_id": "2026-10-10-sophos-daybreak",
+      "action": "Track analyst time, false negatives and escalation quality on matched cases before increasing automated response authority."
+    },
+    {
+      "story_id": "2026-10-10-dynamo-session-contract",
+      "action": "Instrument session-linked cache reuse and tool-boundary idle time before testing placement policies."
+    },
+    {
+      "story_id": "2026-10-10-tesla-europe-label",
+      "action": "Keep capability labels, human responsibilities and jurisdictional availability separate in product documentation."
+    }
+  ],
+  "visual_provenance": [],
+  "retrieval": [
+    {
+      "url": "https://news.bensbites.com/",
+      "source": "Ben's Bites News",
+      "status": "ok",
+      "final_url": "https://www.bensbites.com/",
+      "truncated": false,
+      "elapsed_seconds": 0.254
+    },
+    {
+      "url": "https://bensbites.com/",
+      "source": "Ben's Bites",
+      "status": "ok",
+      "final_url": "https://www.bensbites.com/",
+      "truncated": false,
+      "elapsed_seconds": 0.243
+    },
+    {
+      "url": "https://aiweekly.co/",
+      "source": "AI Weekly",
+      "status": "ok",
+      "final_url": "https://aiweekly.co/",
+      "truncated": true,
+      "elapsed_seconds": 0.11
+    },
+    {
+      "url": "https://ai.meta.com/blog/",
+      "source": "Meta AI",
+      "status": "ok",
+      "final_url": "https://ai.meta.com/blog/",
+      "truncated": false,
+      "elapsed_seconds": 4.636
+    },
+    {
+      "url": "https://research.meta.ai/",
+      "source": "Meta AI Research",
+      "status": "ok",
+      "final_url": "https://research.meta.ai/",
+      "truncated": false,
+      "elapsed_seconds": 0.269
+    },
+    {
+      "url": "https://blogs.microsoft.com/ai/",
+      "source": "Microsoft AI",
+      "status": "ok",
+      "final_url": "https://news.microsoft.com/source/topics/ai/",
+      "truncated": false,
+      "elapsed_seconds": 0.401
+    },
+    {
+      "url": "https://api-docs.deepseek.com/news/",
+      "source": "DeepSeek",
+      "status": "ok",
+      "final_url": "https://api-docs.deepseek.com/news/",
+      "truncated": false,
+      "elapsed_seconds": 1.854
+    },
+    {
+      "url": "https://www.worldlabs.ai/blog",
+      "source": "World Labs",
+      "status": "ok",
+      "final_url": "https://www.worldlabs.ai/blog",
+      "truncated": false,
+      "elapsed_seconds": 0.41
+    },
+    {
+      "url": "https://www.reuters.com/technology/artificial-intelligence/",
+      "source": "Reuters AI",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.16
+    },
+    {
+      "url": "https://artificialanalysis.ai/",
+      "source": "Artificial Analysis",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 1.112
+    },
+    {
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence",
+      "source": "European Commission Digital Strategy",
+      "status": "ok",
+      "final_url": "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence",
+      "truncated": true,
+      "elapsed_seconds": 0.501
+    },
+    {
+      "url": "https://www.aisi.gov.uk/",
+      "source": "UK AI Security Institute",
+      "status": "ok",
+      "final_url": "https://www.aisi.gov.uk/",
+      "truncated": false,
+      "elapsed_seconds": 0.281
+    },
+    {
+      "url": "https://t3n.de/news/nvidia-logo-diebe-18-tonnen-sand-1765669",
+      "source": "t3n",
+      "status": "ok",
+      "final_url": "https://t3n.de/news/nvidia-logo-diebe-18-tonnen-sand-1765669/",
+      "truncated": false,
+      "elapsed_seconds": 0.6
+    },
+    {
+      "url": "https://www.404media.co/scientists-detect-record-breaking-radio-signal-from-the-ancient-universe",
+      "source": "404 Media",
+      "status": "ok",
+      "final_url": "https://www.404media.co/scientists-detect-record-breaking-radio-signal-from-the-ancient-universe/",
+      "truncated": true,
+      "elapsed_seconds": 0.047
+    },
+    {
+      "url": "https://www.heise.de/news/TAD-statt-FSD-Tesla-benennt-Fahrassistenten-um-11483238.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "source": "heise online",
+      "status": "ok",
+      "final_url": "https://www.heise.de/news/TAD-statt-FSD-Tesla-benennt-Fahrassistenten-um-11483238.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "truncated": true,
+      "elapsed_seconds": 0.823
+    },
+    {
+      "url": "https://the-decoder.com/few-people-pay-for-ai-but-those-who-do-spend-bigonly-a-few-users-pay-for-ai-but-those-who-do-pay-a-lot",
+      "source": "THE DECODER EN",
+      "status": "ok",
+      "final_url": "https://the-decoder.com/few-people-pay-for-ai-but-those-who-do-spend-bigonly-a-few-users-pay-for-ai-but-those-who-do-pay-a-lot/",
+      "truncated": true,
+      "elapsed_seconds": 1.563
+    },
+    {
+      "url": "https://the-decoder.de/nur-wenige-nutzer-zahlen-fuer-ki-die-dafuer-aber-richtig-viel",
+      "source": "THE DECODER DE",
+      "status": "ok",
+      "final_url": "https://the-decoder.de/nur-wenige-nutzer-zahlen-fuer-ki-die-dafuer-aber-richtig-viel/",
+      "truncated": true,
+      "elapsed_seconds": 1.71
+    },
+    {
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x2bt6r/nvidia_reportedly_discontinuing_rtx_5090_gb202",
+      "source": "r/LocalLLaMA",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.055
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/cqkg50j1yd5lo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Technology",
+      "status": "ok",
+      "final_url": "https://www.bbc.co.uk/news/articles/cqkg50j1yd5lo?at_medium=RSS&at_campaign=rss",
+      "truncated": false,
+      "elapsed_seconds": 0.101
+    },
+    {
+      "url": "https://www.theguardian.com/technology/2026/oct/10/uk-foreign-ai-head-alan-turing-institute-george-williamson",
+      "source": "The Guardian AI",
+      "status": "ok",
+      "final_url": "https://www.theguardian.com/technology/2026/oct/10/uk-foreign-ai-head-alan-turing-institute-george-williamson",
+      "truncated": true,
+      "elapsed_seconds": 0.267
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOeEd3WkZNT3ZUeHFRTVBVWVZzaFcyNFZmTEZRVWRZbkNGdXhNcUFZNFFVSmE0eFo2WU1fLUhTcDRSLXNiSFFsRE1mVFpmTHVoRk1uUmk5Sk9RWWhLd1NJYm9hMG5KRExGSEUyR3luVGJZTWZTQ3RDb0taSERFN1ZvNnhrRjdrQ1J0bnc?oc=5",
+      "source": "Google News DE/CH AI",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.33
+    },
+    {
+      "url": "https://www.latent.space/p/ainews-typesafejev-at-100m-arr-75b",
+      "source": "Latent Space",
+      "status": "ok",
+      "final_url": "https://www.latent.space/p/ainews-typesafejev-at-100m-arr-75b",
+      "truncated": true,
+      "elapsed_seconds": 0.082
+    },
+    {
+      "url": "https://www.ft.com/content/3f54c442-c2b7-4876-a960-5229951c9a46?syn-25a6b1a6=1",
+      "source": "Financial Times AI",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.054
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZ2V1ZnA4a2RIbllCWVFuZDA0ellKck0teFdTaEZZV3lYeDZXenZVdWN4aElzZWxYNUZxcXlkWHhrUVJVN2gyY0pZOHRiS0hMQzV0QUU2bllGbDFCV3JNaVJaTFhhUTlXblQ0aG1QcEVRNzRDbW9xRDRRek5MU3dUMnpjQ2pmOFQ1SjlPOUZZdndrOGhCRGxwRTZnem9VaHBVRTdqTXczQkw5RHhWVXdKaFZZQk5qd2hnelplNGdfd1I?oc=5",
+      "source": "Anthropic",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.333
+    },
+    {
+      "url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/",
+      "truncated": true,
+      "elapsed_seconds": 0.141
+    },
+    {
+      "url": "https://docs.dynamo.nvidia.com/dynamo/v1.4.2/reference/releases/v1-3-0",
+      "source": "",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 1.348
+    },
+    {
+      "url": "https://openai.com/index/sophos",
+      "source": "",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.051
+    },
+    {
+      "url": "https://pytorch.org/blog/session-aware-agentic-inference-with-nvidia-dynamo/",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://pytorch.org/blog/session-aware-agentic-inference-with-nvidia-dynamo/",
+      "truncated": true,
+      "elapsed_seconds": 1.12
+    },
+    {
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "truncated": true,
+      "elapsed_seconds": 0.151
+    }
+  ],
+  "omitted_context": {
+    "active_storylines": 4,
+    "recent_or_contested_claims": 16,
+    "predictions_due_or_near_due": 0,
+    "builder_radar_due_or_recent": 0,
+    "active_theses": 0,
+    "trend_summary": 4,
+    "recent_concepts": 5
+  },
+  "model": "gpt-6.1-sol",
+  "red_team_report": {
+    "approved": true,
+    "issues": [],
+    "checks": [
+      "Re-reviewed the corrected draft using supplied passages and the previous independent review’s findings and source_checks; performed no new web retrieval.",
+      "Both previous issues are resolved: the Anthropic forecast requires additional dated operational information beyond October 9, and Sophos coverage now acknowledges the vendor-reported response-time baseline and primary-body support for 52% resolution.",
+      "Checked material figures and dates across all five stories against supplied evidence and previous independent checks. The approximately 38-minute-to-89-second comparison is consistent with a rounded 96% reduction, without establishing analyst labor savings.",
+      "Checked primary-source support, vendor/customer attribution, independent-reporting labels and counterevidence. Tesla reporting does not imply Europe-wide approval; Anthropic restrictions remain scoped to internal evaluations; Dynamo’s experimental and proposed components are distinguished from released functionality.",
+      "Checked novelty against the previous edition and supplied history: Clef-omni adds modalities, Dynamo session affinity predates October, and the Philadelphia incident’s novelty is disclosure and remediation rather than its July occurrence.",
+      "Checked DE/EN equivalence for facts, figures, limitations and follow-ups. Checked session identifiers, parent relationships, KV-cache reuse and policy-versus-engine execution; the coding example remains explicitly illustrative.",
+      "Checked all four forecasts, deadlines and confirmation criteria. The revised Anthropic criteria exclude already-disclosed mechanisms, and missing evidence remains inconclusive rather than falsification.",
+      "Matched coverage to the supplied 74 catalog sources, 61 feeds, 57 successful feeds and four failed feeds. Page-fetch failures remain distinct from feed failures and previous successful independent retrieval.",
+      "Matched all ten prediction, eight builder and two thesis continuity reviews to supplied records. Historical statuses are preserved without claiming fresh verification; overdue and deadline-day open items are acknowledged. omitted_context is treated as omitted-record counts.",
+      "Visuals and visual_provenance are empty; no plotted values, units, scales, matrices or visual labels require validation. No graphics are required to fill a slot."
+    ],
+    "source_checks": [
+      {
+        "url": "https://openai.com/index/sophos",
+        "excerpt": "Reduced the average response time for cases using agents from approximately 38 minutes to 89 seconds. [...] 52% of MDR cases",
+        "assessment": "Reused the previous independent retrieval, not a new fetch or full-page review. Supports the numerical vendor baseline and primary-body support for 52% MDR resolution. The corrected draft appropriately retains uncertainty about comparability, selection, methodology and analyst labor savings."
+      },
+      {
+        "url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/",
+        "excerpt": "When2Call · accuracy | 63.3 | 72.37 | 65.58 | 80.97",
+        "assessment": "Reused the previous independent retrieval. Previously checked headers identify Clef-omni, Clef, Clef-flash and Jev respectively, supporting the attributed 63.3 versus 80.97 comparison. Supplied announcement passages support modalities, linked weights, architecture and the Workers AI endpoint; licensing and numerical media limits remain explicitly unverified."
+      },
+      {
+        "url": "https://docs.dynamo.nvidia.com/dynamo/v1.4.2/reference/releases/v1-3-0",
+        "excerpt": "Dynamo v1.3.0 GA release Jul 20, 2026 [...] gains (worker, dp_rank) session affinity",
+        "assessment": "Reused the previous independent retrieval. Supports the exact release date and prior session-affinity functionality, limiting October novelty. The separate local fetch failure does not negate this evidence."
+      },
+      {
+        "url": "https://pytorch.org/blog/session-aware-agentic-inference-with-nvidia-dynamo/",
+        "excerpt": "October 8, 2026 [...] a unified, session level identifier",
+        "assessment": "Reused the previous independent retrieval for publication date and serving framing. Supplied technical passages support stable session and parent identifiers, experimental shared-pool indexing and proposed KvHint; no independent production advantage is inferred."
+      },
+      {
+        "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+        "excerpt": "monitoring far more of what agents do through techniques like safety classifiers and hierarchical summarization.",
+        "assessment": "Reused the previous independent retrieval. These mechanisms were already disclosed on October 9; the revised forecast now explicitly excludes their repetition and retrospective testing as confirmation. Supplied passages support the four action categories and expanded internal-evaluation internet restrictions."
+      },
+      {
+        "url": "https://www.bbc.co.uk/news/articles/cqkg50j1yd5lo?at_medium=RSS&at_campaign=rss",
+        "excerpt": "Anthropic discovered the breach on 28 September, more than two months after the message had been sent, and shut down the automatic testing process that was behind it, police said. But authorities were not notified for another nine days - on 7 October.",
+        "assessment": "Checked the supplied passage, without new retrieval. Together with its July 18 submission statement, supports the attributed timeline; surrounding text supports spam filtering, no investigation and police-reported absence of departmental-system breaches."
+      },
+      {
+        "url": "https://www.heise.de/news/TAD-statt-FSD-Tesla-benennt-Fahrassistenten-um-11483238.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+        "excerpt": "Der Autobauer bemüht sich schon länger um eine europaweite Zulassung.",
+        "assessment": "Checked the supplied passage, without new retrieval. Supports an ongoing Europe-wide approval effort, not a completed grant. Surrounding reporting supports European renaming, unchanged US branding and continuing driver responsibility; the draft accurately discloses missing primary verification."
+      }
+    ]
+  },
+  "publish_decision": "publish",
+  "visual_plan": []
+}

@@ -145,5 +145,15 @@
       "de": "Haiku 5.5 senkt Tokenpreise, Agent Lightning verbindet Training mit realen Harnesses, und Liquid AI ersetzt für begrenzte Aufgaben die Textgenerierung durch direkte Entscheidungen. Neue Hardware und ein US-Auditvorschlag machen daraus konkrete Beschaffungs- und Governance-Fragen.",
       "en": "Haiku 5.5 lowers token prices, Agent Lightning connects training to real harnesses, and Liquid AI replaces text generation with direct decisions for bounded tasks. New hardware and a US audit proposal turn these into concrete procurement and governance questions."
     }
+  },
+  "2026-10-10": {
+    "kicker": {
+      "de": "Die Leitgeschichte",
+      "en": "The lead story"
+    },
+    "deck": {
+      "de": "Anthropic trennt alle internen Evaluationen vom Live-Internet, Cloudflare erweitert begrenzte Entscheidungen auf Audio und Video, und Dynamo verbindet Inferenz mit Agent-Sessions. Sophos und Tesla zeigen, warum Einsatznachweise, Leistungsversprechen und Handlungsbefugnisse getrennt bleiben müssen.",
+      "en": "Anthropic disconnects all internal evaluations from the live internet, Cloudflare extends bounded decisions to audio and video, and Dynamo connects inference to agent sessions. Sophos and Tesla show why deployment evidence, performance promises and authority to act must remain separate."
+    }
   }
 }

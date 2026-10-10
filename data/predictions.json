@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-08",
+  "updated_at": "2026-10-10",
   "predictions": [
     {
       "id": "pred-kya-interoperability-2026-10",
@@ -52,9 +52,14 @@
           "date": "2026-10-08",
           "note": "Open unchanged; bounded discovery did not establish an implementable specification or cross-network pilot before the October 15 review.",
           "sources": []
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Remain open: search surfaced other similarly named KYA projects, not verified implementation by the specified cross-network initiative.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-08"
+      "last_reviewed": "2026-10-10"
     },
     {
       "id": "pred-deepseek-v41-evidence-2026-09",
@@ -110,9 +115,14 @@
           "date": "2026-10-08",
           "note": "Falsified unchanged; the supplied API landing excerpt adds no independent success, latency or cost comparison.",
           "sources": []
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Preserve falsified; no new independent task-success, latency or cost evidence was verified.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-08"
+      "last_reviewed": "2026-10-10"
     },
     {
       "id": "pred-china-hbm-pricing-q4",
@@ -203,9 +213,14 @@
           "date": "2026-10-08",
           "note": "Open unchanged; no qualifying independent production-style reproduction was established.",
           "sources": []
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Remain open: the session-aware Dynamo disclosure is not independent reproduction of multimodal EPD benefits.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-08"
+      "last_reviewed": "2026-10-10"
     },
     {
       "id": "pred-us-duty-of-care-draft-2026-09",
@@ -292,9 +307,14 @@
               "url": "https://rollcall.com/2026/10/07/sen-maria-cantwell-looks-to-federal-testing-role-in-ai-safety-framework/"
             }
           ]
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Remain open and overdue; retrieved results did not establish the specified draft, framework or explicit slippage.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-08"
+      "last_reviewed": "2026-10-10"
     },
     {
       "id": "pred-openai-misalignment-disclosure-2026-10",
@@ -321,7 +341,15 @@
           "url": "https://openai.com/index/model-misalignment-reporting-framework/",
           "note": "OpenAI published the promised structured model-misalignment disclosure framework on Sep 16, with scope, case-selection process, investigation tracks, escalation path and six initial reports. Confirmation criterion satisfied."
         }
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-10",
+          "note": "Preserve supplied confirmed status; this review did not revalidate its original supporting evidence.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-10"
     },
     {
       "id": "pred-uae-ai-resilience-plan-2026-10",
@@ -431,9 +459,14 @@
           "date": "2026-10-08",
           "note": "Confirmed unchanged; no newly verified evidence warrants revising the supplied historical assessment.",
           "sources": []
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Preserve supplied confirmed status; no relevant new operational details were verified.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-08"
+      "last_reviewed": "2026-10-10"
     },
     {
       "id": "pred-sglang-cve-remediation-2026-09",
@@ -501,9 +534,14 @@
           "date": "2026-10-08",
           "note": "Falsified unchanged; official remediation was not newly verified in this run.",
           "sources": []
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Preserve falsified; no verified remediation evidence was obtained.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-08"
+      "last_reviewed": "2026-10-10"
     },
     {
       "id": "pred-deepseek-alias-regression-2026-09",
@@ -565,9 +603,14 @@
           "date": "2026-10-08",
           "note": "Falsified unchanged; the supplied landing excerpt documents legacy Flash aliases but neither quantified regression nor resolved-version telemetry.",
           "sources": []
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Preserve falsified; supplied API documentation does not quantify regression or clarify resolved-model telemetry.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-08"
+      "last_reviewed": "2026-10-10"
     },
     {
       "id": "pred-frontier-pacing-operationalization-2026-09",
@@ -700,9 +743,14 @@
               "url": "https://www.commerce.senate.gov/press/dem/release/cantwell-outlines-comprehensive-governance-framework-for-safe-and-secure-frontier-ai/"
             }
           ]
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Preserve progress; containment remediation alone does not establish the specified release-governance mechanism.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-08"
+      "last_reviewed": "2026-10-10"
     },
     {
       "id": "pred-anthropic-evaluator-governance-2026-10",
@@ -760,9 +808,14 @@
           "date": "2026-10-08",
           "note": "Open unchanged; targeted discovery established no additional evaluator or material new governance details before October 10.",
           "sources": []
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Remain open at the October 10 deadline; the retrieved incident report establishes no additional evaluator or material evaluator-governance terms.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-08"
+      "last_reviewed": "2026-10-10"
     },
     {
       "id": "pred-agentcore-v2-production-repro-2026-10",
@@ -1366,6 +1419,71 @@
       "confidence": "medium",
       "id": "pred-2026-10-08-8c848a4241d5",
       "created": "2026-10-08",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-10, Anthropic will publish a dated operational disclosure that adds specified validation thresholds, prospective detection-performance results or incident-notification procedures for unintended external actions beyond its October 9 report.",
+      "review_after": "2026-11-10",
+      "confirmation_criteria": [
+        "An Anthropic technical or incident update published after October 9 and by November 10 supplies at least one specified validation threshold, prospective detection-performance result with its evaluation basis, or concrete incident-notification procedure for unintended external actions.",
+        "Repeating the already disclosed safety classifiers, hierarchical summarization, automatic detection/blocking tooling or retrospective testing of the reported cases does not confirm this forecast."
+      ],
+      "falsification_criteria": [
+        "A dated Anthropic statement explicitly defers all three forms of additional operational disclosure beyond 2026-11-10 or announces that none will be published.",
+        "Missing evidence alone is inconclusive and must not be treated as falsification."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-10-056a6220e719",
+      "created": "2026-10-10",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-10, Cloudflare will make an explicit Clef-omni weight license and at least one numerical audio or video input limit publicly documented in primary developer or model documentation.",
+      "review_after": "2026-11-10",
+      "confirmation_criteria": [
+        "Primary documentation explicitly names the license applicable to Clef-omni weights and supplies at least one numerical audio/video limit, such as duration, file size or supported resolution."
+      ],
+      "falsification_criteria": [
+        "Cloudflare explicitly announces that weight licensing or numerical media-input limits will remain unpublished until after 2026-11-10, or withdraws the release before providing both.",
+        "Missing or inaccessible documentation is inconclusive rather than proof that the forecast failed."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-10-0d545613b91d",
+      "created": "2026-10-10",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-12-10, an official Dynamo release will document an implemented, versioned session-aware cache-hint interface, whether named KvHint or a documented successor, rather than only the proposed interface.",
+      "review_after": "2026-12-10",
+      "confirmation_criteria": [
+        "Official release notes and interface documentation tie a concrete session-aware cache-policy hint API to a released version and describe its implemented behavior."
+      ],
+      "falsification_criteria": [
+        "An official roadmap or release statement explicitly keeps the relevant interface proposal-only or defers implementation beyond 2026-12-10, or announces its abandonment.",
+        "A shared-pool indexer release alone does not confirm this forecast; absence of relevant evidence is inconclusive."
+      ],
+      "confidence": "low",
+      "id": "pred-2026-10-10-dfb92b9aa223",
+      "created": "2026-10-10",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-10, Tesla will explicitly pair the Assisted Driving name with a continuing driver-supervision requirement in its own publicly accessible documentation for at least one European market.",
+      "review_after": "2026-11-10",
+      "confirmation_criteria": [
+        "A Tesla-controlled European product or support page uses Assisted Driving and explicitly states that the driver must supervise or remain responsible for vehicle operation."
+      ],
+      "falsification_criteria": [
+        "Tesla officially reverses the Assisted Driving name across the reported European markets before the deadline, or explicitly states that the renamed system no longer requires driver supervision.",
+        "Unavailable pages or a lack of newly retrieved primary evidence are inconclusive; Europe-wide approval is not a confirmation criterion."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-10-281265030ede",
+      "created": "2026-10-10",
       "status": "open",
       "evidence": []
     }

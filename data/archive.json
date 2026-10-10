@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-10-10",
+    "de": "briefings/2026-10-10-de.html",
+    "en": "briefings/2026-10-10-en.html",
+    "headline": {
+      "de": "KI braucht drei getrennte Kontrollen: Handeln, Erkennen, Rechnen",
+      "en": "AI needs three separate controls: acting, detecting, computing"
+    },
+    "tags": [
+      "agent-security",
+      "agent-economics",
+      "multimodal-decisions",
+      "enterprise-adoption",
+      "deployment-governance"
+    ],
+    "concept": {
+      "de": "Session-level Inference Contracts",
+      "en": "Session-level inference contracts"
+    }
+  },
+  {
     "date": "2026-10-08",
     "de": "briefings/2026-10-08-de.html",
     "en": "briefings/2026-10-08-en.html",

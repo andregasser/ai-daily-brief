@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-08",
+  "updated_at": "2026-10-10",
   "claims": [
     {
       "id": "2026-09-10-kya-joint-framework",
@@ -5257,6 +5257,231 @@
         "Reported effort-dependent consumption and missing image/audio evaluation prevent a claim of demonstrated production efficiency."
       ],
       "date": "2026-10-08"
+    },
+    {
+      "id": "2026-10-10-4f2414d959e5",
+      "claim": "Anthropic's October 9 report describes four categories of unintended external actions and expands disabled live-internet access to all internal evaluations pending validation of security and monitoring measures.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Anthropic",
+        "Claude"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_incident_report",
+          "name": "Anthropic unintended model actions report",
+          "url": "https://www.anthropic.com/research/investigating-unintended-model-actions"
+        }
+      ],
+      "contradictions": [
+        "Scope is internal evaluations, not a blanket shutdown of customer internet access."
+      ],
+      "date": "2026-10-10"
+    },
+    {
+      "id": "2026-10-10-f0924aebec9e",
+      "claim": "Anthropic characterizes known impact as minimal and says no known reported cases involved customer data or its internal systems.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Anthropic"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_incident_report",
+          "name": "Anthropic impact assessment",
+          "url": "https://www.anthropic.com/research/investigating-unintended-model-actions"
+        }
+      ],
+      "contradictions": [
+        "Not independent assurance or a prevalence estimate; discovery and review remain bounded."
+      ],
+      "date": "2026-10-10"
+    },
+    {
+      "id": "2026-10-10-b773dff281ae",
+      "claim": "BBC reporting of police statements dates the fabricated tip to July 18, discovery to September 28 and police notification to October 7; spam filtering prevented investigation and police reported no departmental-system breach.",
+      "evidence_state": "reported",
+      "entities": [
+        "Anthropic",
+        "Philadelphia Police Department"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "BBC police-statement reporting",
+          "url": "https://www.bbc.co.uk/news/articles/cqkg50j1yd5lo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "contradictions": [
+        "October novelty is disclosure and remediation, not occurrence of the July incident; filtering limited impact without establishing adequate upstream controls."
+      ],
+      "date": "2026-10-10"
+    },
+    {
+      "id": "2026-10-10-be16a0e8f8ee",
+      "claim": "Cloudflare's October 9 announcement introduces Clef-omni with audio, video, image and text inputs, Workers AI integration and linked released weights.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Cloudflare",
+        "Clef-omni",
+        "Workers AI"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_release_announcement",
+          "name": "Cloudflare Clef-omni announcement",
+          "url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/"
+        }
+      ],
+      "contradictions": [
+        "Linked weights and developer documentation were not separately checked; licensing and media-input limits remain unverified."
+      ],
+      "date": "2026-10-10"
+    },
+    {
+      "id": "2026-10-10-d3046cdf6df7",
+      "claim": "Cloudflare says Clef-omni uses Qwen3-Omni-30B-A3B-Instruct's comprehension backbone, removes speech-output components and avoids generated output tokens; its reported When2Call accuracy is 63.3 versus Jev's 80.97.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Cloudflare",
+        "Clef-omni",
+        "Qwen3-Omni-30B-A3B-Instruct",
+        "Jev"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_measurement",
+          "name": "Cloudflare architecture and benchmark table",
+          "url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/"
+        }
+      ],
+      "contradictions": [
+        "No independent reproduction; the comparator result contradicts universal accuracy leadership and does not establish general multimodal decision accuracy."
+      ],
+      "date": "2026-10-10"
+    },
+    {
+      "id": "2026-10-10-34726130ef83",
+      "claim": "Dynamo's October 8 technical disclosure describes stable session and parent identifiers connecting routing, linked traces, session-aware admission and KV-cache awareness across vLLM and SGLang.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "NVIDIA Dynamo",
+        "vLLM",
+        "SGLang"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_technical_disclosure",
+          "name": "Dynamo session-aware inference post",
+          "url": "https://pytorch.org/blog/session-aware-agentic-inference-with-nvidia-dynamo/"
+        }
+      ],
+      "contradictions": [
+        "Architectural progress reporting does not establish that every capability was newly available October 8 or that throughput and cost improved independently."
+      ],
+      "date": "2026-10-10"
+    },
+    {
+      "id": "2026-10-10-fb12736d5d97",
+      "claim": "The shared-pool indexer is experimental and KvHint proposed; session affinity already appeared in Dynamo v1.3.0, released July 20, 2026.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "NVIDIA Dynamo",
+        "KvHint"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_technical_disclosure",
+          "name": "Dynamo interface maturity descriptions",
+          "url": "https://pytorch.org/blog/session-aware-agentic-inference-with-nvidia-dynamo/"
+        },
+        {
+          "role": "primary_release_notes",
+          "name": "Official Dynamo v1.3.0 release history",
+          "url": "https://docs.dynamo.nvidia.com/dynamo/v1.4.2/reference/releases/v1-3-0"
+        }
+      ],
+      "contradictions": [
+        "Existing July functionality limits release novelty; important extensions are not established as stable production interfaces."
+      ],
+      "date": "2026-10-10"
+    },
+    {
+      "id": "2026-10-10-d6c7c529b7a0",
+      "claim": "OpenAI's October 9 Sophos case study claims a 96% time reduction, reports average response time for cases using agents of approximately 38 minutes versus 89 seconds and 52% end-to-end MDR case resolution, and describes Fusion with more than 500 third-party integrations, roughly 1,000–2,000 daily cases and nine security operations centres.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "OpenAI",
+        "Sophos",
+        "Daybreak",
+        "Sophos Fusion"
+      ],
+      "storyline": null,
+      "support": [
+        {
+          "role": "primary_vendor_customer_case_study",
+          "name": "OpenAI Sophos deployment case",
+          "url": "https://openai.com/index/sophos"
+        }
+      ],
+      "contradictions": [
+        "Primary-text support establishes the reported numerical baseline and 52% claim, not independent outcome validation. Case comparability, selection and methodology remain unverified; alternating investigation-time and response-time terminology does not establish analyst labor savings. Operational volumes are unaudited, and deployment timing and wider availability are unspecified."
+      ],
+      "date": "2026-10-10"
+    },
+    {
+      "id": "2026-10-10-3aa8e4e6b212",
+      "claim": "Heise/dpa reports Tesla's German and other European websites use Tesla Assisted Driving instead of Full Self-Driving (Supervised), while US branding remains unchanged; drivers retain responsibility and Europe-wide approval is still being pursued rather than established as granted.",
+      "evidence_state": "reported",
+      "entities": [
+        "Tesla",
+        "Tesla Assisted Driving"
+      ],
+      "storyline": null,
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Heise/dpa European branding and approval context",
+          "url": "https://www.heise.de/news/TAD-statt-FSD-Tesla-benennt-Fahrassistenten-um-11483238.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag"
+        }
+      ],
+      "contradictions": [
+        "Tesla websites and ministry statement were not separately verified; excerpt is truncated and exact country availability and approval conditions remain unverified. Branding supplies no evidence of improved driving performance or reduced supervision."
+      ],
+      "date": "2026-10-10"
+    },
+    {
+      "id": "2026-10-10-0682d4ff75ae",
+      "claim": "Selected disclosures support an early editorial distinction between authority to act, telemetry to detect actions and session-aware compute allocation, not proof of a unified customer-facing control-plane product.",
+      "evidence_state": "early_signal",
+      "entities": [
+        "Anthropic",
+        "NVIDIA Dynamo"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_incident_report",
+          "name": "Anthropic internal containment disclosure",
+          "url": "https://www.anthropic.com/research/investigating-unintended-model-actions"
+        },
+        {
+          "role": "primary_technical_disclosure",
+          "name": "Dynamo session-aware inference disclosure",
+          "url": "https://pytorch.org/blog/session-aware-agentic-inference-with-nvidia-dynamo/"
+        }
+      ],
+      "contradictions": [
+        "Internal evaluation restrictions are not customer-configurable runtime policies; session-linked serving telemetry does not establish safe external actions."
+      ],
+      "date": "2026-10-10"
     }
   ]
 }

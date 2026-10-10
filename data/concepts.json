@@ -913,6 +913,38 @@
         "de": "briefings/2026-10-08-de.html",
         "en": "briefings/2026-10-08-en.html"
       }
+    },
+    {
+      "id": "session-level-inference-contracts",
+      "first_seen": "2026-10-10",
+      "last_seen": "2026-10-10",
+      "title": {
+        "de": "Session-level Inference Contracts",
+        "en": "Session-level inference contracts"
+      },
+      "summary": {
+        "de": "Eine stabile Session-ID verbindet zusammengehörige Modellaufrufe mit ihrem gemeinsamen Arbeitskontext; sie ist ein Vertrag über Zusammenhang, kein Beweis für günstigere erfolgreiche Aufgaben.",
+        "en": "A stable session ID connects related model calls to their shared working context; it is a contract about relationships, not proof of cheaper successful tasks."
+      },
+      "tags": [
+        "session-id",
+        "kv-cache",
+        "agent-serving"
+      ],
+      "storylines": [
+        "agent-economics"
+      ],
+      "sources": [
+        "https://pytorch.org/blog/session-aware-agentic-inference-with-nvidia-dynamo/"
+      ],
+      "related_concepts": [
+        "snapshot-restore-working-set-agent-runtimes",
+        "agent-replay-off-policy-evaluation"
+      ],
+      "briefing": {
+        "de": "briefings/2026-10-10-de.html",
+        "en": "briefings/2026-10-10-en.html"
+      }
     }
   ]
 }
