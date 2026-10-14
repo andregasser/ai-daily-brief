@@ -155,5 +155,15 @@
       "de": "Anthropic trennt alle internen Evaluationen vom Live-Internet, Cloudflare erweitert begrenzte Entscheidungen auf Audio und Video, und Dynamo verbindet Inferenz mit Agent-Sessions. Sophos und Tesla zeigen, warum Einsatznachweise, Leistungsversprechen und Handlungsbefugnisse getrennt bleiben müssen.",
       "en": "Anthropic disconnects all internal evaluations from the live internet, Cloudflare extends bounded decisions to audio and video, and Dynamo connects inference to agent sessions. Sophos and Tesla show why deployment evidence, performance promises and authority to act must remain separate."
     }
+  },
+  "2026-10-14": {
+    "kicker": {
+      "de": "Die Leitgeschichte",
+      "en": "The lead story"
+    },
+    "deck": {
+      "de": "Meta und Google erweitern die bezahlte Modellauswahl, NVIDIA öffnet Run:ai, Anthropic baut die Versionsverwaltung um und Character.AI meldet Chapter 11 an. Die gemeinsame Frage: Was wird tatsächlich zuverlässiger, lieferbar und wirtschaftlich tragfähig?",
+      "en": "Meta and Google expand paid model choice, NVIDIA opens Run:ai, Anthropic redesigns source control and Character.AI files for Chapter 11. The common question: what actually becomes more reliable, deliverable and economically sustainable?"
+    }
   }
 }

@@ -1,0 +1,1224 @@
+{
+  "claims": [
+    {
+      "id": "2026-10-14-7eb6b9941372",
+      "claim": "Meta introduced Muse Wonder and Wonder Full on October 12. Independent reporting places Wonder in the Meta Model API and Muse Code, with Wonder Full restricted to Muse Code subscribers and not served through the API; reported Wonder pricing is $4/$20 per million input/output tokens.",
+      "evidence_state": "reported",
+      "entities": [
+        "Meta",
+        "Muse Wonder",
+        "Muse Wonder Full",
+        "Muse Code"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "TechCrunch launch and pricing report",
+          "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "Axios Wonder API and Muse Code access report",
+          "url": "https://www.axios.com/2026/10/12/meta-new-ai-models-anthropic-openai"
+        }
+      ],
+      "contradictions": [
+        "List pricing does not establish cost per successful task; broader access was not established."
+      ]
+    },
+    {
+      "id": "2026-10-14-7b6bd57fc727",
+      "claim": "TechCrunch attributes Muse Wonder benchmark and memory advantages to Meta's own testing; no directly inspected independent evaluation establishes general superiority or validates persistent-memory controls.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Meta",
+        "Muse Wonder"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "independent_reporting_of_vendor_claim",
+          "name": "TechCrunch model testing account",
+          "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/"
+        }
+      ],
+      "contradictions": [
+        "The original announcement's substantive body was unavailable in the supplied excerpt; vendor testing is not independent validation."
+      ]
+    },
+    {
+      "id": "2026-10-14-a67afd6775f3",
+      "claim": "NVIDIA's October 13 announcement opens the full Run:ai platform within DSX AI Factory, including independently adoptable KAI Scheduler, GPU Fractioning Operator, KAI Resource Management and Workload Map. Nebius announces Cloud Applications availability and says KAI Scheduler has been open source since April 2025.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "NVIDIA",
+        "Run:ai",
+        "Nebius",
+        "KAI Scheduler"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "NVIDIA platform release",
+          "url": "https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform"
+        },
+        {
+          "role": "primary_ecosystem_announcement",
+          "name": "Nebius platform availability",
+          "url": "https://nebius.com/blog/posts/nvidia-run-ai-open-source-nebius-applications"
+        }
+      ],
+      "contradictions": [
+        "The novelty is broader platform scope, not first-ever open scheduling; partner availability does not independently validate performance benefits."
+      ]
+    },
+    {
+      "id": "2026-10-14-db2bcbba120e",
+      "claim": "NGC identifies Apache 2.0 source availability and self-hosted control-plane/cluster components, with no account, subscription or API key required for artifacts. NVIDIA nevertheless requires applicable software-license and product-specific terms for the Community Product; community support and supported commercial offerings are distinct.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "NVIDIA",
+        "NGC",
+        "Run:ai"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "primary_distribution_listing",
+          "name": "NVIDIA NGC Run:ai listing",
+          "url": "https://catalog.ngc.nvidia.com/orgs/nvidia/runai-oss/collections/runai/-"
+        },
+        {
+          "role": "primary_vendor_announcement",
+          "name": "NVIDIA distribution conditions",
+          "url": "https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform"
+        }
+      ],
+      "contradictions": [
+        "The repository, component-level licenses and installation path were not inspected; unrestricted artifact access does not mean absence of distribution terms or prove savings or accelerator portability."
+      ]
+    },
+    {
+      "id": "2026-10-14-94319c46839d",
+      "claim": "TheWrap reports Character.AI filed Chapter 11 late October 12 to facilitate an asset sale, with continued operation intended during the process and auction completion expected in late November or early December.",
+      "evidence_state": "reported",
+      "entities": [
+        "Character.AI"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "TheWrap bankruptcy reporting",
+          "url": "https://www.thewrap.com/industry-news/tech/disney-character-ai-chatbot-bankruptcy-deal/"
+        }
+      ],
+      "contradictions": [
+        "The court filing and company release were not directly inspected; no filing-derived financial figures are retained, and expected timing or intended service continuity is not guaranteed."
+      ]
+    },
+    {
+      "id": "2026-10-14-f74ed44e5742",
+      "claim": "Disney's proposed $20 million bid concerns a non-exclusive perpetual license to certain Character.AI IP, not a completed acquisition; TheWrap reports competing offers remain possible.",
+      "evidence_state": "reported",
+      "entities": [
+        "Disney",
+        "Character.AI"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "TheWrap transaction description",
+          "url": "https://www.thewrap.com/industry-news/tech/disney-character-ai-chatbot-bankruptcy-deal/"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "404 Media licensing report",
+          "url": "https://www.404media.co/character-ais-bankruptcy-documents-show-the-economics-of-ai-dont-work"
+        }
+      ],
+      "contradictions": [
+        "An IP license does not establish future service operation; one company's bankruptcy does not establish that all AI economics fail."
+      ]
+    },
+    {
+      "id": "2026-10-14-3988c2a310fd",
+      "claim": "Anthropic reports approximately 2,500 daily merged changes in May 2026 and more than 30,000 in September, plus seven engineers building Scion, Antique and related systems and completing internal migration from Git in five months.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Anthropic",
+        "Scion",
+        "Antique"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_vendor_engineering_report",
+          "name": "Anthropic source-control redesign",
+          "url": "https://www.anthropic.com/engineering/redesigning-source-control"
+        }
+      ],
+      "contradictions": [
+        "Internal merge counts and deployment claims are not independently audited productivity or quality results; this is not a public software release."
+      ]
+    },
+    {
+      "id": "2026-10-14-177150f38b0b",
+      "claim": "Anthropic describes Scion as assuming online clients, moving repository operations to servers and exposing source-control queries through APIs, while explicitly acknowledging its unusual workload and Git's suitability for most repositories.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Anthropic",
+        "Scion",
+        "Git"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_vendor_architectural_description",
+          "name": "Anthropic Scion architecture",
+          "url": "https://www.anthropic.com/engineering/redesigning-source-control"
+        }
+      ],
+      "contradictions": [
+        "A workload-specific architecture does not justify general Git replacement or establish improved delivered outcomes."
+      ]
+    },
+    {
+      "id": "2026-10-14-0824c32c80db",
+      "claim": "Google's dated October 13 announcements open Gemini 4 Argon on the paid Gemini API tier, in AI Studio and Antigravity for Google AI Ultra subscribers, and in the Gemini app for Google AI Pro and Ultra subscribers.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Google",
+        "Gemini 4 Argon",
+        "AI Studio",
+        "Google Antigravity"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_availability_announcement",
+          "name": "Google developer access",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/"
+        },
+        {
+          "role": "primary_vendor_availability_announcement",
+          "name": "Google Gemini app access",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/"
+        }
+      ],
+      "contradictions": [
+        "Third-party discovery timing disagreed; the dated primary announcements establish the October 13 access event. Quotas, pricing and regional exceptions were not checked."
+      ]
+    },
+    {
+      "id": "2026-10-14-5633a49a6b28",
+      "claim": "Google positions Argon for complex long-horizon workflows, including software engineering, knowledge work and cybersecurity defense, and claims improved reasoning and execution.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Google",
+        "Gemini 4 Argon"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_vendor_capability_announcement",
+          "name": "Google developer model positioning",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/"
+        },
+        {
+          "role": "primary_vendor_capability_announcement",
+          "name": "Google app capability claims",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/"
+        }
+      ],
+      "contradictions": [
+        "These capability claims were not independently reproduced; paid access is not proof of long-horizon reliability."
+      ]
+    },
+    {
+      "id": "2026-10-14-a2e80ef135c4",
+      "claim": "Expanded paid model choice, broader open orchestration, Anthropic's internal infrastructure migration and Character.AI's reported restructuring support an early editorial signal that access, throughput and sustainable outcomes require separate assessment.",
+      "evidence_state": "early_signal",
+      "entities": [
+        "Meta",
+        "Google",
+        "NVIDIA",
+        "Anthropic",
+        "Character.AI"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "TechCrunch commercial model access",
+          "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/"
+        },
+        {
+          "role": "primary_vendor_availability_announcement",
+          "name": "Google paid developer access",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/"
+        },
+        {
+          "role": "primary_vendor_announcement",
+          "name": "NVIDIA orchestration opening",
+          "url": "https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform"
+        },
+        {
+          "role": "primary_vendor_engineering_report",
+          "name": "Anthropic infrastructure pressure",
+          "url": "https://www.anthropic.com/engineering/redesigning-source-control"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "TheWrap restructuring report",
+          "url": "https://www.thewrap.com/industry-news/tech/disney-character-ai-chatbot-bankruptcy-deal/"
+        }
+      ],
+      "contradictions": [
+        "This is synthesis, not a measured industry trend or independent proof of productivity gains or universal economic failure."
+      ]
+    }
+  ],
+  "date": "2026-10-14",
+  "source_coverage": {
+    "catalog_sources": 74,
+    "feed_sources": 61,
+    "successful_feeds": 58,
+    "failed_feeds": [
+      {
+        "source": "SemiAnalysis",
+        "feed": "https://newsletter.semianalysis.com/feed",
+        "error": "ParseError: unclosed CDATA section: line 108, column 125965"
+      },
+      {
+        "source": "Don't Worry About the Vase",
+        "feed": "https://thezvi.substack.com/feed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      },
+      {
+        "source": "Marcus on AI",
+        "feed": "https://garymarcus.substack.com/feed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      }
+    ],
+    "observations": [
+      {
+        "source": "OpenAI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Anthropic",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "Google DeepMind",
+        "status": "ok",
+        "items_seen": 4
+      },
+      {
+        "source": "Google AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "AWS Machine Learning",
+        "status": "ok",
+        "items_seen": 9
+      },
+      {
+        "source": "NVIDIA AI",
+        "status": "ok",
+        "items_seen": 5
+      },
+      {
+        "source": "Hugging Face",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Mistral AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "arXiv AI",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "arXiv Machine Learning",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "Google Research Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Microsoft Research",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Meta Engineering",
+        "status": "ok",
+        "items_seen": 4
+      },
+      {
+        "source": "NVIDIA Blog",
+        "status": "ok",
+        "items_seen": 5
+      },
+      {
+        "source": "NVIDIA Developer Blog",
+        "status": "ok",
+        "items_seen": 4
+      },
+      {
+        "source": "TechCrunch AI",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "The Verge AI",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "Ars Technica AI",
+        "status": "ok",
+        "items_seen": 8
+      },
+      {
+        "source": "MIT Technology Review AI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "IEEE Spectrum AI",
+        "status": "ok",
+        "items_seen": 3
+      },
+      {
+        "source": "Wired AI",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "VentureBeat AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "The Guardian AI",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "Financial Times AI",
+        "status": "ok",
+        "items_seen": 22
+      },
+      {
+        "source": "404 Media",
+        "status": "ok",
+        "items_seen": 6
+      },
+      {
+        "source": "Platformer",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "CNBC Technology",
+        "status": "ok",
+        "items_seen": 30
+      },
+      {
+        "source": "BBC Technology",
+        "status": "ok",
+        "items_seen": 8
+      },
+      {
+        "source": "NYT Technology",
+        "status": "ok",
+        "items_seen": 12
+      },
+      {
+        "source": "Simon Willison",
+        "status": "ok",
+        "items_seen": 11
+      },
+      {
+        "source": "Interconnects",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "SemiAnalysis",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Latent Space",
+        "status": "ok",
+        "items_seen": 6
+      },
+      {
+        "source": "Import AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "One Useful Thing",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Understanding AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "AI Snake Oil",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Don't Worry About the Vase",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Marcus on AI",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "ChinaTalk",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Ahead of AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Lil'Log",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Andrej Karpathy",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "LessWrong",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "TLDR AI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "arXiv Computational Linguistics",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "HF Daily Papers",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "MIT News AI",
+        "status": "ok",
+        "items_seen": 3
+      },
+      {
+        "source": "Synced Review",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "r/LocalLLaMA",
+        "status": "ok",
+        "items_seen": 25
+      },
+      {
+        "source": "Hacker News AI 100+ points",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "AWS Machine Learning Blog",
+        "status": "ok",
+        "items_seen": 9
+      },
+      {
+        "source": "Azure Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "GitHub Blog AI and ML",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "PyTorch Blog",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Ollama Blog",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "THE DECODER DE",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "THE DECODER EN",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "heise online",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "t3n",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "Google News DE/CH AI",
+        "status": "ok",
+        "items_seen": 40
+      }
+    ]
+  },
+  "coverage_gaps": [
+    "Twelve events shortlisted; five selected using three batched web calls.",
+    "Returned page slices were not full-page checks; several substantive bodies remained unavailable.",
+    "Reuters and Artificial Analysis supplied checks failed; independent benchmark tables were not verified.",
+    "SemiAnalysis, The Zvi and Marcus feeds failed.",
+    "China coverage and overdue evaluator-governance evidence remain thin.",
+    "Character.AI court documents and Run:ai repository licensing were not directly inspected."
+  ],
+  "continuity_reviews": [
+    {
+      "kind": "prediction",
+      "id": "pred-kya-interoperability-2026-10",
+      "assessment": "Open unchanged: nearby AFSP material is not confirmation that the Ant–Mastercard–Visa initiative delivered its promised interoperability artifact before October 15.",
+      "sources": [
+        {
+          "label": "AFSP public-review description",
+          "url": "https://agenticfinanceprotocol.org/know-your-agent"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-deepseek-v41-evidence-2026-09",
+      "assessment": "Falsified unchanged; no new inspected comparative task-economics evidence warrants reopening.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-epd-independent-evidence-2026-10",
+      "assessment": "Open unchanged: older non-NVIDIA EPD research does not reproduce the specific Dynamo benefits under review before October 15.",
+      "sources": [
+        {
+          "label": "EPD-Serve research",
+          "url": "https://arxiv.org/abs/2601.11590"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-us-duty-of-care-draft-2026-09",
+      "assessment": "Open unchanged and overdue; September 29 Senate discussion does not establish the specified draft, release authority or subsequent public slippage.",
+      "sources": [
+        {
+          "label": "September 29 Congressional Record",
+          "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-29/pdf/CREC-2026-09-29-senate.pdf"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-openai-misalignment-disclosure-2026-10",
+      "assessment": "Confirmed unchanged; no relevant new evidence was inspected.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-embedded-evaluator-details-2026-09",
+      "assessment": "Confirmed unchanged; new searches supplied no material operational update.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-sglang-cve-remediation-2026-09",
+      "assessment": "Falsified unchanged; official remediation was not reverified in this run.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-deepseek-alias-regression-2026-09",
+      "assessment": "Falsified unchanged; supplied documentation establishes alias behavior but not reproducible regression results or resolved-version telemetry.",
+      "sources": [
+        {
+          "label": "Supplied DeepSeek documentation",
+          "url": "https://api-docs.deepseek.com/news/"
+        }
+      ]
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-frontier-pacing-operationalization-2026-09",
+      "assessment": "Progress unchanged; inspected evidence does not support a further status change.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-anthropic-evaluator-governance-2026-10",
+      "assessment": "Open unchanged and overdue since October 10; targeted searches did not establish additional evaluator identities or governance rights.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-inference-admin-hardening",
+      "assessment": "Experimental unchanged; no new endpoint-hardening or remediation evidence inspected.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-nvidia-dynamo-epd",
+      "assessment": "Trial unchanged; no inspected production-style reproduction clears the evaluation gate.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-deepseek-v41-flash",
+      "assessment": "Watch unchanged; supplied API documentation does not replace alias-migration regression testing.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agent-memory-write-gate",
+      "assessment": "Experimental unchanged; Muse marketing does not validate a persistent-memory write gate.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agent-registry-poc",
+      "assessment": "Experimental unchanged; adjacent identity proposals do not establish cross-network interoperability.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-hermetic-coding-agent-canary",
+      "assessment": "Experimental unchanged; source-control scaling evidence does not validate repository isolation.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-outcome-cost-benchmark-harness",
+      "assessment": "Trial unchanged; new paid model access expands candidates but supplies no local cost-per-success results.",
+      "sources": [
+        {
+          "label": "Google developer access",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/"
+        }
+      ]
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agent-dual-monitoring",
+      "assessment": "Watch unchanged; no new evidence validates dual-layer incident detection.",
+      "sources": []
+    },
+    {
+      "kind": "thesis",
+      "id": "nvidia-rack-platform",
+      "assessment": "High confidence unchanged; Run:ai openness concerns orchestration, not demonstrated third-party accelerator participation in NVLink racks.",
+      "sources": []
+    },
+    {
+      "kind": "thesis",
+      "id": "enterprise-agent-control-plane",
+      "assessment": "High confidence unchanged; infrastructure orchestration is not proof of customer-configurable agent runtime policy plus telemetry.",
+      "sources": []
+    }
+  ],
+  "selection": {
+    "selected_stories": 5,
+    "rejections": [
+      {
+        "title": "AgentCore payments with Anchor Browser",
+        "reason": "Returned excerpts exposed navigation rather than substantive implementation evidence; feed claims remain unconfirmed."
+      },
+      {
+        "title": "Liquid AI LFM2.5-24B-A2B",
+        "reason": "Publication date confirmed, but returned excerpts did not establish architecture, weights, hardware requirements or measured performance."
+      },
+      {
+        "title": "Microsoft Maia 300",
+        "reason": "Discovered on Microsoft landing pages; original technical announcement and delivery terms not inspected."
+      },
+      {
+        "title": "DeepMind–Singapore on-device scam detection",
+        "reason": "Original URL retrieved, but substantive deployment and privacy claims remained outside the exposed excerpt."
+      },
+      {
+        "title": "Artemis Orion-1",
+        "reason": "Supplied truncated reporting attributes 80.8 versus 58.3 attack-reconstruction scores to a vendor benchmark; original methodology and selected-customer preview terms not verified."
+      },
+      {
+        "title": "CoreWeave insurance-capital financing",
+        "reason": "FT page failed; financing scope and novelty remain feed-only."
+      },
+      {
+        "title": "ASML demand through 2030",
+        "reason": "CNBC page failed; original earnings evidence and order-versus-interest distinction not verified."
+      }
+    ]
+  },
+  "counterevidence": [
+    {
+      "story_id": "2026-10-14-meta-muse-wonder",
+      "assessment": "No directly inspected independent evaluation establishes a general performance advantage."
+    },
+    {
+      "story_id": "2026-10-14-gemini-argon-access",
+      "assessment": "Third-party discovery pages disagreed on release timing; the dated Google announcements establish October 13 access."
+    },
+    {
+      "story_id": "2026-10-14-anthropic-scion",
+      "assessment": "Anthropic acknowledges Git remains appropriate for most repositories; this does not justify wholesale replacement."
+    },
+    {
+      "story_id": "2026-10-14-runai-open-source",
+      "assessment": "The scheduler was already open source, so the novelty is platform scope rather than first-ever open scheduling."
+    },
+    {
+      "story_id": "2026-10-14-character-bankruptcy",
+      "assessment": "One company's bankruptcy does not establish that all AI economics fail, as the 404 Media headline suggests."
+    }
+  ],
+  "watch_hits": [
+    "Coding agents: source-control and CI bottlenecks",
+    "Enterprise economics: paid model competition and companion-platform restructuring",
+    "AI infrastructure: broader open orchestration",
+    "Long-horizon agents: Argon availability, not proven reliability"
+  ],
+  "builder_actions": [
+    {
+      "story_id": "2026-10-14-meta-muse-wonder",
+      "action": "Add Wonder to a shadow-evaluation queue before changing production routing."
+    },
+    {
+      "story_id": "2026-10-14-gemini-argon-access",
+      "action": "Evaluate the callable model on pinned long-horizon tasks with existing security and cost controls."
+    },
+    {
+      "story_id": "2026-10-14-anthropic-scion",
+      "action": "Measure checkout, review, build and CI pressure before copying an agent-scale architecture."
+    },
+    {
+      "story_id": "2026-10-14-runai-open-source",
+      "action": "Review component licenses and integration requirements before scheduling an isolated orchestration trial."
+    },
+    {
+      "story_id": "2026-10-14-character-bankruptcy",
+      "action": "Review companion-platform dependency and continuity risks without assuming Disney will operate the service."
+    }
+  ],
+  "visual_provenance": [],
+  "retrieval": [
+    {
+      "url": "https://news.bensbites.com/",
+      "source": "Ben's Bites News",
+      "status": "ok",
+      "final_url": "https://www.bensbites.com/",
+      "truncated": false,
+      "elapsed_seconds": 0.427
+    },
+    {
+      "url": "https://bensbites.com/",
+      "source": "Ben's Bites",
+      "status": "ok",
+      "final_url": "https://www.bensbites.com/",
+      "truncated": false,
+      "elapsed_seconds": 0.34
+    },
+    {
+      "url": "https://aiweekly.co/",
+      "source": "AI Weekly",
+      "status": "ok",
+      "final_url": "https://aiweekly.co/",
+      "truncated": true,
+      "elapsed_seconds": 0.456
+    },
+    {
+      "url": "https://ai.meta.com/blog/",
+      "source": "Meta AI",
+      "status": "ok",
+      "final_url": "https://ai.meta.com/blog/",
+      "truncated": false,
+      "elapsed_seconds": 1.533
+    },
+    {
+      "url": "https://research.meta.ai/",
+      "source": "Meta AI Research",
+      "status": "ok",
+      "final_url": "https://research.meta.ai/",
+      "truncated": false,
+      "elapsed_seconds": 0.442
+    },
+    {
+      "url": "https://blogs.microsoft.com/ai/",
+      "source": "Microsoft AI",
+      "status": "ok",
+      "final_url": "https://news.microsoft.com/source/topics/ai/",
+      "truncated": false,
+      "elapsed_seconds": 0.492
+    },
+    {
+      "url": "https://api-docs.deepseek.com/news/",
+      "source": "DeepSeek",
+      "status": "ok",
+      "final_url": "https://api-docs.deepseek.com/news/",
+      "truncated": false,
+      "elapsed_seconds": 1.709
+    },
+    {
+      "url": "https://www.worldlabs.ai/blog",
+      "source": "World Labs",
+      "status": "ok",
+      "final_url": "https://www.worldlabs.ai/blog",
+      "truncated": false,
+      "elapsed_seconds": 0.398
+    },
+    {
+      "url": "https://www.reuters.com/technology/artificial-intelligence/",
+      "source": "Reuters AI",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.237
+    },
+    {
+      "url": "https://artificialanalysis.ai/",
+      "source": "Artificial Analysis",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.272
+    },
+    {
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence",
+      "source": "European Commission Digital Strategy",
+      "status": "ok",
+      "final_url": "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence",
+      "truncated": true,
+      "elapsed_seconds": 0.405
+    },
+    {
+      "url": "https://www.aisi.gov.uk/",
+      "source": "UK AI Security Institute",
+      "status": "ok",
+      "final_url": "https://www.aisi.gov.uk/",
+      "truncated": false,
+      "elapsed_seconds": 0.416
+    },
+    {
+      "url": "https://www.heise.de/news/Prima-Netzhautimplantat-soll-das-Lesen-wieder-moeglich-machen-11487407.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "source": "heise online",
+      "status": "ok",
+      "final_url": "https://www.heise.de/news/Prima-Netzhautimplantat-soll-das-Lesen-wieder-moeglich-machen-11487407.html?wt_mc=rss.red.ho.ho.atom.beitrag.beitrag",
+      "truncated": true,
+      "elapsed_seconds": 1.017
+    },
+    {
+      "url": "https://t3n.de/news/vom-bankkonto-zum-handyvertrag-wie-revolut-in-deutschland-aufholen-will-1768120",
+      "source": "t3n",
+      "status": "ok",
+      "final_url": "https://t3n.de/news/vom-bankkonto-zum-handyvertrag-wie-revolut-in-deutschland-aufholen-will-1768120/",
+      "truncated": false,
+      "elapsed_seconds": 2.505
+    },
+    {
+      "url": "https://www.theguardian.com/technology/ng-interactive/2026/oct/14/ai-terror-plots-fbi-extremism",
+      "source": "The Guardian AI",
+      "status": "ok",
+      "final_url": "https://www.theguardian.com/technology/ng-interactive/2026/oct/14/ai-terror-plots-fbi-extremism",
+      "truncated": true,
+      "elapsed_seconds": 0.518
+    },
+    {
+      "url": "https://www.ft.com/content/4ffa1853-0e2c-424f-b941-88c6bcac5765?syn-25a6b1a6=1",
+      "source": "Financial Times AI",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.11
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQelZha3RmdFBpdWpkRTNnYk04UVdRb1cyZ05iaWVteHZJME1Ib1A0TGtIWjFCaTZoUHV2c0owLXZhUkdpN0FqVFhlbWhwNHp1R3lWMmpQVDlLNldRbUNubFRmdUhUMEVlcDV5eHhvZkNmektWWHlYY2xQakZIVWVaRUFkbWdVQmFDREJ5a1hWcTNzZzByakFadmROeVBxZEM4OVc1Q3hHeUp0clV1eWpF?oc=5",
+      "source": "Google News DE/CH AI",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.293
+    },
+    {
+      "url": "https://www.wired.com/story/men-cant-stop-faking-how-much-they-know-about-ai",
+      "source": "Wired AI",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.507
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/14/technology/22-people-got-together-for-a-dinner-party-so-did-their-ai-agents.html",
+      "source": "NYT Technology",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.134
+    },
+    {
+      "url": "https://the-decoder.de/grosse-ki-modelle-verlieren-bei-milliarden-sicherheitsereignissen-den-faden-orion-1-soll-es-besser-machen",
+      "source": "THE DECODER DE",
+      "status": "ok",
+      "final_url": "https://the-decoder.de/grosse-ki-modelle-verlieren-bei-milliarden-sicherheitsereignissen-den-faden-orion-1-soll-es-besser-machen/",
+      "truncated": true,
+      "elapsed_seconds": 2.351
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/14/asml-3q-earnings-ai-demand-orders-capacity.html",
+      "source": "CNBC Technology",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.167
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/c623dnkn8pkyo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Technology",
+      "status": "ok",
+      "final_url": "https://www.bbc.co.uk/news/articles/c623dnkn8pkyo?at_medium=RSS&at_campaign=rss",
+      "truncated": true,
+      "elapsed_seconds": 0.265
+    },
+    {
+      "url": "https://www.lesswrong.com/posts/Wrf3kogBomYn6DaGS/did-homo-sapiens-scale-its-brain-by-eating-brains",
+      "source": "LessWrong",
+      "status": "ok",
+      "final_url": "https://www.lesswrong.com/posts/Wrf3kogBomYn6DaGS/did-homo-sapiens-scale-its-brain-by-eating-brains",
+      "truncated": true,
+      "elapsed_seconds": 0.685
+    },
+    {
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x5ki4t/so_this_is_how_they_do_it_rtx_5090_once_a",
+      "source": "r/LocalLLaMA",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.123
+    },
+    {
+      "url": "https://agenticfinanceprotocol.org/know-your-agent",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://agenticfinanceprotocol.org/know-your-agent",
+      "truncated": true,
+      "elapsed_seconds": 0.785
+    },
+    {
+      "url": "https://arxiv.org/abs/2601.11590",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://arxiv.org/abs/2601.11590",
+      "truncated": false,
+      "elapsed_seconds": 0.241
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
+      "truncated": false,
+      "elapsed_seconds": 0.373
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
+      "truncated": false,
+      "elapsed_seconds": 0.343
+    },
+    {
+      "url": "https://catalog.ngc.nvidia.com/orgs/nvidia/runai-oss/collections/runai/-",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://catalog.ngc.nvidia.com/orgs/nvidia/runai-oss/collections/runai/-",
+      "truncated": false,
+      "elapsed_seconds": 0.979
+    },
+    {
+      "url": "https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform",
+      "truncated": true,
+      "elapsed_seconds": 2.186
+    },
+    {
+      "url": "https://nebius.com/blog/posts/nvidia-run-ai-open-source-nebius-applications",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://nebius.com/blog/posts/nvidia-run-ai-open-source-nebius-applications",
+      "truncated": true,
+      "elapsed_seconds": 1.03
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+      "truncated": false,
+      "elapsed_seconds": 0.221
+    },
+    {
+      "url": "https://www.404media.co/character-ais-bankruptcy-documents-show-the-economics-of-ai-dont-work",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://www.404media.co/character-ais-bankruptcy-documents-show-the-economics-of-ai-dont-work/",
+      "truncated": true,
+      "elapsed_seconds": 0.35
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "truncated": true,
+      "elapsed_seconds": 0.463
+    },
+    {
+      "url": "https://www.axios.com/2026/10/12/meta-new-ai-models-anthropic-openai",
+      "source": "",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.205
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-29/pdf/CREC-2026-09-29-senate.pdf",
+      "source": "",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.321
+    },
+    {
+      "url": "https://www.thewrap.com/industry-news/tech/disney-character-ai-chatbot-bankruptcy-deal/",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://www.thewrap.com/industry-news/tech/disney-character-ai-chatbot-bankruptcy-deal/",
+      "truncated": false,
+      "elapsed_seconds": 0.762
+    }
+  ],
+  "omitted_context": {
+    "active_storylines": 4,
+    "recent_or_contested_claims": 16,
+    "predictions_due_or_near_due": 0,
+    "builder_radar_due_or_recent": 2,
+    "active_theses": 0,
+    "trend_summary": 4,
+    "recent_concepts": 5
+  },
+  "model": "gpt-6.1-sol",
+  "red_team_report": {
+    "approved": true,
+    "issues": [],
+    "checks": [
+      "Rechecked the corrected draft against supplied evidence and the previous independent review; no new retrieval was performed.",
+      "Confirmed all three previous issues are resolved: the already-observed Run:ai documentation prediction and bilingual watch item are removed; evaluator-specific restrictions no longer suffice to falsify the Muse evaluation prediction; Axios now supports ordinary Wonder's Muse Code access in both story sources and audit support.",
+      "Rechecked material dates, prices, counts, availability boundaries and transaction scope across all five stories. Scion figures remain attributed vendor claims; model performance advantages are not presented as independently established.",
+      "Checked differentiated Gemini API, developer-product and app entitlements; Wonder versus Wonder Full access; Run:ai platform novelty, artifact access, distribution terms and support distinctions; and the proposed Disney IP license versus company acquisition.",
+      "Checked counterevidence and limitations, including Git's suitability for most repositories, the previously open scheduler, missing independent model evaluations and the limits of generalizing from Character.AI's restructuring.",
+      "Compared DE/EN headlines, summaries, stories, concept, synthesis and corrected watch items; found no material equivalence defect.",
+      "Checked the throughput concept, cost and success denominators, stable-queue qualification for L = λ × W, and explicit separation of illustrative examples from measured results.",
+      "Compared novelty with the prior edition and recent headlines; new events are distinguished from the recurring editorial access-versus-outcome thesis.",
+      "Reconciled the audit with supplied coverage: 61 feeds, 58 successes and three failures. Article-fetch failures remain separate from feed failures, and Axios's historical local fetch failure is preserved despite prior independent retrieval.",
+      "Checked continuity reviews against all supplied due or near-due predictions, eight included builder records and two theses. Historical statuses remain unchanged rather than newly verified; missing evidence is not treated as fresh falsification. Omitted-context counts are not represented as reviewed records.",
+      "Checked prediction deadlines and revised confirmation/falsification criteria; no remaining prediction presents an already-observed milestone as uncertain future publication.",
+      "Confirmed visuals and visual provenance remain empty; there are no plotted values, scales, matrix comparisons or sourced visual labels to validate."
+    ],
+    "source_checks": [
+      {
+        "url": "https://www.axios.com/2026/10/12/meta-new-ai-models-anthropic-openai",
+        "excerpt": "Muse Wonder is available through the Meta Model API and Muse Code",
+        "assessment": "Reused previous independent retrieval. Supports both ordinary Wonder access paths and resolves the source-support issue."
+      },
+      {
+        "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+        "excerpt": "Wonder will cost $4 per million input tokens and $20 per million output tokens",
+        "assessment": "Reused previous independent retrieval. Supports attributed API list pricing, not cost per successful task."
+      },
+      {
+        "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+        "excerpt": "In May 2026, Anthropic averaged around 2,500 code changes merged per day; as of September, we merged over 30,000 per day.",
+        "assessment": "Reused previous independent retrieval and findings. Supports attributed activity figures; the previous check also supported the seven-person team, five-month migration and architectural description. These are not independently audited productivity results."
+      },
+      {
+        "url": "https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform",
+        "excerpt": "Downloading the Community Product from NGC requires acceptance of the applicable NVIDIA Software License Agreement and Product-Specific Terms for NVIDIA AI Products.",
+        "assessment": "Reused previous independent retrieval. Supports the retained distribution-terms caveat; platform scope and four components are also supported by the supplied announcement body."
+      },
+      {
+        "url": "https://catalog.ngc.nvidia.com/orgs/nvidia/runai-oss/collections/runai/-",
+        "excerpt": "You do not need an NGC account, subscription, or API key to download and use the artifacts in this collection.",
+        "assessment": "Reused previous independent retrieval. Supports account-free artifact access, without implying absence of applicable license terms."
+      },
+      {
+        "url": "https://github.com/dsx-ai-factory/run-ai",
+        "excerpt": "./local-dev.sh                                  # full build + cluster + deploy",
+        "assessment": "Reused previous independent retrieval and findings. Full-platform deployment documentation was already observed, justifying removal of the former prediction. Neither the earlier review nor this re-review tested installation."
+      },
+      {
+        "url": "https://nebius.com/blog/posts/nvidia-run-ai-open-source-nebius-applications",
+        "excerpt": "open source since April 2025",
+        "assessment": "Reused previous independent retrieval. Supports the scheduler baseline and broader-platform novelty distinction; Nebius remains labeled an ecosystem partner rather than independent performance validation."
+      },
+      {
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
+        "excerpt": "Start building using the paid tier of the Gemini API in Google AI Studio and Android Studio",
+        "assessment": "Reused previous independent retrieval. Supports paid developer access; supplied and previously checked passages separately support Ultra access in AI Studio and Antigravity."
+      },
+      {
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
+        "excerpt": "Google AI Pro and Ultra subscribers can now access Gemini 4 Argon and give Gemini tasks to get more done.",
+        "assessment": "Reused supplied passage and previous retrieval finding. Supports distinct Pro/Ultra app entitlements, not universal availability or independently demonstrated reliability."
+      },
+      {
+        "url": "https://www.thewrap.com/industry-news/tech/disney-character-ai-chatbot-bankruptcy-deal/",
+        "excerpt": "with Disney readying a $20 million bid for a “non-exclusive perpetual license” of certain IP.",
+        "assessment": "Reused previous independent retrieval. Supports the proposed price and license scope. The supplied dated report supports October 12 filing and expected auction timing; court documents remain uninspected."
+      }
+    ]
+  },
+  "publish_decision": "publish",
+  "visual_plan": []
+}

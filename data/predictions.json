@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-10",
+  "updated_at": "2026-10-14",
   "predictions": [
     {
       "id": "pred-kya-interoperability-2026-10",
@@ -57,9 +57,19 @@
           "date": "2026-10-10",
           "note": "Remain open: search surfaced other similarly named KYA projects, not verified implementation by the specified cross-network initiative.",
           "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Open unchanged: nearby AFSP material is not confirmation that the Ant–Mastercard–Visa initiative delivered its promised interoperability artifact before October 15.",
+          "sources": [
+            {
+              "label": "AFSP public-review description",
+              "url": "https://agenticfinanceprotocol.org/know-your-agent"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-10"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "pred-deepseek-v41-evidence-2026-09",
@@ -120,9 +130,14 @@
           "date": "2026-10-10",
           "note": "Preserve falsified; no new independent task-success, latency or cost evidence was verified.",
           "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Falsified unchanged; no new inspected comparative task-economics evidence warrants reopening.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-10"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "pred-china-hbm-pricing-q4",
@@ -218,9 +233,19 @@
           "date": "2026-10-10",
           "note": "Remain open: the session-aware Dynamo disclosure is not independent reproduction of multimodal EPD benefits.",
           "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Open unchanged: older non-NVIDIA EPD research does not reproduce the specific Dynamo benefits under review before October 15.",
+          "sources": [
+            {
+              "label": "EPD-Serve research",
+              "url": "https://arxiv.org/abs/2601.11590"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-10"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "pred-us-duty-of-care-draft-2026-09",
@@ -312,9 +337,19 @@
           "date": "2026-10-10",
           "note": "Remain open and overdue; retrieved results did not establish the specified draft, framework or explicit slippage.",
           "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Open unchanged and overdue; September 29 Senate discussion does not establish the specified draft, release authority or subsequent public slippage.",
+          "sources": [
+            {
+              "label": "September 29 Congressional Record",
+              "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-29/pdf/CREC-2026-09-29-senate.pdf"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-10"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "pred-openai-misalignment-disclosure-2026-10",
@@ -347,9 +382,14 @@
           "date": "2026-10-10",
           "note": "Preserve supplied confirmed status; this review did not revalidate its original supporting evidence.",
           "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Confirmed unchanged; no relevant new evidence was inspected.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-10"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "pred-uae-ai-resilience-plan-2026-10",
@@ -464,9 +504,14 @@
           "date": "2026-10-10",
           "note": "Preserve supplied confirmed status; no relevant new operational details were verified.",
           "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Confirmed unchanged; new searches supplied no material operational update.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-10"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "pred-sglang-cve-remediation-2026-09",
@@ -539,9 +584,14 @@
           "date": "2026-10-10",
           "note": "Preserve falsified; no verified remediation evidence was obtained.",
           "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Falsified unchanged; official remediation was not reverified in this run.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-10"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "pred-deepseek-alias-regression-2026-09",
@@ -608,9 +658,19 @@
           "date": "2026-10-10",
           "note": "Preserve falsified; supplied API documentation does not quantify regression or clarify resolved-model telemetry.",
           "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Falsified unchanged; supplied documentation establishes alias behavior but not reproducible regression results or resolved-version telemetry.",
+          "sources": [
+            {
+              "label": "Supplied DeepSeek documentation",
+              "url": "https://api-docs.deepseek.com/news/"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-10"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "pred-frontier-pacing-operationalization-2026-09",
@@ -748,9 +808,14 @@
           "date": "2026-10-10",
           "note": "Preserve progress; containment remediation alone does not establish the specified release-governance mechanism.",
           "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Progress unchanged; inspected evidence does not support a further status change.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-10"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "pred-anthropic-evaluator-governance-2026-10",
@@ -813,9 +878,14 @@
           "date": "2026-10-10",
           "note": "Remain open at the October 10 deadline; the retrieved incident report establishes no additional evaluator or material evaluator-governance terms.",
           "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Open unchanged and overdue since October 10; targeted searches did not establish additional evaluator identities or governance rights.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-10"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "pred-agentcore-v2-production-repro-2026-10",
@@ -1484,6 +1554,51 @@
       "confidence": "medium",
       "id": "pred-2026-10-10-281265030ede",
       "created": "2026-10-10",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-10-28, Google will publish or materially update Argon documentation identifying at least one model-specific operating boundary: a quota, usage limit or regional access restriction.",
+      "review_after": "2026-10-28",
+      "confirmation_criteria": [
+        "A dated Google document or documented update by the deadline names an Argon-specific quota, usage limit or regional restriction; generic Gemini access language does not qualify."
+      ],
+      "falsification_criteria": [
+        "Google explicitly states by the deadline that Argon-specific operating-limit documentation is deferred beyond October 28 or will not be supplied. Missing or inaccessible documentation alone is inconclusive."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-14-5a8c1c3a1ad8",
+      "created": "2026-10-14",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-14, at least one independent evaluation will compare Muse Wonder with an existing frontier-model candidate and report a named task set, harness, task-success metric and actual token consumption or cost.",
+      "review_after": "2026-11-14",
+      "confirmation_criteria": [
+        "A non-Meta evaluation published by the deadline identifies both models, task set and harness and reports task success alongside consumed tokens or incurred cost on a comparable setup; list prices and vendor benchmark reposts do not qualify."
+      ],
+      "falsification_criteria": [
+        "Evidence establishes that an access restriction prevents all qualifying independent comparisons through November 14, and no qualifying comparison is published by the deadline. An individual evaluator's restriction or deferral is adverse evidence, not sufficient falsification; absence of a qualifying evaluation without evidence of a universal restriction remains inconclusive."
+      ],
+      "confidence": "low",
+      "id": "pred-2026-10-14-48a551030bcb",
+      "created": "2026-10-14",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-12-15, the proposed Disney licensing transaction for Character.AI's specified IP will receive court approval or close, rather than remaining only a proposed bid.",
+      "review_after": "2026-12-15",
+      "confirmation_criteria": [
+        "A court order, transaction-party statement or credible reporting citing such evidence confirms approval or closing of Disney's licensing transaction by the deadline; an auction schedule or continued bid does not qualify."
+      ],
+      "falsification_criteria": [
+        "A court or transaction party rejects or withdraws the Disney license bid, confirms a different buyer replaces it, or explicitly places approval and closing after December 15. Missing transaction evidence is inconclusive."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-14-1dfac6b8e740",
+      "created": "2026-10-14",
       "status": "open",
       "evidence": []
     }

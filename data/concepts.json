@@ -945,6 +945,41 @@
         "de": "briefings/2026-10-10-de.html",
         "en": "briefings/2026-10-10-en.html"
       }
+    },
+    {
+      "id": "engineering-throughput-outcome-accounting",
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "title": {
+        "de": "Code-Durchsatz ist nicht Engineering-Durchsatz",
+        "en": "Code throughput is not engineering throughput"
+      },
+      "summary": {
+        "de": "Merges zählen Aktivität. Engineering-Durchsatz zählt akzeptierte, überprüfte Ergebnisse über die gesamte Lieferkette hinweg.",
+        "en": "Merges count activity. Engineering throughput counts accepted, verified outcomes across the entire delivery chain."
+      },
+      "tags": [
+        "coding-agents",
+        "engineering-throughput",
+        "outcome-evaluation",
+        "ci"
+      ],
+      "storylines": [
+        "ai-rd-automation",
+        "agent-economics",
+        "benchmark-integrity"
+      ],
+      "sources": [
+        "https://www.anthropic.com/engineering/redesigning-source-control"
+      ],
+      "related_concepts": [
+        "amdahls-law-ai-rd",
+        "model-portfolio-routing-shadow-evals"
+      ],
+      "briefing": {
+        "de": "briefings/2026-10-14-de.html",
+        "en": "briefings/2026-10-14-en.html"
+      }
     }
   ]
 }

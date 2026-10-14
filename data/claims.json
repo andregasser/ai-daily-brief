@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-10",
+  "updated_at": "2026-10-14",
   "claims": [
     {
       "id": "2026-09-10-kya-joint-framework",
@@ -5482,6 +5482,298 @@
         "Internal evaluation restrictions are not customer-configurable runtime policies; session-linked serving telemetry does not establish safe external actions."
       ],
       "date": "2026-10-10"
+    },
+    {
+      "id": "2026-10-14-7eb6b9941372",
+      "claim": "Meta introduced Muse Wonder and Wonder Full on October 12. Independent reporting places Wonder in the Meta Model API and Muse Code, with Wonder Full restricted to Muse Code subscribers and not served through the API; reported Wonder pricing is $4/$20 per million input/output tokens.",
+      "evidence_state": "reported",
+      "entities": [
+        "Meta",
+        "Muse Wonder",
+        "Muse Wonder Full",
+        "Muse Code"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "TechCrunch launch and pricing report",
+          "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "Axios Wonder API and Muse Code access report",
+          "url": "https://www.axios.com/2026/10/12/meta-new-ai-models-anthropic-openai"
+        }
+      ],
+      "contradictions": [
+        "List pricing does not establish cost per successful task; broader access was not established."
+      ],
+      "date": "2026-10-14"
+    },
+    {
+      "id": "2026-10-14-7b6bd57fc727",
+      "claim": "TechCrunch attributes Muse Wonder benchmark and memory advantages to Meta's own testing; no directly inspected independent evaluation establishes general superiority or validates persistent-memory controls.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Meta",
+        "Muse Wonder"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "independent_reporting_of_vendor_claim",
+          "name": "TechCrunch model testing account",
+          "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/"
+        }
+      ],
+      "contradictions": [
+        "The original announcement's substantive body was unavailable in the supplied excerpt; vendor testing is not independent validation."
+      ],
+      "date": "2026-10-14"
+    },
+    {
+      "id": "2026-10-14-a67afd6775f3",
+      "claim": "NVIDIA's October 13 announcement opens the full Run:ai platform within DSX AI Factory, including independently adoptable KAI Scheduler, GPU Fractioning Operator, KAI Resource Management and Workload Map. Nebius announces Cloud Applications availability and says KAI Scheduler has been open source since April 2025.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "NVIDIA",
+        "Run:ai",
+        "Nebius",
+        "KAI Scheduler"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "NVIDIA platform release",
+          "url": "https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform"
+        },
+        {
+          "role": "primary_ecosystem_announcement",
+          "name": "Nebius platform availability",
+          "url": "https://nebius.com/blog/posts/nvidia-run-ai-open-source-nebius-applications"
+        }
+      ],
+      "contradictions": [
+        "The novelty is broader platform scope, not first-ever open scheduling; partner availability does not independently validate performance benefits."
+      ],
+      "date": "2026-10-14"
+    },
+    {
+      "id": "2026-10-14-db2bcbba120e",
+      "claim": "NGC identifies Apache 2.0 source availability and self-hosted control-plane/cluster components, with no account, subscription or API key required for artifacts. NVIDIA nevertheless requires applicable software-license and product-specific terms for the Community Product; community support and supported commercial offerings are distinct.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "NVIDIA",
+        "NGC",
+        "Run:ai"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "primary_distribution_listing",
+          "name": "NVIDIA NGC Run:ai listing",
+          "url": "https://catalog.ngc.nvidia.com/orgs/nvidia/runai-oss/collections/runai/-"
+        },
+        {
+          "role": "primary_vendor_announcement",
+          "name": "NVIDIA distribution conditions",
+          "url": "https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform"
+        }
+      ],
+      "contradictions": [
+        "The repository, component-level licenses and installation path were not inspected; unrestricted artifact access does not mean absence of distribution terms or prove savings or accelerator portability."
+      ],
+      "date": "2026-10-14"
+    },
+    {
+      "id": "2026-10-14-94319c46839d",
+      "claim": "TheWrap reports Character.AI filed Chapter 11 late October 12 to facilitate an asset sale, with continued operation intended during the process and auction completion expected in late November or early December.",
+      "evidence_state": "reported",
+      "entities": [
+        "Character.AI"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "TheWrap bankruptcy reporting",
+          "url": "https://www.thewrap.com/industry-news/tech/disney-character-ai-chatbot-bankruptcy-deal/"
+        }
+      ],
+      "contradictions": [
+        "The court filing and company release were not directly inspected; no filing-derived financial figures are retained, and expected timing or intended service continuity is not guaranteed."
+      ],
+      "date": "2026-10-14"
+    },
+    {
+      "id": "2026-10-14-f74ed44e5742",
+      "claim": "Disney's proposed $20 million bid concerns a non-exclusive perpetual license to certain Character.AI IP, not a completed acquisition; TheWrap reports competing offers remain possible.",
+      "evidence_state": "reported",
+      "entities": [
+        "Disney",
+        "Character.AI"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "TheWrap transaction description",
+          "url": "https://www.thewrap.com/industry-news/tech/disney-character-ai-chatbot-bankruptcy-deal/"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "404 Media licensing report",
+          "url": "https://www.404media.co/character-ais-bankruptcy-documents-show-the-economics-of-ai-dont-work"
+        }
+      ],
+      "contradictions": [
+        "An IP license does not establish future service operation; one company's bankruptcy does not establish that all AI economics fail."
+      ],
+      "date": "2026-10-14"
+    },
+    {
+      "id": "2026-10-14-3988c2a310fd",
+      "claim": "Anthropic reports approximately 2,500 daily merged changes in May 2026 and more than 30,000 in September, plus seven engineers building Scion, Antique and related systems and completing internal migration from Git in five months.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Anthropic",
+        "Scion",
+        "Antique"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_vendor_engineering_report",
+          "name": "Anthropic source-control redesign",
+          "url": "https://www.anthropic.com/engineering/redesigning-source-control"
+        }
+      ],
+      "contradictions": [
+        "Internal merge counts and deployment claims are not independently audited productivity or quality results; this is not a public software release."
+      ],
+      "date": "2026-10-14"
+    },
+    {
+      "id": "2026-10-14-177150f38b0b",
+      "claim": "Anthropic describes Scion as assuming online clients, moving repository operations to servers and exposing source-control queries through APIs, while explicitly acknowledging its unusual workload and Git's suitability for most repositories.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Anthropic",
+        "Scion",
+        "Git"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_vendor_architectural_description",
+          "name": "Anthropic Scion architecture",
+          "url": "https://www.anthropic.com/engineering/redesigning-source-control"
+        }
+      ],
+      "contradictions": [
+        "A workload-specific architecture does not justify general Git replacement or establish improved delivered outcomes."
+      ],
+      "date": "2026-10-14"
+    },
+    {
+      "id": "2026-10-14-0824c32c80db",
+      "claim": "Google's dated October 13 announcements open Gemini 4 Argon on the paid Gemini API tier, in AI Studio and Antigravity for Google AI Ultra subscribers, and in the Gemini app for Google AI Pro and Ultra subscribers.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Google",
+        "Gemini 4 Argon",
+        "AI Studio",
+        "Google Antigravity"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_availability_announcement",
+          "name": "Google developer access",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/"
+        },
+        {
+          "role": "primary_vendor_availability_announcement",
+          "name": "Google Gemini app access",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/"
+        }
+      ],
+      "contradictions": [
+        "Third-party discovery timing disagreed; the dated primary announcements establish the October 13 access event. Quotas, pricing and regional exceptions were not checked."
+      ],
+      "date": "2026-10-14"
+    },
+    {
+      "id": "2026-10-14-5633a49a6b28",
+      "claim": "Google positions Argon for complex long-horizon workflows, including software engineering, knowledge work and cybersecurity defense, and claims improved reasoning and execution.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Google",
+        "Gemini 4 Argon"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_vendor_capability_announcement",
+          "name": "Google developer model positioning",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/"
+        },
+        {
+          "role": "primary_vendor_capability_announcement",
+          "name": "Google app capability claims",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/"
+        }
+      ],
+      "contradictions": [
+        "These capability claims were not independently reproduced; paid access is not proof of long-horizon reliability."
+      ],
+      "date": "2026-10-14"
+    },
+    {
+      "id": "2026-10-14-a2e80ef135c4",
+      "claim": "Expanded paid model choice, broader open orchestration, Anthropic's internal infrastructure migration and Character.AI's reported restructuring support an early editorial signal that access, throughput and sustainable outcomes require separate assessment.",
+      "evidence_state": "early_signal",
+      "entities": [
+        "Meta",
+        "Google",
+        "NVIDIA",
+        "Anthropic",
+        "Character.AI"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "TechCrunch commercial model access",
+          "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/"
+        },
+        {
+          "role": "primary_vendor_availability_announcement",
+          "name": "Google paid developer access",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/"
+        },
+        {
+          "role": "primary_vendor_announcement",
+          "name": "NVIDIA orchestration opening",
+          "url": "https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform"
+        },
+        {
+          "role": "primary_vendor_engineering_report",
+          "name": "Anthropic infrastructure pressure",
+          "url": "https://www.anthropic.com/engineering/redesigning-source-control"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "TheWrap restructuring report",
+          "url": "https://www.thewrap.com/industry-news/tech/disney-character-ai-chatbot-bankruptcy-deal/"
+        }
+      ],
+      "contradictions": [
+        "This is synthesis, not a measured industry trend or independent proof of productivity gains or universal economic failure."
+      ],
+      "date": "2026-10-14"
     }
   ]
 }

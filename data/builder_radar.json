@@ -192,9 +192,14 @@
           "date": "2026-10-03",
           "note": "Preserve experimental: no mutation-endpoint remediation or local audit results reviewed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Experimental unchanged; no new endpoint-hardening or remediation evidence inspected.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-03"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "builder-nvidia-dynamo-epd",
@@ -244,9 +249,14 @@
           "date": "2026-10-10",
           "note": "Keep trial; session-aware serving evidence does not validate the separate EPD experiment.",
           "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Trial unchanged; no inspected production-style reproduction clears the evaluation gate.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-10"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "builder-deepseek-v41-flash",
@@ -346,9 +356,14 @@
               "url": "https://api-docs.deepseek.com/news/"
             }
           ]
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Watch unchanged; supplied API documentation does not replace alias-migration regression testing.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-10"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "builder-agent-memory-write-gate",
@@ -398,9 +413,14 @@
           "date": "2026-10-10",
           "note": "Keep experimental; external-form incidents do not directly validate persistent-memory write gates.",
           "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Experimental unchanged; Muse marketing does not validate a persistent-memory write gate.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-10"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "builder-agent-registry-poc",
@@ -455,9 +475,14 @@
           "date": "2026-10-01",
           "note": "Experimental unchanged; no interoperability or delegated-authority implementation verified.",
           "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Experimental unchanged; adjacent identity proposals do not establish cross-network interoperability.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-01"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "builder-hermetic-coding-agent-canary",
@@ -510,9 +535,14 @@
           "date": "2026-10-03",
           "note": "Preserve experimental: no canary execution or containment validation occurred.",
           "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Experimental unchanged; source-control scaling evidence does not validate repository isolation.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-03"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "builder-outcome-cost-benchmark-harness",
@@ -586,9 +616,19 @@
               "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review"
             }
           ]
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Trial unchanged; new paid model access expands candidates but supplies no local cost-per-success results.",
+          "sources": [
+            {
+              "label": "Google developer access",
+              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "builder-agent-dual-monitoring",
@@ -635,9 +675,14 @@
           "date": "2026-10-03",
           "note": "Preserve watch: permission changes do not establish dual-layer monitoring coverage.",
           "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "Watch unchanged; no new evidence validates dual-layer incident detection.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-03"
+      "last_reviewed": "2026-10-14"
     },
     {
       "id": "builder-biomolecular-kernel-repro",

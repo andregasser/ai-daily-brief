@@ -14,7 +14,7 @@
         "NVLink Fusion sees little production adoption outside NVIDIA-centric systems",
         "NVIDIA retreats from third-party XPU integration"
       ],
-      "last_reviewed": "2026-10-10",
+      "last_reviewed": "2026-10-14",
       "evidence_updates": [
         {
           "date": "2026-09-09",
@@ -73,6 +73,11 @@
           "date": "2026-10-10",
           "note": "Preserve high confidence; this window supplied no verified third-party accelerator or rack-platform evidence.",
           "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "High confidence unchanged; Run:ai openness concerns orchestration, not demonstrated third-party accelerator participation in NVLink racks.",
+          "sources": []
         }
       ]
     },
@@ -89,7 +94,7 @@
         "Customer-controlled agent telemetry remains a niche or pilot-only feature without meaningful enterprise production adoption",
         "Major providers retreat toward model-only refusals without exposing operational policy controls"
       ],
-      "last_reviewed": "2026-10-10",
+      "last_reviewed": "2026-10-14",
       "evidence_updates": [
         {
           "date": "2026-09-09",
@@ -180,6 +185,11 @@
         {
           "date": "2026-10-10",
           "note": "Preserve high confidence; vendor-internal restrictions are not customer-configurable policies and customer-controlled telemetry.",
+          "sources": []
+        },
+        {
+          "date": "2026-10-14",
+          "note": "High confidence unchanged; infrastructure orchestration is not proof of customer-configurable agent runtime policy plus telemetry.",
           "sources": []
         }
       ]
