@@ -980,6 +980,39 @@
         "de": "briefings/2026-10-14-de.html",
         "en": "briefings/2026-10-14-en.html"
       }
+    },
+    {
+      "id": "shared-context-versus-enforced-policy",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15",
+      "title": {
+        "de": "Gemeinsamer Kontext ist keine durchgesetzte Policy",
+        "en": "Shared context is not enforced policy"
+      },
+      "summary": {
+        "de": "Eine Spezifikation beschreibt, was entstehen soll; ein Kontrollmechanismus entscheidet unabhängig davon, welche Aktionen erlaubt sind und welche Ergebnisse akzeptiert werden.",
+        "en": "A specification describes what should be built; a control mechanism independently decides which actions are permitted and which results are accepted."
+      },
+      "tags": [
+        "context-engineering",
+        "agent-controls",
+        "verification"
+      ],
+      "storylines": [
+        "agent-security",
+        "agent-economics"
+      ],
+      "sources": [
+        "https://www.figma.com/blog/introducing-figma-specs/"
+      ],
+      "related_concepts": [
+        "permission-versus-preference",
+        "typed-decision-models"
+      ],
+      "briefing": {
+        "de": "briefings/2026-10-15-de.html",
+        "en": "briefings/2026-10-15-en.html"
+      }
     }
   ]
 }

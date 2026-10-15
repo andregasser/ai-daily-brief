@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 669.85" role="img" aria-labelledby="title desc">
+<title id="title">Mehr Umsatz, langsameres sequenzielles Wachstum</title><desc id="desc">Wie hat sich Anthropics gemeldeter Quartalsumsatz 2026 verändert? Milliarden US-Dollar pro Quartal: Q1 2026 4,7; Q2 2026 11,6; Q3 2026 16,8. Q3 liegt deutlich über Q2, aber der relative Zuwachs ist kleiner als beim Sprung von Q1 auf Q2. Gleiche Basis: gemeldeter Umsatz je Quartal, nicht annualisierte Run-Rate. Laut BBC privat gegenüber Investoren präsentierte Zahlen; keine geprüften öffentlichen Abschlüsse und kein Margennachweis.</desc>
+<rect width="480" height="669.85" fill="#fffdf8"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="28" y="32" font-size="13" fill="#16786d" font-weight="700" text-anchor="start">DATENVERGLEICH</text>
+<text x="28" y="68" font-size="27" fill="#233548" font-weight="700" text-anchor="start">Mehr Umsatz, langsameres</text>
+<text x="28" y="104.45" font-size="27" fill="#233548" font-weight="700" text-anchor="start">sequenzielles Wachstum</text>
+<text x="28" y="155.9" font-size="17" fill="#64748b" font-weight="400" text-anchor="start">Milliarden US-Dollar pro Quartal</text>
+<path d="M28 193.85 L28 464.85" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="28" y="489.85" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">0</text>
+<path d="M125.5 193.85 L125.5 464.85" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="125.5" y="489.85" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">4,2</text>
+<path d="M223 193.85 L223 464.85" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="223" y="489.85" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">8,4</text>
+<path d="M320.5 193.85 L320.5 464.85" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="320.5" y="489.85" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">12,6</text>
+<path d="M418 193.85 L418 464.85" stroke="#dce3e9" stroke-width="1" fill="none"/>
+<text x="418" y="489.85" font-size="15" fill="#64748b" font-weight="400" text-anchor="middle">16,8</text>
+<text x="28" y="213.85" font-size="21" fill="#233548" font-weight="600" text-anchor="start">Q1 2026</text>
+<rect class="data-bar" data-value="4.7" x="28" y="247.2" width="109.107" height="19" rx="2" fill="#8b9bb0"/>
+<text x="450" y="213.85" font-size="24" fill="#8b9bb0" font-weight="700" text-anchor="end">4,7</text>
+<text x="28" y="305.85" font-size="21" fill="#233548" font-weight="600" text-anchor="start">Q2 2026</text>
+<rect class="data-bar" data-value="11.6" x="28" y="339.2" width="269.286" height="19" rx="2" fill="#8b9bb0"/>
+<text x="450" y="305.85" font-size="24" fill="#8b9bb0" font-weight="700" text-anchor="end">11,6</text>
+<text x="28" y="397.85" font-size="21" fill="#233548" font-weight="600" text-anchor="start">Q3 2026</text>
+<rect class="data-bar" data-value="16.8" x="28" y="431.2" width="390" height="19" rx="2" fill="#16786d"/>
+<text x="450" y="397.85" font-size="24" fill="#16786d" font-weight="700" text-anchor="end">16,8</text>
+<path d="M28 529.85 L452 529.85" stroke="#16786d" stroke-width="2" fill="none"/>
+<text x="28" y="562.85" font-size="20" fill="#233548" font-weight="600" text-anchor="start">Q3 liegt deutlich über Q2, aber der</text>
+<text x="28" y="589.85" font-size="20" fill="#233548" font-weight="600" text-anchor="start">relative Zuwachs ist kleiner als</text>
+<text x="28" y="616.85" font-size="20" fill="#233548" font-weight="600" text-anchor="start">beim Sprung von Q1 auf Q2.</text>
+</g></svg>

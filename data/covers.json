@@ -165,5 +165,15 @@
       "de": "Meta und Google erweitern die bezahlte Modellauswahl, NVIDIA öffnet Run:ai, Anthropic baut die Versionsverwaltung um und Character.AI meldet Chapter 11 an. Die gemeinsame Frage: Was wird tatsächlich zuverlässiger, lieferbar und wirtschaftlich tragfähig?",
       "en": "Meta and Google expand paid model choice, NVIDIA opens Run:ai, Anthropic redesigns source control and Character.AI files for Chapter 11. The common question: what actually becomes more reliable, deliverable and economically sustainable?"
     }
+  },
+  "2026-10-15": {
+    "kicker": {
+      "de": "Die Leitgeschichte",
+      "en": "The lead story"
+    },
+    "deck": {
+      "de": "Anthropics gemeldeter Quartalsumsatz erreicht 16,8 Milliarden Dollar, während Infrastrukturaktien fallen. Figma bündelt Agentenkontext; Ai2 erweitert seine Klimasimulation. Entscheidend bleibt, welche Art von Fortschritt tatsächlich belegt ist.",
+      "en": "Anthropic’s reported quarterly revenue reaches $16.8 billion as infrastructure shares fall. Figma consolidates agent context; Ai2 broadens its climate simulation. The decisive question remains which kind of progress the evidence actually establishes."
+    }
   }
 }

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "anthropic-quarterly-revenue",
+    "target": "story-1",
+    "title": {
+      "de": "Mehr Umsatz, langsameres sequenzielles Wachstum",
+      "en": "More revenue, slower sequential growth"
+    },
+    "question": {
+      "de": "Wie hat sich Anthropics gemeldeter Quartalsumsatz 2026 verändert?",
+      "en": "How has Anthropic’s reported quarterly revenue changed in 2026?"
+    },
+    "caption": {
+      "de": "Gleiche Basis: gemeldeter Umsatz je Quartal, nicht annualisierte Run-Rate. Laut BBC privat gegenüber Investoren präsentierte Zahlen; keine geprüften öffentlichen Abschlüsse und kein Margennachweis.",
+      "en": "Same basis: reported revenue per quarter, not annualised run rate. Figures privately presented to investors according to the BBC; not audited public accounts or evidence of margins."
+    },
+    "takeaway": {
+      "de": "Q3 liegt deutlich über Q2, aber der relative Zuwachs ist kleiner als beim Sprung von Q1 auf Q2.",
+      "en": "Q3 is substantially above Q2, but the relative increase is smaller than the jump from Q1 to Q2."
+    },
+    "sources": [
+      {
+        "label": "BBC: quarterly revenue figures",
+        "url": "https://www.bbc.co.uk/news/articles/cqzjx448vxkgo?at_medium=RSS&at_campaign=rss"
+      }
+    ],
+    "kind": "bars",
+    "unit": {
+      "de": "Milliarden US-Dollar pro Quartal",
+      "en": "US$ billion per quarter"
+    },
+    "items": [
+      {
+        "label": {
+          "de": "Q1 2026",
+          "en": "Q1 2026"
+        },
+        "value": 4.7
+      },
+      {
+        "label": {
+          "de": "Q2 2026",
+          "en": "Q2 2026"
+        },
+        "value": 11.6
+      },
+      {
+        "label": {
+          "de": "Q3 2026",
+          "en": "Q3 2026"
+        },
+        "value": 16.8
+      }
+    ]
+  }
+]

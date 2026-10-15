@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-14",
+  "updated_at": "2026-10-15",
   "predictions": [
     {
       "id": "pred-kya-interoperability-2026-10",
@@ -67,9 +67,14 @@
               "url": "https://agenticfinanceprotocol.org/know-your-agent"
             }
           ]
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Open unchanged: searches surfaced unrelated KYA implementations but did not establish an implementable deliverable from the watched cross-network initiative by October 15.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-14"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "pred-deepseek-v41-evidence-2026-09",
@@ -135,9 +140,14 @@
           "date": "2026-10-14",
           "note": "Falsified unchanged; no new inspected comparative task-economics evidence warrants reopening.",
           "sources": []
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Falsified unchanged: supplied API documentation adds no independent comparative task-success, latency or cost evaluation.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-14"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "pred-china-hbm-pricing-q4",
@@ -243,9 +253,14 @@
               "url": "https://arxiv.org/abs/2601.11590"
             }
           ]
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Open unchanged: retrieved EPD papers and commentary did not establish reproduction of the watched NVIDIA benefits on real multimodal workloads.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-14"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "pred-us-duty-of-care-draft-2026-09",
@@ -347,9 +362,14 @@
               "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-29/pdf/CREC-2026-09-29-senate.pdf"
             }
           ]
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Open unchanged and overdue: this limited review did not resolve publication, substantive draft details or documented slippage.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-14"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "pred-openai-misalignment-disclosure-2026-10",
@@ -387,9 +407,14 @@
           "date": "2026-10-14",
           "note": "Confirmed unchanged; no relevant new evidence was inspected.",
           "sources": []
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Confirmed unchanged; no relevant contrary evidence was established.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-14"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "pred-uae-ai-resilience-plan-2026-10",
@@ -509,9 +534,14 @@
           "date": "2026-10-14",
           "note": "Confirmed unchanged; new searches supplied no material operational update.",
           "sources": []
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Confirmed unchanged; Apollo's newly discovered pilot account warrants follow-up but was not inspected sufficiently to revise governance conclusions.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-14"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "pred-sglang-cve-remediation-2026-09",
@@ -589,9 +619,14 @@
           "date": "2026-10-14",
           "note": "Falsified unchanged; official remediation was not reverified in this run.",
           "sources": []
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Falsified unchanged; no new official remediation evidence was reviewed.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-14"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "pred-deepseek-alias-regression-2026-09",
@@ -668,9 +703,14 @@
               "url": "https://api-docs.deepseek.com/news/"
             }
           ]
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Falsified unchanged: supplied documentation does not establish measured alias-regression effects or clearer resolved-model telemetry.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-14"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "pred-frontier-pacing-operationalization-2026-09",
@@ -813,9 +853,14 @@
           "date": "2026-10-14",
           "note": "Progress unchanged; inspected evidence does not support a further status change.",
           "sources": []
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Progress unchanged; no newly verified release gate or evaluator-governance mechanism supports an upgrade.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-14"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "pred-anthropic-evaluator-governance-2026-10",
@@ -883,9 +928,14 @@
           "date": "2026-10-14",
           "note": "Open unchanged and overdue since October 10; targeted searches did not establish additional evaluator identities or governance rights.",
           "sources": []
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Open unchanged and overdue; no verified additional evaluator or operational governance disclosure was established.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-14"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "pred-agentcore-v2-production-repro-2026-10",
@@ -1599,6 +1649,56 @@
       "confidence": "medium",
       "id": "pred-2026-10-14-1dfac6b8e740",
       "created": "2026-10-14",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "Anthropic will begin public stock-market trading by 2026-12-31.",
+      "review_after": "2027-01-04",
+      "confirmation_criteria": [
+        "An official exchange or issuer notice establishes that public trading in Anthropic shares began on or before 2026-12-31."
+      ],
+      "falsification_criteria": [
+        "An official issuer or exchange statement postpones the listing beyond 2026-12-31 or cancels it.",
+        "A definitive post-year-end issuer statement establishes that no public trading began by the deadline; missing coverage alone is inconclusive."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-15-f7bc1dfa1a26",
+      "created": "2026-10-15",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-15, Figma will publicly confirm completion of the staged Specs open-beta rollout to eligible paid-plan accounts.",
+      "review_after": "2026-11-16",
+      "confirmation_criteria": [
+        "An official Figma announcement or help-page update dated on or before 2026-11-15 explicitly states that the Specs open beta is available to all eligible paid-plan accounts, rather than still rolling out in stages.",
+        "Documentation of the MCP handoff or access for individual accounts alone does not qualify."
+      ],
+      "falsification_criteria": [
+        "An official Figma update explicitly states that the staged rollout will continue beyond 2026-11-15 or postpones completion beyond that date.",
+        "An official status statement at the deadline confirms that otherwise eligible paid-plan accounts are still awaiting rollout access; missing updates or limited retrieval alone are inconclusive."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-15-bddbac30b40e",
+      "created": "2026-10-15",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-12-15, at least one non-Ai2 evaluation will report a positive reproduction of HiRO-ACEv2's regional extreme-event fidelity and lower generation cost against a named high-resolution simulation baseline.",
+      "review_after": "2026-12-16",
+      "confirmation_criteria": [
+        "A non-Ai2 report identifies the model version, region, extreme-event metric, reference simulation and compute-cost basis, and reports both acceptable fidelity under its stated tolerance and lower cost.",
+        "The report contains its own measurements rather than repeating Ai2's claims or presenting visual examples alone."
+      ],
+      "falsification_criteria": [
+        "A qualified independent reproduction published by the deadline finds that either its stated extreme-event fidelity tolerance is missed or generation is not cheaper on its documented comparable basis, with no qualifying positive reproduction established.",
+        "An independent evaluator documents that the required artifacts cannot be obtained or executed through the deadline; absence of a report or limited search coverage alone is inconclusive."
+      ],
+      "confidence": "low",
+      "id": "pred-2026-10-15-93703c977aef",
+      "created": "2026-10-15",
       "status": "open",
       "evidence": []
     }

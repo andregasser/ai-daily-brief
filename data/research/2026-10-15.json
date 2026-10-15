@@ -1,0 +1,1084 @@
+{
+  "claims": [
+    {
+      "id": "2026-10-15-13fb30bddf5d",
+      "claim": "BBC reports Anthropic privately presented Q1/Q2/Q3 2026 revenue of $4.7bn/$11.6bn/$16.8bn, with Q3 up 45% sequentially; sequential growth slowed. These are not audited public filings, and Anthropic declined comment.",
+      "evidence_state": "reported",
+      "entities": [
+        "Anthropic",
+        "BBC"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "BBC investor-briefing report",
+          "url": "https://www.bbc.co.uk/news/articles/cqzjx448vxkgo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "contradictions": [
+        "No audited financial statements supplied; reported revenue growth does not establish durable margins."
+      ]
+    },
+    {
+      "id": "2026-10-15-f64bbd1b630c",
+      "claim": "BBC expects an Anthropic listing before year-end and attributes a second consecutive profitable quarter to other reporting; neither a firm November date nor an unadjusted profitability measure is established.",
+      "evidence_state": "reported",
+      "entities": [
+        "Anthropic",
+        "BBC"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "BBC",
+          "url": "https://www.bbc.co.uk/news/articles/cqzjx448vxkgo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "contradictions": [
+        "Expected timing is not a confirmed listing date; the profit measure is not established as unadjusted."
+      ]
+    },
+    {
+      "id": "2026-10-15-8faf1e083b31",
+      "claim": "Guardian reports Kospi 200 closing down 8.1%, SK Hynix nearly 11%, Samsung 9.5% and Nikkei 4.9% on October 15; BBC corroborates broad declines and temporary South Korean trading halts.",
+      "evidence_state": "reported",
+      "entities": [
+        "Kospi 200",
+        "SK Hynix",
+        "Samsung",
+        "Nikkei"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Guardian market report",
+          "url": "https://www.theguardian.com/business/2026/oct/15/tech-market-sell-off-deepens-amid-fears-over-us-inflation-and-ai-debt"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "BBC corroboration",
+          "url": "https://www.bbc.co.uk/news/articles/cqzjx448vxkgo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "contradictions": [
+        "Session moves are reported rather than independently retrieved exchange data; supplied Guardian text is truncated."
+      ]
+    },
+    {
+      "id": "2026-10-15-6220c5ee7598",
+      "claim": "Guardian and BBC connect the sell-off with AI-spending concerns and unexpectedly high September US inflation; Guardian reports inflation at 3.7%. This attribution does not establish declining AI demand or infrastructure utilisation.",
+      "evidence_state": "reported",
+      "entities": [
+        "AI infrastructure",
+        "US inflation"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Guardian",
+          "url": "https://www.theguardian.com/business/2026/oct/15/tech-market-sell-off-deepens-amid-fears-over-us-inflation-and-ai-debt"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "BBC",
+          "url": "https://www.bbc.co.uk/news/articles/cqzjx448vxkgo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "contradictions": [
+        "Anthropic's reported revenue expansion is counterevidence to a simple demand-collapse interpretation; market causation remains interpretive."
+      ]
+    },
+    {
+      "id": "2026-10-15-ac6f918a1573",
+      "claim": "Figma announces Specs combining Markdown, canvas references, diagrams, designs and code layers, with context passed to coding agents through its MCP server.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Figma",
+        "Specs",
+        "MCP"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_product_announcement",
+          "name": "Figma Specs announcement",
+          "url": "https://www.figma.com/blog/introducing-figma-specs/"
+        }
+      ],
+      "contradictions": [
+        "Official search-returned article text was available, but subsequent direct opening failed; no hands-on validation or adherence measurement was performed."
+      ]
+    },
+    {
+      "id": "2026-10-15-8818c874cf08",
+      "claim": "Figma says Specs begins rolling out in open beta on October 15 to paid plans on web, desktop and mobile; rollout does not establish universal immediate access.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Figma",
+        "Specs"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_product_announcement",
+          "name": "Figma availability statement",
+          "url": "https://www.figma.com/blog/introducing-figma-specs/"
+        }
+      ],
+      "contradictions": [
+        "Improved productivity and implementation fidelity remain unmeasured; shared instructions do not establish runtime enforcement."
+      ]
+    },
+    {
+      "id": "2026-10-15-516c9b5323f9",
+      "claim": "Ai2's October 14 Hugging Face announcement describes HiRO-ACEv2 combining approximately 100 km ACE simulation with global 3 km HiRO outputs, adding wind and pressure to rainfall, and linking models, paper, tutorials and demo.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Ai2",
+        "HiRO-ACEv2",
+        "ACE",
+        "HiROv2"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_research_announcement",
+          "name": "Ai2 announcement",
+          "url": "https://allenai.org/blog/hiro-acev2"
+        },
+        {
+          "role": "primary_research_announcement",
+          "name": "Ai2 Hugging Face post",
+          "url": "https://huggingface.co/blog/allenai/hiro-acev2"
+        }
+      ],
+      "contradictions": [
+        "First artifact availability and the original announcement's exact timestamp remain unresolved; architecture announcement is not independent scientific validation."
+      ]
+    },
+    {
+      "id": "2026-10-15-aa21c3a34495",
+      "claim": "Ai2 claims global 3 km climate data at about 1/300th of X-SHiELD's cost and, with coarsened X-SHiELD inputs, target high-resolution statistics within 3% even for events occurring once per million data points.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Ai2",
+        "HiRO-ACEv2",
+        "HiROv2",
+        "X-SHiELD"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_research_announcement",
+          "name": "Ai2 cost comparison",
+          "url": "https://allenai.org/blog/hiro-acev2"
+        },
+        {
+          "role": "primary_research_announcement",
+          "name": "Ai2 evaluation description",
+          "url": "https://huggingface.co/blog/allenai/hiro-acev2"
+        }
+      ],
+      "contradictions": [
+        "Cost comparability, independent reproduction and licensing were not checked; simulation fidelity is not demonstrated real-world forecast accuracy."
+      ]
+    },
+    {
+      "id": "2026-10-15-5e6d0cad99a9",
+      "claim": "Ai2 reports residual hurricane-eye wind/pressure asymmetry and says HiRO currently requires ACE tuned to X-SHiELD, cannot yet produce other climates such as warmer futures or ERA5 historical data, and plans training on a world 4°C warmer.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Ai2",
+        "HiROv2",
+        "ACE",
+        "X-SHiELD",
+        "ERA5"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_research_announcement",
+          "name": "Ai2 stated limitations and roadmap",
+          "url": "https://huggingface.co/blog/allenai/hiro-acev2"
+        }
+      ],
+      "contradictions": [
+        "The 4°C extension is planned, not an available capability; operational weather forecasting is not demonstrated."
+      ]
+    },
+    {
+      "id": "2026-10-15-ba1a441060ce",
+      "claim": "Figma's shared context object supports intent communication but does not by itself demonstrate permission enforcement, output correctness or customer-configurable runtime controls; the concept's workflow and form example are illustrative recommendations.",
+      "evidence_state": "early_signal",
+      "entities": [
+        "Figma",
+        "Specs",
+        "coding agents"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_product_announcement",
+          "name": "Figma Specs announcement",
+          "url": "https://www.figma.com/blog/introducing-figma-specs/"
+        }
+      ],
+      "contradictions": [
+        "No evaluated reliability gain or validated control mechanism is supplied; the recommended version-pinning workflow is not asserted as a confirmed Specs feature."
+      ]
+    }
+  ],
+  "date": "2026-10-15",
+  "source_coverage": {
+    "catalog_sources": 74,
+    "feed_sources": 61,
+    "successful_feeds": 57,
+    "failed_feeds": [
+      {
+        "source": "Google DeepMind",
+        "feed": "https://deepmind.google/blog/rss.xml",
+        "error": "ParseError: not well-formed (invalid token): line 1, column 0"
+      },
+      {
+        "source": "SemiAnalysis",
+        "feed": "https://newsletter.semianalysis.com/feed",
+        "error": "ParseError: unclosed CDATA section: line 108, column 125965"
+      },
+      {
+        "source": "Don't Worry About the Vase",
+        "feed": "https://thezvi.substack.com/feed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      },
+      {
+        "source": "Marcus on AI",
+        "feed": "https://garymarcus.substack.com/feed",
+        "error": "HTTPError: HTTP Error 403: Forbidden"
+      }
+    ],
+    "observations": [
+      {
+        "source": "OpenAI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Anthropic",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "Google DeepMind",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Google AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "AWS Machine Learning",
+        "status": "ok",
+        "items_seen": 4
+      },
+      {
+        "source": "NVIDIA AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Hugging Face",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Mistral AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "arXiv AI",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "arXiv Machine Learning",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "Google Research Blog",
+        "status": "ok",
+        "items_seen": 3
+      },
+      {
+        "source": "Microsoft Research",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Meta Engineering",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "NVIDIA Blog",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "NVIDIA Developer Blog",
+        "status": "ok",
+        "items_seen": 3
+      },
+      {
+        "source": "TechCrunch AI",
+        "status": "ok",
+        "items_seen": 12
+      },
+      {
+        "source": "The Verge AI",
+        "status": "ok",
+        "items_seen": 9
+      },
+      {
+        "source": "Ars Technica AI",
+        "status": "ok",
+        "items_seen": 5
+      },
+      {
+        "source": "MIT Technology Review AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "IEEE Spectrum AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Wired AI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "VentureBeat AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "The Guardian AI",
+        "status": "ok",
+        "items_seen": 11
+      },
+      {
+        "source": "Financial Times AI",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "404 Media",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Platformer",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "CNBC Technology",
+        "status": "ok",
+        "items_seen": 15
+      },
+      {
+        "source": "BBC Technology",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "NYT Technology",
+        "status": "ok",
+        "items_seen": 8
+      },
+      {
+        "source": "Simon Willison",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Interconnects",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "SemiAnalysis",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Latent Space",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Import AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "One Useful Thing",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Understanding AI",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "AI Snake Oil",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Don't Worry About the Vase",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "Marcus on AI",
+        "status": "error",
+        "items_seen": 0
+      },
+      {
+        "source": "ChinaTalk",
+        "status": "ok",
+        "items_seen": 1
+      },
+      {
+        "source": "Ahead of AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Lil'Log",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Andrej Karpathy",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "LessWrong",
+        "status": "ok",
+        "items_seen": 10
+      },
+      {
+        "source": "TLDR AI",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "arXiv Computational Linguistics",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "HF Daily Papers",
+        "status": "ok",
+        "items_seen": 18
+      },
+      {
+        "source": "MIT News AI",
+        "status": "ok",
+        "items_seen": 2
+      },
+      {
+        "source": "Synced Review",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "r/LocalLLaMA",
+        "status": "ok",
+        "items_seen": 25
+      },
+      {
+        "source": "Hacker News AI 100+ points",
+        "status": "ok",
+        "items_seen": 8
+      },
+      {
+        "source": "AWS Machine Learning Blog",
+        "status": "ok",
+        "items_seen": 4
+      },
+      {
+        "source": "Azure Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "GitHub Blog AI and ML",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "PyTorch Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "Ollama Blog",
+        "status": "ok",
+        "items_seen": 0
+      },
+      {
+        "source": "THE DECODER DE",
+        "status": "ok",
+        "items_seen": 6
+      },
+      {
+        "source": "THE DECODER EN",
+        "status": "ok",
+        "items_seen": 6
+      },
+      {
+        "source": "heise online",
+        "status": "ok",
+        "items_seen": 40
+      },
+      {
+        "source": "t3n",
+        "status": "ok",
+        "items_seen": 20
+      },
+      {
+        "source": "Google News DE/CH AI",
+        "status": "ok",
+        "items_seen": 40
+      }
+    ]
+  },
+  "coverage_gaps": [
+    "Three web calls used; some opened pages yielded only narrow passages, not full checks.",
+    "DeepMind, SemiAnalysis and two commentary feeds failed; Reuters and Artificial Analysis supplied checks also failed.",
+    "No independent new-model benchmark, local-inference release confirmation or production agent-reliability test established.",
+    "KYA, overdue governance predictions and EPD reproduction remain unresolved, not disproven.",
+    "HiRO announcement timing and first artifact availability need reconciliation before asserting a newly available release."
+  ],
+  "continuity_reviews": [
+    {
+      "kind": "prediction",
+      "id": "pred-kya-interoperability-2026-10",
+      "assessment": "Open unchanged: searches surfaced unrelated KYA implementations but did not establish an implementable deliverable from the watched cross-network initiative by October 15.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-deepseek-v41-evidence-2026-09",
+      "assessment": "Falsified unchanged: supplied API documentation adds no independent comparative task-success, latency or cost evaluation.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-epd-independent-evidence-2026-10",
+      "assessment": "Open unchanged: retrieved EPD papers and commentary did not establish reproduction of the watched NVIDIA benefits on real multimodal workloads.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-us-duty-of-care-draft-2026-09",
+      "assessment": "Open unchanged and overdue: this limited review did not resolve publication, substantive draft details or documented slippage.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-openai-misalignment-disclosure-2026-10",
+      "assessment": "Confirmed unchanged; no relevant contrary evidence was established.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-embedded-evaluator-details-2026-09",
+      "assessment": "Confirmed unchanged; Apollo's newly discovered pilot account warrants follow-up but was not inspected sufficiently to revise governance conclusions.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-sglang-cve-remediation-2026-09",
+      "assessment": "Falsified unchanged; no new official remediation evidence was reviewed.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-deepseek-alias-regression-2026-09",
+      "assessment": "Falsified unchanged: supplied documentation does not establish measured alias-regression effects or clearer resolved-model telemetry.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-frontier-pacing-operationalization-2026-09",
+      "assessment": "Progress unchanged; no newly verified release gate or evaluator-governance mechanism supports an upgrade.",
+      "sources": []
+    },
+    {
+      "kind": "prediction",
+      "id": "pred-anthropic-evaluator-governance-2026-10",
+      "assessment": "Open unchanged and overdue; no verified additional evaluator or operational governance disclosure was established.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-authority-boundary-suite",
+      "assessment": "Trial unchanged; no reviewed evidence validates the suite's effectiveness.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-inference-admin-hardening",
+      "assessment": "Experimental unchanged; no new remediation or endpoint-audit evidence was reviewed.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-nvidia-dynamo-epd",
+      "assessment": "Trial unchanged pending workload-matched independent measurements.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-deepseek-v41-flash",
+      "assessment": "Watch unchanged pending reproducible migration and outcome-cost comparisons.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agent-memory-write-gate",
+      "assessment": "Experimental unchanged; shared editable specifications do not validate persistent-memory write controls.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-agent-registry-poc",
+      "assessment": "Experimental unchanged; unrelated identity projects do not establish interoperability for this registry.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-hermetic-coding-agent-canary",
+      "assessment": "Experimental unchanged; the dated NVIDIA announcement supplies no new canary validation.",
+      "sources": []
+    },
+    {
+      "kind": "builder",
+      "id": "builder-outcome-cost-benchmark-harness",
+      "assessment": "Trial unchanged; today's commercial and simulation-cost claims do not substitute for pinned outcome measurements.",
+      "sources": []
+    },
+    {
+      "kind": "thesis",
+      "id": "nvidia-rack-platform",
+      "assessment": "High confidence unchanged; no new verified third-party accelerator integration evidence was reviewed.",
+      "sources": []
+    },
+    {
+      "kind": "thesis",
+      "id": "enterprise-agent-control-plane",
+      "assessment": "High confidence unchanged; Figma adds shared context, not demonstrated customer-configurable runtime enforcement and telemetry.",
+      "sources": []
+    }
+  ],
+  "selection": {
+    "selected_stories": 4,
+    "rejections": [
+      {
+        "title": "NVIDIA Open Agent Safety Platform",
+        "reason": "Primary launch evidence dates to September 28; the October 14 feed item does not establish a material new release."
+      },
+      {
+        "title": "The Silent Failures in Agentic Data Science",
+        "reason": "arXiv records submission on October 9, despite October 15 feed placement; no new revision established."
+      },
+      {
+        "title": "Amp beyond coding",
+        "reason": "Dated customer case study, but inspected excerpts do not establish a new launch or independently measured outcome."
+      },
+      {
+        "title": "AWS self-improving document processing",
+        "reason": "Tutorial discovery without a verified new product milestone; retrieved passages were insufficient."
+      },
+      {
+        "title": "AI agent allegedly deleted a TV season",
+        "reason": "Supplied article reports TV4 explicitly rejecting autonomous-agent causation and attributing the loss to human and backup-system factors."
+      },
+      {
+        "title": "Apollo red-teaming Codex auto-review",
+        "reason": "Potentially material October 14 firsthand account, but only a search excerpt was retrieved; findings and access boundaries remain unchecked."
+      },
+      {
+        "title": "Fish Drama 3",
+        "reason": "Community discovery only; release, license and performance unconfirmed."
+      },
+      {
+        "title": "StepFun Step-5-Preview",
+        "reason": "Community discovery only; architecture, availability and claimed performance unconfirmed."
+      }
+    ]
+  },
+  "counterevidence": [
+    {
+      "story_id": "2026-10-15-anthropic-investor-revenue",
+      "assessment": "Revenue growth alone does not establish durable margins or the ability to finance future infrastructure."
+    },
+    {
+      "story_id": "2026-10-15-ai-infrastructure-selloff",
+      "assessment": "Anthropic's reported revenue expansion argues against equating falling valuations with collapsing customer demand."
+    },
+    {
+      "story_id": "2026-10-15-figma-specs",
+      "assessment": "A specification supplies instructions; it does not enforce compliance or replace output review."
+    },
+    {
+      "story_id": "2026-10-15-hiro-acev2",
+      "assessment": "Climate emulation is not demonstrated operational weather forecasting, and lower computation cost does not establish real-world predictive accuracy."
+    }
+  ],
+  "watch_hits": [
+    "Agent context engineering: Figma Specs",
+    "Enterprise AI economics: Anthropic revenue and infrastructure-financing sensitivity",
+    "Efficient scientific models: HiRO-ACEv2",
+    "Agent incident attribution: TV4 denial contradicts deletion headline"
+  ],
+  "builder_actions": [
+    {
+      "story_id": "2026-10-15-anthropic-investor-revenue",
+      "action": "Separate provider revenue momentum from audited profitability and operational dependency risk."
+    },
+    {
+      "story_id": "2026-10-15-ai-infrastructure-selloff",
+      "action": "Review infrastructure commitments and supplier concentration without treating share prices as workload-demand measurements."
+    },
+    {
+      "story_id": "2026-10-15-figma-specs",
+      "action": "Trial one reviewed specification-to-code handoff and measure omissions, rework and context freshness."
+    },
+    {
+      "story_id": "2026-10-15-hiro-acev2",
+      "action": "Inspect the linked evaluation and compare regional extreme-event statistics before considering applied use."
+    }
+  ],
+  "visual_provenance": [
+    {
+      "id": "anthropic-quarterly-revenue",
+      "class": "data-visualization",
+      "basis": {
+        "de": "Gleiche Basis: gemeldeter Umsatz je Quartal, nicht annualisierte Run-Rate. Laut BBC privat gegenüber Investoren präsentierte Zahlen; keine geprüften öffentlichen Abschlüsse und kein Margennachweis.",
+        "en": "Same basis: reported revenue per quarter, not annualised run rate. Figures privately presented to investors according to the BBC; not audited public accounts or evidence of margins."
+      },
+      "sources": [
+        {
+          "label": "BBC: quarterly revenue figures",
+          "url": "https://www.bbc.co.uk/news/articles/cqzjx448vxkgo?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    }
+  ],
+  "retrieval": [
+    {
+      "url": "https://news.bensbites.com/",
+      "source": "Ben's Bites News",
+      "status": "ok",
+      "final_url": "https://www.bensbites.com/",
+      "truncated": false,
+      "elapsed_seconds": 0.175
+    },
+    {
+      "url": "https://bensbites.com/",
+      "source": "Ben's Bites",
+      "status": "ok",
+      "final_url": "https://www.bensbites.com/",
+      "truncated": false,
+      "elapsed_seconds": 0.165
+    },
+    {
+      "url": "https://aiweekly.co/",
+      "source": "AI Weekly",
+      "status": "ok",
+      "final_url": "https://aiweekly.co/",
+      "truncated": true,
+      "elapsed_seconds": 0.291
+    },
+    {
+      "url": "https://ai.meta.com/blog/",
+      "source": "Meta AI",
+      "status": "ok",
+      "final_url": "https://ai.meta.com/blog/",
+      "truncated": false,
+      "elapsed_seconds": 1.734
+    },
+    {
+      "url": "https://research.meta.ai/",
+      "source": "Meta AI Research",
+      "status": "ok",
+      "final_url": "https://research.meta.ai/",
+      "truncated": false,
+      "elapsed_seconds": 0.252
+    },
+    {
+      "url": "https://blogs.microsoft.com/ai/",
+      "source": "Microsoft AI",
+      "status": "ok",
+      "final_url": "https://news.microsoft.com/source/topics/ai/",
+      "truncated": false,
+      "elapsed_seconds": 0.39
+    },
+    {
+      "url": "https://api-docs.deepseek.com/news/",
+      "source": "DeepSeek",
+      "status": "ok",
+      "final_url": "https://api-docs.deepseek.com/news/",
+      "truncated": false,
+      "elapsed_seconds": 0.586
+    },
+    {
+      "url": "https://www.worldlabs.ai/blog",
+      "source": "World Labs",
+      "status": "ok",
+      "final_url": "https://www.worldlabs.ai/blog",
+      "truncated": false,
+      "elapsed_seconds": 0.408
+    },
+    {
+      "url": "https://www.reuters.com/technology/artificial-intelligence/",
+      "source": "Reuters AI",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.268
+    },
+    {
+      "url": "https://artificialanalysis.ai/",
+      "source": "Artificial Analysis",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.328
+    },
+    {
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence",
+      "source": "European Commission Digital Strategy",
+      "status": "ok",
+      "final_url": "https://digital-strategy.ec.europa.eu/en/policies/artificial-intelligence",
+      "truncated": true,
+      "elapsed_seconds": 0.354
+    },
+    {
+      "url": "https://www.aisi.gov.uk/",
+      "source": "UK AI Security Institute",
+      "status": "ok",
+      "final_url": "https://www.aisi.gov.uk/",
+      "truncated": false,
+      "elapsed_seconds": 0.157
+    },
+    {
+      "url": "https://www.heise.de/ratgeber/Sechs-Mini-PCs-im-Test-Wer-bei-KI-Tempo-und-Verbrauch-punktet-11422377.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
+      "source": "heise online",
+      "status": "ok",
+      "final_url": "https://www.heise.de/ratgeber/Sechs-Mini-PCs-im-Test-Wer-bei-KI-Tempo-und-Verbrauch-punktet-11422377.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
+      "truncated": true,
+      "elapsed_seconds": 0.922
+    },
+    {
+      "url": "https://t3n.de/news/wenige-wochen-vor-der-premiere-ki-agent-soll-ganze-staffel-einer-tv-serie-geloescht-haben-1768359",
+      "source": "t3n",
+      "status": "ok",
+      "final_url": "https://t3n.de/news/wenige-wochen-vor-der-premiere-ki-agent-soll-ganze-staffel-einer-tv-serie-geloescht-haben-1768359/",
+      "truncated": false,
+      "elapsed_seconds": 0.528
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1XOThKQXA3VHU0d3ZFS3lZVUJwbXBaYk5OSU16OFBGNkV4SG00ZVUyYWM5MjVLMkVDbXRGMlY0TVIxd1ltRVg2R01LVktmMlhoRnFsSmRrSU04RGt2QXBka0NoOA?oc=5",
+      "source": "Google News DE/CH AI",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.185
+    },
+    {
+      "url": "https://the-decoder.de/anthropic-vor-dem-boersengang-enormes-umsatzwachstum-mit-anzeichen-fuer-verlangsamung",
+      "source": "THE DECODER DE",
+      "status": "ok",
+      "final_url": "https://the-decoder.de/anthropic-vor-dem-boersengang-enormes-umsatzwachstum-mit-anzeichen-fuer-verlangsamung/",
+      "truncated": true,
+      "elapsed_seconds": 1.68
+    },
+    {
+      "url": "https://www.nytimes.com/2026/10/15/style/ai-parenting-motherhood-ollie-fambot.html",
+      "source": "NYT Technology",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.093
+    },
+    {
+      "url": "https://www.theguardian.com/business/2026/oct/15/tech-market-sell-off-deepens-amid-fears-over-us-inflation-and-ai-debt",
+      "source": "The Guardian AI",
+      "status": "ok",
+      "final_url": "https://www.theguardian.com/business/2026/oct/15/tech-market-sell-off-deepens-amid-fears-over-us-inflation-and-ai-debt",
+      "truncated": true,
+      "elapsed_seconds": 0.537
+    },
+    {
+      "url": "https://www.cnbc.com/2026/10/15/sk-hynix-samsung-softbank-stocks-asia-tech-rout-ai-funding-worries.html",
+      "source": "CNBC Technology",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.093
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNekhUaUxwdkZqR01YY01YYkpuMUVfckMyc1RKT2ZKVkVIR21CaGpTOHIyT2pYb3BlZzBVWFh0UGxGbEtDZlg1SVBOY3NjOGF1bVB5UF8wY2NiU0RSRFlNblVlSldNZjNiN3lHdHJ6X09aTm1qLTlkbWQtTjJmbFJmRkNNS2lGTkhYTHpIbm9peFlwLWJuMjlPQVZVTld3Z0nSAaQBQVVfeXFMTzR3RUtELUM4bGpzZ3RGaUJUQ0VFbHpsR0hwQnAzSFVaYlRndXdwanFxdWFCNUxpQTg1OFFmOFBJd05QUC02V1hGYUxpWlFmcUhGeUFPSHFKNXk2UVV4cTBCb01IQmRlN003bVlwaTZuTVJxNEhKZi1WczVhQWE0MWRaRnBFbXNTSHppUzNCbm51M20wVEU0SFdnZUFvamVkYUhlYXY?oc=5",
+      "source": "Anthropic",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.194
+    },
+    {
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x6f9p2/new_tts_king_in_town_fishs_drama_3_35b3a",
+      "source": "r/LocalLLaMA",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.079
+    },
+    {
+      "url": "https://www.bbc.co.uk/news/articles/cqzjx448vxkgo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Technology",
+      "status": "ok",
+      "final_url": "https://www.bbc.co.uk/news/articles/cqzjx448vxkgo?at_medium=RSS&at_campaign=rss",
+      "truncated": false,
+      "elapsed_seconds": 0.143
+    },
+    {
+      "url": "https://www.ft.com/content/b771ff23-8f40-4b44-ad50-50cea967a171?syn-25a6b1a6=1",
+      "source": "Financial Times AI",
+      "status": "error",
+      "error": "HTTPError",
+      "elapsed_seconds": 0.087
+    },
+    {
+      "url": "https://www.lesswrong.com/posts/g73ZwuzChySQCxjjv/robustness-backfire-risks-in-ai-safety-and-governance",
+      "source": "LessWrong",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.15
+    },
+    {
+      "url": "https://allenai.org/blog/hiro-acev2",
+      "source": "",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.686
+    },
+    {
+      "url": "https://huggingface.co/blog/allenai/hiro-acev2",
+      "source": "",
+      "status": "ok",
+      "final_url": "https://huggingface.co/blog/allenai/hiro-acev2",
+      "truncated": true,
+      "elapsed_seconds": 0.092
+    },
+    {
+      "url": "https://www.figma.com/blog/introducing-figma-specs/",
+      "source": "",
+      "status": "error",
+      "error": "ValueError",
+      "elapsed_seconds": 0.488
+    }
+  ],
+  "omitted_context": {
+    "active_storylines": 4,
+    "recent_or_contested_claims": 16,
+    "predictions_due_or_near_due": 0,
+    "builder_radar_due_or_recent": 2,
+    "active_theses": 0,
+    "trend_summary": 4,
+    "recent_concepts": 5
+  },
+  "model": "gpt-6.1-sol",
+  "red_team_report": {
+    "approved": true,
+    "issues": [],
+    "checks": [
+      "Rechecked the previous blocking issue: the Figma forecast now concerns future completion of staged rollout, not already-published MCP documentation. Both language versions explicitly identify the documentation as already available. The revised deadline and observable confirmation/falsification criteria are consistent.",
+      "Rechecked Anthropic figures against the supplied BBC passage: Q1/Q2/Q3 revenue of $4.7bn/$11.6bn/$16.8bn implies approximately 146.8% and 44.8% sequential growth. October 14 briefing timing, expected year-end listing and attributed profitability remain appropriately qualified.",
+      "Rechecked Guardian figures: Kospi 200 −8.1%, SK Hynix nearly −11%, Samsung −9.5%, Nikkei −4.9% and September inflation of 3.7%. BBC corroborates broad declines and Korean trading halts. Market explanations are not presented as measured demand or utilisation.",
+      "Reused the previous independent Figma and Ai2 checks for unchanged claims. Product availability, scientific results and limitations retain appropriate primary-source/vendor labeling; no independent productivity or real-world forecast validation is asserted.",
+      "Checked DE/EN equivalence, including the corrected forecasts. The concept distinguishes context, authority and verification and labels its workflow and example as illustrative recommendations.",
+      "Checked the sole visual's question, takeaway, values, quarter labels, units and provenance. Its comparisons use quarterly revenue consistently. No rendered chart or axis configuration was supplied, so rendered scale remains uninspected.",
+      "Checked novelty against the supplied prior edition and headlines; unresolved HiRO first-availability timing is disclosed rather than promoted into a newly available release claim.",
+      "Checked audit coverage against supplied records: 61 feeds, 57 successes and four failures match. Feed failures remain distinct from page-fetch outcomes; omitted_context counts omitted records. All 10 supplied continuity predictions, eight builder items and two theses are reviewed with historical statuses retained.",
+      "Reviewed the three forecasts for deadlines, observable criteria and inconclusive missing coverage. No material new defect was introduced by the correction. No new web retrieval was performed in this re-review."
+    ],
+    "source_checks": [
+      {
+        "url": "https://www.bbc.co.uk/news/articles/cqzjx448vxkgo?at_medium=RSS&at_campaign=rss",
+        "excerpt": "Anthropic's revenue has risen in successive quarters this year, from $4.7bn in the first three months to $11.6bn the following period.",
+        "assessment": "Supplied BBC passage supports the earlier quarterly values; its opening reports $16.8bn and 45% growth. This is attributed reporting of private disclosures, not audited financial verification or a new retrieval."
+      },
+      {
+        "url": "https://www.theguardian.com/business/2026/oct/15/tech-market-sell-off-deepens-amid-fears-over-us-inflation-and-ai-debt",
+        "excerpt": "The index closed at a six-month low, down 8.1%.",
+        "assessment": "Supplied Guardian passage supports the reported Kospi 200 closing move; surrounding supplied text supports the other stock/index figures and 3.7% inflation. No fresh exchange-data verification is claimed."
+      },
+      {
+        "url": "https://help.figma.com/hc/en-us/articles/44049066011671-Guide-to-Specs-in-Figma",
+        "excerpt": "Specs is in open beta and is rolling out over the next few weeks.",
+        "assessment": "Previous independent check supports staged availability. It does not establish completed rollout, so the corrected completion forecast concerns an outcome not already demonstrated."
+      },
+      {
+        "url": "https://help.figma.com/hc/en-us/articles/39166810751895-Figma-skills-for-MCP",
+        "excerpt": "Read the spec in <URL> and implement the checkout requirements.",
+        "assessment": "Previous independent check establishes existing concrete MCP handoff documentation. The corrected draft now acknowledges this as already observed rather than forecasting it."
+      },
+      {
+        "url": "https://allenai.org/blog/hiro-acev2",
+        "excerpt": "it matches the target simulation's high-resolution statistics to within 3%",
+        "assessment": "Previous independent check supports the narrowly attributed simulation-statistics claim, not independent scientific reproduction or real-world forecast accuracy."
+      },
+      {
+        "url": "https://huggingface.co/blog/allenai/hiro-acev2",
+        "excerpt": "it only works with the version of ACE tuned to match X-SHiELD.",
+        "assessment": "Previous independent check supports the distribution restriction. Supplied author passages also support the 100 km/3 km architecture, approximately 1/300 cost claim, rare-event statistics and planned +4°C extension, with vendor limitations preserved."
+      }
+    ]
+  },
+  "publish_decision": "publish",
+  "visual_plan": [
+    {
+      "id": "anthropic-quarterly-revenue",
+      "target": "story-1",
+      "kind": "bars",
+      "title": {
+        "de": "Mehr Umsatz, langsameres sequenzielles Wachstum",
+        "en": "More revenue, slower sequential growth"
+      },
+      "question": {
+        "de": "Wie hat sich Anthropics gemeldeter Quartalsumsatz 2026 verändert?",
+        "en": "How has Anthropic’s reported quarterly revenue changed in 2026?"
+      },
+      "takeaway": {
+        "de": "Q3 liegt deutlich über Q2, aber der relative Zuwachs ist kleiner als beim Sprung von Q1 auf Q2.",
+        "en": "Q3 is substantially above Q2, but the relative increase is smaller than the jump from Q1 to Q2."
+      },
+      "sources": [
+        {
+          "label": "BBC: quarterly revenue figures",
+          "url": "https://www.bbc.co.uk/news/articles/cqzjx448vxkgo?at_medium=RSS&at_campaign=rss"
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-14",
+  "updated_at": "2026-10-15",
   "claims": [
     {
       "id": "2026-09-10-kya-joint-framework",
@@ -5774,6 +5774,247 @@
         "This is synthesis, not a measured industry trend or independent proof of productivity gains or universal economic failure."
       ],
       "date": "2026-10-14"
+    },
+    {
+      "id": "2026-10-15-13fb30bddf5d",
+      "claim": "BBC reports Anthropic privately presented Q1/Q2/Q3 2026 revenue of $4.7bn/$11.6bn/$16.8bn, with Q3 up 45% sequentially; sequential growth slowed. These are not audited public filings, and Anthropic declined comment.",
+      "evidence_state": "reported",
+      "entities": [
+        "Anthropic",
+        "BBC"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "BBC investor-briefing report",
+          "url": "https://www.bbc.co.uk/news/articles/cqzjx448vxkgo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "contradictions": [
+        "No audited financial statements supplied; reported revenue growth does not establish durable margins."
+      ],
+      "date": "2026-10-15"
+    },
+    {
+      "id": "2026-10-15-f64bbd1b630c",
+      "claim": "BBC expects an Anthropic listing before year-end and attributes a second consecutive profitable quarter to other reporting; neither a firm November date nor an unadjusted profitability measure is established.",
+      "evidence_state": "reported",
+      "entities": [
+        "Anthropic",
+        "BBC"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "BBC",
+          "url": "https://www.bbc.co.uk/news/articles/cqzjx448vxkgo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "contradictions": [
+        "Expected timing is not a confirmed listing date; the profit measure is not established as unadjusted."
+      ],
+      "date": "2026-10-15"
+    },
+    {
+      "id": "2026-10-15-8faf1e083b31",
+      "claim": "Guardian reports Kospi 200 closing down 8.1%, SK Hynix nearly 11%, Samsung 9.5% and Nikkei 4.9% on October 15; BBC corroborates broad declines and temporary South Korean trading halts.",
+      "evidence_state": "reported",
+      "entities": [
+        "Kospi 200",
+        "SK Hynix",
+        "Samsung",
+        "Nikkei"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Guardian market report",
+          "url": "https://www.theguardian.com/business/2026/oct/15/tech-market-sell-off-deepens-amid-fears-over-us-inflation-and-ai-debt"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "BBC corroboration",
+          "url": "https://www.bbc.co.uk/news/articles/cqzjx448vxkgo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "contradictions": [
+        "Session moves are reported rather than independently retrieved exchange data; supplied Guardian text is truncated."
+      ],
+      "date": "2026-10-15"
+    },
+    {
+      "id": "2026-10-15-6220c5ee7598",
+      "claim": "Guardian and BBC connect the sell-off with AI-spending concerns and unexpectedly high September US inflation; Guardian reports inflation at 3.7%. This attribution does not establish declining AI demand or infrastructure utilisation.",
+      "evidence_state": "reported",
+      "entities": [
+        "AI infrastructure",
+        "US inflation"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Guardian",
+          "url": "https://www.theguardian.com/business/2026/oct/15/tech-market-sell-off-deepens-amid-fears-over-us-inflation-and-ai-debt"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "BBC",
+          "url": "https://www.bbc.co.uk/news/articles/cqzjx448vxkgo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "contradictions": [
+        "Anthropic's reported revenue expansion is counterevidence to a simple demand-collapse interpretation; market causation remains interpretive."
+      ],
+      "date": "2026-10-15"
+    },
+    {
+      "id": "2026-10-15-ac6f918a1573",
+      "claim": "Figma announces Specs combining Markdown, canvas references, diagrams, designs and code layers, with context passed to coding agents through its MCP server.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Figma",
+        "Specs",
+        "MCP"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_product_announcement",
+          "name": "Figma Specs announcement",
+          "url": "https://www.figma.com/blog/introducing-figma-specs/"
+        }
+      ],
+      "contradictions": [
+        "Official search-returned article text was available, but subsequent direct opening failed; no hands-on validation or adherence measurement was performed."
+      ],
+      "date": "2026-10-15"
+    },
+    {
+      "id": "2026-10-15-8818c874cf08",
+      "claim": "Figma says Specs begins rolling out in open beta on October 15 to paid plans on web, desktop and mobile; rollout does not establish universal immediate access.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Figma",
+        "Specs"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_product_announcement",
+          "name": "Figma availability statement",
+          "url": "https://www.figma.com/blog/introducing-figma-specs/"
+        }
+      ],
+      "contradictions": [
+        "Improved productivity and implementation fidelity remain unmeasured; shared instructions do not establish runtime enforcement."
+      ],
+      "date": "2026-10-15"
+    },
+    {
+      "id": "2026-10-15-516c9b5323f9",
+      "claim": "Ai2's October 14 Hugging Face announcement describes HiRO-ACEv2 combining approximately 100 km ACE simulation with global 3 km HiRO outputs, adding wind and pressure to rainfall, and linking models, paper, tutorials and demo.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Ai2",
+        "HiRO-ACEv2",
+        "ACE",
+        "HiROv2"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_research_announcement",
+          "name": "Ai2 announcement",
+          "url": "https://allenai.org/blog/hiro-acev2"
+        },
+        {
+          "role": "primary_research_announcement",
+          "name": "Ai2 Hugging Face post",
+          "url": "https://huggingface.co/blog/allenai/hiro-acev2"
+        }
+      ],
+      "contradictions": [
+        "First artifact availability and the original announcement's exact timestamp remain unresolved; architecture announcement is not independent scientific validation."
+      ],
+      "date": "2026-10-15"
+    },
+    {
+      "id": "2026-10-15-aa21c3a34495",
+      "claim": "Ai2 claims global 3 km climate data at about 1/300th of X-SHiELD's cost and, with coarsened X-SHiELD inputs, target high-resolution statistics within 3% even for events occurring once per million data points.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Ai2",
+        "HiRO-ACEv2",
+        "HiROv2",
+        "X-SHiELD"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_research_announcement",
+          "name": "Ai2 cost comparison",
+          "url": "https://allenai.org/blog/hiro-acev2"
+        },
+        {
+          "role": "primary_research_announcement",
+          "name": "Ai2 evaluation description",
+          "url": "https://huggingface.co/blog/allenai/hiro-acev2"
+        }
+      ],
+      "contradictions": [
+        "Cost comparability, independent reproduction and licensing were not checked; simulation fidelity is not demonstrated real-world forecast accuracy."
+      ],
+      "date": "2026-10-15"
+    },
+    {
+      "id": "2026-10-15-5e6d0cad99a9",
+      "claim": "Ai2 reports residual hurricane-eye wind/pressure asymmetry and says HiRO currently requires ACE tuned to X-SHiELD, cannot yet produce other climates such as warmer futures or ERA5 historical data, and plans training on a world 4°C warmer.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Ai2",
+        "HiROv2",
+        "ACE",
+        "X-SHiELD",
+        "ERA5"
+      ],
+      "storyline": "ai-rd-automation",
+      "support": [
+        {
+          "role": "primary_research_announcement",
+          "name": "Ai2 stated limitations and roadmap",
+          "url": "https://huggingface.co/blog/allenai/hiro-acev2"
+        }
+      ],
+      "contradictions": [
+        "The 4°C extension is planned, not an available capability; operational weather forecasting is not demonstrated."
+      ],
+      "date": "2026-10-15"
+    },
+    {
+      "id": "2026-10-15-ba1a441060ce",
+      "claim": "Figma's shared context object supports intent communication but does not by itself demonstrate permission enforcement, output correctness or customer-configurable runtime controls; the concept's workflow and form example are illustrative recommendations.",
+      "evidence_state": "early_signal",
+      "entities": [
+        "Figma",
+        "Specs",
+        "coding agents"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_product_announcement",
+          "name": "Figma Specs announcement",
+          "url": "https://www.figma.com/blog/introducing-figma-specs/"
+        }
+      ],
+      "contradictions": [
+        "No evaluated reliability gain or validated control mechanism is supplied; the recommended version-pinning workflow is not asserted as a confirmed Specs feature."
+      ],
+      "date": "2026-10-15"
     }
   ]
 }

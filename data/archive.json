@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-10-15",
+    "de": "briefings/2026-10-15-de.html",
+    "en": "briefings/2026-10-15-en.html",
+    "headline": {
+      "de": "KI wächst weiter – doch Umsatz, Kapital und Verlässlichkeit laufen auseinander",
+      "en": "AI keeps growing—but revenue, capital and reliability are diverging"
+    },
+    "tags": [
+      "AI economics",
+      "infrastructure financing",
+      "Anthropic",
+      "Figma Specs",
+      "context engineering",
+      "climate emulation"
+    ],
+    "concept": {
+      "de": "Gemeinsamer Kontext ist keine durchgesetzte Policy",
+      "en": "Shared context is not enforced policy"
+    }
+  },
+  {
     "date": "2026-10-14",
     "de": "briefings/2026-10-14-de.html",
     "en": "briefings/2026-10-14-en.html",

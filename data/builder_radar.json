@@ -135,9 +135,14 @@
           "date": "2026-10-06",
           "note": "Trial unchanged; reported Australian incident reinforces relevance but does not validate the suite.",
           "sources": []
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Trial unchanged; no reviewed evidence validates the suite's effectiveness.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "builder-inference-admin-hardening",
@@ -197,9 +202,14 @@
           "date": "2026-10-14",
           "note": "Experimental unchanged; no new endpoint-hardening or remediation evidence inspected.",
           "sources": []
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Experimental unchanged; no new remediation or endpoint-audit evidence was reviewed.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-14"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "builder-nvidia-dynamo-epd",
@@ -254,9 +264,14 @@
           "date": "2026-10-14",
           "note": "Trial unchanged; no inspected production-style reproduction clears the evaluation gate.",
           "sources": []
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Trial unchanged pending workload-matched independent measurements.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-14"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "builder-deepseek-v41-flash",
@@ -361,9 +376,14 @@
           "date": "2026-10-14",
           "note": "Watch unchanged; supplied API documentation does not replace alias-migration regression testing.",
           "sources": []
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Watch unchanged pending reproducible migration and outcome-cost comparisons.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-14"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "builder-agent-memory-write-gate",
@@ -418,9 +438,14 @@
           "date": "2026-10-14",
           "note": "Experimental unchanged; Muse marketing does not validate a persistent-memory write gate.",
           "sources": []
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Experimental unchanged; shared editable specifications do not validate persistent-memory write controls.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-14"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "builder-agent-registry-poc",
@@ -480,9 +505,14 @@
           "date": "2026-10-14",
           "note": "Experimental unchanged; adjacent identity proposals do not establish cross-network interoperability.",
           "sources": []
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Experimental unchanged; unrelated identity projects do not establish interoperability for this registry.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-14"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "builder-hermetic-coding-agent-canary",
@@ -540,9 +570,14 @@
           "date": "2026-10-14",
           "note": "Experimental unchanged; source-control scaling evidence does not validate repository isolation.",
           "sources": []
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Experimental unchanged; the dated NVIDIA announcement supplies no new canary validation.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-14"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "builder-outcome-cost-benchmark-harness",
@@ -626,9 +661,14 @@
               "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/"
             }
           ]
+        },
+        {
+          "date": "2026-10-15",
+          "note": "Trial unchanged; today's commercial and simulation-cost claims do not substitute for pinned outcome measurements.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-14"
+      "last_reviewed": "2026-10-15"
     },
     {
       "id": "builder-agent-dual-monitoring",
