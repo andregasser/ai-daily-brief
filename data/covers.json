@@ -175,5 +175,15 @@
       "de": "Anthropics gemeldeter Quartalsumsatz erreicht 16,8 Milliarden Dollar, während Infrastrukturaktien fallen. Figma bündelt Agentenkontext; Ai2 erweitert seine Klimasimulation. Entscheidend bleibt, welche Art von Fortschritt tatsächlich belegt ist.",
       "en": "Anthropic’s reported quarterly revenue reaches $16.8 billion as infrastructure shares fall. Figma consolidates agent context; Ai2 broadens its climate simulation. The decisive question remains which kind of progress the evidence actually establishes."
     }
+  },
+  "2026-10-19": {
+    "kicker": {
+      "de": "Die Leitgeschichte",
+      "en": "The lead story"
+    },
+    "deck": {
+      "de": "Meta veröffentlicht grosse Modellgewichte, DeepSeek ändert das Backend hinter vertrauten Namen und Anthropic konkretisiert Aufsicht und Gemeinwohlzusagen. Entscheidend sind die jeweils überprüfbaren Grenzen – nicht das Etikett «offen», «unabhängig» oder «sicher».",
+      "en": "Meta releases large model weights, DeepSeek changes the backend behind familiar names, and Anthropic makes oversight and public-benefit commitments more concrete. What matters is each arrangement’s verifiable boundaries—not the labels “open”, “independent” or “safe”."
+    }
   }
 }

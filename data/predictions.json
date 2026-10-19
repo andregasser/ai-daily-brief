@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-15",
+  "updated_at": "2026-10-19",
   "predictions": [
     {
       "id": "pred-kya-interoperability-2026-10",
@@ -72,9 +72,14 @@
           "date": "2026-10-15",
           "note": "Open unchanged: searches surfaced unrelated KYA implementations but did not establish an implementable deliverable from the watched cross-network initiative by October 15.",
           "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "Open unchanged: targeted search did not verify an implementable artifact from the specific initiative by October 15.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-15"
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "pred-deepseek-v41-evidence-2026-09",
@@ -145,9 +150,14 @@
           "date": "2026-10-15",
           "note": "Falsified unchanged: supplied API documentation adds no independent comparative task-success, latency or cost evaluation.",
           "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "Falsified unchanged: the October 17 update does not establish the independent economics evidence required by September 24.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-15"
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "pred-china-hbm-pricing-q4",
@@ -188,7 +198,20 @@
           "date": "2026-09-10",
           "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents"
         }
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-19",
+          "note": "Open unchanged: evaluator access advances implementation, but no inspected findings resolve the four incidents.",
+          "sources": [
+            {
+              "label": "Evaluator update",
+              "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators?trk=public_post_comment-text"
+            }
+          ]
+        }
+      ],
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "pred-epd-independent-evidence-2026-10",
@@ -258,9 +281,14 @@
           "date": "2026-10-15",
           "note": "Open unchanged: retrieved EPD papers and commentary did not establish reproduction of the watched NVIDIA benefits on real multimodal workloads.",
           "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "Open unchanged: targeted search did not establish qualifying independent production-style reproduction by October 15.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-15"
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "pred-us-duty-of-care-draft-2026-09",
@@ -367,9 +395,19 @@
           "date": "2026-10-15",
           "note": "Open unchanged and overdue: this limited review did not resolve publication, substantive draft details or documented slippage.",
           "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "Open unchanged: Cantwell's October 7 framework does not settle the specified negotiators' September 30 deadline or release-authority terms.",
+          "sources": [
+            {
+              "label": "Senate framework",
+              "url": "https://www.commerce.senate.gov/press/dem/release/cantwell-outlines-comprehensive-governance-framework-for-safe-and-secure-frontier-ai/"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-15"
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "pred-openai-misalignment-disclosure-2026-10",
@@ -412,9 +450,14 @@
           "date": "2026-10-15",
           "note": "Confirmed unchanged; no relevant contrary evidence was established.",
           "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "Confirmed unchanged; no relevant new verification was performed.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-15"
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "pred-uae-ai-resilience-plan-2026-10",
@@ -436,7 +479,15 @@
           "url": "https://www.reuters.com/world/middle-east/uae-revises-ai-data-center-plan-after-iranian-attacks-sources-say-2026-09-11/",
           "note": "Reuters reports redesign discussions; final masterplan has not been announced."
         }
-      ]
+      ],
+      "reviews": [
+        {
+          "date": "2026-10-19",
+          "note": "Open unchanged; no relevant new project evidence was inspected.",
+          "sources": []
+        }
+      ],
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "pred-embedded-evaluator-details-2026-09",
@@ -539,9 +590,19 @@
           "date": "2026-10-15",
           "note": "Confirmed unchanged; Apollo's newly discovered pilot account warrants follow-up but was not inspected sufficiently to revise governance conclusions.",
           "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "Confirmed unchanged: October implementation details strengthen continuity but do not retroactively establish September timing.",
+          "sources": [
+            {
+              "label": "Evaluator update",
+              "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators?trk=public_post_comment-text"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-15"
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "pred-sglang-cve-remediation-2026-09",
@@ -624,9 +685,14 @@
           "date": "2026-10-15",
           "note": "Falsified unchanged; no new official remediation evidence was reviewed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "Falsified unchanged; no new remediation evidence was inspected.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-15"
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "pred-deepseek-alias-regression-2026-09",
@@ -708,9 +774,14 @@
           "date": "2026-10-15",
           "note": "Falsified unchanged: supplied documentation does not establish measured alias-regression effects or clearer resolved-model telemetry.",
           "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "Falsified unchanged: current Flash routing documentation does not resolve historical Pro migration or the September 18 evidence deadline.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-15"
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "pred-frontier-pacing-operationalization-2026-09",
@@ -1699,6 +1770,70 @@
       "confidence": "low",
       "id": "pred-2026-10-15-93703c977aef",
       "created": "2026-10-15",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-19, an independent evaluator will publish a comparison of DeepSeek-V4.1-Flash-1017 against a named preceding checkpoint, documenting its harness and reporting task success plus at least one latency, token-use or cost metric.",
+      "review_after": "2026-11-20",
+      "confirmation_criteria": [
+        "A dated non-DeepSeek evaluation published by the deadline identifies both checkpoints and evaluation conditions.",
+        "It reports task-success results and at least one resource-use metric on the comparison workload."
+      ],
+      "falsification_criteria": [
+        "A dated statement from the evaluator responsible for a publicly announced qualifying comparison explicitly cancels or postpones its publication beyond the deadline, and the reviewed evidence establishes no other qualifying publication."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-19-c09f42fb63bf",
+      "created": "2026-10-19",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-30, METR will publish a substantive risk assessment of Anthropic models, incidents or safety practices arising from its embedded access arrangement.",
+      "review_after": "2026-12-01",
+      "confirmation_criteria": [
+        "A METR-authored publication by the deadline contains substantive findings concerning Anthropic and explicitly connects the work to embedded access.",
+        "An onboarding announcement or generic statement of intent does not qualify."
+      ],
+      "falsification_criteria": [
+        "METR explicitly states that its first substantive assessment under this arrangement will be published only after November 30, or that the arrangement ended before producing such an assessment."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-19-f171bd66c1cf",
+      "created": "2026-10-19",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-12-31, Anthropic will publish additional Public Benefit Fund governance details and identify valuation milestones or the baseline used for potential equity additions beyond the initial announcement.",
+      "review_after": "2027-01-01",
+      "confirmation_criteria": [
+        "A dated Anthropic or fund publication adds a concrete governance detail, such as decision authority or an allocation process.",
+        "The same or another primary publication identifies an actual valuation milestone or baseline rather than merely repeating the 50% growth formula."
+      ],
+      "falsification_criteria": [
+        "Anthropic explicitly postpones both sets of disclosures beyond December 31 or withdraws the proposed valuation-linked fund structure before publishing them."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-19-2914989e38dc",
+      "created": "2026-10-19",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-19, TTP or a named independent newsroom will publish a documented post-remediation retest of at least one app-store access path implicated in the October 19 investigation.",
+      "review_after": "2026-11-20",
+      "confirmation_criteria": [
+        "A dated report identifies a retest conducted after the reported platform changes and describes the teen-account access conditions.",
+        "It reports whether at least one previously implicated search, download or purchase path remains accessible or is blocked; either outcome qualifies."
+      ],
+      "falsification_criteria": [
+        "TTP or a newsroom that publicly committed to the qualifying retest explicitly cancels it or postpones publication beyond November 19, with no other qualifying retest established in the reviewed evidence."
+      ],
+      "confidence": "low",
+      "id": "pred-2026-10-19-bc86e3f4940a",
+      "created": "2026-10-19",
       "status": "open",
       "evidence": []
     }

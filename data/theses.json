@@ -14,7 +14,7 @@
         "NVLink Fusion sees little production adoption outside NVIDIA-centric systems",
         "NVIDIA retreats from third-party XPU integration"
       ],
-      "last_reviewed": "2026-10-15",
+      "last_reviewed": "2026-10-19",
       "evidence_updates": [
         {
           "date": "2026-09-09",
@@ -83,6 +83,11 @@
           "date": "2026-10-15",
           "note": "High confidence unchanged; no new verified third-party accelerator integration evidence was reviewed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "High confidence unchanged; retrieved NVIDIA model material does not test third-party rack-platform adoption.",
+          "sources": []
         }
       ]
     },
@@ -99,7 +104,7 @@
         "Customer-controlled agent telemetry remains a niche or pilot-only feature without meaningful enterprise production adoption",
         "Major providers retreat toward model-only refusals without exposing operational policy controls"
       ],
-      "last_reviewed": "2026-10-15",
+      "last_reviewed": "2026-10-19",
       "evidence_updates": [
         {
           "date": "2026-09-09",
@@ -200,6 +205,11 @@
         {
           "date": "2026-10-15",
           "note": "High confidence unchanged; Figma adds shared context, not demonstrated customer-configurable runtime enforcement and telemetry.",
+          "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "High confidence unchanged; evaluator access is not customer-configurable runtime policy or customer-controlled telemetry.",
           "sources": []
         }
       ]

@@ -1013,6 +1013,40 @@
         "de": "briefings/2026-10-15-de.html",
         "en": "briefings/2026-10-15-en.html"
       }
+    },
+    {
+      "id": "api-alias-versus-model-version",
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "title": {
+        "de": "Ein API-Alias ist keine Modellversion",
+        "en": "An API alias is not a model version"
+      },
+      "summary": {
+        "de": "Ein unveränderter Modellname im Request kann auf einen neuen Checkpoint zeigen; Reproduzierbarkeit braucht deshalb eine dokumentierte Backend-Identität und Regressionsevidenz.",
+        "en": "An unchanged model name in a request can point to a new checkpoint; reproducibility therefore requires a recorded backend identity and regression evidence."
+      },
+      "tags": [
+        "model-versioning",
+        "api-aliases",
+        "regression-evaluation"
+      ],
+      "storylines": [
+        "agent-economics",
+        "benchmark-integrity"
+      ],
+      "sources": [
+        "https://api-docs.deepseek.com/news/",
+        "https://api-docs.deepseek.com/updates/?release=deepseek-coder"
+      ],
+      "related_concepts": [
+        "model-portfolio-routing-shadow-evals",
+        "typed-decision-models"
+      ],
+      "briefing": {
+        "de": "briefings/2026-10-19-de.html",
+        "en": "briefings/2026-10-19-en.html"
+      }
     }
   ]
 }

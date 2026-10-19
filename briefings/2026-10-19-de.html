@@ -1,0 +1,130 @@
+<section class="briefing-intro">
+
+  <div class="brief-label">AI Daily Brief · 19.10.2026</div>
+
+  <h1>KI braucht eine Beweisspur: vom Checkpoint bis zur Aufsicht</h1>
+
+  <p class="dek">Meta veröffentlicht grosse Modellgewichte, DeepSeek ändert das Backend hinter vertrauten Namen und Anthropic konkretisiert Aufsicht und Gemeinwohlzusagen. Entscheidend sind die jeweils überprüfbaren Grenzen – nicht das Etikett «offen», «unabhängig» oder «sicher».</p>
+
+  <p><strong>Editorial Lead — Analyse:</strong> Seit der letzten Ausgabe vom 15. Oktober sind mehrere Zusagen in die Umsetzung gerückt: herunterladbare Gewichte, ein dokumentierter Flash-Checkpoint und eingebettete externe Evaluatoren. Das ist substanzieller Fortschritt, aber kein einheitlicher Leistungs- oder Sicherheitsnachweis. Heute trennen wir deshalb fünf Beweisketten: Nutzungsrechte, aufgabenspezifische Modellleistung, Versionskontrolle, externe Aufsicht und die Durchsetzung von Plattformregeln. Der App-Store-Bericht zeigt besonders deutlich, weshalb diese Trennung nötig ist: Eine verbotene Funktion kann trotzdem erreichbar bleiben. Für Teams lautet die gemeinsame Konsequenz, nicht nur Anbieterzusagen zu archivieren, sondern auch Modellidentität, Rechte, Testbedingungen und verbleibende Ausnahmen.</p>
+
+</section>
+
+<section class="executive">
+
+  <div class="section-kicker">In 60 Sekunden</div>
+
+  <div class="signal-grid">
+
+    <div><strong>Offene Gewichte, begrenzte Schlussfolgerungen</strong><br>Muse Spark Open hat laut Meta 816 Milliarden Gesamtparameter, 42 Milliarden aktive Parameter pro Token und eine Million Token Kontext. Die Lizenz enthält kommerzielle Einschränkungen; unabhängige Vals-Ergebnisse unterscheiden sich stark nach Aufgabe.</div>
+
+    <div><strong>Gleicher API-Name, anderer Checkpoint</strong><br>DeepSeek dokumentiert Flash-1017 hinter deepseek-flash und zwei älteren Flash-Namen. Unveränderte Aufrufe bedeuten keine unveränderte Modellversion; ein unabhängig quantifizierter Zuverlässigkeits- oder Wirtschaftlichkeitsgewinn ist im geprüften Dossier nicht belegt.</div>
+
+    <div><strong>Aufsicht erhält Zugang, aber keine belegte Freigabemacht</strong><br>Anthropic meldet den Beginn mitarbeiterähnlichen Zugangs für METR; sechs Mitarbeitende wurden eingebunden. Veröffentlichungsrechte und Zugangsgrenzen sind von abgeschlossenen Prüfungen oder einem Vetorecht gegen Modellfreigaben zu unterscheiden.</div>
+
+    <div><strong>Zusagen und Kontrollen müssen bis zum Ergebnis verfolgt werden</strong><br>Anthropics neue 5%-Aktienzusage ist keine Auszahlung. Separat berichtet der Guardian über 135 heruntergeladene Apps mit Nudification- oder Nacktbild-Face-Swap-Funktionen in einem Test mit vier als 13-jährig ausgewiesenen Konten – trotz Plattformverboten und elterlicher Kontrollen.</div>
+
+  </div>
+
+</section>
+
+<section class="chapter">
+  <div class="section-kicker">Modelle, Agents &amp; Engineering</div>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">LEAD</span><span class="evidence reported">CONFIRMED_PRIMARY + INDEPENDENT_EVALUATION; CAPABILITY AND DEPLOYMENT HEADLINES ARE VENDOR CLAIMS</span></div>
+    <h2>Muse Spark Open: Download ist ein neuer Bereitstellungsweg, kein universeller Leistungssieg</h2>
+    <p>Meta hat am 15. Oktober Muse Spark Open mit herunterladbaren multimodalen Gewichten und Zugang über Hosting-Anbieter angekündigt. Der Anbieter nennt 816 Milliarden Gesamtparameter, 42 Milliarden aktive Parameter pro Token und ein Kontextfenster von einer Million Token. Anders als eine weitere geschlossene Muse-Stufe ermöglicht das eigene Bereitstellung und Anpassung. «Open-weight» bedeutet hier jedoch nicht uneingeschränkt quelloffen: Die Muse Model License enthält begrenzte kommerzielle Nutzungsbedingungen. Auch die Desktop-Aussage ist eng zu lesen: Meta beschreibt zwei M5-Ultra-Mac-Studios, nicht gewöhnliche Endnutzer-Hardware.</p>
+    <p>Die unabhängige Evaluation von Vals liefert ein gemischtes Bild: 46,61% ±1,20 im Vals Index und 61,34% ±2,09 bei Finance Agent v2. Die Ranglistenstände unterscheiden sich zwischen den gelieferten Aufnahmen: zunächst 38 von 49 beziehungsweise 3 von 79, im später gelieferten Seitenauszug 39 von 50 beziehungsweise 3 von 80. Die Messwerte bleiben gleich; das Vergleichsfeld wächst. Diese aufgaben- und konfigurationsabhängigen Ergebnisse begründen weder allgemeine Überlegenheit noch eine direkte Widerlegung von Metas engerer Aussage zu US-Open-weight-Modellen. Für die Auswahl zählt der passende Workload, nicht ein isolierter Rang.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Herunterladbare Gewichte erweitern die Bereitstellungswahl über geschlossene Muse-Angebote hinaus.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Mehr Kontrolle über die Bereitstellung beseitigt weder Lizenzgrenzen noch Speicherbedarf oder die Notwendigkeit eigener Aufgabenbewertungen.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Zuerst Lizenzberechtigung und Speicherbedarf aller Gewichte prüfen; danach eine festgehaltene Bereitstellung auf repräsentativen Aufgaben bewerten, statt aus aktiven Parametern auf den gesamten Ressourcenbedarf zu schliessen.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Signal: tatsächlich herunterladbare Gewichte plus unabhängige, differenzierte Messwerte; Hype-Risiko: aus «Desktop» oder einem starken Finanzresultat allgemeine Zugänglichkeit und Überlegenheit ableiten.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://research.meta.ai/blog/muse-spark-open">Meta release announcement</a> · <a href="https://www.vals-ai.com/models/together_muse-spark-open">Vals independent evaluation; supplied snapshots differ in ranking field</a></div>
+  </article>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">HIGH</span><span class="evidence reported">CONFIRMED_PRIMARY OPERATIONAL DOCUMENTATION; NO INSPECTED INDEPENDENT PERFORMANCE COMPARISON</span></div>
+    <h2>DeepSeek aktualisiert Flash hinter bestehenden API-Aliasen</h2>
+    <p>DeepSeeks offizielles Änderungsprotokoll datiert das Update auf DeepSeek-V4.1-Flash-1017 auf den 17. Oktober. Die gelieferte operative API-Dokumentation sagt, dass deepseek-flash nun diesen Checkpoint ausliefert. Auch die weiterhin akzeptierten Namen deepseek-v4-flash und deepseek-v4-flash-vision-exp führen dorthin: Die zugehörigen früheren Modelle sind eingestellt, die Aufrufe werden zum Flash-Preis abgerechnet. Der Aufrufweg kann damit stabil bleiben, während sich das tatsächlich eingesetzte Modell ändert.</p>
+    <p>Die Versions- und Routing-Aussagen sind Primärevidenz für den dokumentierten Betrieb, keine unabhängige Messung besserer Task-Ergebnisse, Latenzen oder Kosten pro erfolgreicher Aufgabe. Die gelieferte Dokumentationsseite wurde erfolgreich abgerufen; ein nachfolgender Webabruf scheiterte. Das macht den vorhandenen Auszug nicht zu einer blossen Nachrichtenübersicht, begrenzt aber Aussagen über späteren Seitenstand und Vollständigkeit. Insbesondere lässt sich daraus das aktuelle Routing von deepseek-v4-pro nicht ableiten. Historische Pro-Migrationsfragen werden durch dieses Flash-Update nicht nachträglich geklärt.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Ein neuer dokumentierter Checkpoint wird über bestehende Flash-Namen bereitgestellt, ohne dass Clients ihre Aufrufe ändern müssen.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Ein stabiler API-Vertrag kann eine relevante Änderung der Modellabhängigkeit verdecken.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Aufgelöste Checkpoints protokollieren, soweit verfügbar, Testkonfigurationen versionieren und vor einer Traffic-Ausweitung Alias-Migrationsregressionen prüfen; der bestehende Builder-Status bleibt «Watch».</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Signal: konkret dokumentierte Backend-Änderung; nicht belegt: ein unabhängiger Gewinn bei Zuverlässigkeit oder Serving-Ökonomie.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://api-docs.deepseek.com/updates/?release=deepseek-coder">DeepSeek change log</a> · <a href="https://api-docs.deepseek.com/news/">DeepSeek operational API documentation</a></div>
+  </article>
+</section>
+
+<section class="chapter">
+  <div class="section-kicker">Business &amp; Strategie</div>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">HIGH</span><span class="evidence reported">CONFIRMED_PRIMARY COMPANY ANNOUNCEMENT + INDEPENDENT_REPORTING WITH ATTRIBUTED ACCESS CLAIMS</span></div>
+    <h2>Anthropic setzt eingebettete METR-Aufsicht um – mit definierten Ausnahmen</h2>
+    <p>Anthropics Ankündigung vom 15. Oktober, mit einer Klarstellung vom 16. Oktober, beschreibt den Beginn mitarbeiterähnlichen Zugangs für METR. Laut dem Unternehmen wurden sechs METR-Mitarbeitende mit Firmenhardware, Büroraum und internem Zugang ungefähr auf dem Niveau der eigenen Risikobewertungsteams ausgestattet. Ars berichtet diese Umsetzung ebenfalls, schreibt die Reichweite des Zugangs aber Anthropic zu. Damit wird aus einer zukünftigen Aufsichtszusage ein operatives Arrangement; eine abgeschlossene Prüfung ist damit nicht belegt.</p>
+    <p>Die veröffentlichte Beschreibung trennt Zugang und Publikation: Anthropic kann METRs Veröffentlichungen nicht verhindern, darf aber Schwärzungen in vorgegebenen Kategorien verlangen, etwa bei Kundendaten, privilegierter Rechtskommunikation oder Architekturinformationen. Anthropic entscheidet letztlich über die Zuordnung zu diesen Kategorien; METR behält bestimmte Möglichkeiten, den erhaltenen Zugang zu kommentieren. Das ist keine belegte uneingeschränkte Architektureinsicht und kein Freigabeveto. Im geprüften Material liegt auch keine neue METR-Veröffentlichung vor, die die vier zuvor offengelegten Cybervorfälle oder die Abdeckung der Vorfallserkennung klärt.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Externe Evaluatoren erhalten tatsächlich organisatorischen und technischen Zugang statt nur einer künftigen Einladung.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Die Qualität externer Aufsicht hängt von verwertbarer Information, Publikationsfreiheit und Eskalationsrechten ab, nicht allein von ihrer räumlichen Nähe zum Labor.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Veröffentlichte Ergebnisse, Informationsausschlüsse und Eskalationsbefugnisse getrennt verfolgen; externen Prüferzugang nicht mit kundenseitig konfigurierbaren Laufzeitkontrollen verwechseln.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Signal: konkrete Umsetzung und beschriebene Publikationsrechte; Grenze: noch kein Nachweis besserer Vorfallserkennung oder unabhängiger Kontrolle über Releases.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://www.anthropic.com/news/an-update-on-independent-evaluators?trk=public_post_comment-text">Anthropic evaluator update</a> · <a href="https://arstechnica.com/ai/2026/10/anthropic-gives-outside-ai-watchdog-employee-like-access">Ars reporting, attributed to the Financial Times</a></div>
+  </article>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">MEDIUM</span><span class="evidence reported">CONFIRMED_PRIMARY ANNOUNCEMENT + INDEPENDENT_REPORTING; CUMULATIVE ALLOCATION IS A VENDOR CLAIM</span></div>
+    <h2>Anthropics Gemeinwohlfonds: 5% zugesagt, Umsetzung und Ausschüttung noch offen</h2>
+    <p>Anthropic kündigte am 18. Oktober an, vorbehaltlich der Zustimmung der Aktionäre 5% seiner Aktien einem neuen Public Benefit Fund zu widmen. Die BBC berichtet die Zusage und eine mögliche zusätzliche Zuteilung von 2% nach Ermessen des Verwaltungsrats. Die Primärankündigung präzisiert: Weitere 2% können jeweils bei einem Wertzuwachs des Unternehmens von 50% über einer festgelegten Basis hinzukommen. Der Fonds wird als vollständig unternehmenseigene LLC aufgebaut, nicht als direkte öffentliche Aktionärsbeteiligung. Die darin gehaltenen Anthropic-Aktien sollen weder Lobbying noch politische Spenden im In- oder Ausland finanzieren.</p>
+    <p>Laut Anthropic ergeben die neue Zusage und frühere Zusagen von Gründern und Mitarbeitenden zusammen ungefähr 20% der Aktien für das Gemeinwohl, vor möglichen bewertungsabhängigen Ergänzungen. Das ist eine kumulierte Unternehmensangabe, nicht die Grösse der neuen Zuteilung. Ebenso wenig belegt die Ankündigung bereits übertragene Aktien, realisierte Mittel oder Auszahlungen. Weitere Angaben zu Struktur, Governance und Bewertungsmeilensteinen sollen in den kommenden Monaten folgen; die vollständigen Umsetzungsbedingungen wurden im Dossier nicht erschlossen. Ein Effekt auf KI-Sicherheit ist nicht nachgewiesen.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Eine neue Unternehmenszusage ergänzt frühere persönliche Aktienzusagen um einen vorgeschlagenen Fondsmechanismus.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Die Zusage verändert die vorgeschlagene Verteilung künftigen Unternehmenswerts, schafft aber noch keine verteilte öffentliche Eigentümerschaft.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> In Lieferanten-Governance-Reviews Zusage, Genehmigung, Übertragung und tatsächliche Ausschüttung separat erfassen; den Fonds nicht als technischen Sicherheitsnachweis werten.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Signal: bezifferte Aktienzusage mit beschriebenem Ergänzungsmechanismus; Hype-Risiko: 20% als neue Spende oder eine Zusage als bereits verteiltes Geld darstellen.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://www.anthropic.com/news/public-benefit-fund">Anthropic fund announcement</a> · <a href="https://www.bbc.co.uk/news/articles/cm2kez327gdko?at_medium=RSS&amp;at_campaign=rss">BBC reporting</a></div>
+  </article>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">HIGH</span><span class="evidence reported">INDEPENDENT_REPORTING ON TTP TESTS; UNDERLYING ORIGINAL REPORT NOT SEPARATELY INSPECTED</span></div>
+    <h2>Jugendkonten erreichen verbotene KI-Bildfunktionen: Die Durchsetzungslücke liegt im Produktpfad</h2>
+    <p>Der Guardian berichtet am 19. Oktober über einen Test des Tech Transparency Project mit vier Konten, die ein Alter von 13 Jahren angaben: zwei bei Apple und zwei bei Google. Darüber konnten die Forschenden 135 Apps mit Funktionen zum künstlichen Entkleiden oder zum Einsetzen von Gesichtern in nackte Körper herunterladen. Laut Bericht waren solche Apps auch mit aktivierten elterlichen Kontrollen erreichbar; unzutreffende Altersfreigaben spielten dabei eine Rolle. Für die Tests verwendeten die Forschenden KI-generierte Frauenbilder statt Fotos realer Personen. Vier Konten sind keine Schätzung der Verbreitung unter Jugendlichen.</p>
+    <p>Google erklärte gegenüber dem Guardian, regelverletzende Apps suspendiert und zugehörige Suchbegriffe eingeschränkt zu haben. Der Artikel berichtet zudem, Apple habe nach der Kontaktaufnahme durch TTP seine Moderationsrichtlinien verschärft. Apple bestreitet allerdings für einige der aufgeführten Apps, dass sie Nudification- oder Deepfake-Funktionen besitzen. Dieser Einwand betrifft die Einordnung der Apps; die gemeldeten Plattformänderungen wiederum belegen noch keine wirksame Abhilfe. Der gelieferte Artikelauszug ist gekürzt, der ursprüngliche TTP-Bericht wurde nicht separat geprüft und ein Wiederholungstest nach den Änderungen liegt nicht vor. Der Fähigkeitsstreit ist damit nicht unabhängig geklärt; auch bleibt unverifiziert, ob alle betroffenen Apps entfernt und die Zugangspfade geschlossen wurden.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Der Bericht dokumentiert erreichbare Funktionen trotz Plattformverboten und elterlicher Kontrollen sowie erste Reaktionen der Plattformen.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Eine Sicherheitsrichtlinie schützt nur dann, wenn Suche, Altersfreigabe, Download und Nutzung sie tatsächlich durchsetzen.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Altersbeschränkungen und Kaufpfade durchgängig mit sicheren Testbildern prüfen, statt allein auf Entwicklerangaben zur Altersfreigabe zu vertrauen; nach Änderungen dieselben Pfade erneut testen.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Signal: konkreter Zugangstest mit berichteten Plattformreaktionen; Grenze: weder eine Populationsmessung noch ein Nachweis, dass die Abhilfe versagt oder funktioniert hat.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://www.theguardian.com/technology/2026/oct/19/us-teens-nudify-apps-apple-google-parental-controls">Guardian investigation and platform responses</a></div>
+  </article>
+</section>
+
+<section class="signal-box emerging-callout">
+  <div class="section-kicker">Emerging Signal</div>
+  <h2>Berechtigung, Einblick und Ergebnis werden zu getrennten Prüfobjekten</h2>
+  <p><strong>Confidence: early_signal.</strong> Gewichtedownloads, eingebettete Evaluatoren und Aktienzusagen erhöhen auf unterschiedliche Weise Zugang oder Beteiligung. Gleichzeitig zeigen die aufgabenspezifischen Vals-Ergebnisse und der App-Store-Test, dass daraus nicht automatisch verlässliche Leistung oder wirksamer Schutz folgt. Das ist ein redaktionelles Frühsignal aus diesen Fällen, kein gemessener branchenweiter Trend.</p>
+  <p><strong>Falsifizierbar:</strong> Die Unterscheidung verliert an praktischem Gewicht, wenn Folgebelege Zugang und Ergebnis ausdrücklich verbinden: reproduzierbare Aufgabenergebnisse, veröffentlichte Prüfbefunde, vollzogene Ausschüttungen oder erfolgreiche Zugangsnachtests.</p>
+</section>
+
+<section class="concept">
+  <div class="section-kicker">🔬 Konzept des Tages</div>
+  <h2 class="concept-heading">Ein API-Alias ist keine Modellversion</h2>
+  <p><strong>Intuition:</strong> Ein Alias ist wie eine dauerhafte Adresse für ein wechselndes Team: Die Adresse bleibt gültig, obwohl andere Personen die Arbeit erledigen. API-Kompatibilität beantwortet, ob eine Anfrage noch angenommen wird. Sie beantwortet nicht, ob dasselbe Modell dieselbe Aufgabe unter denselben Bedingungen bearbeitet. DeepSeeks dokumentiertes Flash-Routing macht diese Differenz konkret, ohne für sich einen Qualitätsverlust oder -gewinn zu beweisen.</p>
+  <h3>Technische Tiefe</h3>
+    <p>Für eine reproduzierbare Auswertung sind mindestens drei Identitäten auseinanderzuhalten: der vom Client angeforderte Alias, der tatsächlich bedienende Checkpoint und die Auswertungskonfiguration. Zur letzten gehören etwa Prompt- und Tool-Versionen, Reasoning-Einstellungen, Ausgabelimits und Bewertungskriterien. Ein unverändertes SDK oder ein identischer Request-Text fixiert diese Kombination nicht. Liefert der Anbieter keine aufgelöste Version, muss der Datensatz diese Unbekannte ausdrücklich ausweisen, statt einen Alias als Versionsbeleg zu verwenden.</p>
+    <p>Regression bedeutet hier nicht, Antworten wortgleich zu verlangen. Generative Ausgaben können variieren; entscheidend sind aufgabenbezogene Akzeptanzkriterien. Prüfen lassen sich beispielsweise sachliche Richtigkeit, gültige Tool-Argumente, verbotene Aktionen und erfolgreiche Erledigung. Ein syntaktisch gültiges JSON-Objekt kann den falschen Sachverhalt enthalten oder eine unzulässige Aktion anfordern. Formatvalidität ist deshalb weder ein Nachweis korrekter Schlussfolgerungen noch ausreichender Erfolg für einen Agenten.</p>
+    <p>Auch die Wirtschaftlichkeit braucht einen festen Nenner. Gleicher Tokenpreis bedeutet nicht gleiche Kosten pro erfolgreicher Aufgabe: Ausgabelänge, Wiederholungen, Tool-Aufrufe und Fehlversuche können das Ergebnis verändern. Ein Versionsvergleich sollte deshalb Aufgaben, Harness und Einstellungen dokumentieren sowie Erfolg und Aufwand gemeinsam betrachten. Falls der alte Checkpoint nicht mehr erreichbar ist, sind gespeicherte Ausgangsergebnisse nützlich, aber kein Ersatz für einen vollständig kontrollierten Parallelvergleich.</p>
+  <p><strong>Konkretes Beispiel:</strong> Illustratives Beispiel, kein gemessenes Modellresultat: Eine Rechnungsprüfung nutzt deepseek-flash. Vor und nach einem dokumentierten Backend-Wechsel liefert sie formal gültiges JSON. In einem Testfall mit einer Gutschrift meldet die neue Ausgabe jedoch den Bruttobetrag als zahlbar. Die Schnittstelle ist kompatibel, das Format korrekt, das fachliche Ergebnis falsch. Die geeignete Reaktion ist, die betroffene Freigabe zu stoppen und anhand der festgehaltenen Testfälle zu untersuchen – nicht aus dem unveränderten Alias auf unveränderte Qualität zu schliessen.</p>
+  <p><strong>Praktische Relevanz:</strong> Für die nächste Modelländerung ein Versionsprotokoll mit angefordertem Namen, bekanntem Checkpoint oder «unbekannt», Zeitstempel und Konfigurationsstand führen. Vor mehr Traffic einen repräsentativen Regressionstest gegen gespeicherte Referenzen prüfen und eine Abbruchschwelle festlegen. Das ist eine empfohlene Vorgehensweise, kein hier durchgeführtes Experiment; das aktuelle Dossier belegt das Routing, nicht dessen lokale Auswirkungen.</p>
+  <div class="sources"><strong>Quellen:</strong> <a href="https://api-docs.deepseek.com/news/">DeepSeek operational documentation</a> · <a href="https://api-docs.deepseek.com/updates/?release=deepseek-coder">DeepSeek change log</a></div>
+</section>
+
+<section class="chapter">
+
+  <div class="section-kicker">Was als Nächstes wichtig wird</div>
+
+  <article class="story"><ul>
+
+    <li>Bis 19. November: auf eine unabhängige Flash-1017-Auswertung mit benanntem Vorgänger, dokumentiertem Harness sowie Aufgabenerfolg und mindestens einer Aufwandkennzahl achten; reine Anbieter-Benchmarktabellen reichen nicht.</li>
+
+    <li>Bis 30. November: eine veröffentlichte METR-Risikobewertung zu Anthropic verfolgen und Befunde, ausgeschlossene Informationen und Publikationsgrenzen getrennt lesen; der bestehende Cybervorfall-Forecast bleibt historisch unverändert.</li>
+
+    <li>Bis 31. Dezember: auf zusätzliche Primärangaben zur Governance des Public Benefit Fund und zu Bewertungsmeilensteinen achten; Genehmigung und tatsächliche Mittelübertragung weiterhin separat nachhalten.</li>
+
+    <li>Bis 19. November: einen dokumentierten Wiederholungstest der betroffenen App-Store-Zugangspfade nach den Plattformänderungen suchen; sowohl geschlossene als auch verbleibende Pfade sind relevante Ergebnisse.</li>
+
+  </ul></article>
+
+</section>

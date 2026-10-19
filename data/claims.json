@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-15",
+  "updated_at": "2026-10-19",
   "claims": [
     {
       "id": "2026-09-10-kya-joint-framework",
@@ -6015,6 +6015,289 @@
         "No evaluated reliability gain or validated control mechanism is supplied; the recommended version-pinning workflow is not asserted as a confirmed Specs feature."
       ],
       "date": "2026-10-15"
+    },
+    {
+      "id": "2026-10-19-72068f9fd56a",
+      "claim": "Meta's October 15 announcement releases downloadable multimodal Muse Spark Open weights and hosted access, specifying 816B total parameters, 42B active per token and a 1M-token context window; these specifications and deployment descriptions are company statements.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Meta",
+        "Muse Spark Open"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "Meta Muse Spark Open release",
+          "url": "https://research.meta.ai/blog/muse-spark-open"
+        }
+      ],
+      "contradictions": [
+        "The Muse Model License has limited commercial terms, not unrestricted open-source rights.",
+        "Meta's desktop claim concerns two M5 Ultra Mac Studios, not ordinary consumer hardware; downloadable weights do not establish affordable deployment."
+      ],
+      "date": "2026-10-19"
+    },
+    {
+      "id": "2026-10-19-e93703ddb67a",
+      "claim": "Vals reports Muse Spark Open at 46.61% ±1.20 on its Index and 61.34% ±2.09 on Finance Agent v2, with sharply different task rankings.",
+      "evidence_state": "reported",
+      "entities": [
+        "Vals",
+        "Muse Spark Open"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "independent_evaluator",
+          "name": "Vals model evaluation",
+          "url": "https://www.vals-ai.com/models/together_muse-spark-open"
+        }
+      ],
+      "contradictions": [
+        "Dossier snapshot ranks are 38/49 and 3/79; the later supplied page excerpt shows 39/50 and 3/80 with unchanged scores. Both snapshots are disclosed, not treated as identical.",
+        "Task- and configuration-specific results neither establish general superiority nor directly refute Meta's narrower US open-weight comparison."
+      ],
+      "date": "2026-10-19"
+    },
+    {
+      "id": "2026-10-19-b5ef490e7c66",
+      "claim": "DeepSeek's change log dates V4.1-Flash-1017 to October 17; supplied operational documentation routes deepseek-flash and retired deepseek-v4-flash and deepseek-v4-flash-vision-exp names to that checkpoint, with the legacy calls billed at the Flash price.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "DeepSeek",
+        "DeepSeek-V4.1-Flash-1017"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_vendor_changelog",
+          "name": "DeepSeek change log",
+          "url": "https://api-docs.deepseek.com/updates/?release=deepseek-coder"
+        },
+        {
+          "role": "primary_vendor_documentation",
+          "name": "DeepSeek API documentation",
+          "url": "https://api-docs.deepseek.com/news/"
+        }
+      ],
+      "contradictions": [
+        "Successful supplied-page retrieval was followed by a failed web retrieval; no complete later-page check is claimed.",
+        "These Flash statements do not establish current deepseek-v4-pro routing or resolve historical Pro-migration evidence deadlines.",
+        "No inspected independent evaluation quantifies checkpoint task-success or serving-economics improvements."
+      ],
+      "date": "2026-10-19"
+    },
+    {
+      "id": "2026-10-19-52f4722821fd",
+      "claim": "Anthropic's October 15 evaluator announcement, clarified October 16, says employee-like METR access has begun; six METR staff received company hardware, office space and internal access roughly comparable to Anthropic risk-assessment teams. Ars reports the implementation while attributing access scope to Anthropic.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Anthropic",
+        "METR"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "Anthropic evaluator update",
+          "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators?trk=public_post_comment-text"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "Ars / Financial Times reporting",
+          "url": "https://arstechnica.com/ai/2026/10/anthropic-gives-outside-ai-watchdog-employee-like-access"
+        }
+      ],
+      "contradictions": [
+        "Onboarding is not evidence of a completed assessment, unrestricted architectural access or release-veto authority.",
+        "No newly inspected METR findings resolve the four disclosed cyber incidents or establish incident-discovery coverage."
+      ],
+      "date": "2026-10-19"
+    },
+    {
+      "id": "2026-10-19-3b27e3f8ba1e",
+      "claim": "Anthropic says METR will publish analyses without a company publication veto, but Anthropic can require redactions in predefined categories and ultimately decides category applicability; METR retains certain rights to describe access received.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Anthropic",
+        "METR"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "Anthropic evaluator access and publication terms",
+          "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators?trk=public_post_comment-text"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "Ars / Financial Times reporting",
+          "url": "https://arstechnica.com/ai/2026/10/anthropic-gives-outside-ai-watchdog-employee-like-access"
+        }
+      ],
+      "contradictions": [
+        "Named exclusions include customer data, legally privileged information and model architecture information.",
+        "The announcement is not an inspected evaluator contract and does not establish independent release authority."
+      ],
+      "date": "2026-10-19"
+    },
+    {
+      "id": "2026-10-19-9d311b554047",
+      "claim": "Anthropic's October 18 announcement commits 5% of shares subject to stockholder approval, with discretionary additional 2% allocations for each 50% increase in company value above a baseline; it describes a wholly owned LLC and excludes lobbying and political giving from equity held there.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Anthropic",
+        "Anthropic Public Benefit Fund"
+      ],
+      "storyline": null,
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "Anthropic public-benefit fund announcement",
+          "url": "https://www.anthropic.com/news/public-benefit-fund"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "BBC reporting",
+          "url": "https://www.bbc.co.uk/news/articles/cm2kez327gdko?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "contradictions": [
+        "A pledge subject to approval is not a completed transfer, cash distribution or direct public share ownership.",
+        "Complete implementation conditions were not established; further governance and valuation-milestone details are promised in coming months."
+      ],
+      "date": "2026-10-19"
+    },
+    {
+      "id": "2026-10-19-13beb1af1189",
+      "claim": "Anthropic says the new fund commitment combined with earlier founder and employee commitments dedicates roughly 20% of shares to public good before possible valuation-linked additions.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Anthropic",
+        "Anthropic Public Benefit Fund"
+      ],
+      "storyline": null,
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "Anthropic cumulative equity commitments",
+          "url": "https://www.anthropic.com/news/public-benefit-fund"
+        }
+      ],
+      "contradictions": [
+        "Roughly 20% is cumulative, not the new allocation.",
+        "No inspected evidence establishes payouts, an enforceable implementation timetable or an AI-safety effect."
+      ],
+      "date": "2026-10-19"
+    },
+    {
+      "id": "2026-10-19-660c112ce07a",
+      "claim": "The Guardian reports TTP downloaded 135 apps with nudification or nude-body face-swapping features using four accounts identifying users as 13, two Apple and two Google; the report describes access despite parental controls and inaccurate age ratings.",
+      "evidence_state": "reported",
+      "entities": [
+        "Tech Transparency Project",
+        "Apple",
+        "Google",
+        "The Guardian"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Guardian investigation of TTP tests",
+          "url": "https://www.theguardian.com/technology/2026/oct/19/us-teens-nudify-apps-apple-google-parental-controls"
+        }
+      ],
+      "contradictions": [
+        "The original TTP report was not separately inspected and the supplied Guardian article is truncated.",
+        "Four accounts are not a population estimate; researchers used AI-generated images of women rather than photographs of real people.",
+        "Apple disputes that some listed apps have nudification or deepfake capabilities, according to the supplied Guardian source check; this capability dispute was not independently resolved."
+      ],
+      "date": "2026-10-19"
+    },
+    {
+      "id": "2026-10-19-e8a88e06bf12",
+      "claim": "Google told the Guardian it suspended violating apps and restricted related search terms; the article reports Apple strengthened moderation guidelines after TTP sought comment.",
+      "evidence_state": "reported",
+      "entities": [
+        "Apple",
+        "Google",
+        "Tech Transparency Project"
+      ],
+      "storyline": "ai-platform-regulation",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "Guardian platform-response reporting",
+          "url": "https://www.theguardian.com/technology/2026/oct/19/us-teens-nudify-apps-apple-google-parental-controls"
+        }
+      ],
+      "contradictions": [
+        "Removal completeness and subsequent effectiveness remain unverified; no inspected follow-up retests access after the changes."
+      ],
+      "date": "2026-10-19"
+    },
+    {
+      "id": "2026-10-19-df85f68ab81b",
+      "claim": "DeepSeek's documented stable-name checkpoint migration supports distinguishing API compatibility from model identity; recording backend identity and evaluation configuration is an engineering recommendation, not a completed local evaluation.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "DeepSeek"
+      ],
+      "storyline": "benchmark-integrity",
+      "support": [
+        {
+          "role": "primary_vendor_documentation",
+          "name": "DeepSeek operational documentation",
+          "url": "https://api-docs.deepseek.com/news/"
+        }
+      ],
+      "contradictions": [
+        "The invoice example is explicitly illustrative, not an observed model result.",
+        "Format validity does not establish factual correctness, authorized action or task success; no local regression or economics measurement was performed."
+      ],
+      "date": "2026-10-19"
+    },
+    {
+      "id": "2026-10-19-2187a6566253",
+      "claim": "Across the selected weight-release, evaluator-access, equity-pledge and app-enforcement cases, access or a commitment remains distinct from demonstrated operational outcomes; this is an editorial early signal, not a measured industry trend.",
+      "evidence_state": "early_signal",
+      "entities": [
+        "Meta",
+        "Anthropic",
+        "METR",
+        "Apple",
+        "Google"
+      ],
+      "storyline": null,
+      "support": [
+        {
+          "role": "primary_vendor_announcement",
+          "name": "Meta weights release",
+          "url": "https://research.meta.ai/blog/muse-spark-open"
+        },
+        {
+          "role": "primary_vendor_announcement",
+          "name": "Anthropic evaluator implementation",
+          "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators?trk=public_post_comment-text"
+        },
+        {
+          "role": "primary_vendor_announcement",
+          "name": "Anthropic equity pledge",
+          "url": "https://www.anthropic.com/news/public-benefit-fund"
+        },
+        {
+          "role": "independent_reporting",
+          "name": "Guardian enforcement investigation",
+          "url": "https://www.theguardian.com/technology/2026/oct/19/us-teens-nudify-apps-apple-google-parental-controls"
+        }
+      ],
+      "contradictions": [
+        "The cases concern different mechanisms and do not establish a causal relationship or quantitative trend.",
+        "Concrete access implementation and reported platform remediation are real developments, not evidence of no progress."
+      ],
+      "date": "2026-10-19"
     }
   ]
 }

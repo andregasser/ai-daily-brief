@@ -63,9 +63,14 @@
           "date": "2026-10-06",
           "note": "Trial unchanged; no relevant capacity-aware training evidence was reviewed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "Trial unchanged; no capacity or production evidence reviewed.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-06"
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "builder-authority-boundary-suite",
@@ -140,9 +145,14 @@
           "date": "2026-10-15",
           "note": "Trial unchanged; no reviewed evidence validates the suite's effectiveness.",
           "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "Trial unchanged; no new suite results inspected.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-15"
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "builder-inference-admin-hardening",
@@ -207,9 +217,14 @@
           "date": "2026-10-15",
           "note": "Experimental unchanged; no new remediation or endpoint-audit evidence was reviewed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "Experimental unchanged; no mutation-endpoint mitigation evidence reviewed.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-15"
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "builder-nvidia-dynamo-epd",
@@ -269,9 +284,14 @@
           "date": "2026-10-15",
           "note": "Trial unchanged pending workload-matched independent measurements.",
           "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "Trial unchanged; independent workload reproduction remains unverified.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-15"
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "builder-deepseek-v41-flash",
@@ -381,9 +401,19 @@
           "date": "2026-10-15",
           "note": "Watch unchanged pending reproducible migration and outcome-cost comparisons.",
           "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "Watch unchanged: Flash-1017 routing warrants a fresh regression review, not promotion.",
+          "sources": [
+            {
+              "label": "DeepSeek documentation",
+              "url": "https://api-docs.deepseek.com/news/"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-15"
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "builder-agent-memory-write-gate",
@@ -443,9 +473,14 @@
           "date": "2026-10-15",
           "note": "Experimental unchanged; shared editable specifications do not validate persistent-memory write controls.",
           "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "Experimental unchanged; no memory-write control evidence inspected.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-15"
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "builder-agent-registry-poc",
@@ -510,9 +545,14 @@
           "date": "2026-10-15",
           "note": "Experimental unchanged; unrelated identity projects do not establish interoperability for this registry.",
           "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "Experimental unchanged; specific cross-network interoperability remains unverified.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-15"
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "builder-hermetic-coding-agent-canary",
@@ -575,9 +615,14 @@
           "date": "2026-10-15",
           "note": "Experimental unchanged; the dated NVIDIA announcement supplies no new canary validation.",
           "sources": []
+        },
+        {
+          "date": "2026-10-19",
+          "note": "Experimental unchanged; the compaction-attack feed item is discovery only.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-15"
+      "last_reviewed": "2026-10-19"
     },
     {
       "id": "builder-outcome-cost-benchmark-harness",

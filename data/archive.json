@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-10-19",
+    "de": "briefings/2026-10-19-de.html",
+    "en": "briefings/2026-10-19-en.html",
+    "headline": {
+      "de": "KI braucht eine Beweisspur: vom Checkpoint bis zur Aufsicht",
+      "en": "AI needs an evidence trail: from checkpoints to oversight"
+    },
+    "tags": [
+      "open-weights",
+      "model-versioning",
+      "independent-evaluation",
+      "ai-governance",
+      "public-benefit",
+      "platform-safety"
+    ],
+    "concept": {
+      "de": "Ein API-Alias ist keine Modellversion",
+      "en": "An API alias is not a model version"
+    }
+  },
+  {
     "date": "2026-10-15",
     "de": "briefings/2026-10-15-de.html",
     "en": "briefings/2026-10-15-en.html",
