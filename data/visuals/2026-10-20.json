@@ -1,0 +1,75 @@
+[
+  {
+    "id": "refund-validation-boundary",
+    "target": "concept",
+    "title": {
+      "de": "Gültiges JSON, unzulässige Zahlung",
+      "en": "Valid JSON, impermissible payment"
+    },
+    "question": {
+      "de": "Welche Prüfung stoppt eine formal passende, aber zu hohe Erstattung?",
+      "en": "Which check stops a structurally valid but excessive refund?"
+    },
+    "caption": {
+      "de": "Illustratives Beispiel, kein API-Payload oder gemessenes Modellergebnis. Die Beträge sind frei gewählte Beispieldaten; AWS dokumentiert die Grenze zwischen akzeptierten Schema-Vorgaben und Durchsetzung.",
+      "en": "Illustrative example, not an API payload or measured model result. Amounts are invented example inputs; AWS documents the boundary between accepted schema requirements and enforcement."
+    },
+    "takeaway": {
+      "de": "Vor einer Zahlung müssen Werte- und Geschäftsregeln geprüft werden; parsebares JSON genügt nicht.",
+      "en": "Value and business rules must be checked before payment; parseable JSON is insufficient."
+    },
+    "sources": [
+      {
+        "label": "AWS schema support and exceptions",
+        "url": "https://aws.amazon.com/blogs/machine-learning/structured-outputs-for-anthropic-claude-models-on-amazon-bedrock"
+      }
+    ],
+    "kind": "decision",
+    "example": true,
+    "input": {
+      "de": "Ausgabe: {\"refund_chf\":125}; Richtlinienlimit: 100 CHF; belegter Kaufbetrag: 80 CHF.",
+      "en": "Output: {\"refund_chf\":125}; policy limit: CHF 100; documented purchase amount: CHF 80."
+    },
+    "question_label": {
+      "de": "Darf die Anwendung auszahlen?",
+      "en": "May the application pay?"
+    },
+    "outcomes": [
+      {
+        "label": {
+          "de": "Nur JSON prüfen",
+          "en": "Check JSON only"
+        },
+        "detail": {
+          "de": "Zahlenfeld ist parsebar; die zu hohe Zahlung bliebe unentdeckt.",
+          "en": "Numerical field parses; the excessive payment would go undetected."
+        }
+      },
+      {
+        "label": {
+          "de": "Werte und Regeln prüfen",
+          "en": "Check values and rules"
+        },
+        "detail": {
+          "de": "125 überschreitet sowohl das Limit 100 als auch den Kaufbetrag 80.",
+          "en": "125 exceeds both the limit of 100 and the purchase amount of 80."
+        }
+      },
+      {
+        "label": {
+          "de": "Erneut generieren",
+          "en": "Generate again"
+        },
+        "detail": {
+          "de": "Eine neue Antwort braucht dieselben Prüfungen; Wiederholung ist keine Freigabe.",
+          "en": "A new answer needs the same checks; retrying is not approval."
+        }
+      }
+    ],
+    "selected": 1,
+    "result": {
+      "de": "Auszahlung blockieren und zur Korrektur oder Prüfung weiterleiten; die JSON-Gültigkeit belegt kein korrektes Schlussfolgern.",
+      "en": "Block payment and route to correction or review; JSON validity does not establish correct reasoning."
+    }
+  }
+]

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-19",
+  "updated_at": "2026-10-20",
   "predictions": [
     {
       "id": "pred-kya-interoperability-2026-10",
@@ -77,9 +77,14 @@
           "date": "2026-10-19",
           "note": "Open unchanged: targeted search did not verify an implementable artifact from the specific initiative by October 15.",
           "sources": []
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain open: search surfaced similarly named Sumsub and other KYA efforts, not verified delivery by the specific cross-network initiative.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "pred-deepseek-v41-evidence-2026-09",
@@ -155,9 +160,14 @@
           "date": "2026-10-19",
           "note": "Falsified unchanged: the October 17 update does not establish the independent economics evidence required by September 24.",
           "sources": []
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain falsified: no verified new comparative economics evidence changes the deadline assessment.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "pred-china-hbm-pricing-q4",
@@ -209,9 +219,14 @@
               "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators?trk=public_post_comment-text"
             }
           ]
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain open: no relevant independent incident-review findings were verified.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "pred-epd-independent-evidence-2026-10",
@@ -286,9 +301,19 @@
           "date": "2026-10-19",
           "note": "Open unchanged: targeted search did not establish qualifying independent production-style reproduction by October 15.",
           "sources": []
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain open pending review: EAServe is a relevant September 25 preprint, but inspected evidence does not establish reproduction of NVIDIA Dynamo benefits on qualifying workloads.",
+          "sources": [
+            {
+              "label": "EAServe preprint",
+              "url": "https://arxiv.org/abs/2609.31551"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "pred-us-duty-of-care-draft-2026-09",
@@ -405,9 +430,14 @@
               "url": "https://www.commerce.senate.gov/press/dem/release/cantwell-outlines-comprehensive-governance-framework-for-safe-and-secure-frontier-ai/"
             }
           ]
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain open: this pass did not resolve the overdue draft-or-slippage condition.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "pred-openai-misalignment-disclosure-2026-10",
@@ -455,9 +485,14 @@
           "date": "2026-10-19",
           "note": "Confirmed unchanged; no relevant new verification was performed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain confirmed; no relevant contrary evidence was verified.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "pred-uae-ai-resilience-plan-2026-10",
@@ -485,9 +520,14 @@
           "date": "2026-10-19",
           "note": "Open unchanged; no relevant new project evidence was inspected.",
           "sources": []
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain open: no qualifying resilience change or reaffirmation was verified.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "pred-embedded-evaluator-details-2026-09",
@@ -600,9 +640,14 @@
               "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators?trk=public_post_comment-text"
             }
           ]
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain confirmed; evaluation commentary does not change the prior operational-details finding.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "pred-sglang-cve-remediation-2026-09",
@@ -690,9 +735,14 @@
           "date": "2026-10-19",
           "note": "Falsified unchanged; no new remediation evidence was inspected.",
           "sources": []
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain falsified: no verified remediation evidence changes the historical deadline assessment.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "pred-deepseek-alias-regression-2026-09",
@@ -779,9 +829,14 @@
           "date": "2026-10-19",
           "note": "Falsified unchanged: current Flash routing documentation does not resolve historical Pro migration or the September 18 evidence deadline.",
           "sources": []
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain falsified: supplied alias documentation does not quantify regression or economics deltas.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "pred-frontier-pacing-operationalization-2026-09",
@@ -1834,6 +1889,55 @@
       "confidence": "low",
       "id": "pred-2026-10-19-bc86e3f4940a",
       "created": "2026-10-19",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-20, DHS or another authoritative federal implementation source will publicly clarify at least one concrete inclusion case, exclusion case or exception for third-party products developed using DeepSeek implementations.",
+      "review_after": "2026-11-20",
+      "confirmation_criteria": [
+        "A dated public federal notice, implementation FAQ or binding instruction published by the deadline explains a concrete third-party case or exception beyond repeating the exclusion language."
+      ],
+      "falsification_criteria": [
+        "An authoritative public statement by the deadline explicitly says third-party implementation guidance will not be issued within this period or defers it beyond November 20.",
+        "A documented complete implementation package finalized by the deadline explicitly leaves third-party treatment unresolved without a concrete case or exception. Missing or inaccessible evidence alone is inconclusive."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-20-2e00056e5830",
+      "created": "2026-10-20",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-11-20, Cloudflare will publish downloadable weights for the Clairic extraction model, moving beyond the hosted preview and open-weights promise.",
+      "review_after": "2026-11-20",
+      "confirmation_criteria": [
+        "An official Cloudflare release links to downloadable Clairic weight artifacts and associated usage terms available by the deadline."
+      ],
+      "falsification_criteria": [
+        "Cloudflare explicitly cancels the open-weights release or announces a release date after November 20.",
+        "An official status update dated at or after the deadline confirms that Clairic remains hosted-only and its weights have not been released. An unsuccessful search alone is inconclusive."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-20-78cc68206128",
+      "created": "2026-10-20",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-12-15, an evaluator independent of OpenAI will publish a reproducible COBOL migration comparison of GPT-6.1 Sol and at least one predecessor model.",
+      "review_after": "2026-12-15",
+      "confirmation_criteria": [
+        "A non-OpenAI evaluator publishes tasks or an accessible task-generation procedure, behavioral checking methods, model identities and reasoning settings, with comparative results by the deadline.",
+        "The report evaluates migration behavior rather than merely repeating OpenAI's published percentages; it need not reproduce the size of OpenAI's reported gain."
+      ],
+      "falsification_criteria": [
+        "A candidate report presented as the qualifying comparison is shown to use no actual model runs, to omit the predecessor comparison, or to be OpenAI-conducted rather than independent; this falsifies that candidate, not the forecast by itself.",
+        "The forecast is falsified at the deadline only if a documented sufficiently comprehensive publication review establishes that no qualifying comparison appeared; incomplete coverage or inaccessible evidence remains inconclusive."
+      ],
+      "confidence": "low",
+      "id": "pred-2026-10-20-33a53c606962",
+      "created": "2026-10-20",
       "status": "open",
       "evidence": []
     }

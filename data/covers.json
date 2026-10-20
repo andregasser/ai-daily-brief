@@ -185,5 +185,15 @@
       "de": "Meta veröffentlicht grosse Modellgewichte, DeepSeek ändert das Backend hinter vertrauten Namen und Anthropic konkretisiert Aufsicht und Gemeinwohlzusagen. Entscheidend sind die jeweils überprüfbaren Grenzen – nicht das Etikett «offen», «unabhängig» oder «sicher».",
       "en": "Meta releases large model weights, DeepSeek changes the backend behind familiar names, and Anthropic makes oversight and public-benefit commitments more concrete. What matters is each arrangement’s verifiable boundaries—not the labels “open”, “independent” or “safe”."
     }
+  },
+  "2026-10-20": {
+    "kicker": {
+      "de": "Die Leitgeschichte",
+      "en": "The lead story"
+    },
+    "deck": {
+      "de": "Spezialisierte Extraktion, strukturierte Ausgaben und schrittweise Agentenrechte werden konkret. Doch weder gültige Datentypen noch grosse Benchmark-Sprünge ersetzen die Prüfung von Inhalt, Berechtigung und Modellherkunft.",
+      "en": "Specialized extraction, structured outputs and incremental agent permissions are becoming concrete. But neither valid types nor large benchmark gains replace checks on content, authority and model provenance."
+    }
   }
 }

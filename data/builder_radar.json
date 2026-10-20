@@ -68,9 +68,14 @@
           "date": "2026-10-19",
           "note": "Trial unchanged; no capacity or production evidence reviewed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain trial; no new capacity or workload evidence reviewed.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "builder-authority-boundary-suite",
@@ -150,9 +155,14 @@
           "date": "2026-10-19",
           "note": "Trial unchanged; no new suite results inspected.",
           "sources": []
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain trial; incremental MCP authorization offers a new test case, not a completed validation.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "builder-inference-admin-hardening",
@@ -222,9 +232,14 @@
           "date": "2026-10-19",
           "note": "Experimental unchanged; no mutation-endpoint mitigation evidence reviewed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain experimental; no new control-plane hardening evidence verified.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "builder-nvidia-dynamo-epd",
@@ -289,9 +304,14 @@
           "date": "2026-10-19",
           "note": "Trial unchanged; independent workload reproduction remains unverified.",
           "sources": []
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain trial; EAServe merits follow-up but does not establish this implementation's production benefit.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "builder-deepseek-v41-flash",
@@ -411,9 +431,14 @@
               "url": "https://api-docs.deepseek.com/news/"
             }
           ]
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain watch; neither DeepInfer discovery nor procurement restrictions establish model regression performance.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "builder-agent-memory-write-gate",
@@ -478,9 +503,14 @@
           "date": "2026-10-19",
           "note": "Experimental unchanged; no memory-write control evidence inspected.",
           "sources": []
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain experimental; no relevant memory-write enforcement evidence reviewed.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "builder-agent-registry-poc",
@@ -550,9 +580,14 @@
           "date": "2026-10-19",
           "note": "Experimental unchanged; specific cross-network interoperability remains unverified.",
           "sources": []
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain experimental; similarly named KYA products do not validate the internal registry design.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "builder-hermetic-coding-agent-canary",
@@ -620,9 +655,14 @@
           "date": "2026-10-19",
           "note": "Experimental unchanged; the compaction-attack feed item is discovery only.",
           "sources": []
+        },
+        {
+          "date": "2026-10-20",
+          "note": "Retain experimental; coding benchmark gains do not establish hermetic execution safety.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-19"
+      "last_reviewed": "2026-10-20"
     },
     {
       "id": "builder-outcome-cost-benchmark-harness",
