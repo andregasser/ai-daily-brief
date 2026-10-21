@@ -73,9 +73,14 @@
           "date": "2026-10-20",
           "note": "Retain trial; no new capacity or workload evidence reviewed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Trial unchanged; no new capacity or workload evaluation was reviewed.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "builder-authority-boundary-suite",
@@ -160,9 +165,19 @@
           "date": "2026-10-20",
           "note": "Retain trial; incremental MCP authorization offers a new test case, not a completed validation.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Trial unchanged; NVIDIA's separated enforcement design supplies a relevant architecture case, not validation of the suite.",
+          "sources": [
+            {
+              "label": "OpenShell architecture",
+              "url": "https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "builder-inference-admin-hardening",
@@ -237,9 +252,14 @@
           "date": "2026-10-20",
           "note": "Retain experimental; no new control-plane hardening evidence verified.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Experimental unchanged; agent-runtime controls do not establish hardening of inference mutation endpoints.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "builder-nvidia-dynamo-epd",
@@ -309,9 +329,19 @@
           "date": "2026-10-20",
           "note": "Retain trial; EAServe merits follow-up but does not establish this implementation's production benefit.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Trial unchanged; Intel's partial evidence warrants follow-up rather than promotion.",
+          "sources": [
+            {
+              "label": "Intel technical brief excerpt",
+              "url": "https://community.intel.com/t5/Blogs/Tech-Innovation/Data-Center/Lowering-Multimodal-Inference-Cost-with-Heterogeneous-E-PD/post/1752499/jump-to/first-unread-message"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "builder-deepseek-v41-flash",
@@ -436,9 +466,19 @@
           "date": "2026-10-20",
           "note": "Retain watch; neither DeepInfer discovery nor procurement restrictions establish model regression performance.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Watch unchanged; alias routing remains documented but no new reproducible regression evidence was verified.",
+          "sources": [
+            {
+              "label": "Supplied DeepSeek API documentation",
+              "url": "https://api-docs.deepseek.com/news/"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "builder-agent-memory-write-gate",
@@ -508,9 +548,14 @@
           "date": "2026-10-20",
           "note": "Retain experimental; no relevant memory-write enforcement evidence reviewed.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Experimental unchanged; no memory-write-specific enforcement evidence was verified.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "builder-agent-registry-poc",
@@ -585,9 +630,14 @@
           "date": "2026-10-20",
           "note": "Retain experimental; similarly named KYA products do not validate the internal registry design.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Experimental unchanged; discovered KYA artifacts lack verified interoperability with the intended registry.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "builder-hermetic-coding-agent-canary",
@@ -660,9 +710,14 @@
           "date": "2026-10-20",
           "note": "Retain experimental; coding benchmark gains do not establish hermetic execution safety.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Experimental unchanged; hardware-separated monitoring is relevant but does not demonstrate hermetic repository execution.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "builder-outcome-cost-benchmark-harness",

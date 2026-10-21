@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-20",
+  "updated_at": "2026-10-21",
   "claims": [
     {
       "id": "2026-09-10-kya-joint-framework",
@@ -6531,6 +6531,306 @@
         "The feature announcements do not establish independently measured end-to-end gains or satisfy the historical two-platform runtime-policy-plus-customer-telemetry thesis."
       ],
       "date": "2026-10-20"
+    },
+    {
+      "id": "2026-10-21-69c5303861a3",
+      "claim": "NVIDIA's October 21 reference architecture places OpenShell agent execution on Vera CPUs and Sentry on BlueField-4 in a separate hardware trust domain between agents and models.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "NVIDIA",
+        "OpenShell",
+        "Vera",
+        "BlueField-4",
+        "Sentry"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_technical_documentation",
+          "name": "NVIDIA OpenShell reference architecture",
+          "url": "https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale"
+        }
+      ],
+      "contradictions": [
+        "Published design does not establish independent containment or general availability of every component.",
+        "September 28–30 community descriptions limit novelty to technical elaboration, not first launch; NVIDIA hardware dependence limits portability."
+      ],
+      "date": "2026-10-21"
+    },
+    {
+      "id": "2026-10-21-c6bcdf1f2069",
+      "claim": "NVIDIA says Sentry monitors communications and selected host memory without agent self-reporting and can quarantine agents within milliseconds.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "NVIDIA",
+        "Sentry",
+        "BlueField-4"
+      ],
+      "storyline": "agent-security",
+      "support": [
+        {
+          "role": "primary_technical_documentation",
+          "name": "NVIDIA OpenShell architecture details",
+          "url": "https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale"
+        }
+      ],
+      "contradictions": [
+        "No independent adversarial evaluation or measured containment-latency distribution was verified; hardware separation alone does not prove complete enforcement."
+      ],
+      "date": "2026-10-21"
+    },
+    {
+      "id": "2026-10-21-f087afc20eec",
+      "claim": "NVIDIA announced DSX POD on October 21 as a factory-integrated Vera Rubin reference design standardizing containerized compute, networking, storage, power and cooling, with partners handling manufacturing, regional engineering, deployment and support.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "NVIDIA",
+        "DSX POD",
+        "Vera Rubin"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "primary_technical_announcement",
+          "name": "NVIDIA DSX POD design",
+          "url": "https://developer.nvidia.com/blog/achieve-productive-ai-capacity-faster-and-more-predictably-with-nvidia-dsx-pod/"
+        }
+      ],
+      "contradictions": [
+        "Verified customer deployments and availability dates remain missing; a reference design is not delivered productive capacity."
+      ],
+      "date": "2026-10-21"
+    },
+    {
+      "id": "2026-10-21-3f1ac3154bb1",
+      "claim": "NVIDIA claims DSX POD onsite deployment can shrink from six months to 14 days once site utilities are ready; this conditional interval is not the complete project lead time.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "NVIDIA",
+        "DSX POD"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "primary_keynote_excerpt",
+          "name": "NVIDIA GTC Berlin keynote",
+          "url": "https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote"
+        },
+        {
+          "role": "primary_technical_documentation",
+          "name": "NVIDIA DSX POD integration design",
+          "url": "https://developer.nvidia.com/blog/achieve-productive-ai-capacity-faster-and-more-predictably-with-nvidia-dsx-pod/"
+        }
+      ],
+      "contradictions": [
+        "Utilities, permitting and site preparation remain outside the claimed interval; only a truncated keynote excerpt was supplied."
+      ],
+      "date": "2026-10-21"
+    },
+    {
+      "id": "2026-10-21-e762b4707599",
+      "claim": "Google and Meta released the initial open-source TorchTPU backend on October 20; PyTorch describes native TPU support with eager-execution optimizations and torch.compile integration.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Google",
+        "Meta",
+        "PyTorch",
+        "TorchTPU"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "primary_project_announcement",
+          "name": "PyTorch introduction",
+          "url": "https://pytorch.org/blog/introducing-torchtpu"
+        },
+        {
+          "role": "primary_vendor_announcement",
+          "name": "Google October 20 launch",
+          "url": "https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus"
+        }
+      ],
+      "contradictions": [
+        "Native support does not establish universal compatibility, lower migration cost or competitive workload economics."
+      ],
+      "date": "2026-10-21"
+    },
+    {
+      "id": "2026-10-21-679693102713",
+      "claim": "TorchTPU's stated next six-to-12-month roadmap includes production hardening and ecosystem expansion; vLLM separately announced vllm-torchtpu on October 20.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "TorchTPU",
+        "PyTorch",
+        "vLLM",
+        "Google"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "primary_project_announcement",
+          "name": "PyTorch release and roadmap",
+          "url": "https://pytorch.org/blog/introducing-torchtpu"
+        },
+        {
+          "role": "primary_release_announcement",
+          "name": "vLLM TorchTPU release",
+          "url": "https://vllm.ai/blog/2026-10-20-vllm-torchtpu"
+        }
+      ],
+      "contradictions": [
+        "The dossier verified the vLLM release through a search excerpt; independent benchmark methods and results were not examined.",
+        "A hardening roadmap limits universal-readiness claims without establishing that no production workloads already exist."
+      ],
+      "date": "2026-10-21"
+    },
+    {
+      "id": "2026-10-21-caa2a827af39",
+      "claim": "Mistral's October 20 Voxtral 3 release adds updated transcription, speech generation and voice-agent tooling; its governance listing identifies Voxtral Mini Transcribe 3 as active from October 20.",
+      "evidence_state": "confirmed_primary",
+      "entities": [
+        "Mistral",
+        "Voxtral 3",
+        "Voxtral Mini Transcribe 3"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_product_announcement",
+          "name": "Mistral Voxtral 3",
+          "url": "https://mistral.ai/news/voxtral-3"
+        },
+        {
+          "role": "primary_model_governance",
+          "name": "Voxtral 3 lifecycle listing",
+          "url": "https://legal.mistral.ai/ai-governance/models/voxtral-3/"
+        }
+      ],
+      "contradictions": [
+        "Listed active status is not independent evidence of regional availability or self-deployment availability."
+      ],
+      "date": "2026-10-21"
+    },
+    {
+      "id": "2026-10-21-5737525d4479",
+      "claim": "Mistral advertises transcription across 50+ languages and speech generation across 35+ languages and 50+ dialects; these are distinct coverage sets.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Mistral",
+        "Voxtral 3"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_product_announcement",
+          "name": "Mistral Voxtral 3 coverage",
+          "url": "https://mistral.ai/news/voxtral-3"
+        }
+      ],
+      "contradictions": [
+        "Independent language-level quality checks were not verified; coverage counts do not establish interruption handling or tool-use reliability."
+      ],
+      "date": "2026-10-21"
+    },
+    {
+      "id": "2026-10-21-2b1a78f6e6a5",
+      "claim": "Mistral lists Mini Transcribe Realtime 3 at $0.008 per audio minute and claims sub-500ms transcription latency across 40+ languages, narrower than headline transcription coverage.",
+      "evidence_state": "vendor_claim",
+      "entities": [
+        "Mistral",
+        "Mini Transcribe Realtime 3"
+      ],
+      "storyline": "agent-economics",
+      "support": [
+        {
+          "role": "primary_product_listing",
+          "name": "Mistral realtime model pricing and latency",
+          "url": "https://mistral.ai/news/voxtral-3"
+        }
+      ],
+      "contradictions": [
+        "Transcription latency is not end-to-end conversational response latency; regional availability and self-deployment were not verified."
+      ],
+      "date": "2026-10-21"
+    },
+    {
+      "id": "2026-10-21-adf1047012c1",
+      "claim": "BBC reports Musk's October 20 confirmation that special committees at Tesla and SpaceX are considering a merger, with no agreed terms or guarantee; he acknowledged conflicts and shareholder approval requirements.",
+      "evidence_state": "reported",
+      "entities": [
+        "Elon Musk",
+        "Tesla",
+        "SpaceX"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "BBC merger exploration reporting",
+          "url": "https://www.bbc.co.uk/news/articles/cmlyl09xjke4o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "contradictions": [
+        "No committee documents, transaction filing or primary earnings transcript was verified; exploration is not a signed or completed merger."
+      ],
+      "date": "2026-10-21"
+    },
+    {
+      "id": "2026-10-21-1b27c3afcc46",
+      "claim": "BBC reports SpaceX cloud-compute revenue of $7.5 billion for the quarter ended September 30 versus $813 million a year earlier, and Musk's chips, AI and software rationale for a potential merger.",
+      "evidence_state": "reported",
+      "entities": [
+        "SpaceX",
+        "Tesla",
+        "Elon Musk"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "independent_reporting",
+          "name": "BBC earnings and strategic rationale",
+          "url": "https://www.bbc.co.uk/news/articles/cmlyl09xjke4o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "contradictions": [
+        "Figures were not reconciled against company financial statements; strategic rationale does not demonstrate synergies or operational change."
+      ],
+      "date": "2026-10-21"
+    },
+    {
+      "id": "2026-10-21-0902213cdbb9",
+      "claim": "The selected agent-runtime, accelerator-backend and infrastructure announcements suggest a shared push to reduce deployment integration friction; realized reliability and economic gains remain unproven.",
+      "evidence_state": "early_signal",
+      "entities": [
+        "NVIDIA",
+        "Google",
+        "Meta",
+        "TorchTPU",
+        "DSX POD",
+        "OpenShell"
+      ],
+      "storyline": "ai-stack-verticalization",
+      "support": [
+        {
+          "role": "primary_technical_documentation",
+          "name": "NVIDIA OpenShell reference architecture",
+          "url": "https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale"
+        },
+        {
+          "role": "primary_project_announcement",
+          "name": "PyTorch TorchTPU introduction",
+          "url": "https://pytorch.org/blog/introducing-torchtpu"
+        },
+        {
+          "role": "primary_technical_announcement",
+          "name": "NVIDIA DSX POD design",
+          "url": "https://developer.nvidia.com/blog/achieve-productive-ai-capacity-faster-and-more-predictably-with-nvidia-dsx-pod/"
+        }
+      ],
+      "contradictions": [
+        "This is editorial synthesis, not a measured deployment trend; hardware dependencies, compatibility gaps and site readiness may offset integration savings."
+      ],
+      "date": "2026-10-21"
     }
   ]
 }

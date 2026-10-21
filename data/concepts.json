@@ -1081,6 +1081,36 @@
         "de": "briefings/2026-10-20-de.html",
         "en": "briefings/2026-10-20-en.html"
       }
+    },
+    {
+      "id": "productive-capacity-critical-path",
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21",
+      "title": {
+        "de": "Konzept des Tages: Installationszeit ist nicht Zeit bis zur produktiven Kapazität",
+        "en": "Concept of the Day: Installation time is not time to productive capacity"
+      },
+      "summary": {
+        "de": "Ein schnellerer Teilprozess verkürzt ein Infrastrukturprojekt nur dann, wenn er dessen kritischen Pfad verändert; NVIDIAs 14-Tage-Angabe beginnt erst nach bereitgestellter Standortversorgung.",
+        "en": "A faster subprocess shortens an infrastructure project only if it changes the critical path; NVIDIA's 14-day figure starts only after site utilities are ready."
+      },
+      "tags": [
+        "critical-path",
+        "infrastructure",
+        "procurement"
+      ],
+      "storylines": [
+        "ai-stack-verticalization"
+      ],
+      "sources": [
+        "https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote",
+        "https://developer.nvidia.com/blog/achieve-productive-ai-capacity-faster-and-more-predictably-with-nvidia-dsx-pod/"
+      ],
+      "related_concepts": [],
+      "briefing": {
+        "de": "briefings/2026-10-21-de.html",
+        "en": "briefings/2026-10-21-en.html"
+      }
     }
   ]
 }

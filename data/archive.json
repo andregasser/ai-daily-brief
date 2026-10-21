@@ -1,5 +1,27 @@
 [
   {
+    "date": "2026-10-21",
+    "de": "briefings/2026-10-21-de.html",
+    "en": "briefings/2026-10-21-en.html",
+    "headline": {
+      "de": "AI wird als System geliefert – der Betriebsnachweis fehlt oft noch",
+      "en": "AI is being packaged as a system—but operational proof often lags"
+    },
+    "tags": [
+      "agent-security",
+      "ai-stack-verticalization",
+      "AI-infrastructure",
+      "PyTorch",
+      "TPU",
+      "voice-agents",
+      "procurement"
+    ],
+    "concept": {
+      "de": "Konzept des Tages: Installationszeit ist nicht Zeit bis zur produktiven Kapazität",
+      "en": "Concept of the Day: Installation time is not time to productive capacity"
+    }
+  },
+  {
     "date": "2026-10-20",
     "de": "briefings/2026-10-20-de.html",
     "en": "briefings/2026-10-20-en.html",

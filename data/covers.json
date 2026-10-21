@@ -195,5 +195,15 @@
       "de": "Spezialisierte Extraktion, strukturierte Ausgaben und schrittweise Agentenrechte werden konkret. Doch weder gültige Datentypen noch grosse Benchmark-Sprünge ersetzen die Prüfung von Inhalt, Berechtigung und Modellherkunft.",
       "en": "Specialized extraction, structured outputs and incremental agent permissions are becoming concrete. But neither valid types nor large benchmark gains replace checks on content, authority and model provenance."
     }
+  },
+  "2026-10-21": {
+    "kicker": {
+      "de": "Die Leitgeschichte",
+      "en": "The lead story"
+    },
+    "deck": {
+      "de": "NVIDIA verlagert Agentenkontrolle in eine separate Hardware-Vertrauensdomäne und Infrastrukturintegration in die Fabrik. TorchTPU und Voxtral 3 senken andere Integrationshürden; keine dieser Ankündigungen ersetzt den Nachweis im konkreten Betrieb.",
+      "en": "NVIDIA moves agent controls into a separate hardware trust domain and infrastructure integration into the factory. TorchTPU and Voxtral 3 lower other integration barriers; none of these announcements replaces evidence from the intended operating environment."
+    }
   }
 }

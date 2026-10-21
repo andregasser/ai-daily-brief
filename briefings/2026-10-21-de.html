@@ -1,0 +1,130 @@
+<section class="briefing-intro">
+
+  <div class="brief-label">AI Daily Brief · 21.10.2026</div>
+
+  <h1>AI wird als System geliefert – der Betriebsnachweis fehlt oft noch</h1>
+
+  <p class="dek">NVIDIA verlagert Agentenkontrolle in eine separate Hardware-Vertrauensdomäne und Infrastrukturintegration in die Fabrik. TorchTPU und Voxtral 3 senken andere Integrationshürden; keine dieser Ankündigungen ersetzt den Nachweis im konkreten Betrieb.</p>
+
+  <p><strong>Editorial Lead — Analyse:</strong> Der gemeinsame Nenner heute ist nicht ein grösseres Modell, sondern ein besser integriertes Gesamtsystem. Sicherheitskontrollen, Framework-Unterstützung und vorbereitete Infrastruktur sollen Reibung zwischen Demonstration und Einsatz abbauen. Das ist substanzieller als ein weiterer Spitzenwert, verschiebt aber die Prüfpflicht: Welche Grenze wird tatsächlich durchgesetzt, welcher Teil der Lieferzeit verkürzt und welcher Abschnitt der Sprachpipeline gemessen? Die ausgewählten technischen Meldungen beruhen überwiegend auf Primärquellen; Leistungsversprechen bleiben Anbieterangaben. Der mögliche Zusammenschluss von Tesla und SpaceX ergänzt das Bild strategisch, ist jedoch erst Gegenstand einer Prüfung. Aus integrierter Architektur folgt weder unabhängig belegte Sicherheit noch ein realisierter wirtschaftlicher Vorteil.</p>
+
+</section>
+
+<section class="executive">
+
+  <div class="section-kicker">In 60 Sekunden</div>
+
+  <div class="signal-grid">
+
+    <div><strong>Kontrolle ausserhalb des Agentenhosts</strong><br>NVIDIAs OpenShell-Referenzarchitektur trennt Agentenausführung auf Vera von Sentry auf BlueField-4. Das dokumentiert eine Hardware-Vertrauensgrenze, nicht deren unabhängig geprüfte Widerstandsfähigkeit; die Quarantäne binnen Millisekunden ist eine Anbieterangabe.</div>
+
+    <div><strong>14 Tage sind kein Gesamtprojekt</strong><br>DSX POD soll die Vor-Ort-Bereitstellung laut NVIDIA von sechs Monaten auf 14 Tage reduzieren – sobald die Standortversorgung bereitsteht. Netzanschluss, Bewilligungen und Standortvorbereitung verschwinden dadurch nicht aus dem Terminplan.</div>
+
+    <div><strong>Portabilität wird konkreter, nicht kostenlos</strong><br>TorchTPU bringt einen nativen PyTorch-Backend-Pfad auf TPUs, ergänzt durch vllm-torchtpu. Der sechs- bis zwölfmonatige Härtungsfahrplan begrenzt die Aussage zur allgemeinen Produktionsreife; entscheidend bleiben Operatorabdeckung und Gesamtkosten des eigenen Workloads.</div>
+
+    <div><strong>Sprachabdeckung und Antwortlatenz auseinanderhalten</strong><br>Mistral bewirbt 50+ Sprachen für Transkription, 35+ für Sprachausgabe und 40+ für Echtzeittranskription. Deren beworbene Latenz unter 500 ms ist keine Ende-zu-Ende-Antwortzeit eines Voice-Agents.</div>
+
+  </div>
+
+</section>
+
+<section class="chapter">
+  <div class="section-kicker">Business &amp; Strategie</div>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">2</span><span class="evidence reported">CONFIRMED_PRIMARY; VENDOR_CLAIM</span></div>
+    <h2>DSX POD verschiebt die Infrastrukturintegration vom Standort in die Fabrik</h2>
+    <p>NVIDIA hat am 21. Oktober DSX POD als fabrikintegriertes Referenzdesign für Vera-Rubin-Infrastruktur angekündigt. Es standardisiert containerisierte AI-Fabriken über Compute, Netzwerk, Storage, Stromversorgung und Kühlung hinweg. Partner übernehmen Fertigung, regionale Engineering-Arbeit, Bereitstellung und Support. Die Primärquelle belegt das veröffentlichte Design, nicht bereits ausgelieferte produktive Kapazität. Strategisch geht es darum, mehr Integrationsarbeit vor die Lieferung zu ziehen und wiederholbare Einheiten statt einzelner Komponenten zum Beschaffungsgegenstand zu machen.</p>
+    <p>Im Keynote-Auszug behauptet NVIDIA, die Vor-Ort-Bereitstellung könne von sechs Monaten auf 14 Tage schrumpfen, sobald die Standortversorgung bereitsteht. Diese Bedingung ist zentral: Bewilligungen, Netzanschluss und Standortvorbereitung liegen ausserhalb des beworbenen Intervalls. Verifizierte Kundeneinsätze und Verfügbarkeitsdaten fehlen. Vorfertigung kann einen echten Engpass verkleinern, ohne den kritischen Pfad des Gesamtprojekts zu verändern; zudem blieb die verfügbare Keynote-Quelle ein gekürzter Auszug.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Neu ist das am 21. Oktober angekündigte fabrikintegrierte Referenzdesign, nicht die grundsätzliche Idee modularer Rechenzentren.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Wettbewerb um AI-Infrastruktur könnte stärker über wiederholbare Lieferung und Abnahme als nur über Beschleunigerspezifikationen laufen.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Angebote nach Fabrikabnahme, Standortbereitschaft, Installation und produktiver Abnahme gliedern und für jeden Übergang Verantwortliche sowie Nachweise verlangen.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Signal: Integration wird vorgezogen; Hype wäre, aus 14 Tagen nach Standortbereitschaft eine vollständige Projektlaufzeit abzuleiten.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://developer.nvidia.com/blog/achieve-productive-ai-capacity-faster-and-more-predictably-with-nvidia-dsx-pod/">NVIDIA DSX POD technical announcement</a> · <a href="https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote">NVIDIA GTC Berlin keynote excerpt</a></div>
+  </article>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">5</span><span class="evidence reported">REPORTED</span></div>
+    <h2>Tesla und SpaceX prüfen eine Fusion – eine Vereinbarung gibt es nicht</h2>
+    <p>Laut unabhängigem BBC-Bericht vom 20. Oktober hat Elon Musk bestätigt, dass Sonderausschüsse beider Unternehmen einen Zusammenschluss prüfen. Er sagte ausdrücklich, dass keine Transaktionsbedingungen vereinbart seien und eine Fusion nicht garantiert sei. Musk bezeichnete sich als Interessenkonfliktpartei; die Entscheidung brauche die Zustimmung der Aktionäre. Verifiziert wurden weder Ausschussdokumente noch eine Transaktionsmeldung oder ein primäres Transkript der Analystenkonferenz. Die Meldung ist deshalb ein berichteter strategischer Prozess, kein abgeschlossener Deal.</p>
+    <p>Die AI-Relevanz liegt im möglichen Zusammenführen von Infrastruktur- und Robotikinteressen. Die BBC berichtet für SpaceXs Cloud-Compute-Geschäft 7,5 Milliarden US-Dollar Umsatz im Quartal bis 30. September, gegenüber 813 Millionen US-Dollar ein Jahr zuvor. Musk verknüpfte mögliche Vorteile mit Chips, AI und Software. Die Zahlen wurden nicht mit Unternehmensabschlüssen abgeglichen; auch eine solche Umsatzentwicklung belegt keine Fusionssynergien. Für Kunden und Engineering-Teams ergibt sich daraus noch keine verifizierte operative Änderung.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Musk hat die aktive Prüfung und Sonderausschüsse öffentlich bestätigt; aus Überlegungen wurden keine vereinbarten Bedingungen.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Eine mögliche Bündelung von AI-Infrastruktur und Robotik wäre strategisch bedeutend, bleibt aber von Interessenkonflikten und Aktionärsentscheidungen abhängig.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Formelle Offenlegungen verfolgen, bevor Annahmen zu Lieferantenstruktur, Verträgen oder Infrastrukturplanung geändert werden.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Signal: Konsolidierungsabsicht; Hype wäre, Prüfung mit Fusion oder strategische Begründung mit nachgewiesenen Synergien gleichzusetzen.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://www.bbc.co.uk/news/articles/cmlyl09xjke4o?at_medium=RSS&amp;at_campaign=rss">BBC: Musk confirms Tesla–SpaceX merger consideration</a></div>
+  </article>
+</section>
+
+<section class="chapter">
+  <div class="section-kicker">Modelle, Agents &amp; Engineering</div>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">1</span><span class="evidence reported">CONFIRMED_PRIMARY; VENDOR_CLAIM</span></div>
+    <h2>OpenShell erhält eine explizite Hardware-Grenze für Überwachung und Durchsetzung</h2>
+    <p>NVIDIAs technische Dokumentation vom 21. Oktober beschreibt die Arbeitsteilung: OpenShell-Agenten laufen auf Vera-CPUs, Sentry auf BlueField-4 in einer separaten Hardware-Vertrauensdomäne zwischen Agenten und Modellen. Der materielle Fortschritt ist damit nicht bloss mehr Logging, sondern ein dokumentierter Ort für Kontrolle ausserhalb der Hostsoftware des Agenten. Die Primärquelle bestätigt diese Architektur; sie bestätigt weder die allgemeine Verfügbarkeit sämtlicher Komponenten noch unabhängig demonstrierte Eindämmung.</p>
+    <p>NVIDIA zufolge überwacht Sentry Kommunikation und ausgewählte Bereiche des Hostspeichers, ohne auf Selbstberichte des Agenten angewiesen zu sein, und kann Agenten binnen Millisekunden unter Quarantäne stellen. Dafür fehlen eine verifizierte unabhängige adversariale Evaluation und eine gemessene Verteilung der Eindämmungslatenz. Frühere Community-Beiträge vom 28.–30. September beschrieben OpenShell und Sentry bereits: Die heutige Meldung ist technische Vertiefung, kein belastbarer Erstlaunch. Die Bindung an NVIDIA-Hardware begrenzt zudem die Portabilität der beschriebenen Lösung.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Die neue Dokumentation macht die Aufteilung von Ausführung, Beobachtung und Durchsetzung zwischen OpenShell, Vera und BlueField-4 konkreter.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Eine Kontrollinstanz ausserhalb des Agentenhosts adressiert eine andere Fehlerklasse als Sicherheitsregeln, die nur innerhalb derselben Softwareumgebung gelten.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Vor einem hardwareabhängigen Pilot die tatsächlichen Vertrauensgrenzen, Policy-Schnittstellen und erfassten Kommunikationspfade prüfen; eine separate Domäne allein beweist keine lückenlose Durchsetzung.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Signal: explizite externe Durchsetzungsdomäne; Hype wäre, Architektur und Millisekundenversprechen als unabhängigen Sicherheitsnachweis zu lesen.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale">NVIDIA OpenShell reference architecture, October 21</a></div>
+  </article>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">3</span><span class="evidence reported">CONFIRMED_PRIMARY; VENDOR_CLAIM</span></div>
+    <h2>TorchTPU macht TPUs zu einer nativeren PyTorch-Option</h2>
+    <p>Google und Meta haben am 20. Oktober den initialen Open-Source-Backend TorchTPU veröffentlicht. PyTorch beschreibt einen nativen TPU-Pfad mit Optimierungen für unmittelbare Ausführung im Eager-Modus und Integration in torch.compile. Das verändert die Migrationsfrage: Statt zuerst einen Framework-Wechsel zu planen, können Teams die Eignung eines anderen Beschleunigers näher an ihrem bestehenden PyTorch-Stack untersuchen. Daraus folgt allerdings weder vollständige Modellkompatibilität noch ein Kostenvorteil für jeden Workload.</p>
+    <p>Der Projektfahrplan sieht Produktionshärtung und einen Ausbau des Ökosystems über die nächsten sechs bis zwölf Monate vor. Separat kündigte vLLM am 20. Oktober den Backend vllm-torchtpu an; der Release wurde im Dossier über einen Suchauszug verifiziert, nicht durch eine unabhängige Benchmarkprüfung. Der eigene Härtungsfahrplan ist das stärkste Gegengewicht zu einer pauschalen Reifeerzählung. Ein verfügbarer nativer Backend reduziert Integrationshürden, beseitigt aber nicht die Arbeit an unterstützten Operationen, Workload-Verhalten und wirtschaftlich sinnvoller Konfiguration.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Ein initial veröffentlichter nativer Backend und ein angekündigter vLLM-Pfad machen die Alternative konkreter als eine reine Portabilitätsabsicht.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Weniger Framework-Reibung kann Beschleunigerwahl zu einer praktischeren Engineering- und Beschaffungsentscheidung machen.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Nicht unterstützte Operationen inventarisieren und den gesamten Trainings- oder Serving-Workload samt Migration und Betriebskosten vergleichen, statt API-Ähnlichkeit als Wirtschaftlichkeitsbeleg zu verwenden.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Signal: ein konkreter Portabilitätspfad; Hype wäre, native Unterstützung mit universeller Produktionsreife oder garantierter Kostenparität gleichzusetzen.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://pytorch.org/blog/introducing-torchtpu">PyTorch: Introducing TorchTPU</a> · <a href="https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus">Google: TorchTPU open-source launch</a> · <a href="https://vllm.ai/blog/2026-10-20-vllm-torchtpu">vLLM TorchTPU backend release</a></div>
+  </article>
+  <article class="story">
+    <div class="story-meta"><span class="priority high">4</span><span class="evidence reported">CONFIRMED_PRIMARY; VENDOR_CLAIM</span></div>
+    <h2>Voxtral 3 erweitert den Voice-Stack – mit verschiedenen Abdeckungsgrenzen</h2>
+    <p>Mistrals Release vom 20. Oktober ergänzt aktualisierte Transkription, Sprachgenerierung und Voice-Agent-Werkzeuge. Der Anbieter bewirbt Transkription für 50+ Sprachen sowie Sprachgenerierung für 35+ Sprachen und 50+ Dialekte. Das sind unterschiedliche Abdeckungsmengen, keine austauschbaren Kennzahlen. Die Governance-Liste führt Voxtral Mini Transcribe 3 ab dem 20. Oktober als aktiv. Unabhängige Qualitätsprüfungen pro Sprache wurden nicht verifiziert; aus der Anzahl unterstützter Sprachen lässt sich keine einheitliche Qualität ableiten.</p>
+    <p>Für Mini Transcribe Realtime 3 nennt die Produktseite 0,008 US-Dollar pro Audiominute und eine Transkriptionslatenz unter 500 ms bei 40+ Sprachen. Diese Echtzeitabdeckung ist enger als die allgemeine Transkriptionsabdeckung. Zudem umfasst die Zahl nicht die vollständige Antwort eines Gesprächsagenten mit Denken, Werkzeugaufrufen und Sprachausgabe. Regionale Verfügbarkeit und Self-Deployment wurden nicht verifiziert. Anbieter-Superlative belegen auch weder zuverlässige Unterbrechungsbehandlung noch korrekte Tool-Nutzung im laufenden Gespräch.</p>
+    <p class="changed"><strong><span class="editorial-icon" aria-hidden="true">✨</span>Was ist neu?</strong> Neu ist die aktualisierte Kombination aus Transkription, Sprachausgabe und Voice-Agent-Werkzeugen, nicht der Nachweis einer überall gleich zuverlässigen Gesprächspipeline.</p>
+    <p class="why"><strong><span class="editorial-icon" aria-hidden="true">🎯</span>Warum relevant?</strong> Voice-Agent-Beschaffung muss die gesamte Gesprächskette bewerten, weil eine schnelle Teilkomponente keine schnelle oder korrekte Gesamtantwort garantiert.</p>
+    <p class="engineering"><strong><span class="editorial-icon" aria-hidden="true">🛠️</span>Engineering Takeaway:</strong> Für jede Zielsprache Abdeckung, Erkennung des Sprechendes, Unterbrechungen, Tool-Erfolg und vollständige Gesprächslatenz getrennt abnehmen.</p>
+    <p class="signal-hype"><strong><span class="editorial-icon" aria-hidden="true">⚖️</span>Signal vs. Hype:</strong> Signal: ein breiterer integrierter Voice-Stack; Hype wäre, 50+ Sprachen und unter 500 ms auf jede Funktion und das ganze Gespräch zu übertragen.</p>
+    <div class="sources"><strong>Quellen:</strong> <a href="https://mistral.ai/news/voxtral-3">Mistral Voxtral 3 announcement and pricing</a> · <a href="https://legal.mistral.ai/ai-governance/models/voxtral-3/">Mistral Voxtral 3 governance listing</a></div>
+  </article>
+</section>
+
+<section class="signal-box emerging-callout">
+  <div class="section-kicker">Emerging Signal</div>
+  <h2>Weniger Integrationsarbeit wird zum Produktversprechen</h2>
+  <p><strong>Confidence: medium.</strong> Hardwaregetrennte Agentenkontrolle, native Beschleuniger-Backends und fabrikintegrierte Infrastruktur adressieren verschiedene Übergaben auf dem Weg zum Betrieb. Das gemeinsame frühe Signal ist die Verpackung eines vollständigeren Systems, nicht bereits nachgewiesene autonome Zuverlässigkeit. Die Dokumentation ist derzeit stärker als die unabhängige operative Evidenz.</p>
+  <p><strong>Falsifizierbar:</strong> Die operative These würde geschwächt, wenn belastbare Einsatzberichte zeigen, dass neue Hardwarebindungen, Kompatibilitätslücken oder unveränderte Standortabhängigkeiten die eingesparte Integrationsarbeit wieder aufzehren.</p>
+</section>
+
+<section class="concept">
+  <div class="section-kicker">🔬 Konzept des Tages</div>
+  <h2 class="concept-heading">Konzept des Tages: Installationszeit ist nicht Zeit bis zur produktiven Kapazität</h2>
+  <p><strong>Intuition:</strong> Eine vorgefertigte Küche lässt sich rasch montieren, macht ein Haus ohne Strom und Wasser aber nicht bewohnbar. Ähnlich kann eine fabrikintegrierte AI-Einheit die Arbeit am Standort reduzieren, während Netzanschluss, Bewilligungen oder externe Konnektivität weiterhin den Start bestimmen. Die richtige Frage lautet deshalb nicht nur «Wie schnell ist die Installation?», sondern «Ab welchem Ereignis läuft diese Uhr, und welcher Nachweis stoppt sie?»</p>
+  <h3>Technische Tiefe</h3>
+    <p>Ein Terminplan ist ein Netz von Abhängigkeiten, keine Liste beliebig addierbarer Dauern. Fabrikintegration und Standortvorbereitung können parallel laufen. Als vereinfachtes Planungsmodell gilt: Betriebsbereitschaft liegt frühestens bei max(Fabrikfreigabe plus Transport, Standortbereitschaft) plus notwendiger Vor-Ort-Integration und Abnahme. Das ist eine illustrative Struktur, keine Messung von DSX POD; tatsächliche Projekte können zusätzliche Abhängigkeiten haben.</p>
+    <p>Vorfertigung verschiebt Montage und Prüfungen nach vorne. Das kann Nacharbeit am Standort verringern, ersetzt aber nicht automatisch die Prüfung der zusammengesetzten Installation. Fabrikabnahme, Anschlussbereitschaft und produktive Abnahme müssen als unterschiedliche Ereignisse definiert bleiben. «Geliefert», «installiert» und «produktiv» sind deshalb keine gleichwertigen Fortschrittsangaben.</p>
+    <p>Die Sechs-Monate-zu-14-Tage-Angabe ist ein bedingter Anbieter-Vergleich für die Vor-Ort-Bereitstellung. Ohne vergleichbare Start- und Endpunkte lässt sich daraus weder eine Verkürzung des gesamten Projekts noch eine entsprechende frühere Umsatzrealisierung ableiten. Auch ein Referenzdesign allein liefert keinen Termin für verfügbare Kundenkapazität.</p>
+  <p><strong>Konkretes Beispiel:</strong> Illustratives Beispiel ohne gemessene Zeitwerte: Ein POD ist lieferbereit, der Stromanschluss aber nicht. Die entscheidende Route bleibt die Fertigstellung der Standortversorgung; schnelleres Ausladen ändert den Betriebsstart nicht. Sind dagegen Standort und Transport bereit und die Vor-Ort-Integration der Engpass, kann Vorfertigung den Start vorziehen. In beiden Fällen muss produktive Abnahme separat belegt werden.</p>
+  <p><strong>Praktische Relevanz:</strong> In Ausschreibungen eine gemeinsame Meilenstein-Tabelle verlangen: Startbedingung, Endbedingung, verantwortliche Partei und Abnahmenachweis. Terminversprechen erst vergleichen, wenn diese Grenzen übereinstimmen. Dasselbe Denkmodell hilft bei AI-Software: Kürzere Transkriptionslatenz ist nur dann eine schnellere Gesprächsantwort, wenn der verkürzte Abschnitt tatsächlich den Antwortpfad begrenzt.</p>
+  <div class="sources"><strong>Quellen:</strong> <a href="https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote">NVIDIA GTC Berlin keynote excerpt</a> · <a href="https://developer.nvidia.com/blog/achieve-productive-ai-capacity-faster-and-more-predictably-with-nvidia-dsx-pod/">NVIDIA DSX POD reference design</a></div>
+</section>
+
+<section class="chapter">
+
+  <div class="section-kicker">Was als Nächstes wichtig wird</div>
+
+  <article class="story"><ul>
+
+    <li>Bis 21. Januar 2027: Auf einen öffentlichen unabhängigen Sentry-Eindämmungsbericht mit Angriffsmodell und nachvollziehbarer Methode achten; eine weitere Architekturbeschreibung erfüllt diesen Test nicht.</li>
+
+    <li>Bis 21. Januar 2027: Eine datierte TorchTPU-Aktualisierung mit konkreter Produktionshärtung erwarten; für Migrationen sind benannte Änderungen wichtiger als allgemeine Aussagen zur Reife.</li>
+
+    <li>Bis 21. Januar 2027: Bei DSX POD einen benannten Kundeneinsatz mit erreichtem physischem Bereitstellungs- oder Abnahmemeilenstein suchen; eine Partnerankündigung allein belegt keine Kapazität.</li>
+
+    <li>Bis 21. Dezember 2026: Auf eine formelle Tesla- oder SpaceX-Mitteilung zu einem Ausschussergebnis achten – vereinbarte Bedingungen, Abbruch oder ausdrücklich fortgesetzte Prüfung sind unterscheidbare Ereignisse.</li>
+
+  </ul></article>
+
+</section>

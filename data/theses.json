@@ -14,7 +14,7 @@
         "NVLink Fusion sees little production adoption outside NVIDIA-centric systems",
         "NVIDIA retreats from third-party XPU integration"
       ],
-      "last_reviewed": "2026-10-20",
+      "last_reviewed": "2026-10-21",
       "evidence_updates": [
         {
           "date": "2026-09-09",
@@ -93,6 +93,16 @@
           "date": "2026-10-20",
           "note": "Retain high confidence unchanged; German startup investments do not test third-party accelerator integration.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "High confidence unchanged; DSX POD reinforces rack-scale platform integration but does not establish third-party accelerator participation.",
+          "sources": [
+            {
+              "label": "DSX POD architecture",
+              "url": "https://developer.nvidia.com/blog/achieve-productive-ai-capacity-faster-and-more-predictably-with-nvidia-dsx-pod/"
+            }
+          ]
         }
       ]
     },
@@ -109,7 +119,7 @@
         "Customer-controlled agent telemetry remains a niche or pilot-only feature without meaningful enterprise production adoption",
         "Major providers retreat toward model-only refusals without exposing operational policy controls"
       ],
-      "last_reviewed": "2026-10-20",
+      "last_reviewed": "2026-10-21",
       "evidence_updates": [
         {
           "date": "2026-09-09",
@@ -224,6 +234,16 @@
             {
               "label": "Cloudflare MCP authorization",
               "url": "https://developers.cloudflare.com/changelog/product-group/ai/?ref=explainx"
+            }
+          ]
+        },
+        {
+          "date": "2026-10-21",
+          "note": "High confidence unchanged; OpenShell strengthens the architectural direction, but customer-controlled telemetry and availability across two qualifying platforms remain unverified.",
+          "sources": [
+            {
+              "label": "OpenShell reference architecture",
+              "url": "https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale"
             }
           ]
         }

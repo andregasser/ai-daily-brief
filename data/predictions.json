@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-20",
+  "updated_at": "2026-10-21",
   "predictions": [
     {
       "id": "pred-kya-interoperability-2026-10",
@@ -82,9 +82,19 @@
           "date": "2026-10-20",
           "note": "Retain open: search surfaced similarly named Sumsub and other KYA efforts, not verified delivery by the specific cross-network initiative.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Open unchanged: searches found multiple KYA drafts, but provenance linking them to the predicted initiative and deadline remains unresolved.",
+          "sources": [
+            {
+              "label": "Open-KYA draft",
+              "url": "https://open-kya.github.io/kya-standard/"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "pred-deepseek-v41-evidence-2026-09",
@@ -165,9 +175,14 @@
           "date": "2026-10-20",
           "note": "Retain falsified: no verified new comparative economics evidence changes the deadline assessment.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Falsified unchanged: no newly verified evidence changes the deadline-specific assessment.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "pred-china-hbm-pricing-q4",
@@ -224,9 +239,14 @@
           "date": "2026-10-20",
           "note": "Retain open: no relevant independent incident-review findings were verified.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Open unchanged: targeted search did not establish material independent findings, and the October 31 deadline remains ahead.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "pred-epd-independent-evidence-2026-10",
@@ -311,9 +331,19 @@
               "url": "https://arxiv.org/abs/2609.31551"
             }
           ]
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Open unchanged: an Intel technical-brief excerpt reports benefits, but its full methods and relevance to the deadline-specific prediction could not be verified.",
+          "sources": [
+            {
+              "label": "Intel heterogeneous encode/prefill-decode brief",
+              "url": "https://community.intel.com/t5/Blogs/Tech-Innovation/Data-Center/Lowering-Multimodal-Inference-Cost-with-Heterogeneous-E-PD/post/1752499/jump-to/first-unread-message"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "pred-us-duty-of-care-draft-2026-09",
@@ -435,9 +465,19 @@
           "date": "2026-10-20",
           "note": "Retain open: this pass did not resolve the overdue draft-or-slippage condition.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Open unchanged: lab advocacy does not establish a Senate-negotiated framework.",
+          "sources": [
+            {
+              "label": "TechCrunch proposal reporting",
+              "url": "https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed"
+            }
+          ]
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "pred-openai-misalignment-disclosure-2026-10",
@@ -490,9 +530,14 @@
           "date": "2026-10-20",
           "note": "Retain confirmed; no relevant contrary evidence was verified.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Confirmed unchanged; no verified new evidence warrants reassessment.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "pred-uae-ai-resilience-plan-2026-10",
@@ -525,9 +570,14 @@
           "date": "2026-10-20",
           "note": "Retain open: no qualifying resilience change or reaffirmation was verified.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Open unchanged; no relevant primary update was verified and October 31 remains ahead.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "pred-embedded-evaluator-details-2026-09",
@@ -645,9 +695,14 @@
           "date": "2026-10-20",
           "note": "Retain confirmed; evaluation commentary does not change the prior operational-details finding.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Confirmed unchanged; today's architecture announcements do not alter evaluator-access evidence.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "pred-sglang-cve-remediation-2026-09",
@@ -740,9 +795,14 @@
           "date": "2026-10-20",
           "note": "Retain falsified: no verified remediation evidence changes the historical deadline assessment.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Falsified unchanged; no official remediation evidence was verified in this pass.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "pred-deepseek-alias-regression-2026-09",
@@ -834,9 +894,14 @@
           "date": "2026-10-20",
           "note": "Retain falsified: supplied alias documentation does not quantify regression or economics deltas.",
           "sources": []
+        },
+        {
+          "date": "2026-10-21",
+          "note": "Falsified unchanged; supplied routing documentation adds no quantified regression or resolved-version telemetry evidence.",
+          "sources": []
         }
       ],
-      "last_reviewed": "2026-10-20"
+      "last_reviewed": "2026-10-21"
     },
     {
       "id": "pred-frontier-pacing-operationalization-2026-09",
@@ -1938,6 +2003,70 @@
       "confidence": "low",
       "id": "pred-2026-10-20-33a53c606962",
       "created": "2026-10-20",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2027-01-21, an organization independent of NVIDIA will publish a substantive public adversarial evaluation of Sentry's hardware-separated agent containment.",
+      "review_after": "2027-01-22",
+      "confirmation_criteria": [
+        "A dated report published by the deadline identifies the tested Sentry configuration, threat model and method, and reports containment successes or failures; either outcome confirms publication, not security."
+      ],
+      "falsification_criteria": [
+        "A named independent evaluator explicitly cancels or schedules its announced evaluation beyond the deadline, and the supplied follow-up evidence establishes that no qualifying completed report superseded that disposition.",
+        "A documented comprehensive review at the deadline establishes that all claimed qualifying reports are NVIDIA-authored or lack an adversarial containment evaluation; missing evidence alone is inconclusive."
+      ],
+      "confidence": "low",
+      "id": "pred-2026-10-21-f7258c096db2",
+      "created": "2026-10-21",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2027-01-21, the TorchTPU project will publish a dated update documenting at least one concrete production-hardening change beyond the initial October 20 release.",
+      "review_after": "2027-01-22",
+      "confirmation_criteria": [
+        "A project release note or technical update identifies a shipped reliability, compatibility or distributed-execution fix and explains the limitation it addresses; a restatement of the roadmap does not qualify."
+      ],
+      "falsification_criteria": [
+        "The project explicitly states that production-hardening delivery has been deferred beyond January 21 and that no qualifying change shipped during the forecast interval.",
+        "Follow-up evidence must establish the disposition; an inaccessible release history or absent search result is inconclusive."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-21-bdf69d02e4f4",
+      "created": "2026-10-21",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2027-01-21, NVIDIA, a DSX POD partner or a customer will publicly identify a named customer deployment that has achieved a physical deployment or acceptance milestone, beyond announcing a reference design or purchase intention.",
+      "review_after": "2027-01-22",
+      "confirmation_criteria": [
+        "A dated disclosure names the customer, identifies DSX POD and states an achieved delivery-to-site, installation, commissioning or acceptance milestone; the exact milestone must be retained rather than relabeled productive capacity."
+      ],
+      "falsification_criteria": [
+        "An authoritative program update states that the first customer physical deployment milestones have slipped beyond January 21.",
+        "A documented follow-up establishes that purported examples were only planned orders or partner demonstrations and that no qualifying customer milestone was achieved; missing evidence alone is inconclusive."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-21-fd8b23ef4f79",
+      "created": "2026-10-21",
+      "status": "open",
+      "evidence": []
+    },
+    {
+      "prediction": "By 2026-12-21, Tesla or SpaceX will formally disclose a committee outcome consisting of agreed merger terms or termination of the current merger exploration, rather than only reiterating consideration.",
+      "review_after": "2026-12-22",
+      "confirmation_criteria": [
+        "A company filing or official statement dated by the deadline discloses agreed transaction terms or says the current exploration has ended; an outcome does not imply completion of a merger."
+      ],
+      "falsification_criteria": [
+        "An official statement at the deadline explicitly says the committees are still exploring a combination without agreement or termination.",
+        "An official update explicitly defers a committee outcome beyond December 21; no newly verified disclosure by itself is inconclusive."
+      ],
+      "confidence": "medium",
+      "id": "pred-2026-10-21-105fdc845544",
+      "created": "2026-10-21",
       "status": "open",
       "evidence": []
     }
